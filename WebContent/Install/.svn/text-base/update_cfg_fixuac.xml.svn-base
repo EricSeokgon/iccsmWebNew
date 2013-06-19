@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding="euc-kr" ?>
+<root>
+	<params>
+	<param id='VERSION' type='string'>2009.6.09.1</param>
+	<param id='Config' type='string'>true</param>
+	</params>
+	
+	<dataset id='win32'>
+		<colinfo id='SOURCE' type='string' size='256'/>
+		<colinfo id='DEVICE' type='string' size='256'/>
+		<colinfo id='VERSION' type='string' size='256'/>
+		<colinfo id='STATUS' type='string' size='2'/>
+  <!--
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<SOURCE>update_msi_installbase.xml</SOURCE>
+	</record>
+	-->
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<SOURCE>update_msi.xml</SOURCE>
+	</record>
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<SOURCE>update_msi_fixuac.xml</SOURCE>
+	</record>
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<SOURCE>update_etc_files.xml</SOURCE>
+	</record>
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<SOURCE>update_component_files.xml</SOURCE>
+	</record>
+	</dataset>
+</root>

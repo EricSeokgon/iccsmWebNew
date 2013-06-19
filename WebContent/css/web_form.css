@@ -1,0 +1,189 @@
+/* form ICCS - 2009년 4월 20일 */
+
+.line_1_d1 {height:1px; background-color:#ebebeb;}
+.line_6_4b {width:100%; height:100%; border:3px solid #4b4b4b;}
+
+.form_detail {background-color:#f9f9f9; padding: 8px 10px;}
+
+/* My 민원진행상태 - 2009년 4월 20일 */
+.form_title {background-color:#f4f4f4; padding: 10px 0px 5px 0; text-align:center;  color:#666;	font-weight:bold; letter-spacing:-1; border-right:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1;}
+.form_title_last {background-color:#f4f4f4; padding: 10px 0px 5px 0; text-align:center; color:#666;	font-weight:bold; letter-spacing:-1; border-bottom:1px solid #e1e1e1;}
+
+.form_article {background-color:#fcfcfc; padding: 8px 8px 4px 8px; text-align:left; font-weight:bold;letter-spacing:-1; border-right:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1;}
+
+.form_contents_c {padding: 8px 0px 4px 0; text-align:center; border-right:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1;}
+.form_contents_c_last {padding: 8px 0px 4px 0; text-align:center; border-bottom:1px solid #e1e1e1;}
+
+.table_title {background-color:#f4f4f4; padding: 5px 8px 8px 8px; text-align:left;  color:#666;	font-weight:bold; letter-spacing:-1; border-bottom:1px solid #e1e1e1;}
+.table_contents {padding: 5px 8px 8px 8px; margin:0;text-align:left;  border-bottom:1px solid #e1e1e1;}
+
+
+/* */
+
+.select {padding:0; margin:0; }
+.select span{padding:0 0 0 0px; margin:-2px 0 0 0; }
+
+
+/*타이틀 공통*/
+h4 {width:95%; margin:10px 0 7px 0; padding:3px 0 0px 15px; background:url("http://www.net.go.kr/images/common/arrow_ul.gif") no-repeat 0 50%;  font-size: 16px; font-weight:bold; color:#FF6600; letter-spacing:inherit; border-bottom:0px solid #ebebeb;}
+p.dot01{ width:100%;line-height:140%; margin:0; padding:0 0 0 18px; background:url("http://www.net.go.kr/images/common/arrow_dot01.gif") no-repeat 5px 4px; font-weight:bold; text-indent:0em;  border-bottom:0px solid #ebebeb;}
+p.dot02{ position:relative; left:10px; width:100%;line-height:140%; margin:0; padding:0 0 0 13px; background:url("http://www.net.go.kr/images/common/arrow_dot02.gif") no-repeat 5px 8px; text-indent:0em;  border-bottom:0px solid #ebebeb;}
+.dot02 ul {position:relative; margin: 0; padding: 0 0 20px 10px; border:0px solid red;}
+.dot02 ul li {position:relative;width:100%;line-height:140%; margin:0; padding:0 0 0 13px; background:url("http://www.net.go.kr/images/common/arrow_dot02.gif") no-repeat 2px 8px; text-indent:0em;  border-bottom:0px solid #ebebeb;}
+.dot02 ul li.nosep { background: transparent; }
+.dot02 ul.dot03 { position:relative;float:left; padding: 0; margin:0; } 
+.dot02 ul.dot03 li { position:relative;float:left; margin: 0 0 0 0; padding: 0 0 0 10px; list-style: none; background: url("http://www.net.go.kr/images/common/arrow_dot03.gif") no-repeat 3px 6px;}
+.dot02 ul.dot04 { position:relative; float:left; padding: 0; margin:0; } 
+.dot02 ul.dot04 li { position:relative; float:left; margin: 0; padding: 0 0 0 12px; list-style: none; background: url("http://www.net.go.kr/images/common/arrow_dot04.gif") no-repeat 3px 9px; }
+.dot02 ul.dot03 li.nosep { background: transparent; }
+.dot02 ul.dot05 { position:relative;float:left; padding: 0; margin:0; }
+.dot02 ul.dot05 li { position:relative;float:left; margin: 0; padding: 0 0 0 10px; list-style: none; background: url("http://www.net.go.kr/images/common/arrow_9.gif") no-repeat 3px 8px;}
+
+.dot02_1 ul {position:relative; left:10px; margin: 0; padding: 0; border:0px solid red;}
+.dot02_1 ul li {width:100%;line-height:140%; margin:0; padding:0 0 0 13px; background:url("http://www.net.go.kr/images/common/arrow_dot02.gif") no-repeat 5px 8px; text-indent:0em;  border-bottom:0px solid #ebebeb;}
+.dot02_1 ul li.nosep { background: transparent; }
+
+.arrow04 {position:relative; margin: 0; padding: 0 0 0px 10px; background: url(http://www.net.go.kr/images/common/arrow_4.gif) no-repeat 0 6px; font-weight: bold;}
+.arrow05{ position:relative; width:100%; line-height:140%; margin:0; padding:0 0 0 13px; background:url("http://www.net.go.kr/images/common/arrow_5.gif") no-repeat 0 5px; text-indent:0em; font-weight: bold;}
+p.txt{ padding:0 0 10px 10px; margin:0; font-size:1em; line-height:1.5em;	border:0px solid green; letter-spacing: inherit;}
+
+h5 {width:95%; margin:10px 0 7px 0; padding:3px 0 0px 15px; font-size: 14px; text-align:right; font-weight:bold; color:#3333FF; letter-spacing:inherit; border-bottom:0px solid #ebebeb;}
+
+
+/* 왼쪽여백*/
+.padd10 {padding-left:10px; line-height:1.6em; border:0px solid red;}
+.padd15 {padding-left:15px; line-height:1.6em; letter-spacing: inherit;}
+.padd20 {padding-left:20px; line-height:1.6em;}
+.padd25 {padding-left:25px; line-height:1.6em;}
+.padd30 {padding-left:30px; line-height:1.6em;}
+.padd35 {padding-left:35px; line-height:1.6em;}
+.padd40 {padding-left:40px; line-height:1.6em;}
+
+/* 왼쪽여백*/
+.top_padd10 {padding:10px 0; line-height:1.6em; border:0px solid red;}
+.top_padd15 {padding:15px 0; line-height:1.6em; letter-spacing: inherit;}
+.top_padd20 {padding:20px 0; line-height:1.6em;}
+.top_padd25 {padding:25px 0; line-height:1.6em;}
+.top_padd30 {padding:30px 0; line-height:1.6em;}
+.top_padd35 {padding:35px 0; line-height:1.6em;}
+.top_padd40 {padding:40px 0; line-height:1.6em;}
+
+
+/* 컨텐츠 ul 테이블스타일 */
+
+table.t0 { border-collapse: collapse; width: 100%; margin: 3px 0 3px 0px; border: 1px solid #ddd; border-width: 0px; }
+table.t0 tr { text-align: center !important; }
+table.t0 th, table.t0 td { border: 0 !important; padding: 0 !important; width: 1%; }
+
+table.t1 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 10px 0; border: 1px solid #d7d7d7; }
+table.t1 tr {  } /* colgroup 으로 td 스타일제어하려면 tr에 정의  */
+table.t1 th, table.t1 td { border: 1px solid #e1e1e1; border-width: 0 0px 1px 0; padding: 6px 6px 4px 6px; }
+table.t1 th { background: #f4f4f4; color: #666; font-weight: bold; vertical-align: middle; font-size: 0.85em; }
+table.t1 tr td {}
+table.t1 td.letter0 {letter-spacing: 0em;}
+
+table.t2 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 30px 0; border-top: 2px double #ff8533; border-right-style: hidden; *border-right: 1px solid #fff; }
+table.t2 tr {  } /* colgroup 으로 td 스타일제어하려면 tr에 정의  */
+table.t2 th, table.t2 td { border: 1px solid #e1e1e1; border-width: 0 0px 1px 0; padding: 6px 6px 4px 6px; }
+table.t2 thead, table.t2 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t2 th { background: #f4f4f4; color: #666; font-weight: bold; vertical-align: middle; font-size: 0.85em; text-align: center; }
+table.t2 th.f9 {background: #f9f9f9;}
+table.t2 tr td {}
+table.t2 tr td span {padding-right: 5px;}
+table.t2 td.letter0 {}
+table.t2 tr td ul{padding-left: 10px;}
+
+/* 기본 테이블 스타일 */
+table.t3 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 30px 0; table-layout:fixed; border-top: 2px solid #ff8533; border-right-style: hidden; *border-right: 1px solid #fff; }
+
+table.t3 tr {  } /* colgroup 으로 td 스타일제어하려면 tr에 정의  */
+table.t3 th, table.t3 td { border: 1px solid #e1e1e1; border-width: 0 1px 1px 0; padding: 6px 6px 4px 3px; }
+table.t3 thead, table.t3 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t3 thead th, table.t3 tfoot th { background: #f4f4f4; color: #666; font-weight: bold; text-align: center; vertical-align: middle;  }
+table.t3 thead.alt th, table.t3 tfootl.alt th { font-weight: normal; }
+table.t3 th { background: #fcfcfc; font-weight: normal; text-align: inherit; font-size: 0.85em; }
+table.t3 tr.alt th { background: #f8f7f3; }
+table.t3 tr.alt td { background: #f8f7f3; }
+table.t3 tr td {}
+table.t3 td.letter0 {letter-spacing: 0em;}
+
+
+table.t3 td.longtxt { text-align: left; white-space: normal; }
+table.t3 td.item { width: 26px; background: #fff; text-align: center; }
+table.t3 td.substance { text-align: left; white-space: normal; width: 100%; padding: 1em 6px; }
+
+
+/* 지역별 민원센터 테이블 스타일 */
+table.t4 { border-collapse: collapse; width: 100%; margin: .5em 0px; border-top: 2px solid #ff8533; border-right-style: hidden; *border-right: 1px solid #fff; *border-bottom: 1px solid #ff8533; }
+
+table.t4 tr {  } /* colgroup 으로 td 스타일제어하려면 tr에 정의  */
+table.t4 th, table.t4 td { padding: 6px 5px 4px 5px; }
+table.t4 th { border: 1px solid #e1e1e1; border-width: 0 0px 1px 0; }
+table.t4 tbody th.sido {background: #f9f9f9;}
+table.t4 tbody th, table.t4 td { border: 1px solid #e1e1e1; border-width: 0 1px 1px 0; }
+table.t4 thead, table.t4 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t4 thead th, table.t4 tfoot th { background: #f4f4f4; color: #666; font-weight: bold; text-align: center; vertical-align: middle;  }
+table.t4 thead.alt th, table.t4 tfootl.alt th { font-weight: normal; }
+table.t4 th { background: #fcfcfc; font-weight: normal; text-align: inherit; font-size:0.85em; }
+table.t4 tr.alt th { background: #f8f7f3; }
+table.t4 tr.alt td { background: #f8f7f3; }
+table.t4 tr td {  font-size:0.85em; }
+table.t4 th.alt { background: #fff; }
+table.t4 td.fo70 { font-size:11px ;line-height:1.5; }
+
+table.t4 td.longtxt { text-align: left; white-space: normal; }
+table.t4 td.item { width: 26px; background: #fff; text-align: center; }
+table.t4 td.substance { text-align: left; white-space: normal; width: 100%; padding: 1em 6px; }
+
+
+
+table.t7 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 30px 0; border-top: 2px double #ff8533;  }
+table.t7 tr {  } /*colgroup 으로 td 스타일제어하려면 tr에 정의 */
+table.t7 tbody th, table.t7 td { border: 1px solid #e1e1e1; border-width: 0 0px 1px 0;  }
+table.t7 thead, table.t7 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t7 th { background: #f4f4f4; color: #666; font-weight: bold; vertical-align: middle; font-size: 0.85em; text-align: center; }
+table.t7 th.f9 {background: #f9f9f9;}
+table.t7 tr td {font-size:0.85em; }
+table.t7 tr td span {padding-right: 5px;}
+table.t7 td.letter0 {text-align: center;}
+table.t7 tr td ul{padding-left: 10px;}
+
+table.t5 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 30px 0; border-top: 2px double #ff8533;  }
+table.t5 tr {  } /*colgroup 으로 td 스타일제어하려면 tr에 정의*/ 
+table.t5 th, table.t5 td { border: 1px solid #e1e1e1; border-width: 0 0px 1px 0; padding: 6px 6px 4px 6px;  }
+table.t5 thead, table.t5 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t5 th { background: #f4f4f4; color: #666; font-weight: bold; vertical-align: middle; font-size: 0.85em; text-align: center; }
+table.t5 th.f9 {background: #f9f9f9;}
+table.t5 tr td {}
+table.t5 tr td span {padding-right: 5px;}
+table.t5 td.letter0 {}
+table.t5 tr td ul{padding-left: 10px;}
+
+
+table.t6 { border-collapse: collapse; width: 100%; padding:0; margin:0 0 30px 0; table-layout:fixed; border-top: 2px solid #ff8533; border-right-style: hidden; *border-right: 1px solid #fff; }
+
+table.t6 tr {  } /* colgroup 으로 td 스타일제어하려면 tr에 정의  */
+table.t6 th, table.t6 td { border: 1px solid #e1e1e1; border-width: 0 1px 1px 0; padding: 6px 6px 4px 3px; }
+table.t6 thead, table.t6 tfoot { background: #f4f4f4; font-weight: normal;}
+table.t6 thead th, table.t6 tfoot th { background: #f4f4f4; color: #666; font-weight: bold; text-align: center; vertical-align: middle;  }
+table.t6 thead.alt th, table.t6 tfootl.alt th { font-weight: normal; }
+table.t6 th { background: #fcfcfc; font-weight: normal; text-align: inherit; font-size: 0.85em; }
+table.t6 tr.alt th { background: #f8f7f3; }
+table.t6 tr.alt td { background: #f8f7f3; }
+table.t6 tr td {}
+table.t6 td.letter0 {letter-spacing: 0em;}
+
+
+table.t6 td.longtxt { text-align: left; white-space: normal; }
+table.t6 td.item { width: 26px; background: #fff; text-align: center; }
+table.t6 td.substance { text-align: left; white-space: normal; width: 100%; padding: 1em 6px; }
+
+/* Tag목록(List) */
+ul.bu { margin: 0; padding: 0 0 0.5em 1.2em; list-style: none; text-align: left; }
+td ul.bu { padding: 0; } /* 테이블 안에서 정렬 */
+ul.bu li { margin: 0; padding: 0 0 0 1.2em; list-style: none; background: url(http://www.net.go.kr/images/common/arrow_2.gif) no-repeat 0.6em 0.5em; }
+ul.bu li.nobg { margin: 0; padding: 0 0 0 1.2em; list-style: none; background: url() no-repeat ; }
+ul.bu ul li { background: url(http://www.net.go.kr/images/common/arrow_dot04.gif) no-repeat 0 0.2em; }
+ul.bu ul ul li { background: url(http://www.net.go.kr/images/common/arrow_9.gif) no-repeat 0 0.2em; }
+ul.bu ul ul ul li { background: url(http://www.net.go.kr/images/common/arrow_7.gif) no-repeat 0 0.2em; }
+ul.bu ul, ul.bu ul ul, ul.bu ul ul ul { margin: 0; padding: 0 0 0.5em 0; }

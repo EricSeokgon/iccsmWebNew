@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>인증서기반의 사용자인증</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H3 id=_D2HTopic_127 
+style="MARGIN-LEFT: 34.8pt; TEXT-INDENT: -34.8pt; tab-stops: 0cm 34.8pt"><SPAN 
+style="FONT-FAMILY: 굴림">인증서기반의</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">사용자인증</SPAN></H3>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="_4.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="_6.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용한</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용자인증은</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">클라이언트에서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">서명용</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">서명을</SPAN> <SPAN style="FONT-FAMILY: 굴림">하여</SPAN>, 
+<SPAN style="FONT-FAMILY: 굴림">서버에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전송하면</SPAN> <SPAN style="FONT-FAMILY: 굴림">서버에서는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서명값과</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">서명자의</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">검증함으로서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이루어진다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용한</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용자인증은</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">경우에</SPAN> <SPAN style="FONT-FAMILY: 굴림">따라</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">다음과</SPAN> <SPAN style="FONT-FAMILY: 굴림">같이</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">세가지의</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">경우로</SPAN> <SPAN style="FONT-FAMILY: 굴림">나눌</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">수</SPAN> <SPAN style="FONT-FAMILY: 굴림">있다</SPAN>.</P>
+<P class=MsoNormal>- <SPAN style="FONT-FAMILY: 굴림">본인확인을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">하지</SPAN> <SPAN style="FONT-FAMILY: 굴림">않는 사용자 인증</SPAN> 
+</P>
+<P class=MsoNormal>- <SPAN style="FONT-FAMILY: 굴림">본인확인을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">수행하고</SPAN> <SPAN style="FONT-FAMILY: 굴림">서버에서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">사용자</SPAN> <SPAN style="FONT-FAMILY: 굴림">식별</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">번호를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">가지고</SPAN> <SPAN style="FONT-FAMILY: 굴림">있는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">경우</SPAN></P>
+<P class=MsoNormal>- <SPAN style="FONT-FAMILY: 굴림">본인확인을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">수행하고</SPAN> <SPAN style="FONT-FAMILY: 굴림">서버에서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">사용자</SPAN> <SPAN style="FONT-FAMILY: 굴림">식별</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">번호를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">가지고</SPAN> <SPAN style="FONT-FAMILY: 굴림">있지</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">않는</SPAN> <SPAN style="FONT-FAMILY: 굴림">경우</SPAN> 
+</P>
+<P class=MsoNormal>&nbsp;</P><p class=RelatedHead>More:</p>
+<p class=MsoNormal><a href="_6.htm"><img src=button.gif border=0></a><a href="_6.htm" style=text-decoration:none;>사용자 인증</a></p>
+<p class=MsoNormal><a href="_7.htm"><img src=button.gif border=0></a><a href="_7.htm" style=text-decoration:none;>본인확인 및 사용자 인증 (서버에서 식별번호를 가지고 있음)</a></p>
+<p class=MsoNormal><a href="_8.htm"><img src=button.gif border=0></a><a href="_8.htm" style=text-decoration:none;>본인확인 및 사용자 인증 (서버에서 식별번호를 가지고 있지 않음)</a></p>
+
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

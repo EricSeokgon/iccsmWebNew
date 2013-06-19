@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="54" Id="frmButtonBar" Left="8" PidAttrib="7" Title="frmButtonBar" Top="8" Ver="1.0" Width="815" WorkArea="true">
+		<Image Align="Left" Color="#003366" Font="굴림,11,Bold" Height="52" Id="Image1" ImageID="top_body" OnClick="Image1_OnClick" TabOrder="6" Text="&#32;&#32;&#32;&#32;&#32;&#32;&#32;공사업등록번호" Width="815"></Image>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnList" ImageID="btn_listS" Left="666" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="12" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnModify" ImageID="button_modify" Left="492" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="4" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnRemove" ImageID="button_delete" Left="624" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="1" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnSave" ImageID="button_save" Left="534" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="2" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnCancel" ImageID="button_cancel" Left="576" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="7" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnReport" ImageID="button_print" Left="715" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="3" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnExcel" ImageID="button_excel" Left="757" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="1" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="user5" Height="52" Id="btnInsert" ImageID="button_new" Left="444" OnClick="fnToolBarButton_Click" Style="button_style01" TabOrder="8" Width="42"></Button>
+		<Image Height="52" Id="Image0" ImageID="top_bar" Left="486" TabOrder="9" Width="6"></Image>
+		<Image Height="52" Id="Image2" ImageID="top_bar" Left="618" TabOrder="10" Width="6"></Image>
+		<Image Height="52" Id="Image3" ImageID="top_bar" Left="708" TabOrder="11" Width="6"></Image>
+	</Form>
+	<Script></Script>
+</Window>

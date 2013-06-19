@@ -1,0 +1,12 @@
+
+create table PT_M_REGIST_CANCEL(
+    TMP_WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    AUDI_EXEC_YN VARCHAR2(1)  , /* */
+    AUDI_NONEXEC_CAUSE VARCHAR2(512)  , /* */
+    INS_DT VARCHAR2(24)  , /* */
+    UPD_DT VARCHAR2(24)  , /* */
+    WRT_ID VARCHAR2(16)  , /* */
+    DECISION_DATE VARCHAR2(8)  , /* */
+    PRIMARY KEY(TMP_WRT_NUM,WRT_NUM)
+   );

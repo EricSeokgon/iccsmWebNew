@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="user0" Height="228" Id="btn_cancel" Left="8" OnKeyDown="btn_cancel_OnKeyDown" OnLoadCompleted="G_Login_OnLoadCompleted" OnUnloadCompleted="btn_cancel_OnClick" PidAttrib="7" Title="LOGIN" Top="8" Ver="1.1" Width="452" WorkArea="TRUE">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="DS_comm"></Dataset>
+			<Dataset DataSetType="Dataset" Id="DS_LoginRTN"></Dataset>
+		</Datasets>
+		<Image Height="228" Id="Image1" ImageID="login" TabOrder="3" Width="452"></Image>
+		<Edit Border="Flat" Color="black" Height="20" Id="ED_UserID" Left="141" LeftMargin="2" MaxLength="20" OnChanged="ED_UserID_OnChanged" Style="top_edit" TabOrder="3" Top="120" Width="121"></Edit>
+		<Edit Border="Flat" Color="black" Height="20" Id="ED_Password" Left="141" LeftMargin="2" MaxLength="20" OnChanged="ED_Password_OnChanged" OnKeyDown="ED_Password_OnKeyDown" Password="TRUE" Style="top_edit" TabOrder="3" Top="148" Width="121"></Edit>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="18" Id="Image0" ImageID="btn_cancel" Left="261" LeftMargin="0" OnClick="btn_cancel_OnClick" Static="FALSE" Style="button_lift01" TabOrder="4" Top="149" Width="62"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="46" Id="Image2" ImageID="btn_regi" Left="333" LeftMargin="0" OnClick="btn_join_OnClick" Static="FALSE" Style="button_lift01" TabOrder="5" Top="121" Width="50"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="18" Id="btn_login" ImageID="btn_login" Left="261" LeftMargin="0" OnClick="btn_login_OnClick" Static="FALSE" Style="button_lift01" TabOrder="6" Top="122" Width="62"></Image>
+		<Checkbox Height="13" Id="CHK_IDSAVE" Left="143" TabOrder="8" Text="Checkbox0" Top="173" Value="FALSE" Width="15"></Checkbox>
+		<Static Height="14" Id="Static0" Left="162" TabOrder="9" Text="아이디&#32;저장" Top="174" Width="75"></Static>
+		<Checkbox Height="13" Id="CHK_PWSAVE" Left="233" TabOrder="10" Text="Checkbox0" Top="174" Value="FALSE" Width="15"></Checkbox>
+		<Static Height="18" Id="Static1" Left="254" TabOrder="11" Text="PassWord&#32;&#32;저장" Top="174" Width="95"></Static>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+var sCancel = true;
+
+function G_Login_OnLoadCompleted(obj)
+{
+	if(this.GetReg("CHK_IDSAVE_YN")=="1")
+	{
+		this.ED_UserID = this.GetReg("OFFI_ID");	
+		this.CHK_IDSAVE = this.GetReg("CHK_IDSAVE_YN");
+	}
+	
+	// 2010.01.27. 패스워드 저장 제거
+		if(this.GetReg("CHK_PWSAVE_YN")=="1")
+	{
+		this.ED_Password = this.GetReg("OFFI_PW");
+		this.CHK_PWSAVE = this.GetReg("CHK_PWSAVE_YN");
+	}
+}
+
+function ED_Password_OnKeyDown(obj,nChar,bShift,bCtrl, bAlt)
+{
+	if (nChar == 13) 
+	{
+		btn_login_OnClick(obj);
+	}
+}
+
+
+function btn_login_OnClick(obj)
+{
+	if(this.CHK_IDSAVE.Value =="1")
+	{	
+		this.SetReg("CHK_IDSAVE_YN", "1");
+		this.SetReg("OFFI_ID",this.ED_UserID.Text);
+	}
+	
+	// 귀찮아서 우선 무조건 패스워드 저장
+	if(this.CHK_PWSAVE.Value =="1")
+	{
+		this.SetReg("CHK_PWSAVE_YN", "1");
+		this.SetReg("OFFI_PW",this.ED_Password.Text);	
+	}
+		
+	if(this.CHK_IDSAVE.Value =="0")
+		this.SetReg("CHK_IDSAVE_YN", "0");
+	
+	// 2010.01.27. 패스워드 저장 제거
+	
+	if(this.CHK_PWSAVE.Value =="0")	
+		this.SetReg("CHK_PWSAVE_YN", "0");	
+	
+		
+	var arg = "scUSER_ID=" + quote(ED_UserID.Text) + " scUSER_PW=" + quote(ED_Password.Text) + " scSIDO_NM=" + quote(g_SIDO_NM);
+	Transaction("login", "ICCS::login_m/Login_mAction.do?cmd=Login", "", "ds_login=ds_login ds_sess=ds_sess", arg, "fnCallback");				
+	
+	//var arg = "scUSER_ID=" + quote(ED_UserID.Text) + " scUSER_PW=" + quote(ED_Password.Text) + " scSIDO_NM=" + quote(g_SIDO_NM);
+	//Transaction("login", "ICCS::index/IndexAction.do?cmd=MainIndex", "", "ds_login=ds_login ds_sess=ds_sess", arg, "fnCallback");				
+	
+}
+
+function fnCallBack(svcid,errCode,errMsg)
+{
+	
+		
+	if(errCode < 0 )
+	{
+		alert("[" + errCode + "]" + "\n" + errMsg);
+		return;
+	}
+	if(svcid == "login")
+	{
+	
+		if(ds_login.rowcount == 0){
+			ED_UserID.Text = "";
+			ed_password.Text = "";
+			alert("등록되지 않은 사용자입니다.");
+			ED_UserID.SetFocus();
+		}else if(ed_password.Text <> ds_login.GetColumn(0,"USER_PASSWD")){
+			ed_password.Text = "";
+			alert("비밀번호가 맞지 않습니다.");
+			ed_password.SetFocus();
+		}else{
+			ADMIN_YN = true;
+			g_User_ID = ds_login.GetColumn(0,"USER_ID");
+			g_Name = ds_login.GetColumn(0,"USER_NAME");
+			g_Capital = ds_login.GetColumn(0,"CAPITAL");
+			g_passwd  = ds_login.GetColumn(0,"USER_PASSWD");
+			g_Sd_cd   = ds_login.GetColumn(0,"SD_CD");
+			g_Sgg_cd  = ds_login.GetColumn(0,"SGG_CD");
+			g_SggN_cd  = ds_login.GetColumn(0,"SGG_CD");
+			g_PART    = ds_login.GetColumn(0,"PART");
+			g_POS     = ds_login.GetColumn(0,"POS");
+			g_SIDO_NM = ds_login.GetColumn(0,"SIDO_NM");
+			g_SIGUNGU_NM = ds_login.GetColumn(0,"SIGUNGU_NM");
+			g_SIDO_FULL_NM = ds_login.GetColumn(0,"SIDO_FULL_NM");
+			g_PARTPLUS    = ds_login.GetColumn(0,"PARTPLUS");
+			g_TEL    = ds_login.GetColumn(0,"TEL");
+			g_RECV_DIV    = ds_login.GetColumn(0,"RECV_DIV");
+			
+			InitSession(true);
+			sCancel = false; 
+			SetReg("OnlyOne",true);
+			close();
+		}
+	}
+}
+
+
+function btn_cancel_OnClick(obj)
+{
+    if (sCancel)
+    {
+		Exit();
+	}
+}
+
+function btn_set_OnClick(obj)
+{
+	ed_password.Text = "tobesoft";
+}
+
+function ED_Password_OnChanged(obj,strText)
+{
+	
+}
+
+function ED_UserID_OnChanged(obj,strText)
+{
+	
+} 
+
+function btn_join_OnClick(obj,nX,nY)
+{
+	initsession(true);
+	Dialog("./UserDlg.xml", "");
+	initsession(false);
+	
+}
+
+function btn_cancel_OnKeyDown(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "13") 
+		btn_login_OnClick(obj);
+	
+	if(nChar == "27")
+		btn_cancel_OnClick(obj);	
+}
+]]></Script>
+</Window>

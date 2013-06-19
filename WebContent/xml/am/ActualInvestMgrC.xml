@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="ActualInvestMgrC" Left="8" OnActivate="fnForm_Activate" OnCloseUp="RegMgrC_OnCloseUp" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="실태조사&#32;내역&#32;입력" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MEMO">
+				<Contents>
+					<colinfo id="MEMO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MEMO_CONT" size="512" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsMOT_STE">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>C00001</Code>
+						<Value>최초등록</Value>
+					</record>
+					<record>
+						<Code>C00002</Code>
+						<Value>내부건의</Value>
+					</record>
+					<record>
+						<Code>C00003</Code>
+						<Value>처분완료</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsP_S_MASTER">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="INV_EXPC_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="INV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="PROC_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="512" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_CAPITAL">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="CASH_INV_COPA_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_OFFICE">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="6" summ="default" type="STRING"/>
+					<colinfo id="OWN_POSS_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_CAPABILLITY_ASSESSMENT">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="200" summ="default" type="STRING"/>
+					<colinfo id="QUAL_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY" size="10" summ="default" type="STRING"/>
+					<colinfo id="ARR_SPOT" size="200" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_WORK_ITEM">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WORKNM" size="200" summ="default" type="STRING"/>
+					<colinfo id="SPOT_ADDR" size="200" summ="default" type="STRING"/>
+					<colinfo id="CONT_WRT_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_ARR_NOTE" size="1" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="SPOT_TEL" size="17" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_DICTOR_HUMAN_TRACE">
+				<Contents>
+					<colinfo id="WRT_NUM" size="2" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="OFFI_CODE" size="16" summ="default" type="STRING"/>
+					<colinfo id="INVER_PART" size="50" summ="default" type="STRING"/>
+					<colinfo id="INVER_POS" size="50" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_CONFIRM">
+				<Contents>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="VIOL_ITEM" size="512" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT" size="2048" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="ATT_ITEM" size="200" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_DEFICIT">
+				<Contents>
+					<colinfo id="WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEFI_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMPDEFI_CODE" size="200" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCASH_INV_COPA_YN">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="6" summ="default" type="STRING"/>
+					<record>
+						<Code>C00001</Code>
+						<Value>적합</Value>
+					</record>
+					<record>
+						<Code>C00002</Code>
+						<Value>부적합</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsOWN_POSS_YN">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="6" summ="default" type="STRING"/>
+					<record>
+						<Code>C00001</Code>
+						<Value>예</Value>
+					</record>
+					<record>
+						<Code>C00002</Code>
+						<Value>아니오</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsYN">
+				<Contents>
+					<colinfo id="Code" size="1" summ="default" type="STRING"/>
+					<colinfo id="Value" size="6" summ="default" type="STRING"/>
+					<record>
+						<Code>Y</Code>
+						<Value>예</Value>
+					</record>
+					<record>
+						<Code>N</Code>
+						<Value>아니오</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" OnClick="Image1_OnClick" TabOrder="4" Top="145" Width="817"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="5" Top="568" Width="816"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="9" Top="77" Width="816"></Image>
+		<Static Height="51" Id="Static0" Left="17" TabOrder="10" Top="79" Type="Groupbox" Width="795"></Static>
+		<Image Height="441" Id="Image6" ImageID="form_w_bg488" Left="16" OnClick="Image6_OnClick" TabOrder="8" Top="166" Width="798"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="3" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="30" Id="Image5" ImageID="form_w_top" Left="16" TabOrder="6" Top="136" Width="798"></Image>
+		<Image Height="30" Id="Image7" ImageID="form_w_bottom" Left="16" TabOrder="7" Top="600" Width="798"></Image>
+		<Tab BKColor="user2" Height="467" Id="tbMain" Left="24" OnKeyDown="fnKey_Down" TabOrder="2" Top="152" Width="784">
+			<Contents>
+				<TabPage BorderColor="black" Height="436" Id="tpBase" ImageID="tab_style_120" Left="2" TabOrder="11" Text="등록기준정보" Top="29" Width="780">
+					<Static Height="184" Id="Static7" Left="396" TabOrder="24" Top="203" Type="Groupbox" Width="369"></Static>
+					<Static Height="400" Id="Static2" Left="390" TabOrder="25" Text="기술능력평가" Top="11" Type="Groupbox" Width="378"></Static>
+					<Static Height="104" Id="Static1" Left="7" TabOrder="3" Text="자&#32;본&#32;금" Top="11" Type="Groupbox" Width="378"></Static>
+					<Image Height="16" Id="Image14" ImageID="arrow_small_white" Left="16" TabOrder="5" Top="33" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static18" Left="34" Style="list_subtitle" TabOrder="4" Text="실질자본금" Top="37" Width="69"></Static>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static19" Left="34" Style="list_subtitle" TabOrder="6" Text="납입자본금" Top="61" Width="69"></Static>
+					<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="16" TabOrder="7" Top="57" Width="16"></Image>
+					<Edit BindDataset="dsPT_S_CAPITAL" CheckLength="Byte" Column="PAY_CAP" Height="21" Id="PAY_CAP" Left="108" MaxLength="60" Number="TRUE" Style="style1" TabOrder="2" Top="56" Width="90"></Edit>
+					<Image Height="16" Id="Image16" ImageID="arrow_small_white" Left="16" TabOrder="9" Top="81" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static20" Left="34" Style="list_subtitle" TabOrder="8" Text="현금출자확인서" Top="85" Width="93"></Static>
+					<Edit BindDataset="dsPT_S_CAPITAL" CheckLength="Byte" Column="REA_CAP" Height="21" Id="REA_CAP" Left="108" MaxLength="50" Number="TRUE" Style="style1" TabOrder="1" Top="32" Width="90"></Edit>
+					<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="400" TabOrder="10" Top="244" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static15" Left="418" Style="list_subtitle" TabOrder="11" Text="자&#32;격&#32;번&#32;호" Top="247" Width="69"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiInsert" ImageID="button_style2_60" Left="414" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="12" Text="입&#32;력" Top="348" Width="60"></Button>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="400" TabOrder="13" Top="315" Width="16"></Image>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="400" TabOrder="14" Top="218" Width="16"></Image>
+					<Edit BindDataset="dsPT_S_CAPABILLITY_ASSESSMENT" CheckLength="Byte" Column="ARR_SPOT" Height="21" Id="MEMO" Left="497" MaxLength="128" Style="style1" TabOrder="15" Top="315" Width="141"></Edit>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiCancel" ImageID="button_style2_60" Left="553" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="16" Text="취&#32;&#32;소" Top="348" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiSave" ImageID="button_style2_60" Left="681" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="17" Text="저&#32;&#32;장" Top="348" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiRemove" ImageID="button_style2_60" Left="617" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="18" Text="삭&#32;&#32;제" Top="348" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiModify" ImageID="button_style2_60" Left="486" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="19" Text="수&#32;&#32;정" Top="348" Width="60"></Button>
+					<Static Height="40" Id="Static10" Left="410" TabOrder="20" Top="335" Type="Groupbox" Width="349"></Static>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static8" Left="418" Style="list_subtitle" TabOrder="21" Text="배&#32;치&#32;현&#32;장" Top="318" Width="69"></Static>
+					<Edit Height="21" Id="REPORT_CODE" Left="497" Style="style1" TabOrder="22" Top="219" Width="111"></Edit>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static9" Left="418" Style="list_subtitle" TabOrder="23" Text="기술자성명" Top="222" Width="69"></Static>
+					<Grid BindDataset="dsPT_S_CAPABILLITY_ASSESSMENT" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="195" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="160" Id="grdNoti" InputPanel="FALSE" Left="396" LineColor="user9" Right="764" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="26" TabStop="true" Top="35" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="368">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="65"/>
+									<col width="207"/>
+									<col width="89"/>
+									<col width="93"/>
+									<col width="133"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="성&#32;&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="주&#32;&#32;&#32;&#32;&#32;&#32;소"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="자격번호"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="급여액(천원)"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="배&#32;치&#32;현&#32;장"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="NOTE_CLASS_CODE" display="text"/>
+									<cell col="2" colid="ADDR" display="text"/>
+									<cell col="3" colid="QUAL_NUM" display="text"/>
+									<cell col="4" colid="PAY" display="number"/>
+									<cell col="5" colid="ARR_SPOT" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Height="80" Id="Static0" Left="7" TabOrder="27" Text="사&#32;무&#32;실" Top="123" Type="Groupbox" Width="378"></Static>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="16" TabOrder="30" Top="147" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static3" Left="34" Style="list_subtitle" TabOrder="29" Text="공부상면적" Top="151" Width="69"></Static>
+					<Edit BindDataset="dsPT_S_OFFICE" CheckLength="Byte" Column="AREA" Height="21" Id="Edit0" Left="108" MaxLength="50" Number="TRUE" Style="style1" TabOrder="28" Top="146" Width="50"></Edit>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static5" Left="34" Style="list_subtitle" TabOrder="31" Text="자&#32;가&#32;소&#32;유" Top="175" Width="69"></Static>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="16" TabOrder="32" Top="171" Width="16"></Image>
+					<Static Height="200" Id="Static6" Left="7" TabOrder="33" Text="확&#32;인&#32;서&#32;류" Top="211" Type="Groupbox" Width="378"></Static>
+					<Grid BindDataset="dsPT_S_DEFICIT" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="400" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="171" Id="grdConfirm" InputPanel="FALSE" Left="18" LineColor="user9" Right="375" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="34" TabStop="true" Top="229" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="357">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="278"/>
+									<col width="41"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="text" text="순번"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="확&#32;&#32;&#32;&#32;인&#32;&#32;&#32;&#32;서&#32;&#32;&#32;&#32;류"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="확인"/>
+								</head>
+								<body>
+									<cell col="0" colid="SEQ" display="text"/>
+									<cell col="1" colid="TMPDEFI_CODE" display="text"/>
+									<cell col="2" colid="DEFI_OUT" display="checkbox" edit="checkbox"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static11" Left="418" Style="list_subtitle" TabOrder="35" Text="급&#32;&#32;여&#32;&#32;액" Top="295" Width="93"></Static>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="400" TabOrder="36" Top="292" Width="16"></Image>
+					<Edit BindDataset="dsPT_S_CAPABILLITY_ASSESSMENT" Column="PAY" Height="21" Id="Edit2" Left="497" Number="TRUE" Style="style1" TabOrder="37" Top="290" Width="111"></Edit>
+					<Button Height="22" Id="btnGetNUM" ImageID="button_style2_search" Left="609" OnClick="fnMasterButton_Click" TabOrder="38" Text="Button0" Top="219" Width="32"></Button>
+					<Radio BindDataset="dsPT_S_CAPITAL" Border="None" CodeColumn="Code" Column="CASH_INV_COPA_YN" ColumnCount="2" DataColumn="Value" Height="21" Id="CASH_INV_COPA_YN" INDEX="0" InnerDataset="dsCASH_INV_COPA_YN" Left="129" TabOrder="39" Top="82" Width="113"></Radio>
+					<Radio BindDataset="dsPT_S_OFFICE" Border="None" CodeColumn="Code" Column="OWN_POSS_YN" ColumnCount="2" DataColumn="Value" Height="21" Id="OWN_POSS_YN" INDEX="0" InnerDataset="dsOWN_POSS_YN" Left="108" TabOrder="40" Top="172" Width="113"></Radio>
+					<Edit BindDataset="dsPT_S_CAPABILLITY_ASSESSMENT" Column="QUAL_NUM" Height="21" Id="Edit1" Left="497" Number="TRUE" Style="style1" TabOrder="41" Top="242" Width="111"></Edit>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="400" TabOrder="42" Top="268" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static4" Left="418" Style="list_subtitle" TabOrder="43" Text="주&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;소" Top="271" Width="69"></Static>
+					<Edit BindDataset="dsPT_S_CAPABILLITY_ASSESSMENT" Column="ADDR" Height="21" Id="Edit3" Left="497" Style="style1" TabOrder="44" Top="267" Width="263"></Edit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="436" Id="tpDiction" ImageID="tab_style_120" Left="2" TabOrder="11" Text="시공사항&#32;및&#32;조사자" Top="29" Width="780">
+					<Static Height="400" Id="Static2" Left="7" TabOrder="21" Text="시&#32;공&#32;사&#32;항" Top="11" Type="Groupbox" Width="378"></Static>
+					<Static Height="200" Id="Static7" Left="12" TabOrder="20" Top="187" Type="Groupbox" Width="369"></Static>
+					<Radio BindDataset="dsPT_S_WORK_ITEM" Border="None" CodeColumn="Code" Column="ENGINEER_ARR_NOTE" ColumnCount="2" DataColumn="Value" Font="굴림,8" Height="21" Id="RECEIVE_YN" INDEX="-1" InnerDataset="dsYN" Left="128" TabOrder="1" Top="298" Width="110"></Radio>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static16" Left="34" Style="list_subtitle" TabOrder="2" Text="기술자배치통지" Top="302" Width="93"></Static>
+					<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="16" TabOrder="3" Top="299" Width="16"></Image>
+					<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="16" TabOrder="4" Top="251" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static15" Left="34" Style="list_subtitle" TabOrder="5" Text="계약서작성" Top="254" Width="69"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiInsert" ImageID="button_style2_60" Left="30" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="6" Text="입&#32;력" Top="355" Width="60"></Button>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="16" TabOrder="7" Top="322" Width="16"></Image>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="16" TabOrder="8" Top="227" Width="16"></Image>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="16" TabOrder="9" Top="201" Width="16"></Image>
+					<Edit BindDataset="dsPT_S_WORK_ITEM" CheckLength="Byte" Column="SPOT_TEL" Height="21" Id="MEMO" Left="113" MaxLength="128" Style="style1" TabOrder="10" Top="322" Width="141"></Edit>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static4" Left="34" Style="list_subtitle" TabOrder="11" Text="현&#32;장&#32;주&#32;소" Top="230" Width="69"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiCancel" ImageID="button_style2_60" Left="169" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="12" Text="취&#32;&#32;소" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiSave" ImageID="button_style2_60" Left="297" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="13" Text="저&#32;&#32;장" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiRemove" ImageID="button_style2_60" Left="233" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="14" Text="삭&#32;&#32;제" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnNotiModify" ImageID="button_style2_60" Left="102" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="15" Text="수&#32;&#32;정" Top="355" Width="60"></Button>
+					<Static Height="40" Id="Static10" Left="26" TabOrder="16" Top="342" Type="Groupbox" Width="349"></Static>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static8" Left="34" Style="list_subtitle" TabOrder="17" Text="현장연락처" Top="325" Width="69"></Static>
+					<Edit BindDataset="dsPT_S_WORK_ITEM" Column="WORKNM" Height="21" Id="REPORT_CODE" Left="113" Style="style1" TabOrder="18" Top="202" Width="111"></Edit>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static9" Left="34" Style="list_subtitle" TabOrder="19" Text="공&#32;&#32;사&#32;&#32;명" Top="205" Width="69"></Static>
+					<Grid BindDataset="dsPT_S_WORK_ITEM" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="179" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="144" Id="grdNoti" InputPanel="FALSE" Left="12" LineColor="user9" Right="380" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="22" TabStop="true" Top="35" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="368">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="120"/>
+									<col width="207"/>
+									<col width="75"/>
+									<col width="111"/>
+									<col width="82"/>
+									<col width="117"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="text" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="공&#32;사&#32;명"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="현장주소(시.군)"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="계약서작성"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="기술자배치통지"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="기술자성명"/>
+									<cell bkcolor="#999999" col="6" color="user5" display="text" text="현장연락처"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="WORKNM" display="text"/>
+									<cell col="2" colid="SPOT_ADDR" display="date"/>
+									<cell col="3" colid="CONT_WRT_YN" display="date"/>
+									<cell col="4" colid="ENGINEER_ARR_NOTE" display="text"/>
+									<cell col="5" colid="REMARK" display="text"/>
+									<cell col="6" colid="SPOT_TEL" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static11" Left="34" Style="list_subtitle" TabOrder="23" Text="기술자성명" Top="278" Width="93"></Static>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="16" TabOrder="24" Top="275" Width="16"></Image>
+					<Edit Height="21" Id="Edit2" Left="113" Style="style1" TabOrder="25" Top="273" Width="111"></Edit>
+					<Button Height="22" Id="btnGetNUM" ImageID="button_style2_search" Left="225" OnClick="fnMasterButton_Click" TabOrder="26" Text="Button0" Top="273" Width="32"></Button>
+					<Radio BindDataset="dsPT_S_WORK_ITEM" Border="None" CodeColumn="Code" Column="CONT_WRT_YN" ColumnCount="2" DataColumn="Value" Font="굴림,8" Height="21" Id="Radio0" INDEX="-1" InnerDataset="dsYN" Left="113" TabOrder="27" Top="250" Width="110"></Radio>
+					<Edit BindDataset="dsPT_S_WORK_ITEM" Column="SPOT_ADDR" Height="21" Id="Edit3" Left="113" Style="style1" TabOrder="28" Top="226" Width="263"></Edit>
+					<Static Height="400" Id="Static0" Left="391" TabOrder="43" Text="조사자&#32;정보" Top="11" Type="Groupbox" Width="378"></Static>
+					<Static Height="136" Id="Static1" Left="396" TabOrder="42" Top="251" Type="Groupbox" Width="369"></Static>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="400" TabOrder="29" Top="315" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static5" Left="418" Style="list_subtitle" TabOrder="30" Text="조사자직급" Top="318" Width="69"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="Button0" ImageID="button_style2_60" Left="414" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="31" Text="입&#32;력" Top="355" Width="60"></Button>
+					<Image Height="16" Id="Image7" ImageID="arrow_small_white" Left="400" TabOrder="32" Top="291" Width="16"></Image>
+					<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="400" TabOrder="33" Top="265" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static6" Left="418" Style="list_subtitle" TabOrder="34" Text="조사자소속" Top="294" Width="69"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="Button1" ImageID="button_style2_60" Left="553" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="35" Text="취&#32;&#32;소" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="Button2" ImageID="button_style2_60" Left="681" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="36" Text="저&#32;&#32;장" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="Button3" ImageID="button_style2_60" Left="617" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="37" Text="삭&#32;&#32;제" Top="355" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="Button4" ImageID="button_style2_60" Left="486" OnClick="fnNotiButton_Click" Style="button_style01" TabOrder="38" Text="수&#32;&#32;정" Top="355" Width="60"></Button>
+					<Static Height="40" Id="Static12" Left="410" TabOrder="39" Top="342" Type="Groupbox" Width="349"></Static>
+					<Edit BindDataset="dsPT_M_DICTOR_HUMAN_TRACE" Column="OFFI_CODE" Height="21" Id="Edit1" Left="497" Style="style1" TabOrder="40" Top="266" Width="69"></Edit>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static14" Left="418" Style="list_subtitle" TabOrder="41" Text="조사자성명" Top="269" Width="69"></Static>
+					<Grid BindDataset="dsPT_M_DICTOR_HUMAN_TRACE" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="243" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="208" Id="Grid0" InputPanel="FALSE" Left="396" LineColor="user9" Right="764" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="44" TabStop="true" Top="35" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="368">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="80"/>
+									<col width="207"/>
+									<col width="75"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="text" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="성&#32;&#32;&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="소&#32;&#32;&#32;&#32;&#32;속"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="직&#32;&#32;&#32;&#32;&#32;급"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="OFFI_CODE" display="text"/>
+									<cell col="2" colid="INVER_PART" display="date"/>
+									<cell col="3" colid="INVER_POS" display="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Edit BindDataset="dsPT_M_DICTOR_HUMAN_TRACE" Column="INVER_PART" Height="21" Id="Edit5" Left="497" Style="style1" TabOrder="45" Top="290" Width="157"></Edit>
+					<Edit BindDataset="dsPT_M_DICTOR_HUMAN_TRACE" Column="INVER_POS" Height="21" Id="Edit0" Left="497" Style="style1" TabOrder="46" Top="314" Width="157"></Edit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="436" Id="tpConfirm" ImageID="tab_style_120" Left="2" TabOrder="21" Text="조사결과&#32;및&#32;메모" Top="29" Width="780">
+					<Static Font="굴림,9" Height="328" Id="Static1" Left="397" TabOrder="4" Text="메&#32;&#32;모" Top="19" Type="Groupbox" Width="357"></Static>
+					<Grid BindDataset="dsPT_M_MEMO" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="152" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="107" Id="grdMemo" InputPanel="FALSE" Left="412" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" Right="742" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="5" TabStop="true" Top="45" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="330">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="258"/>
+									<col width="79"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="text" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="메&#32;모&#32;내&#32;용"/>
+									<cell bkcolor="#999999" col="2" colid="MEMO_DT" color="white" display="text" text="작성일"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="MEMO_CONT" display="text"/>
+									<cell col="2" colid="INS_DT" display="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Height="15" Id="Static2" Left="431" TabOrder="6" Text="작성일자" Top="164" Width="55"></Static>
+					<Calendar BindDataset="dsPT_M_MEMO" Column="MEMO_DT" Height="21" Id="MEMO_DT" Left="488" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="1" Top="160" Value="TODAY" Width="85"></Calendar>
+					<TextArea BindDataset="dsPT_M_MEMO" CheckLength="Byte" Column="MEMO_CONT" Height="99" Id="MEMO_CONTENT" Left="409" MaxLength="512" TabOrder="2" Top="208" Width="332"></TextArea>
+					<Static Height="15" Id="Static3" Left="431" TabOrder="6" Text="메모내용" Top="188" Width="55"></Static>
+					<Static Height="40" Id="Static4" Left="409" TabOrder="7" Top="302" Type="Groupbox" Width="332"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoInsert" ImageID="button_style2_60" Left="417" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="8" Text="입&#32;&#32;력" Top="315" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoModify" ImageID="button_style2_60" Left="481" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="9" Text="수&#32;&#32;정" Top="315" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoRemove" ImageID="button_style2_60" Left="609" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="10" Text="삭&#32;&#32;제" Top="315" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoSave" ImageID="button_style2_60" Left="673" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="3" Text="저&#32;&#32;장" Top="315" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoCancel" ImageID="button_style2_60" Left="545" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="9" Text="취&#32;&#32;소" Top="315" Width="60"></Button>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="414" TabOrder="10" Top="160" Width="16"></Image>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="414" TabOrder="11" Top="184" Width="16"></Image>
+					<Static Height="328" Id="Static0" Left="15" TabOrder="15" Text="조사&#32;확인서" Top="19" Type="Groupbox" Width="378"></Static>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="24" TabOrder="16" Top="42" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static9" Left="42" Style="list_subtitle" TabOrder="17" Text="위&#32;반&#32;일&#32;자" Top="46" Width="69"></Static>
+					<Calendar BindDataset="dsPT_S_CONFIRM" Column="VIOL_DT" Height="21" Id="Calendar0" Left="115" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="18" Top="42" Value="TODAY" Width="85"></Calendar>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static5" Left="42" Style="list_subtitle" TabOrder="20" Text="위반법조항" Top="70" Width="69"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="24" TabOrder="19" Top="66" Width="16"></Image>
+					<Edit BindDataset="dsPT_S_CONFIRM" Column="VIOL_ITEM" Height="21" Id="COM_NAME" Left="115" Style="style1" TabOrder="21" Top="66" Width="265"></Edit>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="24" TabOrder="22" Top="90" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static6" Left="42" Style="list_subtitle" TabOrder="23" Text="위&#32;반&#32;내&#32;용" Top="94" Width="69"></Static>
+					<TextArea BindDataset="dsPT_S_CONFIRM" Column="VIOL_CONT" Height="187" Id="TextArea0" Left="115" TabOrder="24" Top="93" Width="264"></TextArea>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="24" TabOrder="25" Top="283" Width="16"></Image>
+					<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static7" Left="42" Style="list_subtitle" TabOrder="26" Text="첨&#32;부&#32;항&#32;목" Top="287" Width="69"></Static>
+					<Edit BindDataset="dsPT_S_CONFIRM" Column="ATT_ITEM" Height="21" Id="Edit0" Left="115" Style="style1" TabOrder="27" Top="282" Width="265"></Edit>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Image Height="16" Id="Image4" ImageID="arrow_small_blue" Left="32" TabOrder="13" Top="98" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static5" Left="50" TabOrder="14" Text="접수번호" Top="101" Width="48"></Static>
+		<Edit BindDataset="dsPT_M_MASTER" Column="WRT_NUM" Height="21" Id="RC_REGIST_NUM" Left="102" Style="style1" TabOrder="11" Top="96" Width="80"></Edit>
+		<Button Height="22" Id="btnGetNUM" ImageID="button_style2_search" Left="182" OnClick="fnMasterButton_Click" TabOrder="1" Text="Button0" Top="96" Width="32"></Button>
+		<Image Height="16" Id="Image9" ImageID="arrow_small_blue" Left="231" TabOrder="17" Top="99" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static6" Left="249" TabOrder="18" Text="공사업등록번호" Top="102" Width="88"></Static>
+		<Edit BindDataset="dsPT_M_MASTER" Column="TMP_WRT_NUM" Height="21" Id="TMP_WRT_NUM" ImeMode="none" Left="340" Style="style1" TabOrder="19" Top="96" Width="80"></Edit>
+		<Image Height="16" Id="Image8" ImageID="arrow_small_blue" Left="435" TabOrder="15" Top="99" Width="16"></Image>
+		<Static Color="#666666" Height="18" Id="Static8" Left="453" TabOrder="16" Text="상호" Top="102" Width="36"></Static>
+		<Edit BindDataset="dsPT_M_MASTER" Column="NAME" Height="21" Id="COM_NAME" Left="487" Style="style1" TabOrder="12" Top="96" Width="121"></Edit>
+		<Image Height="16" Id="Image13" ImageID="arrow_small_blue" Left="627" TabOrder="20" Top="99" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static9" Left="645" TabOrder="21" Text="업무진행상태" Top="102" Width="88"></Static>
+		<Combo BindDataset="dsPT_M_MASTER" CodeColumn="Code" Column="MOT_STE" DataColumn="Value" DisplayRowCnt="4" Height="21" Id="MOT_STE" InnerDataset="dsMOT_STE" Left="728" TabOrder="22" Top="96" Width="71"></Combo>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegC.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var	_sKEY2;
+var _sWorkFlag;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = _sWorkFlag;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+		global.gv_WorkFlag = global.gv_INSERT;
+		fnInitButtonBar();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		fnModify();
+	}
+	
+	fnInitMemoGroup("INQUIRY");
+	fnInitNotiGroup("INQUIRY");
+		
+	divButtonBar.Image1.text = space(6) + "행정처분-등록취소";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(false, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+		
+		btnGetNUM.Enable = false;
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(false, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+				
+		btnGetNUM.Enable = true;
+	}
+	else
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+
+		fnControlState(false, this, "RC_REGIST_NUM,TMP_WRT_NUM,COM_NAME");
+		btnGetNUM.Enable = false;
+	}
+}
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=CancelMgrC scWRT_NUM=" + _sKEY1 + " scTMP_WRT_NUM=" + _sKEY2;
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrC";
+	var sInDs = "";
+	var sOutDs  = "dsPT_M_REGIST_CANCEL=output dsPT_M_MASTER=output2 " ;
+		sOutDs += "dsPT_M_AUDI_REPORT=output3 dsPT_M_AUDI_DICTION=output4 " ;
+		sOutDs += "dsPT_M_AUDI_OPINION=output5 dsPT_M_BEF_REPORT=output6 " ;
+		sOutDs += "dsPT_M_MEMO=output7 " ;
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		if (svcid == "SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+	
+	if (svcid == "GET_NUM")
+	{
+		if (!fnEmpty(dsPT_M_MASTER.GetColumn(0, "DISPO_CONT")))
+		{
+			alert('선택하신 접수건은 행정처분이 진행중입니다.');
+			Close();
+		}
+		
+		dsPT_M_REGIST_CANCEL.AddRow();
+		dsPT_M_REGIST_CANCEL.SetColumn(0, "WRT_NUM", dsPT_M_MASTER.GetColumn(0, "WRT_NUM"));
+		dsPT_M_REGIST_CANCEL.SetColumn(0, "TMP_WRT_NUM", dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+		
+		dsPT_M_AUDI_DICTION.AddRow();
+		dsPT_M_AUDI_OPINION.AddRow();
+		dsPT_M_AUDI_REPORT.AddRow();
+		
+		dsPT_M_AUDI_DICTION.SetColumn(0, "WRT_NUM", dsPT_M_MASTER.GetColumn(0, "WRT_NUM"));
+		dsPT_M_AUDI_OPINION.SetColumn(0, "WRT_NUM", dsPT_M_MASTER.GetColumn(0, "WRT_NUM"));
+		dsPT_M_AUDI_REPORT.SetColumn(0, "WRT_NUM", dsPT_M_MASTER.GetColumn(0, "WRT_NUM"));
+		
+		dsPT_M_AUDI_DICTION.SetColumn(0, "TMP_WRT_NUM", dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+		dsPT_M_AUDI_OPINION.SetColumn(0, "TMP_WRT_NUM", dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+		dsPT_M_AUDI_REPORT.SetColumn(0, "TMP_WRT_NUM", dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+		
+		dsPT_M_MASTER.SetColumn(0, "DISPO_CONT", "M00001");
+		dsPT_M_MASTER.SetColumn(0, "MOT_STE", "C00001");
+		
+		fnInsert();
+	}
+
+
+	if (svcid == "SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInquiry();
+	}
+	
+	if (svcid == "INSERT_SAVE")
+	{	
+		global.gv_WorkFlag = global.gv_MODIFY;
+		fnInitButtonBar();
+	}
+	
+	if (svcid == "MEMO_SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInitMemoGroup("INQUIRY");
+	}
+	if (svcid == "MEMO_DELETE")
+	{
+		alert('삭제되었습니다.');
+		fnInitMemoGroup("INQUIRY");
+	}
+	
+	if (svcid == "NOTI_SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInitNotiGroup("INQUIRY");
+	}
+	if (svcid == "NOTI_DELETE")
+	{
+		alert('삭제되었습니다.');
+		fnInitNotiGroup("INQUIRY");
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	var sArgs = "workMODE=INSERT_SAVE";
+	var sTid = "INSERT_SAVE";
+	var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+	var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u dsPT_M_REGIST_CANCEL=dsPT_M_REGIST_CANCEL:u ";
+		sInDs += "dsPT_M_AUDI_DICTION=dsPT_M_AUDI_DICTION:u dsPT_M_AUDI_OPINION=dsPT_M_AUDI_OPINION:u ";
+		sInDs += "dsPT_M_AUDI_REPORT=dsPT_M_AUDI_REPORT:u";
+	var sOutDs = "dsPT_M_MASTER=output dsPT_M_REGIST_CANCEL=output2 ";
+		sOutDs += "dsPT_M_AUDI_DICTION=output3 dsPT_M_AUDI_OPINION=output4 dsPT_M_AUDI_REPORT=output5";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+function fnCancel()
+{
+	if(!Confirm('취소하시겠습니까?')) return;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		//키값을 자동으로 생성할 경우 삭제하는 로직을 추가해주세요
+		Close();
+	}
+	else
+	{
+		fnRejectChange(this.dsPT_R_REGIST_STATEMENT);
+		alert('취소되었습니다.');
+	}
+
+	fnInquiry();
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{	
+	fnTablesBinding();
+	
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	var sArgs = "workMODE=ALL";
+	var sTid = "SAVE";
+	var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+	var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u dsPT_M_REGIST_CANCEL=dsPT_M_REGIST_CANCEL:u ";
+		sInDs += "dsPT_M_AUDI_DICTION=dsPT_M_AUDI_DICTION:u dsPT_M_AUDI_OPINION=dsPT_M_AUDI_OPINION:u ";
+		sInDs += "dsPT_M_AUDI_REPORT=dsPT_M_AUDI_REPORT:u";
+	var sOutDs = "dsPT_M_MASTER=output dsPT_M_REGIST_CANCEL=output2 ";
+		sOutDs += "dsPT_M_AUDI_DICTION=output3 dsPT_M_AUDI_OPINION=output4 dsPT_M_AUDI_REPORT=output5";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{
+}
+
+function fnValidation()
+{
+	return false;
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// 코드 조회용 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnEditButton_Click
+ 2. 기  능 : 에디트 버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnEditButton_Click(obj)
+{
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+		GetNextComponent(true).SetFocus();
+	}
+	else if(nChar == "120") 
+	{
+		var nTabIndex = tbMain.TabIndex;
+		
+		if(nTabIndex == tbMain.TabCount - 1)
+			tbMain.TabIndex = 0;
+		else
+			tbMain.TabIndex = nTabIndex + 1;
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// Validation check 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnKillFocus
+ 2. 기  능 : Control Leave 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnKillFocus(obj)
+{
+}
+
+//////////////////////////////////////////////////////////////////
+// On Focus 이벤트
+//////////////////////////////////////////////////////////////////
+function fnComponent_OnFocus(obj)
+{
+}
+
+//////////////////////////////////////////////////////////////////
+// Memo Detail Event
+//////////////////////////////////////////////////////////////////
+function fnMemoButton_Click(obj)
+{
+	var sDtWorkFlag;
+	
+	if(obj == tbMain.tpMemo.btnMemoInsert)
+	{
+		sDtWorkFlag = global.gv_INSERT;
+		dsPT_M_MEMO.AddRow();
+		dsPT_M_MEMO.SetColumn(dsPT_M_MEMO.row, "WRT_NUM", _sKEY1);
+		dsPT_M_MEMO.SetColumn(dsPT_M_MEMO.row, "TMP_WRT_NUM", _sKEY2);
+		dsPT_M_MEMO.SetColumn(dsPT_M_MEMO.row, "SEQ", dsPT_M_MEMO.rowcount);
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoModify)
+	{
+		sDtWorkFlag = global.gv_MODIFY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoRemove)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		dsPT_M_MEMO.ApplyChange();
+		var nCount = fnGridRowRemove(dsPT_M_MEMO);
+		
+		if(nCount == 0)
+		{
+			alert('삭제할 데이터를 선택하세요.');
+			return;
+		}
+		
+		var sArgs = "workMODE=MEMO";
+		var sTid = "MEMO_DELETE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+		var sInDs = "dsPT_M_MEMO=dsPT_M_MEMO:u";
+		var sOutDs = "dsPT_M_MEMO=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoCancel)
+	{
+		fnRejectChange(dsPT_M_MEMO);
+		
+		sDtWorkFlag = global.gv_INQUIRY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoSave)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		var sArgs = "workMODE=MEMO";	
+		var sTid = "MEMO_SAVE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+		var sInDs = "dsPT_M_MEMO=dsPT_M_MEMO:u";
+		var sOutDs = "dsPT_M_MEMO=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnInitMemoGroup(sDtWorkFlag)
+{
+	if(sDtWorkFlag == global.gv_INQUIRY)
+	{
+		fnControlState(false, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT");
+		fnControlState(true, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = true;
+		tbMain.tpMemo.btnMemoModify.Enable = true;
+		tbMain.tpMemo.btnMemoRemove.Enable = true;
+		tbMain.tpMemo.btnMemoSave.Enable = false;
+		tbMain.tpMemo.btnMemoCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_INSERT)
+	{
+		fnControlState(true, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT");
+		fnControlState(false, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = false;
+		tbMain.tpMemo.btnMemoModify.Enable = false;
+		tbMain.tpMemo.btnMemoRemove.Enable = false;
+		tbMain.tpMemo.btnMemoSave.Enable = true;
+		tbMain.tpMemo.btnMemoCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_MODIFY)
+	{
+		fnControlState(true, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT");
+		fnControlState(false, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = false;
+		tbMain.tpMemo.btnMemoModify.Enable = false;
+		tbMain.tpMemo.btnMemoRemove.Enable = false;
+		tbMain.tpMemo.btnMemoSave.Enable = true;
+		tbMain.tpMemo.btnMemoCancel.Enable = false;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// Noti Detail Event
+//////////////////////////////////////////////////////////////////
+function fnNotiButton_Click(obj)
+{
+	var sDtWorkFlag;
+	
+	if(obj == tbMain.tpNoti.btnNotiInsert)
+	{
+		sDtWorkFlag = global.gv_INSERT;
+		dsPT_M_BEF_REPORT.AddRow();
+		dsPT_M_BEF_REPORT.SetColumn(dsPT_M_BEF_REPORT.row, "WRT_NUM", _sKEY1);
+		dsPT_M_BEF_REPORT.SetColumn(dsPT_M_BEF_REPORT.row, "TMP_WRT_NUM", _sKEY2);
+		dsPT_M_BEF_REPORT.SetColumn(dsPT_M_BEF_REPORT.row, "SEQ", dsPT_M_BEF_REPORT.rowcount);
+		fnInitNotiGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpNoti.btnNotiModify)
+	{
+		sDtWorkFlag = global.gv_MODIFY;
+		fnInitNotiGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpNoti.btnNotiRemove)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		dsPT_M_BEF_REPORT.ApplyChange();
+		var nCount = fnGridRowRemove(dsPT_M_BEF_REPORT);
+		
+		if(nCount == 0)
+		{
+			alert('삭제할 데이터를 선택하세요.');
+			return;
+		}
+		
+		var sArgs = "workMODE=NOTI";
+		var sTid = "NOTI_DELETE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+		var sInDs = "dsPT_M_BEF_REPORT=dsPT_M_BEF_REPORT:u";
+		var sOutDs = "dsPT_M_BEF_REPORT=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if (obj == tbMain.tpNoti.btnNotiCancel)
+	{
+		fnRejectChange(dsPT_M_BEF_REPORT);
+		
+		sDtWorkFlag = global.gv_INQUIRY;
+		fnInitNotiGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpNoti.btnNotiSave)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		var sArgs = "workMODE=NOTI";	
+		var sTid = "NOTI_SAVE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrCUD";
+		var sInDs = "dsPT_M_BEF_REPORT=dsPT_M_BEF_REPORT:u";
+		var sOutDs = "dsPT_M_BEF_REPORT=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnInitNotiGroup(sDtWorkFlag)
+{
+	if(sDtWorkFlag == global.gv_INQUIRY)
+	{
+		fnControlState(false, tbMain.tpNoti, "REPORT_CODE,SEND_DATE,STATE_PERIOD,RECEIVE_YN,MEMO");
+		fnControlState(true, tbMain.tpNoti, "grdNoti");
+		
+		tbMain.tpNoti.btnNotiInsert.Enable = true;
+		tbMain.tpNoti.btnNotiModify.Enable = true;
+		tbMain.tpNoti.btnNotiRemove.Enable = true;
+		tbMain.tpNoti.btnNotiSave.Enable = false;
+		tbMain.tpNoti.btnNotiCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_INSERT)
+	{
+		fnControlState(true, tbMain.tpNoti, "REPORT_CODE,SEND_DATE,STATE_PERIOD,RECEIVE_YN,MEMO");
+		fnControlState(false, tbMain.tpNoti, "grdNoti");
+		
+		tbMain.tpNoti.btnNotiInsert.Enable = false;
+		tbMain.tpNoti.btnNotiModify.Enable = false;
+		tbMain.tpNoti.btnNotiRemove.Enable = false;
+		tbMain.tpNoti.btnNotiSave.Enable = true;
+		tbMain.tpNoti.btnNotiCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_MODIFY)
+	{
+		fnControlState(true, tbMain.tpNoti, "REPORT_CODE,SEND_DATE,STATE_PERIOD,RECEIVE_YN,MEMO");
+		fnControlState(false, tbMain.tpNoti, "grdNoti");
+		
+		tbMain.tpNoti.btnNotiInsert.Enable = false;
+		tbMain.tpNoti.btnNotiModify.Enable = false;
+		tbMain.tpNoti.btnNotiRemove.Enable = false;
+		tbMain.tpNoti.btnNotiSave.Enable = true;
+		tbMain.tpNoti.btnNotiCancel.Enable = false;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// Master Button Click Event
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnMasterButton_Click
+ 2. 기  능 : 각 화면의 Master Button click 처리
+ 3. Params 
+    @obj : Button object
+ 4. Return
+    없음
+*/
+function fnMasterButton_Click(obj)
+{
+	if (obj == this.btnGetNUM)
+	{
+		var sArgs = "_sWorkGroup=ActualInvestMgrC _sOldCode=" + this.RC_REGIST_NUM.Text;
+		
+		var sReturn = fnCreateDialog("bas::CMStD", sArgs);
+		
+		if (sReturn == null || sReturn.length() == 0) return;
+
+		_sKEY1 = sReturn[0];
+		_sKEY2 = sReturn[1];
+
+		sArgs = "workMODE=GET_NUM scWRT_NUM=" + _sKEY1 + " scTMP_WRT_NUM=" + _sKEY2;
+		var sTid = "GET_NUM";
+		var sUrl = "ICCS::am/AmAction.do?cmd=CancelMgrC";
+		var sInDs = "";
+		var sOutDs = "dsPT_M_MASTER=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	
+	if (obj == tbMain.tpBase.btnGetNUM)
+	{
+		if (fnEmpty(tbMain.tpBase.REPORT_CODE.Text))
+		{
+			alert('기술자 이름을 입력하세요.');
+			return;
+		}
+		var sArgs = "_sWorkGroup=ActualInvestMgrC _sOldName=" + quote(tbMain.tpBase.REPORT_CODE.Text);
+		
+		var sReturn = fnCreateDialog("bas::ExperStD", sArgs);
+		
+		if (sReturn == null || sReturn.length() == 0) return;
+
+		tbMain.tpBase.REPORT_CODE.Text = sReturn[1];
+		dsPT_S_CAPABILLITY_ASSESSMENT.SetColumn(dsPT_S_CAPABILLITY_ASSESSMENT.row, "QUAL_NUM", sReturn[0]);
+		dsPT_S_CAPABILLITY_ASSESSMENT.SetColumn(dsPT_S_CAPABILLITY_ASSESSMENT.row, "ADDR", sReturn[4]);
+	}
+}
+
+function fnSetDetailDataset()
+{
+	fnSetMasterDetail("dsPT_R_COMPANY_MASTER", "dsPT_R_ADDRESS_CHANGE");
+}
+
+function fnSetMasterDetail(dsMaster, dsDetail)
+{
+	var sDColName;
+	var sMColName;
+	var sValue;
+	
+	var nMCount = object(dsMaster).colcount;
+	var nDCount = object(dsDetail).colcount;
+	
+	if(object(dsDetail).rowcount == 0)
+		object(dsDetail).addrow();
+	
+	for(var nLoop = 0; nLoop < nDCount; nLoop++)
+	{
+		sDColName = object(dsDetail).GetColID(nLoop);
+		for(var nIndex = 0; nIndex < nMCount; nIndex++)
+		{
+			sMColName = object(dsMaster).GetColID(nIndex);
+			if(trim(sDColName) == trim(sMColName))
+			{
+				sValue = object(dsMaster).GetColumn(0, sMColName);
+				object(dsDetail).SetColumn(0, sDColName, sValue);
+				break;
+			}
+		}
+	}
+}
+
+
+function tbMain_tpReper_btnReferCheck_OnClick(obj)
+{
+	if(fnEmpty(tbMain.tpReper.NAME_KOR.Text) || fnEmpty(tbMain.tpReper.SSN1.Text) || 
+		fnEmpty(tbMain.tpReper.SSN2.Text))
+	{
+		alert('이름과 주민등록번호를 입력하세요.');
+		return;
+	}	
+	
+	dsReferCheck.DeleteAll();
+
+	var sArgs = "workMODE=REFER_CHECK scSSN1=" + quote(tbMain.tpReper.SSN1.Text); 
+		sArgs += " scSSN2=" + quote(tbMain.tpReper.SSN2.Text);
+		sArgs += " scCOM_NUM=" + dsPT_R_COMPANY_MASTER.GetColumn(0, "COM_NUM");
+	trace(sArgs);
+	var sTid = "REFER_CHECK";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrC";
+	var sInDs = "";
+	var sOutDs = "dsReferCheck=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+}
+
+function RegMgrC_OnCloseUp(obj,varReturn,bSelOk)
+{
+	
+}
+
+function fnDetailButton_Click(obj)
+{
+	var sSSN1 = tbMain.tpEngeneer.ENGINEER_SSN1.Text;
+	var sSSN2 = tbMain.tpEngeneer.ENGINEER_SSN2.Text;
+	
+	if (fnEmpty(sSSN1) || fnEmpty(sSSN2))
+	{
+		alert('기술자 주민등록번호를 입력하세요.');
+		return;
+	}
+
+	var sArgs = "workMODE=ENGINEER_CHECK scSSN=" + quote(sSSN1 + sSSN2); 
+	var sTid = "ENGINEER_CHECK";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrC";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_ENGINEER_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function Image6_OnClick(obj,nX,nY)
+{
+	
+}
+
+function Image1_OnClick(obj,nX,nY)
+{
+	
+}
+]]></Script>
+</Window>

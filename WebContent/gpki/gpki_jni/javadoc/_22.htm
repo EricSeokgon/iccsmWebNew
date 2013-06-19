@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>데이터 타입 정의</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H3 id=_D2HTopic_159 
+style="MARGIN-LEFT: 34.8pt; TEXT-INDENT: -34.8pt; tab-stops: 0cm 34.8pt"><SPAN 
+style="FONT-FAMILY: 굴림">데이터</SPAN> <SPAN style="FONT-FAMILY: 굴림">타입</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">정의</SPAN></H3>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="dll.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="_23.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>// <SPAN style="FONT-FAMILY: 굴림">행정용</SPAN> PKI <SPAN 
+style="FONT-FAMILY: 굴림">데이터</SPAN> </P>
+<P class=MsoNormal>#define 
+DT_GPKI_SIGN_CERT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x01&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">행정서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN></P>
+<P class=MsoNormal>#define DT_GPKI_SIGN_PRIKEY&nbsp; 0x02&nbsp;&nbsp;&nbsp;// 
+<SPAN style="FONT-FAMILY: 굴림">행정서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN></P>
+<P class=MsoNormal>#define DT_GPKI_SIGN_PRIKEY_HASH&nbsp;&nbsp; 
+0x03&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">행정서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN style="FONT-FAMILY: 굴림">해쉬값</SPAN></P>
+<P class=MsoNormal>#define 
+DT_GPKI_KM_CERT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x04&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">행정키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN></P>
+<P class=MsoNormal>#define 
+DT_GPKI_KM_PRIKEY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x05&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">행정키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN></P>
+<P class=MsoNormal>#define DT_GPKI_KM_PRIKEY_HASH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x06&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">행정키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN style="FONT-FAMILY: 굴림">해쉬값</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>// <SPAN style="FONT-FAMILY: 굴림">행정용</SPAN> PKI <SPAN 
+style="FONT-FAMILY: 굴림">데이터</SPAN> </P>
+<P class=MsoNormal>#define 
+DT_NPKI_SIGN_CERT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x10&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">공인서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN> </P>
+<P class=MsoNormal>#define DT_NPKI_SIGN_PRIKEY&nbsp; 0x20&nbsp;&nbsp;&nbsp;// 
+<SPAN style="FONT-FAMILY: 굴림">공인서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> </P>
+<P class=MsoNormal>#define DT_NPKI_SIGN_PRIKEY_HASH&nbsp;&nbsp; 
+0x30&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">공인서명용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN style="FONT-FAMILY: 굴림">해쉬값</SPAN> </P>
+<P class=MsoNormal>#define 
+DT_NPKI_KM_CERT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x40&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">공인키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN> </P>
+<P class=MsoNormal>#define 
+DT_NPKI_KM_PRIKEY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x50&nbsp;&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">공인키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> </P>
+<P class=MsoNormal>#define DT_NPKI_KM_PRIKEY_HASH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+0x60&nbsp;&nbsp;// <SPAN style="FONT-FAMILY: 굴림">공인키분배용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN style="FONT-FAMILY: 굴림">해쉬값</SPAN></P>
+<P class=MsoNormalIndent style="TEXT-INDENT: 10pt">&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="336" Id="Form1" Left="8" OnLoadCompleted="Form1_OnLoadCompleted" OnMove="Form1_OnMove" PidAttrib="7" Top="8" Ver="1.0" Width="744" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsUploadFile">
+				<Contents>
+					<colinfo Id="content" Size="255" Type="BLOB"/>
+					<colinfo Id="file_name" Size="50" Type="STRING"/>
+					<colinfo Id="path" Size="50" Type="STRING"/>
+					<colinfo Id="filesize" Size="20" Type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_result">
+				<contents id="ds_result">
+					<colinfo id="result" size="2" type="STRING"/>
+					<record>
+						<result/>
+					</record>
+				</contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Center" BKColor="dimgray" Border="Flat" BorderColor="#e1e1e1" Color="white" Height="22" Id="Static2" Left="17" TabOrder="1" Text="File&#32;Name" Top="302" VAlign="Middle" Width="74"></Static>
+		<Static Align="Center" BKColor="dimgray" Border="Flat" BorderColor="#e1e1e1" Color="white" Height="22" Id="Static12" Left="17" TabOrder="2" Text="PATH" Top="276" VAlign="Middle" Width="74"></Static>
+		<edit BindDataset="dsUploadFile" Column="file_name" Font="Tahoma,9,Bold" Height="22" Id="edit1" Left="93" Readonly="TRUE" TabOrder="3" Top="302" Width="282"></edit>
+		<edit BindDataset="dsUploadFile" Column="path" Font="Tahoma,9,Bold" Height="22" Id="edit0" Left="93" Readonly="TRUE" TabOrder="4" Top="276" Width="283"></edit>
+		<Static Font="굴림,10,Bold" Height="13" Id="Static1" Left="24" TabOrder="5" Text="회사이미지&#32;파일선택" Top="9" Width="181"></Static>
+		<button Height="22" Id="button0" Left="384" OnClick="button0_OnClick" TabOrder="6" Text="..." Top="276" Width="36"></button>
+		<FileDialog Bottom="320" Filter="ALL&#32;File(*.*)|*.*" Height="24" Id="FileDialog0" Left="472" Right="496" TabOrder="18" Top="296" Width="24"></FileDialog>
+		<File Bottom="320" Height="24" Id="File0" Left="496" Right="520" TabOrder="19" Top="296" Width="24"></File>
+		<Grid BindDataset="dsUploadFile" BkColor2="default" BoldHead="true" Bottom="265" Enable="true" EndLineColor="default" Height="233" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" Right="728" TabOrder="7" TabStop="true" Top="32" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="712">
+			<contents>
+				<columns>
+					<col width="424"/>
+					<col width="183"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="path"/>
+					<cell col="1" display="text" text="file_name"/>
+					<cell col="2" display="text" text="filesize"/>
+				</head>
+				<body>
+					<cell col="0" colid="path" display="text"/>
+					<cell col="1" colid="file_name" display="text"/>
+					<cell col="2" colid="filesize" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Button Height="21" Id="Button1" Left="568" OnClick="Button1_OnClick" TabOrder="8" Text="파일&#32;올리기" Top="304" Width="160"></Button>
+		<Image Height="75" Id="Image0" Left="424" TabOrder="9" Top="208" Width="86"></Image>
+	</Form>
+	<Script><![CDATA[// 파일선택 
+function button0_OnClick(obj)
+{
+	if (!FileDialog0.Open())
+	{
+		return;   
+	}
+	// 레코드를 추가한다.
+	var row = dsUploadFile.AddRow();
+
+	File0.FileName = FileDialog0.FilePath + "\\" + FileDialog0.FileName;
+	edit0.Text = File0.FileName;
+	edit1.Text = FileDialog0.FileName;  
+	File0.Open("rb"); 
+	var blobbuffer = File0.ReadBinary();
+//	var blobbuffer = File0.Read();
+	if(blobbuffer == "NULL")	
+	{ 
+		alert("null");
+	} else {
+//		alert("ok" + blobbuffer);
+	}	
+	dsUploadFile.SetColumn(row, "filesize", File0.GetLength());
+	File0.Close(); 
+
+	// 읽은 파일 내용을 dataset에 저장한다.
+	dsUploadFile.SetColumn(row, "content", blobbuffer);
+
+}
+  
+//파일 업로드 시작
+function button1_OnClick(obj)
+{
+	//파일 업로드 및 파일 등록 
+	Transaction('fileup1',global.g_ext_iccs_url + 'xml/sys_m/fileup.jsp','input=dsUploadFile','','','tr_result');
+}
+ 
+function tr_result(serid,errid,errmsg)
+{
+	if(trim(serid) == "fileup1")
+	{
+		trace(http.recvhttpstr);
+		if(errid == "0")		
+			alert("성공적으로 처리 되었습니다.");
+		else
+			alert(errmsg);
+	}  //ene t_fileup
+}
+
+function Form1_OnMove(obj,nX,nY)
+{
+	//window.left = 100;
+	alert("움직이면 안됩니다");
+}
+
+function Form1_OnLoadCompleted(obj)
+{
+}
+]]></Script>
+</Window>

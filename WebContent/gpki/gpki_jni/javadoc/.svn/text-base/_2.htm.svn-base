@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>환경설정</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H2 id=_D2HTopic_122 
+style="MARGIN-LEFT: 27.7pt; TEXT-INDENT: -27.7pt; tab-stops: 0cm 27.7pt"><SPAN 
+style="FONT-FAMILY: 굴림">환경설정</SPAN></H2>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="api4.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api5.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">①</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">클래스</SPAN> <SPAN style="FONT-FAMILY: 굴림">경로잡기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>JAVA<SPAN style="FONT-FAMILY: 굴림">용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API (libgpkiapi_jni.jar)<SPAN 
+style="FONT-FAMILY: 굴림">를</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용하기</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위해서는</SPAN> jar <SPAN style="FONT-FAMILY: 굴림">파일이</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">클래스</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">잡혀있어야한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 3.75pt; BORDER-LEFT: medium none; WIDTH: 99.22%; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 width="99%" border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.28%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%" rowSpan=2>
+      <P class=MsoNormal>Windows<SPAN style="FONT-FAMILY: 굴림">인</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우</SPAN> </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 17.82%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="17%">
+      <P class=MsoNormal>java <SPAN style="FONT-FAMILY: 굴림">옵션</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용</SPAN> </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 69.92%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="69%">
+      <P class=MsoNormal>java -classpath jar_directory\libgpkiapi_jni.jar;. 
+      (<SPAN style="FONT-FAMILY: 굴림">두개</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이상인</SPAN> <SPAN style="FONT-FAMILY: 굴림">경우</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">세미콜론</SPAN> ";"<SPAN 
+      style="FONT-FAMILY: 굴림">으로</SPAN> <SPAN style="FONT-FAMILY: 굴림">연결</SPAN>) 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 17.82%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="17%">
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">환경</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">변수</SPAN> <SPAN style="FONT-FAMILY: 굴림">등록</SPAN> 
+      </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 69.92%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="69%">
+      <P class=MsoNormal>"<SPAN style="FONT-FAMILY: 굴림">내</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">컴퓨터</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">속성</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">고급</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">환경변수</SPAN>"<SPAN 
+      style="FONT-FAMILY: 굴림">에서</SPAN> "<SPAN style="FONT-FAMILY: 굴림">새로</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">만들기</SPAN>"<SPAN 
+      style="FONT-FAMILY: 굴림">를</SPAN> <SPAN style="FONT-FAMILY: 굴림">클릭하여</SPAN> 
+      classpath <SPAN style="FONT-FAMILY: 굴림">변수를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">등록한다</SPAN>.</P>
+      <P class=MsoNormal><IMG src="Images\image21_1.jpg"></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.28%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%" rowSpan=2>
+      <P class=MsoNormal>Unix <SPAN style="FONT-FAMILY: 굴림">계열인</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우</SPAN> </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 17.82%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="17%">
+      <P class=MsoNormal>java <SPAN style="FONT-FAMILY: 굴림">옵션</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용</SPAN> </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 69.92%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="69%">
+      <P class=MsoNormal>java -classpath jar_directory/libgpkiapi_jni.jar:. 
+      (<SPAN style="FONT-FAMILY: 굴림">두개</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이상인</SPAN> <SPAN style="FONT-FAMILY: 굴림">경우</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">콜론</SPAN> ":"<SPAN 
+      style="FONT-FAMILY: 굴림">으로</SPAN> <SPAN style="FONT-FAMILY: 굴림">연결</SPAN>) 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 17.82%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="17%">
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">환경</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">변수</SPAN> <SPAN style="FONT-FAMILY: 굴림">등록</SPAN> 
+      </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 69.92%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="69%">
+      <P class=MsoNormal>set CLASSPATH=jar_directory/libgpkiapi_jni.jar:. 
+  </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">②</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN style="FONT-FAMILY: 굴림">경로</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">잡기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>JAVA<SPAN style="FONT-FAMILY: 굴림">용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN style="FONT-FAMILY: 굴림">에서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">호출하는</SPAN> JNI <SPAN 
+style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN style="FONT-FAMILY: 굴림">경로를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">잡아주어야</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">한다</SPAN>.<SPAN style="FONT-FAMILY: 굴림">이</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">때</SPAN>, <SPAN style="FONT-FAMILY: 굴림">이</SPAN> JNI 
+<SPAN style="FONT-FAMILY: 굴림">파일은</SPAN> C/C++<SPAN 
+style="FONT-FAMILY: 굴림">용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN style="FONT-FAMILY: 굴림">와</SPAN> 
+LDAP <SPAN style="FONT-FAMILY: 굴림">라이브러리와</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">연결되어있어</SPAN> <SPAN style="FONT-FAMILY: 굴림">이</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">두</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">라이브러리의</SPAN> <SPAN style="FONT-FAMILY: 굴림">경로도</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">잡아주어야</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 4.5pt; BORDER-LEFT: medium none; WIDTH: 98.08%; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 width="98%" border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.26%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%">
+      <P class=MsoNormal>Windows </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 87.74%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="87%" colSpan=2>
+      <P class=MsoNormal>JNI<SPAN style="FONT-FAMILY: 굴림">를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">비롯한</SPAN> C/C++<SPAN 
+      style="FONT-FAMILY: 굴림">용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN 
+      style="FONT-FAMILY: 굴림">와</SPAN> LDAP <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위치해</SPAN> <SPAN style="FONT-FAMILY: 굴림">있는</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">경로를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">환경</SPAN> <SPAN style="FONT-FAMILY: 굴림">변수에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">등록한다</SPAN>. "<SPAN 
+      style="FONT-FAMILY: 굴림">내</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">컴퓨터</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">속성</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">고급</SPAN>-&gt;<SPAN 
+      style="FONT-FAMILY: 굴림">환경변수</SPAN>"<SPAN 
+      style="FONT-FAMILY: 굴림">에서</SPAN> <SPAN style="FONT-FAMILY: 굴림">기존</SPAN> 
+      "path" <SPAN style="FONT-FAMILY: 굴림">변수에</SPAN> "<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>"<SPAN style="FONT-FAMILY: 굴림">를</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">추가한다</SPAN>.</P>
+      <P class=MsoNormal>&nbsp;<IMG src="Images\image21_2.jpg"></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.26%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%" rowSpan=3>
+      <P class=MsoNormal>Solaris, Linux, UnixWare </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>C <SPAN style="FONT-FAMILY: 굴림">또는</SPAN> TC shell 
+    </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>setenv LD_LIBRARY_PATH "<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Corn shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>export LD_LIBRARY_PATH="<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Born shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>LD_LIBRARY_PATH="<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>"</P>
+      <P class=MsoNormal>export LD_LIBRARY_PATH </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.26%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%" rowSpan=3>
+      <P class=MsoNormal>IBM-AIX</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>C <SPAN style="FONT-FAMILY: 굴림">또는</SPAN> TC shell 
+    </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>setenv LIBPATH "<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Corn shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>export LIBPATH="<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Born shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>LIBPATH="<SPAN style="FONT-FAMILY: 굴림">라이브러리가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>"</P>
+      <P class=MsoNormal>export LIBPATH </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 12.26%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="12%" rowSpan=3>
+      <P class=MsoNormal>HP-UX</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>C <SPAN style="FONT-FAMILY: 굴림">또는</SPAN> TC shell 
+    </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>setenv SHLIB_PATH "<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Corn shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>export SHLIB_PATH="<SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>" </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 20.62%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="20%">
+      <P class=MsoNormal>Born shell </P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 3.75pt; BORDER-TOP: medium none; PADDING-LEFT: 3.75pt; PADDING-BOTTOM: 3.75pt; BORDER-LEFT: medium none; WIDTH: 67.12%; PADDING-TOP: 3.75pt; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width="67%">
+      <P class=MsoNormal>SHLIB_PATH="<SPAN style="FONT-FAMILY: 굴림">라이브러리가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">설치된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리</SPAN>"</P>
+      <P class=MsoNormal>export SHLIB_PATH </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

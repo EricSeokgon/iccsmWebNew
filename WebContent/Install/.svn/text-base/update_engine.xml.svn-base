@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding="euc-kr" ?>
+<root>
+	<params>
+		<param id='DEVICE' type='string'>win32</param>
+		<param id='SOURCE' type='string'>engine_files</param>
+		<param id="TARGET" type="string">%engine%</param>
+		<param id='FILENAME' type='string'></param>
+		<param id="VERSION" type="string">2009.4.2.4</param>
+		<param id='ACTION' type='string'>DOWN</param>
+		<param id='STATUS' type='string'>0</param>
+	</params>
+	<dataset id='win32'>
+		<colinfo id='DEVICE' type='string' size='255'/>
+		<colinfo id='SOURCE' type='string' size='255'/>
+		<colinfo id='TARGET' type='string' size='255'/>
+		<colinfo id='FILENAME' type='string' size='255'/>
+		<colinfo id='VERSION' type='string' size='255'/>
+		<colinfo id='ACTION' type='string' size='255'/>
+		<colinfo id='STATUS' type='string' size='2'/>
+		
+		<record>
+			<TARGET>{A8104DA4-B6DB-41BD-B2C9-5CE2FE7A7F12}</TARGET>
+			<FILENAME>MiPlatform_InstallBase320.cab</FILENAME>
+			<VERSION>2007.10.4.1</VERSION>
+			<ACTION>DOWN</ACTION>
+		</record>
+		
+		<record><FILENAME>CyAdaptComLib320U.dll</FILENAME><VERSION>system::2007.3.6.1</VERSION></record>
+		<record><FILENAME>CyAxCommon320U.dll</FILENAME><VERSION>system::2007.10.2.1</VERSION></record>
+		<record><FILENAME>CyBaseLib320U.dll</FILENAME><VERSION>system::2009.3.1.1</VERSION></record>
+		<record><FILENAME>CyBsInfo320U.dll</FILENAME><VERSION>system::2007.3.19.1</VERSION></record>
+		<record><FILENAME>CyClassLib320U.dll</FILENAME><VERSION>system::2009.3.6.1</VERSION></record>
+		<record><FILENAME>CyComCtl320U.dll</FILENAME><VERSION>system::2009.3.3.1</VERSION></record>
+		<record><FILENAME>CyFrameLib320U.dll</FILENAME><VERSION>system::2007.10.2.1</VERSION></record>
+		<record><FILENAME>CyHttpAdp320U.dll</FILENAME><VERSION>system::2009.2.13.1</VERSION></record>
+		<record><FILENAME>CyHttpLib320U.dll</FILENAME><VERSION>system::2008.11.4.1</VERSION></record>
+		<record><FILENAME>CyMipApi320U.dll</FILENAME><VERSION>system::2009.3.6.1</VERSION></record>
+		<record><FILENAME>CyPlatformLib320U.dll</FILENAME><VERSION>system::2009.3.17.1</VERSION></record>
+		<record><FILENAME>CyScriptLib320U.dll</FILENAME><VERSION>system::2008.8.28.1</VERSION></record>
+		<record><FILENAME>SDBMWorker320U.dll</FILENAME><VERSION>system::2008.12.17.1</VERSION></record>
+    
+		<record><FILENAME>MiPlatform320U.exe</FILENAME><VERSION>system::2009.3.13.1</VERSION></record>
+		<record><FILENAME>MiPlatformX320U.ocx</FILENAME><VERSION>system::2009.3.2.1</VERSION><ACTION>DOWNREG</ACTION></record>
+		<record><FILENAME>MiPlatformMX320U.ocx</FILENAME><VERSION>system::2009.3.5.1</VERSION><ACTION>DOWNREG</ACTION></record>
+	</dataset>
+</root>

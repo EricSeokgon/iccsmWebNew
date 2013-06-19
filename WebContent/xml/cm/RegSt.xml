@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegSt" Left="8" OnActivate="fnForm_Activate" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록현황" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="RC_REGIST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="FIRST_REGIST_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="COM_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REC_DATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="STATE_PERIOD" size="256" summ="default" type="STRING"/>
+					<colinfo id="MEASURE_STATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="FIRST_REGIST_OFFICAL" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_REG_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="DEFICIT_STATUS" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Calendar Height="21" Id="scDATE2" Left="212" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="1" Top="104" Value="TODAY" Width="85"></Calendar>
+		<Calendar Height="21" Id="scDATE1" Left="105" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="104" Width="85"></Calendar>
+		<Edit Height="21" Id="scRC_REGIST_NUM" Left="372" Style="style1" TabOrder="3" Top="101" Width="96"></Edit>
+		<Edit Height="21" Id="scCOM_NAME" Left="532" Style="style1" TabOrder="4" Top="99" Width="96"></Edit>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="5" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="6" Top="77" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="7" Top="149" Width="817"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="8" Top="573" Width="816"></Image>
+		<Image Height="16" Id="Image4" ImageID="arrow_small_blue" Left="34" TabOrder="9" Top="106" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static3" Left="52" TabOrder="10" Text="등록일자" Top="109" Width="72"></Static>
+		<Image Height="30" Id="Image5" ImageID="form_w_top" Left="16" TabOrder="11" Top="139" Width="798"></Image>
+		<Image Height="447" Id="Image6" ImageID="form_w_bg488" Left="16" TabOrder="12" Top="168" Width="798"></Image>
+		<Image Height="30" Id="Image7" ImageID="form_w_bottom" Left="16" TabOrder="13" Top="605" Width="798"></Image>
+		<Button Height="40" Id="Button0" ImageID="button_search" Left="751" OnClick="fnSearchButton_Click" TabOrder="14" Text="Button0" Top="91" Width="55"></Button>
+		<Static Color="#666666" Height="12" Id="Static4" Left="196" TabOrder="15" Text="~" Top="108" Width="16"></Static>
+		<Image Height="16" Id="Image3" ImageID="arrow_small_blue" Left="298" TabOrder="16" Top="104" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static6" Left="316" TabOrder="17" Text="등록번호" Top="107" Width="72"></Static>
+		<Static Color="#666666" Height="16" Id="Static7" Left="492" TabOrder="19" Text="회사명" Top="104" Width="72"></Static>
+		<Image Height="16" Id="Image8" ImageID="arrow_small_blue" Left="474" TabOrder="18" Top="101" Width="16"></Image>
+		<Grid BindDataset="dsPT_R_COMPANY_MASTER" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="623" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="479" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="810" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="20" TabStop="true" Top="144" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="786">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="42"/>
+						<col width="93"/>
+						<col width="74"/>
+						<col width="178"/>
+						<col width="78"/>
+						<col width="80"/>
+						<col width="72"/>
+						<col width="80"/>
+						<col width="67"/>
+					</columns>
+					<head>
+						<cell bkcolor="#999999" col="0" color="white" display="text" text="선택"/>
+						<cell bkcolor="#999999" col="1" color="white" display="text" text="등록번호"/>
+						<cell bkcolor="#999999" col="2" color="white" display="text" text="등록일자"/>
+						<cell bkcolor="#999999" col="3" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+						<cell bkcolor="#999999" col="4" color="white" display="text" text="접수번호"/>
+						<cell bkcolor="#999999" col="5" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#999999" col="6" color="white" display="text" text="처리기한"/>
+						<cell bkcolor="#999999" col="7" color="white" display="text" text="진행상태"/>
+						<cell bkcolor="#999999" col="8" color="white" display="text" text="담당자"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="RC_REGIST_NUM" display="text"/>
+						<cell col="2" colid="FIRST_REGIST_DATE" display="date"/>
+						<cell col="3" colid="COM_NAME" display="text"/>
+						<cell col="4" colid="REC_NUM" display="text"/>
+						<cell col="5" colid="REC_DATE" display="date"/>
+						<cell col="6" colid="STATE_PERIOD" display="date"/>
+						<cell col="7" colid="MEASURE_STATE" display="text"/>
+						<cell col="8" colid="FIRST_REGIST_OFFICAL" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegMgr.xml
+2. 작성일 : 2009-02-25
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록현황 조회
+5. 변경이력
+  가. 2009-02-25 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	scDATE1.Value = AddDate(Today(), -7);
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(2) + "공사업등록현황";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = true;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, true);
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+	}
+	else
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " scRC_REGIST_NUM=" + quote(this.scRC_REGIST_NUM.Text);
+	sArgs += " scCOM_NAME=" + quote(this.scCOM_NAME.Text);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+		}
+		return;
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	var sKEY1 = "";
+	var sKEY2 = "";
+	var sWorkFlag = global.gv_INSERT;
+	
+	var sArgs = "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + sKEY1 + " _sKEY2=" + sKEY2;
+
+	gfnCreateNewWindow("RegMgrC", "cm::RegMgrC", sArgs);
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	var sKEY1 = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "TMP_REG_NUM");
+	var sKEY2 = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REC_NUM");
+
+	var sWorkFlag = global.gv_MODIFY;
+	
+	var sArgs = "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + sKEY1 + " _sKEY2=" + sKEY2;
+	
+	gfnCreateNewWindow("RegMgrC", "cm::RegMgrC", sArgs);
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	dsPT_R_COMPANY_MASTER.ApplyChange();
+	var nCount = fnGridRowRemove(dsPT_R_COMPANY_MASTER);
+	
+	if(nCount == 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+
+	var sArgs = "workMODE=ALL";
+	var sTid = "DELETE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrCCUD";
+	var sInDs = "dsPT_R_COMPANY_MASTER=dsPT_R_COMPANY_MASTER:u";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	var sCode = fnCreateDialog("cm::RegMgrReportDlg", "");
+	
+	var sKEY1 = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "TMP_REG_NUM");
+	
+	//내부건의서
+	if (sCode == "RPT1")
+	{
+		//var sRet = fnCreateDialogResize("bas::frmReport.xml", sKEY1);
+	}
+	//심사결과서
+	else if (sCode == "RPT2")
+	{
+		var sReportname =  "_sReportname=connection.reportname=RegInvestResult.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)RegInvestResultR";
+	
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sReportname + sOdiNames);
+	}
+	//공사업등록대장
+	else if (sCode == "RPT3")
+	{
+	}
+	//안내및 공고문
+	else if (sCode == "RPT4")
+	{
+		var sReportname =  "_sReportname=connection.reportname=RegInnerR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)RegInnerR";
+		var	spCount = " _spCount=odi.Q)RegInnerR.pcount=2";
+		var sParam = " _sParam=odi.Q)RegInnerR.args1=TMP_REG_NUM=" + sKEY1;
+		//var	sParam2 = " _sParam2=odi.Q)RegInnerR.args2=COM_NUM=1801110491778";
+			
+		//var sRet = fnCreateDialogResize("bas::frmReport.xml", sReportname + sOdiNames + spCount + sParam + sParam2);
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sReportname + sOdiNames + spCount + sParam);
+	}
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업등록접수현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fnModify();
+}
+
+function fnGridHead_Click(obj,nCell,nX,nY,nPivotIndex)
+{
+	if (nCell != 0) return;
+
+	fnGridCellCheck(obj, nCell, "CHECKER");
+}
+
+function fnGridCellCheck(obj, nCell, sCol)
+{
+	if(obj.Editable == false) return;
+
+	var objDs = obj.BindDataset;
+
+	if (grdList.GetSubCellProp("head", nCell, 1, "text") == "1")
+	{
+		grdList.SetSubCellProp("head", nCell, 1, "text", "0");
+		fnSetGridCheck(0, objDs, sCol);
+	} 
+	else 
+	{
+		grdList.SetSubCellProp("head", nCell, 1, "text", "1");
+		fnSetGridCheck(1, objDs, sCol);
+	}
+}
+
+function fnSetGridCheck(sValue, objDs, sCol)
+{
+	for (var nLoop = 0; nLoop < object(objDs).RowCount(); nLoop++)
+	{
+		object(objDs).SetColumn(nLoop, sCol, sValue);
+	}
+}
+
+
+]]></Script>
+</Window>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="SUVDlg" Left="8" PidAttrib="7" Title="감리&#32;업체&#32;검색" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SUV">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="SUV_NAME" size="100" summ="default" type="STRING"/>
+					<colinfo id="SUV_NM" size="26" summ="default" type="STRING"/>
+					<colinfo id="SUV_STANUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_TELNUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_MOBILE" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_POSTNUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="SUV_ADDR" size="64" summ="default" type="STRING"/>
+					<colinfo id="SUV_DETAILADDR" size="128" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="ds_SUV" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="221" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="157" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="634" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="8" TabStop="true" Top="64" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="626">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="26"/>
+						<col width="107"/>
+						<col width="359"/>
+						<col width="116"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" colid="CHECKER" color="white" display="checkbox" edit="checkbox"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="신고번호"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="감리원"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="SUV_STANUM" display="text"/>
+						<cell col="2" colid="SUV_NAME" display="text"/>
+						<cell col="3" colid="SUV_NM" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="110" Id="Static3" Left="8" ShadowColor="#cccccc" TabOrder="9" Text="신규등록" Top="226" Type="Groupbox" Width="624"></Static>
+		<Image Height="11" Id="Image2" ImageID="arrow_small_blue2" Left="20" TabOrder="11" Top="244" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static4" Left="35" Style="list_subtitle" TabOrder="10" Text="상호명" Top="247" Width="56"></Static>
+		<Edit BindDataset="ds_SUV" Column="SUV_NAME" Height="21" Id="SUV_NAME" Left="102" Style="style1" TabOrder="1" Top="242" Width="160"></Edit>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue2" Left="303" TabOrder="13" Top="244" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static5" Left="318" Style="list_subtitle" TabOrder="12" Text="신고번호" Top="245" Width="56"></Static>
+		<Edit BindDataset="ds_SUV" Column="SUV_STANUM" Height="21" Id="SUV_STANUM" Left="382" Style="style1" TabOrder="2" Top="240" Width="104"></Edit>
+		<Image Height="11" Id="Image5" ImageID="arrow_small_blue2" Left="20" TabOrder="15" Top="266" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static6" Left="35" Style="list_subtitle" TabOrder="14" Text="감리원" Top="269" Width="56"></Static>
+		<Edit BindDataset="ds_SUV" Column="SUV_NM" Height="21" Id="SUV_NM" Left="102" Style="style1" TabOrder="3" Top="264" Width="104"></Edit>
+		<Image Height="11" Id="Image6" ImageID="arrow_small_blue2" Left="20" TabOrder="17" Top="311" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static7" Left="36" Style="list_subtitle" TabOrder="16" Text="연락처" Top="291" Width="56"></Static>
+		<Edit BindDataset="ds_SUV" Column="SUV_MOBILE" Height="21" Id="SUV_MOBILE" Left="102" Style="style1" TabOrder="5" Top="308" Width="104"></Edit>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue2" Left="20" TabOrder="19" Top="288" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static8" Left="38" Style="list_subtitle" TabOrder="18" Text="휴대전화" Top="312" Width="56"></Static>
+		<Edit BindDataset="ds_SUV" Column="SUV_TELNUM" Height="21" Id="SUV_TELNUM" Left="102" Style="style1" TabOrder="4" Top="286" Width="104"></Edit>
+		<MaskEdit BindDataset="ds_SUV" Column="SUV_POSTNUM" Font="Tahoma,9" Height="21" Id="SUV_POSTNUM" Left="382" Mask="###-###" MaxLength="8" TabOrder="21" Top="264" Type="STRING" Width="55"></MaskEdit>
+		<Button Height="21" Id="btnPostCode" ImageID="button_style2_search" Left="440" OnClick="fnSuvButton_Click" TabOrder="6" Text="Button0" Top="264" Width="31"></Button>
+		<Edit BindDataset="ds_SUV" Column="SUV_ADDR" Font="Tahoma,9" Height="21" Id="SUV_ADDR" Left="472" Style="style1" TabOrder="20" Top="264" Width="150"></Edit>
+		<Edit BindDataset="ds_SUV" Column="SUV_DETAILADDR" Font="Tahoma,9" Height="21" Id="SUV_DETAILADDR" Left="382" Style="style1" TabOrder="7" Top="287" Width="241"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue2" Left="303" TabOrder="21" Top="266" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static9" Left="318" Style="list_subtitle" TabOrder="21" Text="주소" Top="267" Width="56"></Static>
+		<Image Height="42" Id="Image9" ImageID="bg_search_small" Left="8" TabOrder="24" Top="8" Width="624"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static2" Left="33" Style="list_subtitle" TabOrder="25" Text="상호명" Top="28" Width="56"></Static>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="241" Style="list_subtitle" TabOrder="26" Text="신고번호" Top="26" Width="56"></Static>
+		<Edit Height="21" Id="scSUV_STANUM" Left="297" Style="style1" TabOrder="27" Top="21" Width="72"></Edit>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="553" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="28" Top="23" Width="74"></Button>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="16" TabOrder="29" Top="28" Width="11"></Image>
+		<Image Height="11" Id="Image0" ImageID="arrow_small_blue" Left="226" TabOrder="30" Top="25" Width="11"></Image>
+		<Edit Height="21" Id="scSUV_NM" Left="440" Style="style1" TabOrder="32" Top="21" Width="104"></Edit>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static0" Left="392" Style="list_subtitle" TabOrder="31" Text="감리원" Top="27" Width="56"></Static>
+		<Image Height="11" Id="Image1" ImageID="arrow_small_blue" Left="377" TabOrder="33" Top="26" Width="11"></Image>
+		<Edit Height="21" Id="scSUV_NAME" Left="77" Style="style1" TabOrder="34" Top="20" Width="144"></Edit>
+		<Image Height="32" Id="Image10" ImageID="button_bg" Left="304" TabOrder="35" Top="344" Width="330"></Image>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoInsert" ImageID="button_style2_100" Left="312" OnClick="fnSuvButton_Click" Style="button_style01" TabOrder="37" Text="입력" Top="350" Width="56"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoModify" ImageID="button_style2_100" Left="376" OnClick="fnSuvButton_Click" Style="button_style01" TabOrder="37" Text="수정" Top="350" Width="56"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoCancel" ImageID="button_style2_100" Left="504" OnClick="fnSuvButton_Click" Style="button_style01" TabOrder="38" Text="취소" Top="350" Width="56"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoRemove" ImageID="button_style2_100" Left="568" OnClick="fnSuvButton_Click" Style="button_style01" TabOrder="39" Text="삭제" Top="350" Width="56"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoSave" ImageID="button_style2_100" Left="440" OnClick="fnSuvButton_Click" Style="button_style01" TabOrder="36" Text="저장" Top="350" Width="56"></Button>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnInitButtnGroup("INQUIRY");
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=ALL";
+	sArgs += " scSUV_NAME=" + quote(this.scSUV_NAME.Value);
+	sArgs += " scSUV_STANUM=" + quote(this.scSUV_STANUM.Text);
+	sArgs += " scSUV_NM=" + quote(this.scSUV_NM.Text);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=SuvspotMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_SUV=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+	if (svcid == "SEARCH")
+	{
+		fnInitButtnGroup("INQUIRY");
+	}
+	
+	if (svcid == "CODE")
+	{
+		cbSIDO.Index = 0;
+		cbSIDO.DisplayRowCnt = this.dsCODE.rowcount;
+		cbSIDO.Value = _sOldCode;
+	}
+	
+	if (svcid == "SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInitButtnGroup("INQUIRY");
+		return;
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+	
+	var arrReturn = Array(8);
+	arrReturn[0] = ds_SUV.GetColumn(nRow, "SEQ");
+	Close(arrReturn);
+}
+
+
+
+function fnGetRegReCMStD(sArgs)
+{
+	//var sArgs = "workMODE=RegReCompany";
+	//sArgs += " scCOI_WRT_NUM=" + quote(scCOI_WRT_NUM);
+		
+	var sTid = "SEARCH_ReCMS";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=CMStD";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnSuvButton_Click(obj)
+{
+	var sDtWorkFlag;
+	
+	if(obj == this.btnMemoInsert)
+	{
+		var sTime = GetDate();
+		sDtWorkFlag = global.gv_INSERT;
+		ds_SUV.AddRow();
+		fnInitButtnGroup(sDtWorkFlag);
+	}
+	else if(obj == this.btnPostCode){
+		_varArray = fnCreateDialog("bas::PostStD.xml");		
+		
+		this.SUV_POSTNUM = _varArray[0].replace("-","");
+		this.SUV_ADDR = _varArray[1];
+		this.SUV_DETAILADDR.SetFocus();
+	}
+	else if (obj == this.btnMemoSave)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		var sArgs = "workMODE=ALL";	
+		var sTid = "SAVE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=SuvspotMgrCUD";
+		var sInDs = "ds_SUV=ds_SUV:u";
+		var sOutDs = "ds_SUV=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if (obj == this.btnMemoCancel)
+	{
+		if (ds_SUV.GetRowType(ds_SUV.row) == "insert")
+			ds_SUV.DeleteRow(ds_SUV.row);
+		else
+			fnRejectChange(ds_SUV);
+		
+		sDtWorkFlag = global.gv_INQUIRY;
+		fnInitButtnGroup(sDtWorkFlag);
+	}
+	else if (obj == this.btnMemoModify)
+	{
+		sDtWorkFlag = global.gv_MODIFY;
+		fnInitButtnGroup(sDtWorkFlag);
+	}
+	else if (obj == this.btnMemoRemove)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		ds_SUV.ApplyChange();
+		var nCount = fnGridRowRemove(ds_SUV);
+		
+		if(nCount == 0)
+		{
+			alert('삭제할 데이터를 선택하세요.');
+			return;
+		}
+		
+		var sArgs = "workMODE=ALL";
+		var sTid = "DELETE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=SuvspotMgrCUD";
+		var sInDs = "ds_SUV=ds_SUV:u";
+		var sOutDs = "ds_SUV=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnInitButtnGroup(sDtWorkFlag)
+{
+	if(sDtWorkFlag == global.gv_INQUIRY)
+	{
+		fnControlState(false, this, "SUV_NAME,SUV_STANUM,SUV_NM,SUV_POSTNUM,SUV_ADDR,SUV_DETAILADDR,SUV_TELNUM,SUV_MOBILE");
+		fnControlState(true, this, "grdList,scSUV_NAME,scSUV_STANUM,scSUV_NM");
+		
+		btnMemoInsert.Enable = true;
+		btnMemoModify.Enable = true;
+		btnMemoRemove.Enable = true;
+		btnMemoSave.Enable = false;
+		btnMemoCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_INSERT)
+	{
+		fnControlState(true, this, "SUV_NAME,SUV_STANUM,SUV_NM,SUV_POSTNUM,SUV_ADDR,SUV_DETAILADDR,SUV_TELNUM,SUV_MOBILE");
+		fnControlState(false, this, "grdList,scSUV_NAME,scSUV_STANUM,scSUV_NM");
+		
+		btnMemoInsert.Enable = false;
+		btnMemoModify.Enable = false;
+		btnMemoRemove.Enable = false;
+		btnMemoSave.Enable = true;
+		btnMemoCancel.Enable = true;
+	}
+	else if(sDtWorkFlag == global.gv_MODIFY)
+	{
+		fnControlState(true, this, "SUV_NAME,SUV_STANUM,SUV_NM,SUV_POSTNUM,SUV_ADDR,SUV_DETAILADDR,SUV_TELNUM,SUV_MOBILE");
+		fnControlState(false, this, "grdList,scSUV_NAME,scSUV_STANUM,scSUV_NM");
+		
+		btnMemoInsert.Enable = false;
+		btnMemoModify.Enable = false;
+		btnMemoRemove.Enable = false;
+		btnMemoSave.Enable = true;
+		btnMemoCancel.Enable = true;
+	}
+}
+
+]]></Script>
+</Window>

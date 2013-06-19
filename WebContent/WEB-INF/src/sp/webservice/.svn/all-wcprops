@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice
+END
+UBAgentSOAP11BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgentSOAP11BindingStub.java
+END
+UBAgentSOAP12BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgentSOAP12BindingStub.java
+END
+EchoPortTypeProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/EchoPortTypeProxy.java
+END
+Echo.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/Echo.java
+END
+GetSeAllData.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/GetSeAllData.java
+END
+EchoSOAP11BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/EchoSOAP11BindingStub.java
+END
+SetEbmsFileResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/SetEbmsFileResponse.java
+END
+EchoSOAP12BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/EchoSOAP12BindingStub.java
+END
+SetEbmsFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/SetEbmsFile.java
+END
+EchoPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/EchoPortType.java
+END
+SetFileResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/SetFileResponse.java
+END
+UBAgentLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgentLocator.java
+END
+SetFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/SetFile.java
+END
+Select.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/Select.java
+END
+UBAgentPortTypeProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgentPortTypeProxy.java
+END
+CheckKeyResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/CheckKeyResponse.java
+END
+UBAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgent.java
+END
+ExcuteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/ExcuteResponse.java
+END
+CheckKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/CheckKey.java
+END
+Excute.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/Excute.java
+END
+UBAgentPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/UBAgentPortType.java
+END
+GetFileResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/GetFileResponse.java
+END
+GetFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/GetFile.java
+END
+EchoLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/webservice/EchoLocator.java
+END

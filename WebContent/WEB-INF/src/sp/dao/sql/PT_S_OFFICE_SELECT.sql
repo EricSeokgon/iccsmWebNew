@@ -1,0 +1,5 @@
+
+SELECT 
+	WRT_NUM, TMP_WRT_NUM, AREA, OWN_POSS_YN, INS_DT, UPD_DT, WRT_ID 
+FROM   PT_S_OFFICE ;
+                   

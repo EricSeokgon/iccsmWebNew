@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="704" Id="Main" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="메인페이지" Top="8" Ver="1.0" Width="1016" WorkArea="true">
+		<Image Height="80" Id="Image5" ImageID="logo" TabOrder="1" Width="186"></Image>
+		<Image Height="568" Id="Image6" ImageID="main_left" TabOrder="1" Top="80" Width="21"></Image>
+		<ZTransferX Bottom="53" DownloadInstruction="ozrviewer.idf" Height="37" Id="ZTransferX0" InstallBase="&lt;PROGRAMS&gt;/Forcs" InstallNamespace="ICCSM" Left="192" Right="235" Top="16" Visible="FALSE" Width="43"></ZTransferX>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="21" Id="Image8" ImageID="button_home" Left="816" OnClick="fn_Home_Page" Static="FALSE" Style="button_lift01" TabOrder="4" Top="103" Width="100"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="21" Id="Image7" ImageID="button_reload" Left="918" OnClick="fnForm_ReLoad" Static="FALSE" Style="button_lift01" TabOrder="5" Top="103" Width="67"></Image>
+		<Microsoft Bottom="696" Height="616" Id="Microsoft0" Left="8" Right="1008" Top="80" Width="1000"></Microsoft>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+
+		
+function fnForm_Loaded(obj)
+{
+	var _sURL=global.g_ext_iccs_url+"index/IndexAction.do?cmd=MainIndex"+"&scUSER_ID="+g_User_ID+"&scUSER_PW="+g_passwd+"&scSD_CD="+g_Sd_cd+"&scSGG_CD="+g_Sgg_cd+"&scCAPITAL="+g_Capital;
+	
+	this.Microsoft0.Navigate(_sURL, "", "", "fnCallback");
+//alert("공사업 시스템 DB암호화 작업으로\n 금일 2월 13일 06시 30분부터 08시 30분까지\n 네트 사용이 안됩니다.");
+}
+
+]]></Script>
+</Window>

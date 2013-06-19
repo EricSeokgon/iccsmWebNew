@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Descriptions>
+	<Protocols></Protocols>
+	<AppGroups></AppGroups>
+	<DataGroups></DataGroups>
+	<Components></Components>
+	<DataSets>
+		<DataSet Form="RegMgrC" Name="Dataset0"><![CDATA[dsPT_R_SUBSIDIARY]]></DataSet>
+	</DataSets>
+	<Script></Script>
+</Descriptions>

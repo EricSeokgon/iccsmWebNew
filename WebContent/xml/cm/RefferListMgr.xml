@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RefferListMgr" Left="8" OnActivate="fnForm_Activate" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="신원조회현황" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_REFFER_old">
+				<Contents>
+					<colinfo id="NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SSN1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SSN2" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHAR_REF_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMPSSN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsREFFER">
+				<Contents>
+					<colinfo id="Code" size="1" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>1</Code>
+						<Value>조회완료</Value>
+					</record>
+					<record>
+						<Code>2</Code>
+						<Value>조회대기중</Value>
+					</record>
+					<record>
+						<Code>3</Code>
+						<Value>등록불가</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="scCOMPANY_DIV">
+				<Contents>
+					<colinfo id="Code" size="256" type="STRING"/>
+					<colinfo id="Value" size="256" type="STRING"/>
+					<record>
+						<Code>PT_R_REGIST_STATEMENT</Code>
+						<Value>신규등록</Value>
+					</record>
+					<record>
+						<Code>PT_R_BASIC_STATEMENT</Code>
+						<Value>기준신고</Value>
+					</record>
+					<record>
+						<Code>PT_R_ASSI_TRANS_STATEMENT</Code>
+						<Value>양도양수</Value>
+					</record>
+					<record>
+						<Code>PT_R_M_UNION_STATEMENT</Code>
+						<Value>합병등록</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDate">
+				<Contents>
+					<colinfo id="Code" size="10" type="STRING"/>
+					<colinfo id="Value" size="10" type="STRING"/>
+					<record>
+						<Code>PT_R_REGIST_STATEMENT</Code>
+						<Value>신규등록</Value>
+					</record>
+					<record>
+						<Code>PT_R_BASIC_STATEMENT</Code>
+						<Value>기준신고</Value>
+					</record>
+					<record>
+						<Code>PT_R_ASSI_TRANS_STATEMENT</Code>
+						<Value>양도양수</Value>
+					</record>
+					<record>
+						<Code>PT_R_M_UNION_STATEMENT</Code>
+						<Value>합병등록</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_REFFER">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SI_DO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SI_GUN_GU_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="ENT_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RET_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM_HAN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORI" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="SSN1" size="256" summ="default" type="STRING"/>
+					<colinfo id="SSN2" size="256" summ="default" type="STRING"/>
+					<colinfo id="HEFA" size="256" summ="default" type="STRING"/>
+					<colinfo id="HEFA_RELA" size="256" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHAR_REF_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CHGBRE_SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="POS_NAME" size="12" summ="default" type="STRING"/>
+					<colinfo id="SEND_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="FOREIGN_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="5" Top="149" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="4" Top="77" Width="816"></Image>
+		<Image Height="66" Id="Image5" ImageID="bg_search" Left="23" TabOrder="9" Top="93" Width="784"></Image>
+		<Edit Height="21" Id="scCOI_WRT_NUM" Left="337" Style="style1" TabOrder="1" Top="120" Width="80"></Edit>
+		<Edit Height="21" Id="scCOM_NAME" Left="512" Style="style1" TabOrder="2" Top="120" Width="144"></Edit>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="3" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="6" Top="573" Width="816"></Image>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="711" OnClick="fnSearchButton_Click" TabOrder="7" Text="Button0" Top="120" Width="74"></Button>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="263" TabOrder="8" Top="124" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static6" Left="281" TabOrder="9" Text="등록번호" Top="123" Width="72"></Static>
+		<Static Color="#666666" Height="16" Id="Static7" Left="457" TabOrder="9" Text="공사업체" Top="123" Width="72"></Static>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="439" TabOrder="9" Top="124" Width="11"></Image>
+		<Grid BindDataset="dsPT_R_REFFER" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="456" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="272" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" Right="810" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="9" TabStop="true" Top="184" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="786">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="180"/>
+						<col width="120"/>
+						<col width="150"/>
+						<col width="110"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="등록번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="공&#32;사&#32;업&#32;체"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="신원조회대상자"/>
+						<cell bkcolor="#787878" col="3" color="user5" display="text" text="주민등록번호"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="신원조회결과"/>
+					</head>
+					<body>
+						<cell col="0" colid="COI_WRT_NUM" display="text"/>
+						<cell align="center" col="1" colid="NAME" display="text"/>
+						<cell align="center" col="2" colid="NM_KOR" display="text"/>
+						<cell align="center" col="3" colid="TMPSSN" display="text" Mask="######-#######"/>
+						<cell align="center" col="4" colid="CHAR_REF_YN" combocol="Code" combodataset="dsREFFER" combotext="Value" display="combo" edit="combo"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="24" TabOrder="9" Top="551" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="40" Id="Static2" Left="55" TabOrder="9" Text="신원조회결과를&#32;셀을&#32;클릭하시면&#32;신원조회&#32;결과를&#32;입력하실&#32;수&#32;있습니다." Top="573" Width="736"></Static>
+		<Static Color="#666666" Height="20" Id="Static0" Left="71" TabOrder="9" Text="공사업구분" Top="122" Width="65"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue" Left="55" TabOrder="9" Top="124" Width="11"></Image>
+		<Combo CodeColumn="Code" DataColumn="Value" DisplayRowCnt="4" Height="21" Id="scDATE" INDEX="0" InnerDataset="dsDate" Left="144" ResetIndex="FIRST" TabOrder="9" Top="119" Width="112"></Combo>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="15" Id="Static9" Left="322" Style="list_subtitle" TabOrder="21" Text="신원조회대상자" Top="472" Width="94"></Static>
+		<Edit BindDataset="dsPT_R_REFFER" Column="NM_KOR" Enable="FALSE" Height="21" Id="NM_KOR" Left="419" OnKeyDown="tbMain_tpEngeneer_ENGINEER_NM_OnKeyDown" Style="style1" TabOrder="19" Top="464" Width="109"></Edit>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static3" Left="42" Style="list_subtitle" TabOrder="22" Text="공사업체" Top="496" Width="69"></Static>
+		<Edit BindDataset="dsPT_R_REFFER" Column="NAME" Enable="FALSE" Height="21" Id="NAME" Left="121" MaxLength="15" Style="style1" TabOrder="20" Top="489" Width="109"></Edit>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="16" Id="Static4" Left="42" Style="list_subtitle" TabOrder="23" Text="등록번호" Top="470" Width="80"></Static>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="19" Id="Static1" Left="320" Style="list_subtitle" TabOrder="23" Text="주민등록번호" Top="496" Width="80"></Static>
+		<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="304" TabOrder="24" TabStop="FALSE" Top="464" Width="16"></Image>
+		<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="24" TabOrder="25" TabStop="FALSE" Top="465" Width="16"></Image>
+		<Image Height="16" Id="Image14" ImageID="arrow_small_white" Left="24" TabOrder="26" TabStop="FALSE" Top="489" Width="16"></Image>
+		<Image Height="16" Id="Image19" ImageID="arrow_small_white" Left="304" TabOrder="27" TabStop="FALSE" Top="490" Width="16"></Image>
+		<Edit BindDataset="dsPT_R_REFFER" Column="COI_WRT_NUM" Enable="FALSE" Height="21" Id="COI_WRT_NUM" Left="121" MaxLength="15" Style="style1" TabOrder="29" Top="464" Width="109"></Edit>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnEngSave" ImageID="button_style2_100" Left="744" OnClick="fnSave" Style="button_style01" TabOrder="30" TabStop="FALSE" Text="저&#32;&#32;장" Top="464" Width="57"></Button>
+		<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="528" TabOrder="32" TabStop="FALSE" Top="464" Width="16"></Image>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="24" Id="Static5" Left="543" Style="list_subtitle" TabOrder="31" Text="신원조회결과" Top="467" Width="80"></Static>
+		<Combo BindDataset="dsPT_R_REFFER" CodeColumn="Code" Column="CHAR_REF_YN" DataColumn="Value" DisplayRowCnt="4" Height="21" Id="CHAR_REF_YN" INDEX="0" InnerDataset="dsREFFER" Left="628" ResetIndex="FIRST" TabOrder="33" Top="463" Width="112"></Combo>
+		<Edit BindDataset="dsPT_R_REFFER" CheckLength="Byte" Column="SSN2" Enable="FALSE" Height="21" Id="SSN2" Left="475" MaxLength="7" Number="TRUE" Style="style1" TabOrder="35" Top="489" Width="55"></Edit>
+		<Edit AutoSkip="TRUE" BindDataset="dsPT_R_REFFER" Column="SSN1" Enable="FALSE" Height="21" Id="SSN1" Left="419" MaxLength="6" Number="TRUE" OnCharChanged="fnControlChanged" Style="style1" TabOrder="34" Top="489" Width="55"></Edit>
+		<Static Height="14" Id="Static8" Left="733" TabOrder="37" Top="166" Width="64"></Static>
+		<Static Color="#666666" Height="16" Id="Static10" Left="698" TabOrder="36" Text="총계:" Top="166" Width="48"></Static>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegMgr.xml
+2. 작성일 : 2009-02-25
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록현황 조회
+5. 변경이력
+  가. 2009-02-25 최초작성 (김현기)
+  나. 2009-04-06 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	//scDATE1.Value = AddDate(Today(), -7);
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "신원조회내역관리";
+	Static8.text=dsPT_R_REFFER.rowcount();
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, false);
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = true;
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnList.enable = false;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+   
+	
+	var sArgs = "scSIDO_CODE=" + quote(global.g_Sd_cd);
+	sArgs += " scCOI_WRT_NUM=" + quote(this.scCOI_WRT_NUM.Text);
+	sArgs += " scNAME=" + quote(this.scCOM_NAME.Text);
+	sArgs += " scDATE=" + quote(this.scDATE.Value);
+
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RefferListMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_REFFER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+    Static8.text=dsPT_R_REFFER.rowcount();
+	
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+		fnTablesBinding();
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	var sArgs = "workMODE=ALL";
+	var sTid = "SAVE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RefferListMgrCUD";
+	var sInDs = "dsPT_R_REFFER=dsPT_R_REFFER:u";
+	var sOutDs = "dsPT_R_REFFER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "신원조회 현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}
+]]></Script>
+</Window>

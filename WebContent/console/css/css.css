@@ -1,0 +1,48 @@
+/* CSS Document */
+img {border:0; }
+body {font-family: "돋움"}
+
+#main{
+	background:url(../images/bg_main.jpg) left top no-repeat;
+	width:100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style:none;
+	line-height:14px;
+	border:0px solid red
+}
+
+#top 	{position:absolute; float:left; display:inline; background:url(../images/bg_top.gif) left top repeat-x; width: 1655px; height:80px; margin:0; left:0; padding:0; border:0px solid red;}
+#region {position:relative; float:left; background:url(../images/bg_region.gif) left top no-repeat; width:129px; height:80px; margin-left:31px; padding: 40px 0 0 0; text-align: center; color:#FFFFFF; font-size:18pt;font-weight:bold; border:0px solid red;}
+#Clock 	{position:relative; float:right; background:url(../images/bg_time.gif) left top no-repeat; width:266px; height:80px; top;0; margin:0px; padding: 39px 0 0 0; 
+		text-align: center; color:#FFFFFF; font-size: 12px; font-weight:bold; border:0px solid yellow;}
+		
+#menu 	{position:absolute; float:left; width:612px; top:322px; _top:322px; left:167px; margin:0; padding:0;}
+#btn	{position:relative; float:left; width:43px; margin-right:110px; margin-bottom:130px; }
+
+
+#sub{
+	background:url(../images/bg_sub.jpg) left top no-repeat;
+	background-color:#000000;
+	width:100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style:none;
+	line-height:14px;
+	border:0px solid red
+}
+
+#contents_all	{position:absolute; float:left; display:inline; width:1560px; top:95px; left:40px; border:0px solid green;}
+#contents {float:left;display:inline; width:706px; height:316px; margin-left:27px; margin-right:65px; margin-bottom:39px; text-align:center; border:0px solid green;}
+#contents_right {float:left;display:inline; width:706px; height:316px;margin-left:29px; margin-bottom:39px; text-align:center; border:0px solid green;}
+#graph	{width:706px; height:270px; margin-top:3px; border:0px solid white;}
+
+#contents_5 {float:left; width:1560px; height:185px; margin-left:0; text-align:center; background:url(../images/bg_sub5.jpg) left top no-repeat; border:0px solid red;}
+
+#table	{float:left; display:inline; width:1560px; height:100px; margin-top:8px; padding:0px 0 0 93px; _padding:0px 0 0 93px; text-align:left; border:0px solid white;}
+.txt 	{float:left; width:98px; margin:0 3px 0 0; padding:0; border:0px solid yellow;}
+.txt ul {display:inline; list-style:none; text-align:center; padding:0; margin:0 0 0 0; border:0px solid red;}
+.txt ul p {text-align: center; color:#000000; font-size:11pt; font-weight:bold; padding:0px 0 0 0; _padding-top:10px; line-height:160%; border:0px solid yellow;}
+.txt ul li {text-align:center; text-indent:0;line-height:180%; }
+
+.txt ul li {line-height:190%; font-weight:bold;}

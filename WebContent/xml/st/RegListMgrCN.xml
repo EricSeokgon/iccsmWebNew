@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="656" Id="RegListMgrC" Left="8" OnActivate="fnForm_Activate" OnCloseUp="RegMgrC_OnCloseUp" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업체&#32;등록" Top="8" Ver="1.0" Width="840" WorkArea="true">
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" Top="77" Width="816"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="4" Top="573" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" OnClick="Image1_OnClick" TabOrder="3" Top="149" Width="817"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="1" Text="Div0" Top="16" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<WebBrowser Height="368" Id="WebBrowser0" Left="20" TabOrder="5" Top="93" Width="727"></WebBrowser>
+	</Form>
+	<Script></Script>
+</Window>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" DisableColor="black" Height="200" Id="frmChgSelectDlg" Left="8" OnLoadCompleted="frm_OnLoadCompleted" PidAttrib="7" Title="세부변경사항&#32;선택" Top="8" Ver="1.0" Width="360" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsEXT_CHG_CLASS">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE>A</CODE>
+						<VALUE>소재지&#32;변경</VALUE>
+					</record>
+					<record>
+						<CODE>B</CODE>
+						<VALUE>자본금&#32;변경</VALUE>
+					</record>
+					<record>
+						<CODE>C</CODE>
+						<VALUE>대표자&#32;변경</VALUE>
+					</record>
+					<record>
+						<CODE>D</CODE>
+						<VALUE>상호&#32;변경</VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Height="16" Id="Static1" Left="41" TabOrder="8" Text="입력시&#32;변경된&#32;항목이&#32;있다면&#32;선택해주십시오." Top="16" Width="303"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="104" Id="Static0" Left="16" TabOrder="7" Text="변경항목&#32;선택" Top="48" Type="Groupbox" Width="328"></Static>
+		<Checkbox Column="CODE" DisableBKColor="#c6dce1" Height="20" Id="chkChgA" Left="40" TabOrder="1" Text="소재지&#32;변경" Top="72" TrueValue="A" Value="FALSE" Width="95"></Checkbox>
+		<Checkbox Column="CODE" DisableBKColor="#c6dce1" Height="20" Id="chkChgB" Left="208" TabOrder="2" Text="자본금&#32;변경" Top="72" TrueValue="B" Value="FALSE" Width="95"></Checkbox>
+		<Checkbox Column="CODE" DisableBKColor="#c6dce1" Height="20" Id="chkChgC" Left="40" TabOrder="3" Text="대표자&#32;변경" Top="112" TrueValue="C" Value="FALSE" Width="95"></Checkbox>
+		<Checkbox Column="CODE" DisableBKColor="#c6dce1" Height="20" Id="chkChgD" Left="208" TabOrder="4" Text="상호&#32;변경" Top="112" TrueValue="D" Value="FALSE" Width="95"></Checkbox>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnOk" ImageID="button_style1_70" Left="88" OnClick="btnOk_OnClick" Style="button_style01" TabOrder="5" Text="확&#32;&#32;&#32;&#32;인" Top="168" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="192" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="6" Text="취&#32;&#32;&#32;&#32;소" Top="168" Width="72"></Button>
+		<Image Height="16" Id="Image4" ImageID="arrow_small_blue2" Left="18" TabOrder="9" TabStop="FALSE" Top="16" Width="16"></Image>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+// 기등록된 값
+var _chgCode;
+// 부모창의 종류
+var _parentType;
+
+// 폼 로드
+function frm_OnLoadCompleted(obj)
+{
+	// 기등록된 값을 유지하기
+	if( IndexOf(_chgCode, "A") > -1 )
+		chkChgA.Value = "A";
+	if( IndexOf(_chgCode, "B") > -1 )
+		chkChgB.Value = "B";
+	if( IndexOf(_chgCode, "C") > -1 )
+		chkChgC.Value = "C";
+	if( IndexOf(_chgCode, "D") > -1 )
+		chkChgD.Value = "D";
+		
+	//( _parentType == "Std" ) {
+	//}
+		
+	if(fnEmpty(_chgCode)) {
+	
+		// 기준신고
+		if( _parentType == "Std") {
+			// BD
+			this.chkChgA.Value = true;
+			this.chkChgB.Value = true;
+			this.chkChgC.Value = true;
+			this.chkChgD.Value = true;
+			
+			this.chkChgA.Enable = true;
+			this.chkChgB.Enable = false;
+			this.chkChgC.Enable = true;
+			this.chkChgD.Enable = true;
+		}
+		
+		// 양도양수
+		if( _parentType == "Trn1") {
+			// ABCD
+			this.chkChgA.Value = true;		
+			this.chkChgB.Value = true;
+			this.chkChgC.Value = true;
+			this.chkChgD.Value = true;
+			
+			this.chkChgA.Enable = false;
+			this.chkChgB.Enable = false;
+			this.chkChgC.Enable = false;
+			this.chkChgD.Enable = false;
+		}
+		
+		// 분할합병
+		if( _parentType == "Trn2") {
+			// ABCD
+			this.chkChgA.Value = true;
+			this.chkChgB.Value = true;
+			this.chkChgC.Value = true;
+			this.chkChgD.Value = true;
+			
+			this.chkChgA.Enable = false;
+			this.chkChgB.Enable = false;
+			this.chkChgC.Enable = false;
+			this.chkChgD.Enable = false;
+		}
+		
+		// 법인전환
+		if( _parentType == "Trn3") {
+			// BD
+			this.chkChgA.Value = false;
+			this.chkChgB.Value = true;
+			this.chkChgC.Value = false;
+			this.chkChgD.Value = true;
+			
+			this.chkChgA.Enable = false;
+			this.chkChgB.Enable = true;
+			this.chkChgC.Enable = false;
+			this.chkChgD.Enable = true;
+		}
+		
+		// 법인합병
+		if( _parentType == "Uni") {
+			// BD
+			this.chkChgA.Value = true;
+			this.chkChgB.Value = true;
+			this.chkChgC.Value = true;
+			this.chkChgD.Value = true;
+			
+			this.chkChgA.Enable = true;
+			this.chkChgB.Enable = false;
+			this.chkChgC.Enable = true;
+			this.chkChgD.Enable = true;
+		}
+	}
+}
+
+// 확인 버튼 클릭
+function btnOk_OnClick(obj)
+{
+	var sReturn = "";
+	sReturn += chkChgA.Value;
+	sReturn += chkChgB.Value;
+	sReturn += chkChgC.Value;
+	sReturn += chkChgD.Value;
+	
+	sReturn = replace(sReturn,"0","");
+	Close( sReturn );
+}
+
+// 취소 버튼 클릭
+function btnCancel_OnClick(obj)
+{
+	Close( null );
+}
+
+
+]]></Script>
+</Window>

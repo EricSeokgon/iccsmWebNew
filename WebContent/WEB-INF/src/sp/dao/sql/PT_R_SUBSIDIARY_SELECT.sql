@@ -1,0 +1,5 @@
+
+SELECT 
+	SEQ, TMP_WRT_NUM, SUB_WRT_NUM, SUB_CODE, WRT_ID, UPD_DT, INS_DT 
+FROM   PT_R_SUBSIDIARY ;
+                   

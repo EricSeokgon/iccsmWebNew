@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding="euc-kr" ?>
+<root>
+	<params>
+		<param id='DEVICE' type='string'>win32</param>
+		<param id='SOURCE' type='string'>etc_files</param>
+		<param id="TARGET" type="string">%component%</param>
+		<param id='FILENAME' type='string'></param>
+		<param id='VERSION' type='string'>2009.4.2.1</param>
+		<param id='ACTION' type='string'>DOWN</param>
+		<param id='STATUS' type='string'>0</param>
+	</params>
+	<dataset id='win32'>
+		<colinfo id='DEVICE' type='string' size='255'/>
+		<colinfo id='SOURCE' type='string' size='255'/>
+		<colinfo id='TARGET' type='string' size='255'/>
+		<colinfo id='FILENAME' type='string' size='255'/>
+		<colinfo id='VERSION' type='string' size='255'/>
+		<colinfo id='ACTION' type='string' size='255'/>
+		<colinfo id='STATUS' type='string' size='2'/>
+
+		<record><FILENAME>ExtCommonApiU.dll</FILENAME><VERSION>system::2007.10.2.1</VERSION></record>
+		<record><FILENAME>CyHttpFileU.dll</FILENAME><VERSION>system::2007.12.3.1</VERSION></record>
+		<record><FILENAME>iccs.ico</FILENAME><VERSION>2009.6.1</VERSION></record>
+		<record><FILENAME>sub_red.ico</FILENAME><VERSION>2009.4.2</VERSION></record>
+		<record><FILENAME>kjs.jpg</FILENAME><VERSION>2009.4.2</VERSION></record>
+		<record><FILENAME>start.gif</FILENAME><VERSION>2009.6.1</VERSION></record>
+
+	</dataset>
+</root>

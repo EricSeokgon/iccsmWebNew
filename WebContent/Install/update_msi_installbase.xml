@@ -1,0 +1,31 @@
+
+<?xml version='1.0' encoding='euc-kr'?>
+<root>
+<params> <!--디폴트값설정-->
+	<param id='DEVICE' type='string'>Win32</param>
+	<param id='SOURCE' type='string'>msi_files</param>
+	<param id='TARGET' type='string'>%miplatform%</param>
+	<param id='VERSION' type='string'>2006,3,16,1</param>
+	<param id='ACTION' type='string'>DOWNCHECK</param>
+	<param id='STATUS' type='string'>0</param>
+</params>
+<dataset id='output'>
+	<colinfo id='DEVICE' type="string" size='255'/>
+	<colinfo id='SOURCE' type="string" size='255'/>
+	<colinfo id='TARGET' type="string" size='255'/>
+	<colinfo id='FILENAME' type="string" size='255'/>
+	<colinfo id='VERSION' type="string" size='255'/>
+	<colinfo id='ACTION' type="string" size='255'/>
+	<colinfo id='ARGUMENT' type="string" size='255'/>
+	<colinfo id='STATUS' type="string" size='2'/>
+	<record>
+		<DEVICE>Win32</DEVICE>
+		<ACTION>MSI</ACTION>
+		<ARGUMENT>/qb</ARGUMENT> 
+		<TARGET>{3964575C-D828-4587-AED1-E538EAAFC083}</TARGET>
+		<FILENAME>MiPlatform_InstallBase320.msi</FILENAME>
+		<VERSION>System::3.20.10</VERSION>
+	</record>	
+</dataset>
+</root>
+

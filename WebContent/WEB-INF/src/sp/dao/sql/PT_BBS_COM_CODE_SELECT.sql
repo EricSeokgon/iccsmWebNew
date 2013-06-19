@@ -1,0 +1,5 @@
+
+SELECT 
+	CODE_GROUP, CODE, CODE_NAME, BIGO, ORDER_NUM, USE_YN 
+FROM   PT_BBS_COM_CODE ;
+                   

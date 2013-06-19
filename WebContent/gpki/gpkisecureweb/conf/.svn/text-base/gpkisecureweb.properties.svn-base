@@ -1,0 +1,133 @@
+#########################################################################
+#                       GPKISecureWeb V1.0.0.1 Configration 		#
+#                                                                       #
+#########################################################################
+
+
+#==================================================================================
+# 본 파일은 Servlet, JSP일 경우 GPKISecureWeb 환경설정을 하는 파일로써 
+# WAS 내 JavaBean 디렉토리를 Root 로 하여 /conf/gpkisecureweb.properties
+# 에 위치해야하며, 그렇지 않을 경우 GPKISecureWEBConfigException 을 발생시킨다.
+# 본 파일설치위치는 아래와 같다
+#   => 웹서버/WAS 내 [GPKISecureWeb 설치 디렉토리]/conf/gpkisecureweb.properties
+#===================================================================================
+
+
+# [암호화관련]
+
+# 암호알고리즘셋팅[NEAT/CBC,ARIA/CBC,NES/CBC,3DES/CBC,SEED/CBC]
+GPKISecureWeb.crypto.algo = NEAT/CBC
+
+# 부분암호화에 사용될 시작 태그를 정의
+GPKISecureWeb.crypto.startTag=<ENCRYPT_DATA>
+
+# 부분암호화에 사용될 끝 태그를 정의
+GPKISecureWeb.crypto.endTag=</ENCRYPT_DATA>
+
+# 에러페이지 설정(php에서는 사용하지 않음)
+# /data/webroot/ICCSM/gpki/gpkisecureweb/lib/
+GPKISecureWeb.errorPage=/gpki/gpkisecureweb/lib/GPKIError.jsp
+
+#GPKI 서버인증서 위치 //변경시 WAS를 재구동 해야한다.
+#GPKI 서버인증서의 Absolute Path
+GPKISecureWeb.CertFilePathName = 
+GPKISecureWeb.PrivateKeyFilePathName = 
+GPKISecureWeb.PrivateKeyPasswd=
+
+#OCSP 검증시 OCSP 검증 메시지를 서명하기 위한 서버 인증서 경로 //변경시 WAS를 재구동 해야한다.
+#GPKI 서버인증서의 Absolute Path
+GPKISecureWeb.SignCertFilePathName = /data/webroot/ICCSM/gpki/gpkisecureweb/certs/SVR6260000058_sig.cer
+GPKISecureWeb.SignPrivateKeyFilePathName = /data/webroot/ICCSM/gpki/gpkisecureweb/certs/SVR6260000058_sig.key
+GPKISecureWeb.SignPrivateKeyPasswd= coffee1234
+
+# $gpkiapi/conf/gpkiapi.conf 파일이 있는 절대경로지정
+GPKISecureWeb.gpkiapi.ConfFilePath=/data/webroot/ICCSM/gpki/gpki_jni/conf
+
+
+#CheckChallenge [yes|no]
+GPKISecureWeb.CheckChallenge = yes
+
+#AnyPolicy [yes|no]
+GPKISecureWeb.AnyPolicy = no
+GPKISecureWeb.Policy = 1 2 410 200005 1 1 1,1 2 410 100001 2 2 1,1 2 410 200004 5 4 1 1,1 2 410 200005 1 1 4
+
+# 인증서 검증 방법
+# CRL, OCSP, IVS(통합검증서버) 를 이용한 검증방법을 제공하며, '|' 로 구분하여
+# 인증서 검증 방법을 정의할 수 있다. (좌측부터 우선순위로 처리하며 접속 불가 등
+# 으로 실패할 경우, 다음 검증 방법을 수행한다.)
+# 인증서 검증 방법을 모두 사용할 필요는 없으며, 가급적 IVS (통합검증서버)를
+# 사용하는 것을 권장한다.
+# NPKI 인증서의 경우 OCSP 서버의 사용이 허가된 곳에서만 사용이 가능하다.
+# ex) CRL|IVS  : CRL 검증 후, 실패 시 통합검증서버를 사용하여 검증한다.
+#     IVS|OCSP|CRL : 통합검증서버를 사용하여 검증 후, 실패시 OCSP 검증을 수행
+#                    하고, 실패시 CRL 검증방법을 통해 인증서를 검증한다.
+GPKISecureWeb.VerifyCertMethod = IVS|CRL|OCSP
+
+
+# ROOTCA 인증서의 갯수
+GPKISecureWeb.TrustedROOTCACert.count=2
+
+# ROOTCA 인증서 위치
+# ROOTCA 인증서는 유효기간이 지나기 전에 업데이트를 해주어야 한다.
+# ROOTCA 인증서는 해당 위치의 인증서를 (윈도우상에서) 더블클릭하면, 화면상의
+# 유효기간을 확인할 수 있다.
+# ROOTCA 인증서는 LDAP 브라우저를 이용하여 획득할 수 있으며,
+# GPKI 의 경우 ldap://152.99.56.86:389 에서 CN=Root CA,OU=GPKI,O=Government of Korea,C=KR 을,
+# NPKI 의 경우 ldap://dir.signkorea.com:389 에서 CN=KISA RootCA 1,OU=Korea Certification Authority Central,O=KISA,C=KR 에
+# 대한 LDAP 의 cACertificate;binary 엔트리에서 다운로드 받는다.
+# ROOTCA 인증서 위치는 ROOTCA 인증서의 갯수 만큼 생성해야 한다.
+GPKISecureWeb.TrustedROOTCACert.FilePathName.1 = C:/gpkisecureweb/certs/NPKIRootCA1.der
+GPKISecureWeb.TrustedROOTCACert.FilePathName.2 = C:/gpkisecureweb/certs/GPKIRootCA1.der
+
+# 인증서 예
+
+##########  NPKI
+#1 2 410 200004 2 1:공인인증기관
+### 금융결제원
+#1 2 410 200005 1 1 1:금융 개인
+#1 2 410 200005 1 1 2:금융 기업
+#1 2 410 200005 1 1 4:범용 개인
+#1 2 410 200005 1 1 5:범용 기업
+### 증권전산
+#1 2 410 200004 5 1 1 1:스페셜 개인
+#1 2 410 200004 5 1 1 2:스페셜 개인서버
+#1 2 410 200004 5 1 1 3:스페셜 법인
+#1 2 410 200004 5 1 1 4:스페셜 서버
+#1 2 410 200004 5 1 1 5:범용 개인
+#1 2 410 200004 5 1 1 6:범용 개인서버
+#1 2 410 200004 5 1 1 7:범용 법인
+#1 2 410 200004 5 1 1 8:범용 서버
+#1 2 410 200004 5 1 1 9:골드 개인
+#1 2 410 200004 5 1 1 10:골드 개인서버
+#1 2 410 200004 5 1 1 11:실버 개인
+#1 2 410 200004 5 1 1 12:실버 법인
+### 한국무역정보통신
+#1 2 410 200012 1 1 1:개인 서명용
+#1 2 410 200012 1 1 2:개인 암호용
+#1 2 410 200012 1 1 3:법인 서명용
+#1 2 410 200012 1 1 4:법인 암호용
+#1 2 410 200012 1 1 5:서버 서명용
+#1 2 410 200012 1 1 6:서버 암호용
+### 한국 전자인증
+#1 2 410 200004 5 4 1 1:범용(개인)
+#1 2 410 200004 5 4 1 2:범용(법인)
+#1 2 410 200004 5 4 1 3:범용(서버)
+#1 2 410 200004 5 4 1 4:특수목적용(개인)
+#1 2 410 200004 5 4 1 5:특수목적용(법인)
+### 정보인증
+#1 2 410 200004 5 2 1 1:1등급인증서(법인)
+#1 2 410 200004 5 2 1 2:1등급인증서(개인)
+#1 2 410 200004 5 2 1 3:특별등급(전자입찰)
+#1 2 410 200004 5 2 1 4:1등급인증서(서버)
+#1 2 410 200004 5 2 1 5:특별등급 법인
+#1 2 410 200004 5 2 1 6:특별등급 개인
+
+
+
+
+##########  GPKI
+#1.2.410.100001.2.1.1=전자관인
+#1.2.410.100001.2.1.2=컴퓨터용
+#1.2.410.100001.2.1.3=전자특수관인
+#1.2.410.100001.2.2.1=공무원서명
+

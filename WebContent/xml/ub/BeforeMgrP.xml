@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="BeforeMgrP" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="착공전설계도&#32;관리" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_CONSTRUCTION">
+				<Contents>
+					<colinfo id="UB_SEQ" size="50" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="ORPE_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="REPO_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="20" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="STRU_ADDR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STE" size="12" summ="default" type="STRING"/>
+					<colinfo id="SUV_APPL" size="256" summ="default" type="STRING"/>
+					<colinfo id="ORPE_TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLANER_TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="256" summ="default" type="STRING"/>
+					<colinfo id="NUM_FL" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONFIRMER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_OPIN" size="256" summ="default" type="STRING"/>
+					<colinfo id="STRU_INFO_BIGO" size="256" summ="default" type="STRING"/>
+					<colinfo id="DELI_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CER_DELI_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SUV_APPL">
+				<Contents>
+					<colinfo id="col" size="10" summ="default" type="STRING"/>
+					<colinfo id="val" size="10" summ="default" type="STRING"/>
+					<record>
+						<col>전체</col>
+						<val>0</val>
+					</record>
+					<record>
+						<col>적합</col>
+						<val>1</val>
+					</record>
+					<record>
+						<col>부적합</col>
+						<val>2</val>
+					</record>
+					<record>
+						<col>감리대상</col>
+						<val>3</val>
+					</record>
+					<record>
+						<col>비대상</col>
+						<val>4</val>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PROC_STE">
+				<Contents>
+					<colinfo id="col" size="10" summ="default" type="STRING"/>
+					<colinfo id="val" size="10" summ="default" type="STRING"/>
+					<record>
+						<col>전체</col>
+						<val>0</val>
+					</record>
+					<record>
+						<col>신규입력</col>
+						<val>1</val>
+					</record>
+					<record>
+						<col>처리중</col>
+						<val>2</val>
+					</record>
+					<record>
+						<col>처리완료</col>
+						<val>3</val>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_yycho">
+				<Contents>
+					<colinfo id="yycho_title" size="256" summ="default" type="STRING"/>
+					<colinfo id="yycho_name" size="256" summ="default" type="STRING"/>
+					<record>
+						<yycho_name>ycho</yycho_name>
+						<yycho_title>년초</yycho_title>
+					</record>
+					<record>
+						<yycho_name>yycho</yycho_name>
+						<yycho_title>월초</yycho_title>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" OnClick="Image1_OnClick" TabOrder="13" Top="147" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="3" Top="77" Width="816"></Image>
+		<Image Height="66" Id="Image11" ImageID="bg_search" Left="24" TabOrder="20" Top="96" Width="784"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="11" Text="Div0" Top="12" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="14" Top="571" Width="816"></Image>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="728" OnClick="fnSearchButton_Click" TabOrder="17" Text="Button0" Top="133" Width="74"></Button>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue" Left="36" TabOrder="18" Top="114" Width="11"></Image>
+		<Static Color="#4e4e4e" Height="16" Id="Static6" Left="51" TabOrder="19" Text="지역구분" Top="113" Width="72"></Static>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIDO_NM" Height="21" Id="SIDO_CODE" INDEX="0" InnerDataset="ds_SIDO" Left="107" OnKillFocus="fnKillFocus" TabOrder="2" Top="110" Width="108"></Combo>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIGUNGU_NM" Height="21" Id="SIGUNGU_CODE" INDEX="0" InnerDataset="ds_SIGUNGU" Left="216" OnChanged="SIGUNGU_CODE_OnChanged" TabOrder="4" Top="110" Width="96"></Combo>
+		<Image Height="11" Id="Image5" ImageID="arrow_small_blue" Left="317" TabOrder="21" Top="115" Width="11"></Image>
+		<Static Color="#4e4e4e" Height="16" Id="Static7" Left="331" TabOrder="22" Text="상&#32;호" Top="114" Width="48"></Static>
+		<Edit Color="#4e4e4e" Height="21" Id="scPLANER_NAME" ImeMode="none" Left="368" Style="style1" TabOrder="8" Top="112" Width="98"></Edit>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="37" TabOrder="23" Top="140" Width="11"></Image>
+		<Static Color="#666666" Height="19" Id="Static0" Left="52" TabOrder="24" Text="접수일자" Top="138" Width="52"></Static>
+		<Calendar Height="21" Id="scRECV_ST" Left="107" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="6" Top="136" Width="96"></Calendar>
+		<Calendar Height="21" Id="scRECV_ET" Left="216" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="7" Top="136" Value="TODAY" Width="97"></Calendar>
+		<Static Color="#666666" Height="13" Id="Static5" Left="203" TabOrder="25" Text="~" Top="138" Width="11"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue" Left="471" TabOrder="16" Top="113" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static3" Left="486" TabOrder="15" Text="검토결과" Top="112" Width="72"></Static>
+		<Combo CodeColumn="val" DataColumn="col" Height="20" Id="scSUV_APPL" INDEX="0" InnerDataset="ds_SUV_APPL" Left="538" TabOrder="12" Top="108" Width="84"></Combo>
+		<Edit Height="21" Id="scORPE_NM" ImeMode="none" Left="392" MaxLength="7" Style="style1" TabOrder="9" Top="136" Width="72"></Edit>
+		<Static Color="#666666" Height="16" Id="Static1" Left="331" TabOrder="26" Text="건축주성명" Top="139" Width="72"></Static>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="318" TabOrder="27" Top="140" Width="11"></Image>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="24" TabOrder="28" Top="551" Width="784"></Image>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="471" TabOrder="29" Top="137" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static2" Left="486" TabOrder="1" Text="처리상태" Top="136" Width="72"></Static>
+		<Combo CodeColumn="val" DataColumn="col" Height="20" Id="scPROC_STE" INDEX="0" InnerDataset="ds_PROC_STE" Left="539" TabOrder="10" Top="133" Width="84"></Combo>
+		<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_PT_UB_CONSTRUCTION" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="544" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="360" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="808" RowHeight="20" SelColor="white" ShadowColor="#999999" TabOrder="5" TabStop="true" Top="184" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="28"/>
+						<col width="70"/>
+						<col width="80"/>
+						<col width="100"/>
+						<col width="95"/>
+						<col width="95"/>
+						<col width="150"/>
+						<col width="80"/>
+						<col width="90"/>
+						<col width="67"/>
+						<col width="62"/>
+						<col width="146"/>
+						<col width="93"/>
+						<col width="106"/>
+						<col width="101"/>
+						<col width="62"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="순"/>
+							<cell col="0" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="번"/>
+						</cell>
+						<cell bkcolor="#787878" col="1" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="접수"/>
+							<cell col="0" color="white" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="일자"/>
+						</cell>
+						<cell bkcolor="#787878" col="2" colspan="2" display="text" rowspan="2">
+							<cell col="0" color="white" colspan="2" display="text" rowspan="2" text="발주자(건축주)"/>
+						</cell>
+						<cell col="-1" display="text">
+							<cell col="0" display="text" rowspan="2"/>
+							<cell col="5" color="white" colspan="2" display="text" rowspan="2" text="설계자"/>
+						</cell>
+						<cell bkcolor="#787878" col="4" colspan="2" display="text" rowspan="2">
+							<cell col="0" color="white" colspan="2" display="text" rowspan="2" text="설계자"/>
+						</cell>
+						<cell bkcolor="#787878" col="6" display="text" rowspan="2">
+							<cell col="0" color="white" display="text" text="건축물" Valign="Center"/>
+							<cell align="center" col="0" color="white" display="text" row="1" text="소재지" Valign="Center"/>
+						</cell>
+						<cell bkcolor="#787878" col="7" display="text" rowspan="2">
+							<cell col="0" color="white" display="text" rowspan="2" text="연면적" Valign="Center"/>
+						</cell>
+						<cell bkcolor="#787878" col="8" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" rowspan="3" text="공사의&#32;종류"/>
+						</cell>
+						<cell bkcolor="#787878" col="9" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" rowspan="3" text="검토자"/>
+						</cell>
+						<cell bkcolor="#787878" col="10" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" rowspan="3" text="검토의견"/>
+						</cell>
+						<cell bkcolor="#787878" col="11" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="통보서"/>
+							<cell col="0" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="교부번호"/>
+						</cell>
+						<cell bkcolor="#787878" col="12" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" rowspan="3" text="통보일"/>
+						</cell>
+						<cell bkcolor="#787878" col="13" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="검사"/>
+							<cell col="0" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="신청일자"/>
+						</cell>
+						<cell bkcolor="#787878" col="14" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="필증"/>
+							<cell col="0" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="교부일자"/>
+						</cell>
+						<cell bkcolor="#787878" col="15" display="text" rowspan="3">
+							<cell col="0" color="white" display="text" text="교부"/>
+							<cell col="0" display="text" row="1"/>
+							<cell col="0" color="white" display="text" row="2" text="확인"/>
+						</cell>
+						<cell align="center" bkcolor="#787878" col="2" color="white" display="text" row="2" text="성명" Valign="Center"/>
+						<cell align="center" bkcolor="#787878" col="3" color="white" display="text" row="2" text="연락처" Valign="Center"/>
+						<cell align="center" bkcolor="#787878" col="4" color="white" display="text" row="2" text="상호" Valign="Center"/>
+						<cell align="center" bkcolor="#787878" col="5" color="white" display="text" row="2" text="연락처" Valign="Center"/>
+						<cell align="center" bkcolor="#787878" col="6" color="white" display="text" row="2" text="용도" Valign="Center"/>
+						<cell align="center" bkcolor="#787878" col="7" color="white" display="text" row="2" text="층수" Valign="Center"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="UB_SEQ" display="text" rowspan="2"/>
+						<cell align="center" col="1" colid="RECV_DT" display="date" rowspan="2"/>
+						<cell align="center" col="2" colid="ORPE_NM" display="text" rowspan="2">
+							<cell align="center" col="0" colid="ORPE_NM" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="3" colid="ORPE_TEL" display="text" rowspan="2">
+							<cell align="center" col="0" colid="ORPE_TEL" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="4" colid="PLANER_NAME" display="text" rowspan="2"/>
+						<cell align="center" col="5" colid="PLANER_TEL" display="text" rowspan="2">
+							<cell align="center" col="0" colid="PLANER_TEL" display="text" rowspan="2" SuppressAlign="Middle"/>
+						</cell>
+						<cell align="center" col="6" colid="STRU_ADDR" display="text"/>
+						<cell align="center" col="7" colid="AREA" display="number"/>
+						<cell align="center" col="8" colid="WORK_ITEM" display="text" rowspan="2">
+							<cell align="center" col="0" colid="WORK_ITEM" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="9" colid="CONFIRMER_NM" display="text" rowspan="2">
+							<cell align="center" col="0" colid="WRT_NM" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="10" colid="INSP_OPIN" display="text" rowspan="2">
+							<cell col="0" colid="INSP_OPIN" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="11" colid="SW_BEF_REPO_DELINUM" display="text" rowspan="2">
+							<cell align="center" col="0" colid="SW_BEF_REPO_DELINUM" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="12" colid="REPO_DT" display="text" rowspan="2">
+							<cell align="center" col="0" colid="REPO_DT" display="date" rowspan="2"/>
+						</cell>
+						<cell align="center" col="13" colid="SUV_APPL" display="text" rowspan="2">
+							<cell align="center" col="0" colid="INSP_WISH_YMD" display="date" rowspan="2"/>
+						</cell>
+						<cell align="center" col="14" colid="DELI_DT" display="text" rowspan="2">
+							<cell align="center" col="0" colid="DELI_DT" display="date" rowspan="2"/>
+						</cell>
+						<cell align="center" col="15" colid="CER_DELI_YN" display="text" rowspan="2">
+							<cell align="center" col="0" display="text" rowspan="2"/>
+						</cell>
+						<cell align="center" col="6" colid="USE_NAME" display="text" row="1"/>
+						<cell align="center" col="7" colid="NUM_FL" display="text" row="1"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Height="14" Id="Static10" Left="752" TabOrder="31" Top="167" Width="66"></Static>
+		<Static Color="#666666" Height="16" Id="Static9" Left="722" TabOrder="30" Text="총계:" Top="167" Width="48"></Static>
+		<Radio BKColor="user2" Border="None" BorderColor="white" CodeColumn="yycho_name" Color="#4e4e4e" ColumnCount="2" DataColumn="yycho_title" DisableColor="user0" Font="Tahoma,9" Height="16" Id="ryycho" INDEX="0" InnerDataset="ds_yycho" Left="633" OnClick="ryycho_OnClick" TabOrder="32" Top="135" Width="93"></Radio>
+	</Form>
+	<Script><![CDATA[
+/*
+1. 파일명 : Before4MgrP.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록신청 접수현황조회
+5. 변경이력
+  가. 2009-02-06 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_bDialog = false;
+var base_code = " WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.g_Sgg_cd = global.g_SggN_cd;//시군구 창원,마산,진해 통합으로 창원시본청 담당자가 다른구 내용 확인
+	
+	if(_bDialog)
+	{
+		this.divButtonBar.Visible = false;
+	}
+
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	
+	fnInitButtonBar();
+	scRECV_ST.Value = AddDate(Today(), -14);
+	divButtonBar.Image1.text = space(6) + "착공전설계도 대장";
+	
+	fnForm_SiCode();
+	
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+function fnForm_SiCode()
+{
+	var sArgs = "scSIDO_CODE=" + quote(global.g_Sd_cd);
+	sArgs = sArgs + " scSIGUNGU_CODE=" + quote(global.g_Sgg_cd);
+	var sTid = "CO_SEARCH";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=SiCodeMgr";
+	var sInDs = "";
+	var sOutDs = "ds_SIDO=output ds_SIGUNGU=output2";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = false;
+		
+	}
+	
+	// 검색후 데이터가 있다면 수정,삭제 등 활성화
+	if( ds_PT_UB_CONSTRUCTION.rowcount > 0 ) {
+		divButtonBar.btnExcel.enable = true;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scORPE_NM=" + quote(this.scORPE_NM.Value);
+	sArgs += " scPLANER_NAME=" + quote(this.scPLANER_NAME.Value);
+	//sArgs += " scWORK_ITEM=" + quote(this.scWORK_ITEM.Value); 사용안해서 주석처리 0629
+	sArgs += " scRECV_ST=" + quote(this.scRECV_ST.Value);
+	sArgs += " scRECV_ET=" + quote(this.scRECV_ET.Value);
+	sArgs += " scSUV_APPL=" + quote(this.scSUV_APPL.Value);
+	sArgs += " scPROC_STE=" + quote(this.scPROC_STE.Value);
+	sArgs += " SIDO_CODE=" + quote(ds_SIDO.GetColumn(this.SIDO_CODE.Index, "AREA_CODE"));
+	sArgs += " SIGUNGU_CODE=" + quote(ds_SIGUNGU.GetColumn(this.SIGUNGU_CODE.Index, "AREA_CODE"));
+	
+	//sArgs += base_code;
+	//sArgs += " scSW_BEF_REPO_DELINUM=" + quote(this.scSW_BEF_REPO_DELINUM.Value);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=BeforeMgrP";
+	var sInDs = "";
+	var sOutDs = "ds_PT_UB_CONSTRUCTION=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+Static10.text=ds_PT_UB_CONSTRUCTION.rowcount();
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		return;
+	}
+
+	
+	if (svcid == "SEARCH")
+	{
+	
+	}
+	
+	if (svcid == "CO_SEARCH")
+	{
+		
+		if(global.g_Sd_cd == global.g_Sgg_cd){
+			ds_SIGUNGU.Filter("SIDO_NM='" + ds_SIDO.GetColumn(this.SIDO_CODE.Index, "SIDO_NM")+"'");
+		}else{
+			//ds_SIGUNGU.Filter("AREA_CODE='" + global.g_Sgg_cd+"'");//20100711 수정
+			this.SIGUNGU_CODE.Index = 0;
+		}
+		this.SIDO_CODE.Index = 1;
+	}
+	
+	fnInitButtonBar();
+}
+
+
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "착공전설계도 대장");
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert)
+	{
+
+	}
+	else if (obj == divButtonBar.btnModify)
+	{
+
+	}
+	else if (obj == divButtonBar.btnRemove)
+	{
+
+	}
+	else if (obj == divButtonBar.btnSave)
+	{
+
+	}
+	else if (obj == divButtonBar.btnReport)
+	{
+
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else if (obj == divButtonBar.btnCancel)
+	{
+
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	//else if(nChar == "49" && bControl == true) fnInsert();
+	//else if(nChar == "50" && bControl == true) fnModify();
+	//else if(nChar == "51" && bControl == true) fnRemove();
+	//else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	//else if(nChar == "88" && bControl == true) Close();
+	//else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+		GetNextComponent(true).SetFocus();
+	}
+	else if(nChar == "120") 
+	{
+		var nTabIndex = tbMain.TabIndex;
+		
+		if(nTabIndex == tbMain.TabCount - 1)
+			tbMain.TabIndex = 0;
+		else
+			tbMain.TabIndex = nTabIndex + 1;
+	}
+}
+
+function fnKillFocus(obj) 
+{	
+/*	if(global.g_Sd_cd == global.g_Sgg_cd){
+		ds_SIGUNGU.Filter("SIDO_NM='" + ds_SIDO.GetColumn(this.SIDO_CODE.Index, "SIDO_NM")+"'");
+	}else{
+		ds_SIGUNGU.Filter("AREA_CODE='" + global.g_Sgg_cd+"'");
+	}
+	*/
+}
+
+
+function Image1_OnClick(obj,nX,nY)
+{
+	
+}
+
+function SIGUNGU_CODE_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+		global.g_Sgg_cd = strCode; //시군구 창원,마산,진해 통합으로 창원시본청 담당자가 다른구 내용 확인
+}
+
+function ryycho_OnClick(obj)   //월초연초 검색
+{
+	if(this.ryycho.Value="ycho") {
+
+ scRECV_ST.Value = substr(Today(),0,4)+'0101';
+}
+	else if(this.ryycho.Value="yycho") {
+
+ scRECV_ST.Value = substr(Today(),0,6)+'01';
+}
+}
+]]></Script>
+</Window>

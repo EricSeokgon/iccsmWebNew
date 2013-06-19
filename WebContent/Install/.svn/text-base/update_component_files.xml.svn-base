@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding="euc-kr" ?>
+<root>
+	<params>
+		<param id='DEVICE' type='string'>win32</param>
+		<param id='SOURCE' type='string'>component_files</param>
+		<param id='TARGET' type='string'>%component%</param>
+		<param id='FILENAME' type='string'></param>
+		<param id='VERSION' type='string'>system::2009.6.22.6</param>
+		<param id='ACTION' type='string'>DOWN</param>
+		<param id='STATUS' type='string'>0</param>
+	</params>
+	<dataset id='win32'>
+		<colinfo id='DEVICE' type='string' size='255'/>
+		<colinfo id='SOURCE' type='string' size='255'/>
+		<colinfo id='TARGET' type='string' size='255'/>
+		<colinfo id='FILENAME' type='string' size='255'/>
+		<colinfo id='VERSION' type='string' size='255'/>
+		<colinfo id='ACTION' type='string' size='255'/>
+		<colinfo id='STATUS' type='string' size='2'/>
+
+		<record>
+		  <FILENAME>CyCalendarExU.dll</FILENAME>
+		  <VERSION>system::2009.2.24.1</VERSION>
+		</record>
+		<record>
+		  <FILENAME>CyGridU.dll</FILENAME>
+		  <VERSION>system::2009.3.10.1</VERSION>
+		</record>
+		<record><FILENAME>CyMenuBarU.dll</FILENAME><VERSION>system::2008.12.2.1</VERSION></record>
+		<record><FILENAME>CyTreeViewU.dll</FILENAME><VERSION>system::2008.12.3.1</VERSION></record>
+		<record><FILENAME>CyWebBrowserU.dll</FILENAME><VERSION>system::2008.12.3.1</VERSION></record>
+		<record><FILENAME>ExtCommonApiU.dll</FILENAME><VERSION>system::2009.4.23.1</VERSION></record>
+		<record><FILENAME>CyHttpFileU.dll</FILENAME><VERSION>system::2009.4.27.1</VERSION></record>
+
+		<record>
+			<TARGET>{C7C7225A-9476-47AC-B0B0-FF3B79D55E67}</TARGET>
+			<FILENAME>ZTransferX.cab</FILENAME>
+			<VERSION>system::2,2,1,6</VERSION>
+			<ACTION>DOWN</ACTION>
+		</record>
+				
+	</dataset>
+</root>

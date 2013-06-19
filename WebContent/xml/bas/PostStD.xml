@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="CMStD" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="우편번호&#32;검색" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_COM_ZIPCODE">
+				<Contents>
+					<colinfo id="ZIPCODE" size="7" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS" size="170" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS2" size="170" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS3" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsMenu">
+				<Contents>
+					<colinfo id="Code" size="10" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>ADDR</Code>
+						<Value>지번</Value>
+					</record>
+					<record>
+						<Code>ROAD</Code>
+						<Value>도로명</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_COM_ZIPCODE_NEW">
+				<Contents>
+					<colinfo id="SIDO" size="256" summ="default" type="STRING"/>
+					<colinfo id="GUGUN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ROAD_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="DONG" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI" size="256" summ="default" type="STRING"/>
+					<colinfo id="ZIPCODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM_CUT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM_CUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_MI_USER">
+				<Contents>
+					<colinfo id="OFFI_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PART" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS" size="256" summ="default" type="STRING"/>
+					<colinfo id="GROUP_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOME_GROUP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PASS2" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="E_MAIL" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PHOTO" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL2" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL3" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE3" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX1" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX2" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX3" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="RECV_ID" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFSEAL" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="42" Id="Image2" ImageID="bg_search_small" Left="6" TabOrder="1" Top="9" Width="624"></Image>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="552" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="2" Top="24" Width="74"></Button>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="15" TabOrder="3" Top="28" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static6" Left="97" TabOrder="6" Text="시도" Top="30" Width="24"></Static>
+		<Static Color="#666666" Height="19" Id="Static11" Left="191" TabOrder="7" Text="시군구" Top="30" Width="48"></Static>
+		<Combo CodeColumn="Code" DataColumn="Value" Height="23" Id="Menu" InnerDataset="dsMenu" Left="32" OnClick="scAddr_OnClick" OnKillFocus="fnKillFocus" TabOrder="5" Text="도로명" Top="24" Width="64"></Combo>
+		<Edit Height="24" Id="scAddr" Left="320" OnClick="scAddr_OnClick" OnKeyDown="fnSearchKeyDownick" Style="style1" TabOrder="4" Text="지번주소는&#32;콤보박스를&#32;지번으로&#32;변경후&#32;검색&#32;하세요." ToolTipText="새주소는&#32;도로명으로&#32;변경후&#32;검색&#32;하세요." Top="24" Width="232"></Edit>
+		<Static Align="Center" Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="344" Style="list_subtitle" TabOrder="8" Text="도로명주소로&#32;검색" Top="24" Visible="FALSE" Width="168"></Static>
+		<Grid BindDataset="dsPT_COM_ZIPCODE_NEW" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="368" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="272" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="Grid0_OnCellDblClick" OnHeadClick="fnGridHead_Click" Right="633" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="9" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="625">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="521"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="우편번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="주&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;소"/>
+					</head>
+					<body>
+						<cell col="0" colid="ZIPCODE" display="text" Mask="###-###"/>
+						<cell col="1" colid="ADDRESS" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIDO_NM_CUT" Height="21" Id="SIDO_CODE" ImeMode="none" INDEX="0" InnerDataset="ds_SIDO" Left="120" OnKillFocus="fnKillFocus" TabOrder="10" Top="24" Width="70"></Combo>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIGUNGU_NM" Height="21" Id="SIGUNGU_CODE" INDEX="0" InnerDataset="ds_SIGUNGU" Left="226" TabOrder="11" Top="24" Width="93"></Combo>
+		<Static Height="40" Id="Static0" Left="8" TabOrder="12" Text="예)&#32;도로명주소&#32;:&#32;부산시&#32;해운대구&#32;해운대로&#32;1&#32;-&gt;&#32;해운대로&#32;검색(~로,&#32;~길)&#32;&#32;&#10;&#32;&#32;&#32;&#32;&#32;지번주소&#32;:&#32;압구정동&#32;동만입력해서&#32;검색&#10;&#32;&#32;&#32;&#32;&#32;도로명주소가&#32;검색되지&#32;않은&#32;경우는&#32;지번주소&#32;또는&#32;행정안전부&#32;도로명주소안내시스템에서&#32;확인하시기&#32;바랍니다." Top="56" Width="624"></Static>
+	</Form>
+	<Script><![CDATA[/* 
+파일명 : NewPostStD.xml
+2. 작성일 : 2011-07-04 
+3. 작성자 : 이석곤
+4. 기  능 : 우편번호 조회
+5. 변경이력
+  가. 2011-07-04 최초작성 (이석곤)
+  나. 2012-07-20 새주소 (서춘교)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	var sArgs;
+	
+	if (global.g_User_ID != "admin") 
+		sArgs += "scSIDO=";
+	var sTid = "SEARCH";
+	//var sUrl = "ICCS::bas/BasAction.do?cmd=PostStD";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=NewBasPostStD";  //서춘교 새주소 생성 2012-07-20
+	var sInDs = "";
+	var sOutDs = "ds_SIDO=output ds_SIGUNGU=output2";
+	var sCallBack = "fn_CallBack";
+	
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+
+
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+
+function fnSearchButton_Click(obj)
+{
+	if(menu.Value == "ADDR" ){
+	fnTablesBinding();
+	}
+	else{
+	fnTablesBinding2();
+	}
+}
+
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+
+var scSIDO=ds_SIDO.GetColumn(this.SIDO_CODE.Index, "AREA_CODE");
+var scSIGUNGU=ds_SIGUNGU.GetColumn(this.SIGUNGU_CODE.Index, "SIGUNGU_NM");
+var scSIDO_NM_CUT=ds_SIDO.GetColumn(this.SIDO_CODE.Index, "SIDO_NM_CUT");
+
+
+	var sArgs = "scDong=" + quote(this.scAddr.Text);
+	sArgs += " AREA_CODE=" +  quote(scSIDO);
+	sArgs += " SIDO_NM_CUT=" + quote(scSIDO_NM_CUT);
+	sArgs += " SIGUNGU_NM=" +  quote(scSIGUNGU);
+
+	var sTid = "SEARCH";
+	
+	var sUrl = "ICCS::bas/BasAction.do?cmd=PostStD";
+	var sInDs = "";
+	var sOutDs = "dsPT_COM_ZIPCODE_NEW=dsPT_COM_ZIPCODE";
+	var sCallBack = "fn_CallBack";
+	
+	
+	if (this.scAddr.Text == ""){
+		alert("지번을 입력해 주십시오");
+	}
+	else if (this.SIDO_CODE.Value == "ALL"){
+		alert("시도를 선택해 주십시오");
+	}/*else if (this.SIGUNGU_CODE.Text == ""){
+		alert("시군구를 선택해 주십시오");   //서춘교 시도, 시군구 미선택시 팝업창 추가 2012-07-24
+	}*/else if (this.SIDO_CODE.Value == "sjsj"){
+		  Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	//서춘교 시도, 시군구 미선택시 팝업창 추가 2012-07-24
+	}else {
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+
+
+
+
+function fnTablesBinding2()
+{
+
+var scSIDO=ds_SIDO.GetColumn(this.SIDO_CODE.Index, "AREA_CODE");
+var scSIGUNGU=ds_SIGUNGU.GetColumn(this.SIGUNGU_CODE.Index, "SIGUNGU_NM");
+
+
+	var sArgs = "scDong=" + quote(this.scAddr.Text);
+	sArgs += " AREA_CODE=" +  quote(scSIDO);
+	sArgs += " SIGUNGU_NM=" +  quote(scSIGUNGU);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=NewPostStD";
+	var sInDs = "";
+	var sOutDs = "dsPT_COM_ZIPCODE_NEW=dsPT_COM_ZIPCODE_NEW";
+	var sCallBack = "fn_CallBack";
+	
+	
+if (this.scAddr.Text == ""){
+		alert("도로명을 입력해 주십시오");
+	}else if (this.scAddr.Text == "새주소는 도로명으로 변경후 검색 하세요."){
+		alert("도로명을 입력해 주십시오");
+	}else if (this.SIDO_CODE.Value == "ALL"){
+		alert("시도를 선택해 주십시오");
+	}else if (this.SIDO_CODE.Value == "sjsj"){
+		  Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	//서춘교 시도, 시군구 미선택시 팝업창 추가 2012-07-24
+	}/*else if (this.SIGUNGU_CODE.Text == ""){
+		alert("시군구를 선택해 주십시오");    //서춘교 시도, 시군구 미선택시 팝업창 추가 2012-07-24
+	}*/else if (this.scAddr.Text == "지번주소는 콤보박스를 지번으로 변경후 검색 하세요."){ //서춘교 도로명주소 미입력시 예외처리
+		alert("도로명을 입력해 주십시오");
+	}
+	else {
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+		if (svcid == "SEARCH")
+	{
+	
+
+		//ds_SIDO.SetColumn(ds_SIDO.row, "AREA_CODE", "ALL");
+		//ds_SIDO.SetColumn(ds_SIDO.row, "SIDO_NM_CUT", "선택");
+		//ds_SIGUNGU.SetColumn(ds_SIGUNGU.row, "AREA_CODE", "ALL");
+		//ds_SIGUNGU.SetColumn(ds_SIGUNGU.row, "SIGUNGU_NM", "선택");
+			//ds_SIDO.addrow();
+	}
+}
+
+
+function fnKillFocus(obj)
+{	
+	ds_SIGUNGU.Filter("SIDO_NM_CUT='" + ds_SIDO.GetColumn(this.SIDO_CODE.Index, "SIDO_NM_CUT")+"'");   //서춘교 시도 선택시 시군구 불러오기 2012-07-20
+	
+}
+
+function Grid0_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;	
+	
+		var varArray = Array(3);
+		
+		varArray[0]=rtrim(dsPT_COM_ZIPCODE_NEW.GetColumn(nRow,"ZIPCODE"));
+		varArray[1]=rtrim(dsPT_COM_ZIPCODE_NEW.GetColumn(nRow,"ADDRESS2"));
+		varArray[2]=rtrim(dsPT_COM_ZIPCODE_NEW.GetColumn(nRow,"ADDRESS3"));   //서춘교 동, 읍면리 주소 2012-07-20 
+		varArray[3]=rtrim(dsPT_COM_ZIPCODE_NEW.GetColumn(nRow,"ADDRESS"));
+
+		Close(varArray);
+}
+function fnSearchKeyDownick(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	if (nChar == 13) 
+	{
+		fnSearchButton_Click(obj);
+	}
+}
+
+function scAddr_OnClick(obj)
+{
+	scAddr.Text = "";
+}
+]]></Script>
+</Window>

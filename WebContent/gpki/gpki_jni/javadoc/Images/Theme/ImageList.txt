@@ -1,0 +1,3 @@
+Contents\Topic\OpenPicture=Images/Theme/Buttons%20and%20Icons/open.gif
+Contents\Topic\ClosePicture=Images/Theme/Buttons%20and%20Icons/closed.gif
+Contents\Topic\NormalPicture=Images/Theme/Buttons%20and%20Icons/topic.gif

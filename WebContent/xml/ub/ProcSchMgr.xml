@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="SUVDlg" Left="8" PidAttrib="7" Title="처리&#32;담당자&#32;검색" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Proc">
+				<Contents>
+					<colinfo id="NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="100" summ="default" type="STRING"/>
+					<colinfo id="PART" size="150" summ="default" type="STRING"/>
+					<colinfo id="POS" size="100" summ="default" type="STRING"/>
+					<colinfo id="OFFI_ID" size="100" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="ds_Proc" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="373" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="301" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="630" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="-1" TabStop="true" Top="72" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="622">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="130"/>
+						<col width="157"/>
+						<col width="144"/>
+						<col width="178"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="성명"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="부서"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="직급"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="연락처"/>
+					</head>
+					<body>
+						<cell col="0" colid="NM" display="text"/>
+						<cell col="1" colid="PART" display="text"/>
+						<cell col="2" colid="POS" display="text"/>
+						<cell col="3" colid="TEL" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="42" Id="Image2" ImageID="bg_search_small" Left="8" TabOrder="2" Top="14" Width="624"></Image>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="553" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="3" Top="26" Width="74"></Button>
+		<Image Height="11" Id="Image1" ImageID="arrow_small_blue" Left="29" TabOrder="4" Top="32" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="45" Style="list_subtitle" TabOrder="5" Text="담당자&#32;성명" Top="32" Width="72"></Static>
+		<Edit Height="21" Id="scNM" ImeMode="none" Left="130" Style="style1" TabOrder="6" Top="27" Width="304"></Edit>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scSIDO_CODE="+global.g_Sd_cd+" scSIGUNGU_CODE="+global.g_Sgg_cd;
+	sArgs += " scNM=" + quote(this.scNM.Value);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=ProcSchMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_Proc=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+	
+	var arrReturn = Array(8);
+	arrReturn[0] = ds_Proc.GetColumn(nRow, "NM");
+	arrReturn[1] = ds_Proc.GetColumn(nRow, "PART");
+	arrReturn[2] = ds_Proc.GetColumn(nRow, "TEL");
+	arrReturn[3] = ds_Proc.GetColumn(nRow, "OFFI_ID");
+	Close(arrReturn);
+}
+
+
+]]></Script>
+</Window>

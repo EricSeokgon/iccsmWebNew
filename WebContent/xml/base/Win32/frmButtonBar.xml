@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="30" Id="frmButtonBar" Left="8" PidAttrib="7" Title="frmButtonBar" Top="8" Ver="1.0" Width="721" WorkArea="true">
+		<Button Height="21" Id="btnExcel" Left="625" OnClick="fnToolBarButton_Click" TabOrder="1" Text="엑&#32;&#32;셀" Top="3" Width="60"></Button>
+		<Button Height="21" Id="btnReport" Left="561" OnClick="fnToolBarButton_Click" TabOrder="3" Text="출&#32;&#32;력" Top="3" Width="60"></Button>
+		<Button Height="21" Id="btnSave" Left="497" OnClick="fnToolBarButton_Click" TabOrder="2" Text="저&#32;&#32;장" Top="3" Width="60"></Button>
+		<Button Height="21" Id="btnRemove" Left="433" OnClick="fnToolBarButton_Click" TabOrder="1" Text="삭&#32;&#32;제" Top="3" Width="60"></Button>
+		<Button Height="21" Id="btnModify" Left="368" OnClick="fnToolBarButton_Click" TabOrder="5" Text="수&#32;&#32;정" Top="3" Width="60"></Button>
+		<Button Height="21" Id="btnInsert" Left="304" OnClick="fnToolBarButton_Click" TabOrder="4" Text="신&#32;&#32;규" Top="3" Width="60"></Button>
+	</Form>
+	<Script></Script>
+</Window>

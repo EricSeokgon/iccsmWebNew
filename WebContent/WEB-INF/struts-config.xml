@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+ "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<!-- ================================================ Form Bean Definitions -->
+
+
+	<form-beans>
+		<form-bean name="BbsParam"    					type="sp.bbs.BbsParam" />
+		<form-bean name="ChartParam"   					type="sp.chart.ChartParam" />
+		<form-bean name="ConsoleParam"    				type="sp.console.ConsoleParam" />
+		<form-bean name="HmsParam"    					type="sp.hms.HmsParam" />
+		<form-bean name="BlankParam"					type="sp.blank.BlankParam" />
+		<form-bean name="IndexParam"					type="sp.index.IndexParam" />
+		<form-bean name="LogParam"						type="sp.log.LogParam" />
+		<form-bean name="LoginParam"  					type="sp.login.LoginParam" />		
+		<form-bean name="MainParam"						type="sp.main.MainParam" />
+		<form-bean name="PageParam"						type="sp.log.PageParam" />
+		<form-bean name="SysParam"    					type="sp.sys.SysParam" />
+		<form-bean name="UserParam"    					type="sp.user.UserParam" />
+		<form-bean name="EventParam"   					type="sp.event.EventParam" />
+		<form-bean name="PopupParam"   					type="sp.popup.PopupParam" />
+		<form-bean name="CafeParam"						type="sp.cafe.CafeParam" />
+		<form-bean name="MemParam"						type="sp.mem.MemParam" />
+		<form-bean name="RchParam" 						type="sp.rch.RchParam" />
+		<form-bean name="LeftParam" 					type="sp.left.LeftParam" />
+
+		<form-bean name="Sys_mParam"    				type="sp.sys_m.Sys_mParam" />	
+		<form-bean name="Login_mParam"    				type="sp.login_m.Login_mParam" />		
+		<form-bean name="AmParam"    					type="sp.am.AmParam" />
+		<form-bean name="AmrParam"    					type="sp.amr.AmrParam" />	
+		<form-bean name="BasParam"    					type="sp.bas.BasParam" />	
+		<form-bean name="CmParam"    					type="sp.cm.CmParam" />	
+		<form-bean name="StParam"    					type="sp.st.StParam" />	
+		<form-bean name="UbParam"    					type="sp.ub.UbParam" />	
+		<form-bean name="C_resParam"    				type="sp.c_res.C_resParam" />
+		<form-bean name="StaticsParam"    				type="sp.statics.StaticsParam" />	
+		
+		<form-bean name="Main_mParam"					type="sp.main_m.Main_mParam" />
+		<form-bean name="RegParam"						type="sp.reg.RegParam" />
+		<form-bean name="IndexParam"					type="sp.index.IndexParam" />
+		<form-bean name="RepublishParam"				type="sp.republish.RepublishParam" />
+		
+	</form-beans>
+
+<!-- =========================================== Global Forward Definitions -->
+
+    <global-forwards>
+	    <forward name="error"  							path="/com/error.do"/>
+	    <forward name="alertMsg"  						path="/com/alertMsg.do"/>
+	    <forward name="dtsList"  						path="/com/mi/dtsList.do"/>
+	    <forward name="miError"  						path="/com/mi/miError.do"/>
+	   	<forward name="login"  							path="/com/mi/login.do"/> 
+	</global-forwards>
+
+
+<!-- =========================================== Action Mapping Definitions -->
+
+	<action-mappings>
+	    <action path="/index" 			forward="/index/IndexAction.do?cmd=Index"/>
+		<action path="/com/error" 		forward="/com/error/error.jsp"/>
+		<action path="/com/alertMsg" 	forward="/com/alertMessage.jsp"/>
+		<action path="/download" 		forward="/com/downLoad.jsp"/>
+		<action path="/com/mi/dtsList"  forward="/com/mi/dtsList.jsp"/>
+		<action path="/com/mi/login"  forward="/com/mi/login.jsp"/>
+		
+		<action path="/com/mi/miError"  forward="/com/mi/miError.jsp"/>
+		
+		
+		
+		<action path="/blank/BlankAction" type="sp.blank.BlankAction" name="BlankParam" scope="request">
+			<forward name="Blank" 		path="/com/Blank.jsp" />
+		</action>
+		
+		<action  path="/bbs/BbsAction" type="sp.bbs.BbsAction" name="BbsParam" scope="request" />  
+		
+		<action path="/chart/ChartAction" type="sp.chart.ChartAction" name="ChartParam" scope="request">
+            <forward name="ChartArea"		path="/com/ChartResult.jsp" />	
+        </action>
+		
+		<action  path="/console/ConsoleAction" type="sp.console.ConsoleAction" name="ConsoleParam" scope="request" />  
+		
+		<action  path="/hms/HmsAction" type="sp.hms.HmsAction" name="HmsParam" scope="request" />  
+     					
+		<action path="/sys/SysAction" type="sp.sys.SysAction" name="SysParam" scope="request"/>
+		
+		<action path="/member/MemAction"		type="sp.mem.MemAction" name="MemParam" scope="request" />
+		
+		<action path="/user/UserAction" type="sp.user.UserAction" name="UserParam" scope="request" />
+
+		<action path="/login/LoginAction" type="sp.login.LoginAction" name="LoginParam" scope="request" />
+				
+		<action path="/log/LogAction" type="sp.log.LogAction" name="LogParam" scope="request" />
+
+		<action path="/log/PageAction" type="sp.log.PageAction" name="PageParam" scope="request" />
+
+		<action path="/log/ChartAction" type="sp.log.ChartAction" name="LogParam" scope="request" />
+
+		<action  path="/rch/RchMgrAction"  type="sp.rch.RchMgrAction" name="RchParam" scope="request" />
+		
+		<action  path="/sys_m/Sys_mAction"  type="sp.sys_m.Sys_mAction"  name="Sys_mParam" scope="request"/>		
+		
+		<action  path="/login_m/Login_mAction"  type="sp.login_m.Login_mAction"  name="Login_mParam" scope="request"/>
+		
+		<action  path="/left/LeftAction"  type="sp.left.LeftAction"  name="LeftParam" scope="request"/>
+		
+		<action  path="/am/AmAction"  type="sp.am.AmAction"  name="AmParam" scope="request"/>
+		
+		<action  path="/amr/AmrAction"  type="sp.amr.AmrAction"  name="AmrParam" scope="request"/>
+		
+		<action  path="/bas/BasAction"  type="sp.bas.BasAction"  name="BasParam" scope="request"/>
+		
+		<action  path="/cm/CmAction"  type="sp.cm.CmAction"  name="CmParam" scope="request"/>
+		
+		<action  path="/st/StAction"  type="sp.st.StAction"  name="StParam" scope="request"/>
+		
+		<action  path="/ub/UbAction"  type="sp.ub.UbAction"  name="UbParam" scope="request"/>	
+		
+		<action  path="/c_res/C_resAction"  type="sp.c_res.C_resAction"  name="C_resParam" scope="request"/>
+		
+		<action  path="/statics/StaticsAction"  type="sp.statics.StaticsAction"  name="StaticsParam" scope="request"/>
+		
+		<action  path="/main/Main_mAction"  type="sp.main_m.Main_mAction"  name="Main_mParam" scope="request"/>		
+	
+		<action path="/reg/RegAction" type="sp.reg.RegAction" name="RegParam" scope="request">
+			<forward name="RegMgrView" 		path="/reg/RegMgrView.jsp" />
+			<forward name="RegMgrViewClose" 		path="/reg/RegMgrViewClose.jsp" />
+		</action>
+	
+		<action path="/index/IndexAction" type="sp.index.IndexAction" name="IndexParam" scope="request">
+			<forward name="MainIndex" 		path="/index/main.jsp" />
+			<forward name="MainAjaxSearch" 		path="/index/AjaxMainView.jsp" />
+		</action>
+		
+		
+		<action path="/republish/RepublishAction" type="sp.republish.RepublishAction" name="RepublishParam" scope="request"></action>
+		
+	</action-mappings>
+
+</struts-config>

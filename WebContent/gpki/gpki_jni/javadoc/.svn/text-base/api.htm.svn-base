@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>표준보안API 개념</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H2 id=_D2HTopic_116 
+style="MARGIN-LEFT: 27.7pt; TEXT-INDENT: -27.7pt; tab-stops: 0cm 27.7pt"><SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+style="FONT-FAMILY: 굴림">개념</SPAN></H2>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="_.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api1.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">정보화사회에서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">행정업무는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">종이문서·대면</SPAN> <SPAN style="FONT-FAMILY: 굴림">위주의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">사무처리방식에서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">비대면·온라인의</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자문서기반으로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전환되고</SPAN> <SPAN style="FONT-FAMILY: 굴림">있다</SPAN>. 
+<SPAN style="FONT-FAMILY: 굴림">이에</SPAN> <SPAN style="FONT-FAMILY: 굴림">개방형</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정보통신망을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">통해</SPAN> <SPAN style="FONT-FAMILY: 굴림">처리되는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정부</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자문서의</SPAN> <SPAN style="FONT-FAMILY: 굴림">안정성을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">확보하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">국정의</SPAN> <SPAN style="FONT-FAMILY: 굴림">효율적</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">운영과</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">기관간</SPAN> <SPAN style="FONT-FAMILY: 굴림">원활한</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">의사전달체계를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">지원하고</SPAN>, <SPAN style="FONT-FAMILY: 굴림">국민의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">편익을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">증진하고자</SPAN> 1999<SPAN style="FONT-FAMILY: 굴림">년</SPAN> 
+9<SPAN style="FONT-FAMILY: 굴림">월</SPAN> 1<SPAN style="FONT-FAMILY: 굴림">일</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">행정사무에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자서명</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증제도를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">도입·적용하도록</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">사무관리규정을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">개정·시행하였다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">사무관리규정</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">및</SPAN> <SPAN style="FONT-FAMILY: 굴림">동</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">시행규칙에</SPAN> <SPAN style="FONT-FAMILY: 굴림">의거</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정부전산정보관리소는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">행정분야의</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증제도</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">시행을</SPAN> <SPAN style="FONT-FAMILY: 굴림">위해</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정부전자서명인증센터를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">구축하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">정부기관에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">효율적인</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증서비스를</SPAN> <SPAN style="FONT-FAMILY: 굴림">제공하고</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">있다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">본</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">문서는</SPAN> <SPAN style="FONT-FAMILY: 굴림">정부인증센터가</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">구축한</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">정부공개키기반구조</SPAN>(GPKI : Government Public Key 
+Infrastructure)<SPAN style="FONT-FAMILY: 굴림">를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">공유하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">행정의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">효율성을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제고할</SPAN> <SPAN style="FONT-FAMILY: 굴림">수</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">있도록</SPAN>, <SPAN style="FONT-FAMILY: 굴림">정부</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서비스에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">필요한</SPAN> <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">업무</SPAN> <SPAN style="FONT-FAMILY: 굴림">구축을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위한</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">행정전자서명인증표준보안</SPAN>API (<SPAN 
+style="FONT-FAMILY: 굴림">이하</SPAN> “<SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN> 
+API”) <SPAN style="FONT-FAMILY: 굴림">사용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">방법을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">기술한다</SPAN>.</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

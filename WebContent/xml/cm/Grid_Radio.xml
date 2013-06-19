@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_output">
+				<Contents>
+					<colinfo Id="code" Size="256" Type="STRING"/>
+					<colinfo Id="name" Size="256" Type="STRING"/>
+					<record>
+						<code>1</code>
+						<name>명칭1</name>
+					</record>
+					<record>
+						<code>0</code>
+						<name>명칭2</name>
+					</record>
+					<record>
+						<code>1</code>
+						<name>명칭3</name>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="ds_output" BoldHead="true" Bottom="256" Enable="true" EndLineColor="default" Height="206" Id="Grid0" InputPanel="FALSE" Left="42" LineColor="default" OnCellClick="Grid0_OnCellClick" Right="472" TabOrder="1" TabStop="true" Top="50" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="430">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="code"/>
+					<cell col="1" display="text" text="name"/>
+				</head>
+				<body>
+					<cell bkimageid='expr:decode(code,&quot;1&quot;,&quot;radio_enable&quot;,&quot;radio_disable&quot;)' col="0" display="text"/>
+					<cell col="1" colid="name" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[
+function Grid0_OnCellClick(obj,nRow,nCell,nX,nY)
+{
+    if(ds_output.getColumn(nRow,"code") == "1")
+    {
+		for (var i = 0; i <= ds_output.RowCount(); i++){
+			ds_output.setColumn(i,"code",0);
+		}
+	} else {
+		for (var i = 0; i <= ds_output.RowCount(); i++){
+			
+			if (i == nRow){
+				ds_output.setColumn(i,"code",1);
+			} else {
+				ds_output.setColumn(i,"code",0);
+			}
+		}	
+	}	
+}
+]]></Script>
+</Window>

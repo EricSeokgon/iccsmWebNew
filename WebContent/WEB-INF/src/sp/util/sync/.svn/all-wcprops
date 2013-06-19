@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync
+END
+SyncTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncTask.java
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/readme.txt
+END
+SyncUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncUtil.java
+END
+SyncTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncTest.java
+END
+SyncAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncAgent.java
+END
+SyncLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncLog.java
+END
+SyncTaskDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/SyncTaskDAO.java
+END
+table.sql
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/sync/table.sql
+END

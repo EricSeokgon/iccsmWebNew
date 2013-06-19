@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="360" Id="frmErrorDLG" Left="8" PidAttrib="7" Title="입력내용검증" Top="8" Ver="1.0" Width="528" WorkArea="true">
+		<List DataColumn="TEXT" Height="286" Id="List0" InnerDataset="dsError" Left="24" OnDblClick="List0_OnDblClick" TabOrder="1" Top="26" Width="472"></List>
+		<Button Height="29" Id="btnSave" Left="112" OnClick="fnButton_Click" TabOrder="2" Text="저장하기" Top="317" Width="104"></Button>
+		<Button Height="29" Id="btnCancel" Left="280" OnClick="fnButton_Click" TabOrder="3" Text="오류수정" Top="317" Width="104"></Button>
+	</Form>
+	<Script><![CDATA[
+function fnButton_Click(obj)
+{
+	if (obj == btnSave) Close(-1);
+	if (obj == btnCancel) Close(List0.Index);
+}
+
+function List0_OnDblClick(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	fnButton_Click(btnCancel);
+}
+]]></Script>
+</Window>

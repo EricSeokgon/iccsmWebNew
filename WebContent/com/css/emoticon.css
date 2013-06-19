@@ -1,0 +1,12 @@
+.emoticonBg { position:relative; float:left; width:48px;margin-right:5px; padding-bottom:2px; }
+#commentInput .emoticon { position:relative; vertical-align:top;background:url(../../images/bbs/emoticon/emoti_bg.gif) 0 0 no-repeat; padding-bottom:6px; }
+#commentInput .emoticon img.emot {position:absolute;top:5px;left:7px;}
+#commentInput .emoticon .emotSet {position:absolute;top:7px;left:30px;cursor:pointer;}
+
+#emoticon_modify {position:absolute;top:16px;left:23px;display:none;z-index:100;}
+
+#emoticon_table {border-collapse:collapse;text-align:center;background:#eee;border-left:1px solid #ccc;border-top:1px solid #ccc;} 
+#emoticon_table td {background:#fff;cursor:pointer;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+#emoticon_table td img {vertical-align:middle;}
+
+

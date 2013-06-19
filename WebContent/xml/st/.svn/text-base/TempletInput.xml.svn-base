@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="136" Id="TempletInput" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="샘플템플릿저장" Top="8" Ver="1.0" Width="288" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_TEMPLET">
+				<Contents>
+					<colinfo id="USERID" size="50" summ="default" type="STRING"/>
+					<colinfo id="FORMID" size="50" summ="default" type="STRING"/>
+					<colinfo id="SAMPLENAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_XML">
+				<Contents>
+					<colinfo id="USERID" size="50" summ="default" type="STRING"/>
+					<colinfo id="FORMID" size="50" summ="default" type="STRING"/>
+					<colinfo id="SAMPLENAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="XML" size="5000" summ="default" type="STRING"/>
+					<colinfo id="DSNAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsKey">
+				<Contents>
+					<colinfo id="SAMPLENAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="160" OnClick="fnCancel" Style="button_style01" TabOrder="2" Text="취&#32;&#32;&#32;&#32;소" Top="80" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="56" OnClick="fnSave" Style="button_style01" TabOrder="1" Text="저&#32;&#32;&#32;&#32;장" Top="80" Width="72"></Button>
+		<Image Height="18" Id="Image4" ImageID="arrow_small_blue2" Left="37" TabOrder="4" Top="30" Width="18"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static2" Left="54" Style="list_subtitle" TabOrder="3" Text="샘&#32;플&#32;명" Top="33" Width="56"></Static>
+		<Edit Height="21" Id="SAMPLENAME" Left="109" TabOrder="5" Top="28" Width="129"></Edit>
+	</Form>
+	<Script><![CDATA[function fnForm_Loaded(obj)
+{  
+}
+
+
+function fnCancel(obj)
+{
+	close();
+}
+
+function fnSave(obj)
+{
+	if(fnEmpty(SAMPLENAME.Text))
+	{
+		alert('샘플명을 입력하세요');
+		return;
+	}
+	
+	var sArgs = "scWORK_MODE=GET_KEY scUSERID=" + User_ID + " scFORMID=" + Form_ID + " scSAMPLENAME=" + quote(SAMPLENAME.Text);
+	var sTid = "CHECK";
+	var sUrl = "ICCS::st/StAction.do?cmd=StTempletLoad";
+	var sInDs = "";
+	var sOutDs = "dsKey=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(sTid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (sTid == "CHECK")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		
+		if (sTid == "SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+    }
+	
+	if(sTid =="SAVE")
+	{
+		alert('저장되었습니다.');
+		Close();
+	}
+	
+	if (sTid == "CHECK")
+	{
+		if (dsKey.rowcount > 0)
+		{
+			alert('존재하는 샘플명입니다.');
+			return;
+		}
+		
+		ds_PT_TEMPLET.AddRow();
+		ds_PT_TEMPLET.SetColumn(0, "USERID", User_ID);
+		ds_PT_TEMPLET.SetColumn(0, "FORMID", Form_ID);
+		ds_PT_TEMPLET.SetColumn(0, "SAMPLENAME", SAMPLENAME.Text);
+		
+		var sDataset = split(Dataset_Xml, ",");
+	
+		for (var nLoop = 0; nLoop < sDataset.length(); nLoop++)
+		{
+			ds_PT_XML.AddRow();	
+			ds_PT_XML.SetColumn(nLoop, "USERID", User_ID);
+			ds_PT_XML.SetColumn(nLoop, "FORMID", Form_ID);
+			ds_PT_XML.SetColumn(nLoop, "SAMPLENAME", SAMPLENAME.Text);
+			ds_PT_XML.SetColumn(nLoop, "DSNAME", sDataset[nLoop]);
+			ds_PT_XML.SetColumn(nLoop, "XML", object(sDataset[nLoop]).saveXml());
+		}
+		
+		var sArgs = "";
+		var sTid = "SAVE";
+		var sUrl = "ICCS::st/StAction.do?cmd=StTemplet";
+		var sInDs = "ds_PT_TEMPLET=ds_PT_TEMPLET:u ds_PT_XML=ds_PT_XML:u";
+		var sOutDs = "";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+ }
+	
+
+]]></Script>
+</Window>

@@ -1,0 +1,52 @@
+
+
+
+
+
+/* top menu */
+.tm_bg { background-color:#A7140D;}
+
+/* nevi_home */
+.top_nevi_home	{COLOR: #a60000; font-weight:bold;}
+
+/* Tiltle */
+.top_title	{font-size: 12px; line-height:15px; COLOR: #a60000; font-weight:bold;}
+
+
+/* List header */
+
+.listTable_header	{  BACKGROUND-IMAGE: url('../../../images/list_header_bg.gif'); background-repeat:repeat-x;
+						font-size: 11px;
+						color: #000000;
+						font-weight:bold;
+						text-align:center;
+						line-height:31px;   }
+
+.listTable_header A:link 		{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header A:active 		{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header A:visited 	{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header A:hover 		{	COLOR: #777777; TEXT-DECORATION: underline	}
+
+.listTable_header_section	{  BACKGROUND-IMAGE: url('../../../images/list_header_section.gif'); background-repeat:no-repeat;
+						font-size: 11px;
+						color: #000000;
+						font-weight:bold;
+						text-align:center;
+						line-height:31px;  }
+
+.listTable_header_section A:link 		{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header_section A:active 		{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header_section A:visited 	{	COLOR: #000000; TEXT-DECORATION: none	}
+.listTable_header_section A:hover 		{	COLOR: #777777; TEXT-DECORATION: underline	}
+
+
+
+/* 상세 입력  테이블  START */
+
+.inputTable_header_td {
+	background-color:#f7f6f3;	font-size: 12px; color: #790000; font-weight:bold; line-height:20px; padding-left:15;
+	BORDER-TOP: none ;
+	BORDER-LEFT: none ;
+	BORDER-BOTTOM: #dbdad9 1pt solid;
+	BORDER-RIGHT: none;
+}

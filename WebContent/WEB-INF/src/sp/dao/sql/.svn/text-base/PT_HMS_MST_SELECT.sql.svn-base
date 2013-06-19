@@ -1,0 +1,5 @@
+
+SELECT 
+	MENU_ID, L_MENU_CD, M_MENU_CD, S_MENU_CD, TITLE, URL, WRT_ID, WRT_NM, UDP_DT, INS_DT 
+FROM   PT_HMS_MST ;
+                   

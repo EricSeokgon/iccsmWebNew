@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="384" Id="EngListMgrD" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="기술자조회" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_MASTER">
+				<Contents></Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="539" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="1" Top="20" Width="74"></Button>
+		<Edit Height="21" Id="scNAME" Left="323" Style="style1" TabOrder="3" Top="20" Width="80"></Edit>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static7" Left="277" TabOrder="7" Text="성&#32;&#32;&#32;명" Top="25" Width="72"></Static>
+		<Image Height="16" Id="Image8" ImageID="arrow_small_blue2" Left="259" TabOrder="6" Top="23" Width="16"></Image>
+		<MaskEdit Height="21" Id="scSSN" Left="115" Mask="######-#######" TabOrder="8" Top="20" Type="STRING" Width="97"></MaskEdit>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static6" Left="31" TabOrder="5" Text="주민등록번호" Top="25" Width="80"></Static>
+		<Image Height="16" Id="Image3" ImageID="arrow_small_blue2" Left="13" TabOrder="4" Top="23" Width="16"></Image>
+		<Grid BindDataset="dsPT_R_ENGINEER_MASTER" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="359" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="303" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="626" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="618">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="105"/>
+						<col width="82"/>
+						<col width="119"/>
+						<col width="71"/>
+						<col width="196"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="자격증번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="기술자명"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="주민등록번호"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="기술등급"/>
+						<cell bkcolor="#787878" col="4" color="user2" display="text" text="재&#32;직&#32;업&#32;체"/>
+					</head>
+					<body> 
+						<cell col="0" colid="CARE_BOOK_ISSUE_NUM" display="text"/>
+						<cell col="1" colid="NM_KOR" display="text"/>
+						<cell align="center" col="2" colid="ENGINEER_SSN" display="text" Mask="######-#######"/>
+						<cell align="center" col="3" colid="TMP_GRADE" display="text"/>
+						<cell col="4" colid="NAME" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegMgr.xml
+2. 작성일 : 2009-02-25
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록현황 조회
+5. 변경이력
+  가. 2009-02-25 최초작성 (김현기)
+  나. 2009-04-06 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+var _sOldCode;
+var _sNm;
+var _sCorp;
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnInitButtonBar();
+	
+	scSSN.Value = _sOldCode;
+	scNAME.Text = _sNm;
+	
+	if (!fnEmpty(scSSN.Value) || !fnEmpty(scNAME.Text))
+		fnTablesBinding();
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	fnAllControlState(true, this);
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+//var sCorp = dsPT_R_BASIC_STATEMENT.GetColumn(0, "COI_WRT_NUM");
+	
+	var sArgs = "workMODE=ENGINEER_CHECK scSSN=" + quote(scSSN.Value);
+		//sArgs += " scNM_KOR=" + quote(this.scNAME.Text);
+		sArgs += " scNAME=" + quote(this.scNAME.Text);
+	var sTid = "SEARCH";
+	//var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrC";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=EngListMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_ENGINEER_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0)
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if (nRow < 0) return;
+
+	if (!fnEmpty(dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "NAME")))
+	{
+		// 2009-09-22 같은 회사에 재직중인 직원 등록 가능 처리
+		//  부모창에서 _sCorp 의 COI_WRT_NUM(공사업등록번호) 값을 가져와서 비교를 함
+		if (_sCorp != dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "CORP"))
+		{
+			// 2010.01.14. 타업체에 재직중인 기술자도 입력가능토록 변경.
+			if( !confirm('선택하신 기술자는 타업체에 재직중입니다.\n\n계속 진행하시겠습니까?') )
+				return;
+		}
+	}
+	
+	var arrReturn = array(8);
+	arrReturn[0] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "NM_KOR");
+	arrReturn[1] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "ENGINEER_SSN1");
+	arrReturn[2] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "ENGINEER_SSN2");
+	arrReturn[3] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "CARE_BOOK_ISSUE_NUM");
+	arrReturn[4] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "TMP_GRADE");
+	arrReturn[5] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "CARE_BOOK_VAL_START_DT");
+	arrReturn[6] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "CARE_BOOK_VAL_END_DT");
+	arrReturn[7] = dsPT_R_ENGINEER_MASTER.GetColumn(nRow, "ENGINEER_GRADE");
+
+	Close(arrReturn);
+}
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}
+]]></Script>
+</Window>

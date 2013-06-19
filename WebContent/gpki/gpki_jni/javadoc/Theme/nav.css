@@ -1,0 +1,37 @@
+<style type="text/css">
+.d2h { }
+.d2hCell	{
+	width: 80px;
+	height: 20px;
+	cursor: hand;
+	border-right: 1px solid #FFFFFF; 
+	text-align: center;}
+a.D2HContentsSelected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Purple; }
+a.D2HContentsUnselected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+a:hover.D2HContentsSelected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+a:hover.D2HContentsUnselected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+a.D2HIndexSelected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Purple; }
+a.D2HIndexUnselected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+a:hover.D2HIndexSelected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+a:hover.D2HIndexUnselected
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+a.D2HPreviousEnabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+a:hover.D2HPreviousEnabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+span.D2HPreviousDisabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  none; color: Black; }
+a.D2HNextEnabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+a:hover.D2HNextEnabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+span.D2HNextDisabled
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  none; color: Black; }
+</style>

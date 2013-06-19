@@ -1,0 +1,15 @@
+
+create table PT_M_PROSECUTION(
+    TMP_WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    PRSEC_DT VARCHAR2(8)  , /* */
+    PRSEC_CONT VARCHAR2(1024)  , /* */
+    PRSEC_PERSON_ID VARCHAR2(16)  , /* */
+    PRSEC_PART VARCHAR2(100)  , /* */
+    PRSEC_PART_TELNUM VARCHAR2(17)  , /* */
+    PRSEC_PART_OFFI VARCHAR2(20)  , /* */
+    INS_DT VARCHAR2(24)  , /* */
+    UPD_DT VARCHAR2(24)  , /* */
+    WRT_ID VARCHAR2(16)  , /* */
+    PRIMARY KEY(TMP_WRT_NUM,WRT_NUM)
+   );

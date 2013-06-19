@@ -1,0 +1,244 @@
+/**
+ * 파일명   : LoginCmd.java 
+ * 설명     : 로그인 프로세스  
+ * 이력사항
+ * CH00     :2006/04/19 김경덕 최초작성 
+ */
+
+package sp.login_m.cmd;
+
+import java.util.Vector;
+
+import javax.servlet.http.HttpServletRequest;
+
+import kjf.action.KJFCommand;
+import kjf.cfg.Config;
+import kjf.ops.ReportDAO;
+import kjf.ops.ReportEntity;
+import kjf.util.KJFLog;
+import kjf.util.KJFMi;
+import kjf.util.KJFUtil;
+
+import sp.sys.SysWorker;
+import sp.uent.MenuEnt;
+
+import org.apache.struts.action.ActionForm;
+
+import com.tobesoft.platform.PlatformRequest;
+import com.tobesoft.platform.data.ColumnInfo;
+import com.tobesoft.platform.data.Dataset;
+import com.tobesoft.platform.data.DatasetList;
+import com.tobesoft.platform.data.VariableList;
+
+
+/****************************************************************************
+ * <p>Title       : LoginCmd Class</p>
+ * <p>Description : 로그인 처리를 하는 클래스</p>
+ * <p>Copyright   : Copyright(c) 2007 PKT. All rights reserved.</p>
+ *
+ * NOTE : 로그인 처리를 한다.
+ *
+ * @version
+ * @author YYS
+ ***************************************************************************/
+public class LoginCmd implements KJFCommand {
+	
+	private static DatasetList  dl = new DatasetList();
+    private VariableList vl = new VariableList();
+	
+	private String next;
+	private static Vector menuEntList; //사용자 메뉴
+	private static Vector v_menuEntList;
+	
+    public LoginCmd() {
+    }
+    
+    public LoginCmd(String next_url) {
+    	next = next_url; 
+    }
+    
+    public String execute(HttpServletRequest request, ActionForm form) throws Exception {
+        
+       	loginprocess(request,"admin");
+    	
+        return next;
+    }
+    
+    public void loginprocess(HttpServletRequest request, String isWhere) throws  Exception{
+    	
+    	KJFLog.log("로그인 시작");
+    	
+    	/****** Service API 초기화 ******/
+    	PlatformRequest pReq = new PlatformRequest(request, Config.props.get("ENCODING"));
+    	/** Web Server에서 XML수신 및 Parsing **/
+    	pReq.receiveData(); 	
+    	/** 변수 획득 **/
+    	vl = pReq.getVariableList();
+    	
+        String scUSER_ID = vl.getValueAsString("scUSER_ID");
+        String scUSER_PW = vl.getValueAsString("scUSER_PW");
+    	
+    	
+    	String selectSQL =
+
+       	 "SELECT              	  	\n"+	
+       	 "	USER_ID,         	  	\n"+	
+       	 "	USER_NAME,  	  		\n"+
+       	 "	USER_EMAIL,  	  		\n"+
+       	 "	USER_PASSWD,    	  	\n"+	
+       	"	USER_CODE,    	  	    \n"+	
+       	 "	CAPITAL         	  	\n"+	
+       	 "FROM   PT_USER 	  		\n"+	
+       	 "WHERE USER_ID =?   \n" +
+       	 "  AND USER_PASSWD = ? \n";	
+
+        ReportDAO    rDAO        = new ReportDAO();
+        ReportEntity rEntity     = null;
+        
+        int cnt=1;
+        rDAO.setValue(cnt++, scUSER_ID);
+        rDAO.setValue(cnt++, scUSER_PW);
+        
+        String User_id = "";
+        String User_le = "";
+        String User_co = "";
+        
+        
+        if((scUSER_ID.equals(Config.props.get("SYS_ID"))&&scUSER_PW.equals(Config.props.get("SYS_PASS")))){
+        	User_id = Config.props.get("SYS_ID");
+        	User_le = "S";
+        	User_co = "S";
+        	ReAdmin(dl,"ds_login");
+        	TopMenuList(User_co);
+        }else{
+        	rEntity = rDAO.select(selectSQL);
+        	User_id = rEntity.getValue(0,"USER_ID");
+        	User_le = rEntity.getValue(0,"CAPITAL");
+        	User_co = rEntity.getValue(0,"USER_CODE");
+        	KJFMi.ReEnt2Ds(dl,rEntity,"ds_login");
+        	TopMenuList(User_co);
+        }
+        
+        
+        request.setAttribute("dl", dl);  
+        
+    }
+    
+    public  static void ReAdmin(DatasetList dl, String ds_id){
+		
+		Dataset ds = new Dataset(ds_id);
+		
+		ds.addColumn("USER_ID",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("USER_NAME",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("USER_EMAIL",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("USER_PASSWD",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("CAPITAL",ColumnInfo.CY_COLINFO_STRING, 20);
+		
+		int row = ds.appendRow();
+		ds.setColumn(row, "USER_ID", Config.props.get("SYS_ID"));
+		ds.setColumn(row, "USER_NAME", "시스템관리자");
+		ds.setColumn(row, "USER_EMAIL", "");
+		ds.setColumn(row, "USER_PASSWD", Config.props.get("SYS_PASS"));
+		ds.setColumn(row, "CAPITAL", "S");	
+
+		/********* 생성된 Dataset을 DatasetList에 추가 ************/
+		dl.addDataset(ds);
+	 }
+    
+    public  static void TopMenuList(String AUTH_GROUP_CODE) throws Exception{
+    	
+    	String TopSQL = " SELECT PG_GROUP_ID, GROUP_NAME  \n" +
+    					"   FROM PT_PG_GROUP  \n" +
+    					"  WHERE PG_GROUP_ID IN  \n" +
+    					"        (SELECT P_PG_GROUP_ID  FROM PT_PG_GROUP " ;
+    	if(!"S".equals(AUTH_GROUP_CODE)){
+    		TopSQL += 	"          WHERE PG_GROUP_ID IN   \n" +
+    					"                (SELECT PG_GROUP_ID FROM PT_AUTH_PG WHERE AUTH_GROUP_CODE = '"+AUTH_GROUP_CODE+"')  \n" ;
+    	}
+    		TopSQL +=    "               GROUP BY P_PG_GROUP_ID) ORDER BY ORDER_SEQ ASC  \n";
+    	
+    	ReportDAO    rDAO        = new ReportDAO();
+        ReportEntity rEntity     = null;
+        
+        rEntity = rDAO.select(TopSQL);
+        
+        //데이터셋 초기화 한다
+        Dataset ds = new Dataset("ds_topmenu");
+    	
+    	ds.addColumn("TitelName",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("TitelUrl",ColumnInfo.CY_COLINFO_STRING, 20);
+        
+        
+        if(rEntity!=null){
+			for(int i = 0; i < rEntity.getRowCnt(); i++){
+				int row = ds.appendRow();	
+				ds.setColumn(row, "level", "0");
+				ds.setColumn(row, "TitelName", rEntity.getValue(i,"GROUP_NAME"));
+				ds.setColumn(row, "TitelUrl", "");
+				dl.addDataset(ds);
+				
+				LeftMenuList(rEntity.getValue(0,"PG_GROUP_ID"), AUTH_GROUP_CODE, rEntity.getValue(0,"GROUP_NAME"));
+			}
+        }
+        
+        
+    	
+    }
+    
+    public  static void LeftMenuList(String P_PG_GROUP_ID, String AUTH_GROUP_CODE, String TopName) throws Exception{
+    	ReportDAO    rDAO        = new ReportDAO();
+    	ReportDAO    sDAO        = new ReportDAO();
+        ReportEntity rEntity     = null;
+        ReportEntity sEntity     = null;
+        
+        Dataset ds = new Dataset("ds_lifemenu");
+     	ds.addColumn("level",ColumnInfo.CY_COLINFO_STRING, 20);
+     	ds.addColumn("NAME",ColumnInfo.CY_COLINFO_STRING, 20);
+		ds.addColumn("URL",ColumnInfo.CY_COLINFO_STRING, 20);
+        
+    	String LeftSQL1 = "  SELECT PG_GROUP_ID, GROUP_NAME, PG_GROUP_URL  \n" +
+    			          "    FROM PT_PG_GROUP   \n" +
+    			          "   WHERE P_PG_GROUP_ID  = ?  \n" +
+    			          "     AND PG_GROUP_ID IN   \n" +
+    			          "         (SELECT PG_GROUP_ID FROM PT_AUTH_PG WHERE AUTH_GROUP_CODE = ?)";
+    	
+    	int cnt=1;
+    	rDAO.setValue(cnt++,P_PG_GROUP_ID);
+    	rDAO.setValue(cnt++,AUTH_GROUP_CODE);
+    	rEntity = rDAO.select(LeftSQL1);
+    	
+    	int row = ds.appendRow();
+    	
+    	ds.setColumn(row, "level", "0");
+		ds.setColumn(row, "URL", "");
+		ds.setColumn(row, "NAME", TopName);
+		dl.addDataset(ds);
+		
+		String code = "";
+    	
+    	if(rEntity != null){
+    		for(int i = 0; i < rEntity.getRowCnt(); i++){
+    			row = ds.appendRow();
+    			ds.setColumn(row, "level", "1");
+    			ds.setColumn(row, "URL", rEntity.getValue(i,"PG_GROUP_URL"));
+    			ds.setColumn(row, "NAME", rEntity.getValue(i,"GROUP_NAME"));
+    			dl.addDataset(ds);
+    			String LeftSQL2 = "  SELECT PG_NAME, PG_URL  \n" +
+			      "    FROM PT_PG   \n" +
+			      "   WHERE  PG_GROUP_ID IN ("+rEntity.getValue(i,"PG_GROUP_ID")+")";
+    			code += "'"+rEntity.getValue(i,"PG_GROUP_ID")+"',";
+    			sEntity = sDAO.select(LeftSQL2);
+    			
+    			if(sEntity != null){
+    				for(int j = 0; j < sEntity.getRowCnt(); j++){
+    					row = ds.appendRow();
+    	    			ds.setColumn(row, "level", "2");
+    	    			ds.setColumn(row, "URL", sEntity.getValue(j,"PG_URL"));
+    	    			ds.setColumn(row, "NAME", sEntity.getValue(j,"PG_NAME"));
+    	    			dl.addDataset(ds);
+    				}
+    			}
+    		}
+    	}    	
+    }
+}

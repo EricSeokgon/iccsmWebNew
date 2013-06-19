@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica
+END
+KicaTaskSql.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/KicaTaskSql.java
+END
+toadKica.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/toadKica.java
+END
+SildbTaskDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/SildbTaskDAO.java
+END
+KicaAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/KicaAgent.java
+END
+KicaLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/KicaLog.java
+END
+kica.sql
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/kica.sql
+END
+KicaTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/KicaTask.java
+END
+KicaTaskDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/util/kica/KicaTaskDAO.java
+END

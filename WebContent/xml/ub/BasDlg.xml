@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="152" Id="BasDlg" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="관련&#32;근거&#32;상세&#32;보기" Top="8" Ver="1.0" Width="816" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsReport">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>RPT1</Code>
+						<Value>착공전설계도&#32;확인&#32;결과&#32;통보서</Value>
+					</record>
+					<record>
+						<Code>RPT2</Code>
+						<Value>착공전설계도&#32;대장</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="20" Id="btnCancel" ImageID="button_style1_70" Left="720" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="1" Text="확&#32;&#32;&#32;인" Top="104" Width="71"></Button>
+		<Image Height="96" Id="Image1" ImageID="form_bg800" Left="2" TabOrder="3" Top="16" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="2" TabOrder="2" Top="-2" Width="816"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="2" TabOrder="4" Top="80" Width="816"></Image>
+		<Image Height="40" Id="Image5" ImageID="bg_detail_top" Left="16" TabOrder="5" Top="3" Width="784"></Image>
+		<Image Height="64" Id="Image6" ImageID="bg_info_body" Left="16" TabOrder="6" Top="32" Width="784"></Image>
+		<Image Height="40" Id="Image7" ImageID="bg_info_bottom" Left="16" TabOrder="7" Top="94" Width="784"></Image>
+		<Static BKColor="white" Height="75" Id="Static1" Left="35" TabOrder="8" Top="22" VAlign="Middle" Width="744" WordWrap="TRUE"></Static>
+	</Form>
+	<Script><![CDATA[var scBas;
+function fnForm_Loaded(obj){
+
+	this.Static1.Text = scBas;
+
+}
+
+function btnCancel_OnClick(obj)
+{
+	Close();
+}
+
+]]></Script>
+</Window>

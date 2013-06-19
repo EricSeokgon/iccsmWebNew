@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS
+END
+certForVID.der_
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS/certForVID.der_
+END
+myCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS/myCert.der
+END
+cert.der
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS/cert.der
+END
+certForVID.der
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS/certForVID.der
+END
+gpkiapi.conf
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/IVS/gpkiapi.conf
+END

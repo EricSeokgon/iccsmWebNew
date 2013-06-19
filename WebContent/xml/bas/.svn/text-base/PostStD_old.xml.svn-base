@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="PostStD" PidAttrib="7" Title="우편번호&#32;검색" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_COM_ZIPCODE">
+				<Contents>
+					<colinfo id="ZIPCODE" size="7" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS" size="170" summ="default" type="STRING"/>
+					<colinfo id="ADDRESS2" size="170" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="dsPT_COM_ZIPCODE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="370" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="295" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="Grid0_OnCellDblClick" OnHeadClick="fnGridHead_Click" Right="633" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="75" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="625">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="521"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="우편번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="주&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;소"/>
+					</head>
+					<body>
+						<cell col="0" colid="ZIPCODE" display="text"/>
+						<cell col="1" colid="ADDRESS" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="42" Id="Image0" ImageID="bg_search_small" Left="8" TabOrder="2" Top="15" Width="624"></Image>
+		<Static Align="Center" Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="41" Style="list_subtitle" TabOrder="3" Text="지역(동)명으로&#32;검색" Top="34" Width="168"></Static>
+		<Edit Height="21" Id="scAddr" Left="217" OnKeyDown="fnSearchKeyDownick" Style="style1" TabOrder="4" Top="29" Width="266"></Edit>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="540" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="5" Top="28" Width="75"></Button>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="26" TabOrder="6" Top="34" Width="11"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : PostStD.xml
+2. 작성일 : 2009-03-03
+3. 작성자 : Y.D. Jeong
+4. 기  능 : 우편번호 조회
+5. 변경이력
+  가. 2009-03-03 최초작성 (Y.D. Jeoung)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+                     
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scDong=" + quote(this.scAddr.Text);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=PostStD";
+	var sInDs = "";
+	var sOutDs = "dsPT_COM_ZIPCODE=dsPT_COM_ZIPCODE";
+	var sCallBack = "fn_CallBack";
+	
+	
+	if (this.scAddr.Text == ""){
+		alert("지역(동)를 입력해 주십시오");
+	}else {
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+}
+function Grid0_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;	
+	
+		var varArray = Array(2);
+		
+		varArray[0]=rtrim(dsPT_COM_ZIPCODE.GetColumn(nRow,"ZIPCODE"));
+		varArray[1]=rtrim(dsPT_COM_ZIPCODE.GetColumn(nRow,"ADDRESS2"));
+
+		Close(varArray);
+}
+function fnSearchKeyDownick(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	if (nChar == 13) 
+	{
+		fnSearchButton_Click(obj);
+	}
+}
+]]></Script>
+</Window>

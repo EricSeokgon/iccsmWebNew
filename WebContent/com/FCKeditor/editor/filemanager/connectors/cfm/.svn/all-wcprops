@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm
+END
+cf_commands.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_commands.cfm
+END
+cf_basexml.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 202
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_basexml.cfm
+END
+cf_upload.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 201
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_upload.cfm
+END
+connector.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 201
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/connector.cfm
+END
+cf5_upload.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 202
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf5_upload.cfm
+END
+cf_util.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 199
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_util.cfm
+END
+ImageObject.cfc
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/ImageObject.cfc
+END
+cf5_connector.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 205
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf5_connector.cfm
+END
+cf_connector.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 204
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_connector.cfm
+END
+upload.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/upload.cfm
+END
+image.cfc
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/image.cfc
+END
+cf_io.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/cf_io.cfm
+END
+config.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/com/FCKeditor/editor/filemanager/connectors/cfm/config.cfm
+END

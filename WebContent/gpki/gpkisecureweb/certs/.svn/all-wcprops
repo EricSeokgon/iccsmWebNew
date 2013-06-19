@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs
+END
+NPKIRootCA1.der
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/NPKIRootCA1.der
+END
+SVR6260000058_env.key
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/SVR6260000058_env.key
+END
+SVR6260000058_env.cer
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/SVR6260000058_env.cer
+END
+SVR6260000058_sig.key
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/SVR6260000058_sig.key
+END
+SVR6260000058_sig.cer
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/SVR6260000058_sig.cer
+END
+GPKIRootCA1.der
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpkisecureweb/certs/GPKIRootCA1.der
+END

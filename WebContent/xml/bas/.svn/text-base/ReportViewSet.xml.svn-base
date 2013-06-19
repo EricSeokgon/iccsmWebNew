@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="ReportViewSet" Left="8" OnLoadCompleted="Expr_OnLoadCompleted" PidAttrib="7" scroll="false" Title="ReportViewSet" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="4" TabStop="FALSE" Top="576" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="3" TabStop="FALSE" Top="152" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" TabStop="FALSE" Top="80" Width="816"></Image>
+		<Microsoft Bottom="632" Height="544" Id="Microsoft0" Left="16" Right="808" Top="88" Width="792"></Microsoft>
+	</Form>
+	<Script><![CDATA[function Expr_OnLoadCompleted(obj)
+{
+	divButtonBar.Image1.text = space(2) + "위법업체접수관리";
+	Microsoft0.Navigate2( global.g_ext_oz_url + "ViewSetup.html","","","","");
+	
+}
+
+]]></Script>
+</Window>

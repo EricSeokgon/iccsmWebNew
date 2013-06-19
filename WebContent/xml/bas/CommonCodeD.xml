@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="384" Id="CommonCodeD" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공통코드&#32;조회" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_COM_CODE">
+				<Contents>
+					<colinfo id="P_CODE" size="32" summ="default" type="STRING"/>
+					<colinfo id="P_CODE_NAME" size="128" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="32" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="128" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="ORDER_SEQ" size="13" summ="default" type="STRING"/>
+					<colinfo id="USE_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="BIGO" size="200" summ="default" type="STRING"/>
+					<colinfo id="REG_DATE" size="30" summ="default" type="STRING"/>
+					<colinfo id="MOD_DATE" size="30" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="13" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="23" Id="btnSearch" ImageID="button_search" Left="547" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="1" Top="17" Width="76"></Button>
+		<Grid BindDataset="dsPT_COM_CODE" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="371" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="319" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" Right="633" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="52" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="625">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="81"/>
+						<col width="346"/>
+					</columns>
+					<head>
+						<cell bkcolor="#999999" col="0" color="white" display="text" text="코&#32;&#32;드"/>
+						<cell bkcolor="#999999" col="1" color="white" display="text" text="코&#32;드&#32;명"/>
+					</head>
+					<body>
+						<cell col="0" colid="CODE" display="text"/>
+						<cell col="1" colid="CODE_NAME" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static6" Left="31" TabOrder="3" Text="코&#32;드&#32;명" Top="20" Width="48"></Static>
+		<Edit Height="24" Id="scCODENAME" Left="85" Style="style1" TabOrder="3" Top="14" Width="144"></Edit>
+		<Image Height="18" Id="Image0" ImageID="arrow_small_blue2" Left="13" TabOrder="5" Top="20" Width="18"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : AmReceiptMgrD.xml
+2. 작성일 : 2009-03-17
+3. 작성자 : 김 현 기
+4. 기  능 : 행정처분 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-03-17 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scGROUPCODE=" + quote(_sOldCode);
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	sArgs += " scCODENAME=" + quote("");
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=ComCodeStDMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_COM_CODE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+	
+	var arrReturn = Array(2);
+	arrReturn[0] = dsPT_COM_CODE.GetColumn(nRow, "CODE");
+	arrReturn[1] = dsPT_COM_CODE.GetColumn(nRow, "CODE_NAME");
+
+	Close(arrReturn);
+}
+]]></Script>
+</Window>

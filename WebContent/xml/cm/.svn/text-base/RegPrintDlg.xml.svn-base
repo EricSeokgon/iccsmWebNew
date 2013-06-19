@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Font="굴림,9,Bold" Height="312" Id="RegPrintDlg" Left="8" PidAttrib="7" Title="RegPrintDlg" Top="8" Ver="1.0" Width="296" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsReport">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>1</Code>
+						<Value>참고사항(1쪽)</Value>
+					</record>
+					<record>
+						<Code>2</Code>
+						<Value>공사업자기본사항(2쪽)</Value>
+					</record>
+					<record>
+						<Code>3</Code>
+						<Value>시공능력평가사항(3쪽)</Value>
+					</record>
+					<record>
+						<Code>4</Code>
+						<Value>기술자사항(4쪽)</Value>
+					</record>
+					<record>
+						<Code>5</Code>
+						<Value>기술자사항(5쪽)</Value>
+					</record>
+					<record>
+						<Code>6</Code>
+						<Value>기술자사항(6쪽)</Value>
+					</record>
+					<record>
+						<Code>7</Code>
+						<Value>기술자사항(7쪽)</Value>
+					</record>
+					<record>
+						<Code>8</Code>
+						<Value>기술자사항(8쪽)</Value>
+					</record>
+					<record>
+						<Code>9</Code>
+						<Value>기술자사항(9쪽)</Value>
+					</record>
+					<record>
+						<Code>10</Code>
+						<Value>기술자사항(10쪽)</Value>
+					</record>
+					<record>
+						<Code>11</Code>
+						<Value>기술자사항(11쪽)</Value>
+					</record>
+					<record>
+						<Code>12</Code>
+						<Value>변경사항(12쪽)</Value>
+					</record>
+					<record>
+						<Code>13</Code>
+						<Value>변경사항(13쪽)</Value>
+					</record>
+					<record>
+						<Code>14</Code>
+						<Value>행정처분(14쪽)</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPrint2">
+				<Contents>
+					<colinfo id="FIRM_NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="REGIST_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP_CERTI_RESI_NO1" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP_CERTI_RESI_NO2" size="256" summ="default" type="STRING"/>
+					<colinfo id="REGIST_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="PAY_IN_CAPITAL_AMT_K" size="256" summ="default" type="STRING"/>
+					<colinfo id="SITE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="FIRST_ISSUE_Y" size="256" summ="default" type="STRING"/>
+					<colinfo id="FIRST_ISSUE_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="FIRST_ISSUE_D" size="256" summ="default" type="STRING"/>
+					<record>
+						<FIRM_NM_KOR>(주)파라다이스글로벌</FIRM_NM_KOR>
+						<FIRST_ISSUE_D>03</FIRST_ISSUE_D>
+						<FIRST_ISSUE_M>06</FIRST_ISSUE_M>
+						<FIRST_ISSUE_Y>2009</FIRST_ISSUE_Y>
+						<PAY_IN_CAPITAL_AMT_K>174,201&#32;천원</PAY_IN_CAPITAL_AMT_K>
+						<REGIST_NO>110196</REGIST_NO>
+						<REGIST_YMD>2005/11/25</REGIST_YMD>
+						<REP_CERTI_RESI_NO1>180111-0183276</REP_CERTI_RESI_NO1>
+						<REP_CERTI_RESI_NO2></REP_CERTI_RESI_NO2>
+						<REP_NM_KOR>최진일,유영섭외1명</REP_NM_KOR>
+						<SITE_ADDR>부산&#32;해운대구&#32;중동&#32;1408-5</SITE_ADDR>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPrint3">
+				<Contents>
+					<colinfo id="EVAL_Y" size="256" summ="default" type="STRING"/>
+					<colinfo id="EVAL_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="EVAL_D" size="256" summ="default" type="STRING"/>
+					<colinfo id="ABILITY_EVAL_AMT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLY_Y" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLY_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLY_D" size="256" summ="default" type="STRING"/>
+					<colinfo id="TO_GIGAN" size="256" summ="default" type="STRING"/>
+					<colinfo id="REGIST_WRITE_YN" size="256" summ="default" type="STRING"/>
+					<record>
+						<ABILITY_EVAL_AMT>2,903,300</ABILITY_EVAL_AMT>
+						<APPLY_D>30</APPLY_D>
+						<APPLY_M>06</APPLY_M>
+						<APPLY_Y>08</APPLY_Y>
+						<EVAL_D>30</EVAL_D>
+						<EVAL_M>06</EVAL_M>
+						<EVAL_Y>2008</EVAL_Y>
+						<REGIST_WRITE_YN>N</REGIST_WRITE_YN>
+						<TO_GIGAN>09/06/29</TO_GIGAN>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPrint4">
+				<Contents>
+					<colinfo id="NM_KO" size="256" summ="default" type="STRING"/>
+					<colinfo id="TECH_GRADE_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CAREER_NOTE_NO" size="256" summ="default" type="STRING"/>
+					<colinfo id="VLID_YMD_FR" size="256" summ="default" type="STRING"/>
+					<colinfo id="VLID_YMD_TO" size="256" summ="default" type="STRING"/>
+					<colinfo id="EDU_FINISH_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_JOIN_COMP_YMD_Y" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_JOIN_COMP_YMD_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_JOIN_COMP_YMD_D" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_RETIRE_YMD_Y" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_RETIRE_YMD_M" size="256" summ="default" type="STRING"/>
+					<colinfo id="AFTER_RETIRE_YMD_D" size="256" summ="default" type="STRING"/>
+					<colinfo id="IN_WRITE_YN" size="256" summ="default" type="STRING"/>
+					<record>
+						<AFTER_JOIN_COMP_YMD_D>25</AFTER_JOIN_COMP_YMD_D>
+						<AFTER_JOIN_COMP_YMD_M>11</AFTER_JOIN_COMP_YMD_M>
+						<AFTER_JOIN_COMP_YMD_Y>2005</AFTER_JOIN_COMP_YMD_Y>
+						<AFTER_RETIRE_YMD_D></AFTER_RETIRE_YMD_D>
+						<AFTER_RETIRE_YMD_M></AFTER_RETIRE_YMD_M>
+						<AFTER_RETIRE_YMD_Y></AFTER_RETIRE_YMD_Y>
+						<CAREER_NOTE_NO>(401200403882)</CAREER_NOTE_NO>
+						<EDU_FINISH_YMD></EDU_FINISH_YMD>
+						<IN_WRITE_YN>Y</IN_WRITE_YN>
+						<NM_KO>박호현</NM_KO>
+						<TECH_GRADE_NM>초급</TECH_GRADE_NM>
+						<VLID_YMD_FR></VLID_YMD_FR>
+						<VLID_YMD_TO></VLID_YMD_TO>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPrint14"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPrint12"></Dataset>
+		</Datasets>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="249" Id="Static0" Left="13" TabOrder="4" Text="출&#32;&#32;&#32;&#32;&#32;력" Top="7" Type="Groupbox" Width="259"></Static>
+		<Radio Border="None" CodeColumn="Code" Color="#666666" DataColumn="Value" Height="224" Id="Radio0" INDEX="-1" InnerDataset="dsReport" Left="24" TabOrder="1" Top="24" Width="240"></Radio>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="48" OnClick="btnPrint_OnClick" Style="button_style01" TabOrder="2" Text="출력하기" Top="272" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="152" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="3" Text="취&#32;&#32;&#32;&#32;소" Top="272" Width="72"></Button>
+	</Form>
+	<Script><![CDATA[function btnCancel_OnClick(obj)
+{
+	Close();
+}
+
+function btnPrint_OnClick(obj)
+{
+	//Close(this.dsReport.GetColumn(Radio0.Index, "Code"));
+	var numPrint;
+	//numPrint = dsReport.GetColumn(Radio0.Index, "Code"));
+	sendPrint2();
+	if(numPrint == "2") sendPrint2();
+	if(numPrint == "3") sendPrint3();
+	if(numPrint == "4") sendPrint4();
+}
+
+function sendPrint2()
+{
+	myControl.ex_port_1_terminate();	
+	var ret = myControl.ex_port_1_open();	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;	
+	}	
+	var status;
+	status = myControl.ex_check_status();
+
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}		
+	
+	myControl.ex_insert_paper();
+	
+	myControl.prop_cpi = 15;	
+	myControl.ex_set_cpi();
+	myControl.prop_lpi = 4;		
+	myControl.ex_set_lpi();
+	myControl.prop_vertical_line = 18;
+	myControl.ex_set_vertical_line();
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+	/*
+	myControl.prop_stringToSend = dsPrint2.GetColumn(0,"FIRM_NM_KOR");
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 56;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = dsPrint2.GetColumn(0,"REGIST_NO")+"\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.REP_NM_KOR.value+dsPrint2.GetColumn(0,"REGIST_NO");
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 56;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.REP_CERTI_RESI_NO1.value+""+document.frm.REP_CERTI_RESI_NO2.value+"\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.REGIST_YMD.value+" ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 56;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.PAY_IN_CAPITAL_AMT_K.value+" "+"\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	if(document.frm.SITE_ADDR.value.length>30){
+		myControl.prop_stringToSend = document.frm.SITE_ADDR.value.substring(0,30)+" "+"\r\n";
+		myControl.ex_send_1_string();
+		
+		myControl.prop_horizontal_tab = 18;
+		myControl.ex_set_horizontal_tab();
+		
+		myControl.prop_stringToSend = document.frm.SITE_ADDR.value.substring(30)+" "+"\r\n\r\n\r\n";
+		myControl.ex_send_1_string();
+	}else{
+		myControl.prop_stringToSend = document.frm.SITE_ADDR.value+" "+"\r\n\r\n\r\n\r\n";
+		myControl.ex_send_1_string();
+	}	
+
+	myControl.prop_horizontal_tab = 25;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.FIRST_ISSUE_Y.value+" ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 36;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.FIRST_ISSUE_M.value+" ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 45;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = document.frm.FIRST_ISSUE_D.value+" ";
+	myControl.ex_send_1_string();
+*/
+	myControl.ex_eject_paper();
+	
+	myControl.ex_port_1_terminate();
+}]]></Script>
+</Window>

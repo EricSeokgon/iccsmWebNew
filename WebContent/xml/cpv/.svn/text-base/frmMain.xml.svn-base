@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="352" Id="frmCardPreview" Left="8" OnLoadCompleted="frmMain_loadDiv" PidAttrib="7" Title="미리보기" Top="8" Ver="1.0" Width="512" WorkArea="true">
+		<Button Color="red" Font="굴림,10,Bold" Height="31" Id="Button0" Left="104" OnClick="Button0_OnClick" TabOrder="1" Text="출&#32;력" Top="311" Width="134"></Button>
+		<Button Font="굴림,10" Height="31" Id="Button1" Left="272" OnClick="Button1_OnClick" TabOrder="2" Text="취&#32;소" Top="311" Width="134"></Button>
+		<Div Border="Flat" BorderColor="#7baeb9" Height="294" Id="divCard" Left="8" TabOrder="3" Text="Div0" Top="8" Width="494">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[/**	
+	수정일 : 09/12/16
+	수정자 : 김원	
+*/
+
+function frmMain_loadDiv() {
+	var index = RegRePublishMgrP.tbMain.TabIndex;
+	
+	switch(index) {
+		case 0:
+			this.divCard.url = "cpv::frmBaseInfo.xml";
+			break;
+		case 1:
+			this.divCard.url = "cpv::frmWorkCap.xml";
+			break;
+		case 2:
+			this.divCard.url = "cpv::frmEngineer.xml";
+			break;			
+		case 3:
+			this.divCard.url = "cpv::frmChangeHistory.xml";
+			break;
+		case 4:
+			this.divCard.url = "cpv::frmMeasure.xml";
+			break;
+	}	
+}
+
+function Button1_OnClick(obj)
+{
+	close();
+}
+
+function Button0_OnClick(obj)
+{
+	var index = RegRePublishMgrP.tbMain.TabIndex;
+	var print_ok = false;
+	
+	switch(index) {
+		case 0:
+			print_ok = fnReportCompanyBaseInfo();
+			break;
+		case 1:
+			print_ok = fnReportWorkCapability();
+			break;
+		case 2:	
+			print_ok = fnReportEngineer();
+			break;
+		case 3:
+			print_ok = fnReportChangeHistory();
+			break;
+		case 4:
+			print_ok = fnReportMmaster();
+			break;
+	}
+			
+	if(print_ok) close();
+}
+]]></Script>
+</Window>

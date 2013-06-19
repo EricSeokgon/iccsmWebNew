@@ -1,0 +1,1030 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>유선 환경에서 보안 세션 맺기</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H4 id=_D2HTopic_132 
+style="MARGIN-LEFT: 41.9pt; TEXT-INDENT: -41.9pt; tab-stops: 0cm 41.9pt"><SPAN 
+style="FONT-FAMILY: 굴림">유선</SPAN> <SPAN style="FONT-FAMILY: 굴림">환경에서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">보안</SPAN> <SPAN style="FONT-FAMILY: 굴림">세션</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">맺기</SPAN></H4>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="_9.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="_11.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">가</SPAN>. <SPAN 
+style="FONT-FAMILY: 굴림">처리과정</SPAN></P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; BACKGROUND: #d9d9d9; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=247>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">클라이언트</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; BACKGROUND: #d9d9d9; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; BACKGROUND: #d9d9d9; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">서버</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">임의이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">랜덤값</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">생성</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: Wingdings">ß</SPAN><SPAN 
+      style="FONT-FAMILY: 굴림">───────</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">서버의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">키분배용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">검증을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">서명용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인증서와</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">서버의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">키분배용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">검증</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">세션키를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">생성하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">랜덤값</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호화</SPAN> <SPAN style="FONT-FAMILY: 굴림">및</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">세션키를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">서버의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">키분배용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인증서로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호화한다</SPAN>.</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">───────</SPAN><SPAN 
+      style="FONT-FAMILY: Wingdings">&agrave;</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">서버의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">키분배용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">서버의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">키분배용</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인증서와</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">쌍으로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호화된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">세션키를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득하고</SPAN>, <SPAN 
+      style="FONT-FAMILY: 굴림">획득한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">세션키로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호화되어</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있던</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">랜덤값을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">획득한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">랜덤값이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">서버에서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">전송된</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">랜덤값과</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">같은지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">왐호화</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">채널을</SPAN> <SPAN style="FONT-FAMILY: 굴림">위한</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">세션키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">획득</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 184.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=247>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 108pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=144>
+      <P class=MsoNormal>&nbsp;</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=246>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">세션키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">공유</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">완료</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">나</SPAN>. <SPAN 
+style="FONT-FAMILY: 굴림">적용예제</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.GpkiApi;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.cert.X509Certificate;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.cms.EnvelopedData;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.crypto.PrivateKey;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.crypto.SecretKey;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.crypto.Random;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.crypto.Cipher;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.storage.Disk;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">public class SecureSession {</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">/*******************************************************************************************/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 40pt"><SPAN style="FONT-SIZE: 9pt">// 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">아래</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> define</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">은</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">적용</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">시스템에</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">맞게</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">수정해</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">주어야</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">한다</SPAN><SPAN 
+style="FONT-SIZE: 9pt">.</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String 
+WORK_DIR_PATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+= ".";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String 
+DOCUMENT_FILE_PATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+= "./document.txt";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String 
+CLIENT_SIGN_CERT_PATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 160pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">= "C:/GPKI/Certificate/class2/085</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">사용자</SPAN><SPAN 
+style="FONT-SIZE: 9pt">003_sig.cer";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String CLIENT_SIGN_PRIKEY_PATH&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 160pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">= "C:/GPKI/Certificate/class2/085</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">사용자</SPAN><SPAN 
+style="FONT-SIZE: 9pt">003_sig.key";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String CLIENT_SIGN_PRIKEY_PASSWD 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = "sppo1234";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String 
+SERVER_KM_CERT_PATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 160pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">= 
+"C:/GPKI/Certificate/class1/SVR1310101010_env.cer";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String 
+SERVER_KM_PRIKEY_PATH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 160pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">= 
+"C:/GPKI/Certificate/class1/SVR1310101010_env.key";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String SERVER_KM_PRIKEY_PASSWD = "qwer1234";</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+/*******************************************************************************************/</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+SecretKey client_session_key = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+SecretKey server_session_key = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] genRandom() {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bRandom = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> 20Byte(R1)</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">를</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">생성</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Random random = new Random();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bRandom = random.generateRandom(20);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return bRandom;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] loadSvrCert() {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bSvrCert = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버의</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키분배용</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">로드</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+X509Certificate svrCert = Disk.readCert(SERVER_KM_CERT_PATH);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bSvrCert = svrCert.getCert();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return bSvrCert;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] encrypt(byte[] bRandom, byte[] bSvrCert) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bEnvData = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증시</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">사용할</SPAN><SPAN 
+style="FONT-SIZE: 9pt">&nbsp; </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서명용</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서와</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">개인키를</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+X509Certificate signCert = Disk.readCert(CLIENT_SIGN_CERT_PATH);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+PrivateKey signPriKey = Disk.readPriKey(CLIENT_SIGN_PRIKEY_PATH, </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 240pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">CLIENT_SIGN_PRIKEY_PASSWD);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버의</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키분배용</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+(3.2.5. </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">참조</SPAN><SPAN 
+style="FONT-SIZE: 9pt">)</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+X509Certificate svrCert = new X509Certificate(bSvrCert);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Cert cert = new Cert();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cert.setMyCert(signCert, signPriKey);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cert.setCert("km", svrCert);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cert.verify();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키를</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">생성하여</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">및</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 80pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">// </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키를</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버의</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키분배용</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서로</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+EnvelopedData envData = new EnvelopedData("NEAT");</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+envData.addRecipient(svrCert);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bEnvData = envData.generate(bRandom);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">채널을</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">위한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+client_session_key = envData.getSecretKey();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return bEnvData;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void decrypt(byte[] bMyCert, byte[] bSvrRandom, byte[] bEnvData) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">클라이언트로부터</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">받은</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">데이터를</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">복호화하기</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">위해서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키분배용</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">개인키를</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">로드</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+X509Certificate svrKmCert = new X509Certificate(bMyCert);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+PrivateKey svrKmPriKey = Disk.readPriKey(SERVER_KM_PRIKEY_PATH, </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 240pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">SERVER_KM_PRIKEY_PASSWD);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버의</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키분배용</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서와</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">개인키</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">쌍으로</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화된</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키를</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득하고</SPAN><SPAN 
+style="FONT-SIZE: 9pt">, </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 120pt"><SPAN style="FONT-SIZE: 9pt">// 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키로</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화되어</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">있던</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값을</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+EnvelopedData envData = new EnvelopedData();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bRandom = envData.process(bEnvData, svrKmCert, svrKmPriKey);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값이</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">①클라이언트에</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">전송했던</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값과</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">같은지</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">확인</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if (bRandom.length != bSvrRandom.length)</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+throw new Exception("</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버에서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">보낸</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값에</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">대한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서명이</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">아닙니다</SPAN><SPAN 
+style="FONT-SIZE: 9pt">.");</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+for (int i=0; i&lt;bRandom.length; i++)</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+{</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if (bRandom[i] != bSvrRandom[i])</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+throw new Exception("</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버에서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">보낸</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">랜덤값에</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">대한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 280pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서명이</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">아닙니다</SPAN><SPAN 
+style="FONT-SIZE: 9pt">.");</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">채널을</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">위한</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+server_session_key = envData.getSecretKey();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] encrypt(SecretKey secretKey) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bCipherText = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">전송할</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">데이터</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">획득</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bData = Disk.read(DOCUMENT_FILE_PATH);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">전송할</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">데이터</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션키로</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Cipher cipher = Cipher.getInstance("NEAT/CBC");</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cipher.init(Cipher.ENCRYPT_MODE, secretKey);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bCipherText = cipher.doFinal(bData);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return bCipherText;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void decrypt(byte[] bCipherText, SecretKey secretKey) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bPlainText = null;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호문</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">복호화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Cipher cipher = Cipher.getInstance("NEAT/CBC");</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+cipher.init(Cipher.DECRYPT_MODE, secretKey);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bPlainText = cipher.doFinal(bCipherText);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void makeSecureSession() {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// API </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">초기화</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+GpkiApi.init(WORK_DIR_PATH);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bRandom = genRandom();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bSvrCert = loadSvrCert();</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">클라이언트</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bEnvData = encrypt(bRandom, bSvrCert);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+decrypt(bSvrCert, bRandom, bEnvData);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+///////////////////////////////</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">암호</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">세션을</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">맺기</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">위한</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">키</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">공유</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">완료</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> //</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+///////////////////////////////</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">서버</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+byte[] bCipherText = encrypt(server_session_key);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">클라이언트</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+decrypt(bCipherText, client_session_key);</SPAN></P>
+<P class=a9><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9><SPAN style="FONT-SIZE: 9pt">}</SPAN></P>
+<P class=a9>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

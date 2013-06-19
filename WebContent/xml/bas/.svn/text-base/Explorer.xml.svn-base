@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="Explorer" Left="8" OnLoadCompleted="Expr_OnLoadCompleted" PidAttrib="7" scroll="false" Title="Explorer" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="4" TabStop="FALSE" Top="571" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="3" TabStop="FALSE" Top="151" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" TabStop="FALSE" Top="79" Width="816"></Image>
+		<Microsoft Bottom="626" Height="536" Id="Microsoft0" Left="19" Right="811" Top="90" Width="792"></Microsoft>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="5" Text="Div0" Top="12" Url="base::frmExpBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[var _sURL;
+
+function Expr_OnLoadCompleted(obj)
+{
+	this.title = titles;
+	divButtonBar.Image1.text = space(6)+ titles;
+	Microsoft0.Navigate2(global.g_ext_iccs_url + g_exurl,"","","","");
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="700" Id="frmReport" Left="8" OnActivate="frmReport_OnActivate" OnLoadCompleted="frmReport_OnLoadCompleted" OnSize="frmReport_OnSize" PidAttrib="7" Title="출력물보기" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<EXOZViewer50 Bottom="695" Height="690" Id="viewer" Left="5" Right="795" Top="5" Width="790"></EXOZViewer50>
+	</Form>
+	<Script><![CDATA[var _sViewer;
+var _sReportname;
+var _sOdiNames;
+var _spCount;
+var _sParam;
+
+function frmReport_OnActivate(obj)
+{
+
+}
+
+function frmReport_OnLoadCompleted(obj)
+{
+
+    scSggn = substr(global.g_SggN_cd,0,4); //창원시 시군구 코드4자리로 짜름
+    //alert(scSggn);
+                     
+	var sParams;
+
+	sParams += "viewer.namespace=" + _sViewer + "\\ozviewer" + "\n";
+	sParams += "connection.servlet=" + global.g_ext_oz_url + "server\n";
+ 
+	if(scSggn=="gncw" && (_sOdiNames=="odi.odinames=Q)BeforeConsResultR,Q)BfCertTable" ||  _sOdiNames="odi.odinames=Q)InvestR"))
+	{
+	sParams += "toolbar.save=false"+"\n";
+    sParams += "toolbar.pdf=true"+"\n";
+    }
+    
+	sParams += _sReportname + "\n";
+	sParams += _sOdiNames + "\n";
+	sParams += _spCount + "\n";
+	//alert(sParams);
+	var sTemp = split(_sParam, "||", true, false, false);
+	
+	for (var nLoop = 0; nLoop < sTemp.length(); nLoop++)
+	{
+		sParams += sTemp[nLoop] + "\n";
+	}
+
+	viewer.CreateReport(sParams);
+}
+
+function frmReport_OnSize(obj,nCx,nCy,nState)
+{
+	if( nCx >= 800 ) {
+		viewer.Width = nCx - 10;
+	}
+	if( nCy >= 700 ) {
+		viewer.Height = nCy - 10;
+	}
+	
+	ResizeScroll();
+}
+]]></Script>
+</Window>

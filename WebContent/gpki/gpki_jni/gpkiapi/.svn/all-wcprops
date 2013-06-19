@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/gpkiapi
+END
+libgpkiapi_jni.a
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/gpkiapi/libgpkiapi_jni.a
+END
+gpkiapi_info
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/gpkiapi/gpkiapi_info
+END
+libibmldap64n.a
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/gpkiapi/libibmldap64n.a
+END
+libgpkiapi64.a
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/gpkiapi/libgpkiapi64.a
+END

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="650" Id="MainLeft" Left="8" OnLoadCompleted="MainLeft_OnLoadCompleted" PidAttrib="7" Style="button_style01" Title="MainLeft" Top="8" Ver="1.0" Width="195" WorkArea="true">
+		<Microsoft Bottom="656" Height="24" Id="Microsoft0" Left="172" Right="172" Top="632" Width="0"></Microsoft>
+		<Image Height="80" Id="Image1" ImageID="logo" Left="2" LeftMargin="0" OnClick="Image1_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" TabOrder="2" ToolTipText="업무시스템&#32;종합상황표로&#32;이동합니다." Width="186"></Image>
+		<Image Color="white" FillType="TILE" Font="돋움,11,Bold" Height="47" Id="Image2" ImageID="left_title_1" Left="2" LeftMargin="0" TabOrder="3" Top="95" Width="186"></Image>
+		<Image Height="97" Id="Image5" ImageID="left_bottom" Left="2" LeftMargin="0" TabOrder="5" Top="546" Width="186"></Image>
+		<Image Height="401" Id="Image6" ImageID="left_menu_bg" Left="2" LeftMargin="0" OnClick="Image6_OnClick" TabOrder="6" Top="151" Width="186"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img1" ImageID="left_menu2_1" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="7" Top="151" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img2" ImageID="left_menu2_2" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="9" Top="182" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img3" ImageID="left_menu2_3" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="14" Top="213" Width="179"></Image>
+		<Image Height="3" Id="Image3" ImageID="left_menu_top" Left="2" LeftMargin="0" TabOrder="15" Top="148" Width="186"></Image>
+		<Static Color="#1b71c4" Font="돋움,9,Bold" Height="15" Id="userName" Left="27" TabOrder="16" Text="사용자이름" Top="559" Width="53"></Static>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="16" Id="s_name" Left="82" TabOrder="17" Text="부산광역시" Top="560" Width="92"></Static>
+		<Static Color="#1b71c4" Font="돋움,8,Bold" Height="13" Id="Static0" Left="27" TabOrder="18" Text="접속시간" Top="580" Width="48"></Static>
+		<Static Color="#666666" Font="돋움,8" Height="15" Id="s_data" Left="82" TabOrder="19" Text="yyyy,mm,dd" Top="580" Width="84"></Static>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img4" ImageID="left_menu2_4" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="13" Top="244" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img5" ImageID="left_menu2_5" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="12" Top="275" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img6" ImageID="left_menu2_6" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="11" Top="306" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img7" ImageID="left_menu2_7" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="10" Top="337" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img9" ImageID="left_menu2_9" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="8" Top="399" Width="179"></Image>
+		<Image Height="31" Id="Image0" ImageID="left_menu_bottom" Left="2" LeftMargin="0" OnMouseOver="fnMouseOver" TabOrder="4" Top="432" Width="184"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="32" Id="sub_img8" ImageID="left_menu2_8" Left="2" LeftMargin="0" OnClick="div_btnmenu_OnClick" OnMouseOver="fnMouseOver" Static="FALSE" Style="button_lift01" TabOrder="20" Top="368" Width="179"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="27" Id="Image8" ImageID="left_btn_logout" Left="109" LeftMargin="0" OnClick="fn_LogOut" Static="FALSE" Style="button_lift01" TabOrder="21" Top="608" Width="72"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="27" Id="Image4" ImageID="left_btn_home" Left="7" LeftMargin="0" OnClick="fn_Home_Page" Static="FALSE" Style="button_lift01" TabOrder="22" Top="608" Width="100"></Image>
+		<Image Color="white" FillType="TILE" Font="돋움,11,Bold" Height="15" Id="Image7" ImageID="left_top" Left="2" LeftMargin="0" TabOrder="23" Top="80" Width="186"></Image>
+		<Image Color="white" FillType="TILE" Font="돋움,11,Bold" Height="10" Id="Image9" ImageID="left_menu_top" Left="2" LeftMargin="0" TabOrder="24" Top="142" Width="186"></Image>
+	</Form>
+	<Script><![CDATA[var pg_code;
+var next_code = 0;
+var title;
+
+function MainLeft_OnLoadCompleted(obj)
+{	
+
+	fn_subHide();
+	
+	//권한별 리스트를 가지고 온다.
+	var sUrl = global.g_ext_iccs_url + "menu/manu.jsp?scUSER_ID="+g_User_ID+"&scCAPITAL="+g_Capital;
+	http.TimeOut=100; //로딩 시간 설정(클라이언트 로딩 시간이 길 경우 값을 주면 됨 
+					  // 서버쪽에서는 설정 할 필요 없음
+	LoadMenu(sUrl);	
+	
+	//현재시간이랑 날짜를 가지고 온다.
+	var curTime = getDate() + (Timem() - toFloat(Time()+"000"));
+	s_data.Text = ToString(curTime,"@@@@.@@.@@ @@:@@");
+
+	//사용자 명을 삽입 한다.  
+	this.userName.Text = g_Name;        
+	this.s_name = g_SIDO_FULL_NM;
+	
+	if(next_code == 0){
+		
+		next_code = 1;
+		var arg = "scUSER_ID="+g_User_ID+"&scPASSWD="+g_passwd;
+		Microsoft0.Navigate(global.g_ext_iccs_url + "login/LoginAction.do?cmd=LoginLife&"+arg,"","","","");
+		
+		if(global.g_Capital == "B" || global.g_Capital == "M" || global.g_Capital == "D")
+		{	global.MainMenu.Visible = false;
+			gfnCreateNewWindow("main::Main_Sido", "./Main_Sido.xml", "");
+		}else{
+			global.MainMenu.Visible = false;
+			gfnCreateNewWindow("main::Main_Sigungu", "./Main_Sigungu.xml", "");
+		}
+	}
+
+}
+function fn_Explorer(){
+	
+}
+
+function div_btnmenu_OnClick(obj,srtID)
+{	
+	if(obj.userdata != "")
+	{
+		lfn_setMenu(obj.id);
+		
+		if(obj.userdata != ""){
+			lift_fn_newWindow(pg_code, obj.userdata);
+			var arg = "scUSER_ID="+g_User_ID+"&scPASSWD="+g_passwd;
+			Microsoft0.Navigate(global.g_ext_iccs_url + "login/LoginAction.do?cmd=LoginLife&"+arg,"","","","");
+		}
+	}
+}
+
+
+function lfn_setMenu(arg)
+{
+	global.MainMenu.Visible = true;
+	global.MainMenu.Image2.text = g_Titel;
+	for(i=1; i < gds_menulist.RowCount() ; i++){
+		obj = object("global.MainMenu.sub_img"+(i));		
+		if(obj.id == arg){
+			obj.ImageID = "left_menu2_"+(i)+"_on";
+			pg_code = gds_menulist.GetColumn(i, "frmid");
+			g_exurl = gds_menulist.GetColumn(i, "frmurl");
+			var txt = gds_menulist.GetColumn(i,"frmtxt");
+			title = txt;
+			obj.Color = "#FFFFFF";
+		}else{
+			obj.ImageID = "left_menu2_"+(i);
+			obj.Color = "#1c3c5a";
+		}	
+	}
+	
+}
+
+function lift_fn_newWindow(frmNM, frmURL) 
+{
+
+	if (trim(length(frmURL)) < 1) 
+	{
+		return;
+	}
+	
+	var objWin = AllWindows(frmNM);
+	var strArg = "titles="+title; 
+	g_exurl = "";
+	
+	for (var nLoop = 0; nLoop < global.AllWindows.count; nLoop++)
+	{
+		if (global.AllWindows[nLoop].Id == "MainMenu")
+			continue;
+		//else if (global.AllWindows[nLoop].Id == "main::Main_Sido" 
+		//	|| global.AllWindows[nLoop].Id == "main::Main_Sigungu")
+		//{
+		//	continue;
+		//}
+		else
+			global.AllWindows[nLoop].Close();
+	}
+	
+	if(IndexOf(frmURL,"cmd") > 0)
+	{
+		g_exurl = frmURL;
+		NewWindow(frmNM, "bas::Explorer.xml", strArg, "", "", "OpenStyle=MAX", -1, -1);
+	}
+	else
+	{		
+		NewWindow(frmNM, frmURL, strArg, "", "", "OpenStyle=MAX", -1, -1);
+	}
+}
+
+function fn_LogOut(obj,nX,nY) 
+{
+	if (confirm("로그아웃 하시겠습니까?"))
+	{
+		//Initsession(false);
+	
+		//onlyone=true인 시스템만 해당
+		//setReg("OnlyOne",false); //프로그램이 종료되기 전에 실행해야 하므로 임시로 OnlyOne설정을 풀어줌
+	
+		//execProc("Miplatform320U.exe", "KEY값 설정");
+		//execProc(AliasToRealPath("%TOBE%" + "MiPlatform320U\\MiPlatform320U.exe" ), "DEMO"); 
+		Exit(); //현재 브라우져 종료
+
+	}
+}
+
+function fn_Home_Page(obj,nX,nY)
+{
+	var go_url = "http://www.net.go.kr/login/LoginAction.do?cmd=Login&id="+g_User_ID+"&password="+g_passwd+"&encoding=Y&beforeURL=/";
+	
+	ExecBrowser( go_url);
+	
+}
+
+function Image1_OnClick(obj,nX,nY)
+{
+	if(global.g_Capital == "B" || global.g_Capital == "M" || global.g_Capital == "D")
+	{	global.MainMenu.Visible = false;
+		gfnCreateNewWindow("main::Main_Sido", "../main/Main_Sido.xml", "");
+	}
+	else
+	{
+		global.MainMenu.Visible = false;
+		gfnCreateNewWindow("main::Main_Sigungu", "../main/Main_Sigungu.xml", "");
+	}	
+}
+
+function fnMouseOver(obj,nX,nY)
+{
+	obj.Cursor = "HAND";
+}
+]]></Script>
+</Window>

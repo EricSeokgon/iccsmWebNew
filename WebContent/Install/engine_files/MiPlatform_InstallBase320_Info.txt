@@ -1,0 +1,7 @@
+   - MiPlatform_InstallBase320.msi
+     ==> ProductCode : {3964575C-D828-4587-AED1-E538EAAFC083}
+     ==> Version : 3.20.10
+
+   - MiPlatform_InstallBase320.Cab
+     ==> CLSID : A8104DA4-B6DB-41BD-B2C9-5CE2FE7A7F12
+     ==> Version : 2007.10.4.1

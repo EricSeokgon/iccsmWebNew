@@ -1,0 +1,5 @@
+
+SELECT 
+	SEQ, U_D_FLAG, TABLE_NAME, LOG, ERR_YN, UPD_DT, INS_DT 
+FROM   PT_KICA_TRANS_LOG ;
+                   

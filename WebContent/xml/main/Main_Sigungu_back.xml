@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="Main" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="메인페이지" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_CENTER_BOARD1">
+				<Contents>
+					<colinfo id="GUBUN" size="12" type="STRING"/>
+					<colinfo id="NEW_DATA" size="4" type="STRING"/>
+					<colinfo id="ING_DATA" size="4" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" type="STRING"/>
+					<colinfo id="N_URL" size="100" type="STRING"/>
+					<colinfo id="M_URL" size="100" type="STRING"/>
+					<colinfo id="O_URL" size="100" type="STRING"/>
+					<colinfo id="N_URL_ID" size="100" type="STRING"/>
+					<colinfo id="M_URL_ID" size="100" type="STRING"/>
+					<colinfo id="O_URL_ID" size="100" type="STRING"/>
+					<colinfo id="GR_NM" size="4" type="STRING"/>
+					<colinfo id="N_ID" size="4" type="STRING"/>
+					<colinfo id="M_ID" size="4" type="STRING"/>
+					<colinfo id="O_ID" size="4" type="STRING"/>
+					<colinfo id="ONE_QUARTER" size="4" type="STRING"/>
+					<colinfo id="TOW_QUARTER" size="4" type="STRING"/>
+					<colinfo id="TUR_QUARTER" size="4" type="STRING"/>
+					<colinfo id="FOR_QUARTER" size="4" type="STRING"/>
+					<colinfo id="GB_YEAR" size="4" type="STRING"/>
+					<colinfo id="TOAL_COUNT" size="8" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_radio">
+				<Contents>
+					<colinfo id="value" size="5" summ="default" type="STRING"/>
+					<colinfo id="column" size="6" summ="default" type="STRING"/>
+					<record>
+						<column>상호</column>
+						<value>1</value>
+					</record>
+					<record>
+						<column>등록번호</column>
+						<value>2</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CENTER_BOARD2">
+				<Contents>
+					<colinfo id="GUBUN" size="12" type="STRING"/>
+					<colinfo id="NEW_DATA" size="4" type="STRING"/>
+					<colinfo id="ING_DATA" size="4" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" type="STRING"/>
+					<colinfo id="N_URL" size="100" type="STRING"/>
+					<colinfo id="M_URL" size="100" type="STRING"/>
+					<colinfo id="O_URL" size="100" type="STRING"/>
+					<colinfo id="N_URL_ID" size="100" type="STRING"/>
+					<colinfo id="M_URL_ID" size="100" type="STRING"/>
+					<colinfo id="O_URL_ID" size="100" type="STRING"/>
+					<colinfo id="GR_NM" size="4" type="STRING"/>
+					<colinfo id="N_ID" size="4" type="STRING"/>
+					<colinfo id="M_ID" size="4" type="STRING"/>
+					<colinfo id="O_ID" size="4" type="STRING"/>
+					<colinfo id="ONE_QUARTER" size="4" type="STRING"/>
+					<colinfo id="TOW_QUARTER" size="4" type="STRING"/>
+					<colinfo id="TUR_QUARTER" size="4" type="STRING"/>
+					<colinfo id="FOR_QUARTER" size="4" type="STRING"/>
+					<colinfo id="GB_YEAR" size="4" type="STRING"/>
+					<colinfo id="TOAL_COUNT" size="8" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CENTER_LIST1">
+				<Contents>
+					<colinfo id="ORPE_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="12" summ="default" type="STRING"/>
+					<colinfo id="SUV_APPL" size="10" summ="default" type="STRING"/>
+					<colinfo id="SUV_TYPE&#32;" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CENTER_LIST2">
+				<Contents>
+					<colinfo id="APPLPER_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="OPE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="12" summ="default" type="STRING"/>
+					<colinfo id="INSP_DT&#32;" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="55" Id="Image0" ImageID="main_top" Left="21" TabOrder="1" Top="80" Width="985"></Image>
+		<Image Height="413" Id="Image1" ImageID="main_bg" Left="21" TabOrder="2" Top="135" Width="985"></Image>
+		<Image Height="100" Id="Image2" ImageID="main_bottom" Left="21" TabOrder="3" Top="545" Width="985"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="267" Id="Static0" Left="40" ShadowColor="#cccccc" TabOrder="4" Text="착공전설계도&#32;업무현황" Top="269" Type="Groupbox" Width="459"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="112" Id="Static5" Left="520" ShadowColor="#cccccc" TabOrder="5" Text="사용전검사&#32;업무관리" Top="144" Type="Groupbox" Width="466"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="112" Id="Static6" Left="40" ShadowColor="#cccccc" TabOrder="6" Text="착공전설계도&#32;업무관리" Top="144" Type="Groupbox" VAlign="Middle" VClip="None" Width="459"></Static>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="137" TabOrder="7" Top="580" Width="11"></Image>
+		<Static Color="#666666" Font="돋움,9,Bold" Height="19" Id="Static7" Left="155" Style="list_subtitle" TabOrder="8" Text="정보통신공사업체&#32;빠른&#32;검색" Top="580" Width="173"></Static>
+		<Radio BKColor="#fff9f2" Border="None" CodeColumn="value" Color="#4e4e4e" ColumnCount="2" DataColumn="column" Height="27" Id="scTYPE" INDEX="0" InnerDataset="ds_radio" Left="348" TabOrder="10" Top="573" Width="114"></Radio>
+		<Edit Height="22" Id="scTEXT" Left="482" OnKeyDown="fn_Srarch_OnKeyDown" TabOrder="9" Top="576" Width="307"></Edit>
+		<Button Height="20" Id="Button1" ImageID="button_search" Left="810" OnClick="fnSearch_Click" TabOrder="11" Text="Button0" Top="575" Width="74"></Button>
+		<Image Height="80" Id="Image5" ImageID="logo" TabOrder="12" Width="186"></Image>
+		<Image Height="568" Id="Image6" ImageID="main_left" TabOrder="13" Top="80" Width="21"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="21" Id="Image8" ImageID="button_home" Left="816" OnClick="fn_Home_Page" Static="FALSE" Style="button_lift01" TabOrder="14" Top="103" Width="100"></Image>
+		<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="21" Id="Image7" ImageID="button_reload" Left="918" OnClick="fnForm_ReLoad" Static="FALSE" Style="button_lift01" TabOrder="15" Top="103" Width="67"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="267" Id="Static8" Left="520" ShadowColor="#cccccc" TabOrder="16" Text="사용전검사&#32;업무현황" Top="269" Type="Groupbox" Width="466"></Static>
+		<Grid BindDataset="ds_CENTER_BOARD1" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="None" BorderColor="#bbc3cc" Bottom="248" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="77" Id="Grid7" InputPanel="FALSE" Left="51" LineColor="user9" OnCellDBLClick="fnGridDouble1_Click" Right="488" RowHeight="20" SelColor="white" ShadowColor="#999999" TabOrder="17" TabStop="true" Top="171" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="437">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="57"/>
+						<col width="62"/>
+						<col width="67"/>
+						<col width="58"/>
+						<col width="56"/>
+						<col width="60"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="년도"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="진행중"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="1분기"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="2분기"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="3분기"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="4분기"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="합&#32;계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="GB_YEAR" display="text"/>
+						<cell align="center" col="1" colid="ING_DATA" display="text"/>
+						<cell align="center" col="2" colid="ONE_QUARTER" display="text"/>
+						<cell align="center" col="3" colid="TOW_QUARTER" display="text"/>
+						<cell align="center" col="4" colid="TUR_QUARTER" display="text"/>
+						<cell align="center" col="5" colid="FOR_QUARTER" display="text"/>
+						<cell align="center" col="6" colid="TOAL_COUNT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_CENTER_BOARD2" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="None" BorderColor="#bbc3cc" Bottom="245" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="77" Id="Grid1" InputPanel="FALSE" Left="533" LineColor="user9" OnCellDBLClick="fnGridGunDouble2_Click" Right="981" RowHeight="20" SelColor="white" ShadowColor="#999999" TabOrder="18" TabStop="true" Top="168" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="448">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="42"/>
+						<col width="57"/>
+						<col width="56"/>
+						<col width="53"/>
+						<col width="55"/>
+						<col width="60"/>
+						<col width="53"/>
+						<col width="65"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="년도"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="신규"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="진행중"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="1분기"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="2분기"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="3분기"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="4분기"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" text="합&#32;계"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="GB_YEAR" display="text"/>
+						<cell align="center" col="1" colid="NEW_DATA" display="text"/>
+						<cell align="center" col="2" colid="ING_DATA" display="text"/>
+						<cell align="center" col="3" colid="ONE_QUARTER" display="text"/>
+						<cell align="center" col="4" colid="TOW_QUARTER" display="text"/>
+						<cell align="center" col="5" colid="TUR_QUARTER" display="text"/>
+						<cell align="center" col="6" colid="FOR_QUARTER" display="text"/>
+						<cell align="center" col="7" colid="TOAL_COUNT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid BindDataset="ds_CENTER_LIST2" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="531" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="243" Id="Grid5" InputPanel="FALSE" Left="536" LineColor="user9" OnCellDBLClick="fnGridLit2Double_Click" Right="974" SelColor="white" ShadowColor="#999999" TabOrder="20" TabStop="true" Top="288" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="438">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="130"/>
+						<col width="130"/>
+						<col width="85"/>
+						<col width="87"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="건축주"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="사공사"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="검사예정일"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="APPLPER_NM" display="text"/>
+						<cell col="1" colid="OPE_NAME" display="text"/>
+						<cell align="center" col="2" colid="RECV_DT" display="date" edit="date"/>
+						<cell align="center" col="3" colid="INSP_DT&#32;" display="date" edit="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<ZTransferX Bottom="53" DownloadInstruction="ozrviewer.idf" Height="37" Id="ZTransferX0" InstallBase="&lt;PROGRAMS&gt;/Forcs" InstallNamespace="ICCSM" Left="192" Right="235" Top="16" Visible="FALSE" Width="43"></ZTransferX>
+		<Grid BindDataset="ds_CENTER_LIST1" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="531" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" Font="돋움,9" HeadBorder="Flat" HeadHeight="20" Height="243" Id="Grid4" InputPanel="FALSE" Left="51" LineColor="user9" OnCellDBLClick="fnGridLit1Double_Click" Right="489" RowHeight="20" SelColor="white" ShadowColor="#999999" TabOrder="19" TabStop="true" Top="288" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="438">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="128"/>
+						<col width="132"/>
+						<col width="76"/>
+						<col width="96"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="건축주"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="설계사"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="감리대상"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="ORPE_NM" display="text"/>
+						<cell col="1" colid="PLANER_NAME" display="text"/>
+						<cell align="center" col="2" colid="RECV_DT" display="date" edit="date"/>
+						<cell align="center" col="3" colid="SUV_APPL" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[
+/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록신청 접수현황조회
+5. 변경이력
+  가. 2009-02-06 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_bDialog = false;
+var base_code = " WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+	
+	ZTransferX0.DownloadServer = global.g_ext_oz_url + "ozviewer";
+	ZTransferX0.StartInstall();
+}
+
+function fnForm_ReLoad(obj)
+{
+	this.Reload();
+}
+
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = true;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = true;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = true;
+		divButtonBar.btnCancel.enable = false;
+		
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		
+		fnAllControlState(true, this);
+	}
+	else
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scWORKTYPE=SIDO";
+	sArgs += base_code;
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::main/Main_mAction.do?cmd=CenterBoardSIGUNGUMgr";
+	var sInDs = "";
+	var sOutDs = "ds_CENTER_BOARD1=output ds_CENTER_BOARD2=output2 ds_CENTER_LIST1=output3 ds_CENTER_LIST2=output4";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{	
+		
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert)
+	{
+		fnInsert();
+	}
+	else if (obj == divButtonBar.btnModify)
+	{
+		fnModify();
+	}
+	else if (obj == divButtonBar.btnRemove)
+	{
+		fnRemove();
+	}
+	else if (obj == divButtonBar.btnSave)
+	{
+		fnSave();
+	}
+	else if (obj == divButtonBar.btnReport)
+	{
+		fnReport();
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else if (obj == divButtonBar.btnCancel)
+	{
+		fnCancel();
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+}
+
+function fnSearch_Click(obj)
+{
+	var scSearch = true;
+	var sArgs =  "scTYPE=" + this.scTYPE.Value;
+		sArgs += " scTEXT="+ this.scTEXT.Text;
+		sArgs += " scSearch="+ scSearch;
+		sArgs += " scSchNO=14";
+	
+	gfnCreateNewWindow("st::RegListMgr", "st::RegListMgr.xml", sArgs);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+		GetNextComponent(true).SetFocus();
+	}
+	else if(nChar == "120") 
+	{
+		var nTabIndex = tbMain.TabIndex;
+		
+		if(nTabIndex == tbMain.TabCount - 1)
+			tbMain.TabIndex = 0;
+		else
+			tbMain.TabIndex = nTabIndex + 1;
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble1_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//일반사용자의 경우 해당사항없음
+	if(global.g_Capital == "E") return;
+	
+	if(nCell == 0)
+	{
+		var N_URL_ID = ds_CENTER_BOARD1.GetColumn(nRow,"N_ID");
+		var N_URL = ds_CENTER_BOARD1.GetColumn(nRow,"N_URL");
+		var GR_NM = ds_CENTER_BOARD1.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(N_URL_ID, GR_NM, N_URL, ""); 
+	}
+	else if(nCell == 1)
+	{
+		var M_URL_ID = ds_CENTER_BOARD1.GetColumn(nRow,"M_ID");
+		var M_URL = ds_CENTER_BOARD1.GetColumn(nRow,"M_URL");
+		var GR_NM = ds_CENTER_BOARD1.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(M_URL_ID, GR_NM, M_URL, "");
+	}  
+	else if(nCell > 1)
+	{
+		var O_URL_ID = ds_CENTER_BOARD1.GetColumn(nRow,"O_ID");
+		var O_URL = ds_CENTER_BOARD1.GetColumn(nRow,"O_URL");
+		var GR_NM = ds_CENTER_BOARD1.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(O_URL_ID, GR_NM, O_URL, "");
+	}
+}
+
+function fnGridGunDouble2_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+	//일반사용자의 경우 해당사항없음
+	if(global.g_Capital == "E") return;
+	
+	if(nCell == 0)
+	{
+		var N_URL_ID = ds_CENTER_BOARD2.GetColumn(nRow,"N_ID");
+		var N_URL = ds_CENTER_BOARD2.GetColumn(nRow,"N_URL");
+		var GR_NM = ds_CENTER_BOARD2.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(N_URL_ID, GR_NM, N_URL, ""); 
+	}
+	else if(nCell == 1)
+	{
+		var M_URL_ID = ds_CENTER_BOARD2.GetColumn(nRow,"M_ID");
+		var M_URL = ds_CENTER_BOARD2.GetColumn(nRow,"M_URL");
+		var GR_NM = ds_CENTER_BOARD2.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(M_URL_ID, GR_NM, M_URL, "");
+	}  
+	else if(nCell > 1)
+	{
+		var O_URL_ID = ds_CENTER_BOARD2.GetColumn(nRow,"O_ID");
+		var O_URL = ds_CENTER_BOARD2.GetColumn(nRow,"O_URL");
+		var GR_NM = ds_CENTER_BOARD2.GetColumn(nRow,"GR_NM");
+		gfn_newWindow(O_URL_ID, GR_NM, O_URL, "");
+	}
+	
+}
+
+
+function fnGridLit1Double_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//일반사용자의 경우 해당사항없음
+	if(global.g_Capital == "E") return;
+	
+	var sKEY1 = ds_CENTER_LIST1.GetColumn(nRow, "RECV_NUM");
+	var sWorkFlag = global.gv_MODIFY;
+	var scSearch = true;
+	
+	var sArgs = "scRECV_NUM=" + sKEY1 + " _sWorkFlag=" + sWorkFlag +" scSearch="+scSearch;
+	
+	gfnCreateNewWindow("ub::BeforeMgrC", "../ub/BeforeMgrC.xml", sArgs);
+	
+}
+
+function fnGridLit2Double_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	//일반사용자의 경우 해당사항없음
+	if(global.g_Capital == "E") return;
+	var scSearch = true;
+	var sKEY1 = ds_CENTER_LIST2.GetColumn(nRow, "RECV_NUM");
+	var sWorkFlag = global.gv_MODIFY;
+	var sArgs = "scRECV_NUM=" + sKEY1 + " _sWorkFlag=" + sWorkFlag+" scSearch="+scSearch;;
+	
+	gfnCreateNewWindow("ub::UBInvestMgrC", "../ub/UBReceiptMgrC.xml", sArgs);
+	
+}
+
+function fn_Srarch_OnKeyDown(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	if (nChar == 13) 
+	{
+		fnSearch_Click(obj);
+	}
+}
+
+function fn_Home_Page(obj,nX,nY)
+{
+	ExecBrowser("http://net.go.kr");
+}]]></Script>
+</Window>

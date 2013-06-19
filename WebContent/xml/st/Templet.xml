@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="224" Id="Templet" Left="8" OnActivate="fnForm_Activate" OnCloseUp="RegMgrC_OnCloseUp" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="샘플템플릿" Top="8" Ver="1.0" Width="352" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_TEMPLET">
+				<Contents>
+					<colinfo id="UserID" size="50" summ="default" type="STRING"/>
+					<colinfo id="FormID" size="50" summ="default" type="STRING"/>
+					<colinfo id="SampleName" size="50" summ="default" type="STRING"/>
+					<colinfo id="XML" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Combo Height="20" Id="Combo0" Left="104" TabOrder="1" Text="Cb_SampleName" Top="28" Width="177"></Combo>
+		<Static Height="16" Id="Static0" Left="50" TabOrder="2" Text="샘플명" Top="36" Width="54"></Static>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="64" OnClick="btnReport_OnClick" Style="button_style01" TabOrder="3" Text="출력하기" Top="128" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="168" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="4" Text="취&#32;&#32;&#32;&#32;소" Top="128" Width="72"></Button>
+	</Form>
+	<Script><![CDATA[function fnTablesBinding()
+{
+	var sArgs = "cbSampleName=" + quote(this.cbSampleName.Value);
+
+	
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::am/AmAction.do?cmd=StTemplet";
+	var sInDs = "";
+	var sOutDs = "dsPT_TEMPLET=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+	}
+}
+
+
+
+function btn_Use_OnClick(obj)
+{
+	ds_PT_TEMPLET.LoadXML(
+}
+]]></Script>
+</Window>

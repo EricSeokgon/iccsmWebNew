@@ -1,0 +1,23 @@
+
+create table PT_R_ENGINEER_MASTER(
+    CARE_BOOK_ISSUE_NUM VARCHAR2(12) NOT NULL , /* */
+    ENGINEER_SSN1 VARCHAR2(18)  , /* */
+    ENGINEER_SSN2 VARCHAR2(21)  , /* */
+    WRT_NUM VARCHAR2(12)  , /* */
+    ENGINEER_GRADE VARCHAR2(10)  , /* */
+    ENGINEER_CLASS VARCHAR2(10)  , /* */
+    QUAL_ITEM VARCHAR2(15)  , /* */
+    NM_KOR VARCHAR2(20)  , /* */
+    NM_HAN VARCHAR2(20)  , /* */
+    CARE_BOOK_VAL_START_DT VARCHAR2(24)  , /* */
+    CARE_BOOK_VAL_END_DT VARCHAR2(24)  , /* */
+    EDU_COMP_DT VARCHAR2(24)  , /* */
+    POST_NUM VARCHAR2(7)  , /* */
+    ADDR VARCHAR2(20)  , /* */
+    DETAIL_ADDR VARCHAR2(20)  , /* */
+    GROUP_CODE VARCHAR2(10)  , /* */
+    WRT_ID VARCHAR2(16)  , /* */
+    UPD_DT VARCHAR2(24)  , /* */
+    WRT_DT VARCHAR2(24)  , /* */
+    PRIMARY KEY(CARE_BOOK_ISSUE_NUM)
+   );

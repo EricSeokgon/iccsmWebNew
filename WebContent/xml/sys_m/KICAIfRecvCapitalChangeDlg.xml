@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="416" Id="KICAIfRecvCapitalChangeDlg" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="변경내역&#32;상세조회" Top="8" Ver="1.0" Width="816" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_TMP_REP_CHANGE">
+				<Contents>
+					<colinfo id="CHG_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WORK_CLASS" size="20" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+					<colinfo id="LICTAX" size="1" summ="default" type="STRING"/>
+					<colinfo id="HOSCRE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE2" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE1" size="4" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT2" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="68" Id="Image2" ImageID="form_bottom" Left="-1" TabOrder="3" Top="343" Width="813"></Image>
+		<Image Height="320" Id="Image1" ImageID="form_bg" Left="-1" TabOrder="4" Top="53" Width="813"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="-1" TabOrder="2" Width="813"></Image>
+		<Static Height="302" Id="Static0" Left="16" TabOrder="1" Text="변경&#32;전&#32;정보" Top="88" Type="Groupbox" Width="380"></Static>
+		<Static Height="302" Id="Static1" Left="416" TabOrder="5" Text="변경&#32;후&#32;정보" Top="89" Type="Groupbox" Width="380"></Static>
+		<Image Height="56" Id="Image10" ImageID="bg_default" Left="14" TabOrder="6" Top="21" Width="784"></Image>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="33" TabOrder="9" Top="47" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static7" Left="51" TabOrder="10" Text="등록번호" Top="48" Width="72"></Static>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CheckLength="Byte" Column="COI_WRT_NUM" Height="21" Id="COI_WRT_NUM" Left="102" MaxLength="12" Number="TRUE" Style="style1" TabOrder="7" Top="42" Width="56"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="179" TabOrder="11" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static8" Left="197" TabOrder="12" Text="상&#32;&#32;호" Top="48" Width="36"></Static>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="NAME" Height="21" Id="NAME" Left="231" Style="style1" TabOrder="8" Top="42" Width="120"></Edit>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="376" TabOrder="14" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static2" Left="396" TabOrder="15" Text="변경구분" Top="48" Width="47"></Static>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="NAME" Height="21" Id="Edit0" Left="447" Style="style1" TabOrder="13" Top="42" Width="80"></Edit>
+		<Image Height="11" Id="Image5" ImageID="arrow_small_blue" Left="552" TabOrder="16" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static3" Left="572" TabOrder="17" Text="변경일자" Top="48" Width="47"></Static>
+		<Calendar Height="21" Id="Calendar0" Left="625" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="18" Top="42" Width="87"></Calendar>
+		<Image Height="11" Id="Image6" ImageID="arrow_small_blue" Left="33" TabOrder="19" Top="119" Width="11"></Image>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue" Left="33" TabOrder="20" Top="143" Width="11"></Image>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue" Left="33" TabOrder="21" Top="191" Width="11"></Image>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9" Height="21" Id="btnRecv" ImageID="button_style2_120" Left="720" OnClick="btnRecv_OnClick" Style="button_style01" TabOrder="22" Text="자료수신" Top="42" Width="66"></Button>
+		<Combo BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CodeColumn="Code" Column="DIAG_ORG_CODE" DataColumn="Value" Height="21" Id="DIAGNOSTIC_DIV" InnerDataset="dsDIAGNOSTIC" Left="145" TabOrder="23" Top="117" Width="88"></Combo>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="DIAG_NM_NM" Height="21" Id="DIAG_NM_NM" Left="145" MaxLength="50" Style="style1" TabOrder="24" Top="141" Width="88"></Edit>
+		<Calendar BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="COMPANY_DIAG_BAS_DT" Height="21" Id="COMPANY_DIAG_BAS_DT" Left="145" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="25" Top="188" Value="TODAY" Width="88"></Calendar>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CheckLength="Byte" Column="DIAG_NM_WRT_NUM" Height="21" Id="DIAG_NM_WRT_NUM" Left="145" MaxLength="12" Style="style1" TabOrder="26" Top="164" Width="88"></Edit>
+		<Static Color="#666666" Font="굴림,9" Height="17" Id="Static17" Left="52" Style="list_subtitle" TabOrder="31" Text="진단자등록번호" Top="170" Width="96"></Static>
+		<Static Color="#666666" Height="16" Id="Static5" Left="235" TabOrder="34" Text="천원" Top="217" Width="24"></Static>
+		<MaskEdit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="REA_CAP" Height="21" Id="REA_CAP" Left="145" MaxLength="14" TabOrder="27" Top="211" Value="MaskEdit0" Width="88"></MaskEdit>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static4" Left="52" Style="list_subtitle" TabOrder="30" Text="실&#32;질&#32;자&#32;본&#32;금" Top="216" Width="87"></Static>
+		<Static Color="#666666" Height="16" Id="Static6" Left="235" TabOrder="35" Text="천원" Top="290" Width="24"></Static>
+		<MaskEdit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="TUP_AOM" Height="21" Id="TUP_AOM" Left="145" Mask="###,###,###,###" MaxLength="12" TabOrder="29" Top="285" Value="MaskEdit0" Width="88"></MaskEdit>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static20" Left="52" Style="list_subtitle" TabOrder="33" Text="자본금예치금액" Top="289" Width="85"></Static>
+		<Combo BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CodeColumn="Code" Column="TUP_CLASS_CODE" DataColumn="Value" DisplayRowCnt="2" Height="21" Id="CAPITAL_CHECK_YN" INDEX="0" InnerDataset="dsCAPITAL_CHECK_YN" Left="145" TabOrder="28" Top="260" Width="63"></Combo>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static19" Left="52" Style="list_subtitle" TabOrder="32" Text="자본금예치구분" Top="265" Width="85"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static13" Left="52" Style="list_subtitle" TabOrder="37" Text="진&#32;단&#32;자&#32;구&#32;분" Top="120" Width="87"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static16" Left="52" Style="list_subtitle" TabOrder="38" Text="진&#32;단&#32;자&#32;성&#32;명" Top="144" Width="85"></Static>
+		<Static Font="굴림,9" Height="19" Id="Static12" Left="52" Style="list_subtitle" TabOrder="36" Text="진&#32;단&#32;기&#32;준&#32;일" Top="192" Width="85"></Static>
+		<Image Height="11" Id="Image14" ImageID="arrow_small_blue" Left="33" TabOrder="39" Top="167" Width="11"></Image>
+		<Image Height="11" Id="Image15" ImageID="arrow_small_blue" Left="33" TabOrder="40" Top="263" Width="11"></Image>
+		<Image Height="11" Id="Image16" ImageID="arrow_small_blue" Left="33" TabOrder="41" Top="215" Width="11"></Image>
+		<Image Height="11" Id="Image17" ImageID="arrow_small_blue" Left="33" TabOrder="42" Top="287" Width="11"></Image>
+		<Image Height="11" Id="Image11" ImageID="arrow_small_blue" Left="433" TabOrder="43" Top="119" Width="11"></Image>
+		<Image Height="11" Id="Image12" ImageID="arrow_small_blue" Left="433" TabOrder="44" Top="143" Width="11"></Image>
+		<Image Height="11" Id="Image13" ImageID="arrow_small_blue" Left="433" TabOrder="45" Top="191" Width="11"></Image>
+		<Combo BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CodeColumn="Code" Column="DIAG_ORG_CODE" DataColumn="Value" Height="21" Id="Combo0" InnerDataset="dsDIAGNOSTIC" Left="545" TabOrder="46" Top="117" Width="88"></Combo>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="DIAG_NM_NM" Height="21" Id="Edit1" Left="545" MaxLength="50" Style="style1" TabOrder="47" Top="141" Width="88"></Edit>
+		<Calendar BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="COMPANY_DIAG_BAS_DT" Height="21" Id="Calendar1" Left="545" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="48" Top="188" Value="TODAY" Width="88"></Calendar>
+		<Edit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CheckLength="Byte" Column="DIAG_NM_WRT_NUM" Height="21" Id="Edit2" Left="545" MaxLength="12" Style="style1" TabOrder="49" Top="164" Width="88"></Edit>
+		<Static Color="#666666" Font="굴림,9" Height="17" Id="Static9" Left="452" Style="list_subtitle" TabOrder="54" Text="진단자등록번호" Top="170" Width="96"></Static>
+		<Static Color="#666666" Height="16" Id="Static10" Left="635" TabOrder="57" Text="천원" Top="217" Width="24"></Static>
+		<MaskEdit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="REA_CAP" Height="21" Id="MaskEdit0" Left="545" MaxLength="14" TabOrder="50" Top="211" Value="MaskEdit0" Width="88"></MaskEdit>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static11" Left="452" Style="list_subtitle" TabOrder="53" Text="실&#32;질&#32;자&#32;본&#32;금" Top="216" Width="87"></Static>
+		<Static Color="#666666" Height="16" Id="Static14" Left="635" TabOrder="58" Text="천원" Top="290" Width="24"></Static>
+		<MaskEdit BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" Column="TUP_AOM" Height="21" Id="MaskEdit1" Left="545" Mask="###,###,###,###" MaxLength="12" TabOrder="52" Top="285" Value="MaskEdit0" Width="88"></MaskEdit>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static15" Left="452" Style="list_subtitle" TabOrder="56" Text="자본금예치금액" Top="289" Width="85"></Static>
+		<Combo BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" CodeColumn="Code" Column="TUP_CLASS_CODE" DataColumn="Value" DisplayRowCnt="2" Height="21" Id="Combo1" INDEX="0" InnerDataset="dsCAPITAL_CHECK_YN" Left="545" TabOrder="51" Top="260" Width="63"></Combo>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static18" Left="452" Style="list_subtitle" TabOrder="55" Text="자본금예치구분" Top="265" Width="85"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static21" Left="452" Style="list_subtitle" TabOrder="60" Text="진&#32;단&#32;자&#32;구&#32;분" Top="120" Width="87"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="19" Id="Static22" Left="452" Style="list_subtitle" TabOrder="61" Text="진&#32;단&#32;자&#32;성&#32;명" Top="144" Width="85"></Static>
+		<Static Font="굴림,9" Height="19" Id="Static23" Left="452" Style="list_subtitle" TabOrder="59" Text="진&#32;단&#32;기&#32;준&#32;일" Top="192" Width="85"></Static>
+		<Image Height="11" Id="Image18" ImageID="arrow_small_blue" Left="433" TabOrder="62" Top="167" Width="11"></Image>
+		<Image Height="11" Id="Image19" ImageID="arrow_small_blue" Left="433" TabOrder="63" Top="263" Width="11"></Image>
+		<Image Height="11" Id="Image20" ImageID="arrow_small_blue" Left="433" TabOrder="64" Top="215" Width="11"></Image>
+		<Image Height="11" Id="Image21" ImageID="arrow_small_blue" Left="433" TabOrder="65" Top="287" Width="11"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+  나. 2009-04-10 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	scTB_NM;
+var scSEQ;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scTB_NM=" + quote(scTB_NM);
+	sArgs += " scSEQ=" + quote(scSEQ);
+	sArgs += " scMODE=DETAIL";
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=KICAIfRecv";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output dsPT_TMP_REP_CHANGE=output2";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+
+}
+function btnRecv_OnClick(obj)
+{
+	
+}
+]]></Script>
+</Window>

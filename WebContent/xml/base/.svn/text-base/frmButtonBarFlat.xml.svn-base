@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="54" Id="frmButtonBar" Left="8" PidAttrib="7" Title="frmButtonBar" Top="8" Ver="1.0" Width="815" WorkArea="true">
+		<Image Align="Left" Color="#003366" Font="굴림,11,Bold" Height="52" Id="Image1" ImageID="top_body_flat" OnClick="Image1_OnClick" TabOrder="1" Text="&#32;&#32;&#32;&#32;&#32;&#32;&#32;공사업체&#32;세부내역&#32;조회" Width="815"></Image>
+	</Form>
+	<Script></Script>
+</Window>

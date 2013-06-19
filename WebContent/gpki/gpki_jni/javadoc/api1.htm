@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>표준보안API 구성</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H2 id=_D2HTopic_117 
+style="MARGIN-LEFT: 27.7pt; TEXT-INDENT: -27.7pt; tab-stops: 0cm 27.7pt"><SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+style="FONT-FAMILY: 굴림">구성</SPAN></H2>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="api.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api2.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN 
+style="FONT-FAMILY: 굴림">는</SPAN> <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">서비스를</SPAN> <SPAN style="FONT-FAMILY: 굴림">제공하는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">핵심</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">모듈</SPAN>(gpkiapi.dll)<SPAN 
+style="FONT-FAMILY: 굴림">과</SPAN> JAVA<SPAN style="FONT-FAMILY: 굴림">에서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">핵심</SPAN> <SPAN style="FONT-FAMILY: 굴림">모듈에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">접근할</SPAN> <SPAN style="FONT-FAMILY: 굴림">수</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">있도록</SPAN> <SPAN style="FONT-FAMILY: 굴림">하는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">중간</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">모듈</SPAN>(gpkiapi_jni.dll), JAVA <SPAN 
+style="FONT-FAMILY: 굴림">모듈</SPAN> (libgpkiapi_jni.jar)<SPAN 
+style="FONT-FAMILY: 굴림">로</SPAN> <SPAN style="FONT-FAMILY: 굴림">구성되어있다</SPAN>. 
+<SPAN style="FONT-FAMILY: 굴림">또한</SPAN> <SPAN style="FONT-FAMILY: 굴림">핵심</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">모듈은</SPAN> <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공하면서</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용하는</SPAN> 
+LDAP <SPAN style="FONT-FAMILY: 굴림">디렉토리에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">접근하는데</SPAN> <SPAN style="FONT-FAMILY: 굴림">필요한</SPAN> 
+LDAP <SPAN style="FONT-FAMILY: 굴림">모듈을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">사용한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader> 
+<TABLE cellSpacing=0 cellPadding=0 align=left>
+  <TBODY>
+  <TR>
+    <TD width=7 height=16></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><IMG height=409 src="Images\image21_0.png" width=588 
+      v:shapes="_x0000_s1150 _x0000_s1101 _x0000_s1099 _x0000_s1100 _x0000_s1102 _x0000_s1140 _x0000_s1097 _x0000_s1098 _x0000_s1147 _x0000_s1103 _x0000_s1104 _x0000_s1145 _x0000_s1108 _x0000_s1109 _x0000_s1141 _x0000_s1129 _x0000_s1111 _x0000_s1142 _x0000_s1130 _x0000_s1131 _x0000_s1143 _x0000_s1134 _x0000_s1135 _x0000_s1144 _x0000_s1136 _x0000_s1137 _x0000_s1146 _x0000_s1138 _x0000_s1139 _x0000_s1148"></TD></TR></TBODY></TABLE>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

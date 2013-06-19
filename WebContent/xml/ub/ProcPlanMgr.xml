@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="ProcPlanMgr" Left="8" PidAttrib="7" Title="설계자&#32;검색" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Proc">
+				<Contents>
+					<colinfo id="PLANER_NM" size="100" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NAME" size="100" summ="default" type="STRING"/>
+					<colinfo id="PLANER_TEL" size="20" summ="default" type="STRING"/>
+					<colinfo id="PLANER_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="PLANER_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLANER_DETAILADDR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDate">
+				<Contents>
+					<colinfo id="Code" size="10" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>PLANER_NM</Code>
+						<Value>설계자성명</Value>
+					</record>
+					<record>
+						<Code>PLANER_NAME</Code>
+						<Value>설계자상호</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="ds_Proc" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="373" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="301" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="630" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="-1" TabStop="true" Top="72" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="622">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="146"/>
+						<col width="231"/>
+						<col width="105"/>
+						<col width="61"/>
+						<col width="261"/>
+						<col width="122"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="성명"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="상호"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="연락처"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="우편번호"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="소재지"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="소재지&#32;기타"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="PLANER_NM" display="text" Valign="Center"/>
+						<cell align="center" col="1" colid="PLANER_NAME" display="text" Valign="Center"/>
+						<cell align="center" col="2" colid="PLANER_TEL" display="text" Valign="Center"/>
+						<cell align="center" col="3" colid="PLANER_POSTNUM" display="text" Valign="Center"/>
+						<cell align="center" col="4" colid="PLANER_ADDR" display="text" Valign="Center"/>
+						<cell align="center" col="5" colid="PLANER_DETAILADDR" display="text" Valign="Center"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="42" Id="Image2" ImageID="bg_search_small" Left="8" TabOrder="2" Top="14" Width="624"></Image>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="20" Id="btnSearch" ImageID="button_search" Left="553" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="3" Top="26" Width="74"></Button>
+		<Image Height="11" Id="Image1" ImageID="arrow_small_blue" Left="29" TabOrder="4" Top="32" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="45" Style="list_subtitle" TabOrder="5" Text="설계자성명" Top="32" Width="72"></Static>
+		<Edit Height="21" Id="scNM" ImeMode="native" Left="149" OnKeyDown="scNM_OnKeyDown" Style="style1" TabOrder="6" Top="29" Width="304"></Edit>
+		<Combo CodeColumn="Code" DataColumn="Value" DisplayRowCnt="2" Height="21" Id="scDATE" INDEX="0" InnerDataset="dsDate" Left="45" ResetIndex="FIRST" TabOrder="7" Top="29" Width="99"></Combo>
+		<Checkbox Height="16" Id="sido_chk" Left="464" TabOrder="8" Text="구군전체" Top="32" Value="FALSE" Width="72"></Checkbox>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scSIDO_CODE="+global.g_Sd_cd+" scSIGUNGU_CODE="+global.g_Sgg_cd;
+	sArgs += " scNM=" + quote(this.scNM.Value);
+	sArgs += " scDATE=" + quote(this.scDATE.Value);
+	sArgs += " scSidoChk=" + quote(this.sido_chk.Value);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=ProcPlanMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_Proc=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+
+	var arrReturn = Array(6);
+	arrReturn[0] = ds_Proc.GetColumn(nRow, "PLANER_NM");
+	arrReturn[1] = ds_Proc.GetColumn(nRow, "PLANER_NAME");
+	arrReturn[2] = ds_Proc.GetColumn(nRow, "PLANER_TEL");
+	arrReturn[3] = ds_Proc.GetColumn(nRow, "PLANER_POSTNUM");
+	arrReturn[4] = ds_Proc.GetColumn(nRow, "PLANER_ADDR");
+	arrReturn[5] = ds_Proc.GetColumn(nRow, "PLANER_DETAILADDR");
+	Close(arrReturn);
+}
+
+
+
+function scNM_OnKeyDown(obj,nChar,bShift,bCtrl, bAlt,LLParam,HLParam)
+{
+	 if(nChar == "13") fnTablesBinding(false);
+}
+]]></Script>
+</Window>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="656" Id="BeforeViewMgr" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="착공전&#32;설계도&#32;상세보기" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_before">
+				<Contents>
+					<colinfo id="ORPE_NM" size="100" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NAME" size="100" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="USE" size="100" summ="default" type="STRING"/>
+					<colinfo id="WORK_ITEM" size="200" summ="default" type="STRING"/>
+					<colinfo id="NUM_FL" size="150" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="50" summ="default" type="STRING"/>
+					<colinfo id="SUV_APPL" size="10" summ="default" type="STRING"/>
+					<colinfo id="INSP_OPIN" size="200" summ="default" type="STRING"/>
+					<colinfo id="REPO_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="50" summ="default" type="STRING"/>
+					<colinfo id="ORPE_TEL" size="24" summ="default" type="STRING"/>
+					<colinfo id="ORPE_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="ORPE_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="ORPE_DETAILADDR" size="150" summ="default" type="STRING"/>
+					<colinfo id="PLANER_TEL" size="24" summ="default" type="STRING"/>
+					<colinfo id="PLANER_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="PLANER_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="PLANER_DETAILADDR" size="150" summ="default" type="STRING"/>
+					<colinfo id="STRU_COMMIT_NUM" size="100" summ="default" type="STRING"/>
+					<colinfo id="STRU_ADDR_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="STRU_ADDR_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="STRU_ADDR_DETAILADDR" size="150" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="40" Id="Image2" ImageID="bg_info_s_top" Left="8" TabOrder="1" Top="3" Width="624"></Image>
+		<Image Height="547" Id="Image3" ImageID="bg_info_s_body2" Left="8" TabOrder="2" Top="37" Width="624"></Image>
+		<Image Height="40" Id="Image5" ImageID="bg_info_s_bottom" Left="8" TabOrder="3" Top="576" Width="624"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="64" Id="Static15" Left="16" ShadowColor="#cccccc" TabOrder="7" Text="검토결과" Top="286" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="104" Id="Static14" Left="16" ShadowColor="#cccccc" TabOrder="6" Text="건축정보" Top="179" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="83" Id="Static12" Left="16" ShadowColor="#cccccc" TabOrder="5" Text="설계자" Top="89" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="64" Id="Static13" Left="16" ShadowColor="#cccccc" TabOrder="4" Text="건축주" Top="21" Type="Groupbox" Width="600"></Static>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue2" Left="25" TabOrder="8" Top="41" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static2" Left="41" Style="list_subtitle" TabOrder="9" Text="건&#32;축&#32;주&#32;명" Top="42" Width="80"></Static>
+		<Edit BindDataset="ds_before" Column="ORPE_NM" Height="21" Id="ORPE_NM" Left="123" Style="style1" TabOrder="10" Top="37" Width="144"></Edit>
+		<Image Height="11" Id="Image15" ImageID="arrow_small_blue2" Left="268" TabOrder="11" Top="39" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static16" Left="284" Style="list_subtitle" TabOrder="12" Text="연&#32;&#32;&#32;락&#32;&#32;&#32;처" Top="40" Width="72"></Static>
+		<Edit BindDataset="ds_before" Column="ORPE_TEL" Height="21" Id="ORPE_TEL" Left="368" Style="style1" TabOrder="13" Top="35" Width="128"></Edit>
+		<Image Height="11" Id="Image16" ImageID="arrow_small_blue2" Left="25" TabOrder="14" Top="64" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static17" Left="41" Style="list_subtitle" TabOrder="15" Text="건축주소재지" Top="65" Width="88"></Static>
+		<Edit BindDataset="ds_before" Column="ORPE_DETAILADDR" Height="21" Id="ORPE_DETAILADDR" Left="368" Style="style1" TabOrder="16" Top="61" Width="240"></Edit>
+		<Image Height="11" Id="Image0" ImageID="arrow_small_blue2" Left="25" TabOrder="17" Top="108" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static0" Left="41" Style="list_subtitle" TabOrder="18" Text="설&#32;계&#32;자&#32;명" Top="109" Width="72"></Static>
+		<Edit BindDataset="ds_before" Column="PLANER_NM" Height="21" Id="PLANER_NM" Left="123" Style="style1" TabOrder="19" Top="105" Width="88"></Edit>
+		<Image Height="11" Id="Image1" ImageID="arrow_small_blue2" Left="25" TabOrder="20" Top="131" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="41" Style="list_subtitle" TabOrder="21" Text="설계자&#32;상호" Top="132" Width="72"></Static>
+		<Edit BindDataset="ds_before" Column="PLANER_NAME" Height="21" Id="PLANER_NAME" Left="123" Style="style1" TabOrder="22" Top="127" Width="152"></Edit>
+		<Image Height="11" Id="Image17" ImageID="arrow_small_blue2" Left="268" TabOrder="23" Top="110" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static18" Left="284" Style="list_subtitle" TabOrder="24" Text="연&#32;&#32;&#32;락&#32;&#32;&#32;처" Top="111" Width="72"></Static>
+		<Edit BindDataset="ds_before" Column="PLANER_TEL" Height="21" Id="PLANER_TEL" Left="368" Style="style1" TabOrder="25" Top="107" Width="128"></Edit>
+		<Image Height="11" Id="Image18" ImageID="arrow_small_blue2" Left="25" TabOrder="26" Top="153" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static19" Left="41" Style="list_subtitle" TabOrder="27" Text="설계자소재지" Top="154" Width="80"></Static>
+		<Image Height="11" Id="Image6" ImageID="arrow_small_blue2" Left="25" TabOrder="28" Top="194" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static3" Left="41" Style="list_subtitle" TabOrder="29" Text="접&#32;수&#32;일&#32;자" Top="195" Width="72"></Static>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue2" Left="25" TabOrder="30" Top="216" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static4" Left="41" Style="list_subtitle" TabOrder="31" Text="용&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;도" Top="217" Width="80"></Static>
+		<Edit BindDataset="ds_before" Column="USE" Height="21" Id="USE" Left="123" Style="style1" TabOrder="32" Top="212" Width="136"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue2" Left="268" TabOrder="33" Top="215" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static5" Left="284" Style="list_subtitle" TabOrder="34" Text="공&#32;사&#32;종&#32;류" Top="217" Width="80"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue2" Left="25" TabOrder="35" Top="236" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static6" Left="41" Style="list_subtitle" TabOrder="36" Text="층&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;수" Top="238" Width="80"></Static>
+		<Image Height="11" Id="Image10" ImageID="arrow_small_blue2" Left="268" TabOrder="37" Top="235" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static7" Left="284" Style="list_subtitle" TabOrder="38" Text="연&#32;&#32;&#32;&#32;면&#32;&#32;&#32;&#32;적" Top="236" Width="80"></Static>
+		<Image Height="11" Id="Image19" ImageID="arrow_small_blue2" Left="268" TabOrder="39" Top="192" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static20" Left="284" Style="list_subtitle" TabOrder="40" Text="건축허가번호" Top="194" Width="80"></Static>
+		<Edit BindDataset="ds_before" Column="STRU_COMMIT_NUM" Height="21" Id="STRU_COMMIT_NUM" Left="368" Style="style1" TabOrder="41" Top="187" Width="144"></Edit>
+		<Edit BindDataset="ds_before" Column="WORK_ITEM" Height="21" Id="WORK_ITEM" Left="368" Style="style1" TabOrder="42" Top="208" Width="240"></Edit>
+		<Image Height="11" Id="Image20" ImageID="arrow_small_blue2" Left="25" TabOrder="43" Top="259" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static21" Left="41" Style="list_subtitle" TabOrder="44" Text="건축물소재지" Top="260" Width="80"></Static>
+		<Image Height="11" Id="Image11" ImageID="arrow_small_blue2" Left="25" TabOrder="45" Top="305" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static8" Left="41" Style="list_subtitle" TabOrder="46" Text="검&#32;토&#32;결&#32;과" Top="306" Width="72"></Static>
+		<Edit BindDataset="ds_before" Column="SUV_APPL" Height="21" Id="SUV_APPL" Left="123" Style="style1" TabOrder="47" Top="302" Width="80"></Edit>
+		<Image Height="11" Id="Image21" ImageID="arrow_small_blue2" Left="268" TabOrder="48" Top="306" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static22" Left="284" Style="list_subtitle" TabOrder="49" Text="통&#32;보&#32;일&#32;자" Top="306" Width="80"></Static>
+		<Image Height="11" Id="Image22" ImageID="arrow_small_blue2" Left="268" TabOrder="50" Top="327" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static23" Left="284" Style="list_subtitle" TabOrder="51" Text="통보교부번호" Top="327" Width="80"></Static>
+		<Edit BindDataset="ds_before" Column="SW_BEF_REPO_DELINUM" Height="21" Id="SW_BEF_REPO_DELINUM" Left="368" Style="style1" TabOrder="52" Top="321" Width="144"></Edit>
+		<Edit BindDataset="ds_before" Column="NUM_FL" Height="21" Id="NUM_FL" Left="123" Style="style1" TabOrder="53" Top="233" Width="80"></Edit>
+		<Edit BindDataset="ds_before" Column="AREA" Height="21" Id="AREA" Left="368" Style="style1" TabOrder="54" Top="232" Width="80"></Edit>
+		<Edit BindDataset="ds_before" Column="ORPE_ADDR" Height="21" Id="ORPE_ADDR" Left="180" Style="style1" TabOrder="55" Top="61" Width="188"></Edit>
+		<MaskEdit BindDataset="ds_before" Column="ORPE_POSTNUM" Font="Tahoma,9" Height="21" Id="ORPE_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="56" Top="61" Type="STRING" Width="55"></MaskEdit>
+		<MaskEdit BindDataset="ds_before" Column="PLANER_POSTNUM" Font="Tahoma,9" Height="21" Id="PLANER_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="59" Top="148" Type="STRING" Width="55"></MaskEdit>
+		<Edit BindDataset="ds_before" Column="PLANER_ADDR" Height="21" Id="PLANER_ADDR" Left="180" Style="style1" TabOrder="58" Top="148" Width="188"></Edit>
+		<Edit BindDataset="ds_before" Column="PLANER_DETAILADDR" Height="21" Id="PLANER_DETAILADDR" Left="368" Style="style1" TabOrder="57" Top="148" Width="240"></Edit>
+		<MaskEdit BindDataset="ds_before" Column="STRU_ADDR_POSTNUM" Font="Tahoma,9" Height="21" Id="STRU_ADDR_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="62" Top="257" Type="STRING" Width="55"></MaskEdit>
+		<Edit BindDataset="ds_before" Column="STRU_ADDR_ADDR" Height="21" Id="STRU_ADDR_ADDR" Left="180" Style="style1" TabOrder="61" Top="256" Width="188"></Edit>
+		<Edit BindDataset="ds_before" Column="STRU_ADDR_DETAILADDR" Height="21" Id="STRU_ADDR_DETAILADDR" Left="368" Style="style1" TabOrder="60" Top="256" Width="240"></Edit>
+		<MaskEdit BindDataset="ds_before" Column="RECV_DT" Font="Tahoma,9" Height="21" Id="RECV_DT" Left="123" Mask="####-##-##" MaxLength="8" TabOrder="63" Top="190" Type="STRING" Width="79"></MaskEdit>
+		<MaskEdit BindDataset="ds_before" Column="REPO_DT" Font="Tahoma,9" Height="21" Id="REPO_DT" Left="368" Mask="####-##-##" MaxLength="8" TabOrder="64" Top="297" Type="STRING" Width="79"></MaskEdit>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnOk" ImageID="button_style2_120" Left="560" OnClick="fnEditButton_Click" Style="button_style01" TabOrder="65" Text="닫기" Top="624" Width="66"></Button>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="80" Id="Static9" Left="16" ShadowColor="#cccccc" TabOrder="66" Text="검토의견" Top="358" Type="Groupbox" Width="600"></Static>
+		<TextArea BindDataset="ds_before" Column="INSP_OPIN" Font="Tahoma,9" Height="48" Id="INSP_OPIN" Left="24" MaxLength="150" TabOrder="67" Top="376" Width="584"></TextArea>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="80" Id="Static26" Left="17" ShadowColor="#cccccc" TabOrder="70" Text="관련근거&#32;(기술&#32;기준&#32;등)" Top="446" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="72" Id="Static27" Left="17" ShadowColor="#cccccc" TabOrder="71" Text="보완사항" Top="534" Type="Groupbox" Width="600"></Static>
+		<TextArea BindDataset="ds_before" Column="PRE_ITEM" Font="Tahoma,9" Height="47" Id="PRE_ITEM" Left="24" MaxLength="150" TabOrder="69" Top="553" Width="584"></TextArea>
+		<TextArea BindDataset="ds_before" Column="INSP_BAS" Font="Tahoma,9" Height="50" Id="INSP_BAS" Left="24" MaxLength="150" TabOrder="68" Top="465" Width="584"></TextArea>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static10" Left="448" Style="list_subtitle" TabOrder="72" Text="㎡" Top="237" Width="80"></Static>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static11" Left="203" Style="list_subtitle" TabOrder="73" Text="층" Top="237" Width="80"></Static>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=ALL";
+	    sArgs += " scRECV_NUM=" + quote(scRECV_NUM);
+	    sArgs += " scSIDO_CODE="+global.g_Sd_cd+" scSIGUNGU_CODE="+global.g_Sgg_cd;
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=BeforeViewMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_before=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+
+	if (svcid == "SEARCH")
+	{
+		fnAllControlState(false, this);
+		fnControlState(true, this, "btnOk");
+	}
+
+	
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+
+	Close();
+}
+
+
+function fnEditButton_Click(obj)
+{
+	Close();
+
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="232" Id="UserDlg" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="회원&#32;신규&#32;등록" Top="8" Ver="1.0" Width="560" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_MI_USER">
+				<Contents>
+					<colinfo id="OFFI_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PART" size="256" summ="default" type="STRING"/>
+					<colinfo id="POS" size="256" summ="default" type="STRING"/>
+					<colinfo id="GROUP_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="HOME_GROUP" size="256" summ="default" type="STRING"/>
+					<colinfo id="PASS2" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="256" summ="default" type="STRING"/>
+					<colinfo id="E_MAIL" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE" size="256" summ="default" type="STRING"/>
+					<colinfo id="PHOTO" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL1" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL2" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL3" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE1" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE2" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOBILE3" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX1" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX2" size="256" summ="default" type="STRING"/>
+					<colinfo id="FAX3" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="RECV_ID" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFSEAL" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_IDCHK">
+				<Contents>
+					<colinfo id="CHKYN" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsUploadFile">
+				<Contents>
+					<colinfo Id="content" Size="255" Type="BLOB"/>
+					<colinfo Id="file_name" Size="50" Type="STRING"/>
+					<colinfo Id="path" Size="50" Type="STRING"/>
+					<colinfo Id="filesize" Size="20" Type="DECIMAL"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_TEL_CODE">
+				<Contents>
+					<colinfo id="Code" size="4" summ="default" type="STRING"/>
+					<colinfo id="Value" size="4" summ="default" type="STRING"/>
+					<record>
+						<Code>02</Code>
+						<Value>02</Value>
+					</record>
+					<record>
+						<Code>031</Code>
+						<Value>031</Value>
+					</record>
+					<record>
+						<Code>032</Code>
+						<Value>032</Value>
+					</record>
+					<record>
+						<Code>033</Code>
+						<Value>033</Value>
+					</record>
+					<record>
+						<Code>041</Code>
+						<Value>041</Value>
+					</record>
+					<record>
+						<Code>042</Code>
+						<Value>042</Value>
+					</record>
+					<record>
+						<Code>043</Code>
+						<Value>043</Value>
+					</record>
+					<record>
+						<Code>044</Code>
+						<Value>044</Value>
+					</record>
+					<record>
+						<Code>051</Code>
+						<Value>051</Value>
+					</record>
+					<record>
+						<Code>052</Code>
+						<Value>052</Value>
+					</record>
+					<record>
+						<Code>053</Code>
+						<Value>053</Value>
+					</record>
+					<record>
+						<Code>054</Code>
+						<Value>054</Value>
+					</record>
+					<record>
+						<Code>055</Code>
+						<Value>055</Value>
+					</record>
+					<record>
+						<Code>061</Code>
+						<Value>061</Value>
+					</record>
+					<record>
+						<Code>062</Code>
+						<Value>062</Value>
+					</record>
+					<record>
+						<Code>063</Code>
+						<Value>063</Value>
+					</record>
+					<record>
+						<Code>064</Code>
+						<Value>064</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_MOBILE_CODE">
+				<Contents>
+					<colinfo id="Code" size="4" summ="default" type="STRING"/>
+					<colinfo id="Value" size="4" summ="default" type="STRING"/>
+					<record>
+						<Code>010</Code>
+						<Value>010</Value>
+					</record>
+					<record>
+						<Code>011</Code>
+						<Value>011</Value>
+					</record>
+					<record>
+						<Code>016</Code>
+						<Value>016</Value>
+					</record>
+					<record>
+						<Code>017</Code>
+						<Value>017</Value>
+					</record>
+					<record>
+						<Code>018</Code>
+						<Value>018</Value>
+					</record>
+					<record>
+						<Code>019</Code>
+						<Value>019</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_POS">
+				<Contents>
+					<colinfo id="posname" size="100" type="STRING"/>
+					<record>
+						<posname>방송통신&#32;9급</posname>
+					</record>
+					<record>
+						<posname>방송통신&#32;8급</posname>
+					</record>
+					<record>
+						<posname>방송통신&#32;7급</posname>
+					</record>
+					<record>
+						<posname>방송통신&#32;6급</posname>
+					</record>
+					<record>
+						<posname>방송통신&#32;5급</posname>
+					</record>
+					<record>
+						<posname>방송통신&#32;4급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;9급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;8급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;7급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;6급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;5급</posname>
+					</record>
+					<record>
+						<posname>행정&#32;4급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;9급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;8급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;7급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;6급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;5급</posname>
+					</record>
+					<record>
+						<posname>전산&#32;4급</posname>
+					</record>
+					<record>
+						<posname>기능&#32;10급</posname>
+					</record>
+					<record>
+						<posname>기능&#32;9급</posname>
+					</record>
+					<record>
+						<posname>기능&#32;8급</posname>
+					</record>
+					<record>
+						<posname>기능&#32;7급</posname>
+					</record>
+					<record>
+						<posname>기능&#32;6급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;9급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;8급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;7급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;6급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;5급</posname>
+					</record>
+					<record>
+						<posname>기타&#32;4급</posname>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Div BKColor="white" Height="232" Id="divText" Left="-1" TabOrder="1" Text="Div0" Width="558">
+			<Contents>
+				<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="20" Id="button_save" ImageID="button_style1_70" Left="457" OnClick="btnSave_OnClick" Style="button_save" TabOrder="10" TabStop="FALSE" Text="저&#32;&#32;&#32;장" Top="184" Width="71"></Button>
+				<Static Color="#4e4e4e" Height="40" Id="Static2" Left="64" TabOrder="10" Text="아이디&#32;및&#32;비밀번호는&#32;영문/숫자조합의&#32;16자입니다." Top="584" Width="736"></Static>
+				<Static Color="#4e4e4e" Height="40" Id="Static3" Left="88" TabOrder="11" Text="아이디&#32;및&#32;비밀번호는&#32;영문/숫자조합의&#32;16자입니다." Top="608" Width="736"></Static>
+				<Static Color="#4e4e4e" Height="40" Id="Static8" Left="64" TabOrder="12" Text="아이디&#32;및&#32;비밀번호는&#32;영문/숫자조합의&#32;16자입니다." Top="584" Width="736"></Static>
+				<Image Height="16" Id="Image11" ImageID="arrow_small_white" Left="341" TabOrder="11" TabStop="FALSE" Top="41" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static5" Left="360" TabOrder="14" Text="비밀번호" Top="44" Width="47"></Static>
+				<Edit BindDataset="ds_PT_MI_USER" Column="OFFI_ID" Height="21" Id="OFFI_ID" Left="202" OnKillFocus="fnId_Check" Style="style1" TabOrder="1" Top="42" Width="116"></Edit>
+				<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="127" TabOrder="12" TabStop="FALSE" Top="43" Width="16"></Image>
+				<Static Color="#666666" Height="16" Id="Static0" Left="146" TabOrder="16" Text="아&#32;이&#32;디" Top="46" Width="48"></Static>
+				<Combo BindDataset="ds_PT_MI_USER" CodeColumn="AREA_CODE" Column="SIDO_CODE" DataColumn="SIDO_NM" Height="21" Id="SIDO_CODE" INDEX="1" InnerDataset="ds_SIDO" Left="202" OnKillFocus="fnKillFocus" TabOrder="8" TabStop="FALSE" Top="17" Width="116"></Combo>
+				<Image Height="16" Id="Image10" ImageID="arrow_small_white" Left="127" TabOrder="13" TabStop="FALSE" Top="152" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static4" Left="146" TabOrder="18" Text="연&#32;락&#32;처" Top="155" Width="47"></Static>
+				<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="129" TabOrder="14" TabStop="FALSE" Top="19" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static6" Left="148" TabOrder="20" Text="시&#32;&#32;&#32;&#32;&#32;도" Top="22" Width="47"></Static>
+				<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="341" TabOrder="15" TabStop="FALSE" Top="105" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static7" Left="360" TabOrder="22" Text="부&#32;&#32;&#32;&#32;&#32;서" Top="108" Width="47"></Static>
+				<Edit BindDataset="ds_PT_MI_USER" Column="PART" Height="21" Id="OFFPART" Left="417" Style="style1" TabOrder="5" Top="104" Width="116"></Edit>
+				<Edit BindDataset="ds_PT_MI_USER" Column="PASS" Height="21" Id="PASS" Left="415" Password="TRUE" Style="style1" TabOrder="2" Top="41" Width="116"></Edit>
+				<Image Height="16" Id="Image17" ImageID="arrow_small_white" Left="341" TabOrder="16" TabStop="FALSE" Top="18" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static11" Left="360" TabOrder="24" Text="시&#32;군&#32;구" Top="21" Width="47"></Static>
+				<Combo BindDataset="ds_PT_MI_USER" CodeColumn="AREA_CODE" Column="SIGUNGU_CODE" DataColumn="SIGUNGU_NM" Height="21" Id="SIGUNGU_CODE" INDEX="2" InnerDataset="ds_SIGUNGU" Left="417" TabOrder="9" TabStop="FALSE" Top="16" Width="116"></Combo>
+				<Image Height="16" Id="Image18" ImageID="arrow_small_white" Left="127" TabOrder="17" TabStop="FALSE" Top="127" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static12" Left="146" TabOrder="26" Text="직&#32;&#32;&#32;&#32;&#32;급" Top="132" Width="47"></Static>
+				<Image Height="16" Id="Image19" ImageID="arrow_small_white" Left="127" TabOrder="18" TabStop="FALSE" Top="105" Width="16"></Image>
+				<Static Color="#666666" Height="16" Id="Static13" Left="146" TabOrder="28" Text="성&#32;&#32;&#32;&#32;명" Top="108" Width="72"></Static>
+				<Edit BindDataset="ds_PT_MI_USER" Column="NM" Height="21" Id="NM" Left="201" Style="style1" TabOrder="4" Top="104" Width="116"></Edit>
+				<Image Height="16" Id="Image20" ImageID="arrow_small_white" Left="341" TabOrder="19" TabStop="FALSE" Top="151" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static14" Left="360" TabOrder="30" Text="휴대전화" Top="154" Width="47"></Static>
+				<Image Height="16" Id="Image21" ImageID="arrow_small_white" Left="341" TabOrder="20" TabStop="FALSE" Top="127" Width="16"></Image>
+				<Static Color="#666666" Height="19" Id="Static15" Left="360" TabOrder="32" Text="E-MAIL" Top="131" Width="47"></Static>
+				<Edit BindDataset="ds_PT_MI_USER" Column="E_MAIL" Height="21" Id="E_MAIL" Left="417" Style="style1" TabOrder="7" Top="128" Width="117"></Edit>
+				<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="127" TabOrder="21" TabStop="FALSE" Top="65" Width="16"></Image>
+				<Static Color="#666666" Height="20" Id="Static1" Left="144" TabOrder="34" Text="비밀번호확인" Top="69" Width="80"></Static>
+				<Edit Height="21" Id="PASS2" Left="217" OnKillFocus="fnpw_Check" Password="TRUE" Style="style1" TabOrder="3" Top="64" Width="116"></Edit>
+				<Image Border="Flat" Height="140" Id="Picture" Left="9" TabOrder="22" TabStop="FALSE" Top="9" Width="118"></Image>
+				<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="20" Id="btnImg" ImageID="button_style1_70" Left="25" OnClick="btnImg_OnClick" Style="button_save" TabOrder="23" TabStop="FALSE" Text="사진찾기" Top="160" Width="70"></Button>
+				<Static Color="#666666" Height="19" Id="Static9" Left="146" TabOrder="38" Text="F&#32;A&#32;X" Top="179" Width="47"></Static>
+				<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="127" TabOrder="24" TabStop="FALSE" Top="176" Width="16"></Image>
+				<Static Color="#666666" Font="Default,8" Height="16" Id="Static10" Left="9" TabOrder="39" Text="*&#32;사진파일명은&#32;영문명과&#32;확장자는&#32;jpg로&#32;올려주십시오" Top="208" Width="280"></Static>
+				<Combo BindDataset="ds_PT_MI_USER" CodeColumn="posname" Column="POS" DataColumn="posname" Height="21" Id="Combo0" InnerDataset="ds_POS" Left="201" TabOrder="6" Top="128" Width="116"></Combo>
+			</Contents>
+		</Div>
+		<File Bottom="216" Height="24" Id="File0" Left="241" Right="265" TabOrder="2" Top="192" Width="24"></File>
+		<edit BindDataset="dsUploadFile" Column="file_name" Font="Tahoma,9,Bold" Height="22" Id="edit1" Left="101" Readonly="TRUE" TabOrder="2" TabStop="FALSE" Top="198" Visible="FALSE" Width="19"></edit>
+		<edit BindDataset="dsUploadFile" Column="path" Font="Tahoma,9,Bold" Height="22" Id="edit0" Left="101" Readonly="TRUE" TabOrder="3" TabStop="FALSE" Top="172" Visible="FALSE" Width="19"></edit>
+		<FileDialog Bottom="216" Filter="ALL&#32;File(*.*)|*.*" Height="24" Id="FileDialog0" Left="217" Right="241" TabOrder="3" Top="192" Width="24"></FileDialog>
+		<Edit BindDataset="ds_PT_MI_USER" Column="TEL3" Height="21" Id="TEL3" Left="296" MaxLength="4" Style="style1" TabOrder="6" Top="152" Width="44"></Edit>
+		<Edit BindDataset="ds_PT_MI_USER" Column="TEL2" Height="21" Id="TEL2" Left="248" MaxLength="4" Style="style1" TabOrder="5" Top="152" Width="44"></Edit>
+		<Combo BindDataset="ds_PT_MI_USER" CodeColumn="Code" Column="TEL1" DataColumn="Value" Height="21" Id="TEL1" InnerDataset="ds_TEL_CODE" Left="200" TabOrder="4" Top="152" Width="48"></Combo>
+		<Edit BindDataset="ds_PT_MI_USER" Column="MOBILE3" Height="21" Id="MOBILE3" Left="506" MaxLength="4" Style="style1" TabOrder="9" Top="152" Width="44"></Edit>
+		<Edit BindDataset="ds_PT_MI_USER" Column="MOBILE2" Height="21" Id="MOBILE2" Left="461" MaxLength="4" Style="style1" TabOrder="8" Top="152" Width="44"></Edit>
+		<Combo BindDataset="ds_PT_MI_USER" CodeColumn="Code" Column="MOBILE1" DataColumn="Value" Height="21" Id="MOBILE1" InnerDataset="ds_MOBILE_CODE" Left="413" TabOrder="7" Top="152" Width="48"></Combo>
+		<Combo BindDataset="ds_PT_MI_USER" CodeColumn="Code" Column="FAX1" DataColumn="Value" Height="21" Id="FAX1" InnerDataset="ds_TEL_CODE" Left="200" TabOrder="10" Top="176" Width="48"></Combo>
+		<Edit BindDataset="ds_PT_MI_USER" Column="FAX2" Height="21" Id="FAX2" Left="248" MaxLength="4" Style="style1" TabOrder="11" Top="176" Width="44"></Edit>
+		<Edit BindDataset="ds_PT_MI_USER" Column="FAX3" Height="21" Id="FAX3" Left="293" MaxLength="4" Style="style1" TabOrder="12" Top="176" Width="44"></Edit>
+	</Form>
+	<Script><![CDATA[
+/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록신청 접수현황조회
+5. 변경이력
+  가. 2009-02-06 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+
+var id_chk = "N";
+var pw_chk = "N";
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	
+	fnInitButtonBar();
+	
+	var sArgs;
+	
+	if (global.g_User_ID != "admin") 
+		sArgs += "scSIDO=";
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=UserMgr";
+	var sInDs = "";
+	var sOutDs = "ds_SIDO=output ds_SIGUNGU=output2";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+		fnAllControlState(true, this);
+		divText.NM.SetFocus();
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+			return;
+		}
+		
+		if (scvid == "save")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+		
+		if (scvid == "fileup1")
+		{
+			alert('이미지 생성에 실패하였습니다.');
+			return;
+		}
+		
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}
+	
+	if (svcid == "IDCHECK")
+	{
+		var chk = ds_IDCHK.GetColumn(0, "CHKYN");
+		if(chk != "Y")
+		{
+			alert('아이디가 중복 입니다.');
+			this.divText.OFFI_ID.SetFocus();
+			return;
+		}
+		else
+		{	
+			alert('사용가능한 아이디 입니다.');
+			id_chk = "Y";
+			return;
+		}
+	}
+	
+	if (svcid == "SEARCH")
+	{
+		fnAllControlState(true, this);
+		fnInsert();
+		return;
+	}
+	
+	if (svcid == "save")
+	{
+		//if (dsUploadFile.rowcount == 0)
+		//{
+			//alert('가입신청이 완료 되었습니다. \n 승인 대기 중입니다. \n 시도 담당자분께 승인 요청을 하시기 바랍니다.');
+			//Close();
+		//}
+		//else
+		//{
+			// 2009-10-16 회원가입시 시군구+id 입력없이 먼저 사진 등록시에 파일명이 생성이 안되므로 수정함
+			//Transaction('fileup1', global.g_ext_iccs_url + 'xml/sys_m/fileup.jsp','input=dsUploadFile','','','tr_result');
+		
+			//alert("사진을 저장합니다.");
+		
+			if (dsUploadFile.rowcount == 1){
+				var sExt = split(FileDialog0.FileName, ".");
+				dsUploadFile.SetColumn(0,"file_name", this.divText.SIDO_CODE.Value + "_" + divText.OFFI_ID.Text + "." + sExt[length(sExt) - 1]);
+			}
+			
+			Transaction("fileup1", "ICCS::xml/sys_m/fileup.jsp", "input=dsUploadFile input2=ds_PT_MI_USER", "","", "tr_result");
+		//}
+	}
+}
+
+function tr_result(serid,errid,errmsg)
+{
+	if(trim(serid) == "fileup1")
+	{
+		//trace(http.recvhttpstr);
+		if(errid == "0")		
+		{
+			alert('가입신청이 완료 되었습니다. \n 승인 대기 중입니다. \n 시도 담당자분께 승인 요청을 하시기 바랍니다.');
+			Close();
+		}
+		else
+			alert(errmsg);
+	}  //ene t_fileup
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	global.gv_WorkFlag = global.gv_INSERT;
+	fnInitButtonBar();
+	ds_PT_MI_USER.AddRow();
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+	if (ds_PT_MI_USER.FindRow("CHECKER", "1") < 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+	
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	ds_PT_MI_USER.ApplyChange();
+	var nCount = fnGridRowRemove(ds_PT_MI_USER);
+	
+	if(nCount == 0)
+	{
+		alert('데이터 삭제 중 오류가 발생하였습니다.');
+		return;
+	}
+	
+	var sArgs = "";	
+	var sTid = "DELETE";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=UserMgrCUD";
+	var sInDs = "ds_PT_MI_USER=ds_PT_MI_USER:U";
+	var sOutDs = "ds_PT_MI_USER=output";
+	var sCallBack = "fn_CallBack";
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	if(id_chk == "N")
+	{
+		alert('아이디 중복 체크를 하지 않았습니다.');
+		return;
+	}
+	
+	if(pw_chk == "N")
+	{
+		alert('비밀번호가 일치 하지 않았습니다.');
+		return;
+	}
+	
+	if(this.divText.NM == "")
+	{
+		alert('이름을 입력하지 않았습니다.');
+		return;
+	}
+	
+	if(this.divText.OFFPART == "")
+	{
+		alert('부서를 입력하지  않았습니다.');
+		return;
+	}
+	
+	if(this.divText.Edit2 == "")
+	{
+		alert('직급을 입력하지 않았습니다.');
+		return;
+	}
+	
+	if(this.divText.E_MAIL == "")
+	{
+		alert('E-mail을 입력하지 않았습니다.');
+		return;
+	}
+
+	if(this.divText.SIDO_CODE.Index < 0)
+	{
+		alert("시도가 선택 되지 않았습니다.");
+		return;
+	}
+	
+	if(this.divText.SIGUNGU_CODE.Index < 0)
+	{
+		alert("시군구가 선택 되지 않았습니다.");
+		return;
+	}
+	
+	/*if(this.divText.Picture == "")
+	{
+		alert('사진이 첨부되지않았습니다.');
+		return;
+	}
+	
+	if(fnEmpty(dsUploadFile.GetColumn(0, "file_name")))
+	{
+		alert('사진이 첨부되지않았습니다.');
+		return;
+	}*/
+	
+	/*if(this.divText.TEL != "")
+	{
+		var TEL1= substr(this.divText.TEL.value,0,3);
+		var TEL2 = substr(this.divText.TEL.value,4,3);
+		var TEL3 = substr(this.divText.TEL.value,8,4);
+		
+		
+		ds_PT_MI_USER.SetColumn(0, "TEL1",TEL1);
+		ds_PT_MI_USER.SetColumn(0, "TEL2",TEL2);
+		ds_PT_MI_USER.SetColumn(0, "TEL3",TEL3);
+		
+		
+	}*/
+  
+   var Temp=this.divText.TEL1+"-"+this.divText.TEL2+"-"+this.divText.TEL3;
+   ds_PT_MI_USER.SetColumn(ds_PT_MI_USER.row,"TEL",Temp);
+  
+   var Temp1=this.divText.MOBILE1+"-"+this.divText.MOBILE2+"-"+this.divText.MOBILE3;
+   ds_PT_MI_USER.SetColumn(ds_PT_MI_USER.row,"MOBILE",Temp1);
+	
+   var Temp2=this.divText.FAX1+"-"+this.divText.FAX2+"-"+this.divText.FAX3;
+   ds_PT_MI_USER.SetColumn(ds_PT_MI_USER.row,"FAX",Temp2);
+	
+	if((this.divText.TEL1.index<0 ) or this.divText.TEL2 == "" or this.divText.TEL3 == "")
+	{
+		alert('연락처를 입력하지 않았습니다.');
+		return;
+	}
+	
+	
+	if((this.divText.MOBILE1.index<0 ) or this.divText.MOBILE2 == "" or this.divText.MOBILE3 == "")
+	{
+		alert('휴대폰번호를 입력하지 않았습니다.');
+		return;
+	}
+	
+	if((this.divText.FAX1.index<0 ) or this.divText.FAX2 == "" or this.divText.FAX3 == "")
+	{
+		alert('Fax번호를 입력하지 않았습니다.');
+		return;
+	}
+    
+    ds_PT_MI_USER.SetColumn(0, "WRT_ID",ds_PT_MI_USER.getColumn(0,"offi_id"));
+    
+	var sArgs = "workMODE=ALL";
+	var sTid = "save";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=UserMgrBasicCUD";
+	var sInDs = "ds_PT_MI_USER=ds_PT_MI_USER:u";
+	var sOutDs = "ds_PT_MI_USER=output";
+	var sCallBack = "fn_CallBack";
+	
+	
+	// 2009-10-16 회원가입시 시군구+id 입력없이 먼저 사진 등록시에 파일명이 생성이 안되므로 수정함
+	var sExt = split(FileDialog0.FileName, ".");
+	ds_PT_MI_USER.SetColumn(0,"PHOTO", this.divText.SIDO_CODE.Value + "_" + divText.OFFI_ID.Text + "." + sExt[length(sExt) - 1]);
+	
+
+	
+	//if (sExt[length(sExt) - 1] != "jpg"){
+	//	alert('사진등록시 확장자가 jpg 만 가능합니다.');
+	//	return;
+	//}
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+function fnCancel()
+{
+	if (ds_PT_MI_USER.GetRowType(ds_PT_MI_USER.row) == "insert")
+		ds_PT_MI_USER.DeleteRow(ds_PT_MI_USER.row);
+	else
+		fnRejectChange(ds_PT_MI_USER);
+		
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(ORPE_TEL, "시스템 사용자");
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert)
+	{
+		fnInsert();
+	}
+	else if (obj == divButtonBar.btnModify)
+	{
+		fnModify();
+	}
+	else if (obj == divButtonBar.btnRemove)
+	{
+		fnRemove();
+	}
+	else if (obj == divButtonBar.btnSave)
+	{
+		fnSave();
+	}
+	else if (obj == divButtonBar.btnReport)
+	{
+		fnReport();
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else if (obj == divButtonBar.btnCancel)
+	{
+		fnCancel();
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "55" && bControl == true) fnTablesBinding();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+		GetNextComponent(true).SetFocus();
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fnModify();
+}
+
+
+function fnKillFocus(obj)
+{	
+	ds_SIGUNGU.Filter("SIDO_NM='" + ds_SIDO.GetColumn(this.divText.SIDO_CODE.Index, "SIDO_NM")+"'");
+}
+
+function fnId_Check(obj)
+{	
+	if (global.gv_WorkFlag == global.gv_INSERT)
+	{	
+		if(this.divText.OFFI_ID.Text == "")
+		{
+			alert("아이디를 입력 하시기 바랍니다.");
+			this.divText.OFFI_ID.SetFocus();
+			return;
+		}	
+		
+		var sArgs = "workMODE=IDCHECK scOFFI_ID="+this.divText.OFFI_ID.Text;
+		var sTid = "IDCHECK";
+		var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=UserMgrC";
+		var sInDs = "";
+		var sOutDs = "ds_IDCHK=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnpw_Check(obj)
+{
+	if(this.divText.PASS.Text != this.divText.PASS2.Text)
+	{
+		alert('패스위드가 일치하지 않습니다.');
+		this.divText.PASS.Text = "";
+		this.divText.PASS2.Text = "";
+		this.divText.PASS.SetFocus();
+		return;
+	}
+	else
+	{
+		pw_chk = "Y";
+	}
+}
+
+
+function btnSave_OnClick(obj)
+{
+	fnSave();
+}
+
+function btnImg_OnClick(obj)
+{
+		
+	if (!FileDialog0.Open())
+	{
+		return;   
+	}
+	// 레코드를 추가한다.
+	if (dsUploadFile.rowcount == 0)
+		var row = dsUploadFile.AddRow();
+
+	File0.FileName = FileDialog0.FilePath + "\\" + FileDialog0.FileName;
+	edit0.Text = File0.FileName;
+	edit1.Text = FileDialog0.FileName;  
+	divText.Picture.ImageID = File0.FileName;
+	var sExt = split(FileDialog0.FileName, ".");
+	
+	File0.Open("rb"); 
+	var blobbuffer = File0.ReadBinary();
+
+	if(blobbuffer == "NULL")	
+	{ 
+		alert("이미지 생성에 실패하였습니다.");
+		return;
+	}
+
+	dsUploadFile.SetColumn(0, "filesize", File0.GetLength());
+	File0.Close(); 
+
+	// 읽은 파일 내용을 dataset에 저장한다.
+	
+	dsUploadFile.SetColumn(0, "file_name", this.divText.SIDO_CODE.Value + "_" + divText.OFFI_ID.Text + "." + sExt[length(sExt) - 1]);
+	ds_PT_MI_USER.SetColumn(0, "PHOTO", this.divText.SIDO_CODE.Value + "_" + divText.OFFI_ID.Text + "." + sExt[length(sExt) - 1]);
+	dsUploadFile.SetColumn(0, "content", blobbuffer);
+}
+
+
+]]></Script>
+</Window>

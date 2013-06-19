@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS
+END
+EnvData_File.ber
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/EnvData_File.ber
+END
+plainText_File.txt
+K 25
+svn:wc:ra_dav:version-url
+V 196
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/plainText_File.txt
+END
+SignedData.ber
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/SignedData.ber
+END
+kmCert1.der
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/kmCert1.der
+END
+kmCert2.der
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/kmCert2.der
+END
+WapEnvelopedData.xdr
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/WapEnvelopedData.xdr
+END
+signCert1.der
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signCert1.der
+END
+signCert2.der
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signCert2.der
+END
+SignedContent.xdr
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/SignedContent.xdr
+END
+signCert3.der
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signCert3.der
+END
+message_File.txt
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/message_File.txt
+END
+SignedData_File.ber
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/SignedData_File.ber
+END
+signPri1.key
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signPri1.key
+END
+Messsage_File.txt
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/Messsage_File.txt
+END
+signPri2.key
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signPri2.key
+END
+plainText.txt
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/plainText.txt
+END
+signPri3.key
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signPri3.key
+END
+kmPri1.key
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/kmPri1.key
+END
+signedAndEnvData.ber
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/signedAndEnvData.ber
+END
+kmPri2.key
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/kmPri2.key
+END
+EnvelopedData.ber
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CMS/EnvelopedData.ber
+END

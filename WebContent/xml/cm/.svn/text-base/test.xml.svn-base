@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="662" Id="test" Left="8" PidAttrib="7" Title="test" Top="8" Ver="1.0" Width="824" WorkArea="true">
+		<Div Height="54" Id="divButtonBar" Left="3" TabOrder="1" Text="Div0" Top="12" Url="D:\work\JSP_Project\iccsm\xml\base\frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="49" Id="Image0" ImageID="form_top" Left="2" TabOrder="2" Top="65" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="2" TabOrder="3" Top="114" Width="817"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="2" TabOrder="4" Top="538" Width="816"></Image>
+		<Image Height="16" Id="Image3" ImageID="arrow_small_blue" Left="16" TabOrder="5" Top="86" Width="16"></Image>
+		<Static Height="11" Id="Static0" Left="34" TabOrder="6" Text="접수일자" Top="89" Width="52"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="88" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="7" Top="84" Width="85"></Calendar>
+		<Image Height="16" Id="Image4" ImageID="arrow_small_blue" Left="280" TabOrder="8" Top="86" Width="16"></Image>
+		<Static Height="11" Id="Static1" Left="298" TabOrder="9" Text="접수번호" Top="89" Width="52"></Static>
+		<Static Height="8" Id="Static2" Left="175" TabOrder="10" Text="&#32;~&#32;" Top="90" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="193" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="11" Top="84" Value="TODAY" Width="85"></Calendar>
+		<Edit Height="21" Id="scREC_NUM" Left="352" Style="style1" TabOrder="12" Top="84" Width="96"></Edit>
+		<Image Height="40" Id="Search" ImageID="button_search" Left="748" OnClick="Search_OnClick" TabOrder="13" Top="72" Width="54"></Image>
+		<Image Height="30" Id="Image5" ImageID="form_w_top" Left="8" TabOrder="14" Top="115" Width="798"></Image>
+		<Image Height="366" Id="Image6" ImageID="form_w_bg" Left="8" TabOrder="15" Top="145" Width="798"></Image>
+		<Image Height="30" Id="Image7" ImageID="form_w_bottom" Left="8" TabOrder="16" Top="511" Width="798"></Image>
+		<Grid BindDataset="dsPT_SAMPLE" BkColor2="user11" BkSelColor="lightslategray" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="538" Color="black" Enable="true" EndLineColor="#919cb1" FillArea="TRUE" HeadBorder="Flat" HeadHeight="20" Height="416" Id="grdList" InputPanel="FALSE" Left="16" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" Right="800" Style="grid_title" TabOrder="17" TabStop="true" Top="122" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="105"/>
+						<col width="111"/>
+						<col width="200"/>
+						<col width="103"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="234"/>
+						<col width="105"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="접수번호"/>
+						<cell col="1" display="text" text="가등록번호"/>
+						<cell col="2" display="text" text="업체명"/>
+						<cell col="3" display="text" text="접수일시"/>
+						<cell col="4" display="text" text="처리기한"/>
+						<cell col="5" display="text" text="담당자"/>
+						<cell col="6" display="text" text="비&#32;&#32;고"/>
+						<cell col="7" display="text"/>
+					</head>
+					<body>
+						<cell col="0" colid="REC_NUM" display="text"/>
+						<cell col="1" colid="REG_NUM" display="text"/>
+						<cell col="2" colid="COMPANY_NM" display="text"/>
+						<cell col="3" colid="REC_DATE" display="text"/>
+						<cell col="4" colid="PRO_PERIOD" display="text"/>
+						<cell col="5" colid="REC_WRITE" display="text"/>
+						<cell col="6" display="text"/>
+						<cell col="7" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[function Search_OnClick(obj,nX,nY)
+{
+	fnTablesBinding(false);
+}
+]]></Script>
+</Window>

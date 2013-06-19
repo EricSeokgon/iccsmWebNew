@@ -1,0 +1,399 @@
+10
+
+dir
+70
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/iccsmWebNew/WebContent
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C
+
+
+
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+173e5da2-384e-a041-8247-f7898c48cc03
+
+Install
+dir
+
+META-INF
+dir
+
+MiInstaller320.js
+file
+
+
+
+
+2013-06-19T13:43:24.202000Z
+9fb58d511bc362033a2f5088c6234088
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2139
+
+MiPlatform_Updater322_20090317_1611.cab
+file
+
+
+
+
+2013-06-19T13:42:41.583000Z
+b075c11e7ed4d29af81027a9c58493b8
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1320001
+
+WEB-INF
+dir
+
+bbs
+dir
+
+com
+dir
+
+console
+dir
+
+css
+dir
+
+cytyseal
+dir
+
+file
+dir
+
+gpki
+dir
+
+groupware
+dir
+
+hms
+dir
+
+iccsm.xml
+file
+
+
+
+
+2013-06-19T13:45:38.180000Z
+ee667fa473a0e2976d6057cd952f0986
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+512
+
+image
+dir
+
+images
+dir
+
+inc
+dir
+
+index
+dir
+
+index.jsp
+file
+
+
+
+
+2013-06-19T13:42:04.602000Z
+354aeee09412f80e807f844faa9e2daf
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+563
+
+install.jsp
+file
+
+
+
+
+2013-06-19T13:42:04.581000Z
+135747fd2a7d3f1780568d4b75a3e219
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14360
+
+install2.jsp
+file
+
+
+
+
+2013-06-19T13:43:24.179000Z
+69d87359823afc482b7ea1edbad779cb
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14060
+
+login
+dir
+
+main
+dir
+
+mem
+dir
+
+member
+dir
+
+menu
+dir
+
+offseal
+dir
+
+oz
+dir
+
+oz2
+dir
+
+pda
+dir
+
+print
+dir
+
+rch
+dir
+
+reg
+dir
+
+republish
+dir
+
+smsTest.jsp
+file
+
+
+
+
+2013-06-19T13:42:04.561000Z
+465f6f8569713adfb6490f796fcddce1
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+557
+
+sys
+dir
+
+testaaa.jsp
+file
+
+
+
+
+2013-06-19T13:46:53.233000Z
+defd5d375aa3ae790420b91f3d7180b0
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2669
+
+usebefore
+dir
+
+user
+dir
+
+xml
+dir
+

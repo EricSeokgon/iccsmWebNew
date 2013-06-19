@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link rel="stylesheet" href="nav.css" type="text/css">
+<style type="text/css">
+body  {
+	background-color: #99CCFF;
+	background-image: url();
+	background-repeat: no-repeat;
+	margin-top:0;
+	margin-left:0;
+	margin-botton:0;
+	margin-right:0;
+}
+span.D2HContents
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Purple; }
+span.D2HContentsRollover
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+span.D2HIndex
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Purple; }
+span.D2HIndexRollover
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+span.D2HPrevious
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+span.D2HPreviousRollover
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+span.D2HNext
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Blue; }
+span.D2HNextRollover
+{  font-family: Verdana; font-size: 8.25pt; font-style: normal; font-weight: normal; text-decoration:  underline; color: Red; }
+</style>
+<script language="JavaScript">
+function mOver(whichID)	
+{
+	whichID.style.backgroundColor = "";
+	changeclass(whichID.id, "Rollover");
+}
+
+function mOut(whichID)
+{
+	whichID.style.backgroundColor = "";
+	changeclass(whichID.id, "");
+}
+
+function changeclass(id, mod)
+{
+	var len = id.length - 4;
+	id = id.substring(0, len);
+	var span = document.all(id);
+	if (span != null)
+		span.className = id + mod;
+}
+</script>
+<script language="VBScript">
+sub d2hcmd(id)
+	on error resume next
+	window.parent.frames("right").document.all(id).click
+end sub
+</script>
+</head>
+<body>
+<table align="left" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="d2hCell" id="D2HContentsCell" onClick="d2hcmd('D2HContents')" onFocus="mOver(this)" onBlur="mOut(this)" onmouseOver = "mOver(this)" 
+
+onmouseOut="mOut(this)"><span class=D2HContents id="D2HContents">Contents</span></td>
+<td class="d2hCell" id="D2HIndexCell" onClick="d2hcmd('D2HIndex')" onFocus="mOver(this)" onBlur="mOut(this)" onmouseOver = "mOver(this)" 
+
+onmouseOut="mOut(this)"><span class=D2HIndex id="D2HIndex">Index</span></td>
+<td class="d2hCell" id="D2HPreviousCell" onClick="d2hcmd('D2HPrevious')" onFocus="mOver(this)" onBlur="mOut(this)" onmouseOver = "mOver(this)" 
+
+onmouseOut="mOut(this)"><span class=D2HPrevious id="D2HPrevious">Previous</span></td>
+<td class="d2hCell" id="D2HNextCell" onClick="d2hcmd('D2HNext')" onFocus="mOver(this)" onBlur="mOut(this)" onmouseOver = "mOver(this)" 
+
+onmouseOut="mOut(this)"><span class=D2HNext id="D2HNext">Next</span></td>
+</tr>
+</table>
+</body>
+</html>

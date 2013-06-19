@@ -1,0 +1,14 @@
+
+create table PT_R_WORK_CAPABILLITY(
+    SEQ NUMBER(11) NOT NULL , /* */
+    RC_REGIST_NUM VARCHAR2(20)  , /* */
+    ASSESSMENT_DATE VARCHAR2(20)  , /* */
+    ASSESSMENT_MONEY VARCHAR2(20)  , /* */
+    ASSESSMENT_APPL_DATE VARCHAR2(20)  , /* */
+    CONFIRM VARCHAR2(20)  , /* */
+    TMP_REG_NUM CHAR(18) NOT NULL , /* */
+    WRT_ID VARCHAR2(16)  , /* */
+    UDP_DT VARCHAR2(24)  , /* */
+    INS_DT VARCHAR2(24)  , /* */
+    PRIMARY KEY(SEQ,TMP_REG_NUM)
+   );

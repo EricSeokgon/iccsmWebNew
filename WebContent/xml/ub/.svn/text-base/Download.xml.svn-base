@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="128" Id="SUVDlg" Left="8" OnLoadCompleted="fnForm_Loaded" OnTimer="SUVDlg_OnTimer" PidAttrib="7" Title="파일&#32;다운로드" Top="8" Ver="1.0" Width="376" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_SUV">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="SUV_NAME" size="100" summ="default" type="STRING"/>
+					<colinfo id="SUV_NM" size="26" summ="default" type="STRING"/>
+					<colinfo id="SUV_STANUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_TELNUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_MOBILE" size="24" summ="default" type="STRING"/>
+					<colinfo id="SUV_POSTNUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="SUV_ADDR" size="64" summ="default" type="STRING"/>
+					<colinfo id="SUV_DETAILADDR" size="128" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="20" Id="btnCancel" ImageID="button_style1_70" Left="296" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="1" Text="닫&#32;&#32;&#32;기" Top="104" Width="71"></Button>
+		<Microsoft Bottom="96" Height="96" Id="Microsoft0" Right="371" Width="371"></Microsoft>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var fName;
+var sfName;
+var fileSize;
+var recv_num;
+var sido_code;
+var sigungu_code;
+var sigungu_server;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//this.Microsoft0.Navigate(global.g_ext_iccs_url + "file/Download.jsp?filename="+fName+"&fileSize="+fileSize+"&recv_num="+recv_num+"&sigungu_code="+sigungu_code+"&sigungu_server="+sigungu_server, "", "", ""); //2009-09-13
+	this.Microsoft0.Navigate(global.g_ext_iccs_url + "file/Download.jsp?filename="+fName+"&fileSize="+fileSize+"&recv_num="+recv_num+"&sido_code="+sido_code+"&sigungu_code="+sigungu_code+"&sigungu_server="+sigungu_server+"&sysfilename="+sfName, "", "", ""); //010-05-04
+}
+
+function btnCancel_OnClick(obj)
+{
+	Close();
+}
+
+
+
+
+]]></Script>
+</Window>

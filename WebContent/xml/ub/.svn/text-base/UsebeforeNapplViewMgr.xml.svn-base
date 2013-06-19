@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="496" Id="UsebeforeViewMgr" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="사용전검사&#32;상세보기" Top="8" Ver="1.0" Width="672" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Usebefore">
+				<Contents>
+					<colinfo id="APPLPER_NM" size="50" type="STRING"/>
+					<colinfo id="APPLPER_REP" size="50" type="STRING"/>
+					<colinfo id="APPLPER_TELNUM" size="26" type="STRING"/>
+					<colinfo id="APPLPER_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="APPLPER_ADDR" size="60" type="STRING"/>
+					<colinfo id="APPLPER_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="OPE_NAME" size="50" type="STRING"/>
+					<colinfo id="OPE_TELNUM" size="26" type="STRING"/>
+					<colinfo id="OPE_REP" size="20" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="50" type="STRING"/>
+					<colinfo id="OPE_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="OPE_ADDR" size="60" type="STRING"/>
+					<colinfo id="OPE_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="INSP_SPOT_NM" size="200" type="STRING"/>
+					<colinfo id="INSP_SPOT_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="INSP_SPOT_ADDR" size="60" type="STRING"/>
+					<colinfo id="INSP_SPOT_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="WORK_ITEM" size="200" type="STRING"/>
+					<colinfo id="AREA" size="50" type="STRING"/>
+					<colinfo id="NUM_FL" size="150" type="STRING"/>
+					<colinfo id="USE" size="100" type="STRING"/>
+					<colinfo id="PLAN_CONFIRM_PER_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="PLAN_ENT_CHG_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="PLAN_CONT_CHG_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="256" type="STRING"/>
+					<colinfo id="BEF_PLANER_NAME" size="256" type="STRING"/>
+					<colinfo id="PROC_OFFI" size="256" type="STRING"/>
+					<colinfo id="INSP_WISH_YMD" size="256" type="STRING"/>
+					<colinfo id="INSP_FEE" size="256" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" type="STRING"/>
+					<colinfo id="SW_DT" size="256" type="STRING"/>
+					<colinfo id="EW_DT" size="256" type="STRING"/>
+					<colinfo id="CHG_INSP" size="256" type="STRING"/>
+					<colinfo id="PROC_LIM" size="256" type="STRING"/>
+					<colinfo id="PROC_OFFI_ID" size="256" type="STRING"/>
+					<colinfo id="REMARK" size="256" type="STRING"/>
+					<colinfo id="ADMIT_DT" size="256" type="STRING"/>
+					<colinfo id="OFFI_NM" size="256" type="STRING"/>
+					<colinfo id="OFFI_TELNUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnOk" ImageID="button_style2_120" Left="571" OnClick="fnEditButton_Click" Style="button_style01" TabOrder="1" Text="닫기" Top="465" Width="66"></Button>
+		<Tab BKColor="white" Border="Flat" BorderColor="white" Color="#666666" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="450" Id="tbMain" Left="8" MouseOverColor="#333333" SelColor="#666666" TabOrder="2" Top="6" Width="656">
+			<Contents>
+				<TabPage BorderColor="black" Height="420" Id="tab5" ImageID="tab_style_100" Left="2" TabOrder="8" Text="기본정보" Top="28" Width="652">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="110" Id="Static7" Left="6" ShadowColor="#cccccc" TabOrder="29" Text="신청인" Top="20" Type="Groupbox" Width="640"></Static>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static0" Left="56" TabOrder="31" Text="건축주" Top="38" Width="56"></Static>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="37" TabOrder="30" Top="36" Width="16"></Image>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="APPLPER_NM" Font="Tahoma,9" Height="21" Id="APPLPER_NM" Left="134" MaxLength="20" Style="style1" TabOrder="1" Top="38" UserData="Y" Width="125"></Edit>
+					<Static Color="#666666" Font="Tahoma,9" Height="18" Id="Static2" Left="331" TabOrder="33" Text="대표자" Top="34" Width="49"></Static>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="313" TabOrder="32" Top="31" Width="16"></Image>
+					<Edit BindDataset="ds_Usebefore" Column="APPLPER_REP" Font="Tahoma,9" Height="21" Id="APPLPER_REP" Left="414" MaxLength="8" Style="style1" TabOrder="2" Top="30" Width="125"></Edit>
+					<Image Height="16" Id="Image16" ImageID="arrow_small_white" Left="37" TabOrder="34" Top="78" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="12" Id="Static16" Left="56" TabOrder="35" Text="주&#32;&#32;소" Top="80" Width="36"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="APPLPER_ADDR" Font="Tahoma,9" Height="21" Id="APPLPER_ADDR" Left="222" MaxLength="64" Style="style1" TabOrder="18" TabStop="FALSE" Top="78" Width="320"></Edit>
+					<Edit BindDataset="ds_Usebefore" Column="APPLPER_DETAILADDR" Font="Tahoma,9" Height="21" Id="APPLPER_DETAILADDR" Left="134" MaxLength="35" Style="style1" TabOrder="4" Top="101" Width="320"></Edit>
+					<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="313" TabOrder="36" Top="54" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="18" Id="Static3" Left="331" TabOrder="37" Text="연락처" Top="57" Width="57"></Static>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="APPLPER_TELNUM" Font="Tahoma,9" Height="21" Id="APPLPER_TELNUM" Left="416" MaxLength="17" Style="style1" TabOrder="3" Top="55" UserData="Y" Width="125"></Edit>
+					<MaskEdit BindDataset="ds_Usebefore" Column="APPLPER_POSTNUM" Font="Tahoma,9" Height="21" Id="APPLPER_POSTNUM" Left="134" Mask="###-###" MaxLength="8" TabOrder="17" TabStop="FALSE" Top="78" Type="STRING" Width="55"></MaskEdit>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="136" Id="NAPPL_YN" Left="6" ShadowColor="#cccccc" TabOrder="38" Text="시공자" Top="144" Type="Groupbox" Width="640"></Static>
+					<Image Height="16" Id="Image9" ImageID="arrow_small_white" Left="37" TabOrder="39" Top="158" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="18" Id="Static4" Left="56" TabOrder="40" Text="상&#32;&#32;호&#32;&#32;명" Top="161" Width="57"></Static>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="OPE_NAME" Font="Tahoma,9" Height="21" Id="OPE_NAME" Left="134" MaxLength="50" Style="style1" TabOrder="16" TabStop="FALSE" Top="158" UserData="Y" Width="125"></Edit>
+					<Image Height="16" Id="Image10" ImageID="arrow_small_white" Left="37" TabOrder="41" Top="181" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="18" Id="Static5" Left="56" TabOrder="42" Text="대표자명" Top="184" Width="57"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="OPE_REP" Font="Tahoma,9" Height="21" Id="OPE_REP" Left="134" MaxLength="20" Style="style1" TabOrder="12" TabStop="FALSE" Top="183" Width="93"></Edit>
+					<Image Height="16" Id="Image11" ImageID="arrow_small_white" Left="313" TabOrder="43" Top="184" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static6" Left="331" TabOrder="44" Text="공사업&#32;번호" Top="187" Width="80"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="COI_WRT_NUM" Font="Tahoma,9" Height="21" Id="COI_WRT_NUM" Left="416" MaxLength="12" Style="style1" TabOrder="14" TabStop="FALSE" Top="183" Width="125"></Edit>
+					<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="37" TabOrder="45" Top="205" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="12" Id="Static8" Left="56" TabOrder="46" Text="주&#32;&#32;소" Top="209" Width="44"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="OPE_ADDR" Font="Tahoma,9" Height="21" Id="OPE_ADDR" Left="193" MaxLength="64" Style="style1" TabOrder="20" TabStop="FALSE" Top="206" Width="214"></Edit>
+					<Edit BindDataset="ds_Usebefore" Column="OPE_DETAILADDR" Font="Tahoma,9" Height="21" Id="OPE_DETAILADDR" Left="134" Style="style1" TabOrder="21" TabStop="FALSE" Top="229" Width="273"></Edit>
+					<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="313" TabOrder="46" Top="161" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="18" Id="Static9" Left="331" TabOrder="47" Text="연&#32;&#32;&#32;락&#32;&#32;&#32;처" Top="163" Width="73"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="OPE_TELNUM" Font="Tahoma,9" Height="21" Id="OPE_TELNUM" Left="414" MaxLength="17" Style="style1" TabOrder="13" TabStop="FALSE" Top="158" Width="125"></Edit>
+					<Image Height="16" Id="Image22" ImageID="arrow_small_white" Left="37" TabOrder="47" Top="250" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static17" Left="56" TabOrder="47" Text="담당자명" Top="253" Width="97"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="OFFI_NM" Font="Tahoma,9" Height="21" Id="OFFI_NM" Left="134" MaxLength="5" Style="style1" TabOrder="5" Top="254" Width="88"></Edit>
+					<Image Height="16" Id="Image23" ImageID="arrow_small_white" Left="313" TabOrder="47" Top="251" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static18" Left="331" TabOrder="47" Text="담당자연락처" Top="254" Width="97"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="OFFI_TELNUM" Font="Tahoma,9" Height="21" Id="OFFI_TELNUM" Left="412" MaxLength="17" Style="style1" TabOrder="6" Top="250" Width="144"></Edit>
+					<MaskEdit BindDataset="ds_Usebefore" Column="OPE_POSTNUM" Font="Tahoma,9" Height="21" Id="OPE_POSTNUM" Left="134" Mask="###-###" MaxLength="8" TabOrder="19" TabStop="FALSE" Top="206" Type="STRING" Width="55"></MaskEdit>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="112" Id="Static10" Left="6" ShadowColor="#cccccc" TabOrder="46" Text="기타사항" Top="295" Type="Groupbox" Width="640"></Static>
+					<Image Height="16" Id="Image19" ImageID="arrow_small_white" Left="308" TabOrder="47" Top="314" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static11" Left="327" TabOrder="48" Text="착&#32;공&#32;일&#32;자" Top="318" Width="97"></Static>
+					<Calendar BindDataset="ds_Usebefore" ClickedBkColor="BACKGROUND" ClickedTextColor="BACKGROUND" Column="SW_DT" DayBKColor="BACKGROUND" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Font="Tahoma,9" Height="21" Id="SW_DT" Left="405" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="7" Top="311" Width="104"></Calendar>
+					<Image Height="16" Id="Image21" ImageID="arrow_small_white" Left="32" TabOrder="51" Top="336" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static19" Left="51" TabOrder="52" Text="검사희망일" Top="340" Width="97"></Static>
+					<Calendar BindDataset="ds_Usebefore" ClickedBkColor="BACKGROUND" ClickedTextColor="BACKGROUND" Column="INSP_WISH_YMD" DayBKColor="BACKGROUND" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Font="Tahoma,9" Height="21" Id="INSP_WISH_YMD" Left="129" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="8" Top="336" Width="104"></Calendar>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static12" Left="326" TabOrder="50" Text="준&#32;공&#32;일&#32;자" Top="341" Width="73"></Static>
+					<Image Height="16" Id="Image20" ImageID="arrow_small_white" Left="308" TabOrder="49" Top="338" Width="16"></Image>
+					<Calendar BindDataset="ds_Usebefore" ClickedBkColor="BACKGROUND" ClickedTextColor="BACKGROUND" Column="EW_DT" DayBKColor="BACKGROUND" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Font="Tahoma,9" Height="21" Id="EW_DT" Left="405" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="9" Top="334" Width="104"></Calendar>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="32" TabOrder="53" Top="359" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static14" Left="51" TabOrder="54" Text="검사수수료" Top="362" Width="72"></Static>
+					<MaskEdit BindDataset="ds_Usebefore" Column="INSP_FEE" Font="Tahoma,9" Height="21" Id="INSP_FEE" Left="129" Mask="###,###,###,###" MaxLength="8" TabOrder="10" Top="359" TrimType="Right" VAlign="BOTTOM" Width="101"></MaskEdit>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="308" TabOrder="55" Top="356" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static1" Left="327" TabOrder="56" Text="처&#32;리&#32;기&#32;한" Top="360" Width="97"></Static>
+					<Calendar BindDataset="ds_Usebefore" ClickedBkColor="BACKGROUND" ClickedTextColor="BACKGROUND" Column="PROC_LIM" DayBKColor="BACKGROUND" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Font="Tahoma,9" Height="21" Id="PROC_LIM" Left="405" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="11" Top="357" Width="104"></Calendar>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="32" TabOrder="58" Top="315" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static20" Left="51" TabOrder="57" Text="처리담당자" Top="318" Width="73"></Static>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="PROC_OFFI" Font="Tahoma,9" Height="21" Id="PROC_OFFI" Left="129" MaxLength="10" Style="style1" TabOrder="15" TabStop="FALSE" Top="313" Width="101"></Edit>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="PROC_OFFI_ID" Font="Tahoma,9" Height="21" Id="PROC_OFFI_ID" Left="529" MaxLength="10" Style="style1" TabOrder="59" TabStop="FALSE" Top="313" Visible="FALSE" Width="101"></Edit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="420" Id="tab1" ImageID="tab_style_100" Left="2" TabOrder="25" Text="건축정보" Top="28" Width="652">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="89" Id="Static4" Left="6" ShadowColor="#cccccc" TabOrder="15" Text="건축물정보" Top="101" Type="Groupbox" Width="640"></Static>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="71" Id="Static15" Left="6" ShadowColor="#cccccc" TabOrder="30" Text="비고" Top="334" Type="Groupbox" Width="640"></Static>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="72" Id="Static10" Left="6" ShadowColor="#cccccc" TabOrder="10" Text="시공현장정보" Top="17" Type="Groupbox" Width="640"></Static>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="INSP_SPOT_DETAILADDR" Font="Tahoma,9" Height="21" Id="INSP_SPOT_DETAILADDR" Left="462" MaxLength="30" Style="style1" TabOrder="2" Top="62" UserData="Y" Width="168"></Edit>
+					<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="14" TabOrder="11" Top="36" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static11" Left="32" TabOrder="12" Text="검사현장명칭" Top="38" Width="97"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="INSP_SPOT_NM" Font="Tahoma,9" Height="21" Id="INSP_SPOT_NM" Left="110" MaxLength="25" Style="style1" TabOrder="1" Top="30" Width="344"></Edit>
+					<Image Height="16" Id="Image17" ImageID="arrow_small_white" Left="14" TabOrder="13" Top="62" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="12" Id="Static12" Left="32" TabOrder="14" Text="주&#32;&#32;소" Top="64" Width="92"></Static>
+					<MaskEdit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="INSP_SPOT_POSTNUM" Font="Tahoma,9" Height="21" Id="INSP_SPOT_POSTNUM" Left="110" Mask="###-###" MaxLength="8" TabOrder="8" TabStop="FALSE" Top="62" Type="STRING" UserData="Y" Width="55"></MaskEdit>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="INSP_SPOT_ADDR" Font="Tahoma,9" Height="21" Id="INSP_SPOT_ADDR" Left="202" MaxLength="30" Style="style1" TabOrder="9" TabStop="FALSE" Top="61" UserData="Y" Width="252"></Edit>
+					<Image Height="16" Id="Image9" ImageID="arrow_small_white" Left="15" TabOrder="16" Top="126" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="14" Id="Static16" Left="33" TabOrder="17" Text="건축물용도" Top="127" Width="88"></Static>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="323" TabOrder="18" Top="164" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="13" Id="Static1" Left="340" TabOrder="19" Text="면&#32;&#32;&#32;&#32;&#32;&#32;&#32;적" Top="165" Width="87"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="15" TabOrder="20" Top="164" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static2" Left="31" TabOrder="21" Text="층&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;수" Top="166" Width="72"></Static>
+					<MaskEdit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="AREA" DisableBKColor="BACKGROUND" Font="Tahoma,9" Height="21" Id="AREA" Left="407" MaxLength="9" TabOrder="6" Top="162" TrimType="Right" VAlign="BOTTOM" Width="58"></MaskEdit>
+					<Edit BindDataset="ds_Usebefore" Column="NUM_FL" DisableBKColor="BACKGROUND" Font="Tahoma,9" Height="21" Id="NUM_FL" Left="106" MaxLength="55" Style="style1" TabOrder="5" Top="163" Width="95"></Edit>
+					<Combo BindDataset="ds_Usebefore" CodeColumn="USE" Column="USE" DataColumn="USE" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Editable="TRUE" Font="Tahoma,9" Height="21" Id="USE" ImeMode="none" InnerDataset="ds_Usebefore" Left="108" TabOrder="3" Top="124" UserData="Y" Width="160"></Combo>
+					<Static Color="#666666" Font="Tahoma,9" Height="13" Id="Static5" Left="467" TabOrder="22" Text="㎡" Top="166" Width="23"></Static>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="133" Id="Static9" Left="6" ShadowColor="#cccccc" TabOrder="23" Text="착공전&#32;설계도&#32;관련정보" Top="198" Type="Groupbox" Width="640"></Static>
+					<Edit BindDataset="ds_Usebefore" Column="BEF_PLANER_NAME" Font="Tahoma,9" Height="20" Id="BEF_PLANER_NAME" Left="182" MaxLength="25" Style="style1" TabOrder="24" TabStop="FALSE" Top="307" Width="179"></Edit>
+					<Static Color="#666666" Font="Tahoma,9" Height="20" Id="Static13" Left="40" TabOrder="25" Text="설계&#32;업체명" Top="309" Width="144"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image3" ImageID="arrow_small_white" Left="22" TabOrder="26" Top="308" Width="16"></Image>
+					<Edit BindDataset="ds_Usebefore" BKColor="#fdefe4" Column="SW_BEF_REPO_DELINUM" Font="Tahoma,9" Height="20" Id="SW_BEF_REPO_DELINUM" Left="182" MaxLength="25" Style="style1" TabOrder="27" TabStop="FALSE" Top="287" Width="178"></Edit>
+					<Static Color="#666666" Font="Tahoma,9" Height="20" Id="Static14" Left="40" TabOrder="28" Text="착공전설계도&#32;교부번호" Top="288" Width="144"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image5" ImageID="arrow_small_white" Left="22" TabOrder="29" Top="287" Width="16"></Image>
+					<TextArea BindDataset="ds_Usebefore" Column="REMARK" Font="Tahoma,9" Height="39" Id="REMARK" Left="22" MaxLength="150" TabOrder="7" Top="350" Width="600"></TextArea>
+					<Edit BindDataset="ds_Usebefore" Column="PLAN_CONT_CHG_YN_CONT" Font="Tahoma,9" Height="20" Id="PLAN_CONT_CHG_YN_CONT" Left="158" MaxLength="25" Style="style1" TabOrder="31" TabStop="FALSE" Top="262" Width="280"></Edit>
+					<Static Color="#666666" Font="Tahoma,9" Height="20" Id="Static18" Left="41" TabOrder="32" Text="설계&#32;내용&#32;변경&#32;여부" Top="266" Width="128"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image6" ImageID="arrow_small_white" Left="23" TabOrder="33" Top="263" Width="16"></Image>
+					<Edit BindDataset="ds_Usebefore" Column="PLAN_ENT_CHG_YN_CONT" Font="Tahoma,9" Height="20" Id="PLAN_ENT_CHG_YN_CONT" Left="158" MaxLength="25" Style="style1" TabOrder="34" TabStop="FALSE" Top="240" Width="280"></Edit>
+					<Static BindDataset="ds_Usebefore" Color="#666666" Font="Tahoma,9" Height="20" Id="Static19" Left="41" TabOrder="35" Text="설계&#32;업체&#32;변경&#32;여부" Top="244" Width="128"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image7" ImageID="arrow_small_white" Left="23" TabOrder="36" Top="242" Width="16"></Image>
+					<Edit BindDataset="ds_Usebefore" Column="PLAN_CONFIRM_PER_YN_CONT" Font="Tahoma,9" Height="20" Id="PLAN_CONFIRM_PER_YN_CONT" Left="158" MaxLength="25" Readonly="TRUE" Style="style1" TabOrder="37" TabStop="FALSE" Top="218" Width="279"></Edit>
+					<Static Color="#666666" Font="Tahoma,9" Height="24" Id="Static20" Left="42" TabOrder="38" Text="설계&#32;확인&#32;수행여부" Top="222" Width="127"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image11" ImageID="arrow_small_white" Left="23" TabOrder="39" Top="222" Width="16"></Image>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="324" TabOrder="40" Top="125" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static0" Left="340" TabOrder="41" Text="건축허가일" Top="126" Width="72"></Static>
+					<Calendar BindDataset="ds_Usebefore" Column="ADMIT_DT" DayBKColor="BACKGROUND" DisableBKColor="DKSHADOW" DisableColor="DKSHADOW" DkshadowColor="DKSHADOW" Font="Tahoma,9" Height="21" Id="ADMIT_DT" Left="407" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="4" Top="123" Width="104"></Calendar>
+					<Static Color="#666666" Font="Tahoma,9" Height="13" Id="Static21" Left="203" TabOrder="42" Text="층" Top="167" Width="23"></Static>
+				</TabPage>
+			</Contents>
+		</Tab>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=ALL";
+	    sArgs += " scRECV_NUM=" + quote(scRECV_NUM);
+	    sArgs += " scSIDO_CODE="+global.g_Sd_cd+" scSIGUNGU_CODE="+global.g_Sgg_cd;
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UsebeforeNapplViewMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_Usebefore=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+
+	if (svcid == "SEARCH")
+	{
+		fnAllControlState(false, this);
+		fnControlState(true, this, "btnOk");
+	}
+
+	
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+
+	Close();
+}
+
+
+function fnEditButton_Click(obj)
+{
+	Close();
+
+}
+
+
+function Image5_OnClick(obj,nX,nY)
+{
+	
+}
+
+function Image3_OnClick(obj,nX,nY)
+{
+	
+}
+]]></Script>
+</Window>

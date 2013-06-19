@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegRePublishMgrP" Left="8" OnActivate="fnForm_Activate" OnCloseUp="RegMgrC_OnCloseUp" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록수첩인쇄" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="ETC1" size="30" summ="default" type="STRING"/>
+					<colinfo id="ETC2" size="20" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="BUSS_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="VALUE" size="10" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="12" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_CAPABILITY">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_AOM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_START_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_END_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="T_TERM_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EDU_COMP_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="R_CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="E_CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DELIVERY_BOOK">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="DELI_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DELI_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DELI_CLASS" size="6" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_CAPABILITY_0">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_AOM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_START_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_END_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="T_TERM_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY_0">
+				<Contents>
+					<colinfo id="VALUE" size="10" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="12" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsBOOKDIV">
+				<Contents>
+					<colinfo id="Code" size="2" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>2</Code>
+						<Value>수첩상단</Value>
+					</record>
+					<record>
+						<Code>1</Code>
+						<Value>수첩하단</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="REGR" size="16" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="6" summ="default" type="STRING"/>
+					<colinfo id="D_PER_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" summ="default" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="60" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMPDISPO_CONT" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPD_PER_CODE" size="20" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT" size="50" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MASTER_0">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="REGR" size="16" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="6" summ="default" type="STRING"/>
+					<colinfo id="D_PER_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" summ="default" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="60" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMPDISPO_CONT" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPD_PER_CODE" size="20" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT" size="50" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_MASTER_0">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EDU_COMP_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="R_CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="E_CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsENGDIV">
+				<Contents>
+					<colinfo id="Code" size="2" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>1</Code>
+						<Value>수첩상단</Value>
+					</record>
+					<record>
+						<Code>2</Code>
+						<Value>수첩하단</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsINDEX">
+				<Contents>
+					<colinfo id="Code" size="2" summ="default" type="INT"/>
+					<colinfo id="Value" size="4" summ="default" type="STRING"/>
+					<record>
+						<Code>1</Code>
+						<Value>1행</Value>
+					</record>
+					<record>
+						<Code>2</Code>
+						<Value>2행</Value>
+					</record>
+					<record>
+						<Code>3</Code>
+						<Value>3행</Value>
+					</record>
+					<record>
+						<Code>4</Code>
+						<Value>4행</Value>
+					</record>
+					<record>
+						<Code>5</Code>
+						<Value>5행</Value>
+					</record>
+					<record>
+						<Code>6</Code>
+						<Value>6행</Value>
+					</record>
+					<record>
+						<Code>7</Code>
+						<Value>7행</Value>
+					</record>
+					<record>
+						<Code>8</Code>
+						<Value>8행</Value>
+					</record>
+					<record>
+						<Code>9</Code>
+						<Value>9행</Value>
+					</record>
+					<record>
+						<Code>10</Code>
+						<Value>10행</Value>
+					</record>
+					<record>
+						<Code>11</Code>
+						<Value>11행</Value>
+					</record>
+					<record>
+						<Code>12</Code>
+						<Value>12행</Value>
+					</record>
+					<record>
+						<Code>13</Code>
+						<Value>13행</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Sort">
+				<Contents>
+					<colinfo id="HEAD_TITLE" size="256" type="STRING"/>
+					<colinfo id="NAME_VALUE" size="256" type="STRING"/>
+					<record>
+						<HEAD_TITLE>전체</HEAD_TITLE>
+						<NAME_VALUE>ALL</NAME_VALUE>
+					</record>
+					<record>
+						<HEAD_TITLE>입사자</HEAD_TITLE>
+						<NAME_VALUE>A</NAME_VALUE>
+					</record>
+					<record>
+						<HEAD_TITLE>퇴직자</HEAD_TITLE>
+						<NAME_VALUE>B</NAME_VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_CHANGE">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="18" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="TMPSSN" size="14" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_GRADE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="TMP_GRADE" size="12" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="30" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN" size="20" summ="default" type="STRING"/>
+					<colinfo id="TMP_FIELD" size="12" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_CHANGE_0">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="18" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="TMPSSN" size="14" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_GRADE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="TMP_GRADE" size="12" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="30" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN" size="20" summ="default" type="STRING"/>
+					<colinfo id="TMP_FIELD" size="12" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="3" Top="77" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" OnClick="Image1_OnClick" TabOrder="5" Top="149" Width="817"></Image>
+		<Tab BKColor="user5" Border="Flat" BorderColor="user5" Height="451" Id="tbMain" Left="24" OnChanging="fnBeforeTabBinding" TabOrder="4" Top="96" Width="784">
+			<Contents>
+				<TabPage BorderColor="black" Height="421" Id="tpReper" ImageID="tab_style_100" Left="2" TabOrder="11" Text="기본정보" Top="28" Width="780">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="246" Id="Static0" Left="6" ShadowColor="#cccccc" TabOrder="26" Text="기본정보" Top="20" Type="Groupbox" Width="749"></Static>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="17" Id="Static3" Left="33" Style="list_subtitle" TabOrder="1" Text="등록연월일" Top="130" Width="92"></Static>
+					<Image Height="19" Id="Image15" ImageID="arrow_small_white" Left="15" TabOrder="2" Top="40" Width="18"></Image>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static15" Left="33" TabOrder="3" Text="상&#32;&#32;&#32;&#32;&#32;&#32;&#32;호" Top="43" Width="71"></Static>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="15" TabOrder="4" Top="127" Width="20"></Image>
+					<Image Height="16" Id="Image7" ImageID="arrow_small_white" Left="307" TabOrder="5" Top="43" Width="20"></Image>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="33" TabOrder="6" Text="대&#32;&#32;표&#32;&#32;자" Top="77" Width="88"></Static>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="20" Id="Static2" Left="326" TabOrder="7" Text="생&#32;년&#32;월&#32;일" Top="81" Width="80"></Static>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="20" Id="Static4" Left="326" TabOrder="8" Text="등&#32;록&#32;번&#32;호" Top="44" Width="69"></Static>
+					<Image Height="19" Id="Image0" ImageID="arrow_small_white" Left="15" TabOrder="9" Top="74" Width="18"></Image>
+					<Calendar BindDataset="dsPT_R_COMPANY_MASTER" Column="WRT_DT" Height="21" Id="COMPANY_DIAG_BAS_DT" Left="111" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="10" Top="126" Value="TODAY" Width="88"></Calendar>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="19" Id="Static5" Left="326" TabOrder="11" Text="자&#32;&#32;본&#32;&#32;금" Top="128" Width="69"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="307" TabOrder="12" Top="77" Width="20"></Image>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="307" TabOrder="13" Top="123" Width="20"></Image>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="ADDR_DETAIL_ADDR" Height="21" Id="Edit9" Left="110" MaxLength="128" Style="style1" TabOrder="17" Top="203" Width="400"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="ADDR_ADDR" Height="21" Id="ADDR_ADDR" Left="178" MaxLength="64" Style="style1" TabOrder="16" Top="176" Width="332"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_POST_NUM" Height="21" Id="ADDR_POST_NUM" Left="110" MaxLength="7" Style="style1" TabOrder="18" Top="176" Width="67"></Edit>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="40" Id="Static8" Left="33" TabOrder="14" Text="영업소소재지" Top="179" Width="80"></Static>
+					<Image Height="16" Id="Image11" ImageID="arrow_small_white" Left="15" TabOrder="15" Top="175" Width="16"></Image>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="15" TabOrder="20" Top="239" Width="20"></Image>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="19" Id="Static6" Left="33" Style="list_subtitle" TabOrder="19" Text="발&#32;급&#32;일&#32;자" Top="242" Width="69"></Static>
+					<Calendar BindDataset="dsPT_R_COMPANY_MASTER" Column="COMPANY_DIAG_BAS_DT" Height="21" Id="Calendar0" Left="109" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="21" Top="238" Value="TODAY" Width="88"></Calendar>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="NAME" Height="21" Id="Edit0" Left="109" OnChanged="tbMain_tpReper_Edit0_OnChanged" TabOrder="22" Top="41" Width="145"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="REP_NM_KOR" Height="21" Id="Edit1" Left="109" TabOrder="23" Top="74" Width="145"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="COI_WRT_NUM" Height="21" Id="Edit2" Left="413" TabOrder="24" Top="41" Width="97"></Edit>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="REA_CAP" Height="21" Id="MaskEdit1" Left="413" MaxLength="15" TabOrder="25" Top="126" Value="MaskEdit0" Width="97"></MaskEdit>
+					<Edit Height="21" Id="Edit3" Left="413" TabOrder="27" Top="74" Width="97"></Edit>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="20" Id="Static7" Left="317" TabOrder="28" Text="(법인등록번호)" Top="97" Width="96"></Static>
+				</TabPage>
+				<TabPage BorderColor="black" Height="421" Id="tbWorkCapa" ImageID="tab_style_100" Left="2" TabOrder="11" Text="시공능력평가" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_WORK_CAPABILITY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="415" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="395" Id="grdWorkCapa" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="768" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="20" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="762">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="108"/>
+									<col width="146"/>
+									<col width="216"/>
+									<col width="80"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="평&#32;가&#32;일"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="평가금액(천원)"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" text="평가액&#32;적용기간"/>
+									<cell bkcolor="#787878" col="4" color="white" display="text" text="확&#32;인"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="ASSE_DT" display="date"/>
+									<cell col="2" colid="ASSE_AOM" display="number"/>
+									<cell align="center" col="3" colid="T_TERM_DT" display="text"/>
+									<cell col="4" colid="CONFIRM" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+				<TabPage BorderColor="black" Height="421" Id="tpEngeneer" ImageID="tab_style_100" Left="2" TabOrder="11" Text="통신기술자" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_ENGINEER_CHANGE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="415" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="395" Id="grdEngineer" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="768" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="20" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="762">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="74"/>
+									<col width="147"/>
+									<col width="104"/>
+									<col width="103"/>
+									<col width="106"/>
+									<col width="37"/>
+									<col width="104"/>
+									<col width="41"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" expandsize="0"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" expandsize="0"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" expandsize="0"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" expandsize="0"/>
+									<cell bkcolor="#787878" col="4" color="white" display="text" expandsize="0"/>
+									<cell bkcolor="#787878" col="5" color="white" colspan="2" display="text" text="입사"/>
+									<cell bkcolor="#787878" col="7" color="white" colspan="2" display="text" expandsize="0" text="퇴&#32;사"/>
+									<cell bkcolor="#787878" col="0" color="user5" display="checkbox" edit="checkbox" row="1"/>
+									<cell bkcolor="#787878" col="1" color="user5" display="text" row="1" text="성&#32;명"/>
+									<cell bkcolor="#787878" col="2" color="user5" display="text" row="1" text="자격종목및등급"/>
+									<cell bkcolor="#787878" col="3" color="user5" display="text" row="1" text="자격유효기간"/>
+									<cell bkcolor="#787878" col="4" color="user5" display="text" row="1" text="교육이수&#32;연월일"/>
+									<cell bkcolor="#787878" col="5" color="white" display="text" row="1" text="연월일"/>
+									<cell bkcolor="#787878" col="6" color="white" display="text" row="1" text="확인"/>
+									<cell bkcolor="#787878" col="7" color="white" display="text" row="1" text="연월일"/>
+									<cell bkcolor="#787878" col="8" color="white" display="text" row="1" text="확인"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="NM_KOR" display="text"/>
+									<cell col="2" colid="ENGINEER_GRADE" display="text"/>
+									<cell col="3" colid="CARE_BOOK_VAL_END_DT" display="date"/>
+									<cell col="4" display="date"/>
+									<cell col="5" colid="EMPL_YMD" display="date"/>
+									<cell col="6" colid="E_CONFIRM" display="text"/>
+									<cell col="7" colid="RET_YMD" display="date"/>
+									<cell col="8" colid="R_CONFIRM" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+				<TabPage BorderColor="black" Height="421" Id="tpChange" ImageID="tab_style_100" Left="2" TabOrder="11" Text="변경사항" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="414" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="395" Id="grdChgHistory" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="768" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="762">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="113"/>
+									<col width="138"/>
+									<col width="349"/>
+									<col width="94"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="checkbox" edit="checkbox" expandsize="0" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" expandsize="0" text="변경연월일"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" expandsize="0" text="변경항목"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" expandsize="0" text="변경된내용"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" expandsize="0" text="확인"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="CHG_DT" display="date"/>
+									<cell col="2" colid="CODE_NAME" display="text"/>
+									<cell col="3" colid="VALUE" display="text"/>
+									<cell col="4" colid="CONFIRM" display="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+				<TabPage BorderColor="black" Height="421" Id="tpMeasure" ImageID="tab_style_100" Left="2" TabOrder="11" Text="행정처분" Top="28" Width="780">
+					<Grid BindDataset="dsPT_M_MASTER" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="414" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="395" Id="grdMeasure" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="765" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="759">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="74"/>
+									<col width="124"/>
+									<col width="291"/>
+									<col width="89"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="0" color="white" display="checkbox" edit="checkbox" expandsize="0" text="선택"/>
+									<cell bkcolor="#999999" col="1" color="white" display="text" expandsize="0" text="연&#32;월&#32;일"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" expandsize="0" text="내&#32;용"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" expandsize="0" text="사&#32;유"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" expandsize="0" text="확인"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="DISPO_DT" display="date"/>
+									<cell col="2" colid="TMPDISPO_CONT" combocol="CODE_NAME" combodataset="dsPT_COM_CODE" combotext="CODE_NAME" display="text"/>
+									<cell col="3" colid="DISPO_CAUSE" display="text"/>
+									<cell col="4" colid="CONFIRM" display="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="6" Top="573" Width="816"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="1" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="26" Id="Image5" ImageID="tab_style_bg" Left="257" TabOrder="7" Top="96" Width="542"></Image>
+		<sscControl Bottom="98" Height="13" Id="myControl" Left="562" Right="598" Top="85" Visible="FALSE" Width="36"></sscControl>
+		<Combo CodeColumn="Code" DataColumn="Value" DisplayRowCnt="13" Height="21" Id="cbIndex" INDEX="0" InnerDataset="dsINDEX" Left="750" TabOrder="8" Top="97" Width="51"></Combo>
+		<Radio BKColor="user5" Border="None" CodeColumn="Code" ColumnCount="2" DataColumn="Value" Height="15" Id="BOOKDIV" INDEX="0" InnerDataset="dsBOOKDIV" Left="596" TabOrder="2" Top="104" Width="143"></Radio>
+		<Radio BKColor="user2" Border="None" BorderColor="white" CodeColumn="NAME_VALUE" Color="#4e4e4e" ColumnCount="3" DataColumn="HEAD_TITLE" DisableColor="user0" Font="Tahoma,9" Height="21" Id="rSort" INDEX="1" InnerDataset="ds_Sort" Left="587" OnClick="fn_Radio_OnClick" TabOrder="9" Top="80" Width="160"></Radio>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegRePublishMgrP.xml
+2. 작성일 : 20011-04-18
+3. 작성자 : 이석곤
+4. 기  능 : 정보통신공사업 등록수첩 인쇄
+5. 변경이력
+  가. 20011-04-18 최초작성 (이석곤)
+
+*/
+
+#include "UserLib::CommonJs.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var	_sKEY2;
+var _sKEY3;
+var _sWorkFlag;
+ 
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = _sWorkFlag;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+		global.gv_WorkFlag = global.gv_INSERT;
+		fnInitButtonBar();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		fnModify();
+	}
+		
+	divButtonBar.Image1.text = space(6) + "정보통신공사업 등록수첩 인쇄";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	fnAllControlState(false, this);
+	
+	divButtonBar.btnInsert.enable = false;
+	divButtonBar.btnModify.enable = false;
+	divButtonBar.btnRemove.enable = false;	
+	divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+	divButtonBar.btnCancel.enable = false;
+	divButtonBar.btnReport.enable = true;
+	divButtonBar.btnExcel.enable = false;	
+		
+	fnControlState(true, this, "rSort,cbIndex2");
+	fnControlState(true, this, "BOOKDIV,cbIndex");
+	fnControlState(true, tbMain.tpReper, "btnBase");
+	fnControlState(true, tbMain.tbWorkCapa, "grdWorkCapa,btnBase");
+	fnControlState(true, tbMain.tpChange, "grdChgHistory,btnBase");
+	fnControlState(true, tbMain.tpMeasure, "grdMeasure,btnBase");
+	fnControlState(true, tbMain.tpEngeneer, "grdEngineer,btnBase");
+
+	
+}
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+/*
+function fnTablesBinding()
+{	
+	//var sArgs = "workMODE=ALL scTMP_WRT_NUM=" + quote(_sKEY1) +" scRECV_NUM="+quote(_sKEY2);
+	//	sArgs += " scSIDO_CODE ="+quote(_sKEY3);
+	var sArgs = "workMODE=ALL scTMP_WRT_NUM=" + quote(_sKEY1) +" scSIDO_CODE=" + global.g_Sd_cd;
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishMgrP";
+	var sInDs = "";
+	var sOutDs  = "dsPT_R_COMPANY_MASTER=output1 " ;			
+		sOutDs += "dsPT_R_WORK_CAPABILITY=output2 dsPT_R_ENGINEER_MASTER=output3 " ;
+		sOutDs += "dsPT_R_BASIC_CHANGE_HISTORY=output4 dsPT_M_MASTER=output5 ";
+				
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+*/
+
+/**
+	수정자 : 김원
+	수정일 : 09/12/19
+	내  용 : 한번에 모든 탭에 대한 쿼리를 불러오는것을 각각의 탭에 대한 쿼리로 변경
+*/
+function fnBeforeTabBinding() {
+	switch(tbMain.TabIndex) {
+		case 0:
+			fnTablesBinding("baseInfo");
+			break;
+		case 1:
+			fnTablesBinding("workCap");
+			break;
+		case 2:
+			fnTablesBinding("engineer");
+			break;
+		case 3:
+			fnTablesBinding("chgHistory");
+			break;
+		case 4:
+			fnTablesBinding("measure");
+			break;
+	}
+}
+
+function fnTablesBinding(flg)
+{	
+	
+	//var sArgs = "workMODE=ALL scTMP_WRT_NUM=" + quote(_sKEY1) +" scRECV_NUM="+quote(_sKEY2);
+	//	sArgs += " scSIDO_CODE ="+quote(_sKEY3);
+	var sArgs = "workMODE=" + flg + " scTMP_WRT_NUM=" + quote(_sKEY1) +" scSIDO_CODE=" + global.g_Sd_cd;
+	    sArgs += " scSORT="+ quote(this.rSort.Value);
+	    
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishMgrP";
+	var sInDs = "";
+	var sOutDs  = "dsPT_R_COMPANY_MASTER=output1 " ;			
+		//sOutDs += "dsPT_R_WORK_CAPABILITY=output2 dsPT_R_ENGINEER_MASTER=output3 " ;
+		sOutDs += "dsPT_R_WORK_CAPABILITY=output2 dsPT_R_ENGINEER_CHANGE=output3 " ;
+		sOutDs += "dsPT_R_BASIC_CHANGE_HISTORY=output4 dsPT_M_MASTER=output5 ";
+				
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+	
+	if( svcid == "SEARCH" )
+	{
+		var sText = "";
+		if( !fnEmpty(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM") ) ) {
+			sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM");
+			sText = mid(sText, 0, 6) + "-" + mid(sText, 6, 7);
+		}
+		else {
+			sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REP_SSN1");
+			sText = "19" + mid(sText, 0, 2) + "." + mid(sText, 2, 2) + "." + mid(sText, 4, 2);
+		}
+		tbMain.tpReper.Edit3.Text = sText;
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+
+function fnModify()
+{	
+	fnTablesBinding();
+	
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+}
+*/
+
+/**
+	수정자 : 김원
+	수정일 : 09/12/19
+*/
+function fnModify()
+{		
+	var flg = "baseInfo";
+	fnTablesBinding(flg);
+	
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	fncCardPreview();
+	/*
+	if (tbMain.TabIndex == 0)
+	{
+		//fnReportCompanyBaseInfo();
+		fncCardPreview();
+	}
+	else if (tbMain.TabIndex == 1)
+	{
+		//fnReportWorkCapability();
+		fncCardPreview();
+	}
+	else if (tbMain.TabIndex == 2)
+	{
+		//fnReportEngineer();
+		fncCardPreview();
+	}
+	else if (tbMain.TabIndex == 3)
+	{
+		//fnReportChangeHistory();
+		fncCardPreview();
+	}
+	else if (tbMain.TabIndex == 4)
+	{
+		fnReportMmaster();
+	}
+	*/
+}
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// 코드 조회용 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnEditButton_Click
+ 2. 기  능 : 에디트 버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+		else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+	}
+	else if(nChar == "120") 
+	{
+		var nTabIndex = tbMain.TabIndex;
+		
+		if(nTabIndex == tbMain.TabCount - 1)
+			tbMain.TabIndex = 0;
+		else
+			tbMain.TabIndex = nTabIndex + 1;
+	}
+}
+
+/** Grid_Head 관련 함수 **/
+function fnLocalGridHead_Click(obj,nCell,nX,nY,nPivotIndex)
+{
+	var objDs = obj.BindDataset;
+
+	if (object(objDs).RowCount() == 0)
+		return;
+	 
+	if (obj.GetCellProp("head", nCell, "edit") == "checkbox")
+	{
+		if(obj.GetCellProp("head", nCell, "text") == "1")
+		{
+			obj.SetCellProp("head", nCell, "text", "0");
+			fnSetGridCheck(0, objDs, "DEFI_OUT");
+		}
+		else
+		{
+			obj.SetCellProp("head", nCell, "text", "1");
+			fnSetGridCheck(1, objDs, "DEFI_OUT");
+		}
+		
+		object(objDs).ApplyChange();
+	}
+	else
+	{
+		for(var nLoop = 0; nLoop < obj.GetColCount(); nLoop++)
+		{
+			if(nLoop == nCell) continue;
+			
+			obj.SetCellProp("head", nLoop, "text", replace(obj.GetCellProp("head", nLoop, "text"), "▼", ""));
+			obj.SetCellProp("head", nLoop, "text", replace(obj.GetCellProp("head", nLoop, "text"), "▲", ""));
+		}
+		
+		var sHeadName = obj.GetCellProp("head", nCell, "text");
+		var sColName = obj.GetCellProp("body", nCell, "colid");
+		
+		if (right(sHeadName, 1) == "▼") 
+		{
+			object(objDs).Sort(sColName, true);
+			obj.SetCellProp("head", nCell, "text", replace(sHeadName, "▼", "▲"));
+		}
+		else if (right(sHeadName, 1) == "▲") 
+		{
+			object(objDs).Sort(sColName, false);
+			obj.SetCellProp("head", nCell, "text", replace(sHeadName, "▲", "▼"));
+		}
+		else
+		{
+			object(objDs).Sort(sColName, true);
+			obj.SetCellProp("head", nCell, "text", sHeadName + "▼");
+		}
+	}
+}
+
+//공사업체기본정보 인쇄
+function fnReportCompanyBaseInfo()
+{
+	myControl.ex_port_1_terminate();	
+	
+	var ret = myControl.ex_port_1_open();
+	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;	
+	}	
+	
+	var status;
+	status = myControl.ex_check_status();
+
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}		
+	
+	myControl.ex_insert_paper();
+	
+	myControl.prop_cpi = 15;	
+	myControl.ex_set_cpi();
+	myControl.prop_lpi = 4;		
+	myControl.ex_set_lpi();
+	myControl.prop_vertical_line = 18;
+	myControl.ex_set_vertical_line();
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+	//공사업체명
+	var sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "NAME");
+	
+	myControl.prop_stringToSend = sText + " ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 59;
+	myControl.ex_set_horizontal_tab();
+
+	//공사업등록번호
+	var sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COI_WRT_NUM");
+	myControl.prop_stringToSend = sText + " "+"\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	//대표자성명
+	var sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REP_NM_KOR");
+	myControl.prop_stringToSend = sText + " ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 59;
+	myControl.ex_set_horizontal_tab();
+
+	//대표자 주민번호
+	var sText = "";
+	if( !fnEmpty(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM") ) ) {
+		sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM");
+		sText = mid(sText, 0, 6) + "-" + mid(sText, 6, 7);
+	}
+	else {
+		sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REP_SSN1");
+		sText = "19" + mid(sText, 0, 2) + "." + mid(sText, 2, 2) + "." + mid(sText, 4, 2);
+	}
+		
+	myControl.prop_stringToSend = sText + "\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	//등록일자
+	var sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "BUSS_YMD");
+	sText = mid(sText,0,4) + "/" + mid(sText,4,2) + "/" + mid(sText,6,2);
+	myControl.prop_stringToSend = sText + " ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 59;
+	myControl.ex_set_horizontal_tab();
+
+	//자본금
+	var sText = NumFormat(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REA_CAP"));
+	myControl.prop_stringToSend = sText + " (천원)" + "\r\n";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 18;
+	myControl.ex_set_horizontal_tab();
+
+	//소재지
+	var sText = rtrim(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "ADDR_ADDR"));
+	sText += rtrim(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "ADDR_DETAIL_ADDR"));
+	if(Length(sText) > 30)
+	{
+		myControl.prop_stringToSend = SubStr(sText, 0, 40) + " " + "\r\n";
+		myControl.ex_send_1_string();
+
+     
+		myControl.prop_horizontal_tab = 18;
+		myControl.ex_set_horizontal_tab();
+
+		myControl.prop_stringToSend = SubStr(sText, 40) + " " + "\r\n\r\n";
+		myControl.ex_send_1_string();
+	}
+	else
+	{
+		myControl.prop_stringToSend = sText + " " + "\r\n\r\n\r\n";
+		myControl.ex_send_1_string();
+	}	
+
+	myControl.prop_vertical_line = 24;
+	myControl.ex_set_vertical_line();
+	myControl.prop_horizontal_tab = 47;
+	myControl.ex_set_horizontal_tab();
+
+	sText = GetDate();
+	
+	myControl.prop_stringToSend = Mid(sText, 0, 4) + " ";
+	myControl.ex_send_1_string();
+   
+    
+	myControl.prop_horizontal_tab = 58;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = Mid(sText, 4, 2) + " ";
+	myControl.ex_send_1_string();
+
+	myControl.prop_horizontal_tab = 69;
+	myControl.ex_set_horizontal_tab();
+
+	myControl.prop_stringToSend = Mid(sText, 6, 2) + " ";
+	myControl.ex_send_1_string();
+	
+	myControl.ex_eject_paper();
+	
+	myControl.ex_port_1_terminate();
+		
+	return true;
+}
+
+//시공능력평가 인쇄
+function fnReportWorkCapability()
+{
+	
+	var count = dsPT_R_WORK_CAPABILITY.rowcount;
+	if (count == 0) return;
+	
+	if (dsPT_R_WORK_CAPABILITY.FindRow("CHECKER", "1") < 0)
+	{
+		alert('인쇄할 데이터를 선택하세요.');
+		return;
+	}
+	
+	var nIndex = 0;
+	for (var nLoop = 0; nLoop < dsPT_R_WORK_CAPABILITY.rowcount; nLoop++)
+	{
+		if (dsPT_R_WORK_CAPABILITY.GetColumn(nLoop, "CHECKER") == "1")
+		{
+			dsPT_R_WORK_CAPABILITY_0.AddRow();			
+			
+			dsPT_R_WORK_CAPABILITY_0.SetColumn(nIndex, "ASSE_DT", dsPT_R_WORK_CAPABILITY.GetColumn(nLoop, "ASSE_DT"));				
+			dsPT_R_WORK_CAPABILITY_0.SetColumn(nIndex, "APPL_TERM_START_DT", dsPT_R_WORK_CAPABILITY.GetColumn(nLoop, "APPL_TERM_START_DT"));
+			dsPT_R_WORK_CAPABILITY_0.SetColumn(nIndex, "APPL_TERM_END_DT", dsPT_R_WORK_CAPABILITY.GetColumn(nLoop, "APPL_TERM_END_DT"));
+			dsPT_R_WORK_CAPABILITY_0.SetColumn(nIndex, "ASSE_AOM", dsPT_R_WORK_CAPABILITY.GetColumn(nLoop, "ASSE_AOM"));
+			
+			nIndex++;
+		}			
+	}
+	
+	if (dsPT_R_WORK_CAPABILITY_0.rowcount > 12)
+	{
+		if(!Confirm('12건 이상을 출력 할 경우 용지크기를 초과합니다.')) return;
+	}
+	
+	count = dsPT_R_WORK_CAPABILITY_0.rowcount;
+	
+	var pgubun = "1";
+	var sText;
+	
+	var ret = myControl.ex_port_1_open();	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;	
+	}
+	
+	var status;
+	status = myControl.ex_check_status();
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}			
+	
+	var nIdx = cbIndex.Value;
+	
+	var vertical;
+	if (nIdx == 1 || nIdx == 7)
+		vertical = 6;
+	else
+	{
+		if (nIdx > 6)
+			vertical = 6 + (2 * ((nIdx - 6) - 1));
+		else
+			vertical = 6 + (2 * (nIdx - 1));
+	}
+		
+	//alert(vertical);
+	
+	var horizontal;
+	if (nIdx < 7)
+		horizontal = 4;//평가일 년도
+	else
+		horizontal = 42;
+
+	myControl.ex_insert_paper();
+	myControl.prop_cpi = 15;
+	myControl.ex_set_cpi();
+	myControl.prop_lpi = 6;
+	myControl.ex_set_lpi();
+	
+	if(count > 0) 
+	{		
+		for(var i = 0; i < count; i++) 
+		{
+			myControl.prop_vertical_line = vertical;
+			myControl.ex_set_vertical_line();
+			myControl.prop_horizontal_tab = horizontal;
+			myControl.ex_set_horizontal_tab();
+			
+			var sASSE_DT = dsPT_R_WORK_CAPABILITY_0.GetColumn(i, "ASSE_DT");
+			var sS_DT = dsPT_R_WORK_CAPABILITY_0.GetColumn(i, "APPL_TERM_START_DT");
+			var sE_DT = dsPT_R_WORK_CAPABILITY_0.GetColumn(i, "APPL_TERM_END_DT");
+			var ASSE_AOM = dsPT_R_WORK_CAPABILITY_0.GetColumn(i, "ASSE_AOM");
+			
+			if (fnEmpty(sASSE_DT) || fnEmpty(ASSE_AOM)) continue;
+			
+			myControl.prop_stringToSend = Mid(sASSE_DT, 0, 4) + "/";
+			myControl.ex_send_1_string();
+			
+			if(nIdx > 6)
+			{
+				vertical += 1;
+				horizontal = 41;
+			}
+			else
+			{
+				if(i != 5) 
+				{
+					vertical += 1;
+				} 
+				else 
+				{
+					vertical = 6;
+					horizontal = 41;
+				}
+			}
+			
+			if(nIdx > 6)
+			{
+				myControl.prop_horizontal_tab = 52;
+			}
+			else
+			{
+				if(i > 5) 
+				{
+					myControl.prop_horizontal_tab = 52;
+				} 
+				else 
+				{
+					myControl.prop_horizontal_tab = 14;
+				}
+			}
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = NumFormat(ASSE_AOM);
+			myControl.ex_send_1_string();
+			
+			if(nIdx > 6)
+			{
+				myControl.prop_horizontal_tab = 63;
+			}
+			else
+			{
+				if(i > 5) 
+				{
+					myControl.prop_horizontal_tab = 63;
+				} 
+				else 
+				{
+					myControl.prop_horizontal_tab = 25;
+				}
+			}
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sS_DT, 2, 2) + "/" + Mid(sS_DT, 4, 2) + "/" + Mid(sS_DT, 6, 2) + "\r\n";
+			myControl.ex_send_1_string();	
+			/*
+			if(i > 5) 
+			{
+				myControl.prop_horizontal_tab = 66;
+			} 
+			else 
+			{
+				myControl.prop_horizontal_tab = 28;
+			}
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sS_DT, 4, 2) + "/";
+			myControl.ex_send_1_string();	
+			if(i > 5) 
+			{
+				myControl.prop_horizontal_tab = 69;
+			} 
+			else 
+			{
+				myControl.prop_horizontal_tab = 31;
+		}
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sS_DT, 6, 2) + "\r\n";
+			myControl.ex_send_1_string();	
+			*/
+			if(nIdx > 6)
+			{
+				myControl.prop_horizontal_tab = 42;
+			}
+			else
+			{
+				if(i > 5) 
+				{
+					myControl.prop_horizontal_tab = 42;
+				} 
+				else 
+				{
+					myControl.prop_horizontal_tab = 4; //평가일 
+				}
+			}
+			//vertical += 1;
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sASSE_DT, 4, 2) + "/" + Mid(sASSE_DT, 6, 2);
+			myControl.ex_send_1_string();
+			
+			if(nIdx > 6)
+			{
+				myControl.prop_horizontal_tab =  63;
+			}
+			else
+			{
+				if(i > 5) 
+				{
+					myControl.prop_horizontal_tab = 63;
+				} 
+				else 
+				{
+					myControl.prop_horizontal_tab = 25;
+				}
+			}
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sE_DT, 2, 2) + "/" + Mid(sE_DT, 4, 2) + "/" + Mid(sE_DT, 6, 2);
+			myControl.ex_send_1_string();
+			
+			if(nIdx > 6)
+			{
+				vertical += 1;
+				horizontal = 41;
+			}
+			else
+			{
+				if(i != 5) 
+				{
+					vertical += 1;
+				} 
+				else 
+				{
+					vertical = 6;
+					horizontal = 41;
+				}
+			}
+		}
+	}
+	myControl.ex_eject_paper();	
+	myControl.ex_port_1_terminate();	
+	
+	dsPT_R_WORK_CAPABILITY.ApplyChange();
+	fnGridRowRemove(dsPT_R_WORK_CAPABILITY);
+	dsPT_R_WORK_CAPABILITY.ApplyChange();
+	dsPT_R_WORK_CAPABILITY_0.DeleteAll();
+	
+	return true;
+}
+
+//변경사항 인쇄
+function fnReportChangeHistory()
+{
+	var count = dsPT_R_BASIC_CHANGE_HISTORY.rowcount;
+	if (count == 0) return;
+	
+	if (dsPT_R_BASIC_CHANGE_HISTORY.FindRow("CHECKER", "1") < 0)
+	{
+		alert('인쇄할 데이터를 선택하세요.');
+		return;
+	}
+	
+	var nIndex = 0;
+	for (var nLoop = 0; nLoop < dsPT_R_BASIC_CHANGE_HISTORY.rowcount; nLoop++)
+	{
+		if (dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHECKER") == "1")
+		{
+			dsPT_R_BASIC_CHANGE_HISTORY_0.AddRow();
+			dsPT_R_BASIC_CHANGE_HISTORY_0.SetColumn(nIndex, "VALUE", dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "VALUE"));
+			dsPT_R_BASIC_CHANGE_HISTORY_0.SetColumn(nIndex, "CODE_NAME", dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CODE_NAME"));
+			dsPT_R_BASIC_CHANGE_HISTORY_0.SetColumn(nIndex, "CHG_DT", dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHG_DT"));
+			dsPT_R_BASIC_CHANGE_HISTORY_0.SetColumn(nIndex, "CONFIRM", dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CONFIRM"));
+			
+			nIndex++;
+		}			
+	}
+	/*
+	if (dsPT_R_BASIC_CHANGE_HISTORY_0.rowcount > 13)
+	{
+		alert('13건 이상을 출력 할 경우 용지크기를 초과합니다.');
+		dsPT_R_BASIC_CHANGE_HISTORY_0.DeleteAll();
+		return;
+	}
+	
+	if (cbIndex.Value > 13)
+	{
+		alert('13행 이상의 데이터를 출력할 수 없습니다.');
+		dsPT_R_BASIC_CHANGE_HISTORY_0.DeleteAll();
+		return;
+	}
+	*/
+	count = dsPT_R_BASIC_CHANGE_HISTORY_0.rowcount;
+	
+	var pgubun = "1";
+	var sText;
+	
+	var ret = myControl.ex_port_1_open();	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;	
+	}
+	
+	var status;
+	status = myControl.ex_check_status();
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}			
+	
+	myControl.ex_insert_paper();
+	myControl.prop_cpi = 15;
+	myControl.ex_set_cpi();
+	myControl.prop_lpi = 6;
+	myControl.ex_set_lpi();
+	
+	var vertical;
+	var nIdx = cbIndex.Value;
+
+	if (BOOKDIV.Value == "1")
+	{	
+		vertical = 27 + nIdx - 1;
+		
+	}
+	else
+	{
+		vertical = 7 + nIdx - 1; //변경사항 상단 상하
+	}
+
+	var horizontal = 3;
+
+	if(count > 0) 
+	{
+		for(var i = 0; i < count; i++) 
+		{		
+			myControl.prop_vertical_line = vertical;
+			myControl.ex_set_vertical_line();
+			myControl.prop_horizontal_tab = horizontal;
+			myControl.ex_set_horizontal_tab();
+			
+			var sVALUE = dsPT_R_BASIC_CHANGE_HISTORY_0.GetColumn(i, "VALUE");
+			var sCODE_NAME = dsPT_R_BASIC_CHANGE_HISTORY_0.GetColumn(i, "CODE_NAME");
+			var sCHG_DT = dsPT_R_BASIC_CHANGE_HISTORY_0.GetColumn(i, "CHG_DT");
+			var sCONFIRM = dsPT_R_BASIC_CHANGE_HISTORY_0.GetColumn(i, "CONFIRM");
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sCHG_DT, 2, 2) + "/" + Mid(sCHG_DT, 4, 2) + "/" + Mid(sCHG_DT, 6, 2);
+			myControl.ex_send_1_string();
+			
+			myControl.prop_horizontal_tab = 17;
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = sCODE_NAME;
+			myControl.ex_send_1_string();
+			myControl.prop_horizontal_tab = 34;
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = sVALUE;
+			myControl.ex_send_1_string();
+			
+			vertical += 1;
+		}
+	}
+	myControl.ex_eject_paper();	
+	myControl.ex_port_1_terminate();	
+		
+	dsPT_R_BASIC_CHANGE_HISTORY.ApplyChange();
+	fnGridRowRemove(dsPT_R_BASIC_CHANGE_HISTORY);
+	dsPT_R_BASIC_CHANGE_HISTORY.ApplyChange();
+	dsPT_R_BASIC_CHANGE_HISTORY_0.DeleteAll();	
+		
+	return true;
+}
+
+//행정처분 인쇄
+function fnReportMmaster()
+{
+	/*
+	var count = dsPT_M_MASTER.rowcount;
+	if (count == 0) return;
+	
+	if (dsPT_M_MASTER.FindRow("CHECKER", "1") < 0)
+	{
+		alert('인쇄할 데이터를 선택하세요.');
+		return;
+	}
+	*/
+	var nIndex = 0;
+	for (var nLoop = 0; nLoop < dsPT_M_MASTER.rowcount; nLoop++)
+	{
+		if (dsPT_M_MASTER.GetColumn(nLoop, "CHECKER") == "1")
+		{
+			dsPT_M_MASTER_0.AddRow();
+			dsPT_M_MASTER_0.SetColumn(nIndex, "DISPO_DT", dsPT_M_MASTER.GetColumn(nLoop, "DISPO_DT"));
+			dsPT_M_MASTER_0.SetColumn(nIndex, "TMPDISPO_CONT", dsPT_M_MASTER.GetColumn(nLoop, "TMPDISPO_CONT"));
+			dsPT_M_MASTER_0.SetColumn(nIndex, "DISPO_CAUSE", dsPT_M_MASTER.GetColumn(nLoop, "DISPO_CAUSE"));
+			dsPT_M_MASTER_0.SetColumn(nIndex, "CONFIRM", dsPT_M_MASTER.GetColumn(nLoop, "CONFIRM"));
+			
+			nIndex++;
+		}			
+	}
+	/*
+	if (dsPT_M_MASTER_0.rowcount > 13)
+	{
+		alert('13건 이상을 출력 할 경우 용지크기를 초과합니다.');
+		dsPT_M_MASTER_0.DeleteAll();
+		return;
+	}
+	
+	if (cbIndex.Value > 13)
+	{
+		alert('13행 이상의 데이터를 출력할 수 없습니다.');
+		dsPT_M_MASTER_0.DeleteAll();
+		return;
+	}
+	*/
+	count = dsPT_M_MASTER_0.rowcount;
+	
+	var pgubun = "1";
+	var sText;
+	
+	var ret = myControl.ex_port_1_open();	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;	
+	}
+	
+	var status;
+	status = myControl.ex_check_status();
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}
+	
+	var vertical = 26;		
+	var horizontal = 4;
+	var nIdx = cbIndex.Value;
+	
+	if (nIdx != 0)
+		vertical += nIdx;
+	
+	myControl.ex_insert_paper();
+	myControl.prop_cpi = 15;
+	myControl.ex_set_cpi();
+	myControl.prop_lpi = 6;
+	myControl.ex_set_lpi();
+
+	if(count > 0) 
+	{
+		for(var i = 0; i < count; i++) 
+		{		
+			myControl.prop_vertical_line = vertical;
+			myControl.ex_set_vertical_line();
+			myControl.prop_horizontal_tab = horizontal;
+			myControl.ex_set_horizontal_tab();
+			
+			var sDISPO_DT = dsPT_M_MASTER_0.GetColumn(i, "DISPO_DT");
+			var sTMPDISPO_CONT = dsPT_M_MASTER_0.GetColumn(i, "TMPDISPO_CONT");
+			var sDISPO_CAUSE = dsPT_M_MASTER_0.GetColumn(i, "DISPO_CAUSE");
+			var sCONFIRM = dsPT_M_MASTER_0.GetColumn(i, "CONFIRM");
+			var scDISPO = Length(sDISPO_CAUSE);
+			
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = Mid(sDISPO_DT, 0, 4) + "/" + Mid(sDISPO_DT, 4, 2) + "/" + Mid(sDISPO_DT, 6, 2);
+			myControl.ex_send_1_string();
+			
+			myControl.prop_horizontal_tab = 17;
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = sTMPDISPO_CONT;
+			myControl.ex_send_1_string();	
+			
+			if(scDISPO > 19){
+			
+			myControl.prop_horizontal_tab = 35;
+			myControl.ex_set_horizontal_tab();
+			
+			myControl.prop_stringToSend = Mid(sDISPO_CAUSE, 0, 19);
+			myControl.ex_send_1_string();
+			
+			myControl.prop_vertical_line = vertical+1;
+			myControl.ex_set_vertical_line();
+			myControl.prop_horizontal_tab = 35;
+			myControl.ex_set_horizontal_tab();
+			
+			myControl.prop_stringToSend = Mid(sDISPO_CAUSE, 19, 40);
+			myControl.ex_send_1_string();
+			vertical += 1; 
+			}
+			else{
+			
+			myControl.prop_horizontal_tab = 35;
+			myControl.ex_set_horizontal_tab();
+			myControl.prop_stringToSend = sDISPO_CAUSE;
+			myControl.ex_send_1_string();
+			}
+			vertical += 1;
+		}
+	}
+	myControl.ex_eject_paper();	
+	myControl.ex_port_1_terminate();
+	
+	dsPT_M_MASTER.ApplyChange();
+	fnGridRowRemove(dsPT_M_MASTER);
+	dsPT_M_MASTER.ApplyChange();
+	dsPT_M_MASTER_0.DeleteAll();
+		
+	return true;
+}
+
+//기술자 인쇄
+function fnReportEngineer()
+{
+	//var count = dsPT_R_ENGINEER_CHANGE.rowcount;
+	//alert(count);
+	if (count == 0) return;
+	
+	if (dsPT_R_ENGINEER_CHANGE.FindRow("CHECKER", "1") < 0)
+	{
+		alert('인쇄할 데이터를 선택하세요.');
+		return;
+	}
+	
+	var nIndex = 0;
+	for (var nLoop = 0; nLoop < dsPT_R_ENGINEER_CHANGE.rowcount; nLoop++)
+	{
+		if (dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "CHECKER") == "1")
+		{
+			dsPT_R_ENGINEER_CHANGE_0.AddRow();
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "NM_KOR", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "NM_KOR"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "CARE_BOOK_ISSUE_NUM", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "CARE_BOOK_ISSUE_NUM"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "CARE_BOOK_VAL_START_DT", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "CARE_BOOK_VAL_START_DT"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "CARE_BOOK_VAL_END_DT", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "CARE_BOOK_VAL_END_DT"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "EDU_COMP_DT", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "EDU_COMP_DT"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "EMPL_YMD", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "EMPL_YMD"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "RET_YMD", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "RET_YMD"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "R_CONFIRM", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "R_CONFIRM"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "E_CONFIRM", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "E_CONFIRM"));
+			dsPT_R_ENGINEER_CHANGE_0.SetColumn(nIndex, "CODE_NAME", dsPT_R_ENGINEER_CHANGE.GetColumn(nLoop, "CODE_NAME"));
+			
+			nIndex++;
+		}			
+	}
+	
+	//var count = dsPT_R_ENGINEER_CHANGE.rowcount;
+	var count = dsPT_R_ENGINEER_CHANGE_0.rowcount;
+	var pgubun = "1";
+	
+	if (dsPT_R_ENGINEER_CHANGE_0.rowcount > 6)
+	{
+		alert('6건 이상을 출력 할 경우 용지크기를 초과합니다.');
+		dsPT_R_ENGINEER_CHANGE_0.DeleteAll();
+		return;
+	}
+	
+	if (cbIndex.Value > 6)
+	{
+		alert('6행 이상의 데이터를 출력할 수 없습니다.');
+		dsPT_R_ENGINEER_CHANGE.DeleteAll();
+		return;
+	}
+
+	var ret = myControl.ex_port_1_open();
+	
+	if(ret == 0){
+		alert("시리얼 1포트를 열 수 없습니다.");
+		myControl.ex_port_1_terminate();
+		return;
+	
+	}		
+	
+	var status;
+	status = myControl.ex_check_status();
+
+	if( status == 64)
+	{
+		alert("용지를 넣으세요.");
+		myControl.ex_port_1_terminate();
+		return;
+	}
+	
+	var vertical;
+	var nIdx = cbIndex.value;
+	
+	if (BOOKDIV.Value == "1")
+	{
+		if (nIdx == 1)
+			vertical = 29; //기술자하단 상하 
+		else
+			vertical = 29 + ((nIdx * 2) - 2);
+	}
+	else
+	{
+		if (nIdx == 1)
+			vertical = 8;
+		else
+			vertical = 6 + ((nIdx * 2) - 2);
+	}
+		
+	myControl.ex_insert_paper();
+
+	myControl.prop_cpi = 15;
+	myControl.ex_set_cpi();
+
+	myControl.prop_lpi = 6;
+	myControl.ex_set_lpi();
+		
+	myControl.prop_vertical_line = vertical;
+	myControl.ex_set_vertical_line();
+
+	for(var i = 0; i < count; i++) 
+	{
+		var sNM_KOR = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "NM_KOR");
+		var sCARE_BOOK_ISSUE_NUM = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "CARE_BOOK_ISSUE_NUM");
+		var sCARE_BOOK_VAL_START_DT = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "CARE_BOOK_VAL_START_DT");
+		var sCARE_BOOK_VAL_END_DT = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "CARE_BOOK_VAL_END_DT");
+		var sEDU_COMP_DT = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "EDU_COMP_DT");
+		var sEMPL_YMD = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "EMPL_YMD");
+		var sRET_YMD = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "RET_YMD");
+		var sR_CONFIRM = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "R_CONFIRM");
+		var sE_CONFIRM = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "E_CONFIRM");
+		var sCODE_NAME = dsPT_R_ENGINEER_CHANGE_0.GetColumn(i, "CODE_NAME");
+		
+		myControl.prop_vertical_line = vertical;
+		myControl.ex_set_vertical_line();
+			
+		myControl.prop_horizontal_tab = 3; //기술자 상단 좌우
+		myControl.ex_set_horizontal_tab();
+		myControl.prop_stringToSend = sNM_KOR;
+		myControl.ex_send_1_string();
+	
+		myControl.prop_horizontal_tab = 13;//기술자 하단 좌우
+		myControl.ex_set_horizontal_tab();
+		
+		myControl.prop_stringToSend = "    " + sCODE_NAME;
+		myControl.ex_send_1_string();
+		
+		//유효기간 시작일
+		//myControl.prop_horizontal_tab = 28;
+		//myControl.ex_set_horizontal_tab();
+		
+		//if(!fnEmpty(sCARE_BOOK_VAL_START_DT))
+		//{
+		//	myControl.prop_stringToSend = Mid(sCARE_BOOK_VAL_START_DT, 2, 2) + "/" +Mid(sCARE_BOOK_VAL_START_DT, 4, 2) + "/" + Mid(sCARE_BOOK_VAL_START_DT, 6, 2);
+		//	myControl.ex_send_1_string();	
+		//}
+		
+		//myControl.prop_horizontal_tab = 40;
+		//myControl.ex_set_horizontal_tab();
+		
+		//if(!fnEmpty(sEDU_COMP_DT))
+		//	myControl.prop_stringToSend = " " + Mid(sEDU_COMP_DT, 0, 4) + "/";
+		//else
+		//	myControl.prop_stringToSend = " ";
+		//myControl.ex_send_1_string();	
+		
+		//입사일자
+		myControl.prop_horizontal_tab = 49;
+		myControl.ex_set_horizontal_tab();
+		
+		if(!fnEmpty(sEMPL_YMD))
+			myControl.prop_stringToSend = Mid(sEMPL_YMD, 2, 2) + "/" + Mid(sEMPL_YMD, 4, 2) + "/" +Mid(sEMPL_YMD, 6, 2);
+		else
+			myControl.prop_stringToSend = " ";
+		myControl.ex_send_1_string();
+		
+		//퇴사일자
+		myControl.prop_horizontal_tab = 63;
+		myControl.ex_set_horizontal_tab();
+		
+		if(!fnEmpty(sRET_YMD))
+			myControl.prop_stringToSend = Mid(sRET_YMD, 2, 2) + "/" + Mid(sRET_YMD, 4, 2) + "/" +Mid(sRET_YMD, 6, 2) + "\r\n";
+		else
+			myControl.prop_stringToSend = "\r\n";
+		myControl.ex_send_1_string();
+		
+		myControl.prop_horizontal_tab = 12;
+		myControl.ex_set_horizontal_tab();
+		
+		//수첩번호
+		myControl.prop_stringToSend = replace("(" + trim(sCARE_BOOK_ISSUE_NUM) + ")","()","","(" + trim(sCARE_BOOK_ISSUE_NUM) + ")");
+		myControl.ex_send_1_string();		
+		
+		myControl.prop_horizontal_tab = 28;
+		myControl.ex_set_horizontal_tab();
+		
+		//유효기간 종료일
+		//if(!fnEmpty(sCARE_BOOK_VAL_END_DT))
+		//{
+		//	myControl.prop_stringToSend = Mid(sCARE_BOOK_VAL_END_DT, 2, 2) + "/" +Mid(sCARE_BOOK_VAL_END_DT, 4, 2) + "/" + Mid(sCARE_BOOK_VAL_END_DT, 6, 2);
+		//	myControl.ex_send_1_string();	
+		//}
+		
+		//교육이수 월일
+		//myControl.prop_horizontal_tab = 40;
+		//myControl.ex_set_horizontal_tab();
+		
+		//if(!fnEmpty(sEDU_COMP_DT))
+		//	myControl.prop_stringToSend = Mid(sEDU_COMP_DT, 4, 2) + "/" +Mid(sEDU_COMP_DT, 6, 2);
+		//else
+		//	myControl.prop_stringToSend = " ";
+		//myControl.ex_send_1_string();	
+			
+		vertical += 2;
+	}
+
+	myControl.ex_eject_paper();
+	
+	myControl.ex_port_1_terminate();
+
+	dsPT_R_ENGINEER_CHANGE.ApplyChange();
+	fnGridRowRemove(dsPT_R_ENGINEER_CHANGE);
+	dsPT_R_ENGINEER_CHANGE.ApplyChange();
+	dsPT_R_ENGINEER_CHANGE_0.DeleteAll();	
+	
+	return true;
+
+}
+
+
+
+/**
+	함수명 : fncCardPreview
+	수정일 : 09/12/16
+	수정자 : 김원
+	내  용 : 정보통신공사업등록수첩 미리보기 창
+*/
+function fncCardPreview()
+{			
+	var strURL = "cpv::frmMain.xml";
+	var sArgs = "";		
+	var count=0, sel_cnt=0;
+	
+	switch(tbMain.TabIndex) {
+		case 0:
+			count = 1;
+			sel_cnt = 1;
+			break;
+		case 1:
+			count = dsPT_R_WORK_CAPABILITY.rowcount;
+			sel_cnt = dsPT_R_WORK_CAPABILITY.FindRow("CHECKER", "1");
+			break;
+		case 2:
+			//count = dsPT_R_ENGINEER_MASTER.rowcount;
+			//sel_cnt = dsPT_R_ENGINEER_MASTER.FindRow("CHECKER", "1");
+			count = dsPT_R_ENGINEER_CHANGE.rowcount;
+			sel_cnt = dsPT_R_ENGINEER_CHANGE.FindRow("CHECKER", "1");
+			break;
+		case 3:
+			count = dsPT_R_BASIC_CHANGE_HISTORY.rowcount;
+			sel_cnt = dsPT_R_BASIC_CHANGE_HISTORY.FindRow("CHECKER", "1");
+			break;
+		case 4:
+			count = dsPT_M_MASTER.rowcount;
+			sel_cnt = dsPT_M_MASTER.FindRow("CHECKER", "1");
+			break;
+	}	
+
+	if (sel_cnt < 0)
+	{
+		alert('인쇄할 데이터를 선택하세요.');
+		return;
+	}	
+
+	var sCode = fnCreateDialog(strURL, sArgs);
+}
+
+function fn(obj)
+{
+
+}
+
+
+function fn_Radio_OnClick(obj)
+{
+    var flg = "engineer";
+		fnTablesBinding(flg);
+}
+
+]]></Script>
+</Window>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="416" Id="KICAIfRecvEngChangeDlg" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="변경내역&#32;상세조회" Top="8" Ver="1.0" Width="816" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_TMP_ENGINEER_CHANGE">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+					<colinfo id="LICTAX" size="1" summ="default" type="STRING"/>
+					<colinfo id="HOSCRE" size="1" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE2" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE1" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_CHANGE">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="18" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="TMPSSN" size="14" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_GRADE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="TMP_GRADE" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_CHANGE2">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="18" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="TMPSSN" size="14" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_GRADE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="3" summ="default" type="STRING"/>
+					<colinfo id="TMP_GRADE" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="68" Id="Image2" ImageID="form_bottom" Left="-1" TabOrder="3" Top="343" Width="813"></Image>
+		<Image Height="320" Id="Image1" ImageID="form_bg" Left="-1" TabOrder="4" Top="53" Width="813"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="-1" TabOrder="2" Width="813"></Image>
+		<Static Height="302" Id="Static0" Left="16" TabOrder="1" Text="변경&#32;전&#32;정보" Top="89" Type="Groupbox" Width="380"></Static>
+		<Static Height="302" Id="Static1" Left="416" TabOrder="5" Text="변경&#32;후&#32;정보" Top="89" Type="Groupbox" Width="380"></Static>
+		<Image Height="56" Id="Image10" ImageID="bg_default" Left="14" TabOrder="6" Top="21" Width="784"></Image>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="33" TabOrder="9" Top="47" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static7" Left="51" TabOrder="10" Text="등록번호" Top="48" Width="72"></Static>
+		<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="COI_WRT_NUM" Height="21" Id="COI_WRT_NUM" Left="102" MaxLength="12" Number="TRUE" Style="style1" TabOrder="7" Top="42" Width="56"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="179" TabOrder="11" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static8" Left="197" TabOrder="12" Text="상&#32;&#32;호" Top="48" Width="36"></Static>
+		<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="NAME" Height="21" Id="NAME" Left="231" Style="style1" TabOrder="8" Top="42" Width="120"></Edit>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="376" TabOrder="14" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static2" Left="396" TabOrder="15" Text="변경구분" Top="48" Width="47"></Static>
+		<Edit BindDataset="dsPT_TMP_ENGINEER_CHANGE" Column="WORK_CLASS" Height="21" Id="Edit0" Left="447" Style="style1" TabOrder="13" Top="42" Width="80"></Edit>
+		<Image Height="11" Id="Image5" ImageID="arrow_small_blue" Left="552" TabOrder="16" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static3" Left="572" TabOrder="17" Text="변경일자" Top="48" Width="47"></Static>
+		<Calendar BindDataset="dsPT_TMP_ENGINEER_CHANGE" Column="CHG_STA_DT" Height="21" Id="Calendar0" Left="625" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="18" Top="42" Width="87"></Calendar>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9" Height="21" Id="btnRecv" ImageID="button_style2_120" Left="720" OnClick="btnRecv_OnClick" Style="button_style01" TabOrder="19" Text="자료수신" Top="42" Width="66"></Button>
+		<Grid BindDataset="dsPT_R_ENGINEER_CHANGE2" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="383" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="275" Id="grdEngineer" InputPanel="FALSE" Left="30" LineColor="user9" OnHeadClick="fnGridHead_Click" Right="383" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="20" TabStop="true" Top="108" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="353">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="37"/>
+						<col width="76"/>
+						<col width="126"/>
+						<col width="107"/>
+						<col width="93"/>
+						<col width="106"/>
+						<col width="106"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="성&#32;&#32;명"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="주민등록번호"/>
+						<cell bkcolor="#787878" col="3" color="user5" display="text" text="경력수첩번호"/>
+						<cell bkcolor="#787878" col="4" color="user5" display="text" text="기술등급"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="입사일자"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="퇴사일자"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="ENGINEER_NM" display="text"/>
+						<cell col="2" colid="TMPSSN" combodataset="dsPT_R_ENGINEER_CHANGE" display="text" expr="ENGINEER_SSN1+ENGINEER_SSN2" Mask="######-#######"/>
+						<cell col="3" colid="CARE_BOOK_ISSUE_NUM" display="text"/>
+						<cell col="4" colid="TMP_GRADE" display="text"/>
+						<cell col="5" colid="EMPL_YMD" display="date"/>
+						<cell col="6" colid="RET_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid BindDataset="dsPT_R_ENGINEER_CHANGE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="383" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="275" Id="Grid0" InputPanel="FALSE" Left="430" LineColor="user9" OnHeadClick="fnGridHead_Click" Right="783" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="21" TabStop="true" Top="108" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="353">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="37"/>
+						<col width="76"/>
+						<col width="126"/>
+						<col width="107"/>
+						<col width="93"/>
+						<col width="106"/>
+						<col width="106"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="성&#32;&#32;명"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="주민등록번호"/>
+						<cell bkcolor="#787878" col="3" color="user5" display="text" text="경력수첩번호"/>
+						<cell bkcolor="#787878" col="4" color="user5" display="text" text="기술등급"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="입사일자"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="퇴사일자"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="ENGINEER_NM" display="text"/>
+						<cell col="2" colid="TMPSSN" combodataset="dsPT_R_ENGINEER_CHANGE" display="text" expr="ENGINEER_SSN1+ENGINEER_SSN2" Mask="######-#######"/>
+						<cell col="3" colid="CARE_BOOK_ISSUE_NUM" display="text"/>
+						<cell col="4" colid="TMP_GRADE" display="text"/>
+						<cell col="5" colid="EMPL_YMD" display="date"/>
+						<cell col="6" colid="RET_YMD" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+  나. 2009-04-10 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	scTB_NM;
+var scSEQ;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scTB_NM=" + quote(scTB_NM);
+	sArgs += " scSEQ=" + quote(scSEQ);
+	sArgs += " scCOI_WRT_NUM=" + quote(scCOI_WRT_NUM);
+	sArgs += " scMANA_NUM=" + quote(scMANA_NUM);
+	sArgs += " scMODE=DETAIL";
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=KICAIfRecv";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output dsPT_TMP_ENGINEER_CHANGE=output2 dsPT_R_ENGINEER_CHANGE2=output3";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (Svcid == "SAVE")
+	{
+		alert('변경내용이 시스템에 적용되었습니다.');
+		Close(true);
+	}
+	
+	if (Svcid == "SEARCH")
+	{
+		fnSetChangeList();
+	}
+}
+
+function fnSetChangeList()
+{
+	//dsPT_R_ENGINEER_CHANGE2.Copy(dsPT_R_ENGINEER_CHANGE);
+	dsPT_R_ENGINEER_CHANGE.Copy(dsPT_R_ENGINEER_CHANGE2);
+	var sTMP_WRT_NUM = dsPT_TMP_ENGINEER_CHANGE2.GetColumn(0, "TMP_WRT_NUM");	
+	
+	for (var nLoop = 0; nLoop < dsPT_TMP_ENGINEER_CHANGE.rowcount; nLoop++)
+	{
+		var sSSN = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "TMPSSN");	
+		var sCUD = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "CUD_FLAG");
+		var sEMPL = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "EMPL_YMD");
+		var sRET = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "RET_YMD");
+		var sSSN1 = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "ENGINEER_SSN1");
+		var sSSN2 = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "ENGINEER_SSN2");
+		var sENGINEER_NM = dsPT_TMP_ENGINEER_CHANGE.GetColumn(nLoop, "ENGINEER_NM");
+		
+		var bFind = dsPT_R_ENGINEER_CHANGE.FindRow("TMPSSN", sSSN);
+		if (bFind < 0)
+		{
+			dsPT_R_ENGINEER_CHANGE.AddRow();
+			
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "TMP_WRT_NUM", sTMP_WRT_NUM);
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "ENGINEER_NM", sENGINEER_NM);
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "ENGINEER_SSN1", sSSN1);
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "ENGINEER_SSN2", sSSN2);
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "EMPL_YMD", sEMPL);
+			dsPT_R_ENGINEER_CHANGE.SetColumn(dsPT_R_ENGINEER_CHANGE.row, "RET_YMD", sRET);
+		}
+		else
+		{
+			if (sCUD == "D")
+			{
+				dsPT_R_ENGINEER_CHANGE.DeleteRow(bFind);
+			}
+			else
+			{
+				dsPT_R_ENGINEER_CHANGE.SetColumn(bFind, "EMPL_YMD", sEMPL);
+				dsPT_R_ENGINEER_CHANGE.SetColumn(bFind, "RET_YMD", sRET);
+			}
+		}
+	}
+}
+
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+
+}
+
+function btnRecv_OnClick(obj)
+{
+	var sArgs = "workMODE=ENGINEER";
+	var sTid = "SAVE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrCCUD";
+	var sInDs = "dsPT_R_ENGINEER_CHANGE=dsPT_R_ENGINEER_CHANGE:u";
+	var sOutDs = "dsPT_R_ENGINEER_CHANGE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+]]></Script>
+</Window>

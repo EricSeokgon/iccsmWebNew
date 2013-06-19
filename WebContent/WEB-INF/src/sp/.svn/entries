@@ -1,0 +1,170 @@
+10
+
+dir
+70
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/iccsmWebNew/WebContent/WEB-INF/src/sp
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C
+
+
+
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+173e5da2-384e-a041-8247-f7898c48cc03
+
+Copy of webservice
+dir
+
+action
+dir
+
+am
+dir
+
+amr
+dir
+
+bas
+dir
+
+bbs
+dir
+
+blank
+dir
+
+c_res
+dir
+
+chart
+dir
+
+cm
+dir
+
+console
+dir
+
+dao
+dir
+
+dao.zip
+file
+
+
+
+
+2013-06-19T13:44:45.951000Z
+b1ebadf2d6872fe6513f38a1a280d95b
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1066220
+
+filter
+dir
+
+gpkisample
+dir
+
+hms
+dir
+
+index
+dir
+
+left
+dir
+
+log
+dir
+
+login
+dir
+
+login_m
+dir
+
+main
+dir
+
+main_m
+dir
+
+mem
+dir
+
+rch
+dir
+
+reg
+dir
+
+republish
+dir
+
+sample
+dir
+
+st
+dir
+
+statics
+dir
+
+sys
+dir
+
+sys_m
+dir
+
+ub
+dir
+
+uent
+dir
+
+user
+dir
+
+util
+dir
+
+webservice
+dir
+

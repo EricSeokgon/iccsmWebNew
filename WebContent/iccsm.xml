@@ -1,0 +1,20 @@
+<Context path="/iccsm" reloadable="true" docBase="D:\work\JSP_Project\iccsm"
+workDir="D:\work\JSP_Project\work\iccsm" >
+
+	<Resource
+    name="jdbc/iccsm"
+    auth="Container"
+    type="javax.sql.DataSource"
+    username="iccs2"
+    password="iccs2"
+    driverClassName="oracle.jdbc.driver.OracleDriver"
+    url="jdbc:oracle:thin:@home.pktcorp.com:1521:orcl"
+	removeAbandoned="true"
+	removeAbandonedTimeout="60"
+	logAbandoned="true"
+	maxActive="25"
+	maxIdle="10"
+	maxWait="-1"
+	/>
+
+</Context>

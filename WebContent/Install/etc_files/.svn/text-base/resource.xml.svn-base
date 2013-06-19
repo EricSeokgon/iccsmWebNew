@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="EUC-KR"?>
+<ROOT>
+<params>
+<param id='MainICon' type='string'></param>
+<param id='SubICon' type='string'></param>
+</params>
+</ROOT>

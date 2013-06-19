@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>표준보안API 설치</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H2 id=_D2HTopic_123 
+style="MARGIN-LEFT: 27.7pt; TEXT-INDENT: -27.7pt; tab-stops: 0cm 27.7pt"><SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+style="FONT-FAMILY: 굴림">설치</SPAN></H2>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="_2.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api6.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">①</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN style="FONT-FAMILY: 굴림">설치파일</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">시스템에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">올리기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">운영관리시스템으로부터</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">다운받은</SPAN> <SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN>API 
+<SPAN style="FONT-FAMILY: 굴림">설치파일을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">보안</SPAN> <SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">제공할</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">시스템에</SPAN> <SPAN style="FONT-FAMILY: 굴림">올린다</SPAN>. 
+FTP<SPAN style="FONT-FAMILY: 굴림">로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">설치파일을</SPAN> <SPAN style="FONT-FAMILY: 굴림">올릴때는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">반드시</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">“</SPAN>binary<SPAN style="FONT-FAMILY: 굴림">”</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">모드로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">올려야</SPAN> <SPAN style="FONT-FAMILY: 굴림">한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">②</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">설치파일</SPAN> <SPAN style="FONT-FAMILY: 굴림">풀기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">시스템에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">올라간</SPAN> <SPAN style="FONT-FAMILY: 굴림">설치파일의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">압축을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">푼다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 477.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=637>
+      <P class=MsoNormal>- Windows<SPAN style="FONT-FAMILY: 굴림">인</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우</SPAN> : <SPAN 
+      style="FONT-FAMILY: 굴림">압축</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">프로그램을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">푼다</SPAN>.</P>
+      <P class=MsoNormal>- Windows<SPAN style="FONT-FAMILY: 굴림">가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">아닌경우</SPAN> </P>
+      <P 
+      class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &gt;&gt; gunzip libgpkiapi*.tar.gz&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      // <SPAN style="FONT-FAMILY: 굴림">압축</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">풀기</SPAN></P>
+      <P 
+      class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &gt;&gt; tar xvf 
+      libgpkiapi*.tar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      // tar <SPAN style="FONT-FAMILY: 굴림">풀기</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">③</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN style="FONT-FAMILY: 굴림">설치</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">위치에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">옮기기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN 
+style="FONT-FAMILY: 굴림">가</SPAN> <SPAN style="FONT-FAMILY: 굴림">구동될</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위치를</SPAN> <SPAN style="FONT-FAMILY: 굴림">정하고</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN> API <SPAN 
+style="FONT-FAMILY: 굴림">모듈</SPAN>(ex. libgpkiapi.so, libgpkiapi_jni.so, 
+libgpkiapi_jni.jar)<SPAN style="FONT-FAMILY: 굴림">과</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">환경파일</SPAN> (gpkiapi.conf)<SPAN 
+style="FONT-FAMILY: 굴림">을</SPAN> <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위치로</SPAN> <SPAN style="FONT-FAMILY: 굴림">옮긴다</SPAN>. 
+(<SPAN style="FONT-FAMILY: 굴림">만약</SPAN>, <SPAN 
+style="FONT-FAMILY: 굴림">설치파일에</SPAN> <SPAN style="FONT-FAMILY: 굴림">포함되어있는</SPAN> 
+LDAP <SPAN style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">시스템에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">설치되어있지</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">않다면</SPAN> LDAP <SPAN 
+style="FONT-FAMILY: 굴림">라이브러리도</SPAN> <SPAN style="FONT-FAMILY: 굴림">함께</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">설치한다</SPAN>.)</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">④</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN style="FONT-FAMILY: 굴림">경로</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">잡기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+style="FONT-FAMILY: 굴림">모듈을</SPAN> <SPAN style="FONT-FAMILY: 굴림">옮긴</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위치가</SPAN> <SPAN style="FONT-FAMILY: 굴림">라이브러리</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">잡혀있지</SPAN> <SPAN style="FONT-FAMILY: 굴림">않으면</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">경로와</SPAN> <SPAN style="FONT-FAMILY: 굴림">클래스</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">경로를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">잡아준다</SPAN>. (2.2 <SPAN 
+style="FONT-FAMILY: 굴림">참조</SPAN>)</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">⑤</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">테스트</SPAN> <SPAN style="FONT-FAMILY: 굴림">프로그램</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">구동하기</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설치파일에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">포함되어있는</SPAN> <SPAN style="FONT-FAMILY: 굴림">테스트</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">프로그램을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">구동하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">정상적으로</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">실행됨을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<P class=MsoHeader>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

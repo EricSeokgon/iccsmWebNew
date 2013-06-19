@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>표준보안API 적용</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H1 id=_D2HTopic_124 
+style="MARGIN-LEFT: 20.6pt; TEXT-INDENT: -20.6pt; tab-stops: 20.6pt"><SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+style="FONT-FAMILY: 굴림">적용</SPAN></H1>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="api5.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="_3.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">응용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">프로그램에서</SPAN> <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">경우는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">사용자</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">인증</SPAN>, <SPAN style="FONT-FAMILY: 굴림">전자문서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서명</SPAN>, <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">센션</SPAN> <SPAN style="FONT-FAMILY: 굴림">맺기</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">등이</SPAN> <SPAN style="FONT-FAMILY: 굴림">있다</SPAN>. 
+<SPAN style="FONT-FAMILY: 굴림">이</SPAN> <SPAN style="FONT-FAMILY: 굴림">장에서는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">이런</SPAN> <SPAN style="FONT-FAMILY: 굴림">각각의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">대해서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">자세하게</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">기술한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 38pt; TEXT-INDENT: -18pt; tab-stops: 38.0pt"><SPAN 
+style="FONT-FAMILY: 굴림">①</SPAN>&nbsp; <SPAN style="FONT-FAMILY: 굴림">사용자</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">인증</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt"><SPAN 
+style="FONT-FAMILY: 굴림">응용</SPAN> <SPAN style="FONT-FAMILY: 굴림">프로그램에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">접근하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">이용하고자</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용자가</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">누구인지를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">확인하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">기술한다</SPAN>. <SPAN 
+style="FONT-FAMILY: 굴림">이</SPAN> <SPAN style="FONT-FAMILY: 굴림">때</SPAN>, <SPAN 
+style="FONT-FAMILY: 굴림">사용자의</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">통하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">사용자를</SPAN> <SPAN style="FONT-FAMILY: 굴림">확인하는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">방법과</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">사용자의</SPAN> <SPAN style="FONT-FAMILY: 굴림">주민번호도</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">같이</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">확인하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법이</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">있다</SPAN>.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt">&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 38pt; TEXT-INDENT: -18pt; tab-stops: 38.0pt"><SPAN 
+style="FONT-FAMILY: 굴림">②</SPAN>&nbsp; <SPAN style="FONT-FAMILY: 굴림">전자문서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서명</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt"><SPAN 
+style="FONT-FAMILY: 굴림">전자적으로</SPAN> <SPAN style="FONT-FAMILY: 굴림">작성된</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">문서에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자문서의</SPAN> <SPAN style="FONT-FAMILY: 굴림">무결성과</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">인증을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">전자적인</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서명을</SPAN> <SPAN style="FONT-FAMILY: 굴림">덧</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">붙이고</SPAN> <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">전자서명이</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">올바른지를</SPAN> <SPAN style="FONT-FAMILY: 굴림">확인하는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">방법을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">기술한다</SPAN>. </P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt">&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 38pt; TEXT-INDENT: -18pt; tab-stops: 38.0pt"><SPAN 
+style="FONT-FAMILY: 굴림">③</SPAN>&nbsp; <SPAN style="FONT-FAMILY: 굴림">보안</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">세션</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">맺기</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt"><SPAN 
+style="FONT-FAMILY: 굴림">양자간</SPAN> <SPAN style="FONT-FAMILY: 굴림">주고받는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">메시지의</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">기밀성을</SPAN> <SPAN style="FONT-FAMILY: 굴림">위해서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">비밀키를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">주고</SPAN> <SPAN style="FONT-FAMILY: 굴림">받고</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">데이터를</SPAN> <SPAN style="FONT-FAMILY: 굴림">암</SPAN>/<SPAN 
+style="FONT-FAMILY: 굴림">복호화하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">기술한다</SPAN>.</P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt">&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-LEFT: 38pt; TEXT-INDENT: -18pt; tab-stops: 38.0pt"><SPAN 
+style="FONT-FAMILY: 굴림">④</SPAN>&nbsp; <SPAN style="FONT-FAMILY: 굴림">시점확인</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">토큰</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">받기</SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 38pt"><SPAN 
+style="FONT-FAMILY: 굴림">작성된</SPAN> <SPAN style="FONT-FAMILY: 굴림">전자문서가</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">특정</SPAN> <SPAN style="FONT-FAMILY: 굴림">시점에</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">존재하였음을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">증명하기</SPAN> <SPAN style="FONT-FAMILY: 굴림">위해서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">전자문서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">작성</SPAN> <SPAN style="FONT-FAMILY: 굴림">시점에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">시점확인</SPAN> <SPAN style="FONT-FAMILY: 굴림">서버를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">통하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자문서에</SPAN> <SPAN style="FONT-FAMILY: 굴림">대한</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">토큰을</SPAN> <SPAN style="FONT-FAMILY: 굴림">발급</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">받는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">기술한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P><p class=RelatedHead>More:</p>
+<p class=MsoNormal><a href="_3.htm"><img src=button.gif border=0></a><a href="_3.htm" style=text-decoration:none;>필수 확인 사항</a></p>
+<p class=MsoNormal><a href="_4.htm"><img src=button.gif border=0></a><a href="_4.htm" style=text-decoration:none;>적용분야별 구현방법 및 예제</a></p>
+
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

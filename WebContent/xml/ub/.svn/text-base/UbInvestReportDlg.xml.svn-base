@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="152" Id="MgrReportDlg" Left="8" PidAttrib="7" Title="출력" Top="8" Ver="1.0" Width="304" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsReport">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>RPT8</Code>
+						<Value>사용전검사표</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="105" Id="Static0" Left="13" TabOrder="1" Text="출&#32;&#32;&#32;&#32;&#32;력" Top="11" Type="Groupbox" Width="274"></Static>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="56" OnClick="btnReport_OnClick" Style="button_style01" TabOrder="2" Text="출력하기" Top="124" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="160" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="3" Text="취&#32;&#32;&#32;&#32;소" Top="124" Width="72"></Button>
+		<Radio Border="None" CodeColumn="Code" DataColumn="Value" Height="88" Id="Radio0" INDEX="-1" InnerDataset="dsReport" Left="21" TabOrder="4" Top="23" Width="264"></Radio>
+	</Form>
+	<Script><![CDATA[
+function btnReport_OnClick(obj)
+{
+	Close(this.dsReport.GetColumn(Radio0.Index, "Code"));
+}
+
+function btnCancel_OnClick(obj)
+{
+	Close();
+}
+]]></Script>
+</Window>

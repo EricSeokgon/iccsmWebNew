@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="UnionReceiptMgrC" Left="8" OnActivate="fnForm_Activate" OnDeactivate="UnionReceiptMgrC_OnDeactivate" OnKeyDown="fnKey_Down" OnKillFocus="fnKillFocus" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="합병기본정보입력" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_ACOMPANY">
+				<Contents>
+					<colinfo id="COI_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" type="STRING"/>
+					<colinfo id="NAME" size="50" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="17" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="PCOM_SELECT" size="1" type="STRING"/>
+					<colinfo id="CHECKER" size="1" type="STRING"/>
+					<record>
+						<ADDR_ADDR></ADDR_ADDR>
+						<ADDR_DETAIL_ADDR></ADDR_DETAIL_ADDR>
+						<ADDR_POST_NUM></ADDR_POST_NUM>
+						<ADDR_TEL_NUM></ADDR_TEL_NUM>
+						<CHECKER>0</CHECKER>
+						<COI_WRT_NUM>1111</COI_WRT_NUM>
+						<MANA_NUM>111</MANA_NUM>
+						<NAME>이름</NAME>
+						<PCOM_SELECT>0</PCOM_SELECT>
+						<REP_NM_HAN></REP_NM_HAN>
+						<REP_NM_KOR>성명</REP_NM_KOR>
+						<TMP_WRT_NUM></TMP_WRT_NUM>
+					</record>
+					<record>
+						<ADDR_ADDR></ADDR_ADDR>
+						<ADDR_DETAIL_ADDR></ADDR_DETAIL_ADDR>
+						<ADDR_POST_NUM></ADDR_POST_NUM>
+						<ADDR_TEL_NUM></ADDR_TEL_NUM>
+						<CHECKER>1</CHECKER>
+						<COI_WRT_NUM>2222</COI_WRT_NUM>
+						<MANA_NUM>222</MANA_NUM>
+						<NAME>222</NAME>
+						<PCOM_SELECT>1</PCOM_SELECT>
+						<REP_NM_HAN></REP_NM_HAN>
+						<REP_NM_KOR>22</REP_NM_KOR>
+						<TMP_WRT_NUM></TMP_WRT_NUM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_PCOMPANY">
+				<Contents>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_UNION_STATEMENT">
+				<Contents>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="3" summ="default" type="STRING"/>
+					<colinfo id="UNIO_TMP_WRT_NUM_1" size="18" summ="default" type="STRING"/>
+					<colinfo id="UNIO_TMP_WRT_NUM_2" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="15" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="ASC_TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="HANDED_TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ESTA_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="ESTA_ADDR_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ESTA_REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="ESTA_REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="ESTA_MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="ESTA_ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ESTA_ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ESTA_ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="PROC_LIM" size="10" summ="default" type="STRING"/>
+					<colinfo id="ESTA_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEFI_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="ESTA_TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DEFICIT_CODE">
+				<Contents>
+					<colinfo id="DEFI_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="500" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DEFI_GROUP" size="6" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCheckKey">
+				<Contents>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DEFICIT">
+				<Contents>
+					<colinfo id="DEFI_SEQ" size="4" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DEFI_OUT" size="1" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPT_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="500" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_MEMO">
+				<Contents>
+					<colinfo id="MEMO_SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="MEMO_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_COMPANY_TMP">
+				<Contents>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" OnClick="Image2_OnClick" TabOrder="5" Top="568" Width="816"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" Top="77" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="3" Top="148" Width="817"></Image>
+		<Tab BKColor="user5" Border="Flat" BorderColor="user5" Height="510" Id="tbMain" Left="32" TabOrder="1" Top="104" Width="779">
+			<Contents>
+				<TabPage BorderColor="black" Height="480" Id="tpBase" ImageID="tab_style_100" Left="2" TabOrder="51" Text="기본정보입력" Top="28" Width="775">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="384" Id="Static15" Left="6" ShadowColor="#cccccc" TabOrder="4" Text="합병&#32;된&#32;법인" Top="92" Type="Groupbox" Width="392"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="13" Id="Static16" Left="211" TabOrder="5" Text="대표자(한자)" Top="316" Width="88"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static18" Left="31" TabOrder="6" Text="등&#32;록&#32;번&#32;호" Top="263" Width="72"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static19" Left="210" TabOrder="7" Text="사업자등록번호" Top="344" Width="83"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static20" Left="31" TabOrder="8" Text="전&#32;화&#32;번&#32;호" Top="343" Width="72"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="11" Id="Static21" Left="31" TabOrder="9" Text="대표자(한글)" Top="314" Width="85"></Static>
+					<Button Enable="FALSE" Height="20" Id="btnGetNUM1" ImageID="button_style2_search" Left="188" OnClick="fnMasterButton_Click" TabOrder="6" Text="Button0" Top="259" Width="25"></Button>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="COI_WRT_NUM" Height="21" Id="A_COI_WRT_NUM" Left="108" TabOrder="5" Top="259" Width="77"></Edit>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="ADDR_TEL_NUM" Height="21" Id="A_ADDR_TEL_NUM" Left="108" TabOrder="10" Top="342" Width="84"></Edit>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="REP_NM_KOR" Height="21" Id="A_REP_NM_KOR" Left="108" TabOrder="8" Top="312" Width="85"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static14" Left="31" TabOrder="10" Text="영업소소재지" Top="374" Width="71"></Static>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="ADDR_ADDR" Height="21" Id="A_ADDR_ADDR" Left="151" TabOrder="12" Top="371" Width="233"></Edit>
+					<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="12" TabOrder="13" TabStop="FALSE" Top="258" Width="16"></Image>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="12" TabOrder="13" TabStop="FALSE" Top="311" Width="16"></Image>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="194" TabOrder="13" TabStop="FALSE" Top="313" Width="15"></Image>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="12" TabOrder="13" TabStop="FALSE" Top="340" Width="16"></Image>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="194" TabOrder="13" TabStop="FALSE" Top="340" Width="16"></Image>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="12" TabOrder="13" TabStop="FALSE" Top="370" Width="16"></Image>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="REP_NM_HAN" Height="21" Id="A_REP_NM_HAN" Left="294" TabOrder="9" Top="312" Width="90"></Edit>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="ADDR_DETAIL_ADDR" Height="21" Id="A_ADDR_DETAIL_ADDR" Left="108" TabOrder="13" Top="395" Width="276"></Edit>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="NAME" Height="21" Id="A_NAME" Left="108" TabOrder="7" Top="285" Width="277"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="11" Id="Static1" Left="31" TabOrder="13" Text="상&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;호" Top="290" Width="85"></Static>
+					<Image Height="16" Id="Image14" ImageID="arrow_small_white" Left="12" TabOrder="13" Top="287" Width="16"></Image>
+					<Edit BindDataset="dsPT_ACOMPANY" Column="ADDR_POST_NUM" Height="21" Id="A_ADDR_POST_NUM" Left="108" TabOrder="11" Top="371" Width="40"></Edit>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="64" Id="Static4" Left="6" ShadowColor="#cccccc" TabOrder="39" Text="합병업체정보" Top="19" Type="Groupbox" Width="751"></Static>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="17" TabOrder="25" TabStop="FALSE" Top="47" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="17" Id="Static6" Left="36" TabOrder="41" Text="접&#32;수&#32;번&#32;호" Top="50" Width="72"></Static>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="RECV_NUM" Height="21" Id="RECV_NUM" Left="108" MaxLength="12" TabOrder="1" Top="46" Width="80"></Edit>
+					<Image Height="16" Id="Image25" ImageID="arrow_small_white" Left="286" TabOrder="26" TabStop="FALSE" Top="47" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static28" Left="310" TabOrder="44" Text="접&#32;수&#32;일&#32;자" Top="51" Width="72"></Static>
+					<Calendar BindDataset="dsPT_R_UNION_STATEMENT" Column="RECV_DT" Height="21" Id="RECV_DT" Left="389" OnChanged="tbMain_tpBase_RECV_DT_OnChanged" OnKillFocus="tbMain_tpBase_RECV_DT_OnKillFocus" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="3" Top="47" Value="TODAY" Width="91"></Calendar>
+					<Image Height="16" Id="Image26" ImageID="arrow_small_white" Left="510" TabOrder="27" TabStop="FALSE" Top="47" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static29" Left="534" TabOrder="47" Text="처&#32;리&#32;기&#32;간" Top="51" Width="72"></Static>
+					<Calendar BindDataset="dsPT_R_UNION_STATEMENT" Column="PROC_LIM" Height="21" Id="PROC_LIM" Left="613" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="4" Top="46" Width="96"></Calendar>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReceiptNum" ImageID="button_style2_120" Left="189" OnClick="fnMasterButton_Click" Style="button_style01" TabOrder="2" Text="중복체크" Top="46" Width="67"></Button>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="225" Id="Static0" Left="414" ShadowColor="#cccccc" TabOrder="50" Text="합병&#32;후&#32;존속&#32;또는&#32;설립된&#32;법인" Top="93" Type="Groupbox" Width="344"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnSelComp1" ImageID="button_style2_120" Left="215" OnClick="btnSelComp_OnClick" Style="button_style01" TabOrder="30" Text="선&#32;택" Top="258" Width="67"></Button>
+					<Image Height="16" Id="Image24" ImageID="arrow_small_white" Left="422" TabOrder="20" TabStop="FALSE" Top="179" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static27" Left="441" TabOrder="24" Text="사업자등록번호" Top="183" Width="90"></Static>
+					<Image Height="16" Id="Image23" ImageID="arrow_small_white" Left="422" TabOrder="21" TabStop="FALSE" Top="256" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static26" Left="438" TabOrder="27" Text="영업소소재지" Top="258" Width="77"></Static>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_ADDR_POST_NUM" Height="21" Id="ESTA_ADDR_POST_NUM" Left="534" MaxLength="6" TabOrder="18" Top="253" Width="44"></Edit>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_REP_NM_HAN" Height="21" Id="ESTA_REP_NM_HAN" Left="534" MaxLength="20" TabOrder="17" Top="227" Width="144"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static9" Left="438" TabOrder="30" Text="대표자(한자)" Top="237" Width="80"></Static>
+					<Image Height="16" Id="Image7" ImageID="arrow_small_white" Left="422" TabOrder="22" TabStop="FALSE" Top="234" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static10" Left="441" TabOrder="32" Text="대표자(한글)" Top="161" Width="77"></Static>
+					<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="422" TabOrder="23" TabStop="FALSE" Top="156" Width="16"></Image>
+					<Image Height="16" Id="Image6" ImageID="arrow_small_white" Left="422" TabOrder="24" TabStop="FALSE" Top="134" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static7" Left="441" TabOrder="35" Text="상&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;호" Top="139" Width="80"></Static>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_NAME" Height="21" Id="ESTA_NAME" Left="534" MaxLength="50" TabOrder="16" Top="133" Width="160"></Edit>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_ADDR_DETAIL_ADDR" Height="21" Id="ESTA_ADDR_DETAIL_ADDR" Left="534" MaxLength="100" TabOrder="20" Top="277" Width="216"></Edit>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_ADDR_ADDR" Height="21" Id="ESTA_ADDR_ADDR" Left="582" MaxLength="100" TabOrder="19" Top="253" Width="168"></Edit>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_WRT_NUM" Height="21" Id="ESTA_WRT_NUM" Left="534" MaxLength="12" Readonly="TRUE" TabOrder="14" Top="108" Width="160"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static30" Left="441" TabOrder="52" Text="등&#32;록&#32;번&#32;호" Top="116" Width="80"></Static>
+					<Image Height="16" Id="Image27" ImageID="arrow_small_white" Left="422" TabOrder="28" TabStop="FALSE" Top="111" Width="16"></Image>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_ADDR_TEL_NUM" Height="21" Id="ESTA_ADDR_TEL_NUM" Left="534" MaxLength="17" TabOrder="15" Top="206" Width="144"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static11" Left="438" TabOrder="55" Text="전&#32;화&#32;번&#32;호" Top="215" Width="72"></Static>
+					<Image Height="16" Id="Image9" ImageID="arrow_small_white" Left="422" TabOrder="29" TabStop="FALSE" Top="214" Width="16"></Image>
+					<MaskEdit BindDataset="dsPT_ACOMPANY" Column="MANA_NUM" Height="22" Id="A_MANA_NUM" Left="294" Mask="###-##-#####" MaxLength="13" TabOrder="59" Top="343" Type="STRING" Width="90"></MaskEdit>
+					<MaskEdit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_MANA_NUM" Height="21" Id="ESTA_MANA_NUM" Left="534" Mask="###-##-#####" MaxLength="13" TabOrder="60" Top="182" Type="STRING" Width="94"></MaskEdit>
+					<Edit BindDataset="dsPT_R_UNION_STATEMENT" Column="ESTA_REP_NM_KOR" Height="21" Id="ESTA_REP_NM_KOR" Left="534" MaxLength="20" TabOrder="61" Top="156" Width="93"></Edit>
+					<Grid BindDataset="dsPT_ACOMPANY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="250" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="136" Id="grdMemo" InputPanel="FALSE" Left="14" LineColor="user9" OnCellClick="tbMain_tpBase_grdMemo_OnCellClick" Right="390" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="62" TabStop="true" Top="114" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="376">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="29"/>
+									<col width="29"/>
+									<col width="29"/>
+									<col width="83"/>
+									<col width="153"/>
+									<col width="80"/>
+								</columns>
+								<head>
+									<cell col="0" display="text"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="선택"/>
+									<cell bkcolor="#787878" col="2" color="white" display="checkbox" edit="checkbox"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" text="등록번호"/>
+									<cell bkcolor="#787878" col="4" color="white" display="text" text="상호명"/>
+									<cell bkcolor="#787878" col="5" color="white" display="text" text="대표자"/>
+								</head>
+								<body>
+									<cell bkimageid='expr:decode(PCOM_SELECT,&quot;1&quot;,&quot;radio_enable&quot;,&quot;radio_disable&quot;)' col="0" display="text" Valign="Center"/>
+									<cell align="center" col="1" display="text" expr='decode(PCOM_SELECT,&quot;1&quot;,&quot;▶&quot;,&#32;&quot;&quot;)' Valign="Center"/>
+									<cell col="2" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="3" colid="COI_WRT_NUM" display="text"/>
+									<cell col="4" colid="NAME" display="text"/>
+									<cell col="5" colid="REP_NM_KOR" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Image Height="32" Id="Image10" ImageID="button_bg" Left="54" TabOrder="68" Top="428" Width="330"></Image>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoInsert" ImageID="button_style2_100" Left="59" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="64" Text="입&#32;&#32;력" Top="434" Width="57"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoModify" ImageID="button_style2_100" Left="125" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="65" Text="수&#32;&#32;정" Top="434" Width="57"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoCancel" ImageID="button_style2_100" Left="190" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="67" Text="취&#32;&#32;소" Top="433" Width="57"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoRemove" ImageID="button_style2_100" Left="254" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="66" Text="삭&#32;&#32;제" Top="433" Width="57"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoSave" ImageID="button_style2_100" Left="319" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="63" Text="저&#32;&#32;장" Top="433" Width="57"></Button>
+				</TabPage>
+				<TabPage BorderColor="black" Height="480" Id="tpPaper" ImageID="tab_style_100" Left="2" TabOrder="51" Text="흠결검토" Top="28" Width="775">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="214" Id="Static0" Left="6" ShadowColor="#cccccc" TabOrder="1" Text="흠결검토" Top="14" Type="Groupbox" Width="749"></Static>
+					<Grid BindDataset="dsPT_R_DEFICIT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="212" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadBorder="Flat" HeadHeight="20" Height="168" Id="grdPaper" InputPanel="FALSE" Left="30" LineColor="user9" OnHeadClick="fnLocalGridHead_Click" Right="730" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="2" TabStop="true" Top="44" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="700">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="657"/>
+									<col width="42"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="흠&#32;결&#32;검&#32;토&#32;내&#32;용"/>
+									<cell bkcolor="#787878" col="1" color="white" display="checkbox" edit="checkbox" text="확인"/>
+								</head>
+								<body>
+									<cell col="0" colid="CONT" display="text"/>
+									<cell col="1" colid="DEFI_OUT" display="checkbox" edit="checkbox"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="217" Id="Static1" Left="4" ShadowColor="#cccccc" TabOrder="3" Text="메&#32;&#32;모" Top="233" Type="Groupbox" Width="749"></Static>
+					<Grid BindDataset="dsPT_R_MEMO" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="441" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="176" Id="grdMemo" InputPanel="FALSE" Left="364" LineColor="user9" OnHeadClick="fnGridHead_Click" Right="741" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="4" TabStop="true" Top="265" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="377">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="258"/>
+									<col width="79"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="메&#32;모&#32;내&#32;용"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="작성일"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="MEMO_CONT" display="text"/>
+									<cell col="2" colid="WRT_DT" display="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static2" Left="39" TabOrder="5" Text="작성일자" Top="268" Width="55"></Static>
+					<Calendar BindDataset="dsPT_R_MEMO" Column="WRT_DT" Height="21" Id="INS_DT" Left="96" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="6" Top="264" Value="TODAY" Width="85"></Calendar>
+					<TextArea BindDataset="dsPT_R_MEMO" CheckLength="Byte" Column="MEMO_CONT" Height="99" Id="MEMO_CONTENT" Left="14" MaxLength="512" TabOrder="7" Top="310" Width="332"></TextArea>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static3" Left="39" TabOrder="8" Text="메모내용" Top="289" Width="55"></Static>
+					<Static Height="40" Id="Static4" Left="14" TabOrder="9" Top="404" Type="Groupbox" Width="332"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoInsert" ImageID="button_style2_60" Left="22" OnClick="fnDetailButton_Click" Style="button_style01" TabOrder="10" Text="입&#32;&#32;력" Top="417" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoModify" ImageID="button_style2_60" Left="86" OnClick="fnDetailButton_Click" Style="button_style01" TabOrder="11" Text="수&#32;&#32;정" Top="417" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoRemove" ImageID="button_style2_60" Left="214" OnClick="fnDetailButton_Click" Style="button_style01" TabOrder="12" Text="삭&#32;&#32;제" Top="417" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoSave" ImageID="button_style2_60" Left="278" OnClick="fnDetailButton_Click" Style="button_style01" TabOrder="13" Text="저&#32;&#32;장" Top="417" Width="60"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnMemoCancel" ImageID="button_style2_60" Left="150" OnClick="fnDetailButton_Click" Style="button_style01" TabOrder="14" Text="취&#32;&#32;소" Top="417" Width="60"></Button>
+					<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="19" TabOrder="15" Top="263" Width="16"></Image>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="19" TabOrder="16" Top="286" Width="16"></Image>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="4" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="26" Id="Image3" ImageID="tab_style_bg" Left="257" TabOrder="6" Top="104" Width="542"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : UnionReceiptMgrC.xml
+2. 작성일 : 2009-04-02
+3. 작성자 : Y.D. JEONG
+4. 기  능 : 합병 기본정보 입력
+5. 변경이력
+  가. 2009-04-02 최초작성 (Y.D. JEONG)
+*/
+
+#include "UserLib::CommonJs.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var _sWorkFlag;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = _sWorkFlag;
+
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnInsert();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		fnModify();
+	}
+	
+	
+	fnInitMemoGroup("INQUIRY");
+	
+	divButtonBar.Image1.text = space(6) + "공사업체 합병 접수";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(false, this);
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = false;
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(3, false);
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;		
+		divButtonBar.btnList.enable = true;		
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(false,this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		
+		fnControlState(true, this.tbMain.tpBase,"btnReceiptNum");
+		fnControlState(true, this.tbMain.tpBase,"RECV_NUM");
+		fnControlState(true, this.tbMain.tpBase,"btnGetNUM1");
+		fnControlState(true, this.tbMain.tpBase,"btnGetNUM2");
+	}
+	else
+	{
+		fnAllControlState(true, this);
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		
+		fnControlState(false, this.tbMain.tpBase, "RECV_NUM");
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "CHECK=MODIFY  RECV_NUM=" + quote(_sKEY1) + " scSIDO_CODE=" + global.g_Sd_cd;
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_DEFICIT=dsPT_R_DEFICIT dsPT_R_UNION_STATEMENT=dsPT_R_UNION_STATEMENT";
+		sOutDs +=" dsPT_R_MEMO=dsPT_R_MEMO dsPT_ACOMPANY=dsPT_ACOMPANY dsPT_PCOMPANY=dsPT_PCOMPANY" ;
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	http.sync = false;
+	
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		if (svcid == "SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+		if(svcid == "MEMO_SAVE")
+		{
+			alert('메모 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+	
+	if (svcid == "CHECK_KEY")
+	{
+		if (dsCheckKey.rowcount > 0)
+		{
+			alert('존재하는 민원접수번호입니다.');
+			tbMain.tpBase.RECV_NUM.Text = "";
+			tbMain.tpBase.RECV_NUM.SetFocus();
+		}
+		else
+		{
+			dsPT_R_UNION_STATEMENT.SetColumn(0, "SIDO_CODE", global.g_Sd_cd);
+			
+			var sArgs = "workMODE=CHECK";	
+			var sTid = "INSERT_SAVE";
+			var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrCCUD";
+			var sInDs = "dsPT_R_UNION_STATEMENT=dsPT_R_UNION_STATEMENT:u";
+			var sOutDs = "";
+			var sCallBack = "fn_CallBack";
+			
+			Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		}
+	}
+	if (svcid == "SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInquiry();
+	}
+	
+	if (svcid == "GET_CODE")
+	{
+		fnInitButtonBar();	
+		dsPT_R_UNION_STATEMENT.AddRow();
+				
+		tbMain.tpBase.RECV_DT.Value = Today();
+		var thisToDay = tbMain.tpBase.RECV_DT.Value;			
+		tbMain.tpBase.PROC_LIM.Value = fromDayAfter(thisToDay,5,60,"div");
+	}
+		
+	if(svcid == "GET_NUM1")
+	{
+		//dsPT_R_UNION_STATEMENT.SetColumn(0,"UNIO_TMP_WRT_NUM_1",dsPT_ACOMPANY.GetColumn(0,"COI_WRT_NUM"));
+		dsPT_R_UNION_STATEMENT.SetColumn(0,"ASC_TMP_WRT_NUM",dsPT_ACOMPANY.GetColumn(0,"TMP_WRT_NUM"));
+	}	
+	
+	if( svcid == "GET_NUM2")
+	{
+		//dsPT_R_UNION_STATEMENT.SetColumn(0,"UNIO_TMP_WRT_NUM_2",dsPT_PCOMPANY.GetColumn(0,"COI_WRT_NUM"));
+		dsPT_R_UNION_STATEMENT.SetColumn(0,"HANDED_TMP_WRT_NUM",dsPT_PCOMPANY.GetColumn(0,"TMP_WRT_NUM"));
+	}
+		
+	if (svcid == "INSERT_SAVE")
+	{
+		global.gv_WorkFlag = global.gv_MODIFY;
+		
+		fnInitButtonBar();		
+		var sGroup;
+		var nIndex = 0;
+		
+		this.tbMain.tpBase.RECV_DT.Value=TODAY();
+		//this.tbMain.tpBase.PROC_LIM.Value=AddDate(TODAY(), +7); //합병 당일을 뺀 만 5일 (토일 제외)
+		//wbjeon 2010-09-30 수정 
+		var thisToDay = this.tbMain.tpBase.RECV_DT.Value;			
+		this.tbMain.tpBase.PROC_LIM.Value = fromDayAfter(thisToDay,5,60,"div");
+				
+		
+		for(var nLoop = 0; nLoop < dsPT_R_DEFICIT_CODE.rowcount; nLoop++)
+		{
+			sGroup = dsPT_R_DEFICIT_CODE.GetColumn(nLoop, "DEFI_GROUP");
+			
+			if (sGroup == "GUBU")
+			{
+				dsPT_R_DEFICIT.AddRow();
+				dsPT_R_DEFICIT.SetColumn(nIndex, "RECV_NUM", tbmain.tpBase.RECV_NUM.Text);
+				dsPT_R_DEFICIT.SetColumn(nIndex, "DEFI_SEQ", nIndex + 1);
+				dsPT_R_DEFICIT.SetColumn(nIndex, "SIDO_CODE", global.g_Sd_cd);
+				dsPT_R_DEFICIT.SetColumn(nIndex, "DEFI_CODE", dsPT_R_DEFICIT_CODE.GetColumn(nLoop, "DEFI_CODE"));
+				dsPT_R_DEFICIT.SetColumn(nIndex, "CONT", dsPT_R_DEFICIT_CODE.GetColumn(nLoop, "CONT"));
+				dsPT_R_DEFICIT.SetColumn(nIndex, "DEFI_GROUP", dsPT_R_DEFICIT_CODE.GetColumn(nLoop, "DEFI_GROUP"));
+				
+				nIndex++;
+			}
+		}	
+			
+		var sArgs = "workMODE=ALL";
+		var sTid = "SET_CODE";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrCCUD";
+		var sInDs = "dsPT_R_DEFICIT=dsPT_R_DEFICIT:u";
+		var sOutDs = "dsPT_R_DEFICIT=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	
+
+	if (svcid == "MEMO_SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInitMemoGroup("INQUIRY");
+	}
+	if (svcid == "MEMO_DELETE")
+	{
+		alert('삭제되었습니다.');
+		fnInitMemoGroup("INQUIRY");
+	}
+	
+	if (svcid == "SET_CODE")
+	{
+		dsPT_R_DEFICIT.ApplyChange();
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	global.gv_WorkFlag = global.gv_INSERT;
+	
+	var sArgs = "CHECK=CODE";
+	var sTid = "GET_CODE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_DEFICIT_CODE=dsPT_R_DEFICIT_CODE";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnCancel()
+{
+	if(!Confirm('취소하시겠습니까?')) return;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		//키값을 자동으로 생성할 경우 삭제하는 로직을 추가해주세요
+		Close();
+	}
+	else
+	{
+		fnRejectChange(dsPT_R_UNION_STATEMENT);
+		fnRejectChange(dsPT_R_MEMO);
+		//dsPT_R_DEFICIT.DeleteAll();
+		//dsPT_R_UNION_STATEMENT.DeleteAll();
+		//dsPT_ACOMPANY.DeleteAll();
+		//dsPT_PCOMPANY.DeleteAll();
+		alert('취소되었습니다.');	
+	}
+
+	fnInquiry();
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{	
+	fnTablesBinding();	
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+	
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	if (!fnValidation()) return;
+	
+	var sArgs = "workMODE=ALL";
+	var sTid = "SAVE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrCCUD";
+	var sInDs = "dsPT_R_UNION_STATEMENT=dsPT_R_UNION_STATEMENT:u dsPT_R_DEFICIT=dsPT_R_DEFICIT:u";
+	var sOutDs = "dsPT_R_UNION_STATEMENT=dsPT_R_UNION_STATEMENT dsPT_R_DEFICIT=dsPT_R_DEFICIT";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{
+}
+
+function fnValidation()
+{
+	var nIndex = 0;
+	dsError.DeleteAll();
+	/*
+	if(DateTime(tbMain.tpBase.REC_DATE.Value) > DateTime(tbMain.tpBase.STATE_PERIOD.Value))
+	{
+		dsError.AddRow();
+		dsError.SetColumn(nIndex, "FLD_NAME", "STATE_PERIOD");
+		dsError.SetColumn(nIndex, "TEXT", "민원처리일자가 민원접수일자보다 작습니다.");
+		
+		nIndex++;
+	}
+	*/
+	
+	if (ToNumber(fromDayAfter(replace(tbMain.tpBase.RECV_DT.Value,'-',''),5,0,"div")) < ToNumber(replace(tbMain.tpBase.PROC_LIM.Value,"-","")))
+	//if(fromDayAfter(tbMain.tpBase.PROC_LIM.Value,-5,60,"div") != replace(ToString(DateTime(tbMain.tpBase.RECV_DT.Value)),"-",""))
+	{
+		//dsError.AddRow();
+		//dsError.SetColumn(nIndex, "FLD_NAME", "STATE_PERIOD");
+		//dsError.SetColumn(nIndex, "TEXT", "민원처리일자가 14일을 초과합니다.");
+		alert("민원처리일자가 5일을 초과합니다.");
+		//nIndex++;
+	}
+
+	//var nErrCnt = 0;
+	for(var nLoop = 0; nLoop < dsPT_R_DEFICIT.rowcount; nLoop++)
+	{
+		if(dsPT_R_DEFICIT.GetColumn(nLoop, "DEFI_OUT") != "1")
+		{
+			//nErrCnt++;
+			dsError.AddRow();
+			dsError.SetColumn(nIndex, "FLD_NAME", "grdPaper");
+			dsError.SetColumn(nIndex, "TEXT", "흠결이 완료되지 않았습니다.");
+			nIndex++;
+			break;
+		}
+	}
+	
+	// 2010.04.27
+	// 피합병업체 2곳중 1곳을 선택하는게 아닌 제3의 신생업체가 생성되는 부분은 협의가 필요하다.
+	// 우선 접수시 제3의 신생업체 부분을 막는다.
+	// UnionMgrC 에는 완벽치 않지만 신생업체 생성부분의 코드가 있다.
+	
+	// 존속법인등록번호 선택 했는지 여부
+	if( fnEmpty( dsPT_R_UNION_STATEMENT.GetColumn( 0, "ESTA_TMP_WRT_NUM" ) ) ) {
+		dsError.AddRow();
+		dsError.SetColumn(nIndex, "FLD_NAME", "ESTA_WRT_NUM");
+		dsError.SetColumn(nIndex, "TEXT", "존속법인이 선택되지 않았습니다.");
+		nIndex++;
+	}
+	
+	if (nIndex == 0) dsPT_R_UNION_STATEMENT.SetColumn(0, "DEFI_STE", "O");
+	else dsPT_R_UNION_STATEMENT.SetColumn(0, "DEFI_STE", "X");
+	
+	if (nIndex > 0)
+	{
+		var nRet = fnCreateDialog("cm::frmErrorDLG.xml", "");
+		if (nRet < 0) return true;
+		else 
+		{
+			fnFindComponent(this, dsError.GetColumn(nRet, "FLD_NAME"));
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else if (obj == divButtonBar.btnList) fnList();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// 코드 조회용 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnEditButton_Click
+ 2. 기  능 : 에디트 버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnEditButton_Click(obj)
+{
+
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+}
+
+//////////////////////////////////////////////////////////////////
+// Validation check 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnKillFocus
+ 2. 기  능 : Control Leave 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnKillFocus(obj)
+{
+	if (fnDisplayErrorMsg(obj)) return;
+	
+	//Control Leave이벤트 발생시 입력 항목 점검
+	if (obj == tbMain.tpBase.RECV_NUM)
+	{
+		if(global.gv_WorkFlag == global.gv_INSERT)
+		{
+		
+			dsCheckKey.DeleteAll();			
+			var sArgs = "RECV_NUM=" + tbMain.tpBase.RECV_NUM.Text + " CHECK=TRUE";
+			var sTid = "CHECK_KEY";
+			var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+			var sInDs = "";
+			var sOutDs = "dsCheckKey=dsCheckKey";
+			var sCallBack = "fn_CallBack";
+			
+			Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		}
+		
+		
+	}
+
+	/*if (obj == tbMain.tpBase.STATE_PERIOD)
+	{
+		if(DateTime(tbMain.tpBase.REC_DATE.Value) > DateTime(obj.Value))
+		{
+			alert('민원처리일자가 민원접수일자보다 작습니다.');
+		}
+		
+		if((DateTime(obj.Value) - DateTime(tbMain.tpBase.REC_DATE.Value)) > 14)
+		{
+			alert('민원처리일자가 14일을 초과합니다.');
+		}
+	}*/
+}
+
+//////////////////////////////////////////////////////////////////
+// On Focus 이벤트
+//////////////////////////////////////////////////////////////////
+function fnComponent_OnFocus(obj)
+{
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// Memo Detail Event
+//////////////////////////////////////////////////////////////////
+function fnDetailButton_Click(obj)
+{
+	var sDtWorkFlag;
+	
+	if(obj == tbMain.tpPaper.btnMemoInsert)
+	{
+		sDtWorkFlag = global.gv_INSERT;
+		dsPT_R_MEMO.AddRow();
+		dsPT_R_MEMO.SetColumn(dsPT_R_MEMO.row, "RECV_NUM", tbMain.tpBase.RECV_NUM.Text);
+		dsPT_R_MEMO.SetColumn(dsPT_R_MEMO.row, "MEMO_SEQ", dsPT_R_MEMO.rowcount);
+		dsPT_R_MEMO.SetColumn(dsPT_R_MEMO.row, "SIDO_CODE", global.g_Sd_cd);
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpPaper.btnMemoModify)
+	{
+		sDtWorkFlag = global.gv_MODIFY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpPaper.btnMemoRemove)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		dsPT_R_MEMO.ApplyChange();
+		var nCount = fnGridRowRemove(dsPT_R_MEMO);
+		
+		if(nCount == 0)
+		{
+			alert('삭제할 데이터를 선택하세요.');
+			return;
+		}
+		
+		var sArgs = "workMODE=MEMO";
+		var sTid = "MEMO_DELETE";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrCCUD";
+		var sInDs = "dsPT_R_MEMO=dsPT_R_MEMO:u";
+		var sOutDs = "dsPT_R_MEMO=dsPT_R_MEMO";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if (obj == tbMain.tpPaper.btnMemoCancel)
+	{
+		if (dsPT_R_MEMO.GetRowType(dsPT_R_MEMO.row) == "insert")
+			dsPT_R_MEMO.DeleteRow(dsPT_R_MEMO.row);
+
+		else
+			fnRejectChange(dsPT_R_MEMO);
+		
+		sDtWorkFlag = global.gv_INQUIRY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpPaper.btnMemoSave)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		var sArgs = "workMODE=MEMO";	
+		var sTid = "MEMO_SAVE";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrCCUD";
+		var sInDs = "dsPT_R_MEMO=dsPT_R_MEMO:u";
+		var sOutDs = "dsPT_R_MEMO=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnInitMemoGroup(sDtWorkFlag)
+{
+	if(sDtWorkFlag == global.gv_INQUIRY)
+	{
+		fnControlState(false, tbMain.tpPaper, "WRT_DT,MEMO_CONTENT");
+		fnControlState(true, tbMain.tpPaper, "grdMemo");
+		
+		tbMain.tpPaper.btnMemoInsert.Enable = true;
+		tbMain.tpPaper.btnMemoModify.Enable = true;
+		tbMain.tpPaper.btnMemoRemove.Enable = true;
+		tbMain.tpPaper.btnMemoSave.Enable = false;
+		tbMain.tpPaper.btnMemoCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_INSERT)
+	{
+		fnControlState(true, tbMain.tpPaper, "WRT_DT,MEMO_CONTENT");
+		fnControlState(false, tbMain.tpPaper, "grdMemo");
+		
+		tbMain.tpPaper.btnMemoInsert.Enable = false;
+		tbMain.tpPaper.btnMemoModify.Enable = false;
+		tbMain.tpPaper.btnMemoRemove.Enable = false;
+		tbMain.tpPaper.btnMemoSave.Enable = true;
+		tbMain.tpPaper.btnMemoCancel.Enable = true;
+	}
+	else if(sDtWorkFlag == global.gv_MODIFY)
+	{
+		fnControlState(true, tbMain.tpPaper, "WRT_DT,MEMO_CONTENT");
+		fnControlState(false, tbMain.tpPaper, "grdMemo");
+		
+		tbMain.tpPaper.btnMemoInsert.Enable = false;
+		tbMain.tpPaper.btnMemoModify.Enable = false;
+		tbMain.tpPaper.btnMemoRemove.Enable = false;
+		tbMain.tpPaper.btnMemoSave.Enable = true;
+		tbMain.tpPaper.btnMemoCancel.Enable = true;
+	}
+}
+
+
+function fnMasterButton_Click(obj)
+{
+	if (obj == tbMain.tpBase.btnReceiptNum)
+	{
+		fnCheckReceiptNum(obj);
+	}
+	
+	if (obj == tbMain.tpBase.btnGetNUM1)
+	{
+		var sArgs = "";
+		
+		var sReturn = fnCreateDialog("bas::CMStD.xml", sArgs);
+	
+		if (sReturn == null || sReturn.length() == 0) return;
+
+		_sKEY1 = sReturn[0];
+		_sKEY2 = sReturn[1];
+		
+
+		sArgs = "workMODE=ACTIVE scTMP_WRT_NUM=" + _sKEY2 + " CHECK=FALSE";
+		var sTid = "GET_NUM1";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+		var sInDs = "";
+		var sOutDs = "dsPT_ACOMPANY=dsPT_COMPANY";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if(obj == tbMain.tpBase.btnGetNUM2)
+	{
+		var sArgs = "";
+		
+		var sReturn = fnCreateDialog("bas::CMStD.xml", sArgs);
+		
+		if (sReturn == null || sReturn.length() == 0) return;
+
+		_sKEY1 = sReturn[0];
+		_sKEY2 = sReturn[1];
+
+
+		sArgs = "workMODE=PASSIVE scTMP_WRT_NUM=" + _sKEY2 + " CHECK=FALSE";
+		var sTid = "GET_NUM2";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+		var sInDs = "";
+		var sOutDs = "dsPT_PCOMPANY=dsPT_COMPANY";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+	}
+	
+}
+
+function fnCheckReceiptNum()
+{
+	if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+	
+		if(fnEmpty(tbMain.tpBase.RECV_NUM.Text))
+		{
+			alert('접수번호를 입력하세요.');
+			return;
+		}
+			
+		dsCheckKey.DeleteAll();			
+		
+		var sArgs = "RECV_NUM=" + tbMain.tpBase.RECV_NUM.Text + " CHECK=TRUE scSIDO_CODE=" + global.g_Sd_cd;
+		var sTid = "CHECK_KEY";
+		var sUrl = "ICCS::cm/CmAction.do?cmd=UnionReceiptMgrC";
+		var sInDs = "";
+		var sOutDs = "dsCheckKey=dsCheckKey";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}		
+}
+
+function fnLocalGridHead_Click(obj,nCell,nX,nY,nPivotIndex)
+{
+	var objDs = obj.BindDataset;
+
+	if (object(objDs).RowCount() == 0)
+		return;
+	 
+	if (obj.GetCellProp("head", nCell, "edit") == "checkbox")
+	{
+		if(obj.GetCellProp("head", nCell, "text") == "1")
+		{
+			obj.SetCellProp("head", nCell, "text", "0");
+			fnSetGridCheck(0, objDs, "DEFI_OUT");
+		}
+		else
+		{
+			obj.SetCellProp("head", nCell, "text", "1");
+			fnSetGridCheck(1, objDs, "DEFI_OUT");
+		}
+		
+		//object(objDs).ApplyChange();
+	}
+	else
+	{
+		for(var nLoop = 0; nLoop < obj.GetColCount(); nLoop++)
+		{
+			//alert(nLoop + '===' + nCell);
+			if(nLoop == nCell) continue;
+			
+			obj.SetCellProp("head", nLoop, "text", replace(obj.GetCellProp("head", nLoop, "text"), "▼", ""));
+			obj.SetCellProp("head", nLoop, "text", replace(obj.GetCellProp("head", nLoop, "text"), "▲", ""));
+		}
+		
+		var sHeadName = obj.GetCellProp("head", nCell, "text");
+		var sColName = obj.GetCellProp("body", nCell, "colid");
+		
+		if (right(sHeadName, 1) == "▼") 
+		{
+			object(objDs).Sort(sColName, true);
+			obj.SetCellProp("head", nCell, "text", replace(sHeadName, "▼", "▲"));
+		}
+		else if (right(sHeadName, 1) == "▲") 
+		{
+			object(objDs).Sort(sColName, false);
+			obj.SetCellProp("head", nCell, "text", replace(sHeadName, "▲", "▼"));
+		}
+		else
+		{
+			object(objDs).Sort(sColName, true);
+			obj.SetCellProp("head", nCell, "text", sHeadName + "▼");
+		}
+	}
+}
+function UnionReceiptMgrC_OnDeactivate(obj)
+{
+	if (global.gv_WorkFlag == global.gv_INSERT || global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		if (this.dsPT_R_UNION_STATEMENT.GetUpdate())
+		{
+			if(!Confirm('입력중인 데이터가 저장되지 않았습니다.\n\n      저장하시겠습니까?')) return;
+			http.sync = true;
+			fnSave();
+		}
+	}		
+}
+
+function tbMain_tpBase_RECV_DT_OnKillFocus(obj)
+{
+	//접수일자 선택 시 처리기한을 5일 이후로 설정
+	if (obj == tbMain.tpBase.RECV_DT)
+	{
+		//tbMain.tpBase.PROC_LIM.Value = AddDate(tbMain.tpBase.RECV_DT.Value, 5);
+		var thisToDay = tbMain.tpBase.RECV_DT.Value;			
+		tbMain.tpBase.PROC_LIM.Value = fromDayAfter(thisToDay,5,60,"div");
+	}
+}
+
+function btnSelComp_OnClick(obj)
+{	
+	var cnt = 0;
+	
+	if(obj.id == "btnSelComp1") {
+		cnt = dsPT_COMPANY_TMP.Copy(dsPT_ACOMPANY);
+	} else {
+		cnt = dsPT_COMPANY_TMP.Copy(dsPT_PCOMPANY);
+	}
+	
+	if(cnt == 0) {
+		alert("공사업체에 대한 데이터가 비어있습니다!");
+		return;
+	}
+	
+	var OBJ_TMP = tbMain.tpBase;
+	
+	OBJ_TMP.ESTA_WRT_NUM.Value			= dsPT_COMPANY_TMP.GetColumn(0, "COI_WRT_NUM");
+	OBJ_TMP.ESTA_NAME.Value				= dsPT_COMPANY_TMP.GetColumn(0, "NAME");
+	OBJ_TMP.ESTA_REP_NM_KOR.Value		= dsPT_COMPANY_TMP.GetColumn(0, "REP_NM_KOR");
+	OBJ_TMP.ESTA_MANA_NUM.Value 		= dsPT_COMPANY_TMP.GetColumn(0, "MANA_NUM");
+	OBJ_TMP.ESTA_ADDR_TEL_NUM.Value		= dsPT_COMPANY_TMP.GetColumn(0, "ADDR_TEL_NUM");
+	OBJ_TMP.ESTA_REP_NM_HAN.Value		= dsPT_COMPANY_TMP.GetColumn(0, "REP_NM_HAN");
+	OBJ_TMP.ESTA_ADDR_POST_NUM.Value	= dsPT_COMPANY_TMP.GetColumn(0, "ADDR_POST_NUM");
+	OBJ_TMP.ESTA_ADDR_ADDR.Value		= dsPT_COMPANY_TMP.GetColumn(0, "ADDR_ADDR");
+	OBJ_TMP.ESTA_ADDR_DETAIL_ADDR.Value	= dsPT_COMPANY_TMP.GetColumn(0, "ADDR_DETAIL_ADDR");
+	
+	dsPT_R_UNION_STATEMENT.SetColumn(0, "ESTA_TMP_WRT_NUM", dsPT_COMPANY_TMP.GetColumn(0, "TMP_WRT_NUM") );
+}
+
+//////////////////////////////////////////////////////////////////
+//리스트 이동
+//////////////////////////////////////////////////////////////////
+function fnList(){
+	var sArgs = fnSearchInit("pscSIDO_CODE,pscDATE1,pscDATE2,pscRECV_NUM,pscESTA_COM_NAME,pscESTA_REP_NM");
+	sArgs += " pscMode=T _sKEY1="+_sKEY1;	
+	gfnCreateNewWindow("UnionReceiptMgr", "cm::UnionReceiptMgr.xml", sArgs);
+}
+function tbMain_tpBase_RECV_DT_OnChanged(obj,strOldText,strNewText)
+{
+	var thisToDay = tbMain.tpBase.RECV_DT.Value;			
+	tbMain.tpBase.PROC_LIM.Value = fromDayAfter(thisToDay,5,60,"div");
+}
+
+function tbMain_tpBase_grdMemo_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+    if(dsPT_ACOMPANY.getColumn(nRow,"PCOM_SELECT") == "1")
+    {
+		for (var i = 0; i <= dsPT_ACOMPANY.RowCount(); i++){
+			dsPT_ACOMPANY.setColumn(i,"PCOM_SELECT",0);
+		}
+	} else {
+		for (var i = 0; i <= dsPT_ACOMPANY.RowCount(); i++){
+			
+			if (i == nRow){
+				dsPT_ACOMPANY.setColumn(i,"PCOM_SELECT",1);
+			} else {
+				dsPT_ACOMPANY.setColumn(i,"PCOM_SELECT",0);
+			}
+		}	
+	}	
+
+}
+]]></Script>
+</Window>

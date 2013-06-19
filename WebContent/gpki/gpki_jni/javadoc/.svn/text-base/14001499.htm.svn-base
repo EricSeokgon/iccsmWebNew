@@ -1,0 +1,1157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>에러코드 (1400 ~ 1499)</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H3 id=_D2HTopic_149 
+style="MARGIN-LEFT: 34.8pt; TEXT-INDENT: -34.8pt; tab-stops: 0cm 34.8pt"><SPAN 
+style="FONT-FAMILY: 굴림">에러코드</SPAN> (1400 ~ 1499)</H3>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="13001399.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="15001599.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1400</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_READ_CERT</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체에서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는데</SPAN> <SPAN style="FONT-FAMILY: 굴림">실패</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>1. <SPAN style="FONT-FAMILY: 굴림">디스크에서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우에는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">존재하는지</SPAN>, <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽기</SPAN> <SPAN style="FONT-FAMILY: 굴림">권한이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P>
+      <P class=MsoNormal>2. <SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우에는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">시스템과</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">연결되어있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체의</SPAN> PIN<SPAN 
+      style="FONT-FAMILY: 굴림">값을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">올바르게</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">입력하였는지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1401</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_READ_PRIKEY</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">개인키를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체에서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는데</SPAN> <SPAN style="FONT-FAMILY: 굴림">실패</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>1. <SPAN style="FONT-FAMILY: 굴림">디스크에서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우에는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">개인키</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">존재하는지</SPAN>, <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽기</SPAN> <SPAN style="FONT-FAMILY: 굴림">권한이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P>
+      <P class=MsoNormal>2. <SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우에는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">시스템과</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">연결되어있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체의</SPAN> PIN<SPAN 
+      style="FONT-FAMILY: 굴림">값을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">올바르게</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">입력하였는지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1402</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_READ_FILE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는데</SPAN> <SPAN style="FONT-FAMILY: 굴림">실패</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>1. <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">존재하는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P>
+      <P class=MsoNormal>2. <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일에</SPAN> <SPAN style="FONT-FAMILY: 굴림">대한</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">읽기</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">권한이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1403</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_SAVE_FILE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN> </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>1. <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN style="FONT-FAMILY: 굴림">쓰기</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">권한이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P>
+      <P class=MsoNormal>2. <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">동일한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이름의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">디렉토리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">없는지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1404</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_EMPTY_FILE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">읽고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">비어있음</SPAN> </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경로의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">사이즈가</SPAN> 0<SPAN 
+      style="FONT-FAMILY: 굴림">이</SPAN> <SPAN style="FONT-FAMILY: 굴림">아닌지를</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1405</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_INVALID_STORAGE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">지원하지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">않는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">종류</SPAN> </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">함수</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">인자로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">종류</SPAN> <SPAN style="FONT-FAMILY: 굴림">값을</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1406</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_LOAD_LIBRARY</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">로드해야</SPAN> <SPAN style="FONT-FAMILY: 굴림">함</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>GPKI_STORAGE_Load() <SPAN 
+      style="FONT-FAMILY: 굴림">함수를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">로드한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1407</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_ALREADY_LOADED</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">이미</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">동적라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">로드되어</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있음</SPAN> </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>GPKI_STORAGE_Unload() <SPAN 
+      style="FONT-FAMILY: 굴림">함수를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">이용해</SPAN> <SPAN style="FONT-FAMILY: 굴림">이미</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">로드되어있는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해제한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1408</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FAIL_LOAD_LIBRARY</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">로드</SPAN> <SPAN style="FONT-FAMILY: 굴림">실패</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위치를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN style="FONT-FAMILY: 굴림">곳에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">존재하는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1409</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FAIL_FREE_LIBRARY</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해제</SPAN> <SPAN style="FONT-FAMILY: 굴림">실패</SPAN> 
+      </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">윈도우</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">용</SPAN> <SPAN style="FONT-FAMILY: 굴림">함수</SPAN> 
+      FreeLibrary()<SPAN style="FONT-FAMILY: 굴림">을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">사용하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패하였음</SPAN>. <SPAN 
+      style="FONT-FAMILY: 굴림">에러</SPAN> <SPAN style="FONT-FAMILY: 굴림">정보의</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">에러코드를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">통하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정확한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">원인을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파악한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1410</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FAIL_LOAD_FUNCTION</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">라이브러리로부터</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">특정</SPAN> <SPAN style="FONT-FAMILY: 굴림">함수</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">읽기</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN> </P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">메시지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">통하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">읽지</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">못한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">함수</SPAN> <SPAN style="FONT-FAMILY: 굴림">이름을</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">확인하고</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">로드한</SPAN> <SPAN style="FONT-FAMILY: 굴림">동적</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">모듈에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">함수가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">제공되는지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">함수가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">없다면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">표준보안</SPAN>API <SPAN 
+      style="FONT-FAMILY: 굴림">배포기관을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">통하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">해당</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">동적</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">모듈을</SPAN> <SPAN style="FONT-FAMILY: 굴림">다시</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">제공</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">받는다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1411</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_DELETE_FILE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">매체에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장되어있는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">특정</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일을</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">삭제하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">삭제하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">디스크에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장되어있는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이라면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">해당</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">대한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">접근</SPAN> <SPAN style="FONT-FAMILY: 굴림">권한을</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">삭제하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">스마트</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">카드에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장되어있다면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">에러</SPAN> <SPAN style="FONT-FAMILY: 굴림">정보를</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">확인하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정확한</SPAN> <SPAN style="FONT-FAMILY: 굴림">에러</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">원인을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1412</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_SAVE_CERT</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">디스크라면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">저장</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">권한이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">스마트</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">카드라면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">에러</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">메시지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정확한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">원인을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">학인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1413</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_SAVE_PRIKEY</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">개인키를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">디스크라면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치에</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">저장</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">권한이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">저장하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한</SPAN> <SPAN style="FONT-FAMILY: 굴림">위치가</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">스마트</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">카드라면</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">에러</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">메시지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인하여</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정확한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">원인을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">학인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1414</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_CHECK_CONNECTION</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">외부</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">꽂혀있지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">않음</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">사용하고자</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">하는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">저장매체가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정상적으로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">꽂혀있는지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1415</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_WRONG_PIN</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal>PIN<SPAN style="FONT-FAMILY: 굴림">번호가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">틀렸음</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">저장매체에</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">접근하기</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위해</SPAN> <SPAN style="FONT-FAMILY: 굴림">필요한</SPAN> 
+      PIN <SPAN style="FONT-FAMILY: 굴림">번호의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">값이</SPAN> <SPAN style="FONT-FAMILY: 굴림">틀리지</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">않았는지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>. </P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1416</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FILE_SEEK_END</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">끝을</SPAN> <SPAN style="FONT-FAMILY: 굴림">찾는데</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">실패함</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">대용량</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호</SPAN> <SPAN style="FONT-FAMILY: 굴림">처리를</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">입력한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일에</SPAN> <SPAN style="FONT-FAMILY: 굴림">대한</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">끝을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">찾는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정상적인지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1417</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FILE_SEEK_BEGIN</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">처음을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">찾는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패함</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">대용량</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호</SPAN> <SPAN style="FONT-FAMILY: 굴림">처리를</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">입력한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일에</SPAN> <SPAN style="FONT-FAMILY: 굴림">대한</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">처음을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">찾는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우로</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정상적인지를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1418</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FILE_SIZE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">파일을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">읽는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">암호</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">처리를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">정상적인지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1419</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FILE_CREATE</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">파일을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">생성하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">암호</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">처리</SPAN> <SPAN style="FONT-FAMILY: 굴림">후</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">생성되는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일을</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">생성하는데</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">실패</SPAN> <SPAN style="FONT-FAMILY: 굴림">함</SPAN>. 
+      <SPAN style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위치에</SPAN> <SPAN style="FONT-FAMILY: 굴림">파일</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">생성</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">권한이</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">있는지</SPAN> <SPAN style="FONT-FAMILY: 굴림">또는</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">디스크의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">남은</SPAN> <SPAN style="FONT-FAMILY: 굴림">용량이</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">충분한지</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">확인한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<TABLE 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse" 
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">에러코드</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=60>
+      <P class=MsoNormal>1420</P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: windowtext 0.5pt solid; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 355.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=474>
+      <P class=MsoNormal>ERR_FILE_SIZE_TOO_BIG</P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">설명</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">크기가</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">처리할</SPAN> <SPAN style="FONT-FAMILY: 굴림">수</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">있는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">범위를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">넘어섬</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 0.5pt solid; WIDTH: 76.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    width=103>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">해결방법</SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 4.95pt; BORDER-TOP: medium none; PADDING-LEFT: 4.95pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 400.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 0.5pt solid" 
+    vAlign=top width=534 colSpan=2>
+      <P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">대용량</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일</SPAN> <SPAN style="FONT-FAMILY: 굴림">암호</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">처리를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN style="FONT-FAMILY: 굴림">원본</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">또는</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">암호</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">메시지의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">크기가</SPAN> <SPAN style="FONT-FAMILY: 굴림">너무</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">크다</SPAN>. <SPAN 
+      style="FONT-FAMILY: 굴림">지정한</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">파일의</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">크기가</SPAN> 2G <SPAN 
+      style="FONT-FAMILY: 굴림">이상인</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">경우에는</SPAN> **_NoContent_File <SPAN 
+      style="FONT-FAMILY: 굴림">로</SPAN> <SPAN style="FONT-FAMILY: 굴림">끝나는</SPAN> 
+      <SPAN style="FONT-FAMILY: 굴림">함수를</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">사용해야</SPAN> <SPAN 
+      style="FONT-FAMILY: 굴림">한다</SPAN>.</P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

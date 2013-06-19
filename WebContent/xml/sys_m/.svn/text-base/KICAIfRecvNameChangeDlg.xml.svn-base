@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="416" Id="KICAIfRecvNameChangeDlg" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="변경내역&#32;상세조회" Top="8" Ver="1.0" Width="816" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_TMP_NAME_CHANGE">
+				<Contents>
+					<colinfo id="NAME" size="30" summ="default" type="STRING"/>
+					<colinfo id="CHG_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WORK_CLASS" size="20" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+					<colinfo id="LICTAX" size="1" summ="default" type="STRING"/>
+					<colinfo id="HOSCRE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE2" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE1" size="4" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT2" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+					<colinfo id="LICTAX" size="1" summ="default" type="STRING"/>
+					<colinfo id="HOSCRE" size="1" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="SND_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="SND_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE2" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM2" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM3" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM1" size="4" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE1" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="68" Id="Image2" ImageID="form_bottom" Left="-1" TabOrder="3" Top="343" Width="813"></Image>
+		<Image Height="320" Id="Image1" ImageID="form_bg" Left="-1" TabOrder="4" Top="53" Width="813"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="-1" TabOrder="2" Width="813"></Image>
+		<Static Height="302" Id="Static0" Left="16" TabOrder="1" Text="변경&#32;전&#32;정보" Top="89" Type="Groupbox" Width="380"></Static>
+		<Static Height="302" Id="Static1" Left="416" TabOrder="5" Text="변경&#32;후&#32;정보" Top="89" Type="Groupbox" Width="380"></Static>
+		<Image Height="56" Id="Image10" ImageID="bg_default" Left="14" TabOrder="6" Top="21" Width="784"></Image>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="33" TabOrder="9" Top="47" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static7" Left="51" TabOrder="10" Text="등록번호" Top="48" Width="72"></Static>
+		<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="COI_WRT_NUM" Height="21" Id="COI_WRT_NUM" Left="102" MaxLength="12" Number="TRUE" Style="style1" TabOrder="7" Top="42" Width="56"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="179" TabOrder="11" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static8" Left="197" TabOrder="12" Text="상&#32;&#32;호" Top="48" Width="36"></Static>
+		<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="NAME" Height="21" Id="NAME" Left="231" Style="style1" TabOrder="8" Top="42" Width="120"></Edit>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="376" TabOrder="14" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static2" Left="396" TabOrder="15" Text="변경구분" Top="48" Width="47"></Static>
+		<Edit BindDataset="dsPT_TMP_NAME_CHANGE" Column="WORK_CLASS" Height="21" Id="Edit0" Left="447" Style="style1" TabOrder="13" Top="42" Width="80"></Edit>
+		<Image Height="11" Id="Image5" ImageID="arrow_small_blue" Left="552" TabOrder="16" Top="48" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static3" Left="572" TabOrder="17" Text="변경일자" Top="48" Width="47"></Static>
+		<Calendar BindDataset="dsPT_TMP_NAME_CHANGE" Column="CHG_STA_DT" Height="21" Id="Calendar0" Left="625" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="18" Top="42" Width="87"></Calendar>
+		<Image Height="11" Id="Image6" ImageID="arrow_small_blue" Left="33" TabOrder="19" Top="119" Width="11"></Image>
+		<Static Color="#666666" Height="16" Id="Static4" Left="51" TabOrder="20" Text="상&#32;&#32;&#32;&#32;&#32;호" Top="120" Width="64"></Static>
+		<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="NAME" Height="21" Id="Edit1" Left="108" TabOrder="21" Top="116" Width="153"></Edit>
+		<Edit BindDataset="dsPT_TMP_NAME_CHANGE" Column="NAME" Height="21" Id="Edit8" Left="508" TabOrder="24" Top="116" Width="153"></Edit>
+		<Static Color="#666666" Height="16" Id="Static11" Left="451" TabOrder="23" Text="상&#32;&#32;&#32;&#32;&#32;호" Top="120" Width="64"></Static>
+		<Image Height="11" Id="Image13" ImageID="arrow_small_blue" Left="433" TabOrder="22" Top="119" Width="11"></Image>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9" Height="21" Id="btnRecv" ImageID="button_style2_120" Left="720" OnClick="btnRecv_OnClick" Style="button_style01" TabOrder="25" Text="자료수신" Top="42" Width="66"></Button>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+  나. 2009-04-10 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	scTB_NM;
+var scSEQ;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scTB_NM=" + quote(scTB_NM);
+	sArgs += " scSEQ=" + quote(scSEQ);
+	sArgs += " scCOI_WRT_NUM=" + quote(scCOI_WRT_NUM);
+	sArgs += " scMANA_NUM=" + quote(scMANA_NUM);
+	sArgs += " scMODE=DETAIL";
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=KICAIfRecv";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output dsPT_TMP_NAME_CHANGE=output2";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (Svcid == "SAVE")
+	{
+		alert('변경내용이 시스템에 적용되었습니다.');
+		Close(true);
+	}
+}
+
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+
+}
+function btnRecv_OnClick(obj)
+{
+	dsPT_R_BASIC_CHANGE_HISTORY.AddRow();
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "STA_CHG_CLASS_CODE", "R00010");
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "SIDO_CODE", global.g_Sd_cd);
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "WRT_ID", global.g_User_ID);
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "INT_DT", Today());
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "TMP_WRT_NUM", dsPT_R_COMPANY_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "COI_WRT_NUM", dsPT_R_COMPANY_MASTER.GetColumn(0, "COI_WRT_NUM"));
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "MANA_NUM", dsPT_R_COMPANY_MASTER.GetColumn(0, "MANA_NUM"));
+	
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "NAME", dsPT_TMP_NAME_CHANGE.GetColumn(0, "NAME"));
+	dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "CHG_DT", dsPT_TMP_NAME_CHANGE.GetColumn(0, "CHG_STA_DT"));
+	
+	dsPT_R_COMPANY_MASTER.SetColumn(0, "SIDO_CODE",  global.g_Sd_cd);
+	dsPT_R_COMPANY_MASTER.SetColumn(0, "NAME", dsPT_TMP_NAME_CHANGE.GetColumn(0, "NAME"));
+	
+	var sArgs = "workMODE=ALL";
+	var sTid = "SAVE";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=KICAIfRecvCUD";
+	var sInDs = "dsPT_R_COMPANY_MASTER=dsPT_R_COMPANY_MASTER:u dsPT_R_BASIC_CHANGE_HISTORY=dsPT_R_BASIC_CHANGE_HISTORY:u ";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output1 dsPT_R_BASIC_CHANGE_HISTORY=output2";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+]]></Script>
+</Window>

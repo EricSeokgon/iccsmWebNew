@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MGR">
+				<Contents>
+					<colinfo id="M_SEQ" size="6" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CLASS" size="2" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" summ="default" type="STRING"/>
+					<colinfo id="NOTE_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="NOTE_RECV_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="NOTE_OPIN_PRES_LIM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DEL_NOTE_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DEL_OPIN_PRES_LIM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DEL_RECV_YN" size="1" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DISPO_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DISPO_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="8" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DOC_CODE" size="50" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="30" summ="default" type="STRING"/>
+					<colinfo id="REGSTD_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="REGSTD_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="FINE" size="30" summ="default" type="STRING"/>
+					<colinfo id="PAY_NOTI_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="PAY_TERM" size="8" summ="default" type="STRING"/>
+					<colinfo id="PAY_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="30" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="100" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="148" Id="Static6" Left="8" TabOrder="1" Text="경고" Type="Groupbox" Width="780"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="15" Id="Static2" Left="67" TabOrder="4" Text="통&#32;지&#32;일&#32;자" Top="32" Width="73"></Static>
+		<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="51" TabOrder="3" TabStop="FALSE" Top="29" Width="16"></Image>
+		<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="51" TabOrder="3" TabStop="FALSE" Top="57" Width="16"></Image>
+		<Static Color="#666666" Font="굴림,9" Height="15" Id="Static1" Left="67" TabOrder="2" Text="경&#32;고&#32;기&#32;간" Top="60" Width="73"></Static>
+		<Static Height="11" Id="Static3" Left="239" TabOrder="5" Text="~" Top="63" Width="11"></Static>
+		<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="248" TabOrder="11" TabStop="FALSE" Top="25" Width="16"></Image>
+		<Static Color="#666666" Font="굴림,9" Height="13" Id="Static5" Left="272" TabOrder="10" Text="수&#32;신&#32;확&#32;인" Top="27" Width="64"></Static>
+		<Checkbox Height="20" Id="NOTE_RECV_YN" Left="339" TabOrder="9" Top="22" Width="21"></Checkbox>
+		<Button Height="25" Id="Button0" Left="504" TabOrder="8" Text="처분완료&#32;후&#32;영업정지&#32;사전통지&#32;계속" Top="16" Width="223"></Button>
+		<Static Height="11" Id="Static4" Left="239" TabOrder="7" Text="~" Top="95" Width="11"></Static>
+		<Static Color="#666666" Font="굴림,9" Height="15" Id="Static0" Left="66" TabOrder="6" Text="등록기준신고기간" Top="93" Width="73"></Static>
+		<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="52" TabOrder="3" TabStop="FALSE" Top="89" Width="16"></Image>
+		<Calendar Height="21" Id="DISPO_DT" Left="143" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="14" Top="26" Width="88"></Calendar>
+		<Calendar Height="21" Id="DISPO_END_DT" Left="256" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="15" Top="56" Width="88"></Calendar>
+		<Calendar Height="21" Id="DISPO_START_DT" Left="144" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="16" Top="56" Width="88"></Calendar>
+		<Calendar Height="21" Id="REGSTD_START_DT" Left="144" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="17" Top="88" Width="88"></Calendar>
+		<Calendar Height="21" Id="REGSTD_END_DT" Left="256" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="18" Top="88" Width="88"></Calendar>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : AMReceiptMgrC_New.xml
+2. 작성일 : 20010-11-18
+3. 작성자 : 이 석 곤
+4. 기  능 : 행정처분
+5. 변경이력
+  가. 2010-11-29 최초작성 (이석곤)
+  
+*/
+
+#include "UserLib::CommonJs.js"
+
+var _sKEY1;
+var _sKEY2;
+var _sCHECK;
+var _sINDEX;
+var _sINFLAG;
+var _sWorkFlag;
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{       
+alert("1111");
+	//검색일자를 일주일전으로 초기화
+	//divSearch.scDATE1.Value = AddDate(Today(), -7);
+	//wbjeon 2010-09-30 수정 	
+	var thisToDay = Today();
+	
+	//dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "MOT_STE", "C00002");
+	
+	//global.gv_WorkFlag = global.gv_INQUIRY;
+	//fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "행정처분";
+	
+	//obj = object("global.MainMenu.sub_img1");
+	//obj.ImageID = "left_menu2_1_on";
+	//obj.Color = "#1C3C5A";
+alert("1");
+	global.gv_WorkFlag = _sWorkFlag;
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+	alert("2");
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+	alert("3");
+		global.gv_WorkFlag = global.gv_INSERT;
+		fnInitButtonBar();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+	alert("4");
+		fnModify();
+		fnInitButtonBar();
+		
+		
+	}
+	
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+	//fn_subHide();
+	//fn_subShow();
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	//fnAllControlState(false, this);
+	
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		//divButtonBar.btnInsert.enable = false;
+		//divButtonBar.btnModify.enable = true;
+		//divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2,false);
+		
+		//divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+		//divButtonBar.btnReport.enable = false;
+		//divButtonBar.btnExcel.enable = false;
+		
+		//fnAllControlState(true, this.divSearch);
+		//fnControlState(true, this, "grdList");
+		
+		fnAllControlState(false, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnList.enable = true;
+		
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+	    fnAllControlState(false, this.divText);
+	    
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = true;
+		
+		dsPT_M_MASTER.AddRow();
+		
+		//fnAllControlState(true, this.divSearch);
+		//fnAllControlState(true, this.divText);
+		fnControlState(true, this, "divSearch.RECV_NUM");
+		
+		this.divSearch.RECV_DT.Value = Today();
+		this.divSearch.MOT_STE.Value = "C00001";
+		 fnAllControlState(true, this.divSearch);
+		 fnAllControlState(true, this.divText);
+	}
+	else
+	{
+	   fnAllControlState(true, this);
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = true;
+		
+		//fnAllControlState(false, this.divText);
+		fnAllControlState(false, this.div0);
+		fnAllControlState(false, this.div1);
+		fnAllControlState(false, this.div2);
+		fnControlState(false, this.divText, "WRT_DT");
+		fnControlState(false, this.divSearch, "RECV_NUM");
+		
+		
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=ALL";
+	sArgs += " scDATE1=" + quote(this.divSearch.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.divSearch.scDATE2.Value);
+	sArgs += " scDATE=" + quote(this.divSearch.scDATE.Value);
+	sArgs += " scRECV_NUM=" + quote(this.divSearch.RECV_NUM.Text);
+	sArgs += " scCOM_NAME=" + quote(this.divSearch.scCOM_NAME.Text);
+	sArgs += " scMOT_STE=" + quote(this.divSearch.scMOT_STE.Value);
+	sArgs += " scDISPO_CONT=" + quote(this.divSearch.scDISPO_CONT.Value);
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	
+	var sTid = "";
+	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgr_New";
+	var sInDs = "";
+	var sOutDs = "dsPT_M_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	http.sync = false;
+	
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+			return;
+		}
+		if (svcid == "SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+		// 협회 송신 큐에 넣기가 성공한 경우
+	if (svcid == "KICAIfSendCUD")
+	{
+		dsPT_M_MASTER.SetColumn(0, "SND_STE", "O");
+		dsPT_M_MASTER.SetColumn(0, "SND_DT", Today());
+	}
+	
+
+		if (svcid == "SEARCH2")
+	{
+	   	var sMOT_STE = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row, "MOT_STE");
+		if (sMOT_STE == "C00002"){
+		fnAllControlState(false, this);
+		divButtonBar.btnReport.enable = true;
+	    divButtonBar.btnList.enable = true;
+	    return;
+		}
+	}
+	if(svcid == "CHECK")
+	{
+		//alert(dsCHECK.rowcount);
+		fnControlState(false,this.divText, "DISPO_CONT");
+
+		/*   2010-07-19 wbjeon  수정 작성일자 수정가능 단 처분일자 입력시  수정불가*/ 
+		if (this.divText.DISPO_CONT.value ==""){this.divText.DISPO_CONT.Enable=true; }
+		if (Length(dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"DISPO_DT")) > 6 ){this.divText.WRT_DT.Enable = false;} else {this.divText.WRT_DT.Enable= true;}
+		if (Length(dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"RECV_NUM")) < 1){this.divText.RECV_NUM.Enable=true;} else {	this.divText.RECV_NUM.Enable=false;}
+		
+		if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"MOT_STE") == "C00002"){
+			fnAllControlState(false,this.divText);
+		}
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+	var sMOT_STE = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"MOT_STE");
+	var sDISPO_CONT = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"DISPO_CONT");
+    	if (sMOT_STE == "C00002")
+	{
+		if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "DOC_CODE")))
+		{
+			alert('문서번호가 입력되지 않았습니다. \n\n 예) 정보화담당관-0001');
+			this.tbMain.tpBase.MOT_STE.Value = "STD002";
+			return;
+		}
+		
+			if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "VIOL_DT")))
+		{
+			alert('위반일자가 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}
+			
+			if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "DISPO_CONT")))
+		{
+			alert('처분내용이 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}	
+		if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "DISPO_DT")))
+		{
+			alert('처분일자가 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}	
+		
+		if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "BUSISUSP_START_DT")))
+		{
+			alert('처분기간이 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}	
+		
+		if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "BUSISUSP_END_DT")))
+		{
+			alert('처분기간이 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}	
+		
+		if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "DISPO_CAUSE")))
+		{
+			alert('처분사유가 입력되지 않았습니다.');
+			this.divSearch.MOT_STE.Value = "C00001";
+			return;
+		}
+		
+	}
+    
+  if(sDISPO_CONT != "M00004" && sDISPO_CONT != "M00005")
+  {
+   		if (sMOT_STE == "C00002")
+	{
+		// 등록완료시 협회송신 큐에 넣기
+		dsPT_TMP_TRANS_KEY.DeleteAll();
+		dsPT_TMP_TRANS_KEY.AddRow();
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "WORK_CLASS_CODE", "R00012");
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "KEY1", dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM"));
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "KEY2", dsPT_M_MASTER.GetColumn(0, "WRT_NUM"));
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "KEY3", dsPT_M_MASTER.GetColumn(0, "SIDO_CODE"));
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "KEY4", dsPT_R_COMPANY_MASTER.GetColumn(0, "COI_WRT_NUM"));
+		if(dsPT_M_MASTER.GetColumn(0, "SND_STE") == "O")
+			dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "CUD_FLAG", "U");
+		else
+			dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "CUD_FLAG", "C");
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "SIDO_CODE", global.g_Sd_cd);
+		dsPT_TMP_TRANS_KEY.SetColumn(dsPT_TMP_TRANS_KEY.row, "INS_DT", Today());
+		//dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(0, "STA_CHG_CLASS_CODE", "R00012");
+		
+		http.Sync = true;
+		var sArgs = "";		
+		var sTid = "KICAIfSendCUD";
+		var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=KICAIfSendCUD";
+		var sInDs = "dsPT_TMP_TRANS_KEY=dsPT_TMP_TRANS_KEY:u";
+		var sOutDs = "dsPT_TMP_TRANS_KEY=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		http.Sync = false;
+		
+	 }
+	}
+		alert('저장되었습니다.');
+		fnInquiry();	
+		//global.gv_WorkFlag = global.gv_INQUIRY;
+		//fnInitButtonBar();
+		
+		var sMOT_STE = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row, "MOT_STE");
+		if (sMOT_STE == "C00002"){
+		fnAllControlState(false, this);
+		divButtonBar.btnReport.enable = true;
+	    divButtonBar.btnList.enable = true;
+		return;		
+		}
+	}
+	
+	if (svcid =="GET_DOC_NUM")
+	{
+		_sKEY2 = dsDOC_NUM.GetColumn(0, "DOC_NUM1") + dsDOC_NUM.GetColumn(0, "DOC_NUM2");
+	     
+
+	         	global.gv_WorkFlag = global.gv_MODIFY;
+		    fnInitButtonBar();
+			fnControlState(false, this, "divSearch.RECV_NUM,divText.WRT_DT");
+			fnControlState(true, this,"btnGetCorp");
+            fnAllControlState(false, this.div0);
+            fnAllControlState(false, this.div1);
+            fnAllControlState(false, this.div2);
+            
+            //fnAllControlState(false, this, "divText.COI_WRT_NUM, divText.COM_NAME,divText.WRT_DT" );
+            
+		//dsPT_M_MASTER.AddRow();
+		
+		var tmpWRT_DT = this.divText.WRT_DT.value;
+				
+		if ( tmpWRT_DT == ""){tmpWRT_DT =Today();}
+		
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "TMP_WRT_NUM", _sKEY1);
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "WRT_NUM", _sKEY2);		
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "RECV_NUM", this.divSearch.RECV_NUM.text);		
+		//dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "WRT_DT", tmpWRT_DT);
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "WRT_ID", global.g_User_ID);
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "SIDO_CODE", global.g_Sd_cd);
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "SND_STE", "X");
+		dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row, "D_PER_CODE", "REQ003");
+		
+				
+		var sArgs = "workMODE=ALL";
+		var sTid = "INSERT_SAVE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrCUD_New";
+		var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u";
+		var sOutDs = "dsPT_M_MASTER=output";
+		var sCallBack = "fn_CallBack";
+		
+		//Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	
+	if (svcid =="INSERT_SAVE")
+	{
+	
+		global.gv_WorkFlag = global.gv_MODIFY;
+		fnInitButtonBar();
+		
+		dsPT_M_MASTER.ApplyChange();
+	}
+	
+	
+	if (svcid == "CHECK_KEY")
+	{
+		if (dsCheckKey.rowcount > 0)
+		{
+			alert('존재하는 접수번호입니다.');
+			this.divSear.RECV_NUM.Text = "";
+			this.divSearch.RECV_NUM.SetFocus();
+			_sINFLAG = "0";
+		}
+		else
+		{
+			alert('등록이 가능한 접수번호 입니다.');
+			//divButtonBar.btnInsert.enable = true;
+			//divButtonBar.btnModify.enable = false;
+			//divButtonBar.btnSave.enable = true;
+			this.divSearch.RECV_NUM.Enable = false;
+		    fnAllControlState(true, this.divSearch);
+		    fnAllControlState(true, this.divText);
+		    
+			_sINFLAG = "1";
+			
+			global.gv_WorkFlag = global.gv_MODIFY;
+		    fnInitButtonBar();
+			fnControlState(false, this, "divSearch.RECV_NUM");
+			fnControlState(true, this.divText,"btnGetCorp");
+			
+			//dsPT_M_MASTER.AddRow();
+			dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.rowposition,"RECV_NUM",this.divSearch.RECV_NUM.Text);
+			
+		}
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else if (obj == divButtonBar.btnList) fnList();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+function fnInsert()
+{
+	global.gv_WorkFlag = global.gv_INSERT;
+	fnInitButtonBar();
+	
+	//fnMasterButton_Click(divText.btnCorp);
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+
+		
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+    PriKeyCheck();
+
+ 
+  
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+	if (dsPT_M_MASTER.FindRow("CHECKER", "1") < 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+	
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	dsPT_M_MASTER.ApplyChange();
+	var nCount = fnGridRowRemove(dsPT_M_MASTER);
+	
+	if(nCount == 0)
+	{
+		alert('데이터 삭제 중 오류가 발생하였습니다.');
+		return;
+	}
+
+	var sArgs = "workMODE=ALL";
+	var sTid = "DELETE";
+	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrCUD";
+	var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u";
+	var sOutDs = "dsPT_M_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+
+	var sKEY1 = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition, "DISPO_CONT");
+
+	var sDISPO_CONT_NM = this.divText.DISPO_CONT.Text;
+    var sPUNISHMENT_AGENCY = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row,"PUNISHMENT_AGENCY");
+    dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row,"PUNISHMENT_AGENCY",sPUNISHMENT_AGENCY);
+    dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row,"DISPO_CONT_NM",sDISPO_CONT_NM);
+        
+    var sDISPO_CONT_NM2 = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row,"DISPO_CONT_NM");
+    dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.row,"DISPO_CONT2",sDISPO_CONT_NM2);
+    
+//alert("1 "+sKEY1);    
+//alert("2 "+sDISPO_CONT_NM);
+//alert("3 "+sDISPO_CONT_NM2);
+
+
+	if (fnEmpty(dsPT_M_MASTER.GetColumn(0, "TMP_WRT_NUM")))
+		{
+			alert('공사업체가가 입력되지 않았습니다.');
+			return;
+		}	
+		
+	if(dsCHECK.rowcount ==0)
+	{
+		var sArgs = "workMODE=INSERT";
+			sArgs += " DISPO_CONT=" + sKEY1;
+		var sTid = "SAVE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrCUD_New";
+		var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u";
+		var sOutDs = "dsPT_M_MASTER=output";
+		var sCallBack = "fn_CallBack";
+	
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	
+	else
+	{
+		var sArgs = "workMODE=UPDATE";
+			sArgs += " DISPO_CONT=" + sKEY1;
+		var sTid = "SAVE";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrCUD_New";
+		var sInDs = "dsPT_M_MASTER=dsPT_M_MASTER:u";
+		var sOutDs = "dsPT_M_MASTER=output";
+		var sCallBack = "fn_CallBack";
+	
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}	
+}
+
+function fnCancel()
+{
+	
+	if (dsPT_M_MASTER.rowposition < 0) return;
+	fnRejectChange(dsPT_M_MASTER);
+	
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	var scDATE1 = this.divSearch.scDATE1.Value;
+	var scDATE2 = this.divSearch.scDATE2.Value;
+	
+	if (dsPT_M_MASTER.rowposition < 0)
+	{
+		alert('출력할 항목을 선택해주세요.');
+		return;
+	}
+	
+	var sMOT_STE = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row, "MOT_STE");
+	if (sMOT_STE != "C00002")
+	{
+		alert('선택하신 내용은 처분이 완료되지 않았습니다.');
+		return;
+	}
+	
+	//행정처분 대장 출력
+		var sKEY = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.row, "TMP_WRT_NUM");
+		var nCount = 0;
+		var n_key = "";
+		for (var nLoop = dsPT_M_MASTER.rowcount - 1; nLoop >= 0; nLoop--)
+		{
+			if (dsPT_M_MASTER.GetColumn(nLoop, "CHECKER") == "1")
+			{
+				n_key += "'"+dsPT_M_MASTER.GetColumn(nLoop, "TMP_WRT_NUM")+"',";				
+			}
+		}		
+		
+		sKEY1 = SubStr(n_key,0,Length(n_key)-1);
+	
+	if(this.divSearch.scDATE.Value =='WRT_DT')
+	{			
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/Admin_Dispo/AMReceiptStR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)AMReceiptStR";
+		var	spCount = " _spCount=odi.Q)AMReceiptStR.pcount=3";
+		var sParam = " _sParam=odi.Q)AMReceiptStR.args1=TMP_WRT_NUM=" + sKEY1+ "||";
+			sParam +="odi.Q)AMReceiptStR.args2=scDATE1=" +scDATE1 + "||";
+			sParam +="odi.Q)AMReceiptStR.args3=scDATE2=" +scDATE2;
+			
+
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	
+	else
+	{
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/Admin_Dispo/AMReceiptStR1.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)AMReceiptStR";
+		var	spCount = " _spCount=odi.Q)AMReceiptStR.pcount=3";
+		var sParam = " _sParam=odi.Q)AMReceiptStR.args1=TMP_WRT_NUM=" + sKEY1 + "||";
+			sParam +="odi.Q)AMReceiptStR.args2=scDATE1=" +scDATE1 + "||";
+			sParam +="odi.Q)AMReceiptStR.args3=scDATE2=" +scDATE2;
+			
+
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "위법업체처분접수현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+/*	divButtonBar.btnModify.enable = true;
+	divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2,true);
+		
+	divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+	divButtonBar.btnReport.enable = true;
+	divButtonBar.btnExcel.enable = true;
+*/	
+	
+	if (_sINFLAG == 0){
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2,true);
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;		
+	} else if (_sINFLAG == 1)  {	
+		divButtonBar.btnInsert.enable = true;
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2,true);
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;		
+		this.divSearch.RECV_NUM.Enable = false;
+	} else {
+		divButtonBar.btnRemove.enable = true;
+	}
+
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+}
+
+//////////////////////////////////////////////////////////////////
+// Code Button Event
+//////////////////////////////////////////////////////////////////
+function fnMasterButton_Click(obj)
+{
+	if (obj == divText.btnCorp)
+	{
+		var sArgs = "_sOldCode=" + "";
+		//var sRetVal = fnCreateDialog("bas::CMStD", sArgs);
+		var sRetVal = fnCreateDialog("bas::CMStD.xml", sArgs);
+		
+		if(sRetVal == null) return;
+		
+		//dsPT_M_MASTER.AddRow();
+		
+		_sKEY1 = rtrim(sRetVal[1]);
+		divText.COM_NAME = sRetVal[0];
+		
+		sArgs = "workMODE=DOC_NUM scDOC_CLASS=AMReceiptMgr scSD_CODE=" + global.g_Sd_cd;
+		var sTid = "GET_DOC_NUM";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AMCodeC";
+		var sInDs = "";
+		var sOutDs = "dsDOC_NUM=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		
+		var sArgs = "CHECK=kkk";
+		sArgs += " scTMP_WRT_NUM=" + Quote(_sKEY1);
+	    var sTid = " ";
+     	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrC_New2";
+	    var sInDs = "";
+	    var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+	    var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+	
+	}
+	
+	//if (obj == divSearch.btnGetCorp)
+	//{
+//		var sArgs = "_sOldCode=" + "";
+	//	var sRetVal = fnCreateDialog("bas::CMStD.xml", sArgs);
+		//if(sRetVal == null) return;
+		//divSearch.scCOM_NAME.Text = sRetVal[0];
+		//var sArgs = "RECV_NUM=" + this.divSearch.RECV_NUM.Text + " CHECK=flase scSIDO_CODE=" + global.g_Sd_cd;
+		//var sTid = "CHECK_KEY";
+		//var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrC_New";
+		//var sInDs = "";
+		//var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+		//var sCallBack = "fn_CallBack";
+		//Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	//}
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+
+
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if (_sINFLAG =="1"){return;}
+	_sINDEX = nRow;
+	fnModify();
+}
+/*
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var WRT_NUM = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowpos, "WRT_NUM");	
+	
+	if(dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00001")
+	{		
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+			
+		gfnCreateNewWindow("CancelMgr", "./CancelMgr.xml", sArgs);	
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00002")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+
+		gfnCreateNewWindow("StopMgr", "./StopMgr.xml", sArgs);
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00003")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+
+		gfnCreateNewWindow("StopMgr", "./StopIncidenceMgr.xml", sArgs);
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00004")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+			
+		gfnCreateNewWindow("IncidenceMgr", "./IncidenceMgr.xml", sArgs);	
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00005")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+			
+		gfnCreateNewWindow("CorrectMgr", "./CorrectMgr.xml", sArgs);		
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00006")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+			
+		gfnCreateNewWindow("FineMgr", "./FineMgr.xml", sArgs);	
+	}
+	
+	else if (dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition,"DISPO_CONT") == "M00007")
+	{
+		var sArgs = "WRT_NUM=" +WRT_NUM;
+			
+		gfnCreateNewWindow("WarnMgr", "./WarnMgr.xml", sArgs);	
+	}
+
+	
+}
+*/
+function AMReceiptMgr_OnDeactivate(obj)
+{
+	/*
+	if (global.gv_WorkFlag == global.gv_INSERT || global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		if(!Confirm('입력중인 데이터가 저장되지 않았습니다.\n\n      저장하시겠습니까?')) return;
+		http.sync = true;
+		fnSave();
+	}
+	*/
+}
+
+function divText_Combo0_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.rowposition ,"TMPDISPO_CONT",this.divText.DISPO_CONT.Text);	
+	dsDISPO_CODE_2.Reset();	
+	
+	if (strCode == "M00002"){
+		divText.DISPO_CODE_2.Visible = true;
+		dsDISPO_CODE_2.AddRow();	
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"CODE","");
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"VALUE","선택");		
+		dsDISPO_CODE_2.AddRow();	
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"CODE","M00003");
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"VALUE","과태료부과");
+		return;
+	} else if (strCode == "M00003"){
+		divText.DISPO_CODE_2.Visible = true;
+		dsDISPO_CODE_2.AddRow();	
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"CODE","");
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"VALUE","선택");		
+		dsDISPO_CODE_2.AddRow();	
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"CODE","M00002");
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"VALUE","영업정지");		
+		return;
+	} else {
+		dsDISPO_CODE_2.Clear();	
+		dsDISPO_CODE_2.Reset();
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"CODE","");
+		dsDISPO_CODE_2.SetColumn(dsDISPO_CODE_2.rowposition,"VALUE","선택");		
+		divText.DISPO_CODE_2.Visible = false;
+		divText.DISPO_CODE_2.value = "";		
+	}
+	
+}
+
+function divText_REQUEST_CODE_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	dsPT_M_MASTER.SetColumn(dsPT_M_MASTER.rowposition,"TMPD_PER_CODE",this.divText.REQUEST_CODE.Text);
+}
+
+function PriKeyCheck()
+{
+	//var sKEY1 = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition , "RECV_NUM");
+	//var sKEY2 = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition , "DISPO_CONT");
+	//var sKEY3 = dsPT_M_MASTER.GetColumn(dsPT_M_MASTER.rowposition , "WRT_NUM");
+	var sArgs = "CHECK=TRUE";
+		sArgs += " scTMP_WRT_NUM=" + Quote(_sKEY1);
+		sArgs += " scWRT_NUM=" + Quote(_sKEY2);
+	var sTid = "SEARCH2";
+	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrC_New2";
+	var sInDs = "";
+	var sOutDs = "dsPT_M_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+		var sArgs = "CHECK=kkk";
+		sArgs += " scTMP_WRT_NUM=" + Quote(_sKEY1);
+		//sArgs += " scWRT_NUM=" + Quote(_sKEY2);
+	var sTid = " ";
+	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrC_New2";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_COMPANY_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+
+function fnDCheck_Click(obj)
+{
+	if(global.gv_WorkFlag == global.gv_INSERT)
+	{ 
+		if (fnEmpty(this.divSearch.RECV_NUM.Text))
+		{
+			alert('접수번호를 입력하세요.');
+			return;
+		}
+		dsCheckKey.DeleteAll();
+		
+		var sArgs = "RECV_NUM=" + this.divSearch.RECV_NUM.Text + " CHECK=TRUE scSIDO_CODE=" + global.g_Sd_cd;
+		var sTid = "CHECK_KEY";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgrC_New";
+		var sInDs = "";
+		var sOutDs = "dsCheckKey=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		
+		
+	}
+}
+function tbMain_tpBase_ASSI_STE_OnChanged()
+{	
+    var code = Dataset0.getColumn(Dataset0.row,"code");
+  
+    if(code =="1")
+     {	alert(code);
+        this.Static3.Visible = "true";
+        this.Div2.Visible = "true";
+      
+     }
+    else if(code == "2"){
+		alert(code);
+		this.Div2.Visible = "false";
+	    this.Static3.Visible = "false";
+    }
+    else if(code =="3"){
+		alert(code);
+		this.Div2.Visible = "false";
+		this.Static3.Visible = "false";
+
+    }
+    else 
+	   this.Div2.Visible = "false";
+	   this.Static3.Visible = "false";
+
+}
+
+//////////////////////////////////////////////////////////////////
+//리스트 이동
+//////////////////////////////////////////////////////////////////
+function fnList(){
+	var sArgs = fnSearchInit("pSIDO_CODE,pscDATE1,pscDATE2,pscCOI_WRT_NUM,pscCOM_NAME,pscREP_NM");
+	sArgs += " pscMODE=T _sKEY1="+_sKEY1+" _sKEY2="+_sKEY2;
+	gfnCreateNewWindow("am::AMReceiptMgr_New", "am::AMReceiptMgr_New.xml", sArgs);
+}
+]]></Script>
+</Window>

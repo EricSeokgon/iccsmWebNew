@@ -1,0 +1,34 @@
+10
+
+dir
+70
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/iccsmWebNew/WebContent/gpki
+https://211.169.132.174:81/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C
+
+
+
+2013-06-19T06:22:13.823571Z
+70
+chunkyo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+173e5da2-384e-a041-8247-f7898c48cc03
+
+gpki_jni
+dir
+
+gpkisecureweb
+dir
+

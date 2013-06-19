@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegCommLimitMgr" Left="8" OnActivate="fnForm_Activate" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="통신정원관리" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsViewCode">
+				<Contents>
+					<colinfo id="code" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<code>list</code>
+						<value>표&#32;보기</value>
+					</record>
+					<record>
+						<code>graph</code>
+						<value>그래프&#32;보기</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" GroupKey="gcode" Id="ds_code">
+				<Contents>
+					<colinfo id="code" size="15" summ="default" type="STRING"/>
+					<colinfo id="code_name" size="30" summ="default" type="STRING"/>
+					<colinfo id="p_code" size="15" summ="default" type="STRING"/>
+					<colinfo id="use_yn" size="3" summ="default" type="STRING"/>
+					<colinfo id="bigo" size="200" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_C_RES_COMM_LIMIT">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="STRING"/>
+					<colinfo id="ORG_NM" size="52" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="5" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="5" summ="default" type="STRING"/>
+					<colinfo id="PGP_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="PGP_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_4_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_4_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_6_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_6_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_7_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_7_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_8_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_8_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_9_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_9_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_TECOM_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_TECOM_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_EXCH_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_EXCH_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_T_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="NBS_T_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_T_PMS" size="10" summ="default" type="INT"/>
+					<colinfo id="TBS_T_CAF" size="10" summ="default" type="INT"/>
+					<colinfo id="TOTEL_CAF" size="256" summ="default" type="STRING"/>
+					<colinfo id="TOTEL_PMS" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="3" Top="150" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" Top="78" Width="816"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="1" Text="Div0" Top="12" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="4" Top="571" Width="816"></Image>
+		<Grid BindDataset="dsPT_C_RES_COMM_LIMIT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="414" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="320" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="808" RowHeight="20" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="5" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="23"/>
+						<col width="115"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+						<col width="50"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="1" color="white" display="text" rowspan="3" text="구분"/>
+						<cell col="-1" display="text"/>
+						<cell bkcolor="#787878" col="0" display="checkbox" edit="checkbox" rowspan="3"/>
+						<cell bkcolor="#787878" col="2" color="white" colspan="2" display="text" rowspan="2" text="계"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="4" color="white" colspan="2" display="text" rowspan="2" text="별정직"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="6" color="white" colspan="2" display="text" row="1" text="소계"/>
+						<cell bkcolor="#787878" col="8" color="white" colspan="2" display="text" row="1" text="4~5급"/>
+						<cell bkcolor="#787878" col="10" color="white" colspan="2" display="text" row="1" text="6급"/>
+						<cell bkcolor="#787878" col="12" color="white" colspan="2" display="text" row="1" text="7급"/>
+						<cell bkcolor="#787878" col="14" color="white" colspan="2" display="text" row="1" text="8급"/>
+						<cell bkcolor="#787878" col="16" color="white" colspan="2" display="text" row="1" text="9급"/>
+						<cell bkcolor="#787878" col="18" color="white" colspan="2" display="text" row="1" text="소계"/>
+						<cell bkcolor="#787878" col="20" color="white" colspan="2" display="text" row="1" text="통신"/>
+						<cell bkcolor="#787878" col="22" color="white" colspan="2" display="text" row="1" text="교환"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="8" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="9" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="10" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="11" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="12" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="13" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="14" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="15" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="16" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="17" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="18" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="19" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="20" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="21" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="22" color="white" display="text" row="2" text="정"/>
+						<cell bkcolor="#787878" col="23" color="white" display="text" row="2" text="현"/>
+						<cell bkcolor="#787878" col="6" color="white" colspan="12" display="text" text="일&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;반&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;직"/>
+						<cell bkcolor="#787878" col="18" color="white" colspan="6" display="text" text="기&#32;&#32;&#32;&#32;&#32;능&#32;&#32;&#32;&#32;&#32;직"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" colid="ORG_NM" display="text"/>
+						<cell col="2" colid="TOTEL_CAF" display="text"/>
+						<cell col="3" colid="TOTEL_PMS" display="text"/>
+						<cell col="4" colid="PGP_CAF" display="text"/>
+						<cell col="5" colid="PGP_PMS" display="text"/>
+						<cell align="right" col="6" colid="NBS_T_CAF" display="number" edit="number" Mask="###,###,###,###"/>
+						<cell align="right" col="7" colid="NBS_T_PMS" display="number" edit="number" Mask="###,###,###,###"/>
+						<cell col="8" colid="NBS_4_CAF" display="text"/>
+						<cell col="9" colid="NBS_4_PMS" display="text"/>
+						<cell col="10" colid="NBS_6_CAF" display="text"/>
+						<cell col="11" colid="NBS_6_PMS" display="text"/>
+						<cell col="12" colid="NBS_7_CAF" display="text"/>
+						<cell col="13" colid="NBS_7_PMS" display="text"/>
+						<cell col="14" colid="NBS_8_CAF" display="text"/>
+						<cell col="15" colid="NBS_8_PMS" display="text"/>
+						<cell col="16" colid="NBS_9_CAF" display="text"/>
+						<cell col="17" colid="NBS_9_PMS" display="text"/>
+						<cell col="18" colid="TBS_T_CAF" display="text"/>
+						<cell col="19" colid="TBS_T_PMS" display="text"/>
+						<cell col="20" colid="TBS_TECOM_CAF" display="text"/>
+						<cell col="21" colid="TBS_TECOM_PMS" display="text"/>
+						<cell col="22" colid="TBS_EXCH_CAF" display="text"/>
+						<cell col="23" colid="TBS_EXCH_PMS" display="text"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="#787878" col="0" color="white" colspan="2" display="text" text="합&#32;&#32;&#32;&#32;&#32;&#32;계"/>
+						<cell align="right" bkcolor="#787878" col="2" color="white" display="number" edit="number" expr='totalSum(&quot;TOTEL_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="3" color="white" display="number" edit="number" expr='totalSum(&quot;TOTEL_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="4" color="white" display="number" edit="number" expr='totalSum(&quot;PGP_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="5" color="white" display="number" edit="number" expr='totalSum(&quot;PGP_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="6" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_T_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="7" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_T_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="8" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_4_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="9" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_4_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="10" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_6_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="11" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_6_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="12" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_7_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="13" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_7_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="14" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_8_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="15" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_8_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="16" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_9_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="17" color="white" display="number" edit="number" expr='totalSum(&quot;NBS_9_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="18" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_T_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="19" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_T_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="20" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_TECOM_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="21" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_TECOM_PMS&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="22" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_EXCH_CAF&quot;)' Mask="###,###,###,###"/>
+						<cell align="right" bkcolor="#787878" col="23" color="white" display="number" edit="number" expr='totalSum(&quot;TBS_EXCH_PMS&quot;)' Mask="###,###,###,###"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="40" Id="Image5" ImageID="bg_info_top" Left="24" TabOrder="6" Top="424" Width="784"></Image>
+		<Image Height="120" Id="Image6" ImageID="bg_info_body" Left="24" TabOrder="7" Top="464" Width="784"></Image>
+		<Image Height="40" Id="Image11" ImageID="bg_info_bottom" Left="24" TabOrder="8" Top="584" Width="784"></Image>
+		<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="42" TabOrder="27" Top="486" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static3" Left="58" TabOrder="28" Text="정원" Top="488" Width="81"></Static>
+		<Static Color="#666666" Height="16" Id="Static9" Left="58" TabOrder="30" Text="현원" Top="508" Width="81"></Static>
+		<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="41" TabOrder="29" Top="506" Width="16"></Image>
+		<Image Height="16" Id="Image7" ImageID="arrow_small_white" Left="34" TabOrder="32" Top="446" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static2" Left="50" TabOrder="31" Text="기&#32;&#32;&#32;&#32;&#32;관&#32;&#32;&#32;&#32;&#32;명" Top="448" Width="81"></Static>
+		<Combo BindDataset="dsPT_C_RES_COMM_LIMIT" CodeColumn="SIGUNGU_NM" Column="ORG_NM" DataColumn="SIGUNGU_NM" Height="21" Id="scGUGUN_CODE" InnerDataset="ds_SIGUNGU" Left="136" TabOrder="9" Top="445" Width="92"></Combo>
+		<Edit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="ORG_NM" Font="Tahoma,9" Height="21" Id="ORPE_NM" Left="232" MaxLength="20" Style="style1" TabOrder="10" Top="445" Width="125"></Edit>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue2" Left="34" TabOrder="33" Top="468" Width="11"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="16" Id="Static0" Left="50" TabOrder="34" Text="별정직" Top="470" Width="81"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue2" Left="451" TabOrder="35" Top="469" Width="11"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="16" Id="Static1" Left="467" TabOrder="36" Text="일반직" Top="470" Width="81"></Static>
+		<Image Height="16" Id="Image10" ImageID="arrow_small_white" Left="462" TabOrder="37" Top="486" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static4" Left="478" TabOrder="38" Text="4~5급&#32;-&#32;정원" Top="487" Width="81"></Static>
+		<Static Color="#666666" Height="16" Id="Static5" Left="478" TabOrder="39" Text="4~5급&#32;-&#32;현원" Top="507" Width="81"></Static>
+		<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="462" TabOrder="40" Top="506" Width="16"></Image>
+		<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="462" TabOrder="41" Top="527" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static6" Left="478" TabOrder="42" Text="&#32;&#32;&#32;&#32;6급&#32;-&#32;정원" Top="528" Width="81"></Static>
+		<Image Height="16" Id="Image14" ImageID="arrow_small_white" Left="462" TabOrder="44" Top="547" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static7" Left="478" TabOrder="43" Text="&#32;&#32;&#32;&#32;6급&#32;-&#32;현원" Top="548" Width="81"></Static>
+		<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="462" TabOrder="45" Top="569" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static8" Left="478" TabOrder="46" Text="&#32;&#32;&#32;&#32;7급&#32;-&#32;정원" Top="569" Width="81"></Static>
+		<Static Color="#666666" Height="16" Id="Static10" Left="478" TabOrder="47" Text="&#32;&#32;&#32;&#32;7급&#32;-&#32;현원" Top="590" Width="81"></Static>
+		<Image Height="16" Id="Image16" ImageID="arrow_small_white" Left="462" TabOrder="48" Top="589" Width="16"></Image>
+		<Image Height="16" Id="Image17" ImageID="arrow_small_white" Left="628" TabOrder="49" Top="482" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static11" Left="644" TabOrder="50" Text="&#32;&#32;&#32;&#32;8급&#32;-&#32;정원" Top="482" Width="81"></Static>
+		<Image Height="16" Id="Image18" ImageID="arrow_small_white" Left="628" TabOrder="52" Top="502" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static12" Left="644" TabOrder="51" Text="&#32;&#32;&#32;&#32;8급&#32;-&#32;현원" Top="503" Width="81"></Static>
+		<Image Height="16" Id="Image19" ImageID="arrow_small_white" Left="628" TabOrder="53" Top="525" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static14" Left="645" TabOrder="54" Text="&#32;&#32;&#32;&#32;9급&#32;-&#32;정원" Top="525" Width="81"></Static>
+		<Image Height="16" Id="Image20" ImageID="arrow_small_white" Left="628" TabOrder="56" Top="547" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static15" Left="645" TabOrder="55" Text="&#32;&#32;&#32;&#32;9급&#32;-&#32;현원" Top="545" Width="81"></Static>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="PGP_CAF" Font="Tahoma,9" Height="21" Id="PGP_CAF" Left="92" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="11" Top="483" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="PGP_PMS" Font="Tahoma,9" Height="21" Id="PGP_PMS" Left="92" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="12" Top="506" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_4_PMS" Font="Tahoma,9" Height="21" Id="NBS_4_PMS" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="18" Top="506" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_4_CAF" Font="Tahoma,9" Height="21" Id="NBS_4_CAF" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="17" Top="483" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_6_PMS" Font="Tahoma,9" Height="21" Id="NBS_6_PMS" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="20" Top="550" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_6_CAF" Font="Tahoma,9" Height="21" Id="NBS_6_CAF" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="19" Top="528" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_7_CAF" Font="Tahoma,9" Height="21" Id="NBS_7_CAF" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="21" Top="570" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_7_PMS" Font="Tahoma,9" Height="21" Id="NBS_7_PMS" Left="554" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="22" Top="592" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_8_CAF" Font="Tahoma,9" Height="21" Id="NBS_8_CAF" Left="721" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="23" Top="483" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_8_PMS" Font="Tahoma,9" Height="21" Id="NBS_8_PMS" Left="721" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="24" Top="506" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_9_CAF" Font="Tahoma,9" Height="21" Id="NBS_9_CAF" Left="721" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="25" Top="525" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="NBS_9_PMS" Font="Tahoma,9" Height="21" Id="NBS_9_PMS" Left="721" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="26" Top="547" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<Image Height="11" Id="Image21" ImageID="arrow_small_blue2" Left="219" TabOrder="57" Top="470" Width="11"></Image>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="16" Id="Static16" Left="236" TabOrder="58" Text="기능직" Top="470" Width="81"></Static>
+		<Image Height="16" Id="Image22" ImageID="arrow_small_white" Left="237" TabOrder="59" Top="485" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static17" Left="254" TabOrder="60" Text="통&#32;&#32;&#32;신&#32;-&#32;정원" Top="485" Width="81"></Static>
+		<Static Color="#666666" Height="16" Id="Static18" Left="254" TabOrder="61" Text="통&#32;&#32;&#32;신&#32;-&#32;현원" Top="506" Width="81"></Static>
+		<Image Height="16" Id="Image23" ImageID="arrow_small_white" Left="237" TabOrder="62" Top="506" Width="16"></Image>
+		<Image Height="16" Id="Image24" ImageID="arrow_small_white" Left="238" TabOrder="63" Top="527" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static19" Left="255" TabOrder="64" Text="교&#32;&#32;&#32;환&#32;-&#32;정원" Top="527" Width="81"></Static>
+		<Image Height="16" Id="Image25" ImageID="arrow_small_white" Left="238" TabOrder="66" Top="547" Width="16"></Image>
+		<Static Color="#666666" Height="16" Id="Static20" Left="255" TabOrder="65" Text="교&#32;&#32;&#32;환&#32;-&#32;현원" Top="548" Width="81"></Static>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="TBS_TECOM_CAF" Font="Tahoma,9" Height="21" Id="TBS_TECOM_CAF" Left="334" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="13" Top="483" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="TBS_EXCH_PMS" Font="Tahoma,9" Height="21" Id="TBS_EXCH_PMS" Left="334" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="16" Top="549" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="TBS_EXCH_CAF" Font="Tahoma,9" Height="21" Id="TBS_EXCH_CAF" Left="334" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="15" Top="527" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+		<MaskEdit BindDataset="dsPT_C_RES_COMM_LIMIT" Column="TBS_TECOM_PMS" Font="Tahoma,9" Height="21" Id="TBS_TECOM_PMS" Left="334" Mask="###,###,###" MaxLength="9" OnKillFocus="fnKillFocue" TabOrder="14" Top="506" TrimType="Right" VAlign="BOTTOM" Width="64"></MaskEdit>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : AMReceiptMgr.xml
+2. 작성일 : 2009-03-09
+3. 작성자 : 김 현 기
+4. 기  능 : 행정처분접수관리
+5. 변경이력
+  가. 2009-03-09 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+var _sKEY1;
+var _sKEY2;
+var base_code = " WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	
+	
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "통신정원관리";
+	fnTablesBinding();
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	fnAllControlState(false, this);
+	
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(false, this);
+		fnControlState(true, this, "grdList");
+		
+		divButtonBar.btnInsert.enable = true;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = true;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = true;
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+				
+	}
+	else
+	{
+		fnAllControlState(false, this);
+		fnControlState(true, this, "grdList");
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+	}
+	
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = base_code+" scSIDO_CODE="+scSIDO_CODE;
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::c_res/C_resAction.do?cmd=RegCommLimitMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_C_RES_COMM_LIMIT=output ds_SIGUNGU=output2";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+		}
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+		alert('저장되었습니다.');
+		global.gv_WorkFlag = global.gv_INQUIRY;
+		fnInitButtonBar();
+		return;
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}	
+	
+	if (svcid == "SEARCH")
+	{
+		global.gv_WorkFlag = global.gv_INQUIRY;
+		
+		if(scSIDO_CODE != global.g_Sd_cd)
+		{
+			global.gv_WorkFlag = "";
+		}
+		
+		fnInitButtonBar();
+		return;
+	}
+		
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	global.gv_WorkFlag = global.gv_INSERT;
+	fnInitButtonBar();
+	dsPT_C_RES_COMM_LIMIT.AddRow();
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	if (dsPT_C_RES_COMM_LIMIT.GetRowPosition() < 0)
+	{
+		alert('수정할 내용을 선택하세요.');
+		return;
+	}
+	
+	global.gv_WorkFlag = global.gv_INSERT;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	var reck = fnGridRemoveChk(dsPT_C_RES_COMM_LIMIT);
+	
+	if(reck > 0){
+		alert("삭제 권한이 없습니다.");
+		return;	
+	}
+	
+	dsPT_C_RES_COMM_LIMIT.ApplyChange();
+	var nCount = fnGridRowRemove(dsPT_C_RES_COMM_LIMIT);
+	
+	if(nCount == 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+
+	var sArgs = "workMODE=ALL"+base_code;
+	var sTid = "DELETE";
+	var sUrl = "ICCS::c_res/C_resAction.do?cmd=RegCommLimitMgrCUD";
+	var sInDs = "dsPT_C_RES_COMM_LIMIT=dsPT_C_RES_COMM_LIMIT:u";
+	var sOutDs = "dsPT_C_RES_COMM_LIMIT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	var sArgs = "workMODE=ALL"+base_code;
+	var sTid = "SAVE";
+	var sUrl = "ICCS::c_res/C_resAction.do?cmd=RegCommLimitMgrCUD";
+	var sInDs = "dsPT_C_RES_COMM_LIMIT=dsPT_C_RES_COMM_LIMIT:u";
+	var sOutDs = "dsPT_C_RES_COMM_LIMIT=output";
+	var sCallBack = "fn_CallBack";
+	
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnCancel()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "통신정원관리");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////
+// Code Button Event
+//////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fnModify();
+}
+
+
+function fnGridOn_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+	if(global.g_Sd_cd != global.g_Sd_cd){
+		if(dsPT_C_RES_COMM_LIMIT.GetColumn(nRow,"SIGUNGU_CODE") != global.g_Sd_cd){
+			fnAllControlState(false, this);
+			fnControlState(true, this, "grdList");
+		}
+	}
+	
+}
+
+function fnKillFocue(obj)
+{
+	var TBS_T_CAF = ToNumber(this.TBS_EXCH_CAF)+ToNumber(this.TBS_TECOM_CAF);
+	var TBS_T_PMS = ToNumber(this.TBS_EXCH_PMS)+ToNumber(this.TBS_TECOM_PMS);
+	
+	var NBS_T_CAF = ToNumber(this.NBS_4_CAF)+ToNumber(this.NBS_6_CAF)+ToNumber(this.NBS_7_CAF)+ToNumber(this.NBS_8_CAF)+ToNumber(this.NBS_9_CAF);
+	var NBS_T_PMS = ToNumber(this.NBS_4_PMS)+ToNumber(this.NBS_6_PMS)+ToNumber(this.NBS_7_PMS)+ToNumber(this.NBS_8_PMS)+ToNumber(this.NBS_9_PMS);
+	
+	var TOTLE_CAF = ToNumber(TBS_T_CAF)+ToNumber(NBS_T_CAF)+ToNumber(this.PGP_CAF) ;
+	var TOTLE_PMS = ToNumber(TBS_T_PMS)+ToNumber(NBS_T_PMS)+ToNumber(this.PGP_PMS) ;
+	
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"TBS_T_CAF",TBS_T_CAF);
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"TBS_T_PMS",TBS_T_PMS);
+	
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"NBS_T_CAF",NBS_T_CAF);
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"NBS_T_PMS",NBS_T_PMS);
+	
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"TOTEL_CAF",TOTLE_CAF);
+	dsPT_C_RES_COMM_LIMIT.SetColumn(dsPT_C_RES_COMM_LIMIT.row,"TOTEL_PMS",TOTLE_PMS);
+}
+
+]]></Script>
+</Window>

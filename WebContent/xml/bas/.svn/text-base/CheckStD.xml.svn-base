@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="384" Id="PostStD" Left="8" OnActivate="fnForm_Loaded" PidAttrib="7" Title="확인사항" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COM_DEFICIT">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DEFI_OUT" size="1" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="dsPT_R_COM_DEFICIT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="368" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="352" Id="grdCheck" InputPanel="FALSE" Left="12" LineColor="user9" OnHeadClick="fnLocalGridHead_Click" Right="628" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="16" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="616">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="609"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="확&#32;인&#32;사&#32;항"/>
+					</head>
+					<body>
+						<cell col="0" colid="DEFI_CONT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : CheckStD.xml
+2. 작성일 : 2010-12-03
+3. 작성자 : S.K. LEE
+4. 기  능 : 확인사항 전원배
+5. 변경이력
+  가. 2010-12-03
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+  function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+	
+}                   
+
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+
+	var sArgs = "workMODE=CheckStD ";
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=CheckStD";
+	var sInDs = "";
+
+	var sOutDs  = "dsPT_R_COM_DEFICIT=output" ;
+	var sCallBack = "fn_CallBack";
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+
+}
+]]></Script>
+</Window>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="662" Id="test" Left="8" PidAttrib="7" Title="test" Top="8" Ver="1.0" Width="600" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_test">
+				<Contents>
+					<colinfo id="com_name" size="256" summ="default" type="STRING"/>
+					<colinfo id="tmp_reg_num" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Edit Height="25" Id="tmp_reg_num" Left="30" TabOrder="1" Text="Edit0" Top="19" Width="104"></Edit>
+		<Edit Height="28" Id="com_name" Left="173" TabOrder="2" Text="Edit1" Top="19" Width="107"></Edit>
+		<Button Height="21" Id="btnTest" Left="316" OnClick="Button0_OnClick" TabOrder="3" Text="Button0" Top="23" Width="104"></Button>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+var	_sKEY1;
+var	_sKEY2;
+var varArray = Array(4);
+
+function Button0_OnClick(obj)
+{
+	if (obj == this.btnTest)
+	{
+		varArray = fnCreateDialog("bas::CMStD");
+		alert(varArray);
+		if (!fnEmpty(varArray))
+		{			
+			this.com_name.Text = varArray[0];
+			this.tmp_reg_num.Text = varArray[1];
+			/*sArgs = "workMODE=REC_NUM scREC_NUM=" + REC_NUM.Text;
+			var sTid = "GET_REC_NUM";
+			var sUrl = "ICCS::cm/CmAction.do?cmd=RegMgrC";
+			var sInDs = "";
+			var sOutDs = "dsPT_R_REGIST_STATEMENT=output dsPT_R_SUBSIDIARY_COMPANY=output2";
+			var sCallBack = "fn_CallBack";
+			
+			Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+			*/
+		}
+	}
+}
+]]></Script>
+</Window>

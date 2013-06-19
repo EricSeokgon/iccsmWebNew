@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PT_BBS_HIT" pkgname="sp.dao" schema=""><desc/><primarykey/><contents><field const="notnull;maxsize=16" dbtype="VARCHAR2(16)" desc="" name="CT_ID" type="String"/><field const="notnull;maxsize=22" dbtype="NUMBER(22)" desc="" name="BOARD_SEQ" type="String"/><field const="maxsize=100" dbtype="VARCHAR2(100)" desc="" name="IPADDR" type="String"/></contents></table>

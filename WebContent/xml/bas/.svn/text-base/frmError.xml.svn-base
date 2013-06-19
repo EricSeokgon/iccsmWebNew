@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="frmError" Left="8" PidAttrib="7" Title="오류화면" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Image Height="272" Id="Image0" ImageID="modify" Left="160" TabOrder="1" Top="136" Width="543"></Image>
+	</Form>
+	<Script></Script>
+</Window>

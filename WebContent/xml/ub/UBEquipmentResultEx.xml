@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="632" Id="form" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="Excel&#32;Import&#32;Sample" Top="8" Ver="1.0" Width="848" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_EQUIPMENT_HEAD">
+				<Contents>
+					<colinfo id="HEAD_TITLE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME_VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<HEAD_TITLE>H1</HEAD_TITLE>
+						<NAME_VALUE>검사개요</NAME_VALUE>
+					</record>
+					<record>
+						<HEAD_TITLE>H2</HEAD_TITLE>
+						<NAME_VALUE>목록번호</NAME_VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_EQUIPMENT" UseClientLayout="1">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_DETAILADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADMIT_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="CIV_RECV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sel">
+				<Contents>
+					<colinfo id="combo" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<combo>적합</combo>
+						<value>1</value>
+					</record>
+					<record>
+						<combo>부적합</combo>
+						<value>2</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Sort">
+				<Contents>
+					<colinfo id="HEAD_TITLE" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME_VALUE" size="256" summ="default" type="STRING"/>
+					<record>
+						<HEAD_TITLE>오름차순</HEAD_TITLE>
+						<NAME_VALUE>ASC</NAME_VALUE>
+					</record>
+					<record>
+						<HEAD_TITLE>내림차순</HEAD_TITLE>
+						<NAME_VALUE>DESC</NAME_VALUE>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_STE">
+				<Contents>
+					<colinfo id="col" size="10" summ="default" type="STRING"/>
+					<colinfo id="val" size="10" summ="default" type="STRING"/>
+					<record>
+						<col>전체</col>
+						<val>0</val>
+					</record>
+					<record>
+						<col>적합</col>
+						<val>1</val>
+					</record>
+					<record>
+						<col>부적합</col>
+						<val>2</val>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDOC_NUM">
+				<Contents>
+					<colinfo id="DOC_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="SD_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SGG_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOC_NUM1" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOC_NUM2" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOC_NUM3" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOC_NUM4" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="16" TabOrder="1" Top="85" Width="968"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="16" TabOrder="2" Top="152" Width="817"></Image>
+		<Image Height="56" Id="Image6" ImageID="bg_default" Left="32" TabOrder="3" TabStop="FALSE" Top="96" Width="784"></Image>
+		<Edit Border="Flat" BorderColor="#9ea987" Height="20" Id="ed0" Left="112" TabOrder="4" Top="120" Width="379"></Edit>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnExcel" ImageID="button_style1_90" Left="496" OnClick="fnExcel_Click" Style="button_style01" TabOrder="5" TabStop="FALSE" Text="파일찾기" Top="120" Width="90"></Button>
+		<FileDialog Bottom="144" Filter="Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*" Height="24" Id="FileDialog0" Left="592" Right="616" TabOrder="7" Top="120" Width="24"></FileDialog>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="16" TabOrder="6" Text="Div0" Top="24" Url="base::frmButtonBarChg.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Grid AreaSelect="TRUE" BindDataset="ds_PT_UB_EQUIPMENT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="512" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="344" Id="grdList" InputPanel="FALSE" Left="32" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="816" SelColor="white" ShadowColor="#999999" TabOrder="7" TabStop="true" Top="168" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="26"/>
+						<col width="63"/>
+						<col width="80"/>
+						<col width="60"/>
+						<col width="90"/>
+						<col width="82"/>
+						<col width="68"/>
+						<col width="47"/>
+						<col width="47"/>
+						<col width="82"/>
+						<col width="68"/>
+						<col width="69"/>
+						<col width="66"/>
+						<col width="80"/>
+						<col width="75"/>
+						<col width="80"/>
+						<col width="65"/>
+						<col width="80"/>
+						<col width="71"/>
+						<col width="80"/>
+						<col width="64"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" rowspan="2" text="번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" rowspan="2" text="검사일자"/>
+						<cell bkcolor="#787878" col="2" color="white" colspan="2" display="text" text="건물구분"/>
+						<cell bkcolor="#787878" col="4" color="white" colspan="2" display="text" text="주소"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" rowspan="2" text="건축허가일"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" rowspan="2" text="건축주"/>
+						<cell bkcolor="#787878" col="8" color="white" display="text" rowspan="2" text="시공자"/>
+						<cell align="center" bkcolor="#787878" col="9" color="white" colspan="4" display="text" text="CA증폭기"/>
+						<cell bkcolor="#787878" col="13" color="white" colspan="4" display="text" text="MATV증폭기"/>
+						<cell bkcolor="#787878" col="17" color="white" colspan="4" display="text" text="SMATV증폭기"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" row="1" text="구분"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" row="1" text="면적"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" row="1" text="주소"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" row="1" text="상세주소"/>
+						<cell bkcolor="#787878" col="9" color="white" display="text" row="1" text="형식승인번호"/>
+						<cell bkcolor="#787878" col="10" color="white" display="text" row="1" text="제조사명"/>
+						<cell bkcolor="#787878" col="11" color="white" display="text" row="1" text="주파수범위"/>
+						<cell bkcolor="#787878" col="12" color="white" display="text" row="1" text="배선형태"/>
+						<cell bkcolor="#787878" col="13" color="white" display="text" row="1" text="형식승인번호"/>
+						<cell bkcolor="#787878" col="14" color="white" display="text" row="1" text="제조사명"/>
+						<cell bkcolor="#787878" col="15" color="white" display="text" row="1" text="주파수범위"/>
+						<cell bkcolor="#787878" col="16" color="white" display="text" row="1" text="배선형태"/>
+						<cell bkcolor="#787878" col="17" color="white" display="text" row="1" text="형식승인번호"/>
+						<cell bkcolor="#787878" col="18" color="white" display="text" row="1" text="제조사명"/>
+						<cell bkcolor="#787878" col="19" color="white" display="text" row="1" text="주파수범위"/>
+						<cell bkcolor="#787878" col="20" color="white" display="text" row="1" text="배선형태"/>
+					</head>
+					<body>
+						<cell col="0" colid="SEQ" display="text"/>
+						<cell align="center" col="1" colid="INSP_DT" display="date"/>
+						<cell align="center" col="2" colid="CODE_NAME" display="text"/>
+						<cell align="center" col="3" colid="AREA" display="text"/>
+						<cell align="center" col="4" colid="INSP_SPOT_ADDR" display="text"/>
+						<cell align="center" col="5" colid="INSP_SPOT_DETAILADDR" display="text"/>
+						<cell align="center" col="6" colid="ADMIT_DT" display="text"/>
+						<cell align="center" col="7" colid="APPLPER_NM" display="text"/>
+						<cell align="center" col="8" colid="OPE_NAME" display="text"/>
+						<cell align="center" col="9" colid="TYPE_PROC_NO_CA" display="text"/>
+						<cell align="center" col="10" colid="TYPE_PROC_NM_CA" display="text"/>
+						<cell align="center" col="11" colid="FREQUENCY_SCOPE_CA" display="text"/>
+						<cell align="center" col="12" colid="WIRE_TYPE_CA" display="text"/>
+						<cell align="center" col="13" colid="TYPE_PROC_NO_MA" display="text"/>
+						<cell align="center" col="14" colid="TYPE_PROC_NM_MA" display="text"/>
+						<cell align="center" col="15" colid="FREQUENCY_SCOPE_MA" display="text"/>
+						<cell align="center" col="16" colid="WIRE_TYPE_MA" display="text"/>
+						<cell align="center" col="17" colid="TYPE_PROC_NO_SMA" display="text"/>
+						<cell align="center" col="18" colid="TYPE_PROC_NM_SMA" display="text"/>
+						<cell align="center" col="19" colid="FREQUENCY_SCOPE_SMA" display="text"/>
+						<cell align="center" col="20" colid="WIRE_TYPE_SMA" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnCheck" ImageID="button_style2_120" Left="616" OnClick="Button0_OnClick" Style="button_style01" TabOrder="8" TabStop="FALSE" Text="첨부파일" Top="120" Width="66"></Button>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="16" TabOrder="9" Top="544" Width="816"></Image>
+		<Image Height="70" Id="Image3" ImageID="bg_tip" Left="32" TabOrder="10" Top="528" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="24" Id="Static4" Left="56" TabOrder="11" Text="1.첨부파일을&#32;다운받으세요.&#10;2.다운&#32;받으신&#32;파일에&#32;데이터를&#32;입력하세요." Top="552" Width="736"></Static>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+var scROWNUM;
+var scRECV_NUM;
+var	_bDialog = false;
+//var base_code = "WRT_ID="+global.g_User_ID;
+var base_code = "WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+var i;
+var rownum=0;
+//+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "디지털전환관련기자재 일괄입력";
+	
+}
+        
+
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, false);
+		divButtonBar.btnSave.enable=true;
+		//divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		//divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnList.enable = false;
+	}
+}
+
+function fnExcel_Click(obj,nX,nY)
+{
+
+	FileDialog0.Type = "OPEN";
+	FileDialog0.Filter = "Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*|";
+
+	var result = FileDialog0.Open();
+	
+	if ( result )
+	{
+		ed0.Text= FileDialog0.FilePath + '\\' + FileDialog0.FileName;
+	}
+	else{
+	  break ;
+	}
+	
+	grdlist.Redraw = false;
+	ds_PT_UB_EQUIPMENT.ClearData();
+	//ext_ExcelImportByIndex(ed0.Text, 0,"ds_sheet",1);
+	ext_ExcelImportByIndex(ed0.Text, 0,"ds_PT_UB_EQUIPMENT",1,1,0,3); 
+	grdlist.Redraw = true;
+	//var cnt  = ds_PT_UB_EQUIPMENT.GetColumn(0,"SEQ");
+	var cnt = ds_PT_UB_EQUIPMENT.rowcount();
+    
+for(i=0; i<cnt; i++){
+  var num  = ds_PT_UB_EQUIPMENT.GetColumn(i,"SEQ");
+  var rev = global.g_Sgg_cd+'0'+num;
+  ds_PT_UB_EQUIPMENT.SetColumn(i,"SIDO_CODE",global.g_Sd_cd);	
+  ds_PT_UB_EQUIPMENT.SetColumn(i,"SIGUNGU_CODE",global.g_Sgg_cd);
+  ds_PT_UB_EQUIPMENT.SetColumn(i,"WRT_ID",global.g_User_ID);	
+  
+  if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="단독주택")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD001");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="공동주택")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD002");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="업무시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD003");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="공공용시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD004");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="제1종 근린생활시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD005");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="제2종 근린생활시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD006");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="문화 및 집회시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD007");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="판매시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD008");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="의료시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD009");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="교육연구시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD010");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="운동시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD011");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="위락시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD013");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="공장")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD014");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="묘지관련시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD015");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="관광휴게시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD016");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="창고시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD017");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="위험물저장 및 처리시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD018");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="자동차관련시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD019");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="동물 및 식물관련시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD020");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="분뇨 및 쓰레기처리시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD021");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="종교시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD022");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="운수시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD023");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="노유자시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD024");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="수련시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD025");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="숙박시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD026");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="교정및군사시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD027");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="방송통신시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD028");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="발전시설")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD029");
+  else if( trim(ds_PT_UB_EQUIPMENT.getColumn(i,"CODE_NAME"))=="장례식장")
+        ds_PT_UB_EQUIPMENT.setColumn(i,"USE","BLD030");
+        
+  //ds_PT_UB_EQUIPMENT.SetColumn(i,"STRU_AREA",ds_PT_UB_EQUIPMENT.GetColumn(i,"STRU_AREA_S"));
+ }
+  fnKey();
+}    
+
+function form_OnLoadCompleted(obj)
+{
+}
+
+function fnExcel()
+{	
+	fnGridToExcel(grdlist, "감리결과보고");
+}
+
+
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SAVE")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+	     alert('저장되었습니다.');
+    }
+	
+	if (svcid =="GET_DOC_NUM")
+	{
+	 var cntn = ds_PT_UB_EQUIPMENT.rowcount();
+     if( rownum<cntn){
+	   _sKEY2 = dsDOC_NUM.GetColumn(dsDOC_NUM.row,"DOC_NUM1") + dsDOC_NUM.GetColumn(dsDOC_NUM.row,"DOC_NUM2");
+     
+      ds_PT_UB_EQUIPMENT.SetColumn(rownum,"CIV_RECV_NUM",_sKEY2);
+      ds_PT_UB_EQUIPMENT.SetColumn(rownum,"RECV_NUM",_sKEY2);	
+      rownum++;
+      if(rownum==cntn){
+         return;
+       }
+      else
+        fnKey();
+      }
+     }
+}
+
+
+function fnSave()
+{
+    //fnDCheck_Click();
+     
+	var sArgs = "workMODE=ALL "+base_code+" scRECV_NUM="+scRECV_NUM;
+	var sTid = "SAVE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBEquipmentResultEx";
+	var sInDs = "ds_PT_UB_EQUIPMENT=ds_PT_UB_EQUIPMENT:u";
+	var sOutDs = "ds_PT_UB_EQUIPMENT=output";
+	var sCallBack = "fn_CallBack";
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+ 
+}
+
+
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	//else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+function fnKey()
+{
+		
+		var sArgs = "_sOldCode=" + "";
+		sArgs = "workMODE=DOC_NUM scDOC_CLASS=UBEquiptMgrCUD scSD_CODE=" + global.g_Sd_cd+ " scSGG_CODE="+global.g_Sgg_cd;
+		var sTid = "GET_DOC_NUM";
+		var sUrl = "ICCS::am/AmAction.do?cmd=AMCodeC";
+		var sInDs = "";
+		var sOutDs = "dsDOC_NUM=output";
+		var sCallBack = "fn_CallBack";
+		
+	    http.timeout = 180;
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+        
+        //fnSaveN();
+}
+
+function Button0_OnClick(obj)
+{
+	fn_fileDown();
+}
+
+//이부분은 공통으로 빼서 작업하시는게 편합니다..
+function fn_fileDown(fileName)
+{
+	var strDownUrl = "http://99.1.5.75/excel/equipment.xlsx";
+	var strAttr = 'Height="29" Left="43" Width="29" visible="false"';
+	
+	if ( Find("web_file") == NULL )
+		create("WebBrowser","web_file",strAttr);
+	
+	web_file.PageUrl = strDownUrl;
+	
+	web_file.Run();
+}
+]]></Script>
+</Window>

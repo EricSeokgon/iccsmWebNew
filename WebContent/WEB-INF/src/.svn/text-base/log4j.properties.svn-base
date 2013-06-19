@@ -1,0 +1,52 @@
+# Property Editor \uc774\ud074\ub9bd\uc2a4 \ud50c\ub7ec\uadf8\uc778 : http://propedit.sourceforge.jp/eclipse/updates/
+# - properties \ud30c\uc77c\uc744 \ud55c\uae00\ub85c \ud3b8\uc9d1 \uac00\ub2a5  
+
+#Log4j Viewer \uc774\ud074\ub9bd\uc2a4 \ud50c\ub7ec\uadf8\uc778 : http://ganymede.sf.net/update 
+# ganymede log4j viewer
+#log4j.rootCategory=DEBUG, Ganymede
+#log4j.appender.Ganymede=org.apache.log4j.net.SocketAppender
+#log4j.appender.Ganymede.remoteHost=localhost
+#log4j.appender.Ganymede.port=4445
+#log4j.appender.Ganymede.locationInfo=true
+
+# Stdout / File
+
+
+# Stdout
+log4j.rootCategory=INFO, std
+log4j.appender.std=org.apache.log4j.ConsoleAppender
+log4j.appender.std.layout=org.apache.log4j.PatternLayout
+log4j.appender.std.layout.ConversionPattern=[%d{ISO8601}]%5p%6.6r[%t]%x - %C.%M(%F:%L) - %m%n
+log4j.appender.std.layout.ConversionPattern=%C.%M(%F:%L) - %m%n
+
+
+# File
+#log4j.rootCategory=DEBUG, daily
+#log4j.appender.daily=org.apache.log4j.DailyRollingFileAppender
+#log4j.appender.daily.File=log4j.log
+#log4j.appender.daily.Append=true
+#log4j.appender.daily.MaxFileSize=1000KB
+#log4j.appender.daily.DatePattern='.'yyyy-MM-dd
+#log4j.appender.daily.layout=org.apache.log4j.PatternLayout
+#log4j.appender.daily.layout.ConversionPattern=%d %-5p [%t] %-17c{2} (%13F:%L) %3x - %m%n
+
+
+log4j.logger.com.ibatis=DEBUG
+log4j.logger.com.ibatis.common.jdbc.SimpleDataSource=DEBUG
+log4j.logger.com.ibatis.common.jdbc.ScriptRunner=DEBUG
+log4j.logger.com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate=WARN
+log4j.logger.java.sql.Connection=TRACE
+log4j.logger.java.sql.Statement=TRACE
+log4j.logger.java.sql.PreparedStatement=TRACE
+log4j.logger.java.sql.ResultSet=WARN
+log4j.logger.org.springframework=INFO
+log4j.logger.org.apache.commons.digester=WARN
+log4j.logger.org.apache.tiles=WARN
+log4j.logger.org.apache.commons.beanutils=WARN
+
+
+# FOR TOMCAT 5.5
+#log4j.logger.org.apache.catalina=INFO
+#log4j.logger.org.apache.jasper.servlet=INFO
+#log4j.logger.org.apache.jasper.compiler=INFO
+#log4j.logger.org.apache.commons.digester=INFO

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use
+END
+Signature.html
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Signature.html
+END
+PublicKey.html
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/PublicKey.html
+END
+KeyGenerator.html
+K 25
+svn:wc:ra_dav:version-url
+V 221
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/KeyGenerator.html
+END
+Random.html
+K 25
+svn:wc:ra_dav:version-url
+V 215
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Random.html
+END
+SecretKey.html
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/SecretKey.html
+END
+Mac.html
+K 25
+svn:wc:ra_dav:version-url
+V 212
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Mac.html
+END
+Algorithm.html
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Algorithm.html
+END
+Key.html
+K 25
+svn:wc:ra_dav:version-url
+V 212
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Key.html
+END
+PrivateKey.html
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/PrivateKey.html
+END
+MessageDigest.html
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/MessageDigest.html
+END
+Cipher.html
+K 25
+svn:wc:ra_dav:version-url
+V 215
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/javadoc/javadoc/com/gpki/gpkiapi/crypto/class-use/Cipher.html
+END

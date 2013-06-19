@@ -1,0 +1,5 @@
+
+SELECT 
+	LIST_SEQ, TARGET_SEQ, GROUP_SEQ, INPT_DT 
+FROM   PT_PERMISSION_LIST ;
+                   

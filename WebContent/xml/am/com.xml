@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="user0" Height="384" Id="com" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Static Height="16" Id="Static2" Left="24" Style="list_subtitle" TabOrder="1" Text="접수일자" Top="32" Width="48"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="80" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="5" Top="27" Width="85"></Calendar>
+		<Static Height="8" Id="Static5" Left="170" TabOrder="3" Text="~" Top="31" Width="8"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="184" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="4" Top="27" Value="TODAY" Width="85"></Calendar>
+		<Static Height="16" Id="Static1" Left="282" Style="list_subtitle" TabOrder="2" Text="접수번호" Top="32" Width="48"></Static>
+		<Edit Height="21" Id="scREC_NUM" Left="336" Style="style1" TabOrder="6" Top="27" Width="72"></Edit>
+		<Static Height="13" Id="Static0" Left="416" Style="list_subtitle" TabOrder="7" Text="과&#32;등록번호" Top="32" Width="66"></Static>
+		<Edit Height="21" Id="scSTATE_RECORD_NUM" Left="488" Style="style1" TabOrder="8" Top="27" Width="72"></Edit>
+		<Static Height="52" Id="Static3" Left="14" TabOrder="9" Top="8" Type="Groupbox" Width="625"></Static>
+		<Grid BindDataset="dsPT_R_REGIST_STATEMENT" BkColor2="user11" BkSelColor="lightslategray" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="378" Color="black" Editable="TRUE" Enable="true" EndLineColor="#919cb1" HeadBorder="Flat" HeadHeight="20" Height="312" Id="grdList" InputPanel="FALSE" Left="14" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" Right="639" Style="grid_title" TabOrder="10" TabStop="true" Top="66" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="625">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="93"/>
+						<col width="188"/>
+						<col width="203"/>
+						<col width="271"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="우편번호"/>
+						<cell col="1" display="text" text="주&#32;소&#32;1"/>
+						<cell col="2" display="text" text="주&#32;소&#32;2&#32;"/>
+						<cell col="3" display="text" text="읍면동/건물명/동호수/번지수"/>
+					</head>
+					<body>
+						<cell col="0" colid="REC_NUM" display="text"/>
+						<cell col="1" colid="STATE_RECORD_NUM" display="text"/>
+						<cell col="2" colid="COM_NAME" display="text"/>
+						<cell col="3" colid="REC_DATE" display="date"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button ButtonStyle="TRUE" Height="21" Id="btnSearch" ImageID="button_style01_60" Left="575" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="11" Text="검&#32;&#32;색" Top="28" Width="60"></Button>
+	</Form>
+	<Script></Script>
+</Window>

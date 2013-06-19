@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegRePublishMgr" Left="8" OnActivate="fnForm_Activate" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="재교부&#32;접수관리" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_RE_DERIVERY_STATEMENT">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_LIM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_PART" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_PART_REBO_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RE_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="20" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsSIDO_CODE">
+				<Contents>
+					<colinfo id="AREA_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="40" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="1" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="MANA_NUM" size="13" type="STRING"/>
+					<colinfo id="NAME" size="50" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_yycho">
+				<Contents>
+					<colinfo id="yycho_title" size="256" summ="default" type="STRING"/>
+					<colinfo id="yycho_name" size="256" summ="default" type="STRING"/>
+					<record>
+						<yycho_name>ycho</yycho_name>
+						<yycho_title>년초</yycho_title>
+					</record>
+					<record>
+						<yycho_name>yycho</yycho_name>
+						<yycho_title>월초</yycho_title>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="9" TabStop="FALSE" Top="149" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" OnClick="Image0_OnClick" TabOrder="8" TabStop="FALSE" Top="80" Width="816"></Image>
+		<Image Height="66" Id="Image5" ImageID="bg_search" Left="23" TabOrder="13" TabStop="FALSE" Top="93" Width="784"></Image>
+		<Calendar Height="21" Id="scDATE2" Left="440" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="3" Top="107" Value="TODAY" Width="93"></Calendar>
+		<Calendar Height="21" Id="scDATE1" Left="328" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="107" Width="93"></Calendar>
+		<Edit Height="21" Id="scRECV_NUM" Left="560" Style="style1" TabOrder="4" Top="133" Width="108"></Edit>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="7" TabStop="FALSE" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="10" TabStop="FALSE" Top="573" Width="816"></Image>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="232" TabOrder="11" TabStop="FALSE" Top="112" Width="11"></Image>
+		<Static Color="#4e4e4e" Height="16" Id="Static3" Left="249" TabOrder="12" Text="재교부접수일자" Top="111" Width="72"></Static>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="711" OnClick="fnSearchButton_Click" TabOrder="5" TabStop="FALSE" Text="Button0" Top="107" Width="74"></Button>
+		<Static Color="#666666" Height="12" Id="Static4" Left="425" TabOrder="13" Text="~" Top="111" Width="16"></Static>
+		<Static Color="#4e4e4e" Height="16" Id="Static6" Left="502" TabOrder="14" Text="접수번호" Top="136" Width="72"></Static>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="484" TabOrder="12" TabStop="FALSE" Top="138" Width="11"></Image>
+		<Grid BindDataset="dsPT_R_RE_DERIVERY_STATEMENT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="543" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="359" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="808" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="6" TabStop="FALSE" Top="184" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="42"/>
+						<col width="93"/>
+						<col width="173"/>
+						<col width="103"/>
+						<col width="103"/>
+						<col width="85"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="등록번호"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="상호"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="접수번호"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="처리상태"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell align="center" col="1" colid="COI_WRT_NUM" display="text"/>
+						<cell align="center" col="2" colid="NAME" display="text"/>
+						<cell align="center" col="3" colid="RECV_NUM" display="text"/>
+						<cell align="center" col="4" colid="RECV_DT" display="date"/>
+						<cell align="center" col="5" colid="MOT_STE" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIDO_NM" Height="21" Id="SIDO_CODE" InnerDataset="dsSIDO_CODE" Left="110" TabOrder="1" Top="107" Width="108"></Combo>
+		<Static Color="#4e4e4e" Height="16" Id="Static0" Left="54" TabOrder="18" Text="지역구분" Top="112" Width="72"></Static>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue" Left="36" TabOrder="14" TabStop="FALSE" Top="112" Width="11"></Image>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="24" TabOrder="15" TabStop="FALSE" Top="551" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="40" Id="Static2" Left="55" TabOrder="20" Text="등록번호&#32;및&#32;공사업체명은&#32;선택적으로&#32;검색하실&#32;수&#32;있습니다." Top="573" Width="736"></Static>
+		<Image Height="11" Id="Image10" ImageID="arrow_small_blue" Left="36" TabOrder="24" TabStop="FALSE" Top="137" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="15" Id="Static7" Left="53" TabOrder="26" Text="등록번호" Top="137" Width="80"></Static>
+		<Edit Height="21" Id="scCOI_WRT_NUM" Left="110" MaxLength="12" Style="style1" TabOrder="21" Top="131" Width="107"></Edit>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="232" TabOrder="23" TabStop="FALSE" Top="137" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="11" Id="Static5" Left="248" TabOrder="25" Text="상&#32;&#32;&#32;&#32;&#32;&#32;호" Top="138" Width="52"></Static>
+		<Edit Height="21" Id="scCOM_NAME" Left="304" Style="style1" TabOrder="22" Top="132" Width="155"></Edit>
+		<Static Height="14" Id="Static9" Left="739" TabOrder="28" Top="167" Width="64"></Static>
+		<Static Color="#666666" Height="16" Id="Static8" Left="704" TabOrder="27" Text="총계:" Top="167" Width="48"></Static>
+		<Radio BKColor="user2" Border="None" BorderColor="white" CodeColumn="yycho_name" Color="#4e4e4e" ColumnCount="2" DataColumn="yycho_title" DisableColor="user0" Font="Tahoma,9" Height="16" Id="ryycho" INDEX="-1" InnerDataset="ds_yycho" Left="705" OnClick="ryycho_OnClick" TabOrder="29" Top="135" Width="93"></Radio>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegRePublishMgr.xml
+2. 작성일 : 20011-04-18
+3. 작성자 : 이석곤
+4. 기  능 : 공사업 재교발급등록 현황
+5. 변경이력
+  가. 20011-04-18 최초작성 (이석곤)
+
+*/
+
+#include "UserLib::CommonJs.js"
+ 
+//전역변수
+var pscMODE,pSIDO_CODE,pscDATE1,pscDATE2,pscRECV_NUM;
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	scDATE1.Value = AddDate(Today(), -14);
+	//2012-10-04 서춘교 수정
+	//var thisToDay = Today();
+	//scDATE1.Value = fromDayAfter(thisToDay,-14,0,"add");
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "공사업 재교발급등록 현황";
+	
+	fnGetCode();
+	
+	//초기화
+	traceControl( this );
+	if(pscMODE=="T"){
+		fnControlInit("",this);
+		fnTablesBinding();
+	}
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	fnAllControlState(true, this);
+		
+	divButtonBar.btnInsert.enable = true;
+	divButtonBar.btnModify.enable = true;
+	divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, true);
+	
+	divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+	divButtonBar.btnReport.enable = true;
+	divButtonBar.btnExcel.enable = true;
+	divButtonBar.btnList.enable = false;
+	divButtonBar.btnCancel.enable = false;
+	
+	fnControlState(false, this, "SIDO_CODE");
+	
+if(dsPT_R_RE_DERIVERY_STATEMENT.rowcount == 0) {
+		fnAllControlState(false, divButtonBar);
+		divButtonBar.btnInsert.enable = true;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " scRECV_NUM=" + quote(this.scRECV_NUM.Text);
+	sArgs += " scCOM_NAME=" + quote(this.scCOM_NAME.Text);
+	sArgs += " scCOI_WRT_NUM=" + quote(this.scCOI_WRT_NUM.Text);
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_RE_DERIVERY_STATEMENT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	
+	Static9.text=dsPT_R_RE_DERIVERY_STATEMENT.rowcount();
+	
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+		}
+		return;
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}	
+	
+	if (svcid == "GET_SIDO_CODE")
+	{
+		SIDO_CODE.Value = global.g_Sd_cd;
+	}
+	fnInitButtonBar();
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	var sKEY1 = "";
+	var sKEY2 = "";
+	var sWorkFlag = global.gv_INSERT;
+	
+	var sArgs = "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + sKEY1 + " _sKEY2=" + sKEY2;
+
+	gfnCreateNewWindow("RegRePublishMgrC", "./RegRePublishMgrC.xml", sArgs);
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 인쇄 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	if (dsPT_R_RE_DERIVERY_STATEMENT.rowposition < 0)
+	{
+		alert('대상을 선택해주세요.');
+		return;
+	}
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "RECV_NUM");
+	var sKEY2 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "SIDO_CODE");
+
+	var sWorkFlag = global.gv_MODIFY;
+	
+	var sArgs = fnParamInit("",this);
+	sArgs += "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + quote(sKEY1) + " _sKEY2=" + quote(sKEY2) ;
+
+	gfnCreateNewWindow("RegRePublishMgrC", "./RegRePublishMgrC.xml", sArgs);
+}
+
+/**
+ 1. 함수명 : fnBookModify
+ 2. 기  능 : 등록증/등록수첩 인쇄 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnBookModify()
+{
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "TMP_WRT_NUM");
+
+	var sWorkFlag = global.gv_MODIFY;
+	
+	var sArgs = "_sWorkFlag=" + quote(sWorkFlag) + " _sKEY1=" + quote(sKEY1);
+	
+	gfnCreateNewWindow("RegRePublishMgrP", "./RegRePublishMgrP.xml", sArgs);
+}
+
+
+function fnRegReport()
+{
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "TMP_WRT_NUM");
+
+	var sWorkFlag = global.gv_MODIFY;
+	
+	var sArgs = "_sWorkFlag=" + quote(sWorkFlag) + " _sKEY1=" + quote(sKEY1);
+	
+	gfnCreateNewWindow("RegReportMgrP", "./RegReportMgrP.xml", sArgs);
+}
+
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	dsPT_R_RE_DERIVERY_STATEMENT.ApplyChange();
+	var nCount = fnGridRowRemove(dsPT_R_RE_DERIVERY_STATEMENT);
+	
+	if(nCount == 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+
+	var sArgs = "workMODE=ALL";
+	var sTid = "DELETE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishMgrCCUD";
+	var sInDs = "dsPT_R_RE_DERIVERY_STATEMENT=dsPT_R_RE_DERIVERY_STATEMENT:u";
+	var sOutDs = "dsPT_R_RE_DERIVERY_STATEMENT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+  
+    var sCode = fnCreateDialog("cm::RegRePublishReportDlgNT.xml", "");
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "TMP_WRT_NUM");
+	var sKEY2 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "sido_code");
+
+    var strWhereInParam = "0";
+
+	var coi_wrt_num= dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "COI_WRT_NUM");
+	//alert("1"+sKEY1);
+	//alert("2"+coi_wrt_num);
+	//등록 수첩 리포트1
+
+
+	if (sCode == "RPT1")
+	{
+		var coi_wrt_num= dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "COI_WRT_NUM");
+
+	var sArgs = "coi_wrt_num="+coi_wrt_num;
+
+	gfnCreateNewWindow("","cm::RegDetail.xml", sArgs);
+	}
+	// 등록증 리포트
+	else if (sCode == "RPT2")
+	{
+		fnRegReport();
+	}
+	// 등록대장 리포트
+	else if (sCode == "RPT3")
+	{
+	
+	
+		var sViewer = "_sViewer=NewRegStR";
+		var sReportname =  " _sReportname=connection.reportname=/BusinessRegist/NewRegStR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)NewRegStR";
+		var	spCount = " _spCount=odi.Q)NewRegStR.pcount=1";
+		var sParam = " _sParam=odi.Q)NewRegStR.args1=TMP_WRT_NUM=" + sKEY1;
+		
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);
+	}
+        else if (sCode == "RPT4")
+	{
+	 	
+	var con=dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row,"CHECKER"); 
+       if(con ==0)
+       {
+         alert("출력 할 데이터를 선택하세요.");
+         return; 
+       }
+		var chkCnt = 0;
+		for (var nLoop = 0; nLoop < dsPT_R_RE_DERIVERY_STATEMENT.rowcount; nLoop++) {
+			if (dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(nLoop, "CHECKER") == "1" ) {
+				strWHEREInParam += dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(nLoop, "tmp_wrt_num") + ",";
+				chkCnt++;
+			}			
+		}
+		
+		// 리포트의 행은 27개이다. 체크한 항목이 페이지를 벗어나면 안된다. :P
+		
+		strWhereInParam = substr( strWhereInParam, 0, length( strWhereInParam ) - 1 );
+		
+		var sViewer = "_sViewer=RegRepStR";
+		var sReportname =  " _sReportname=connection.reportname=/BusinessRegist/RegRepStR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)RegRepStR";
+		var	spCount = " _spCount=odi.Q)RegRepStR.pcount=2";
+		var sParam = " _sParam=odi.Q)RegRepStR.args1=sido_code=" + sKEY2 + "||";
+		sParam +="odi.Q)RegRepStR.args2=tmp_wrt_num=" + strWHEREInParam ;
+      
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam); 
+	}
+	
+}
+
+function fnReport2()
+{
+	var sCode = fnCreateDialog("cm::RegRePublishReportDlg.xml", "");
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "TMP_WRT_NUM");
+
+	// 등록 수첩 리포트
+	if (sCode == "RPT1")
+	{
+		fnBookModify();
+	}
+	// 등록증 리포트
+	else if (sCode == "RPT2")
+	{
+		fnRegReport();
+	}
+}
+
+
+
+/*
+function fnReport()
+{
+	var sCode = fnCreateDialog("./RegRePublishReportDlg.xml", "");
+	
+	var sKEY1 = dsPT_R_RE_DERIVERY_STATEMENT.GetColumn(dsPT_R_RE_DERIVERY_STATEMENT.row, "TMP_WRT_NUM");
+
+	// 등록 수첩 리포트
+	if (sCode == "RPT1")
+	{
+		fnBookModify();
+	}
+	// 등록증 리포트
+	else if (sCode == "RPT2")
+	{
+		fnRegReport();
+	}
+}
+*/
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업체 재교부 접수 현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+    else if(nChar == "13") fnTablesBinding();
+}
+
+/*function fnGridHead_Click(obj,nCell,nX,nY,nPivotIndex)
+{
+	if (nCell != 0) return;
+
+	fnGridCellCheck(obj, nCell, "CHECKER");
+}*/
+
+function fnGridCellCheck(obj, nCell, sCol)
+{
+	if(obj.Editable == false) return;
+
+	var objDs = obj.BindDataset;
+
+	if (grdList.GetSubCellProp("head", nCell, 1, "text") == "1")
+	{
+		grdList.SetSubCellProp("head", nCell, 1, "text", "0");
+		fnSetGridCheck(0, objDs, sCol);
+	} 
+	else
+	{
+		grdList.SetSubCellProp("head", nCell, 1, "text", "1");
+		fnSetGridCheck(1, objDs, sCol);
+	}
+}
+
+function fnGetCode()
+{
+	var sArgs = "";
+	var sTid = "GET_SIDO_CODE";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=SidoCode";
+	var sInDs = "";
+	var sOutDs = "dsSIDO_CODE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fnModify();
+}
+
+function ryycho_OnClick(obj)   //월초연초 검색 2012-09-29 서춘교
+{
+	if(this.ryycho.Value="ycho") {
+
+ scDATE1.Value = substr(Today(),0,4)+'0101';
+}
+	else if(this.ryycho.Value="yycho") {
+
+ scDATE1.Value = substr(Today(),0,6)+'01';
+}
+}]]></Script>
+</Window>

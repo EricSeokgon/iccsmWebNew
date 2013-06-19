@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="632" Id="form" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="Excel&#32;Import&#32;Sample" Top="8" Ver="1.0" Width="848" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_CONSTRUCTION">
+				<Contents>
+					<colinfo id="SEQ" size="256" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" type="STRING"/>
+					<colinfo id="ORPE_NM" size="256" type="STRING"/>
+					<colinfo id="PLANER_NAME_S" size="256" type="STRING"/>
+					<colinfo id="STRU_ADDR_ADDR_S" size="256" type="STRING"/>
+					<colinfo id="SUV_APPL_S" size="256" type="STRING"/>
+					<colinfo id="REPO_DT" size="256" type="STRING"/>
+					<colinfo id="ROWNUM" size="256" type="STRING"/>
+					<colinfo id="PLANER_NAME" size="256" type="STRING"/>
+					<colinfo id="SUV_APPL" size="256" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="256" type="STRING"/>
+					<colinfo id="STRU_ADDR_ADDR" size="256" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="256" type="STRING"/>
+					<colinfo id="PROC_STE" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SUV_APPL">
+				<Contents>
+					<colinfo id="col" size="10" summ="default" type="STRING"/>
+					<colinfo id="val" size="10" summ="default" type="STRING"/>
+					<record>
+						<col>전체</col>
+						<val>0</val>
+					</record>
+					<record>
+						<col>적합</col>
+						<val>1</val>
+					</record>
+					<record>
+						<col>부적합</col>
+						<val>2</val>
+					</record>
+					<record>
+						<col>감리대상</col>
+						<val>3</val>
+					</record>
+					<record>
+						<col>비대상</col>
+						<val>4</val>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PROC_STE">
+				<Contents>
+					<colinfo id="col" size="10" summ="default" type="STRING"/>
+					<colinfo id="val" size="10" summ="default" type="STRING"/>
+					<record>
+						<col>전체</col>
+						<val>0</val>
+					</record>
+					<record>
+						<col>신규입력</col>
+						<val>1</val>
+					</record>
+					<record>
+						<col>처리중</col>
+						<val>2</val>
+					</record>
+					<record>
+						<col>처리완료</col>
+						<val>3</val>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Proc_0">
+				<Contents>
+					<colinfo id="NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="TEL" size="100" summ="default" type="STRING"/>
+					<colinfo id="PART" size="150" summ="default" type="STRING"/>
+					<colinfo id="POS" size="100" summ="default" type="STRING"/>
+					<colinfo id="OFFI_ID" size="100" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_1">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_2">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_3">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DEFICIT">
+				<Contents>
+					<colinfo id="DEFI_SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DEFI_OUT" size="1" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DEFI_CONT" size="512" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="6" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_NUMCHK">
+				<Contents>
+					<colinfo id="KEY_YN" size="20" summ="default" type="STRING"/>
+					<colinfo id="DOC_NUM" size="10" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DEFICIT_CODE">
+				<Contents>
+					<colinfo id="DEFI_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="100" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="1" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="15" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEFI_GROUP" size="15" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_SYSVAR_MASTER">
+				<Contents>
+					<colinfo id="SERVER_YN" size="4" summ="default" type="STRING"/>
+					<colinfo id="SERVER_ADDR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsUSE">
+				<Contents>
+					<colinfo id="CODE_NAME" size="150" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="10" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_UB_MEMO">
+				<Contents>
+					<colinfo id="MEMO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MEMO_CONT" size="512" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="24" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="WRT_TIME" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_NAME" size="20" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="24" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsWORK">
+				<Contents>
+					<colinfo id="CODE_NAME" size="150" summ="default" type="STRING"/>
+					<colinfo id="CODE" size="10" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="16" TabOrder="1" Top="85" Width="968"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="16" TabOrder="2" Top="152" Width="817"></Image>
+		<Image Height="56" Id="Image6" ImageID="bg_default" Left="24" TabOrder="3" TabStop="FALSE" Top="96" Width="784"></Image>
+		<Edit Border="Flat" BorderColor="#9ea987" Height="20" Id="ed0" Left="112" TabOrder="4" Top="120" Width="379"></Edit>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnExcel" ImageID="button_style1_90" Left="496" OnClick="fnExcel_Click" Style="button_style01" TabOrder="5" TabStop="FALSE" Text="파일찾기" Top="120" Width="90"></Button>
+		<FileDialog Bottom="144" Filter="Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*" Height="24" Id="FileDialog0" Left="592" Right="616" TabOrder="7" Top="120" Width="24"></FileDialog>
+		<Grid BindDataset="ds_PT_UB_CONSTRUCTION" BkColor2="default" BoldHead="true" Bottom="571" Enable="true" EndLineColor="default" Height="411" Id="Grid_main" InputPanel="FALSE" Left="32" LineColor="default" Right="800" TabOrder="6" TabStop="true" Top="160" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="32"/>
+						<col width="60"/>
+						<col width="138"/>
+						<col width="162"/>
+						<col width="246"/>
+						<col width="54"/>
+						<col width="70"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="발주자"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="용역업체(설계자)"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="건축현장명(소재지)"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="검토의견"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="통보일"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="SEQ" display="text"/>
+						<cell align="center" col="1" colid="RECV_DT" display="text"/>
+						<cell align="center" col="2" colid="PLANER_NAME_S" display="text"/>
+						<cell align="center" col="3" colid="ORPE_NM" display="text"/>
+						<cell align="center" col="4" colid="STRU_ADDR_ADDR_S" display="text"/>
+						<cell align="center" col="5" colid="SUV_APPL_S" display="text"/>
+						<cell align="center" col="6" colid="REPO_DT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="16" TabOrder="7" Text="Div0" Top="24" Url="base::frmButtonBarChg.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+var scROWNUM;
+var scRECV_NUM;
+var	_bDialog = false;
+//var base_code = "WRT_ID="+global.g_User_ID;
+var base_code = "WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+var i;
+//+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "착공전설계검토일괄입력";
+}
+        
+
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, false);
+		divButtonBar.btnSave.enable=true;
+		//divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		//divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnList.enable = false;
+	}
+}
+
+function fnExcel_Click(obj,nX,nY)
+{
+
+	FileDialog0.Type = "OPEN";
+	FileDialog0.Filter = "Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*|";
+
+	var result = FileDialog0.Open();
+	
+	if ( result )
+	{
+		ed0.Text= FileDialog0.FilePath + '\\' + FileDialog0.FileName;
+	}
+	
+	grid_Main.Redraw = false;
+	ds_PT_UB_CONSTRUCTION.ClearData();
+	//ext_ExcelImportByIndex(ed0.Text, 0,"ds_sheet",1);
+	ext_ExcelImportByIndex(ed0.Text, 0,"ds_PT_UB_CONSTRUCTION",1,1,0,2); 
+	grid_Main.Redraw = true;
+	//var cnt  = ds_PT_UB_CONSTRUCTION.GetColumn(0,"SEQ");
+	var cnt = ds_PT_UB_CONSTRUCTION.rowcount();
+    
+for(i=0; i<cnt; i++){
+  	var num  = ds_PT_UB_CONSTRUCTION.GetColumn(i,"SEQ");
+    var rev = global.g_Sgg_cd+'0'+num;
+  ds_PT_UB_CONSTRUCTION.SetColumn(i,"SIDO_CODE",global.g_Sd_cd);	
+  ds_PT_UB_CONSTRUCTION.SetColumn(i,"SIGUNGU_CODE",global.g_Sgg_cd);
+  ds_PT_UB_CONSTRUCTION.SetColumn(i,"WRT_ID",global.g_User_ID);	
+  //ds_PT_UB_CONSTRUCTION.SetColumn(i,"ROWNUM",ds_PT_UB_CONSTRUCTION.GetColumn(i,"SEQ"));
+  ds_PT_UB_CONSTRUCTION.SetColumn(i,"PLANER_NAME",ds_PT_UB_CONSTRUCTION.GetColumn(i,"PLANER_NAME_S"));
+  ds_PT_UB_CONSTRUCTION.SetColumn(i,"STRU_ADDR_ADDR",ds_PT_UB_CONSTRUCTION.GetColumn(i,"STRU_ADDR_ADDR_S"));
+   ds_PT_UB_CONSTRUCTION.SetColumn(i,"PROC_STE",ds_PT_UB_CONSTRUCTION.GetColumn(i,"PROC_STE"));
+  //ds_PT_UB_CONSTRUCTION.SetColumn(i,"CIV_RECV_NUM",rev);
+  //ds_PT_UB_CONSTRUCTION.SetColumn(i,"RECV_NUM",);
+   
+   
+  if(ds_PT_UB_CONSTRUCTION.GetColumn(i,"SUV_APPL_S") == "합격"){
+     ds_PT_UB_CONSTRUCTION.SetColumn(i,"SUV_APPL","1");
+  }
+  if(ds_PT_UB_CONSTRUCTION.GetColumn(i,"SUV_APPL_S") == "부적합"){
+     ds_PT_UB_CONSTRUCTION.SetColumn(i,"SUV_APPL","2");
+  }
+  if(ds_PT_UB_CONSTRUCTION.GetColumn(i,"SUV_APPL_S") == "감리대상"){
+     ds_PT_UB_CONSTRUCTION.SetColumn(i,"SUV_APPL","3");
+  }
+  if(ds_PT_UB_CONSTRUCTION.GetColumn(i,"SUV_APPL_S") == "비대상"){
+     ds_PT_UB_CONSTRUCTION.SetColumn(i,"SUV_APPL","4");
+  }
+ }
+
+}    
+
+function form_OnLoadCompleted(obj)
+{
+}
+
+function fnExcel()
+{	
+	fnGridToExcel(Grid_main, "착공전설계");
+
+}
+
+function fnTablesBinding()
+{
+	
+    var sArgs="";
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=ReportBeforInvestResultExCUD";
+	var sInDs = "";
+	var sOutDs = "ds_PT_UB_CONSTRUCTION=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	alert('저장되었습니다.');
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+		fnTablesBinding();
+	}
+}
+
+
+function fnSave()
+{
+    //fnDCheck_Click();
+     
+	var sArgs = "workMODE=ALL "+base_code+" scRECV_NUM="+scRECV_NUM;
+	var sTid = "SAVE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=ReportBeforInvestResultExCUD";
+	//var sUrl = "ICCS::ub/UbAction.do?cmd=BeforeMgrCUD";
+	//var sInDs = "ds_PT_UB_CONSTRUCTION=ds_PT_UB_CONSTRUCTION:U ds_DETAIL_1=ds_DETAIL_1:U ds_DETAIL_2=ds_DETAIL_2:U ds_DETAIL_3=ds_DETAIL_3:U dsPT_R_DEFICIT=dsPT_R_DEFICIT:U";
+	var sInDs = "ds_PT_UB_CONSTRUCTION=ds_PT_UB_CONSTRUCTION:u";
+	var sOutDs = "ds_PT_UB_CONSTRUCTION=output";
+	var sCallBack = "fn_CallBack";
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	//else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+/*function fnDCheck_Click(obj)
+{
+    var PART1=ds_Proc_0.GetColumn(0, "PART");
+
+	
+	var etcArgs=" scName="+quote(global.g_Name)+" scPOS="+quote(PART1)+" scTEL="+quote(global.g_TEL);
+	var sArgs= "scCIV_RECV_NUM="+ds_PT_UB_CONSTRUCTION.GetColumn(i,"CIV_RECV_NUM") +" "+base_code +etcArgs;
+	//var sArgs = "scROWNUM="+ect+base_code+etcArgs;
+
+	var sTid = "NUM_CODE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=ReportCheckKeyMgr";
+	var sInDs = "";
+	var sOutDs = "ds_NUMCHK=output";
+	var sCallBack = "fn_CallBack";
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+
+ }*/
+
+
+/*
+function img_excelload_OnClick(obj,nX,nY)
+{
+    grid_Main.Redraw = false;
+	DS_SHEET.ClearData();
+	ext_ExcelImportByIndex(ed0.Text, 0,"ds_sheet",1);
+	grid_Main.Redraw = true;
+}
+*/
+/*function img_excel_OnClick(obj,nX,nY)
+{
+	//Div2.fn_setMessage("조회 자료를 EXCEL로 변환 합니다.", "", 0);
+	Grid_main.ExportExcelEx("sheet1");
+
+}
+*/
+
+/*
+function Button0_OnClick(obj)
+{
+	TRACE(ds_sheet.SaveXML());
+}*/
+]]></Script>
+</Window>

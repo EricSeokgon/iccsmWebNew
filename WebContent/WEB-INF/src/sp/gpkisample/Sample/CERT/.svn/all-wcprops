@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT
+END
+001rules001_sig.der
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/001rules001_sig.der
+END
+kicaCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/kicaCert.der
+END
+requesterCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/requesterCert.der
+END
+signCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/signCert.der
+END
+viewCert_user.der
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/viewCert_user.der
+END
+vidByIVSCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/vidByIVSCert.der
+END
+crossCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/crossCert.der
+END
+vidPri.key
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/vidPri.key
+END
+tradesignCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/tradesignCert.der
+END
+ocspReqMsg.ber_
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/ocspReqMsg.ber_
+END
+yessignCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/yessignCert.der
+END
+viewCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/viewCert.der
+END
+gpkiCert.cer
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/gpkiCert.cer
+END
+KISA.der
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/KISA.der
+END
+OCSPRes.ber
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/OCSPRes.ber
+END
+ncasignCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/ncasignCert.der
+END
+ocspResMsg.ber
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/ocspResMsg.ber
+END
+signkoreaCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/signkoreaCert.der
+END
+ocspReqMsg.ber
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/ocspReqMsg.ber
+END
+vidCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/vidCert.der
+END
+signPri.key
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/signPri.key
+END
+001rule_use001_sig.key
+K 25
+svn:wc:ra_dav:version-url
+V 200
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/gpkisample/Sample/CERT/001rule_use001_sig.key
+END

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegReceiptMgr" Left="8" OnActivate="fnForm_Activate" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록&#32;접수관리" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_REGIST_STATEMENT">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_TIME" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_LIM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_PART" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_PART_REBO_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COM_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="256" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OTOB_STA_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_PART" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECVER" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_WRT_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DEFI_STE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UDP_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMPDEFICIT_STATUS" size="10" summ="default" type="STRING"/>
+					<colinfo id="GUBUN" size="25" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsSIDO_CODE">
+				<Contents>
+					<colinfo id="AREA_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="40" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" TabOrder="11" Top="148" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" TabOrder="10" Top="77" Width="816"></Image>
+		<Image Height="66" Id="Image5" ImageID="bg_search" Left="16" TabOrder="18" Top="96" Width="784"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" TabOrder="9" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" TabOrder="12" Top="567" Width="816"></Image>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="238" TabOrder="13" TabStop="FALSE" Top="114" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="11" Id="Static0" Left="256" TabOrder="14" Text="접수일자" Top="114" Width="52"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="312" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="111" Width="91"></Calendar>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="518" TabOrder="15" TabStop="FALSE" Top="113" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="11" Id="Static1" Left="535" TabOrder="16" Text="접수번호" Top="113" Width="52"></Static>
+		<Static Font="굴림,9" Height="8" Id="Static2" Left="403" TabOrder="17" Text="&#32;~&#32;" Top="116" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="422" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="3" Top="112" Value="TODAY" Width="89"></Calendar>
+		<Edit Height="21" Id="scRECV_NUM" Left="592" Style="style1" TabOrder="4" Top="109" Width="96"></Edit>
+		<Grid BindDataset="dsPT_R_REGIST_STATEMENT" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="544" ButtonColor="user1" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadBorder="Flat" HeadHeight="20" Height="368" Id="grdList" InputPanel="FALSE" Left="16" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="800" Style="grid_title" TabOrder="8" TabStop="true" Top="176" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="37"/>
+						<col width="74"/>
+						<col width="181"/>
+						<col width="95"/>
+						<col width="89"/>
+						<col width="80"/>
+						<col width="85"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="체크"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="접수번호"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="업체명"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="접수일시"/>
+						<cell bkcolor="#787878" col="4" color="white" combocol="PROC_LIM" combodataset="dsPT_R_REGIST_STATEMENT" combotext="PROC_LIM" display="text" text="처리기한"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="흠결상태"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="진행상태"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" text="접수구분"/>
+					</head>
+					<body>
+						<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+						<cell col="1" colid="RECV_NUM" combodataset="dsPT_R_REGIST_STATEMENT" display="text"/>
+						<cell col="2" colid="NAME" combodataset="dsPT_R_REGIST_STATEMENT" display="text"/>
+						<cell align="center" col="3" colid="RECV_DT" combocol="RECV_DT" combodataset="dsPT_R_REGIST_STATEMENT" combotext="RECV_DT" display="date"/>
+						<cell align="center" col="4" colid="PROC_LIM" combocol="PROC_LIM" combodataset="dsPT_R_REGIST_STATEMENT" combotext="PROC_LIM" display="date"/>
+						<cell align="center" col="5" colid="TMPDEFICIT_STATUS" display="text"/>
+						<cell align="center" col="6" colid="TMPMOT_STE" display="text"/>
+						<cell col="7" colid="GUBUN" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="712" OnClick="fnSearchButton_Click" TabOrder="7" Text="Button0" Top="120" Width="74"></Button>
+		<Combo CodeColumn="AREA_CODE" DataColumn="SIDO_NM" Height="21" Id="SIDO_CODE" InnerDataset="dsSIDO_CODE" Left="105" TabOrder="1" Top="112" Width="108"></Combo>
+		<Static Color="#4e4e4e" Height="16" Id="Static3" Left="49" TabOrder="20" Text="지역구분" Top="115" Width="72"></Static>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue" Left="31" TabOrder="19" TabStop="FALSE" Top="115" Width="11"></Image>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="16" TabOrder="21" Top="551" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="40" Id="Static4" Left="31" TabOrder="22" Text="접수번호는&#32;선택적으로&#32;검색하실&#32;수&#32;있습니다." Top="573" Width="736"></Static>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="32" TabOrder="23" TabStop="FALSE" Top="136" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="11" Id="Static5" Left="49" TabOrder="24" Text="업체명" Top="139" Width="52"></Static>
+		<Edit Height="21" Id="scCOM_NAME" Left="105" Style="style1" TabOrder="5" Top="135" Width="108"></Edit>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue" Left="238" TabOrder="25" TabStop="FALSE" Top="138" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="11" Id="Static6" Left="255" TabOrder="26" Text="대표자명" Top="138" Width="52"></Static>
+		<Edit Height="21" Id="scREP_NM" Left="312" Style="style1" TabOrder="6" Top="134" Width="88"></Edit>
+		<Image Height="11" Id="Image10" ImageID="arrow_small_blue" Left="423" TabOrder="28" TabStop="FALSE" Top="139" Width="11"></Image>
+		<Static Color="#4e4e4e" Font="굴림,9" Height="15" Id="Static7" Left="440" TabOrder="29" Text="대표자휴대폰" Top="139" Width="80"></Static>
+		<Edit Height="21" Id="scREP_MOBILE" Left="525" Style="style1" TabOrder="27" Top="135" Width="131"></Edit>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록신청 접수현황조회
+5. 변경이력
+  가. 2009-02-06 최초작성 (김현기)
+  나. 2009-04-06 Y.D JUNG
+*/
+
+#include "UserLib::CommonJs.js"
+
+//전역변수
+var pscMODE,pSIDO_CODE,pscDATE1,pscDATE2,pscRECV_NUM,pscCOM_NAME,pscREP_NM;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+//	scDATE1.Value = AddDate(Today(), -14);
+//wbjeon 2010-09-30 수정 	
+	var thisToDay = Today();
+	scDATE1.Value = fromDayAfter(thisToDay,-14,0,"add");
+
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	
+	divButtonBar.Image1.text = space(6) + "공사업 신규등록 접수현황";
+	
+	//최초 시도코드 검색
+	fnGetCode();
+	
+	//초기화
+	traceControl( this );
+	
+	if(pscMODE=="T"){
+		fnControlInit("",this);
+		fnTablesBinding();
+	}
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	fnAllControlState(true, this);
+		
+	divButtonBar.btnInsert.enable = true;
+	divButtonBar.btnModify.enable = true;
+	divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, true);
+	
+	divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+	divButtonBar.btnReport.enable = true;
+	divButtonBar.btnExcel.enable = true;
+	divButtonBar.btnList.enable = false;
+	
+	fnControlState(false, this, "SIDO_CODE");
+	
+	if ( dsPT_R_REGIST_STATEMENT.rowcount == 0 ) {
+		fnAllControlState(false, divButtonBar);
+		divButtonBar.btnInsert.enable = true;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " scRECV_NUM=" + quote(this.scRECV_NUM.Text);
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	sArgs += " scCOM_NAME=" + quote(this.scCOM_NAME.Text);
+	sArgs += " scREP_NM=" + quote(this.scREP_NM.Text);
+	sArgs += " scREP_NM=" + quote(this.scREP_MOBILE.Text);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegReceiptMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_REGIST_STATEMENT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/**
+ 1. 함수명 : fn_CallBack
+ 2. 기  능 : Transaction에 대한 CallBack 함수
+ 3. Params 
+    @Svcid : Transaction의 Service ID
+    @sErrCode : Transaction 오류 시 오류 코드
+    @sErrMsg : Transaction 오류 시 오류 메세지
+ 4. Return
+    없음
+*/
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}
+	
+	if (svcid == "GET_SIDO_CODE")
+	{
+		//화면의 시도코드 콤보박스 초기값 설정
+		SIDO_CODE.Value = global.g_Sd_cd;
+	}
+	
+	fnInitButtonBar();
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	var sKEY1 = "";
+	var sKEY2 = "";
+	var sWorkFlag = global.gv_INSERT;
+	
+	var sArgs = fnParamInit("",this);
+	sArgs += "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + sKEY1 + " _sKEY2=" + sKEY2;
+	
+	gfnCreateNewWindow("RegReceiptMgrC", "./RegReceiptMgrC.xml", sArgs);
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	var sKEY1 = dsPT_R_REGIST_STATEMENT.GetColumn(dsPT_R_REGIST_STATEMENT.row, "RECV_NUM");
+	var sKEY2 = dsPT_R_REGIST_STATEMENT.GetColumn(dsPT_R_REGIST_STATEMENT.row, "REGV_NUM");
+	var sWorkFlag = global.gv_MODIFY;
+	
+	var sArgs = fnParamInit("",this);
+	sArgs += "_sWorkFlag=" + sWorkFlag + " _sKEY1=" + quote(sKEY1) + " _sKEY2=" + quote(sKEY2);
+
+	gfnCreateNewWindow("RegReceiptMgrC", "cm::RegReceiptMgrC.xml", sArgs);
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+	if (dsPT_R_REGIST_STATEMENT.FindRow("CHECKER", "1") < 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+		
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	//Check Edit 선택하면 Dataset에서 Update Event가 발생하기 때문에
+	//Check 된 Row에 대한 강제적 변경내용 적용
+	dsPT_R_REGIST_STATEMENT.ApplyChange();
+	
+	var nCount = 0;
+	for (var nLoop = dsPT_R_REGIST_STATEMENT.rowcount - 1; nLoop >= 0; nLoop--)
+	{
+		if (dsPT_R_REGIST_STATEMENT.GetColumn(nLoop, "CHECKER") == "1")
+		{
+			//공사업등록업무 진행중인 접수내용에 대한 삭제 금지
+			if (fnEmpty(dsPT_R_REGIST_STATEMENT.GetColumn(nLoop, "MOT_STE")))
+			{
+				dsPT_R_REGIST_STATEMENT.DeleteRow(nLoop);
+				nCount++;
+			}
+		}
+	}
+	
+	if(nCount == 0)
+	{
+		alert('신규등록 업무 진행중인  데이터는 삭제할 수 없습니다.');
+		return;
+	}
+	
+	var sArgs = "workMODE=DELETE";	
+	var sTid = "DELETE";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegReceiptMgrCCUD";
+	var sInDs = "dsPT_R_REGIST_STATEMENT=dsPT_R_REGIST_STATEMENT:u";
+	var sOutDs = "dsPT_R_REGIST_STATEMENT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업등록접수현황");
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert)
+	{
+		fnInsert();
+	}
+	else if (obj == divButtonBar.btnModify)
+	{
+		fnModify();
+	}
+	else if (obj == divButtonBar.btnRemove)
+	{
+		fnRemove();
+	}
+	else if (obj == divButtonBar.btnSave)
+	{
+		fnSave();
+	}
+	else if (obj == divButtonBar.btnReport)
+	{
+		fnReport();
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else if (obj == divButtonBar.btnCancel)
+	{
+		fnCancel();
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "49" && bControl == true) fnInsert();		//Ctrl + 1
+	else if(nChar == "50" && bControl == true) fnModify();	//Ctrl + 2
+	else if(nChar == "51" && bControl == true) fnRemove();	//Ctrl + 3
+	else if(nChar == "83" && bControl == true) fnSave();	//Ctrl + s
+	else if(nChar == "80" && bControl == true) fnReport();	//Ctrl + p
+	else if(nChar == "13") fnTablesBinding();				//Enter
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	fnModify();
+}
+
+//////////////////////////////////////////////////////////////////
+// 기타 업무 함수
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGetCode
+ 2. 기  능 : 시도코드 조회
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnGetCode()
+{
+	var sArgs = "";
+	var sTid = "GET_SIDO_CODE";
+	var sUrl = "ICCS::sys_m/Sys_mAction.do?cmd=SidoCode";
+	var sInDs = "";
+	var sOutDs = "dsSIDO_CODE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}]]></Script>
+</Window>

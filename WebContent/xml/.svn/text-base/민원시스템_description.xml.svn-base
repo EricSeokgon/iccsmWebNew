@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConnectGroup device="Win32&#32;(1024x768)" Font="Default,0" height="768" Statusbar="true" titlebar="true" version="1.0" width="1024" work_height="711" work_width="1024">
+	<container Version="1000">
+		<Component Height="21" Id="Spin" Image="10" Name="cySpin" Title="Spin" Version="1000" Width="121"/>
+		<Component Height="21" Id="MaskEdit" Image="19" Name="cyMaskedit" Title="MaskEdit" Version="1000" Width="121"/>
+		<Component Height="21" Id="Button" Image="2" Name="cyButton" Title="Button" Version="1000" Width="104"/>
+		<Component Height="13" Id="Static" Image="8" Name="cyStatic" Title="Static" Version="1000" Width="40"/>
+		<Component Height="21" Id="Edit" Image="3" Name="cyEdit" Title="Edit" Version="1000" Width="121"/>
+		<Component Height="65" Id="Shape" Image="28" Name="cyShape" Title="Shape" Version="1000" Width="65"/>
+		<Component Height="65" Id="Pie" Image="30" Name="cyPie" Title="Pie" Version="1000" Width="65"/>
+		<Component Height="21" Id="Checkbox" Image="4" Name="cyCheckBox" Title="Check&#32;Box" Version="1000" Width="97"/>
+		<Component Height="24" Id="FileDialog" Image="18" Name="cyFileDialog" Title="File&#32;Dialog" Version="1000" Width="24"/>
+		<Component Height="24" Id="File" Image="25" Name="cyFile" Title="File" Version="1000" Width="24"/>
+		<Component Height="97" Id="List" Image="6" Name="cyListBox" Title="List" Version="1000" Width="145"/>
+		<Component Height="21" Id="Combo" Image="5" Name="cyComboEx" Title="ComboBox" Version="1000" Width="145"/>
+		<Component Height="21" Id="Radio" Image="7" Name="cyRadio" Title="Radio" Version="1000" Width="113"/>
+		<Component Height="72" Id="TextArea" Image="16" Name="cyTextArea" Title="Text&#32;Area" Version="1000" Width="185"/>
+		<Component Height="17" Id="Progressbar" Image="31" Name="cyProgressbar" Title="Progressbar" Version="1000" Width="150"/>
+		<Component Height="97" Id="TreeView" Image="11" Module="CyTreeView" Name="cyTreeView" Title="Tree&#32;View" Version="1000" Width="121"/>
+		<Component Height="120" Id="Grid" Image="1" Module="CyGrid" Name="cyGrid" Title="Grid" Version="1000" Width="320"/>
+		<Component Height="105" Id="Image" Image="9" Name="cyImage" Title="Image" Version="1000" Width="105"/>
+		<Component Height="21" Id="Calendar" Image="13" Module="CyCalendarEx" Name="cyCalendarEx" Title="Calendar" Version="1000" Width="145"/>
+		<Component Height="193" Id="Div" Image="20" Name="cyDiv" Title="Division" Version="1000" Width="289"/>
+		<Component Id="PopupDiv" Image="54" Name="CyPopupDiv" Title="Popup&#32;Div" Version="1000"/>
+		<Component Height="193" Id="Tab" Image="12" Name="cyTab" Title="Tab" Version="1000" Width="289"/>
+		<Component Height="260" Id="WebBrowser" Image="24" Module="CyWebBrowser" Name="cyWebBrowser" Title="WebBrowser" Version="1000" Width="364"/>
+		<Component Height="168" Id="swFlash" Image="27" Module="CySWFlash" Name="cySWFlash" Title="Flash" Version="1000" Width="248"/>
+		<Component Height="24" Id="MenuBar" Image="32" Module="CyMenuBar" Name="cyMenuBar" Title="MenuBar" Version="1000" Width="192"/>
+		<Component Height="50" Id="Split" Image="55" Module="CySplit" Name="cySplit" Title="Split" Version="1000" Width="8"/>
+		<Component Height="8" Id="SplitJoint" Image="56" Module="CySplitU" Name="cySplitJoint" Title="SplitJoint" Version="1000" Width="8"/>
+		<Component Height="50" Id="Sign" Image="57" Module="CySign" Name="cySign" Title="Sign" Version="1000" Width="50"/>
+	</container>
+	<protocols version="1000">
+		<protocol id="file" name="cyHttpAdp" version="1000"/>
+		<protocol id="http" name="cyHttpAdp" version="1000"/>
+		<protocol id="https" name="cyHttpAdp" version="1000"/>
+	</protocols>
+	<AppGroups>
+		<AppGroup prefix="DefApp" type="form" version="1.0">
+			<script cachelevel="none" ext="xml" version="1000"/>
+		</AppGroup>
+	</AppGroups>
+</ConnectGroup>

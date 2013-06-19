@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="494" Id="RegReceiptMgrC" Left="8" OnActivate="fnForm_Activate" OnKeyDown="fnKey_Down" OnKillFocus="fnKillFocus" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록&#32;접수" Top="8" Ver="1.0" Width="721" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_SAMPLE">
+				<Contents>
+					<colinfo id="REC_NUM" size="32" type="STRING"/>
+					<colinfo id="REG_NUM" size="32" type="STRING"/>
+					<colinfo id="SC_CODE" size="2" type="STRING"/>
+					<colinfo id="SGG_CODE" size="2" type="STRING"/>
+					<colinfo id="REC_DATE" size="24" type="STRING"/>
+					<colinfo id="PRO_PERIOD" size="24" type="STRING"/>
+					<colinfo id="PRO_DUTY" size="16" type="STRING"/>
+					<colinfo id="PRO_REC_NUM" size="16" type="STRING"/>
+					<colinfo id="COMPANY_NM" size="32" type="STRING"/>
+					<colinfo id="APPLICANT" size="24" type="STRING"/>
+					<colinfo id="TEL" size="16" type="STRING"/>
+					<colinfo id="FAX" size="16" type="STRING"/>
+					<colinfo id="REMEMBRANCER" size="24" type="STRING"/>
+					<colinfo id="SSN1" size="6" type="INT"/>
+					<colinfo id="SSN2" size="7" type="INT"/>
+					<colinfo id="POST_CODE" size="8" type="STRING"/>
+					<colinfo id="ADDR" size="64" type="STRING"/>
+					<colinfo id="ADDR_ETC" size="64" type="STRING"/>
+					<colinfo id="PUBLIC_WORK" size="8" type="STRING"/>
+					<colinfo id="REP_NUM" size="32" type="STRING"/>
+					<colinfo id="REC_DUTY" size="24" type="STRING"/>
+					<colinfo id="REC_WRITE" size="16" type="STRING"/>
+					<colinfo id="REC_INS_DT" size="24" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" type="STRING"/>
+					<colinfo id="UDP_DT" size="24" type="STRING"/>
+					<colinfo id="INS_DT" size="24" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCheckKey"></Dataset>
+		</Datasets>
+		<Div Border="SunkenEdge" Height="36" Id="divButtonBar" Left="4" TabOrder="1" Text="Div0" Top="4" Url="D:\work\iccs_sample\iccsm\base\Win32\frmButtonBar.xml" Width="711">
+			<Contents></Contents>
+		</Div>
+		<Tab Height="426" Id="tbMain" Left="8" TabOrder="2" Top="48" Width="701">
+			<Contents>
+				<TabPage BorderColor="black" Height="403" Id="tpBase" Left="2" TabOrder="51" Text="기본정보입력" Top="21" Width="697">
+					<Static Height="48" Id="Static0" Left="12" TabOrder="1" Text="접수자정보" Top="309" Type="Groupbox" Width="674"></Static>
+					<Static Height="14" Id="Static5" Left="34" TabOrder="2" Text="접&#32;수&#32;부&#32;서" Top="331" Width="64"></Static>
+					<Static Height="14" Id="Static1" Left="274" TabOrder="3" Text="접&#32;&#32;&#32;수&#32;&#32;&#32;자" Top="331" Width="64"></Static>
+					<Static Height="14" Id="Static2" Left="522" TabOrder="4" Text="접&#32;수&#32;일&#32;자" Top="331" Width="64"></Static>
+					<Calendar BindDataset="dsPT_SAMPLE" Column="REC_INS_DT" Height="21" Id="REC_INS_DT" Left="588" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="5" Top="326" UserData="접수일자가&#32;입력되지&#32;않았습니다." Value="TODAY" Width="85"></Calendar>
+					<Static Height="173" Id="Static3" Left="12" TabOrder="6" Text="업체정보" Top="128" Type="Groupbox" Width="674"></Static>
+					<Static Height="16" Id="Static4" Left="34" TabOrder="7" Text="업&#32;&#32;&#32;체&#32;&#32;&#32;명" Top="179" Width="64"></Static>
+					<Static Height="16" Id="Static6" Left="34" TabOrder="8" Text="대&#32;&#32;&#32;표&#32;&#32;&#32;자" Top="229" Width="64"></Static>
+					<Static Height="14" Id="Static7" Left="330" TabOrder="9" Text="주민(법인)등록번호" Top="229" Width="104"></Static>
+					<Static Height="14" Id="Static8" Left="34" TabOrder="10" Text="주&#32;&#32;&#32;소&#32;&#32;&#32;지" Top="253" Width="64"></Static>
+					<Static Height="14" Id="Static9" Left="26" TabOrder="11" Text="타&#32;시설공사업" Top="277" Width="80"></Static>
+					<Static Height="14" Id="Static10" Left="34" TabOrder="12" Text="전&#32;화&#32;번&#32;호" Top="205" Width="64"></Static>
+					<Static Height="16" Id="Static11" Left="330" TabOrder="13" Text="팩스번호" Top="205" Width="48"></Static>
+					<Static Height="14" Id="Static12" Left="330" TabOrder="14" Text="타업종&#32;신고번호" Top="277" Width="88"></Static>
+					<Static Height="16" Id="Static13" Left="330" TabOrder="15" Text="신&#32;청&#32;인" Top="181" Width="48"></Static>
+					<Static Height="16" Id="Static14" Left="34" TabOrder="16" Text="가등록번호" Top="155" Width="64"></Static>
+					<Static Height="94" Id="Static15" Left="12" TabOrder="17" Text="등록업체정보" Top="27" Type="Groupbox" Width="674"></Static>
+					<Static Height="16" Id="Static16" Left="34" TabOrder="18" Text="접수일자" Top="69" Width="48"></Static>
+					<Calendar BindDataset="dsPT_SAMPLE" Column="REC_DATE" Height="21" Id="REC_DATE" Left="88" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="19" Top="65" UserData="접수일자가&#32;입력되지&#32;않았습니다." Value="TODAY" Width="85"></Calendar>
+					<Static Height="16" Id="Static17" Left="202" TabOrder="20" Text="접수시간" Top="69" Width="48"></Static>
+					<MaskEdit Height="21" Id="fldRECT_TIME" Left="254" Mask="@@:@@" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="21" Top="65" UserData="접수시간이&#32;입력되지&#32;않았습니다." Value="MaskEdit0" Width="42"></MaskEdit>
+					<Static Height="16" Id="Static18" Left="34" TabOrder="22" Text="접수번호" Top="45" Width="48"></Static>
+					<Static Height="16" Id="Static19" Left="34" TabOrder="23" Text="처리기한" Top="93" Width="48"></Static>
+					<Calendar BindDataset="dsPT_SAMPLE" Column="PRO_PERIOD" Height="21" Id="PRO_PERIOD" Left="88" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="24" Top="89" UserData="처리기한이&#32;입력되지&#32;않았습니다." Value="TODAY" Width="85"></Calendar>
+					<Static Height="16" Id="Static20" Left="202" TabOrder="25" Text="처리과" Top="93" Width="48"></Static>
+					<Static Height="15" Id="Static21" Left="466" TabOrder="26" Text="처리과기록물등록번호" Top="93" Width="120"></Static>
+					<Button Height="21" Id="btnCODE" Left="421" OnClick="fnEditButton_Click" TabOrder="27" Text="Button0" Top="89" Width="28"></Button>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REC_NUM" Height="21" Id="REC_NUM" Left="88" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="28" Top="40" UserData="접수번호가&#32;입력되지&#32;않았습니다." Width="83"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="PRO_DUTY" Height="21" Id="PRO_DUTY" Left="254" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="29" Top="88" UserData="처리과&#32;코드가&#32;입력되지&#32;않았습니다." Width="41"></Edit>
+					<Edit Height="21" Id="TMPPRO_DUTY_NAME" Left="295" TabOrder="30" Top="88" Width="121"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="PRO_REC_NUM" Height="21" Id="PRO_REC_NUM" Left="590" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="31" Top="88" UserData="처리과기록물등록번호가&#32;입력되지&#32;않았습니다." Width="81"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REG_NUM" Height="21" Id="REG_NUM" Left="107" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="32" Top="152" UserData="가등록번호가&#32;입력되지&#32;않았습니다." Width="105"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="COMPANY_NM" Height="21" Id="COMPANY_NM" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="33" Top="176" UserData="업체명이&#32;입력되지&#32;않았습니다." Width="200"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="TEL" Height="21" Id="TEL" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="34" Top="200" UserData="전화번호가&#32;입력되지&#32;않았습니다." Width="200"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REMEMBRANCER" Height="21" Id="REMEMBRANCER" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="35" Top="224" UserData="대표자&#32;성명이&#32;입력되지&#32;않았습니다." Width="200"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="POST_CODE" Height="21" Id="POST_CODE" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="36" Top="248" UserData="우편번호가&#32;입력되지&#32;않았습니다." Width="65"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="PUBLIC_WORK" Height="21" Id="PUBLIC_WORK" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="37" Top="272" UserData="타&#32;시설&#32;공사업정보가&#32;입력되지&#32;않았습니다." Width="201"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="ADDR" Height="21" Id="ADDR" Left="194" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="38" Top="248" UserData="주소가&#32;입력되지&#32;않았습니다." Width="200"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="ADDR_ETC" Height="21" Id="ADDR_ETC" Left="396" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="39" Top="248" UserData="주소가&#32;입력되지&#32;않았습니다." Width="200"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="APPLICANT" Height="21" Id="APPLICANT" Left="384" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="40" Top="176" UserData="신청인명이&#32;입력되지&#32;않았습니다." Width="105"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="FAX" Height="21" Id="FAX" Left="384" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="41" Top="200" UserData="팩스번호가&#32;입력되지&#32;않았습니다." Width="209"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="SSN1" Height="21" Id="SSN1" Left="440" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="42" Top="224" UserData="주민(법인)등록번호가&#32;입력되지&#32;않았습니다." Width="65"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="SSN2" Height="21" Id="SSN2" Left="528" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="43" Top="224" UserData="주민(법인)등록번호가&#32;입력되지&#32;않았습니다." Width="65"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REP_NUM" Height="21" Id="Edit0" Left="424" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="44" Top="272" UserData="타업종&#32;신고번호가&#32;입력되지&#32;않았습니다." Width="172"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REC_DUTY" Height="21" Id="REC_DUTY" Left="106" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="45" Top="326" UserData="접수부서&#32;코드가&#32;입력되지&#32;않았습니다." Width="41"></Edit>
+					<Edit Height="21" Id="TMPREC_DUTY_NAME" Left="148" TabOrder="46" Top="326" Width="105"></Edit>
+					<Edit BindDataset="dsPT_SAMPLE" Column="REC_WRITE" Height="21" Id="REC_WRITE" Left="346" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="47" Top="326" UserData="접수자코드가&#32;입력되지&#32;않았습니다." Width="41"></Edit>
+					<Edit Height="21" Id="TMPREC_WRITE_NAME" Left="388" TabOrder="48" Top="326" Width="105"></Edit>
+				</TabPage>
+				<TabPage Height="403" Id="tpPaper" Left="2" TabOrder="51" Text="흠결검토" Top="21" Width="697"></TabPage>
+			</Contents>
+		</Tab>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgrC.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록신청 접수처리
+5. 변경이력
+  가. 2009-02-06 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var _sKEY2;
+var sWorkFlag;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = sWorkFlag;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnInsert();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		fnModify();
+	}
+}
+
+function fnForm_Activate(obj)
+{
+	global.gv_ActiveForm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(3, false);
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+		
+		fnAllControlState(false, this);
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		
+		fnAllControlState(true, this);
+	}
+	else
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnCancel.enable = true;
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = false;
+		
+		fnAllControlState(true, this);
+		fnControlState(false, this.tbMain.tpBase, "REC_NUM");
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "REC_NUM=" + _sKEY1 + " REG_NUM=" + _sKEY2;
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::sample/SampleAction.do?cmd=RegReceiptMgrC";
+	var sInDs = "";
+	var sOutDs = "dsPT_SAMPLE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+		if (svcid == "SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+	
+	if (svcid == "CHECK_KEY")
+	{
+		if (dsCheckKey.rowcount > 0)
+		{
+			alert('존재하는 민원접수번호입니다.');
+			tbMain.tpBase.REC_NUM.Text = "";
+			tbMain.tpBase.REC_NUM.SetFocus();
+		}
+	}
+	if (svcid == "SAVE")
+	{
+		alert('저장되었습니다.');
+		fnInquiry();
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	fnInitButtonBar();
+	dsPT_SAMPLE.AddRow();
+	
+	tbMain.tpBase.REC_DATE.Value = Today();
+	tbMain.tpBase.PRO_PERIOD.Value = AddDate(Today(), 14);
+	tbMain.tpBase.REC_INS_DT = Today();
+}
+
+function fnCancel()
+{
+	if(!Confirm('취소하시겠습니까?')) return;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		//키값을 자동으로 생성할 경우 삭제하는 로직을 추가해주세요
+		Close();
+	}
+	else
+	{
+		fnRejectChange(dsPT_SAMPLE);
+		alert('취소되었습니다.');
+	}
+
+	fnInquiry();
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{	
+	fnTablesBinding();
+	
+	global.gv_WorkFlag = global.gv_MODIFY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+	if (fnValidation()) return;
+	
+	var sArgs = "";	
+	var sTid = "SAVE";
+	var sUrl = "ICCS::sample/SampleAction.do?cmd=RegReceiptMgrCCUD";
+	var sInDs = "dsPT_SAMPLE=dsPT_SAMPLE:u";
+	var sOutDs = "dsPT_SAMPLE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{
+}
+
+function fnValidation()
+{
+	var nIndex = 0;
+	dsError.DeleteAll();
+	
+	if(DateTime(tbMain.tpBase.REC_DATE.Value) > DateTime(tbMain.tpBase.PRO_PERIOD.Value))
+	{
+		dsError.AddRow();
+		dsError.SetColumn(nIndex, "FLD_NAME", "PRO_PERIOD");
+		dsError.SetColumn(nIndex, "TEXT", "민원처리일자가 민원접수일자보다 작습니다.");
+		
+		nIndex++;
+	}
+	
+	if((DateTime(tbMain.tpBase.PRO_PERIOD.Value) - DateTime(tbMain.tpBase.REC_DATE.Value)) > 14)
+	{
+		dsError.AddRow();
+		dsError.SetColumn(nIndex, "FLD_NAME", "PRO_PERIOD");
+		dsError.SetColumn(nIndex, "TEXT", "민원처리일자가 14일을 초과합니다.");
+		
+		nIndex++;
+	}
+	
+	if (nIndex > 0)
+	{
+		var nRet = fnCreateDialog("cm::frmErrorDLG", "");
+		if (nRet < 0) return true;
+		else 
+		{
+			fnFindComponent(this, dsError.GetColumn(nRet, "FLD_NAME"));
+		}
+	}
+	
+	return false;
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// 코드 조회용 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnEditButton_Click
+ 2. 기  능 : 에디트 버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnEditButton_Click(obj)
+{
+	//조회용 다이얼로그 버튼 출력
+	if (obj == tbMain.tpBase.btnCODE)
+	{		
+		var sReturn = split(fnCreateDialog("DefApp::frmSearch", ""), "||");
+				
+		tbMain.tpBase.fldRECT_DEPT_CODE = sReturn[0];
+		tbMain.tpBase.fldRECT_DEPT_NAME = sReturn[1];
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+}
+
+//////////////////////////////////////////////////////////////////
+// Validation check 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnKillFocus
+ 2. 기  능 : Control Leave 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnKillFocus(obj)
+{
+	if (!fnDisplayErrorMsg(obj)) return;
+	
+	//Control Leave이벤트 발생시 입력 항목 점검
+	if (obj == tbMain.tpBase.REC_NUM)
+	{
+		if(global.gv_WorkFlag == global.gv_INSERT)
+		{
+			dsCheckKey.DeleteAll();
+			
+			var sArgs = "REC_NUM=" + tbMain.tpBase.REC_NUM.Text;
+			var sTid = "CHECK_KEY";
+			var sUrl = "ICCS::sample/SampleAction.do?cmd=RegReceiptMgrC";
+			var sInDs = "";
+			var sOutDs = "dsCheckKey=output";
+			var sCallBack = "fn_CallBack";
+			
+			Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+		}
+	}
+	
+	if (obj == tbMain.tpBase.PRO_PERIOD)
+	{
+		if(DateTime(tbMain.tpBase.REC_DATE.Value) > DateTime(obj.Value))
+		{
+			alert('민원처리일자가 민원접수일자보다 작습니다.');
+		}
+		
+		if((DateTime(obj.Value) - DateTime(tbMain.tpBase.REC_DATE.Value)) > 14)
+		{
+			alert('민원처리일자가 14일을 초과합니다.');
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// On Focus 이벤트
+//////////////////////////////////////////////////////////////////
+function fnComponent_OnFocus(obj)
+{
+	
+}
+]]></Script>
+</Window>

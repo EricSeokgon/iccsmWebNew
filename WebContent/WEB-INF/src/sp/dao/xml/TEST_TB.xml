@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="TEST_TB" pkgname="sp.dao" schema=""><desc/><primarykey/><contents><field const="maxsize=32" dbtype="VARCHAR2(32)" desc="" name="JUMIN" type="String"/><field const="maxsize=50" dbtype="VARCHAR2(50)" desc="" name="JUMIN_ENCODE" type="String"/><field const="maxsize=50" dbtype="VARCHAR2(50)" desc="" name="JUMIN_JAVA" type="String"/></contents></table>

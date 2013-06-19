@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="frmExplorer" Left="8" OnLoadCompleted="frmExplorer_OnLoadCompleted" PidAttrib="7" Title="G4C&#32;정보" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Microsoft Bottom="698" Height="684" Id="Microsoft0" Left="15" Right="1007" Top="14" Width="992"></Microsoft>
+	</Form>
+	<Script><![CDATA[var _sURL;
+
+function frmExplorer_OnLoadCompleted(obj)
+{
+	this.MoveWindow(10, 10, 1024, 711);
+	this.Microsoft0.Navigate(_sURL, "", "", "");
+}
+]]></Script>
+</Window>

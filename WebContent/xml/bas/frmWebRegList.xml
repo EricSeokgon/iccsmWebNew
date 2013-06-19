@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="736" Id="frmWebInterface" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업자세부정보" Top="8" Ver="1.0" Width="736" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ASSI_TRANS_STATEMENT">
+				<Contents>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="PROC_LIM" size="8" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="TRAN_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="DEFI_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMPDEFICIT_STATUS" size="6" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="10" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Microsoft Bottom="696" Height="688" Id="Microsoft0" Left="8" Right="728" Top="8" Width="720"></Microsoft>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnOk" ImageID="button_style2_120" Left="320" OnClick="fnEditButton_Click" Style="button_style01" TabOrder="2" Text="닫&#32;기" Top="704" Width="66"></Button>
+	</Form>
+	<Script><![CDATA[var _sURL;
+
+function fnForm_Loaded(obj)
+{
+	this.Microsoft0.Navigate(_sURL, "", "", "");
+}
+
+
+function fnEditButton_Click(obj)
+{
+	
+	close();
+}
+]]></Script>
+</Window>

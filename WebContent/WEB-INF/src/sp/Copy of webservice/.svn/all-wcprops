@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice
+END
+UBAgentSOAP11BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 207
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgentSOAP11BindingStub.java
+END
+EchoPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 195
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/EchoPortType.java
+END
+UBAgentSOAP12BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 207
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgentSOAP12BindingStub.java
+END
+EchoPortTypeProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 200
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/EchoPortTypeProxy.java
+END
+UBAgentLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgentLocator.java
+END
+UBAgentPortTypeProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 203
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgentPortTypeProxy.java
+END
+UBAgent.java
+K 25
+svn:wc:ra_dav:version-url
+V 190
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgent.java
+END
+Echo.java
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/Echo.java
+END
+EchoSOAP11BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 204
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/EchoSOAP11BindingStub.java
+END
+UBAgentPortType.java
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/UBAgentPortType.java
+END
+EchoSOAP12BindingStub.java
+K 25
+svn:wc:ra_dav:version-url
+V 204
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/EchoSOAP12BindingStub.java
+END
+EchoLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/Copy%20of%20webservice/EchoLocator.java
+END

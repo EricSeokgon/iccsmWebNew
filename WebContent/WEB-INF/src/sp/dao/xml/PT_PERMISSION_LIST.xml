@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PT_PERMISSION_LIST" pkgname="sp.dao" schema=""><desc/><primarykey><key>LIST_SEQ</key></primarykey><contents><field const="notnull;maxsize=11" dbtype="INT(11)" desc="" name="LIST_SEQ" type="String"/><field const="maxsize=11" dbtype="INT(11)" desc="" name="TARGET_SEQ" type="String"/><field const="maxsize=11" dbtype="INT(11)" desc="" name="GROUP_SEQ" type="String"/><field const="maxsize=30" dbtype="VARCHAR(30)" desc="" name="INPT_DT" type="String"/></contents></table>

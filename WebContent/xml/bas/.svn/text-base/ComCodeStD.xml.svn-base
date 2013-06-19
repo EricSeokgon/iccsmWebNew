@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="450" Id="form" Left="8" PidAttrib="7" Title="공통코드조회" Top="8" Ver="1.0" Width="650" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" GroupKey="gcode" Id="ds_code">
+				<Contents>
+					<colinfo id="code" size="15" summ="default" type="STRING"/>
+					<colinfo id="code_name" size="30" summ="default" type="STRING"/>
+					<colinfo id="p_code" size="15" summ="default" type="STRING"/>
+					<colinfo id="use_yn" size="3" summ="default" type="STRING"/>
+					<colinfo id="bigo" size="200" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Border="Flat" Height="61" Id="comCode_SearchBox" Left="24" TabOrder="1" Text="조회" Top="16" Type="Groupbox" Width="600"></Static>
+		<Static Align="Center" Height="18" Id="Static0" Left="33" TabOrder="2" Text="그룹코드" Top="38" VAlign="Middle" Width="69"></Static>
+		<Combo CodeColumn="code" DataColumn="code_name" Height="21" Id="scGCode_combo" InnerDataset="ds_code" Left="109" OnFocus="scGCode_combo_OnFocus" TabOrder="3" Text="그룹코드" Top="38" Width="145"></Combo>
+		<Static Align="Center" Height="21" Id="Static1" Left="274" TabOrder="4" Text="코드명" Top="37" VAlign="Middle" Width="48"></Static>
+		<Edit Height="21" Id="scCode" Left="331" TabOrder="5" Top="40" Width="121"></Edit>
+		<Button ButtonStyle="TRUE" Height="21" Id="Button0" ImageID="button_style01_60" Left="480" OnClick="fnSearchButton_Click" TabOrder="6" Text="조회" Top="41" Width="63"></Button>
+		<Grid BindDataset="ds_code" BkColor2="default" BoldHead="true" Bottom="280" Enable="true" EndLineColor="default" Height="189" Id="Grid0" InputPanel="FALSE" Left="23" LineColor="default" Right="626" TabOrder="7" TabStop="true" Top="91" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="603">
+			<contents>
+				<columns>
+					<col width="60"/>
+					<col width="60"/>
+					<col width="60"/>
+					<col width="60"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="code"/>
+					<cell col="1" display="text" text="code_name"/>
+					<cell col="2" display="text" text="p_code"/>
+					<cell col="3" display="text" text="use_yn"/>
+				</head>
+				<body>
+					<cell col="0" colid="code" display="text"/>
+					<cell col="1" colid="code_name" display="text"/>
+					<cell col="2" colid="p_code" display="text"/>
+					<cell col="3" colid="use_yn" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Static Border="Flat" Height="144" Id="Static2" Left="24" TabOrder="8" Text="&#32;수정/삭제/추가&#32;" Top="296" Type="Groupbox" Width="600"></Static>
+		<Static Height="18" Id="Static3" Left="42" TabOrder="9" Text="그룹코드" Top="318" VAlign="Middle" Width="69"></Static>
+		<Combo Height="21" Id="Combo1" Left="117" TabOrder="10" Text="그룹코드" Top="318" Width="145"></Combo>
+		<Static Height="21" Id="Static4" Left="42" TabOrder="11" Text="코드명" Top="350" VAlign="Middle" Width="48"></Static>
+		<Edit Height="21" Id="Edit1" Left="118" TabOrder="12" Top="353" Width="145"></Edit>
+		<Static Height="21" Id="Static5" Left="42" TabOrder="13" Text="비&#32;고" Top="376" VAlign="Middle" Width="40"></Static>
+		<Edit Height="21" Id="Edit2" Left="118" TabOrder="14" Top="382" Width="146"></Edit>
+		<Button ButtonStyle="TRUE" Height="21" Id="Button1" ImageID="button_style01_60" Left="545" TabOrder="15" Text="추가" Top="410" Width="65"></Button>
+		<Button ButtonStyle="TRUE" Height="21" Id="Button2" ImageID="button_style01_60" Left="399" TabOrder="16" Text="수정" Top="410" Width="65"></Button>
+		<Button ButtonStyle="TRUE" Height="21" Id="Button3" ImageID="button_style01_60" Left="471" TabOrder="17" Text="삭제" Top="410" Width="65"></Button>
+		<Button ButtonStyle="TRUE" Height="21" Id="Button4" ImageID="button_style01_60" Left="265" OnClick="fnInputButton_Click" TabOrder="18" Text="그룹추가" Top="321" Width="65"></Button>
+		<Edit Enable="FALSE" Height="26" Id="inGcode" Left="336" TabOrder="19" Text="추가할그룹명을입력하세요" Top="317" Width="184"></Edit>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : CMStD.xml
+2. 작성일 : 2009-03-05
+3. 작성자 : Y.D. Jeong
+4. 기  능 : 공사업체  조회
+5. 변경이력
+  가. 2009-03-05 최초작성 (Y.D. Jeoung)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scGCode_combo=" + quote(this.scGCode_combo.Value);
+		sArgs += " scCode=" + quote(this.scCode.Text);
+	
+				
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=ComCodeStD";
+	var sInDs = "";
+	var sOutDs = "ds_code=ds_code";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		else if(svcid == "COM_CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+}
+function scSido_combo_OnChanged(obj,strCode,strText,nOldIndex,nNewIndex)
+{
+	var sArgs = "scSidoCode=" + strCode;
+
+				
+	var sTid = "COM_CODE";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=SidoCode";
+	var sInDs = "";
+	var sOutDs = "ds_code=ds_code";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/*
+function scGCode_combo_OnFocus(obj)
+{
+	var sArgs = "scGCode_combo=" + quote(this.scGCode_combo.Value);
+				
+	var sTid = "COM_CODE";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=GCode";
+	var sInDs = "";
+	var sOutDs = "ds_code=ds_code";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+*/
+function fnInputButton_Click(obj)
+{
+	this.inGcode.Enable = true;
+}
+]]></Script>
+</Window>

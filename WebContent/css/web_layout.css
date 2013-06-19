@@ -1,0 +1,169 @@
+/* ICCS layout-YSM */
+body {
+	text-align:left; width:100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style:none;
+	line-height:14px;
+	border:0px solid red;
+}
+.no_img {background-image:none; margin: 0px;}
+
+#wrapper{position:relative; width:1000px; margin:0 auto; text-align:center; border:0px solid #000000;}
+#skipnavigation {display: none; }
+
+
+#main{
+	background:url(http://www.net.go.kr/images/main/bg.gif) center top no-repeat;
+	width:100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style:none;
+	line-height:14px;
+	border:0px solid red
+}
+#main_header	{ position: relative; float:left; height: 150px; padding: 0; margin: 0 ; width: 1000px;  border:0px solid blue; z-index:2}
+	#main_top_navi 	{ position: relative; float:left; height: 90px; width: 1000px;  border:0px solid black;}
+	#main_login 	{ position: relative; float:left; width: 800px; height: 34px; top:17px; left: 103px; border:0px solid red;}
+
+#main_body {position:relative; float:left; padding: 0; margin: 0; width:1000px; text-align:left top; border:0px solid red;}
+
+/* Body contents #main_quick {position:relative; float:left; padding: 0; margin:0; width:90px; 	border:0px solid red;}*/
+
+#main_flash	{position:relative; float:left; padding: 0 0 0 40px; margin:-12px 0 0 0; width:950px; border:0px solid blue; z-index:0}
+#main_contents	{position: relative; float:left; text-align:left; margin:0; padding:0px ; left:66px; width:883px; height:104px; overflow:hidden; border:0px solid blue;}
+
+#main_banner {position: relative; float:left; display:inline; padding: 0; margin:0; border:0px solid red;}
+.banner_01, .banner_02, .banner_03 {position: relative; float: left; }
+
+.banner_01 a {position: relative; display:block; width: 189px; height: 104px; background: url(http://www.net.go.kr/images/main/main_banner_01_off.gif) no-repeat; padding: 0px; margin: 0;}
+.banner_01 a:HOVER {background: url(http://www.net.go.kr/images/main/main_banner_01_on.gif)}
+.banner_02 a {position: relative; display:block; width: 92px; height: 104px; background: url(http://www.net.go.kr/images/main/main_banner_02_off.gif) no-repeat; padding: 0px; margin: 0;}
+.banner_02 a:HOVER {background: url(http://www.net.go.kr/images/main/main_banner_02_on.gif)}
+.banner_03 a {position: relative; display:block; width: 99px; height: 104px; background: url(http://www.net.go.kr/images/main/main_banner_03_off.gif) no-repeat; padding: 0px; margin: 0;}
+.banner_03 a:HOVER {background: url(http://www.net.go.kr/images/main/main_banner_03_on.gif)}
+	#notice {visibility:visible; Z-INDEX: 1; position: absolute; float:left; padding:0px; margin:0px; width:290px; left:394px; text-align:left;border:0px solid red;}
+		ul {padding: 0; margin:0; border:0px solid black;}
+		.title li {display:inline; margin:0px; padding:0px; border:0px solid red;}
+		
+		.detail	{width:260px; padding:0px; margin:2px 0px 0 3px;  border:0px solid blue;}
+		.subject {background:url(http://www.net.go.kr/images/main/dot.gif) 0 50% no-repeat; float: left; margin:0px; font-size:0.85em;  width:70%; text-indent:0.4em; cursor: pointer; border-bottom:1px solid #efefef;}
+		.date {float: right; width : 30%; margin:0px; font-family: Tahoma; font-size: 0.75em; text-align:right; border:0px solid green; }
+		.detail_none {width:100%; margin:0px; padding:0px; font-size:0.85em; text-align:center; border-bottom:1px solid #efefef;}
+		
+	#news 	{visibility:hidden; Z-INDEX: 1; position: absolute; float:left; padding:0px; margin:0px; width:290px; left:394px; text-align:left;border:0px solid red;}
+	#public {visibility:hidden; Z-INDEX: 1; position: absolute; float:left; padding:0px; margin:0px; width:290px; left:394px; text-align:left;border:0px solid red;}	
+	
+	#right_banner {position:relative; float:right; top:20px; padding: 0px; margin:0px; border:0px solid red;}
+
+
+
+#header		{ position: relative; height: 124px; padding: 0; margin: 0 ; width: 1000px;  border:0px solid red; z-index:2}
+
+#top_navi 	{ position: absolute; float:left; height: 90px; left: 0px;  width: 1000px; text-align:left;  border:0px solid black;}
+	h1#logo {position: relative; float:left; width: 200px; margin:0;  padding:0 0 0 12px;  top:25px;  border:0px solid red;}
+	#menu 	{position: relative; float:left;  width: 560px; top:2px; left: 4px; margin: 0; padding: 0; border: 0px solid blue;}
+	
+	#menu_small {position: relative; float:right; text-align:left; margin: 0 ; padding: 0; width:219px; height: 90px; background:url(http://www.net.go.kr/images/common/top_small_bg.gif) no-repeat; border:0px solid red;}
+		#top_small_btn {position: relative; float:left; top:28px; left:19px; margin: 0 ; padding: 0; border:0px solid blue;}
+		#top_small_btn .bar{margin: 0 5px;}
+		#top_small_btn  a{margin: 0; padding: 0px; border:0px solid blue;}
+		
+		#top_search {position: absolute; float:left; width:154px; height:20px; top:59px; left:25px; margin:0px 0 0 0 ; padding: 0; background:url(http://www.net.go.kr/images/common/top_small_search_bg.gif) no-repeat; border:0px solid blue;}
+		#top_search input.search {width:95px; height:16px; margin:1px 0 1px 20px; padding:2px 2px 2px 3px; background-color:transparent;font-size:0.825em; letter-spacing:-1pt; BORDER: 0px solid #ccc;}
+		
+	#menu_banner {position: absolute; float: right; width: 162px; top:100px; right:35px; height: 40px; border:0px solid blue;}
+
+
+#login 	{ position: absolute; float:left; height: 34px; top: 90px; left: 0px;  width: 1000px;  border:0px solid red;}
+	#login_form {position: absolute; float:left; left:230px; top:4px; width:360px; height:21px; margin:0px; background:url(http://www.net.go.kr/images/common/top_login_input.gif) no-repeat left  ; border:0px solid red;}
+	#login_form input {float:left;}
+	#login_form input.idbox {width:65px; height:15px; margin:3px 0px 0px 16px; padding:2px 2px 0px 3px; BACKGROUND: none transparent scroll repeat 0% 0%; font-size:0.825em; letter-spacing:-0.1em; BORDER: 0px;}
+	#login_form input.pwbox {width:60px; height:15px; margin:3px 5px 0px 25px; padding:2px 2px 0px 3px; BACKGROUND: none transparent scroll repeat 0% 0%; font-size:0.825em; letter-spacing:-0.1em; BORDER: 0px;}
+	#login_form ul {display: inline; float: left; margin:0 0 0 4px; padding:0px; border:0px solid red;}
+	#login_form ul li {display: inline; float: left; margin_right:3px; padding:0; border:0px solid red;}
+	#login_form ul li .image { margin:0 0 0 2px; padding-left:2px; cursor: pointer;  }
+
+	#login_after {position: absolute; float:left; left:230px; top:4px; width:360px; height:17px; margin:0px; overflow: hidden; border:0px solid black;}
+	#login_after ul {list-style: none; float: left; margin:0px; padding:0px; border:0px solid blue;}
+	#login_after ul li {list-style: inline; float: left; height:17px; font-size:0.92em; font-weight:bold; padding-right:2px;line-height:19px; border:0px solid red;}
+	#login_after ul li .image {cursor: pointer; }
+
+#sub_visual { position: relative; padding: 0; margin: -34px 0 0 0; left:0px; top:0; width:1000px; height:141px; border:0px solid red; z-index:1;}
+
+/* Body */
+#body {position:relative; float:left; padding: 0; margin: 0; left:0px; top:0; width:1000px; border:0px solid red; z-index:3;}
+
+#sub_left {position:relative; float:left; padding: 0; margin: -93px 0 0 0; top:0; left:15px; width:186px; border:0px solid red; z-index:30}
+
+h2#left_title { position: relative; width: 190px; height: 58px; margin: 0 ; padding: 0; background: transparent; border:0px solid red}
+/* leftmenu2Depth display: block; **********/
+#left_menu { width: 154px; background-image:url(http://www.net.go.kr/images/left_menu/left_menu_bg.gif); background-repeat:repeat-y; margin: 0; padding: 0 18 0 18; border: 0px solid blue;}
+#left_bottom {position: relative; width: 190px;  margin: 0 ; padding: 0; background: transparent; border:0px solid red}
+#left_banner {position: relative; width: 190px;  margin: 0 ; padding: 0; background: transparent; border:0px solid red}
+
+
+ 
+#sub_contents { position:relative; float: right; width:688px; right:91px; overflow:hidden; padding:0; margin:0;   border:0px solid black; }
+
+#con_head p.position { text-align:right; padding:2px 8px; word-spacing:4px; letter-spacing:-1px; margin:0; font-size:0.825em; color:#666666; border:0px solid yellow;}
+
+
+#sub_title {position:relative; float:left; text-align: left; padding:0; margin:0; border:0px solid blue;}
+H3.cont01 {position: relative; height:50px; text-decoration:none; text-align:justify;
+			padding: 0; margin: 0; border:0px solid red;}
+
+#contents{position:relative; float:left; display:inline;  text-align:left; padding:0; width:670px; margin-left:15px ; border:0px solid blue;}
+
+#contents2{position:relative; float:left; display:inline;  text-align:left; padding:0; width:960px; margin-left:15px ; border:0px solid blue;}
+
+
+#quick {position:absolute; float:right; display:inline; right:0; padding: 0; margin:0; top:-50px; width:100px; text-align:left border:1px solid red;  z-index:99;}
+#quick_bg {position:relative; float:left; background: url(http://www.net.go.kr/images/common/quick_bg.gif) no-repeat top left; width: 80px; height:340px; padding-left: 26px; border:0px solid blue; }
+
+#quick_mystore {display:none; position:absolute; margin-top:0px; margin-left:-353px; float:left; width:280px; height:400px; background: url(http://www.net.go.kr/images/common/favorite_bg.gif) no-repeat top left; z-index:100; border:0px solid blue; z-index: 1000;}
+#quick_mystore_main {display:none; position:absolute; margin-top:0px; margin-left:0px; float:left; width:280px; height:400px; top:0; left:112px; background: url(http://www.net.go.kr/images/common/favorite_bg.gif) no-repeat top left; z-index:1000; border:0px solid blue;}
+#favorite_title	{position: relative; float:left; padding:10px 0 0 8px;}
+#favorite_close	{position: absolute; float:right; top:7px; right:11px;}
+#favorite_white_scroll {position: relative; float:left; display:inline; margin:24px 0 0 20px; padding:0px; width: 244px; height: 200px; overflow: auto; border:0px solid blue;}
+#favorite_white	{position: relative; float:left; text-align: left;}
+#favorite_white ul li span {background: url(http://www.net.go.kr/images/common/arrow_1.gif) no-repeat 0 50%; padding:3px 0 3px 18px; border-bottom:1px solid #f3f3f3; width: 200px; display: block; letter-spacing: -1pt;}
+#favorite_white ul li span a:HOVER {font-weight: bold; color: #4e4e4e; text-decoration: none;}
+#favorite_white #no {width:100%; margin-top:80px; text-align: center;}
+#favorite_comment	{position: relative; float:left; padding: 25px 0 0 30px;}
+#favorite_btn	{position:absolute; float:right; bottom:12px; right:12px;}
+
+#popup	{float:left; width:100%; height:100%; background: url(http://www.net.go.kr/images/common/popup_bg.gif) no-repeat top left;}
+#popup_title	{position: relative; float:left;}
+#popup_close	{position: absolute; float:right; top:4px; right:2px;}
+#popup_contents	{position: relative; margin: 70px 0 0 0; padding:0; border:0px solid red;}
+#viewer_btn_title{margin: 30px 0 0 0;}
+#viewer_btn		{margin-top: 30px;}
+#viewer_btn	img	{margin: 0 7px;}
+#popup_btn_close{position:absolute; float:right; bottom:40px; right:40px;}
+
+#popup_mobile	{float:left; width:100%; height:100%; background: url(http://www.net.go.kr/images/common/popup_bg_mobile.gif) no-repeat top left;}
+#popup_use		{float:left; width:100%; height:100%; background: url(http://www.net.go.kr/images/common/popup_bg_use.gif) repeat-x top left;}
+#popup_contents_use	{position: relative; width:630px; height:250px; margin: 70px 20px 0 20px; padding:0; overflow:auto; text-align:left; border:0px solid red;}
+#popup_use_close{position:absolute; float:right; bottom:20px; right:20px;}
+
+#foot {clear: both; position: relative; float:left; display:inline; width: 1000px; height: 80px; margin: 0 auto; padding:30px 0 20px 0;
+		border:0px solid green;}
+#copy_logo {position: relative; float:left; margin: 0 ; padding:0; border:0px solid green; }
+#copy_contents {position: relative; float:left; margin: 0 ; padding:0; text-align:left; border:0px solid green; }
+
+address { font-style: normal; }
+.copy_text{font-size: 0.85em; letter-spacing: -0.04em; padding:0;border:0px solid green;}
+
+#favorite_M {width:670px; height:400px; background: url(http://www.net.go.kr/06_mystore/images/img_02_bg.gif) no-repeat left top; padding: 12px 16px; text-align: left; border:0px solid red;}
+#favorite_M_sitemap {position: relative; float:left; width:278px; padding:0 0px; border:0px solid green;}
+#favorite_M_sitemapW {text-align: left; overflow: auto; height:308px; padding:0 5px;  border:0px solid black;}
+#favorite_M_btn {position: relative; float:left; width:82px; padding:150px 0px 0 0px; text-align:center; border:0px solid green;}
+#favorite_M_btn img {margin: 5px 0;}
+#favorite_M_my {position: relative; display:inline; float:left; width:278px; border:0px solid green;}
+#favorite_M_myW {text-align: left; overflow: auto; margin:0 0 0 7px; border:0px solid black;}
+#favorite_M_myW SELECT.mystore{position:relative; width:265px; height:250px; margin:0; padding:0px; z-index:1;  border: 0px solid red;}
+#favorite_M_myW ul li {width: 235px ;  background: url(http://www.net.go.kr/images/common/arrow_1.gif) no-repeat 0 50%; padding:3px 0 3px 18px; border-bottom:1px solid #f3f3f3; }
+#favorite_M_myW ul li a:HOVER {font-weight: bold; color: #4e4e4e; text-decoration: none;}
+.up_down_all{position: relative; width: 100%; border:0px solid green;}
+.up_down {position: absolute; right:0; top:0; text-align: right; width: 50px;}

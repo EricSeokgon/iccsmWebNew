@@ -1,0 +1,31 @@
+
+<?xml version='1.0' encoding='euc-kr'?>
+<root>
+<params> <!--����Ʈ����d-->
+	<param id='DEVICE' type='string'>Win32</param>
+	<param id='SOURCE' type='string'>msi_files</param>
+	<param id='TARGET' type='string'>%miplatform%</param>
+	<param id='VERSION' type='string'>2009,4,14,1</param>
+	<param id='ACTION' type='string'>DOWNCHECK</param>
+	<param id='STATUS' type='string'>0</param>
+</params>
+<dataset id='output'>
+	<colinfo id='DEVICE' type="string" size='255'/>
+	<colinfo id='SOURCE' type="string" size='255'/>
+	<colinfo id='TARGET' type="string" size='255'/>
+	<colinfo id='FILENAME' type="string" size='255'/>
+	<colinfo id='VERSION' type="string" size='255'/>
+	<colinfo id='ACTION' type="string" size='255'/>
+	<colinfo id='ARGUMENT' type="string" size='255'/>
+	<colinfo id='STATUS' type="string" size='2'/>
+	<record>
+  		<DEVICE>Win32</DEVICE> 
+  		<ACTION>MSI</ACTION> 
+  		<ARGUMENT>/qb</ARGUMENT> 
+  		<TARGET>{A1482B04-047E-4960-B49E-5BBA25272B6B}</TARGET> 
+  		<FILENAME>MiPlatform_FixUACProblem320U.msi</FILENAME> 
+  		<VERSION>System::3.20.60</VERSION> 
+  	</record>
+</dataset>
+</root>
+

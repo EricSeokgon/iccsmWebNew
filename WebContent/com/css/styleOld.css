@@ -1,0 +1,98 @@
+body {background-color: #ffffff; margin-left: 0px; margin-top: 0px;margin-right: 0px;margin-bottom: 0px;}
+table, tr, td, input,div,form,textarea
+{	font-family:dotum;font-size:11px;color:#666666;	line-height: 15px;} 
+A:link { color:#666666; text-decoration:none;} 
+A:visited {color:#666666; text-decoration:none; } 
+A:active { color:#666666; text-decoration:none; } 
+A:hover { color:#272727; text-decoration:none; } 
+
+/* input Î∞ïÏä§ ÎßéÏúºÎ©??çÎèÑ ??ïò?? Î¨∏Ï†ú??expression ?úÍ±∞ ??Í≤?
+Border:expression( (this.type=='checkbox'||this.type=='radio' || this.type=='image')?'0px solid': (this.type=='button')?'1x ridge #d0d0d0' :'1x SOLID #AFAFAF' );
+*/
+.input    {  height:19; background-color: #fefcf6;
+		 	Border:expression( (this.type=='text' || this.type=='file' || this.type=='button' || this.type=='password')?'1x SOLID #AFAFAF':'0px solid');
+		 }
+
+
+
+textarea {  background-color: #fefcf6; Border:1x SOLID #AFAFAF; 	 }
+
+select   {	background-color: #fefcf6; behavior: url('../com/css/selectbox.htc'); 	} /* ??†â??Î∞ïÏä§ Î™®Ïñë Î≥?≤Ω ?êÎ∞î Í¥?†® Î¨∏Ï†ú Î∞úÏÉù????†ú?òÍ≥† ?åÏä§???¥Î≥º  Í≤? */
+.input_combobox   {	background-color: #fefcf6; behavior: url('../../com/css/selectbox.htc'); 	} /* ??†â??Î∞ïÏä§ Î™®Ïñë Î≥?≤Ω ?êÎ∞î Í¥?†® Î¨∏Ï†ú Î∞úÏÉù????†ú?òÍ≥† ?åÏä§???¥Î≥º  Í≤? */
+.input_combobox2   {	background-color: #fefcf6; behavior: url('../com/css/selectbox.htc'); 	} /* ??†â??Î∞ïÏä§ Î™®Ïñë Î≥?≤Ω ?êÎ∞î Í¥?†® Î¨∏Ï†ú Î∞úÏÉù????†ú?òÍ≥† ?åÏä§???¥Î≥º  Í≤? */
+
+
+
+body  { 
+scrollbar-3dlight-color:#cccccc;scrollbar-arrow-color:#B3B3B3;scrollbar-track-color:#E4E4E4;scrollbar-darkshadow-color:#E4E4E4;scrollbar-face-color:#FBFBFB;scrollbar-highlight-color:#F3F3F3;scrollbar-shadow-color:#CCCCCC;
+}
+
+
+.body_top_img { background-repeat:no-repeat;
+			font-size: 11px; line-height:15px;COLOR: #664a20;padding-top:51; padding-right:15; text-align:right; }
+.body_top_t	{COLOR: #a60000; font-weight:bold;}
+.body_top_img_bg { background-color:#f7f5f2; height:44px;}
+
+/* Search Table*/
+.searchTable_td {
+	font-family:  dotum, Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: 666666; font-weight:bold;
+}
+
+.listTable {
+	table-layout:fixed;
+}
+
+.listTable_td {
+ 	height: 28px;
+	BORDER-BOTTOM: #dbdad9 1pt solid;
+	BORDER-RIGHT: none;
+	BORDER-TOP: none;
+	BORDER-LEFT: none;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.listTable_line_color	{ background-color:#dbdad9;}
+
+
+
+/* ?ÅÏÑ∏ ?ÖÎ†•  ?åÏù¥Î∏? START */
+.inputTable {
+	BORDER-TOP: #af9e66 1pt solid;
+	BORDER-LEFT: none ;
+	BORDER-BOTTOM: none ;
+	BORDER-RIGHT: none;
+}
+
+
+.inputTable_td {
+	BORDER-TOP: none ;
+	BORDER-LEFT: none ;
+	BORDER-BOTTOM: #dbdad9 1pt solid;
+	BORDER-RIGHT: none;
+}
+
+
+.paging  { font-family:  dotum, Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: 666666;}
+.paging			A:link 		{	 font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: 666666; font-weight:bold; TEXT-DECORATION: none	}
+.paging			A:active 	{	 font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: 666666; font-weight:bold; TEXT-DECORATION: none	}
+.paging			A:visited 	{	 font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: 000000; font-weight:bold; TEXT-DECORATION: none	}
+.paging			A:hover 	{	 font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: 000000; font-weight:bold; TEXT-DECORATION: none	}
+
+
+.copy01  { font-family:   dotum, Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: 7d7766; font-weight:bold; line-height:20px}
+.copy02  { font-family:  Verdana, Arial, Helvetica, sans-serif;font-size: 9px;color: 6a6a6a; font-weight:bold; line-height:10px}
+
+
+.left_top_bg {background-repeat:no-repeat; padding-left:30; padding-top:12; font-weight:bold;
+			font-family:   dotum, Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: a60000; }
+			
+.top_img {background-image:url('images/top_img.gif'); background-repeat:no-repeat;
+			font-size: 11px; line-height:15px;COLOR: #664a20;padding-top:51; padding-right:15; text-align:right; }
+.top_img_t	{COLOR: #a60000; font-weight:bold;}
+.top_img_bg { background-color:#f7f5f2; height:44px;}
+
+.top_title	{font-size: 12px; line-height:15px; COLOR: #000000; font-weight:bold;}			
+			
+.mem_input {font-size:11px; color:#666666; 
+border-width:1px; border-color:#d5d5d5; border-style:solid; height:19px;}

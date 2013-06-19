@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="392" Id="UsebeforeViewMgr" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="사용전검사&#32;상세보기" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Usebefore">
+				<Contents>
+					<colinfo id="APPLPER_NM" size="50" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_REP" size="50" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_TELNUM" size="26" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_DETAILADDR" size="120" summ="default" type="STRING"/>
+					<colinfo id="OPE_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="OPE_TELNUM" size="26" summ="default" type="STRING"/>
+					<colinfo id="OPE_REP" size="20" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="50" summ="default" type="STRING"/>
+					<colinfo id="OPE_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="OPE_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="OPE_DETAILADDR" size="120" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_NM" size="200" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_POSTNUM" size="10" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_ADDR" size="60" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_DETAILADDR" size="120" summ="default" type="STRING"/>
+					<colinfo id="WORK_ITEM" size="200" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="50" summ="default" type="STRING"/>
+					<colinfo id="NUM_FL" size="150" summ="default" type="STRING"/>
+					<colinfo id="USE" size="100" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="40" Id="Image2" ImageID="bg_info_s_top" Left="8" TabOrder="1" Top="3" Width="624"></Image>
+		<Image Height="308" Id="Image3" ImageID="bg_info_s_body" Left="8" TabOrder="2" Top="37" Width="624"></Image>
+		<Image Height="40" Id="Image5" ImageID="bg_info_s_bottom" Left="8" TabOrder="3" Top="312" Width="624"></Image>
+		<Image Height="11" Id="Image13" ImageID="arrow_small_blue2" Left="883" TabOrder="4" Top="295" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static10" Left="899" Style="list_subtitle" TabOrder="5" Text="통보교부번호" Top="296" Width="80"></Static>
+		<Image Height="11" Id="Image14" ImageID="arrow_small_blue2" Left="883" TabOrder="6" Top="271" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static11" Left="899" Style="list_subtitle" TabOrder="7" Text="통보일자" Top="272" Width="56"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="113" Id="Static14" Left="16" ShadowColor="#cccccc" TabOrder="10" Text="건축정보" Top="224" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="90" Id="Static12" Left="16" ShadowColor="#cccccc" TabOrder="9" Text="시공자" Top="128" Type="Groupbox" Width="600"></Static>
+		<Static Color="#ff6600" Font="굴림,9,Bold" Height="104" Id="Static13" Left="16" ShadowColor="#cccccc" TabOrder="8" Text="신청인" Top="21" Type="Groupbox" Width="600"></Static>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue2" Left="25" TabOrder="11" Top="41" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static2" Left="41" Style="list_subtitle" TabOrder="12" Text="건&#32;축&#32;주&#32;명" Top="42" Width="80"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="APPLPER_NM" Height="21" Id="APPLPER_NM" Left="123" Style="style1" TabOrder="13" Top="37" Width="144"></Edit>
+		<Image Height="11" Id="Image15" ImageID="arrow_small_blue2" Left="25" TabOrder="14" Top="64" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static16" Left="41" Style="list_subtitle" TabOrder="15" Text="연&#32;&#32;&#32;락&#32;&#32;&#32;처" Top="65" Width="72"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="APPLPER_TELNUM" Height="21" Id="APPLPER_TELNUM" Left="123" Style="style1" TabOrder="16" Top="58" Width="128"></Edit>
+		<Image Height="11" Id="Image16" ImageID="arrow_small_blue2" Left="25" TabOrder="17" Top="83" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static17" Left="41" Style="list_subtitle" TabOrder="18" Text="건축주소재지" Top="84" Width="88"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="APPLPER_DETAILADDR" Height="21" Id="APPLPER_DETAILADDR" Left="343" Style="style1" TabOrder="19" Top="79" Width="264"></Edit>
+		<Image Height="11" Id="Image0" ImageID="arrow_small_blue2" Left="271" TabOrder="20" Top="141" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static0" Left="287" Style="list_subtitle" TabOrder="21" Text="대&#32;표&#32;자&#32;명" Top="142" Width="72"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="OPE_REP" Height="21" Id="OPE_REP" Left="383" Style="style1" TabOrder="22" Top="138" Width="88"></Edit>
+		<Image Height="11" Id="Image1" ImageID="arrow_small_blue2" Left="25" TabOrder="23" Top="143" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static1" Left="41" Style="list_subtitle" TabOrder="24" Text="용&#32;력&#32;업&#32;체" Top="144" Width="72"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="OPE_NAME" Height="21" Id="OPE_NAME" Left="123" Style="style1" TabOrder="25" Top="139" Width="144"></Edit>
+		<Image Height="11" Id="Image17" ImageID="arrow_small_blue2" Left="25" TabOrder="26" Top="164" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static18" Left="41" Style="list_subtitle" TabOrder="27" Text="연&#32;&#32;&#32;락&#32;&#32;&#32;처" Top="165" Width="72"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="OPE_TELNUM" Height="21" Id="OPE_TELNUM" Left="123" Style="style1" TabOrder="28" Top="161" Width="128"></Edit>
+		<Image Height="11" Id="Image18" ImageID="arrow_small_blue2" Left="25" TabOrder="29" Top="188" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static19" Left="41" Style="list_subtitle" TabOrder="30" Text="시공자소재지" Top="189" Width="80"></Static>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue2" Left="25" TabOrder="31" Top="243" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static4" Left="41" Style="list_subtitle" TabOrder="32" Text="용&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;도" Top="244" Width="80"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="USE" Height="21" Id="USE" Left="123" Style="style1" TabOrder="33" Top="239" Width="136"></Edit>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue2" Left="268" TabOrder="34" Top="267" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static5" Left="284" Style="list_subtitle" TabOrder="35" Text="공&#32;사&#32;종&#32;류" Top="267" Width="80"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue2" Left="25" TabOrder="36" Top="265" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static6" Left="41" Style="list_subtitle" TabOrder="37" Text="층&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;수" Top="267" Width="80"></Static>
+		<Image Height="11" Id="Image10" ImageID="arrow_small_blue2" Left="268" TabOrder="38" Top="242" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static7" Left="284" Style="list_subtitle" TabOrder="39" Text="면&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;적" Top="243" Width="80"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="WORK_ITEM" Height="21" Id="WORK_ITEM" Left="368" Style="style1" TabOrder="40" Top="262" Width="240"></Edit>
+		<Image Height="11" Id="Image20" ImageID="arrow_small_blue2" Left="25" TabOrder="41" Top="313" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static21" Left="41" Style="list_subtitle" TabOrder="42" Text="건축물소재지" Top="314" Width="80"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="NUM_FL" Height="21" Id="NUM_FL" Left="123" Style="style1" TabOrder="43" Top="262" Width="80"></Edit>
+		<Edit BindDataset="ds_Usebefore" Column="AREA" Height="21" Id="AREA" Left="368" Style="style1" TabOrder="44" Top="239" Width="80"></Edit>
+		<Edit BindDataset="ds_Usebefore" Column="APPLPER_ADDR" Height="21" Id="APPLPER_ADDR" Left="180" Style="style1" TabOrder="45" Top="80" Width="160"></Edit>
+		<MaskEdit BindDataset="ds_Usebefore" Column="APPLPER_POSTNUM" Font="Tahoma,9" Height="21" Id="APPLPER_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="46" Top="80" Type="STRING" Width="55"></MaskEdit>
+		<MaskEdit BindDataset="ds_Usebefore" Column="OPE_POSTNUM" Font="Tahoma,9" Height="21" Id="OPE_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="49" Top="183" Type="STRING" Width="55"></MaskEdit>
+		<Edit BindDataset="ds_Usebefore" Column="OPE_ADDR" Height="21" Id="OPE_ADDR" Left="181" Style="style1" TabOrder="48" Top="184" Width="160"></Edit>
+		<Edit BindDataset="ds_Usebefore" Column="OPE_DETAILADDR" Height="21" Id="OPE_DETAILADDR" Left="343" Style="style1" TabOrder="47" Top="183" Width="264"></Edit>
+		<MaskEdit BindDataset="ds_Usebefore" Column="INSP_SPOT_POSTNUM" Font="Tahoma,9" Height="21" Id="INSP_SPOT_POSTNUM" Left="123" Mask="###-###" MaxLength="8" TabOrder="52" Top="311" Type="STRING" Width="55"></MaskEdit>
+		<Edit BindDataset="ds_Usebefore" Column="INSP_SPOT_ADDR" Height="21" Id="INSP_SPOT_ADDR" Left="180" Style="style1" TabOrder="51" Top="310" Width="160"></Edit>
+		<Edit BindDataset="ds_Usebefore" Column="INSP_SPOT_DETAILADDR" Height="21" Id="INSP_SPOT_DETAILADDR" Left="344" Style="style1" TabOrder="50" Top="310" Width="264"></Edit>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnOk" ImageID="button_style2_120" Left="558" OnClick="fnEditButton_Click" Style="button_style01" TabOrder="53" Text="닫기" Top="360" Width="66"></Button>
+		<Image Height="11" Id="Image11" ImageID="arrow_small_blue2" Left="270" TabOrder="54" Top="38" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static8" Left="286" Style="list_subtitle" TabOrder="55" Text="대&#32;표&#32;자&#32;명" Top="39" Width="80"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="APPLPER_REP" Height="21" Id="APPLPER_REP" Left="368" Style="style1" TabOrder="56" Top="34" Width="104"></Edit>
+		<Image Height="11" Id="Image12" ImageID="arrow_small_blue2" Left="272" TabOrder="57" Top="163" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static9" Left="288" Style="list_subtitle" TabOrder="58" Text="공사업등록번호" Top="164" Width="88"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="COI_WRT_NUM" Height="21" Id="COI_WRT_NUM" Left="384" Style="style1" TabOrder="59" Top="160" Width="96"></Edit>
+		<Image Height="11" Id="Image6" ImageID="arrow_small_blue2" Left="25" TabOrder="60" Top="287" Width="11"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static3" Left="41" Style="list_subtitle" TabOrder="61" Text="현&#32;장&#32;명&#32;칭" Top="288" Width="72"></Static>
+		<Edit BindDataset="ds_Usebefore" Column="INSP_SPOT_NM" Height="21" Id="INSP_SPOT_NM" Left="123" Style="style1" TabOrder="62" Top="285" Width="232"></Edit>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : SUVDlg.xml
+2. 작성일 : 2009-04-29
+3. 작성자 : 이 종 영
+4. 기  능 : 감리 업체 조회 다이얼로그
+5. 변경이력
+  가. 2009-04-29 최초작성 (이종영)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "workMODE=ALL";
+	    sArgs += " scRECV_NUM=" + quote(scRECV_NUM);
+	    sArgs += " scSIDO_CODE="+global.g_Sd_cd+" scSIGUNGU_CODE="+global.g_Sgg_cd;
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UsebeforeViewMgr";
+	var sInDs = ""; 
+	var sOutDs = "ds_Usebefore=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg)
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if(svcid == "CODE")
+		{
+			alert('코드 조회 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+
+	if (svcid == "SEARCH")
+	{
+		fnAllControlState(false, this);
+		fnControlState(true, this, "btnOk");
+	}
+
+	
+	if (svcid == "DELETE")
+	{
+		alert("삭제 되었습니다.");
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+
+	Close();
+}
+
+
+function fnEditButton_Click(obj)
+{
+	Close();
+
+}
+
+]]></Script>
+</Window>

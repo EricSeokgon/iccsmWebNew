@@ -1,0 +1,258 @@
+.a { onfocus : "this.blur();" } 
+
+
+BODY {
+   scrollbar-face-color: #cccccc;
+   scrollbar-shadow-color: #eeeeee;
+   scrollbar-highlight-color: #eeeeee;
+   scrollbar-3dlight-color: #cccccc;
+   scrollbar-darkshadow-color: #999999; scrollbar-track-color: #eeeeee;
+   scrollbar-arrow-color: #FFFFFF
+   }
+
+body, td, select, input, div, form, textarea, center, option, pre, blockquote{font-size:12px; font-family:Verdana; color:#666666;letter-spacing:0px;line-height:160%}
+
+A:link    {color:#666666;text-decoration:none;}
+A:visited {color:#666666;text-decoration:none;}
+A:active  {color:#666666;text-decoration:underline;}
+A:hover   {color:#0066CC;text-decoration:underline;}
+
+.small {font-size:11px; font-family:±º∏≤; color:#CC0000;letter-spacing:-1px;line-height:140%}
+.1234 {font-family:Tahoma;font-size:8pt;color:white}
+.bbb {border:solid 1 #dddabc;font-family:Verdana,Tahoma;font-size:8pt;color:#333333;background-color:#ffffff}
+.bbbb {border:solid 1 #333333;font-family:Verdana,Tahoma;font-size:8pt;color:#cccccc;background-color:#000000}
+.bde {border:solid 1 #cccccc;font-family:Verdana,Tahoma;font-size:8pt;color:red;background-color:#ffffff}
+.bdf {border:solid 1 #999999;font-family:Verdana,Tahoma;font-size:8pt;color:black;background-color:#F5F5F5}
+.bddd {border:solid 1 #333333;font-family:Verdana,Tahoma;font-size:8pt;color:white;background-color:#333333}
+.bdd {border:solid 1 #4F5940;font-family:Verdana,Tahoma;font-size:8pt;color:white;background-color:#4F5940}
+.bd3 {border:solid 1 #E1E1E1;font-family:Verdana,Tahoma;font-size:8pt;color:black;background-color:#F0F0F0}
+.filebdc {font-family:Tahoma,Verdana;font-size:8pt;border:solid 1 c0c0c0}
+.bdn {border:solid 0 black}
+.bt {border:solid 1 black;font-family:Verdana,Tahoma;font-size:8pt;color:white;background-color:black}
+.btc {border:solid 1 black;font-family:Verdana,Tahoma;font-size:8pt;color:white;background-color:8c8c8c}
+.ooo {border:solid 1 #cccccc;font-family:Verdana,Tahoma;font-size:20pt;font-weight:bold;color:#424232;background-color:#ffffff}
+
+
+TD { font-family: "±º∏≤" }TH  { font-family: "±º∏≤" }.market {  font-family: "±º∏≤"; font-size: 9pt; line-height: 15pt; font-weight: normal; color: #666666}
+.townhead {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif", "±º∏≤√º"; font-size: 9pt; font-weight: bold; color: #666666; text-decoration: none}
+
+.date     {
+	color:#D1D1D1;
+	font-size:11px;
+	font-family:πŸ≈¡,batang,thaoma,verdana;
+	letter-spacing:0px;
+	text-decoration:none;
+	}	
+.11    {
+	color:#313031;
+	font-size:11px;
+	font-family:µ∏øÚ,verdana;
+	letter-spacing:0px;
+	line-height:17px;
+	text-align:right;
+	text-decoration:none;
+	}
+
+
+.input {
+font-family: "±º∏≤","verdana";
+font-size: 12px;
+COLOR: #666666;
+}
+
+.select {
+font-family: "±º∏≤";
+font-size: 12px;
+width:95px;
+BORDER-BOTTOM: #666666 1px solid;
+BORDER-LEFT: #666666 1px solid;
+BORDER-RIGHT: #666666 1px solid;
+BORDER-TOP: #666666 1px solid;
+COLOR: #666666;
+}
+
+.TEXTAREA {
+font-family: "verdana";
+font-size: 12px;
+BORDER-BOTTOM: #666666 1px solid;
+BORDER-LEFT: #666666 1px solid;
+BORDER-RIGHT: #666666 1px solid;
+BORDER-TOP: #666666 1px solid;
+COLOR: #666666;
+}
+
+.input1 {
+font-family: "±º∏≤","verdana";
+font-size: 12px;
+COLOR: #666666;
+width:95px;
+}
+
+.INPUT2 {
+font-family: "±º∏≤";
+font-size: 12px;
+COLOR: #666666;
+BORDER-BOTTOM: #898989 1px solid;
+BORDER-LEFT: #898989 1px solid;
+BORDER-RIGHT: #898989 1px solid;
+BORDER-TOP: #898989 1px solid;
+COLOR: #666666;
+}
+
+.INPUT3 {
+font-family: "±º∏≤";
+font-size: 12px;
+COLOR: #666666;
+BORDER-BOTTOM: #165B91 1px solid;
+BORDER-LEFT: #165B91 1px solid;
+BORDER-RIGHT: #165B91 1px solid;
+BORDER-TOP: #165B91 1px solid;
+COLOR: #165B91;
+}
+
+.SELECT1 {
+font-family: "verdana";
+font-size: 12px;
+BORDER-BOTTOM: #666666 1px solid;
+BORDER-LEFT: #666666 1px solid;
+BORDER-RIGHT: #666666 1px solid;
+BORDER-TOP: #666666 1px solid;
+COLOR: #666666;
+}
+
+.TEXTAREA1 {
+font-family: "verdana";
+font-size: 12px;
+BORDER-BOTTOM: #666666 1px solid;
+BORDER-LEFT: #666666 1px solid;
+BORDER-RIGHT: #666666 1px solid;
+BORDER-TOP: #666666 1px solid;
+COLOR: #666666;
+}
+
+img.{border:0}
+
+SELECT {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 15px; FONT-FAMILY: ±º∏≤
+}
+TEXTAREA {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 15px; FONT-FAMILY: ±º∏≤
+}
+.ht16 {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 16px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.ht18 {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.ht19 {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 19px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.ht20 {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 20px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.justify {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana; TEXT-ALIGN: justify
+}
+.intro {
+	FONT-SIZE: 12px; COLOR: #ba833d; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.brown {
+	FONT-SIZE: 12px; COLOR: #b97513; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.gray {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.gray02 {
+	FONT-SIZE: 12px; COLOR: #999999; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.gray03 {
+	FONT-SIZE: 11px; COLOR: #999999; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.gray04 {
+	FONT-SIZE: 12px; COLOR: #cccccc; LINE-HEIGHT: 18px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.gray05 {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 16px; FONT-FAMILY: ±º∏≤,Verdana
+}
+.calendar_total {
+	MARGIN: 0px
+}
+.calendar_total_title {
+	MARGIN: 0px 0px 10px; WIDTH: 100%
+}
+.calendar_total_title .txt1 {
+	FONT-SIZE: 16px; COLOR: #194d6f
+}
+.calendar_total_title SELECT {
+	FONT-SIZE: 11px; COLOR: #a1a1a1; FONT-FAMILY: dotum, Arial, Helvetica, sans-serif; HEIGHT: 18px
+}
+.calendar_total_title2 {
+	MARGIN: 0px 0px 5px; WIDTH: 100%
+}
+.calendar_total_title2 .txt1 {
+	FONT-SIZE: 16px; COLOR: #194d6f
+}
+.calendar_tbl {
+	BORDER-TOP: #94b4c9 2px solid; BACKGROUND: #e0eaf0; MARGIN: 0px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.calendar_tbl TH {
+	BORDER-RIGHT: #bad0e0 1px dotted; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 9px; BORDER-LEFT: #bad0e0 1px dotted; PADDING-TOP: 9px; BORDER-BOTTOM: #cddde9 1px dotted; BACKGROUND-COLOR: #e0eaf0; TEXT-ALIGN: center
+}
+.calendar_tbl TH.bg {
+	BACKGROUND-COLOR: #eaf0f5
+}
+.calendar_tbl TD {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; BACKGROUND: #ffffff; PADDING-BOTTOM: 10px; MARGIN: 0px; VERTICAL-ALIGN: top; BORDER-LEFT: #cccccc 1px solid; COLOR: #888888; PADDING-TOP: 10px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 30px
+}
+.calendar_tbl .bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #014d7e
+}
+.calendar_tbl .txt1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN: 3px 0px 0px
+}
+.calendar_tbl .txt1 A:link {
+	COLOR: #85adc6; TEXT-DECORATION: none
+}
+.calendar_tbl .txt1 A:visited {
+	COLOR: #85adc6; TEXT-DECORATION: none
+}
+.calendar_tbl .txt1 A:active {
+	COLOR: #85adc6; TEXT-DECORATION: none
+}
+.calendar_tbl .txt1 A:hover {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .txt2 {
+	FONT-SIZE: 11px; MARGIN: 3px 0px 0px
+}
+.calendar_tbl .txt2 A:link {
+	COLOR: #38767c; TEXT-DECORATION: none
+}
+.calendar_tbl .txt2 A:visited {
+	COLOR: #38767c; TEXT-DECORATION: none
+}
+.calendar_tbl .txt2 A:active {
+	COLOR: #38767c; TEXT-DECORATION: none
+}
+.calendar_tbl .txt2 A:hover {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .txt3 {
+	FONT-SIZE: 11px; MARGIN: 3px 0px 0px; COLOR: #014d7e
+}
+.calendar_tbl .txt3 A:link {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .txt3 A:visited {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .txt3 A:active {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .txt3 A:hover {
+	COLOR: #014d7e; TEXT-DECORATION: none
+}
+.calendar_tbl .btn {
+	MARGIN: 0px 3px 2px 0px
+}
+

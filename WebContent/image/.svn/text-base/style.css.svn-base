@@ -1,0 +1,251 @@
+<STYLE type="text/css">
+CODE { cursor: hand }
+.txt { font-family: "±¼¸²", "Arial"; color: 545454; font-size: 9pt; line-height:17px;}
+.txt a {font-family:"±¼¸²","Arial"; font-size:9pt; color:#000000; line-height:16px;}
+.txt a:hover {font-family:"±¼¸²","Arial"; font-size:9pt; color:#FF4800; line-height:16px;}
+
+
+A:active 
+{   COLOR: "#000000";
+    FONT-SIZE: "12px";
+    TEXT-DECORATION: "none";
+}
+	
+A:link
+{
+    COLOR: "#000000";
+    FONT-SIZE: "12px";
+    TEXT-DECORATION: "none";
+	
+}
+A:visited
+{
+    COLOR: "#000000";
+    FONT-SIZE: "12px";
+    TEXT-DECORATION: "none"
+    
+}
+A:hover
+{
+    COLOR: "#7491C4";
+    FONT-SIZE: "12px"
+    TEXT-DECORATION: "none"
+}
+.tpa
+{
+     padding-top: 3px; 
+	 padding-left: 12px;
+     padding-bottom: 3px
+
+}
+
+.pa1
+{
+     padding-top: 8px; 
+	 padding-left: 16px;
+     padding-bottom: 8px
+
+}
+.pa2 {
+     padding-top: 8px; 
+	 padding-left: 30px;
+     padding-bottom: 8px
+
+}
+.pa3 {
+     padding-top: 8px; 
+	 padding-left: 44px;
+     padding-bottom: 8px
+
+}
+.ppg
+{
+    COLOR: #663300;
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 20px; 
+    font-weight: normal;
+    font-family: "µ¸¿ò", "Verdana"
+}
+
+.ppn
+{
+	COLOR: #006666;
+	FONT-SIZE: 12px;
+	font-weight: normal;
+	font-family: "µ¸¿ò", "Verdana"
+
+}
+.ppo {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 12px;
+	color: #006666;
+	font-weight: bold;
+
+}
+.ppw {
+	font-family: "µ¸¿ò","Verdana";
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.bb {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 13px;
+	color: #333333;
+	font-weight: bold;
+     padding-top: 15px; 
+	 padding-left: 10px;
+     padding-bottom: 5px
+
+}
+.s1 {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 11px;
+	color: #993300;
+
+}
+.s2 {
+	font-family: "µ¸¿ò", "Verdana";
+	font-size: 11px;
+	color: #993300;
+	font-weight: bold;
+1
+
+}
+.tit 
+      {
+	font-family: "µ¸¿ò", "µ¸¿ò", "Verdana";
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #663300;
+
+}
+.input1{
+font-family: µ¸¿ò; 
+font-size: 11px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 400px; 
+height: 20px;> 
+}
+.input2{
+font-family: µ¸¿ò; 
+font-size: 11px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 100px; 
+height: 20px;> 
+}
+.input3{
+font-family: µ¸¿ò; 
+font-size: 11px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 60px; 
+height: 20px;> 
+}
+.input4{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #9FD7EB; 
+width: 95px; 
+height: 20px;> 
+}
+.input5{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #9FD7EB; 
+width: 120px; 
+height: 20px;> 
+}
+.input6{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 160px; 
+height: 20px;> 
+}
+.input7{
+font-family: µ¸¿ò; 
+font-size: 11px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #e4e4e4; 
+border: 1px solid #D2D2D2; 
+width: 100px; 
+height: 20px;> 
+}
+.input8{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #e4e4e4; 
+border: 1px solid #D2D2D2; 
+width: 160px; 
+height: 20px;> 
+}
+.text1{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 170%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 624px; 
+height: 250px; 
+}
+
+
+BODY
+{
+FONT-SIZE: 12px;
+font-weight: nomal;
+font-family: "µ¸¿ò","Verdana";
+SCROLLBAR-FACE-COLOR: #FFFFFF; SCROLLBAR-HIGHLIGHT-COLOR: #666666; SCROLLBAR-SHADOW-COLOR: #666666; SCROLLBAR-3DLIGHT-COLOR: #FFFFFF; SCROLLBAR-ARROW-COLOR: #333333; SCROLLBAR-TRACK-COLOR: #f6f6f6; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+
+td
+{
+    font-family: "µ¸¿ò","Verdana";
+    FONT-SIZE: 12px;   
+    color: #333333
+}
+
+
+
+textarea{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 170%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #D2D2D2; 
+width: 600px; 
+height: 300px; 
+}
+select{
+font-family: µ¸¿ò; 
+font-size: 12px; 
+line-height: 140%; 
+color: #000000; 
+background-color: #ffffff; 
+border: 1px solid #777777; 
+height: 20px;> 
+}
+</STYLE>

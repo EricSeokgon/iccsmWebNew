@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="724" Id="Form_OnLoadEvent" Left="8" OnLoadCompleted="Form_OnLoadEvent_OnLoadCompleted" PidAttrib="7" Title="Form_OnLoadEvent" Top="8" Ver="1.0" Width="997" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="DS_USERMENU">
+				<Contents>
+					<colinfo id="LEVEL" size="256" summ="default" type="STRING"/>
+					<colinfo id="MENUID" size="256" summ="default" type="STRING"/>
+					<colinfo id="TEXT" size="256" summ="default" type="STRING"/>
+					<colinfo id="STATUS" size="256" summ="default" type="STRING"/>
+					<colinfo id="IMAGE" size="256" summ="default" type="STRING"/>
+					<colinfo id="AUTH" size="256" summ="default" type="STRING"/>
+					<record>
+						<AUTH>I</AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL>0</LEVEL>
+						<MENUID>1</MENUID>
+						<STATUS></STATUS>
+						<TEXT>잘라내기</TEXT>
+					</record>
+					<record>
+						<AUTH>R</AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL>0</LEVEL>
+						<MENUID>2</MENUID>
+						<STATUS></STATUS>
+						<TEXT>복사</TEXT>
+					</record>
+					<record>
+						<AUTH>U</AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL>0</LEVEL>
+						<MENUID>3</MENUID>
+						<STATUS></STATUS>
+						<TEXT>붙여넣기</TEXT>
+					</record>
+					<record>
+						<AUTH>D</AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL>0</LEVEL>
+						<MENUID>4</MENUID>
+						<STATUS></STATUS>
+						<TEXT>삭제</TEXT>
+					</record>
+					<record>
+						<AUTH></AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL></LEVEL>
+						<MENUID></MENUID>
+						<STATUS></STATUS>
+						<TEXT></TEXT>
+					</record>
+					<record>
+						<AUTH>N</AUTH>
+						<IMAGE></IMAGE>
+						<LEVEL>0</LEVEL>
+						<MENUID>5</MENUID>
+						<STATUS></STATUS>
+						<TEXT>모두선택</TEXT>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Edit Height="62" Id="Edit0" Left="64" TabOrder="1" Text="Edit0" Top="48" Width="146"></Edit>
+		<Checkbox Height="57" Id="Checkbox0" Left="64" TabOrder="2" Text="Checkbox0" Top="120" Width="102"></Checkbox>
+		<Div Height="281" Id="Div0" Left="64" TabOrder="3" Text="Div0" Top="202" Width="570">
+			<Contents>
+				<Edit Height="89" Id="Edit0" Left="16" TabOrder="1" Text="Edit0" Top="35" Width="233"></Edit>
+			</Contents>
+		</Div>
+		<Button Height="65" Id="Button0" Left="232" TabOrder="4" Text="Button0" Top="48" Width="138"></Button>
+	</Form>
+	<Script><![CDATA[function rsvf_trackpopup(obj, nPosX, nPosY) {
+    
+    obj.SetFocus();
+    
+    //trace(obj.gettype());
+    
+    var arrPos = obj.getSel();
+    
+    if (arrPos[0] == arrPos[1])
+    {
+        DS_USERMENU.SetColumn(0, "STATUS", "Disable");
+        DS_USERMENU.SetColumn(1, "STATUS", "Disable");
+        DS_USERMENU.SetColumn(2, "STATUS", "Enable");
+        DS_USERMENU.SetColumn(3, "STATUS", "Disable");
+        DS_USERMENU.SetColumn(5, "STATUS", "Enable");
+    }
+    else
+    {        
+        DS_USERMENU.SetColumn(0, "STATUS", "Enable");
+        DS_USERMENU.SetColumn(1, "STATUS", "Enable");
+        DS_USERMENU.SetColumn(2, "STATUS", "Enable");
+        DS_USERMENU.SetColumn(3, "STATUS", "Enable");
+        DS_USERMENU.SetColumn(5, "STATUS", "Disable");
+    }
+
+    var strDataset = "DS_USERMENU";
+    var strLevel   = "LEVEL";
+    var strMenuId  = "MENUID";
+    var strTextCol = "TEXT";
+    var strStatus  = "STATUS";
+    var strImageId = "IMAGE";
+    var strCallBack= "_rsvf_callbackPopupMenu";
+    
+    //DS_POPUPMENU.SetColumn(5, "STATUS", "disable");
+    
+    TrackPopupMenu(strDataset
+                 , strLevel
+                 , strMenuId
+                 , strTextCol
+                 , strStatus
+                 , strImageId
+                 , nPosX
+                 , nPosY
+                 , strCallBack
+                 , obj
+                 , 0
+                 , 0
+                  );
+}
+
+function _rsvf_callbackPopupMenu(inObj, inMenuId, inRow, inCell)
+{
+
+    var arrPos = inObj.getSel();
+    var strcopy = "";
+
+    switch(inMenuId)
+    {
+        // 잘라내기
+        case 1:
+			strcopy = mid(inObj.Text, arrPos[0], toNumber(arrPos[1]) - toNumber(arrPos[0]));
+			strcopy = replace(strcopy, "-", "");
+			strcopy = replace(strcopy, "/", "");
+			strcopy = replace(strcopy, ",", "");
+			
+            SetClipBoard("CF_TEXT",strcopy);        
+            //SetClipBoard("CF_TEXT",mid(inObj.Text, arrPos[0], toNumber(arrPos[1]) - toNumber(arrPos[0])));
+            inObj.Text = mid(inObj.Text, 0,arrPos[0]) + mid(inObj.Text, toNumber(arrPos[1]), length(inObj.Text) - toNumber(arrPos[1]));
+            break;
+        
+        //복사
+        case 2:
+			strcopy = mid(inObj.Text, arrPos[0], toNumber(arrPos[1]) - toNumber(arrPos[0]));
+			strcopy = replace(strcopy, "-", "");
+			strcopy = replace(strcopy, "/", "");
+			strcopy = replace(strcopy, ",", "");
+			
+            SetClipBoard("CF_TEXT",strcopy);
+            //SetClipBoard("CF_TEXT",mid(inObj.Text, arrPos[0], toNumber(arrPos[1]) - toNumber(arrPos[0])));
+            break;
+        
+        //붙여넣기
+        case 3:
+            inObj.Text = GetClipBoard("CF_TEXT");            
+            break;        
+        
+        //삭제
+        case 4:
+            inObj.Text = null;
+            break;
+        
+        //모두선택
+        case 5:
+            inObj.SetSel(0, length(inObj.Text));
+            break;      
+        
+    }
+}
+
+
+
+var sCompPath;
+
+function clearFields( p_formObj) {
+	gridList = null;
+	if ( Length(p_formObj.Components) < 1 )
+		return true;
+	
+	var comp = null;
+	for ( var b = 0; b < Length(p_formObj.Components); b++ ) {
+
+		comp = p_formObj.components(b);
+		if(comp.getType() == "Div"){
+			if(comp.GetFirstComponent() == null){
+				continue;
+			}
+			clearFieldsOnDiv(p_formObj, comp.GetFirstComponent().getForm());
+		}else if(comp.getType() == "Tab"){
+			clearFieldsOnTab(comp);
+		}else if(comp.getType() == "Dataset"){
+		}
+
+		clearCompValue(comp);
+	}
+	return true;
+}
+
+function clearFieldsOnDiv( p_formObj, p_divObj) {
+	if ( Length(p_divObj.Components) < 1 )
+		return true;
+	var comp = null;
+	for ( var c = 0; c < Length(p_divObj.Components); c++ ) {
+		comp = p_divObj.components(c);
+		if(comp.getType() == "Div"){
+			if(comp.GetFirstComponent() == null){
+				continue;
+			}
+				clearFieldsOnDiv(p_formObj,comp.GetFirstComponent().getForm());
+		}else if(comp.getType() == "Tab"){
+			clearFieldsOnTab(comp);
+		}else if(comp.getType() == "Dataset"){
+		}
+		clearCompValue(comp);
+		continue;
+	}
+	return true;
+}
+
+function clearFieldsOnTab( p_tabObj ) {
+
+	if ( p_tabObj.TabCount < 1 )
+		return true;
+	
+	var tabPg;	
+
+	for(var x=0;x<p_tabObj.TabCount;x++){
+		tabPg =p_tabObj.GetItem(x);
+
+		var comp = null;
+		for ( var c = 0; c < Length(tabPg.Components); c++ ) {
+			comp = tabPg.components(c);
+			if(comp.getType() == "Div"){
+				if(comp.GetFirstComponent() == null){
+					continue;
+				}
+			}else if(comp.getType() == "Tab"){
+				clearFieldsOnTab(comp);
+			}else if(comp.getType() == "Dataset"){
+
+			}
+			clearCompValue(comp);
+			continue;
+
+
+		}
+	}
+		return true;
+}
+
+
+function clearCompValue(comp)
+{
+	if(comp.getType() == "Edit")
+	{
+		if(comp.OnRButtonDown == "")
+		{
+			comp.OnRButtonDown = "rsvf_trackpopup";
+		}
+	}
+}
+
+function Form_OnLoadEvent_OnLoadCompleted(obj)
+{
+	clearFields(this);
+}
+]]></Script>
+</Window>

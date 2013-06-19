@@ -1,0 +1,21 @@
+
+create table PT_M_SUSNEG(
+    TMP_WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    WRT_NUM VARCHAR2(12) NOT NULL , /* */
+    OPIN_COLL_DT VARCHAR2(8)  , /* */
+    OPIN_COLL_CONT VARCHAR2(1024)  , /* */
+    INS_DT VARCHAR2(24)  , /* */
+    UPD_DT VARCHAR2(24)  , /* */
+    WRT_ID VARCHAR2(16)  , /* */
+    NEFI VARCHAR2(20)  , /* */
+    DECISION_DATE VARCHAR2(8)  , /* */
+    LIS_END_DATE VARCHAR2(8)  , /* */
+    OPINI_SUBMIT_DATE VARCHAR2(8)  , /* */
+    OPINI_SUBMIT VARCHAR2(1)  , /* */
+    BEFORE_DISPO VARCHAR2(1)  , /* */
+    BUSISUSP_START_DT VARCHAR2(8)  , /* */
+    BUSISUSP_END_DT VARCHAR2(8)  , /* */
+    DISPO_PERIOD VARCHAR2(20)  , /* */
+    PAYLIM VARCHAR2(8)  , /* */
+    PRIMARY KEY(TMP_WRT_NUM,WRT_NUM)
+   );

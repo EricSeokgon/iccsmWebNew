@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table name="PT_TEMPLET" pkgname="sp.dao" schema=""><desc/><primarykey/><contents><field const="maxsize=50" dbtype="VARCHAR2(50)" desc="" name="USERID" type="String"/><field const="maxsize=50" dbtype="VARCHAR2(50)" desc="" name="FORMID" type="String"/><field const="maxsize=50" dbtype="VARCHAR2(50)" desc="" name="SAMPLENAME" type="String"/><field const="maxsize=256" dbtype="VARCHAR2(256)" desc="" name="XML" type="String"/></contents></table>

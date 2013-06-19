@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="54" Id="frmExpBar" Left="8" PidAttrib="7" Title="frmExpBar" Top="8" Ver="1.0" Width="815" WorkArea="true">
+		<Image Align="Left" Color="#003366" Font="굴림,12,Bold" Height="52" Id="Image1" ImageID="top_body" TabOrder="0" Text="&#32;공사업등록관리" Width="815"></Image>
+	</Form>
+	<Script></Script>
+</Window>

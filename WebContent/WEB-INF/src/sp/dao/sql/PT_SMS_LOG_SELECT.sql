@@ -1,0 +1,5 @@
+
+SELECT 
+	USER_ID, LOCAL_CD, AREA_CD, FROM_TEL, TO_TEL, MSG, INS_DT, UPD_DT, RESULT 
+FROM   PT_SMS_LOG ;
+                   

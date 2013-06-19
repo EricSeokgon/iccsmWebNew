@@ -1,0 +1,42 @@
+######################################################################
+#		      <	gpkiapi V1.3.0.0 >
+#	
+# Copyright ⓒ 2003-2005 Government Computerization Center(GCC).
+#	   				    All rights reserved.	
+######################################################################
+
+* 지원 플랫폼 : ibmaix 5.1 (64bit)
+
+- libgpkiapi_jni.jar (표준보안API)
+
+- conf/
+	gpkiapi.conf (표준보안API에서 사용하는 환경 파일)
+
+- gpkiapi/(JNI)
+	libgpkiapi_jni.a (표준보안API JNI)
+	libgpkiapi64.a	(표준보안API C 버전)
+	libibmldap64n.a (ldap 라이브러리)
+	gpkiapi_info (표준보안API 정보확인 파일) 
+
+- sample/ (표준보안API Sample)
+	java/ (코드)
+		Cert.java, Cms.java, Crypto.java, Main.java, 
+		Ivs.java, Main.java, Tsa.java
+	class/ (클래스 파일)
+		Cert.class, Cms.class, Crypto.class, Main.class, 
+		Ivs.class, Main.class, Tsa.class
+		Sample/ (테스트 프로그램을 구동하는데 사용하는 데이터)
+
+- javadoc/ (표준보안API 메뉴얼) 
+
+* 참고
+
+[LDAP 라이브러리]
+
+: 표준보안API에서 사용하는 LDAP 라이브러리는 기본적으로 시스템에 설치되어있는 것을 사용하도록 권장한다. 
+   
+ LDAP 라이브러리 찾는 방법 
+ 1. LDAP 라이브러리는 루트(/)에서 LDAP 라이브러리(libibmldap64n.a)를 찾는다. (ex. find / -name "*ldap*" -print)
+ 2. 시스템에서 제공하는 LDAP 라이브러리가 없다면 배포본에 포함되어있는 LDAP 라이브러리를 사용한다.
+
+

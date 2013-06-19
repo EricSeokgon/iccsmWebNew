@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Font="굴림,9,Bold" Height="152" Id="RegRePublishReportDlg" Left="8" PidAttrib="7" Title="등록수첩/등록증&#32;출력" Top="8" Ver="1.0" Width="304" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsReport">
+				<Contents>
+					<colinfo id="Code" size="6" type="STRING"/>
+					<colinfo id="Value" size="20" type="STRING"/>
+					<record>
+						<Code>RPT1</Code>
+						<Value>등록수첩</Value>
+					</record>
+					<record>
+						<Code>RPT2</Code>
+						<Value>등록증</Value>
+					</record>
+					<record>
+						<Code>RPT3</Code>
+						<Value>등록대장</Value>
+					</record>
+				    <record>
+						<Code>RPT4</Code>
+						<Value>등록증&#32;및&#32;등록수첩&#32;교부대장</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static BindDataset="dsReport" Color="#ff6600" Font="굴림,9,Bold" Height="105" Id="Static0" Left="13" TabOrder="1" Text="출&#32;&#32;&#32;&#32;&#32;력" Top="7" Type="Groupbox" Width="274"></Static>
+		<Radio Border="None" CodeColumn="Code" Color="#666666" DataColumn="Value" Height="80" Id="Radio0" INDEX="-1" InnerDataset="dsReport" Left="24" TabOrder="2" Top="24" Width="256"></Radio>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="56" OnClick="btnReport_OnClick" Style="button_style01" TabOrder="3" Text="출력하기" Top="120" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="160" OnClick="btnCancel_OnClick" Style="button_style01" TabOrder="4" Text="취&#32;&#32;&#32;&#32;소" Top="120" Width="72"></Button>
+	</Form>
+	<Script><![CDATA[
+function btnReport_OnClick(obj)
+{
+	Close(this.dsReport.GetColumn(Radio0.Index, "Code"));
+}
+
+function btnCancel_OnClick(obj)
+{
+	Close();
+}
+]]></Script>
+</Window>

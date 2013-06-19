@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="384" Id="TransReceiptMgrD" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="양도양수접수내역조회" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ASSI_TRANS_STATEMENT">
+				<Contents>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="PROC_LIM" size="8" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="TRAN_NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="DEFI_STE" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMPDEFICIT_STATUS" size="6" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="10" summ="default" type="STRING"/>
+					<colinfo id="TRAN_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ASS_TMP_WRT_NUM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ASSI_NAME" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Color="#666666" Font="굴림,9" Height="16" Id="Static2" Left="28" Style="list_subtitle" TabOrder="1" Text="접수일자" Top="25" Width="56"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="81" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="5" Top="20" Width="93"></Calendar>
+		<Static Color="#666666" Font="굴림,9" Height="8" Id="Static5" Left="178" TabOrder="3" Text="~" Top="24" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="191" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="4" Top="20" Value="TODAY" Width="93"></Calendar>
+		<Static Color="#666666" Font="굴림,9" Height="16" Id="Static1" Left="335" Style="list_subtitle" TabOrder="2" Text="접수번호" Top="25" Width="56"></Static>
+		<Edit Height="21" Id="scREC_NUM" Left="389" Style="style1" TabOrder="6" Top="20" Width="107"></Edit>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="24" Id="btnSearch" ImageID="button_search" Left="548" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="7" Top="20" Width="76"></Button>
+		<Image Height="18" Id="Image4" ImageID="arrow_small_blue2" Left="11" TabOrder="8" Top="25" Width="18"></Image>
+		<Image Height="18" Id="Image0" ImageID="arrow_small_blue2" Left="321" TabOrder="9" Top="25" Width="14"></Image>
+		<Grid BindDataset="dsPT_R_ASSI_TRANS_STATEMENT" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="368" ButtonColor="user1" Color="#666666" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="312" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellClick="fnGrid_Click" OnCellDBLClick="fnGridDouble_Click" Right="624" Style="grid_title" TabOrder="10" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="616">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="90"/>
+						<col width="90"/>
+						<col width="130"/>
+						<col width="130"/>
+						<col width="64"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="접수번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="접수일자"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="처리기한"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="양도업체"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="양수업체"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="흠결상태"/>
+					</head>
+					<body>
+						<cell col="0" colid="RECV_NUM" display="text"/>
+						<cell col="1" colid="RECV_DT" display="date"/>
+						<cell col="2" colid="PROC_LIM" display="date"/>
+						<cell col="3" colid="ASSI_NAME" display="text"/>
+						<cell col="4" colid="TRAN_NAME" display="text"/>
+						<cell col="5" colid="TMPDEFICIT_STATUS" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegReceiptMgr.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+  나. 2009-04-10 Y.D Jung
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sWorkGroup;
+var _sOldCode;
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	//scDATE1.Value = AddDate(Today(), -7);
+	//wbjeon 2010-09-30 수정 	
+	var thisToDay = Today();
+	scDATE1.Value = fromDayAfter(thisToDay,-5,60,"div");
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " scRECV_NUM=" + quote(this.scREC_NUM.Text);
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=TransReceiptMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_ASSI_TRANS_STATEMENT=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+	if (!fnEmpty(dsPT_R_ASSI_TRANS_STATEMENT.GetColumn(nRow, "MOT_STE")))
+	{
+		alert('선택하신 접수 건은 양도/양수 업무가 진행중 입니다.');
+		return;
+	}
+	
+	if (dsPT_R_ASSI_TRANS_STATEMENT.GetColumn(nRow, "TMPDEFICIT_STATUS") == "오류")
+	{
+		alert('선택하신 접수 건은 흠결이 완료되지 않았습니다.');
+		return;
+	}
+	// 접수번호 넘김
+	
+	/**	dsOLD_TMP_WRT_NUM에 양도되는 업체의 TMP_WRT_NUM을 저장한다.
+	/*	수정일 : 10/01/09
+	/*	수정자 : 김원
+	/*	내용 : 양도양수시 양도업체의 임원정보 및 기술자정보를 가져오기 위해
+	/*			양도업체의 임시등록번호가 필요함
+	***************************************************************/ 
+	var tmp_wrt_num = dsPT_R_ASSI_TRANS_STATEMENT.GetColumn(nRow, "ASSI_TMP_WRT_NUM");	
+	dsOLD_TMP_WRT_NUM.SetColumn(0, "TMP_WRT_NUM", tmp_wrt_num);		
+	
+	var arrReturn = array(2);
+	arrReturn[0] = dsPT_R_ASSI_TRANS_STATEMENT.GetColumn(nRow, "RECV_NUM");
+	arrReturn[1] = dsPT_R_ASSI_TRANS_STATEMENT.GetColumn(nRow, "RECV_DT");
+	
+	Close(arrReturn); 
+}
+
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}
+
+function fnGrid_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+}
+]]></Script>
+</Window>

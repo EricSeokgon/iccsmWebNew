@@ -1,0 +1,5 @@
+
+SELECT 
+	EX_CON, WRT_ID, INS_DT, UPD_DT, PEQ_NO, EX_SEQ, SD_CD, SGG_CD, EX_RES 
+FROM   PT_UB_USEBEFORE_DETAIL ;
+                   

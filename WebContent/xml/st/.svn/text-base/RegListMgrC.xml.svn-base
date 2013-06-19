@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="656" Id="RegListMgrC" Left="8" OnActivate="fnForm_Activate" OnCloseUp="RegMgrC_OnCloseUp" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업체&#32;등록" Top="8" Ver="1.0" Width="840" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="ETC1" size="30" summ="default" type="STRING"/>
+					<colinfo id="ETC2" size="20" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_NAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsWORK_CLASS">
+				<Contents>
+					<colinfo id="Code" size="2" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>1</Code>
+						<Value>최초등록</Value>
+					</record>
+					<record>
+						<Code>2</Code>
+						<Value>내부건의</Value>
+					</record>
+					<record>
+						<Code>3</Code>
+						<Value>등록완료</Value>
+					</record>
+					<record>
+						<Code>4</Code>
+						<Value>등록불가</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsGUBUN">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>P1</Code>
+						<Value>대표이사</Value>
+					</record>
+					<record>
+						<Code>P2</Code>
+						<Value>감사</Value>
+					</record>
+					<record>
+						<Code>P3</Code>
+						<Value>이사</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCAPITAL_CHECK_YN">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>P1</Code>
+						<Value>출자</Value>
+					</record>
+					<record>
+						<Code>P2</Code>
+						<Value>예치</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDIAGNOSTIC">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>DIG001</Code>
+						<Value>공인회계사</Value>
+					</record>
+					<record>
+						<Code>DIG002</Code>
+						<Value>경영지도사</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsReferCheck">
+				<Contents>
+					<colinfo id="NAKE_KOR" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENTER_DATE" size="8" summ="default" type="STRING"/>
+					<colinfo id="RETIRE_DATE" size="8" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="30" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="DOC_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="1" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" type="STRING"/>
+					<colinfo id="REGR" size="16" type="STRING"/>
+					<colinfo id="VIOL_CONT_CODE" size="6" type="STRING"/>
+					<colinfo id="VIOL_DT" size="6" type="STRING"/>
+					<colinfo id="D_PER_CODE" size="6" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="6" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" type="STRING"/>
+					<colinfo id="INS_DT" size="24" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" type="STRING"/>
+					<colinfo id="NAME" size="60" type="STRING"/>
+					<colinfo id="REMARK" size="256" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" type="STRING"/>
+					<colinfo id="TMPDISPO_CONT" size="10" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="10" type="STRING"/>
+					<colinfo id="TMPD_PER_CODE" size="20" type="STRING"/>
+					<colinfo id="VIOL_CONT" size="50" type="STRING"/>
+					<colinfo id="RECV_NUM" size="256" type="STRING"/>
+					<colinfo id="TMPDISPO_CONTE" size="256" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="256" type="STRING"/>
+					<colinfo id="BUSISUSP_START_DT" size="256" type="STRING"/>
+					<colinfo id="BUSISUSP_END_DT" size="256" type="STRING"/>
+					<colinfo id="DOC_CODE" size="256" type="STRING"/>
+					<colinfo id="PUNISHMENT_AGENCY" size="30" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsREQUEST_CODE">
+				<Contents>
+					<colinfo id="Code" size="16" summ="default" type="STRING"/>
+					<colinfo id="Value" size="50" summ="default" type="STRING"/>
+					<record>
+						<Code>REQ001</Code>
+						<Value>정보통신공사협회</Value>
+					</record>
+					<record>
+						<Code>REQ002</Code>
+						<Value>정보통신공제조합</Value>
+					</record>
+					<record>
+						<Code>REQ003</Code>
+						<Value>지방자치단체</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsMEASURE_CONTENT">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>ALL</Code>
+						<Value>전체</Value>
+					</record>
+					<record>
+						<Code>M00001</Code>
+						<Value>등록취소</Value>
+					</record>
+					<record>
+						<Code>M00002</Code>
+						<Value>영업정지</Value>
+					</record>
+					<record>
+						<Code>M00003</Code>
+						<Value>영업정지&#32;및&#32;과태료부과</Value>
+					</record>
+					<record>
+						<Code>M00004</Code>
+						<Value>과태료부과</Value>
+					</record>
+					<record>
+						<Code>M00005</Code>
+						<Value>시정명령</Value>
+					</record>
+					<record>
+						<Code>M00006</Code>
+						<Value>형사고발</Value>
+					</record>
+					<record>
+						<Code>M00007</Code>
+						<Value>경고조치</Value>
+					</record>
+					<record>
+						<Code>M00008</Code>
+						<Value>징계(주의)</Value>
+					</record>
+					<record>
+						<Code>M00009</Code>
+						<Value>영업정지1개월미만</Value>
+					</record>
+					<record>
+						<Code>M00010</Code>
+						<Value>영업정지1개월</Value>
+					</record>
+					<record>
+						<Code>M00011</Code>
+						<Value>영업정지2개월미만</Value>
+					</record>
+					<record>
+						<Code>M00012</Code>
+						<Value>영업정지3개월미만</Value>
+					</record>
+					<record>
+						<Code>M00013</Code>
+						<Value>영업정지4개월미만</Value>
+					</record>
+					<record>
+						<Code>M00014</Code>
+						<Value>영업정지5개월미만</Value>
+					</record>
+					<record>
+						<Code>M00015</Code>
+						<Value>영업정지6개월미만</Value>
+					</record>
+					<record>
+						<Code>M00016</Code>
+						<Value>영업정지7개월미만</Value>
+					</record>
+					<record>
+						<Code>M00017</Code>
+						<Value>영업정지8개월미만</Value>
+					</record>
+					<record>
+						<Code>M00018</Code>
+						<Value>영업정지9개월미만</Value>
+					</record>
+					<record>
+						<Code>M00019</Code>
+						<Value>영업정지(부실시공)</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsMEASURE_STATE">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>ALL</Code>
+						<Value>전체</Value>
+					</record>
+					<record>
+						<Code>M00001</Code>
+						<Value>등록취소</Value>
+					</record>
+					<record>
+						<Code>M00002</Code>
+						<Value>영업정지</Value>
+					</record>
+					<record>
+						<Code>M00003</Code>
+						<Value>과태료처분</Value>
+					</record>
+					<record>
+						<Code>M00004</Code>
+						<Value>시정명령</Value>
+					</record>
+					<record>
+						<Code>M00005</Code>
+						<Value>형사고발</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsMOT_STE">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="20" summ="default" type="STRING"/>
+					<record>
+						<Code>ALL</Code>
+						<Value>전체</Value>
+					</record>
+					<record>
+						<Code>C00001</Code>
+						<Value>최초등록</Value>
+					</record>
+					<record>
+						<Code>C00002</Code>
+						<Value>내부건의</Value>
+					</record>
+					<record>
+						<Code>C00003</Code>
+						<Value>처분완료</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDIAGNOSTICIAN_DIV">
+				<Contents>
+					<colinfo id="Code" size="6" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>P1</Code>
+						<Value>신규등록</Value>
+					</record>
+					<record>
+						<Code>P2</Code>
+						<Value>기준신고</Value>
+					</record>
+					<record>
+						<Code>P3</Code>
+						<Value>양도양수</Value>
+					</record>
+					<record>
+						<Code>P4</Code>
+						<Value>법인합병</Value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_CAPABILITY">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="ASSE_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="ASSE_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="1" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_END_DT" size="8" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_RESULTS">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="YEAR" size="4" summ="default" type="STRING"/>
+					<colinfo id="WORK_ROM" size="15" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER">
+				<Contents>
+					<colinfo id="SSN" size="13" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="50" summ="default" type="STRING"/>
+					<colinfo id="TMP_GRADE" size="30" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="20" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="3" Top="77" Width="816"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="5" Top="573" Width="816"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" OnClick="Image1_OnClick" TabOrder="4" Top="149" Width="817"></Image>
+		<Tab BKColor="user5" Border="Flat" BorderColor="user5" Height="515" Id="tbMain" Left="24" TabIndex="1" TabOrder="1" Top="104" Width="784">
+			<Contents>
+				<TabPage BorderColor="black" Height="485" Id="tbBUB" ImageID="tab_style_100" Left="2" TabOrder="11" Text="기본정보" Top="28" Width="780">
+					<Static Height="54" Id="Static24" Left="6" ShadowColor="#cccccc" TabOrder="61" Text="자본금예치" Top="405" Type="Groupbox" Width="375"></Static>
+					<Static BindDataset="dsPT_R_COMPANY_MASTER" Height="126" Id="Static15" Left="6" ShadowColor="#cccccc" TabOrder="49" Text="기업진단정보" Top="203" Type="Groupbox" Width="375"></Static>
+					<Static BindDataset="dsPT_R_COMPANY_MASTER" Height="171" Id="Static14" Left="6" ShadowColor="#cccccc" TabOrder="48" Text="업체기본정보" Top="19" Type="Groupbox" Width="375"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static2" Left="29" Style="list_subtitle" TabOrder="19" Text="업&#32;체&#32;상&#32;호" Top="70" Width="69"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="NAME" Height="21" Id="NAME" Left="101" MaxLength="36" Style="style1" TabOrder="1" Top="66" Width="201"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static3" Left="207" TabOrder="22" Text="팩&#32;스&#32;번&#32;호" Top="117" Width="71"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_FAX_NUM" Height="21" Id="ADDR_FAX_NUM" Left="280" MaxLength="14" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="5" Top="112" UserData="전화번호가&#32;입력되지&#32;않았습니다." Width="94"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="14" Id="Static10" Left="29" TabOrder="21" Text="전&#32;화&#32;번&#32;호" Top="117" Width="71"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_TEL_NUM" Height="21" Id="ADDR_TEL_NUM" Left="101" MaxLength="14" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="4" Top="112" UserData="전화번호가&#32;입력되지&#32;않았습니다." Width="95"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static4" Left="29" TabOrder="23" Text="대&#32;&#32;&#32;표&#32;&#32;&#32;자" Top="94" Width="71"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="REP_NM_KOR" Height="21" Id="REP_NAME_KOR" Left="101" MaxLength="28" OnFocus="fnComponent_OnFocus" OnKillFocus="fnKillFocus" TabOrder="2" Top="89" UserData="대표자&#32;성명이&#32;입력되지&#32;않았습니다." Width="95"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static6" Left="207" TabOrder="20" Text="사업자번호" Top="92" Width="63"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static5" Left="29" Style="list_subtitle" TabOrder="24" Text="현&#32;주&#32;소" Top="140" Width="61"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_ADDR" Height="21" Id="ADDR_ADDR" Left="151" Style="style1" TabOrder="6" Top="135" Width="224"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_POST_NUM" Height="21" Id="ADDR_POST_NUM" Left="101" Style="style1" TabOrder="25" Top="135" Width="47"></Edit>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="ADDR_DETAIL_ADDR" Height="21" Id="ADDR_DETAIL_ADDR" Left="101" Style="style1" TabOrder="7" Top="159" Width="274"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static8" Left="29" TabOrder="26" Text="납입자본금" Top="298" Width="63"></Static>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="PAY_CAP" Height="21" Id="PAY_CAP" Left="103" MaxLength="14" TabOrder="14" Top="294" Width="88"></MaskEdit>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="MANA_NUM" Height="21" Id="MANA_NUM" Left="280" Mask="###-##-#####" MaxLength="13" TabOrder="3" Top="89" Type="STRING" Width="94"></MaskEdit>
+					<Image Height="19" Id="Image1" ImageID="arrow_small_white" Left="12" TabOrder="27" Top="67" Width="10"></Image>
+					<Image Height="19" Id="Image2" ImageID="arrow_small_white" Left="12" TabOrder="28" Top="91" Width="10"></Image>
+					<Image Height="19" Id="Image4" ImageID="arrow_small_white" Left="12" TabOrder="29" Top="114" Width="10"></Image>
+					<Image Height="19" Id="Image5" ImageID="arrow_small_white" Left="12" TabOrder="30" Top="136" Width="10"></Image>
+					<Image Height="19" Id="Image6" ImageID="arrow_small_white" Left="12" TabOrder="31" Top="295" Width="10"></Image>
+					<Image Height="19" Id="Image7" ImageID="arrow_small_white" Left="192" TabOrder="32" Top="89" Width="10"></Image>
+					<Image Height="19" Id="Image8" ImageID="arrow_small_white" Left="192" TabOrder="33" Top="113" Width="10"></Image>
+					<Calendar BindDataset="dsPT_R_COMPANY_MASTER" Column="COMPANY_DIAG_ISSUE_DT" Height="21" Id="COMPANY_DIAG_ISSUE_DT" Left="285" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="13" Top="274" Value="TODAY" Width="88"></Calendar>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="REA_CAP" Height="21" Id="REA_CAP" Left="285" MaxLength="14" TabOrder="15" Top="298" Value="MaskEdit0" Width="88"></MaskEdit>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static1" Left="209" Style="list_subtitle" TabOrder="36" Text="실질자본금" Top="303" Width="69"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static7" Left="209" Style="list_subtitle" TabOrder="37" Text="발&#32;급&#32;일&#32;자" Top="280" Width="69"></Static>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="193" TabOrder="41" Top="275" Width="12"></Image>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="193" TabOrder="40" Top="299" Width="12"></Image>
+					<Combo BindDataset="dsPT_R_COMPANY_MASTER" CodeColumn="Code" Column="COMPANY_DIAG_CLASS_CODE" DataColumn="Value" DisplayRowCnt="4" Height="21" Id="DIAGNOSTICIAN_DIV" INDEX="1" InnerDataset="dsDIAGNOSTICIAN_DIV" Left="103" TabOrder="8" Top="224" Width="88"></Combo>
+					<Calendar BindDataset="dsPT_R_COMPANY_MASTER" Column="COMPANY_DIAG_BAS_DT" Height="21" Id="COMPANY_DIAG_BAS_DT" Left="103" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="12" Top="272" Value="TODAY" Width="88"></Calendar>
+					<Static Font="굴림,9" Height="19" Id="Static9" Left="29" Style="list_subtitle" TabOrder="35" Text="진단기준일" Top="276" Width="69"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static11" Left="29" Style="list_subtitle" TabOrder="34" Text="진&#32;단&#32;구&#32;분" Top="227" Width="69"></Static>
+					<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="12" TabOrder="38" Top="227" Width="16"></Image>
+					<Image Height="16" Id="Image9" ImageID="arrow_small_white" Left="12" TabOrder="39" Top="274" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static13" Left="210" Style="list_subtitle" TabOrder="42" Text="진단자구분" Top="231" Width="69"></Static>
+					<Combo BindDataset="dsPT_R_COMPANY_MASTER" CodeColumn="Code" Column="DIAG_ORG_CODE" DataColumn="Value" Height="21" Id="DIAGNOSTIC_DIV" InnerDataset="dsDIAGNOSTIC" Left="286" TabOrder="9" Top="225" Width="88"></Combo>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static16" Left="29" Style="list_subtitle" TabOrder="43" Text="진단자성명" Top="252" Width="69"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" Column="DIAG_NM_NM" Height="21" Id="DIAG_NM_NM" Left="103" MaxLength="50" Style="style1" TabOrder="10" Top="249" Width="80"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="17" Id="Static17" Left="207" Style="list_subtitle" TabOrder="44" Text="진단자등록번호" Top="255" Width="96"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="DIAG_NM_WRT_NUM" Height="21" Id="DIAG_NM_WRT_NUM" Left="299" MaxLength="12" Style="style1" TabOrder="11" Top="249" Width="71"></Edit>
+					<Image Height="16" Id="Image11" ImageID="arrow_small_white" Left="193" TabOrder="45" Top="228" Width="16"></Image>
+					<Image Height="16" Id="Image13" ImageID="arrow_small_white" Left="12" TabOrder="46" Top="248" Width="16"></Image>
+					<Image Height="16" Id="Image16" ImageID="arrow_small_white" Left="193" TabOrder="47" Top="252" Width="16"></Image>
+					<Static Height="54" Id="Static18" Left="6" ShadowColor="#cccccc" TabOrder="50" Text="건물등기부등본" Top="341" Type="Groupbox" Width="375"></Static>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="TUP_AOM" Height="21" Id="TUP_AOM" Left="236" Mask="###,###,###,###" MaxLength="12" TabOrder="18" Top="430" Value="MaskEdit0" Width="62"></MaskEdit>
+					<Combo BindDataset="dsPT_R_COMPANY_MASTER" CodeColumn="Code" Column="TUP_CLASS_CODE" DataColumn="Value" DisplayRowCnt="2" Height="21" Id="CAPITAL_CHECK_YN" INDEX="0" InnerDataset="dsCAPITAL_CHECK_YN" Left="84" TabOrder="17" Top="428" Width="63"></Combo>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static19" Left="30" Style="list_subtitle" TabOrder="55" Text="구&#32;&#32;&#32;&#32;분" Top="433" Width="69"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static20" Left="182" Style="list_subtitle" TabOrder="56" Text="금&#32;&#32;&#32;&#32;액" Top="435" Width="69"></Static>
+					<Image Height="16" Id="Image10" ImageID="arrow_small_white" Left="166" TabOrder="60" Top="431" Width="16"></Image>
+					<Image Height="16" Id="Image12" ImageID="arrow_small_white" Left="13" TabOrder="59" Top="428" Width="16"></Image>
+					<MaskEdit BindDataset="dsPT_R_COMPANY_MASTER" Column="OFFICE_AREA" Height="21" Id="OFFICE_AREA" Left="294" Mask="###,###.##" TabOrder="16" Top="363" Value="MaskEdit0" Width="48"></MaskEdit>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static21" Left="248" Style="list_subtitle" TabOrder="53" Text="면&#32;&#32;&#32;적" Top="366" Width="45"></Static>
+					<Image Height="16" Id="Image14" ImageID="arrow_small_white" Left="228" TabOrder="58" Top="363" Width="16"></Image>
+					<Image Height="16" Id="Image17" ImageID="arrow_small_white" Left="12" TabOrder="57" Top="362" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="19" Id="Static22" Left="32" Style="list_subtitle" TabOrder="52" Text="용&#32;&#32;&#32;도" Top="366" Width="45"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="OFFICE_USE_NAME" Height="21" Id="OFFICE_USE_CODE" Left="86" MaxLength="100" Style="style1" TabOrder="51" Top="363" Width="95"></Edit>
+					<Static Font="굴림,11" Height="19" Id="Static23" Left="344" TabOrder="54" Text="㎡" Top="366" Width="21"></Static>
+					<Edit BindDataset="dsPT_R_COMPANY_MASTER" CheckLength="Byte" Column="COI_WRT_NUM" Height="21" Id="COI_WRT_NUM" Left="101" MaxLength="12" Style="style1" TabOrder="62" Top="42" Width="96"></Edit>
+					<Static Color="#666666" Font="굴림,9" Height="16" Id="Static12" Left="31" TabOrder="64" Text="등&#32;록&#32;번&#32;호" Top="47" Width="72"></Static>
+					<Image Height="16" Id="Image18" ImageID="arrow_small_white" Left="13" TabOrder="63" Top="44" Width="16"></Image>
+					<Static Height="441" Id="Static25" Left="406" ShadowColor="#cccccc" TabOrder="65" Text="공사업체&#32;이력정보" Top="19" Type="Groupbox" Width="368"></Static>
+					<Grid BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="449" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="409" Id="grdList" InputPanel="FALSE" Left="416" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="764" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="66" TabStop="true" Top="40" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="348">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="110"/>
+									<col width="90"/>
+									<col width="144"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="변경구분"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="변경일자"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="내용"/>
+								</head>
+								<body>
+									<cell col="0" colid="CODE_NAME" display="text"/>
+									<cell col="1" colid="CHG_DT" display="date"/>
+									<cell col="2" colid="DOC_CODE" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+				<TabPage BorderColor="black" Height="485" Id="tpEngeneer" ImageID="tab_style_100" Left="2" TabOrder="11" Text="행정처분현황" Top="28" Width="780">
+					<Grid BindDataset="dsPT_M_MASTER" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="468" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="449" Id="grdList" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="774" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="43"/>
+									<col width="73"/>
+									<col width="116"/>
+									<col width="62"/>
+									<col width="80"/>
+									<col width="138"/>
+									<col width="88"/>
+									<col width="86"/>
+									<col width="73"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" rowspan="2" text="구분"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" rowspan="2" text="등록번호"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" rowspan="2" text="상호"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" rowspan="2" text="대표자"/>
+									<cell bkcolor="#787878" col="4" color="white" display="text" rowspan="2" text="처분일자"/>
+									<cell bkcolor="#787878" col="5" color="white" display="text" rowspan="2" text="처분내용"/>
+									<cell bkcolor="#787878" col="6" color="white" colspan="2" display="text" text="기간"/>
+									<cell bkcolor="#787878" col="8" color="white" display="text" rowspan="2" text="처리상태"/>
+									<cell bkcolor="#787878" col="6" color="white" display="text" row="1" text="부터"/>
+									<cell bkcolor="#787878" col="7" color="white" display="text" row="1" text="까지"/>
+								</head>
+								<body>
+									<cell col="0" colid="SIDO_NM" display="text" limit="2" LimitDec="2"/>
+									<cell col="1" colid="COI_WRT_NUM" display="text"/>
+									<cell col="2" colid="NAME" display="text"/>
+									<cell col="3" colid="REP_NM_KOR" display="text"/>
+									<cell col="4" colid="DISPO_DT" display="date"/>
+									<cell col="5" colid="TMPDISPO_CONT" display="text"/>
+									<cell col="6" colid="BUSISUSP_START_DT" display="date"/>
+									<cell col="7" colid="BUSISUSP_END_DT" display="date"/>
+									<cell col="8" colid="TMPMOT_STE" display="text"/>
+								</body>
+							</format>
+							<format id="Excel">
+								<columns>
+									<col width="93"/>
+									<col width="74"/>
+									<col width="178"/>
+									<col width="113"/>
+									<col width="72"/>
+									<col width="80"/>
+									<col width="67"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="접수번호"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="접수일자"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="처분요청자"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="처분내용"/>
+									<cell bkcolor="#999999" col="6" color="white" display="text" text="처분일자"/>
+									<cell bkcolor="#999999" col="7" color="white" display="text" text="진행상태"/>
+								</head>
+								<body>
+									<cell col="1" colid="WRT_NUM" display="text"/>
+									<cell col="2" colid="WRT_DT" display="date"/>
+									<cell col="3" colid="NAME" display="text"/>
+									<cell col="4" colid="TMPD_PER_CODE" display="text"/>
+									<cell col="5" colid="TMPDISPO_CONT" display="text"/>
+									<cell col="6" colid="DISPO_DT" display="date"/>
+									<cell col="7" colid="TMPMOT_STE" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="11" TabOrder="3" Top="393" Visible="FALSE" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static1" Left="27" TabOrder="2" Text="공&#32;사&#32;업&#32;체" Top="396" Visible="FALSE" Width="73"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="11" TabOrder="5" Top="417" Visible="FALSE" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static3" Left="27" TabOrder="4" Text="처분요청자" Top="420" Visible="FALSE" Width="73"></Static>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="11" TabOrder="6" Top="441" Visible="FALSE" Width="16"></Image>
+					<Edit BindDataset="dsPT_M_MASTER" Column="NAME" Height="21" Id="COM_NAME" Left="103" TabOrder="7" Top="393" Visible="FALSE" Width="167"></Edit>
+					<Image Height="16" Id="Image3" ImageID="arrow_small_white" Left="363" TabOrder="9" Top="441" Visible="FALSE" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static4" Left="379" TabOrder="8" Text="처&#32;분&#32;사&#32;유" Top="444" Visible="FALSE" Width="73"></Static>
+					<Edit BindDataset="dsPT_M_MASTER" Column="DISPO_CAUSE" Height="21" Id="VIOL_CONT" Left="455" TabOrder="10" Top="441" Visible="FALSE" Width="311"></Edit>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="363" TabOrder="12" Top="417" Visible="FALSE" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static6" Left="379" TabOrder="11" Text="처&#32;분&#32;일&#32;자" Top="420" Visible="FALSE" Width="73"></Static>
+					<Calendar BindDataset="dsPT_M_MASTER" Column="DISPO_DT" Height="21" Id="VIOL_DT" Left="455" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="13" Top="417" Value="TODAY" Visible="FALSE" Width="85"></Calendar>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static8" Left="27" TabOrder="14" Text="처&#32;분&#32;내&#32;용" Top="444" Visible="FALSE" Width="73"></Static>
+					<Image Height="16" Id="Image6" ImageID="arrow_small_white" Left="363" TabOrder="16" Top="393" Visible="FALSE" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static11" Left="379" TabOrder="15" Text="문&#32;서&#32;번&#32;호" Top="396" Visible="FALSE" Width="73"></Static>
+					<Edit BindDataset="dsPT_M_MASTER" Column="DOC_CODE" Height="21" Id="WRT_NUM" Left="455" TabOrder="17" Top="393" Visible="FALSE" Width="85"></Edit>
+					<Edit BindDataset="dsPT_M_MASTER" Column="TMPDISPO_CONTE" Height="21" Id="Edit0" Left="103" TabOrder="18" Top="416" Visible="FALSE" Width="167"></Edit>
+					<Edit BindDataset="dsPT_M_MASTER" Column="TMPDISPO_CONT" Height="21" Id="Edit1" Left="103" TabOrder="19" Top="440" Visible="FALSE" Width="167"></Edit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="485" Id="tpMemo" ImageID="tab_style_100" Left="2" TabOrder="11" Text="시공능력" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_WORK_CAPABILITY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="387" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="368" Id="grdList" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="774" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="93"/>
+									<col width="105"/>
+									<col width="106"/>
+									<col width="108"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="평가일자"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="평가금액"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="적용시작일자"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" text="적용종료일자"/>
+								</head>
+								<body>
+									<cell col="0" colid="ASSE_DT" display="date"/>
+									<cell col="1" colid="ASSE_AOM" display="number"/>
+									<cell col="2" colid="APPL_TERM_START_DT" display="date"/>
+									<cell col="3" colid="APPL_TERM_END_DT" display="date"/>
+								</body>
+							</format>
+							<format id="Excel">
+								<columns>
+									<col width="93"/>
+									<col width="74"/>
+									<col width="178"/>
+									<col width="113"/>
+									<col width="72"/>
+									<col width="80"/>
+									<col width="67"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="접수번호"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="접수일자"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="처분요청자"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="처분내용"/>
+									<cell bkcolor="#999999" col="6" color="white" display="text" text="처분일자"/>
+									<cell bkcolor="#999999" col="7" color="white" display="text" text="진행상태"/>
+								</head>
+								<body>
+									<cell col="1" colid="WRT_NUM" display="text"/>
+									<cell col="2" colid="WRT_DT" display="date"/>
+									<cell col="3" colid="NAME" display="text"/>
+									<cell col="4" colid="TMPD_PER_CODE" display="text"/>
+									<cell col="5" colid="TMPDISPO_CONT" display="text"/>
+									<cell col="6" colid="DISPO_DT" display="date"/>
+									<cell col="7" colid="TMPMOT_STE" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="18" TabOrder="3" Top="403" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static1" Left="34" TabOrder="2" Text="평&#32;가&#32;일&#32;자" Top="406" Width="73"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="282" TabOrder="5" Top="403" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static3" Left="298" TabOrder="4" Text="평&#32;가&#32;금&#32;액" Top="406" Width="73"></Static>
+					<Image Height="16" Id="Image2" ImageID="arrow_small_white" Left="18" TabOrder="6" Top="427" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static8" Left="34" TabOrder="7" Text="적용시작일" Top="430" Width="73"></Static>
+					<Static Color="#666666" Font="굴림,9" Height="15" Id="Static0" Left="298" TabOrder="9" Text="적용종료일" Top="430" Width="73"></Static>
+					<Image Height="16" Id="Image5" ImageID="arrow_small_white" Left="282" TabOrder="8" Top="427" Width="16"></Image>
+					<Calendar BindDataset="dsPT_R_WORK_CAPABILITY" Column="ASSE_DT" Height="21" Id="Calendar0" Left="109" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="10" Top="402" Width="89"></Calendar>
+					<Calendar BindDataset="dsPT_R_WORK_CAPABILITY" Column="APPL_TERM_START_DT" Height="21" Id="Calendar1" Left="109" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="11" Top="426" Width="89"></Calendar>
+					<Calendar BindDataset="dsPT_R_WORK_CAPABILITY" Column="APPL_TERM_END_DT" Height="21" Id="Calendar2" Left="374" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="12" Top="426" Width="89"></Calendar>
+					<MaskEdit BindDataset="dsPT_R_WORK_CAPABILITY" Column="ASSE_AOM" Height="21" Id="ASSE_AOM" Left="374" MaxLength="14" TabOrder="13" Top="404" Value="MaskEdit0" Width="89"></MaskEdit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="485" Id="tab4" ImageID="tab_style_100" Left="2" TabOrder="10" Text="공사실적" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_WORK_RESULTS" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="387" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="368" Id="grdList" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="774" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="93"/>
+									<col width="125"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="공사년도"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="실적금액(천원)"/>
+								</head>
+								<body>
+									<cell col="0" colid="YEAR" display="text"/>
+									<cell col="1" colid="WORK_ROM" display="number"/>
+								</body>
+							</format>
+							<format id="Excel">
+								<columns>
+									<col width="93"/>
+									<col width="74"/>
+									<col width="178"/>
+									<col width="113"/>
+									<col width="72"/>
+									<col width="80"/>
+									<col width="67"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="접수번호"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="접수일자"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="처분요청자"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="처분내용"/>
+									<cell bkcolor="#999999" col="6" color="white" display="text" text="처분일자"/>
+									<cell bkcolor="#999999" col="7" color="white" display="text" text="진행상태"/>
+								</head>
+								<body>
+									<cell col="1" colid="WRT_NUM" display="text"/>
+									<cell col="2" colid="WRT_DT" display="date"/>
+									<cell col="3" colid="NAME" display="text"/>
+									<cell col="4" colid="TMPD_PER_CODE" display="text"/>
+									<cell col="5" colid="TMPDISPO_CONT" display="text"/>
+									<cell col="6" colid="DISPO_DT" display="date"/>
+									<cell col="7" colid="TMPMOT_STE" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Image Height="16" Id="Image0" ImageID="arrow_small_white" Left="18" TabOrder="3" Top="403" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="15" Id="Static1" Left="34" TabOrder="2" Text="공&#32;사&#32;년&#32;도" Top="406" Width="73"></Static>
+					<Image Height="16" Id="Image1" ImageID="arrow_small_white" Left="282" TabOrder="5" Top="403" Width="16"></Image>
+					<Static Color="#666666" Font="굴림,9,Bold" Height="15" Id="Static3" Left="298" TabOrder="4" Text="실&#32;적&#32;금&#32;액" Top="406" Width="73"></Static>
+					<Edit Align="RIGHT" BindDataset="dsPT_R_WORK_RESULTS" Column="YEAR" Height="21" Id="Edit1" Left="110" TabOrder="6" Top="403" Width="42"></Edit>
+					<MaskEdit BindDataset="dsPT_R_WORK_RESULTS" Column="WORK_ROM" Height="21" Id="WORK_ROM" Left="374" MaxLength="14" TabOrder="7" Top="403" Value="MaskEdit0" Width="113"></MaskEdit>
+				</TabPage>
+				<TabPage BorderColor="black" Height="485" Id="tab5" ImageID="tab_style_100" Left="2" TabOrder="10" Text="보유기술자" Top="28" Width="780">
+					<Grid BindDataset="dsPT_R_ENGINEER" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="468" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="449" Id="grdList" InputPanel="FALSE" Left="6" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="774" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="19" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="156"/>
+									<col width="125"/>
+									<col width="162"/>
+									<col width="125"/>
+									<col width="125"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="주민등록번호"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="이름"/>
+									<cell bkcolor="#787878" col="2" color="whitesmoke" display="text" text="경력수첩번호"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" text="등&#32;&#32;&#32;급"/>
+									<cell bkcolor="#787878" col="4" color="white" display="text" text="입사일자"/>
+								</head>
+								<body>
+									<cell align="center" col="0" display="text" expr="ENGINEER_SSN1&#32;+&#32;ENGINEER_SSN2" Mask="######-#######"/>
+									<cell align="center" col="1" colid="NM_KOR" display="text"/>
+									<cell align="center" col="2" colid="CARE_BOOK_ISSUE_NUM" display="text"/>
+									<cell align="center" col="3" colid="TMP_GRADE" display="text"/>
+									<cell align="center" col="4" colid="EMPL_YMD" display="text"/>
+								</body>
+							</format>
+							<format id="Excel">
+								<columns>
+									<col width="93"/>
+									<col width="74"/>
+									<col width="178"/>
+									<col width="113"/>
+									<col width="72"/>
+									<col width="80"/>
+									<col width="67"/>
+								</columns>
+								<head>
+									<cell bkcolor="#999999" col="1" color="white" display="text" text="접수번호"/>
+									<cell bkcolor="#999999" col="2" color="white" display="text" text="접수일자"/>
+									<cell bkcolor="#999999" col="3" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+									<cell bkcolor="#999999" col="4" color="white" display="text" text="처분요청자"/>
+									<cell bkcolor="#999999" col="5" color="white" display="text" text="처분내용"/>
+									<cell bkcolor="#999999" col="6" color="white" display="text" text="처분일자"/>
+									<cell bkcolor="#999999" col="7" color="white" display="text" text="진행상태"/>
+								</head>
+								<body>
+									<cell col="1" colid="WRT_NUM" display="text"/>
+									<cell col="2" colid="WRT_DT" display="date"/>
+									<cell col="3" colid="NAME" display="text"/>
+									<cell col="4" colid="TMPD_PER_CODE" display="text"/>
+									<cell col="5" colid="TMPDISPO_CONT" display="text"/>
+									<cell col="6" colid="DISPO_DT" display="date"/>
+									<cell col="7" colid="TMPMOT_STE" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="2" Text="Div0" Top="16" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="26" Id="Image5" ImageID="tab_style_bg" Left="568" TabOrder="6" Top="104" Width="231"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegC.xml
+2. 작성일 : 2009-02-26
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록
+5. 변경이력
+  가. 2009-02-26 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var	_sKEY2;
+var _sWorkFlag;
+var _popup="F";
+ 
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	
+	divButtonBar.Image1.text = space(6) + "공사업체 상세조회";
+	this.RegListMgrC.Title = "공사업체 조회";
+	tbMain.TabIndex = 0;
+	
+	if( _popup=="T" ){		
+		divButtonBar.Url = "base::frmButtonBarFlat.xml";
+	}
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(false, this);	
+		fnControlState(true, this.tbMain.tab4, "grdList");
+		fnControlState(true, this.tbMain.tpMemo, "grdList");
+		fnControlState(true, this.tbMain.tpEngeneer, "grdList");
+		fnControlState(true, this.tbMain.tbBUB, "grdList");
+
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnList.enable = true;
+	}
+}
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scTMP_WRT_NUM=" + _sKEY1;
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegListMgrC";
+	var sInDs = "";
+	var sOutDs  = "dsPT_R_COMPANY_MASTER=output dsPT_R_BASIC_CHANGE_HISTORY=output2 " ;
+		sOutDs += "dsPT_M_MASTER=output3 dsPT_R_WORK_CAPABILITY=output4 dsPT_R_WORK_RESULTS=output5 dsPT_R_ENGINEER=output6";
+
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+			return;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+function fnInquiry()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	
+	fnTablesBinding();
+}
+
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{	
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	var sCode = fnCreateDialog("st::RegReportDlg.xml", "");
+	
+	var sKEY1 = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "TMP_WRT_NUM");
+
+	//등록 수첩 리포트
+	if (sCode == "RPT1")
+	{
+		var sWorkFlag = global.gv_MODIFY;
+		
+		var sArgs = "_sWorkFlag=" + quote(sWorkFlag) + " _sKEY1=" + quote(sKEY1);
+		
+		gfnCreateNewWindow("RegRePublishMgrP", "cm::RegRePublishMgrP.xml", sArgs);
+	}
+	// 등록증 리포트
+	else if (sCode == "RPT2")
+	{
+		var sWorkFlag = global.gv_MODIFY;
+		var sArgs = "_sWorkFlag=" + quote(sWorkFlag) + " _sKEY1=" + quote(sKEY1);
+		gfnCreateNewWindow("RegReportMgrP", "cm::RegReportMgrP.xml", sArgs);
+	}
+	//등록대장 리포트
+	else if (sCode == "RPT3")
+	{
+		var sViewer = "_sViewer=NewRegStR";
+		var sReportname =  " _sReportname=connection.reportname=/BusinessRegist/NewRegStR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)NewRegStR";
+		var	spCount = " _spCount=odi.Q)NewRegStR.pcount=1";
+		var sParam = " _sParam=odi.Q)NewRegStR.args1=TMP_WRT_NUM=" + sKEY1;
+		
+		var sRet = fnCreateDialogResize("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);
+	}
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{
+}
+
+function fnValidation()
+{
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else if (obj == divButtonBar.btnList) fnList();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// 코드 조회용 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnEditButton_Click
+ 2. 기  능 : 에디트 버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+
+}
+
+//////////////////////////////////////////////////////////////////
+//리스트 이동
+//////////////////////////////////////////////////////////////////
+function fnList(){
+	var sArgs = fnSearchInit("pscSIDO_CODE,pscCOI_WRT_NUM,pscNAME,pscCLOSE");
+	sArgs += " pscMode=T _sKEY1=" + _sKEY1;
+	gfnCreateNewWindow("st::RegListMgr", "st::RegListMgr.xml", sArgs);
+}
+
+
+]]></Script>
+</Window>

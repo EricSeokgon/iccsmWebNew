@@ -1,0 +1,31 @@
+#########################################################################
+#                        DSJDF 기본 환경설정 파일                       #
+#                                                                       #
+#########################################################################
+
+# 본 파일은 DSJDF 환경설정을 하는 파일로써, DSJDF의 Config 에서 불러들
+# 일때 사용된다.
+# 본 파일은 DSJDF 를 이용한 Application 을 구동시에 java -D 옵션을 주어
+# com.dsjdf.jdf.config.file 값에 본 파일의 절대경로를 적어주어야 정상
+# 작동된다.
+
+#[Log 관련]
+logger.driver=com.dsjdf.jdf.DefaultLoggerWriter
+
+#로그를 남기는 디렉토리
+#Log directory의 Absolute Path
+#logger.dir=C:/gpkisecureweb/log
+logger.dir=/data/webroot/ICCSM/gpki/gpkisecureweb/log
+
+#로그레벨 [true/false]
+logger.sys.trace=false
+logger.err.trace=true
+logger.warn.trace=false
+logger.info.trace=true
+logger.debug.trace=false
+logger.autoflush=true
+
+#[프로젝트 설정파일 or Server 설정파일]
+#gpkisecureweb.properties 파일이 위치한 Absolute Path
+#pbf.propertiesFile=C:/gpkisecureweb/conf/gpkisecureweb.properties
+pbf.propertiesFile=/data/webroot/ICCSM/gpki/gpkisecureweb/conf/gpkisecureweb.properties

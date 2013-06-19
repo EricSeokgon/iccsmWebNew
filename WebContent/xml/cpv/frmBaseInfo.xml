@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="beige" Height="294" Id="frmBaseInfo" Left="8" OnLoadCompleted="frmBaseInfo_onloadComplete" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="494" WorkArea="true">
+		<Image Height="294" Id="Image0" ImageID="cpv_baseinfo" LeftMargin="0" TabOrder="1" Transparent="TRUE" Width="494"></Image>
+		<Static Height="21" Id="txtCompName" Left="117" TabOrder="2" Top="52" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompNum" Left="346" TabOrder="3" Top="52" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompCeo" Left="117" TabOrder="4" Top="74" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompJumin" Left="346" TabOrder="5" Top="74" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompRegDate" Left="117" TabOrder="6" Top="96" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompMoney" Left="346" TabOrder="7" Top="96" VAlign="Middle" Width="132"></Static>
+		<Static Height="21" Id="txtCompAddr" Left="116" TabOrder="8" Top="118" VAlign="Middle" Width="363"></Static>
+		<Static Align="Right" Height="21" Id="txtToday_year" Left="152" TabOrder="9" Top="205" VAlign="Middle" Width="36"></Static>
+		<Static Height="21" Id="txtToday_month" Left="223" TabOrder="10" Top="204" VAlign="Middle" Width="20"></Static>
+		<Static Height="21" Id="txtToday_day" Left="279" TabOrder="11" Top="204" VAlign="Middle" Width="20"></Static>
+	</Form>
+	<Script><![CDATA[
+function frmBaseInfo_onloadComplete() {
+
+	var strToday = today();	
+	var strRegDate = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "WRT_DT");
+	strRegDate = mid(strRegDate,0,4) + "/" + mid(strRegDate,4,2) + "/" + mid(strRegDate,6,2);
+	var strMoney = NumFormat(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REA_CAP"));
+	
+	this.txtCompName.text 	= RegRePublishMgrP.tbMain.tpReper.Edit0.Text;
+	this.txtCompNum.text 	= RegRePublishMgrP.tbMain.tpReper.Edit2.Text;
+	this.txtCompCeo.text	= RegRePublishMgrP.tbMain.tpReper.Edit1.Text;	
+
+	var sText = "";
+	if( !fnEmpty(dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM") ) ) {
+		sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "COM_NUM");
+		sText = mid(sText, 0, 6) + "-" + mid(sText, 6, 7);
+	}
+	else {
+		sText = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "REP_SSN1");
+		sText = "19" + mid(sText, 0, 2) + "." + mid(sText, 2, 2) + "." + mid(sText, 4, 2);
+	}
+	this.txtCompJumin.text = sText;
+			
+	this.txtCompRegDate.text = strRegDate;
+	this.txtCompMoney.text = strMoney + " 천원";
+	this.txtCompAddr.text = dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "ADDR_ADDR")
+			+ " " + dsPT_R_COMPANY_MASTER.GetColumn(dsPT_R_COMPANY_MASTER.row, "ADDR_DETAIL_ADDR");
+	this.txtToday_year.text = mid(strToday,0,4);
+	this.txtToday_month.text = mid(strToday,4,2);
+	this.txtToday_day.text = mid(strToday,6,2);
+}]]></Script>
+</Window>

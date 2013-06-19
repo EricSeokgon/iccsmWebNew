@@ -1,0 +1,22 @@
+
+create table PT_MODIFY_REQ(
+    SEQ VARCHAR2(6) NOT NULL , /* */
+    RECV_NAME VARCHAR2(20)  , /* */
+    RECV_PART_SIDO VARCHAR2(20)  , /* */
+    RECV_PART_SIGUNGU VARCHAR2(30)  , /* */
+    RECV_POS VARCHAR2(20)  , /* */
+    CONSULT_NAME VARCHAR2(20)  , /* */
+    CONSULT_PART_SIDO VARCHAR2(20)  , /* */
+    CONSULT_PART_SIGUNGU VARCHAR2(30)  , /* */
+    CONSULT_POS VARCHAR2(20)  , /* */
+    RECV_DT VARCHAR2(8)  , /* */
+    RECV_METHOD VARCHAR2(30)  , /* */
+    DEMAND_CONTENTS VARCHAR2(500)  , /* */
+    REMARK VARCHAR2(256)  , /* */
+    PROC_OUT VARCHAR2(20)  , /* */
+    PROC_DT VARCHAR2(8)  , /* */
+    PROC_TIME VARCHAR2(6)  , /* */
+    RECV_AREA VARCHAR2(4)  , /* */
+    CONSULT_AREA VARCHAR2(4)  , /* */
+    PRIMARY KEY(SEQ)
+   );

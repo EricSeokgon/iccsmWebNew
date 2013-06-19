@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConnectGroup Bkalign="center" BkColor="#c6dce1" Bkimage="logo_main" Bkvalign="middle" Border="false" device="Win32&#32;(800x600)" FixedMenu="true" Font="Default,0" height="600" HideFrame="true" OnBeforeExit="Common_Exit" ReSize="true" SessionURL="main::Login.xml" Statusbar="true" Title="NET" titlebar="true" TraceMode="append" UseDefaultMenu="false" UseUpdateMenu="true" version="1.0" width="800" work_height="543" work_width="800">
+	<container Version="1000">
+		<Component Height="21" Id="Spin" Image="10" Name="cySpin" Title="Spin" Version="1000" Width="121"/>
+		<Component Height="21" Id="MaskEdit" Image="19" Name="cyMaskedit" Title="MaskEdit" Version="1000" Width="121"/>
+		<Component Height="21" Id="Button" Image="2" Name="cyButton" Title="Button" Version="1000" Width="104"/>
+		<Component Height="13" Id="Static" Image="8" Name="cyStatic" Title="Static" Version="1000" Width="40"/>
+		<Component Height="21" Id="Edit" Image="3" Name="cyEdit" Title="Edit" Version="1000" Width="121"/>
+		<Component Height="21" Id="Checkbox" Image="4" Name="cyCheckBox" Title="Check&#32;Box" Version="1000" Width="97"/>
+		<Component Height="24" Id="FileDialog" Image="18" Name="cyFileDialog" Title="File&#32;Dialog" Version="1000" Width="24"/>
+		<Component Height="24" Id="File" Image="25" Name="cyFile" Title="File" Version="1000" Width="24"/>
+		<Component Height="97" Id="List" Image="6" Name="cyListBox" Title="List" Version="1000" Width="145"/>
+		<Component Height="21" Id="Combo" Image="5" Name="cyComboEx" Title="ComboBox" Version="1000" Width="145"/>
+		<Component Height="21" Id="Radio" Image="7" Name="cyRadio" Title="Radio" Version="1000" Width="113"/>
+		<Component Height="72" Id="TextArea" Image="16" Name="cyTextArea" Title="Text&#32;Area" Version="1000" Width="185"/>
+		<Component Height="17" Id="Progressbar" Image="31" Name="cyProgressbar" Title="Progressbar" Version="1000" Width="150"/>
+		<Component Height="97" Id="TreeView" Image="11" Module="CyTreeView" Name="cyTreeView" Title="Tree&#32;View" Version="1000" Width="121"/>
+		<Component Height="120" Id="Grid" Image="1" Module="CyGrid" Name="cyGrid" Title="Grid" Version="1000" Width="320"/>
+		<Component Height="105" Id="Image" Image="9" Name="cyImage" Title="Image" Version="1000" Width="105"/>
+		<Component Height="21" Id="Calendar" Image="13" Module="CyCalendarEx" Name="cyCalendarEx" Title="Calendar" Version="1000" Width="145"/>
+		<Component Height="193" Id="Div" Image="20" Name="cyDiv" Title="Division" Version="1000" Width="289"/>
+		<Component Id="PopupDiv" Image="54" Name="CyPopupDiv" Title="Popup&#32;Div" Version="1000"/>
+		<Component Height="193" Id="Tab" Image="12" Name="cyTab" Title="Tab" Version="1000" Width="289"/>
+		<Component Height="260" Id="WebBrowser" Image="24" Module="CyWebBrowser" Name="cyWebBrowser" Title="WebBrowser" Version="1000" Width="364"/>
+		<Component Height="24" Id="MenuBar" Image="32" Module="CyMenuBar" Name="cyMenuBar" Title="MenuBar" Version="1000" Width="192"/>
+		<Component Height="50" Id="Split" Image="55" Module="CySplit" Name="cySplit" Title="Split" Version="1000" Width="8"/>
+		<Component Height="8" Id="SplitJoint" Image="56" Module="CySplitU" Name="cySplitJoint" Title="SplitJoint" Version="1000" Width="8"/>
+		<Component Height="100" Id="CyHttpFile" Image="23" Module="CyHttpFile" Name="CyHttpFile" Title="CyHttpFile" Version="1000" Width="100"/>
+	</container>
+	<protocols version="1000">
+		<protocol id="file" name="cyHttpAdp" version="1000"/>
+		<protocol Compress="False" CompressMethod="ZLIB" id="http" name="cyHttpAdp" TimeOut="600" Version="1000" XmlFormat="True"/>
+		<protocol id="https" name="cyHttpAdp" version="1000"/>
+	</protocols>
+	<AppGroups>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="main" Title="정보처리민원시스템" Type="Form" Version="1.0">
+			<script Baseurl="./main/" Ext="xml" ScriptUrl="./main/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="am" Title="행정처분" Type="form" Version="1000">
+			<Script Baseurl="./am/" ScriptUrl="./am/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="cm" Title="공사업&#32;등록관리" Type="form" Version="1000">
+			<Script Baseurl="./cm/" ScriptUrl="./cm/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="ub" Title="사용전검사" Type="form" Version="1000">
+			<Script Baseurl="./ub/" ScriptUrl="./ub/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="st" Title="정보통신통계" Type="form" Version="1000">
+			<Script Baseurl="./st/" ScriptUrl="./st/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="sys_m" Type="form" Version="1000">
+			<Script Baseurl="./sys_m/" ScriptUrl="./sys_m/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="bas" Title="기타" Type="form" Version="1000">
+			<Script Baseurl="./bas/" ScriptUrl="./bas/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="UserLib" Type="js" Version="1000">
+			<Script Baseurl="./UserLib/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="base" Type="form" Version="1000">
+			<Script Baseurl="./base/" ScriptUrl="./base/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="static" Type="form" Version="1000">
+			<Script Baseurl="./statics/" ScriptUrl="./statics/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="c_res" Type="form" Version="1000">
+			<Script Baseurl="./c_res/" ScriptUrl="./c_res/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="cpv" Type="form" Version="1000">
+			<Script Baseurl="./cpv/" ScriptUrl="./cpv/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="data" Type="form" Version="1000">
+			<Script Baseurl="./data/" ScriptUrl="./data/"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="amr" Title="행정처분" Type="form" Version="1000">
+			<Script Baseurl="./amr/" ScriptUrl="./amr/"/>
+		</AppGroup>
+		<DataGroup Baseurl="http://localhost/iccsmWebNew/" CacheLevel="none" CodePage="utf-8" Language="0" Prefix="ICCS" Streamver="4000" TrMethod="normal" Type="JSP" Version="1000"/>
+	</AppGroups>
+	<MDIInfo>
+		<forms Height="320" Left="20" OpenStyle="Normal" Top="0">
+			<form Height="600" IconID="def_icon" Id="MDIForm01" initURL="DefApp::person_list" OpenStyle="Normal" Width="800"/>
+		</forms>
+		<Shortcuts align="Vertical" color="black" font="Arial,8" LeftMargin="40" TopMargin="30"></Shortcuts>
+	</MDIInfo>
+	<DockBars Fixed="true">
+		<DockBar AddMenu="false" align="left" Border="false" bottom="650" Fixed="false" Id="MainMenu" InitURL="main::MainMenu.xml" name="MiplatformX" right="190" scroll="false" text="MainMenu" Visible="true"/>
+	</DockBars>
+	<Script><![CDATA[ var Pg_ID; 
+ var title;
+function gfn_newWindow(frmPG, frmNM, frmURL, frmtype) 
+{	 
+	 global.MainMenu.Visible = true;
+		
+	 if (trim(length(frmURL)) < 1) 
+	 {   
+		 return;
+	 } 
+ /*
+	var objWin = AllWindows(frmPG);  
+	var strArg = "";  
+	g_exurl = "";
+
+	if (objWin[0] == null) 
+	{   
+		if(IndexOf(frmURL,"cmd") > 0){
+			g_exurl = frmURL;
+			NewWindow(frmPG, "bas::EXPLORER.xml", strArg, "", "", "OpenStyle=MAX", -1, -1);
+		}else{
+			
+			NewWindow(frmPG, frmURL, strArg, "", "", "OpenStyle=MAX", -1, -1);
+		}
+		Pg_ID = frmPG;
+		
+		//왼쪽 메뉴 가지고 오기
+		http.sync = true;
+		var arg = "scUSER_ID=" +g_User_ID+ " scCAPITAL=" + g_Capital +" scLIFT="+frmNM;
+		Transaction("Lift", "ICCS::left/LeftAction.do?cmd=LeftMgr", "", "gds_menulist=gds_menulist", arg, "fnCallback");
+	} 
+	else 
+	{
+		if (objWin[0].MDIStatus == "Min") 
+		{
+			objWin[0].MDIStatus = "Normal"; 
+		}
+		g_activeFrm = objWin[0];
+		objWin[0].SetFocus();
+	}
+*/
+	var objWin = AllWindows(frmPG);
+	var strArg = "titles="+frmtype; 
+	g_exurl = "";
+	
+	for (var nLoop = 0; nLoop < global.AllWindows.count; nLoop++)
+	{
+		if (global.AllWindows[nLoop].Id == "MainMenu")
+			continue;
+		//else if (global.AllWindows[nLoop].Id == "main::Main_Sido" 
+		//	|| global.AllWindows[nLoop].Id == "main::Main_Sigungu")
+		//{
+		//	continue;
+		//}
+		else
+			global.AllWindows[nLoop].Close();
+	}
+
+	if(IndexOf(frmURL,"cmd") > 0)
+	{
+		g_exurl = frmURL;
+		NewWindow(frmPG, "../bas/Explorer.xml", strArg, "", "", "OpenStyle=MAX", -1, -1);
+	}
+	else
+	{
+		NewWindow(frmPG, frmURL, strArg, "", "", "OpenStyle=MAX", -1, -1);
+	}
+	Pg_ID = frmPG;
+	
+	//왼쪽 메뉴 가지고 오기
+	http.sync = true;
+	var arg = "scUSER_ID=" +g_User_ID+ " scCAPITAL=" + g_Capital +" scLIFT="+frmNM;
+	Transaction("Lift", "ICCS::left/LeftAction.do?cmd=LeftMgr", "", "gds_menulist=gds_menulist", arg, "fnCallback");
+}
+  
+function gfn_setCon(conFg)  
+{
+	g_conType = conFg;
+	
+	if (length(g_activeFrm) > 1) 
+	{
+		object(g_activeFrm).fn_query();
+	}
+}
+
+function gfn_setMenu(mnuType) 
+{
+	if (mnuType == "TREE") 
+	{
+		global.MainMenu.div_treemenu.Visible = true;
+		global.MainMenu.div_btnmenu.Visible = false;
+	} 
+	else 
+	{
+		if (mnuType == "BTN") 
+		{
+			global.MainMenu.div_treemenu.Visible = false;
+			global.MainMenu.div_btnmenu.Visible = true;
+		}
+	}
+}
+
+function fnCallBack(svcid,errCode,errMsg)
+{
+	http.sync = false;
+	
+	g_Titel = gds_menulist.GetColumn(0,"frmtxt");
+	fn_subHide();  
+	fn_subShow();
+	
+	var arg = "scUSER_ID="+g_User_ID+"&scPASSWD="+g_passwd;
+	//global.MainMenu.Microsoft0.Navigate("http://99.1.5.83/login/LoginAction.do?cmd=LoginLife&"+arg,"","","",arg);
+	global.MainMenu.Microsoft0.Navigate( global.g_ext_iccs_url + "login/LoginAction.do?cmd=LoginLife&"+arg,"","","","");
+
+}
+
+function fn_subHide()
+{  
+	var i,obj;
+	for(i=1;i< 10;i++){
+		obj = object("global.MainMenu.sub_img"+i);
+		obj.text = "";
+		obj.Visible = true;
+		obj.ImageID = "left_menu2_"+i;
+	}	
+}
+
+function fn_subShow()
+{	 
+	for(i=1; i < gds_menulist.RowCount() ; i++){
+		obj = object("global.MainMenu.sub_img"+(i));
+		var sub_txt = gds_menulist.GetColumn(i,"frmtxt");
+		obj.text = space(3) +sub_txt;
+		obj.Visible = true;
+		obj.userdata = gds_menulist.GetColumn(i,"frmurl");
+		if(Pg_ID == gds_menulist.GetColumn(i,"frmid")){
+			obj.ImageID = "left_menu2_"+(i)+"_on";
+			obj.Color = "#FFFFFF";		
+			global.MainMenu.Image2.text = g_Titel;
+			title = sub_txt;
+		}else{
+			obj.ImageID = "left_menu2_"+(i);
+			obj.Color = "#1c3c5a";
+		}
+	}
+	
+	for(j=gds_menulist.RowCount(); j < 9 ; j++)
+	{
+		obj = object("global.MainMenu.sub_img"+(j));
+		obj.ImageID = "left_menu2_"+(j);
+			obj.Color = "#1c3c5a";
+	}
+}
+
+function Common_Exit() 
+{
+	//var ret = confirm("프로그램을 종료하시겠습니까?");
+	
+	//if(ret) Exit();	
+	//else return false;
+	Exit();	
+}
+
+function gfnCreateNewWindow(strFormID, strURL, sArgs)
+{
+/*
+	if (trim(length(strURL)) < 1) 
+	{
+		return;
+	}
+	 
+	var objWin = AllWindows(strFormID);
+	
+	if (objWin[0] == null) 
+	{
+		NewWindow(strFormID, strURL, sArgs, "", "", "OpenStyle=MAX", -1, -1);
+	} 
+	else 
+	{
+		if (objWin[0].MDIStatus == "Min") 
+			objWin[0].MDIStatus = "Normal";
+	
+		fn_subHide();
+		fn_subShow();
+		
+		gv_ActiveForm = objWin[0];
+		objWin[0].SetFocus();
+	}
+*/
+	
+	
+	if (trim(length(strURL)) < 1) 
+	{
+		return;
+	}
+	 
+	var objWin = AllWindows(strFormID);
+
+	for (var nLoop = 0; nLoop < global.AllWindows.count; nLoop++)
+	{
+		if (global.AllWindows[nLoop].Id == "MainMenu")
+			continue;
+		//else if (global.AllWindows[nLoop].Id == "main::Main_Sido" 
+		//	|| global.AllWindows[nLoop].Id == "main::Main_Sigungu")
+		//{
+		//	continue;
+		//}
+		else
+			global.AllWindows[nLoop].Close();
+	}
+		
+	NewWindow(strFormID, strURL, sArgs, "", "", "OpenStyle=MAX", -1, -1);
+}
+
+
+
+]]></Script>
+	<DataObjects></DataObjects>
+	<ServiceObjects></ServiceObjects>
+	<Datasets>
+		<Dataset DataSetType="Dataset" Id="ds_topmenu" OnLoadCompleted="ds_topmenu_OnLoadCompleted">
+			<Contents>
+				<colinfo id="TitelName" size="256" type="STRING"/>
+				<colinfo id="TitelUrl" size="256" type="STRING"/>
+				<colinfo id="level" size="256" type="STRING"/>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="ds_leftmenu">
+			<Contents>
+				<colinfo id="level" size="256" type="STRING"/>
+				<colinfo id="NAME" size="256" type="STRING"/>
+				<colinfo id="URL" size="256" type="STRING"/>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="ds_login"></Dataset>
+		<Dataset DataSetType="Dataset" Id="gds_menulist">
+			<Contents>
+				<colinfo id="frmid" size="256" summ="default" type="STRING"/>
+				<colinfo id="frmtxt" size="256" summ="default" type="STRING"/>
+				<colinfo id="frmurl" size="256" summ="default" type="STRING"/>
+				<colinfo id="lvl" size="256" summ="default" type="STRING"/>
+				<colinfo id="image" size="256" summ="default" type="STRING"/>
+				<colinfo id="type" size="256" summ="default" type="STRING"/>
+				<record>
+					<frmid></frmid>
+					<frmtxt>Menu&#32;List</frmtxt>
+					<frmurl>Menu&#32;List</frmurl>
+					<image>0</image>
+					<lvl>0</lvl>
+					<type></type>
+				</record>
+				<record>
+					<frmid>entry</frmid>
+					<frmtxt>Person&#32;Entry</frmtxt>
+					<frmurl>DefApp::person_entry.xml</frmurl>
+					<image>1</image>
+					<lvl>1</lvl>
+					<type></type>
+				</record>
+				<record>
+					<frmid>list</frmid>
+					<frmtxt>Person&#32;List</frmtxt>
+					<frmurl>DefApp::person_list.xml</frmurl>
+					<image>1</image>
+					<lvl>1</lvl>
+					<type></type>
+				</record>
+				<record>
+					<frmid>id</frmid>
+					<frmtxt>aaaaaa</frmtxt>
+					<frmurl>DefApp::ComCodeMgr.xml</frmurl>
+					<image>1</image>
+					<lvl>1</lvl>
+					<type></type>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="ds_sess"></Dataset>
+		<Dataset DataSetType="Dataset" Id="dsError">
+			<Contents>
+				<colinfo id="FLD_NAME" size="20" summ="default" type="STRING"/>
+				<colinfo id="TEXT" size="256" summ="default" type="STRING"/>
+			</Contents>
+		</Dataset>
+	</Datasets>
+	<ActiveX Version="1000">
+		<Component Height="700" Id="Microsoft" Image="24" Progid="Shell.Explorer" Title="Microsoft" Version="1000" Width="1000"/>
+		<Component Id="EXOZViewer50" Image="23" Progid="EXOZVIEWER35.EXOZViewer35Ctrl.1" Title="EXOZViewer50" Version="1000"/>
+		<Component Height="30" Id="GPKIClient" Image="23" Progid="GPKIActiveX.GPKIClient" Title="GPKIClient" Version="1000" Width="30"/>
+		<Component Id="sscControl" Image="23" Progid="sscControl.myControl" Title="sscControl" Version="1000"/>
+		<Component Id="ZTransferX" Image="23" Progid="ZTRANSFERX.ZTransferXCtrl.1" Title="ZTransferX" Version="1000"/>
+	</ActiveX>
+	<Resource Ext="res" Url="./images/iccsm.res" Version="1000"/>
+	<GlobalStyle>
+		<style BorderColor="#c6dce1" FixedFont="굴림체,9" Font="굴림,9" ID="body_bg"/>
+		<style FixedFont="굴림체,6" Font="돋움,6" ID="button_lift01" TextColor="#3d5971"/>
+		<style Font="돋움,9" ID="button_style_02" TextColor="black"/>
+		<style FixedFont="굴림체,9" Font="돋움,9,Bold" ID="button_style_03" TextColor="#3f3d3d"/>
+		<style FixedFont="굴림체,9" Font="돋움,9" ID="button_style01" TextColor="white"/>
+		<style FixedFont="굴림체,9" Font="돋움,9,Bold" ID="grid_title" TextColor="white"/>
+		<style BorderColor="#adadad" ID="list_edit"/>
+		<style Font="돋움,9" ID="list_subtitle" TextColor="#636363"/>
+		<style Font="돋움,10,Bold" ID="list_title" TextColor="#5d5d5d"/>
+		<style BorderColor="#9a9a9a" ID="top_edit"/>
+		<style Font="돋움,9,Bold" ID="top_title" TextColor="white"/>
+	</GlobalStyle>
+	<UserColor User0="#e1e1e1" User1="#b3b3b3" User10="#5a6984" User11="#f0f0f0" User12="#dae6fc" User2="#f9f9f9" User3="#9a9a9a" User4="#c8c8c8" User5="white" User6="#adadad" User7="#bdbdbd" User8="#efefef" User9="#d9d9d9"/>
+	<Variables>
+		<Var Id="g_activeFrm" Type="Global"/>
+		<Var Id="g_Capital" Type="Global"/>
+		<Var Id="g_conType" Type="Global" Value="jspsvc"/>
+		<Var Id="g_ext_iccs_url" Type="Global" Value="http://localhost/iccsmWebNew/"/>
+		<Var Id="g_ext_oz_url" Type="Global" Value="http://localhost/iccsOz/"/>
+		<Var Id="g_exurl" Type="Global"/>
+		<Var Id="g_Name" Type="Global"/>
+		<Var Id="g_oz_url" Type="Global"/>
+		<Var Id="g_PART" Type="Global"/>
+		<Var Id="g_PARTPLUS" Type="Global"/>
+		<Var Id="g_passwd" Type="Global"/>
+		<Var Id="g_Pg_ID" Type="Global"/>
+		<Var Id="g_POS" Type="Global"/>
+		<Var Id="g_RECV_DIV" Type="Global"/>
+		<Var Id="g_Sd_cd" Type="Global"/>
+		<Var Id="g_Sgg_cd" Type="Global"/>
+		<Var Id="g_SggN_cd" Type="Global"/>
+		<Var Id="g_SIDO_FULL_NM" Type="Global"/>
+		<Var Id="g_SIDO_NM" Type="Global"/>
+		<Var Id="g_SIGUNGU_NM" Type="Global"/>
+		<Var Id="g_TEL" Type="Global"/>
+		<Var Id="g_Titel" Type="Global"/>
+		<Var Id="g_User_ID" Type="Global"/>
+		<Var Id="gv_INQUIRY" Type="Global" Value="INQUIRY"/>
+		<Var Id="gv_INSERT" Type="Global" Value="INSERT"/>
+		<Var Id="gv_MODIFY" Type="Global" Value="MODIFY"/>
+		<Var Id="gv_WorkFlag" Type="Global"/>
+	</Variables>
+	<Menu>
+		<Item Enable="true" Id="997" Separator="false" Text="메뉴항목을&#32;구성중입니다."></Item>
+	</Menu>
+	<EXTAPIS>
+		<EXTAPI Name="ExtCommonApi" Version="1000"/>
+	</EXTAPIS>
+</ConnectGroup>

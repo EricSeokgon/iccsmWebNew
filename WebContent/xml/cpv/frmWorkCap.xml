@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="beige" Height="294" Id="frmWorkCap" Left="8" OnLoadCompleted="frmWorkCap_onloadComplete" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="494" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsCPV_WORK_CAP">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ASSE_AOM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_START_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_END_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="T_TERM_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="294" Id="Image0" ImageID="cpv_workcap" Left="-2" TabOrder="1" Top="-3" Transparent="TRUE" Width="494"></Image>
+		<Static Font="굴림,10" Height="188" Id="Static0" Left="18" TabOrder="2" Top="70" Width="226"></Static>
+		<Static Font="굴림,10" Height="188" Id="Static1" Left="250" TabOrder="3" Top="70" Width="226"></Static>
+	</Form>
+	<Script><![CDATA[function frmWorkCap_onloadComplete() {
+	
+	var line1="", line2="";
+	var asse_dt="", asse_aom="", appl_term_start="", appl_term_end="";
+	var checked = "";	
+	
+	var rowcnt = dsPT_R_WORK_CAPABILITY.rowcount;
+	var colcnt = dsPT_R_WORK_CAPABILITY.colcount;
+	
+	var start_row = toInteger(replace(RegRePublishMgrP.cbIndex.getSelText(),"행",""));
+	
+	var real_row = 1 + (start_row-1) * 2;	
+	
+	var total_rows = 0;
+	for(var i=0;i<rowcnt;i++) {		
+		if( dsPT_R_WORK_CAPABILITY.GetColumn(i, "CHECKER") == "1" )
+			total_rows++;
+	}
+	
+	var use_static1 = false;
+	var first0_check = true;
+	var first1_check = true;	
+	
+	if(total_rows > 12) {	
+		alert("한 면에 12개의 데이터(좌,우 6행씩)만 출력 할 수 있습니다.\n\n확인 후 출력 바랍니다.");
+		close();
+	} else {
+		for(var i=0;i<rowcnt;i++) {		
+			checked = dsPT_R_WORK_CAPABILITY.GetColumn(i, "CHECKER");
+			
+			if(real_row >= 13) use_static1 = true;
+			
+			if( !use_static1) {
+				if(first0_check) {
+					for(var k=0;k<real_row-1;k++) {				
+						this.Static0.text += "\n";
+					}
+					first0_check = false;
+				}
+			} else {
+				if( first1_check) {
+					for(var k=0;k<real_row-15;k++) {				
+						this.Static1.text += "\n";
+					}
+					first1_check = false;
+				}
+			}		
+			
+			if(checked == "1") {
+				asse_dt 	= dsPT_R_WORK_CAPABILITY.GetColumn(i,"ASSE_DT");
+				asse_aom 	= dsPT_R_WORK_CAPABILITY.GetColumn(i,"ASSE_AOM");
+				appl_term_start = dsPT_R_WORK_CAPABILITY.GetColumn(i, "APPL_TERM_START_DT");
+				appl_term_end 	= dsPT_R_WORK_CAPABILITY.GetColumn(i, "APPL_TERM_END_DT");
+				
+				if(length(appl_term_start) == 8) {
+					appl_term_start = mid(appl_term_start,2,2) + "/" + mid(appl_term_start,4,2) + "/" + mid(appl_term_start,6,2);
+				}
+				
+				if(length(appl_term_end) == 8) {
+					appl_term_end 	= mid(appl_term_end,2,2) + "/" + mid(appl_term_end,4,2) + "/" + mid(appl_term_end,6,2);
+				}
+				
+				if(length(asse_dt) == 4) {
+				line1 = asse_dt + "/";
+				line2 = "00/00";
+				} else {
+					line1 = mid(asse_dt,0,4) + "/";
+					line2 = mid(asse_dt,4,2) + "/" + mid(asse_dt,6,2);
+				}
+				
+				line1 += "\t" + NumFormat(asse_aom);
+				line1 += "\t" + appl_term_start;
+				line1 += "\n" + line2 + "\t\t\t    " + appl_term_end;
+				
+				if( !use_static1) {
+					this.Static0.text += line1 + "\n";
+				} else {			
+					use_static1 = true;
+					this.Static1.text += line1 + "\n";
+					
+				}
+				
+				real_row += 2;
+			}
+			
+		}
+	}
+}
+	]]></Script>
+</Window>

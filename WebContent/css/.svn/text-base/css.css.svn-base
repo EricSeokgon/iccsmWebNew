@@ -1,0 +1,42 @@
+/* CSS Document */
+a:link {text-decoration:none; font-size:12px;color:#666666;}
+a:visited {text-decoration:none;font-size:12px;color:#666666;}
+a:active {text-decoration:none;} / a:active {text-decoration:underline;} 
+a:hover {text-decoration:none;font-size:12px;color:#666666;text-decoration: underline; }
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+table, td {font-size:12px; color:#666666; line-height:17px;}
+
+.textnavi { font-family:dotum; font-size:11px;color:#9b9b9b;}
+
+.text01 { font-family:dotum; font-size:9pt;color:#666666;line-height:17px;}
+.text02 { font-family:dotum; font-size:9pt;color:#fa6928;}
+.text03 { font-family:dotum; font-size:9pt;color:#fa6928;font-weight:bold;}
+.text04 { font-family:dotum; font-size:11px;color:#666666;}
+
+.bbs00 { font-family:dotum; font-size:12px;color:#666666;line-height:17px;padding-left:10px;}
+.bbs01 { font-family:dotum; font-size:11px;color:#363636;line-height:17px;font-weight:bold;}
+.bbs02 { font-family:dotum; font-size:12px;color:#666666;line-height:17px;}
+.bbs03 { font-family:dotum; font-size:11px;color:#666666;line-height:17px;}
+.bbs04{ font-family:dotum; font-size:11px;color:#a2bcd1;font-weight:bold;}
+.bbs05{ font-family:verdana; font-size:11px;color:#666666;font-weight:bold;letter-spacing:3px;}
+.bbs06 { font-family:dotum; font-size:12px;color:#363636;line-height:17px;font-weight:bold;}
+
+select   {	background-color: #fefcf6; behavior: url('../com/css/selectbox.htc'); 	}
+
+.evtext01{ font-family:dotum; font-size:11px;color:#346ba1;font-weight:bold;}
+.evtext02{ font-family:dotum; font-size:11px;color:#FFFFFF;font-weight:bold;}
+.evtext03{ font-family:dotum; font-size:11px;color:#8fb6dc;}
+.evtext04{ font-family:dotum; font-size:12px;color:#666666;padding:0 0 0 10px}
+.evtext05{ font-family:dotum; font-size:11px;color:#8fb6dc;padding:0 10px 0 0 ;}
+.evtext06{ font-family:dotum; font-size:11px;color:#346ba1;padding:0 10px 0 0 ;font-weight:bold;}
+.evtext07{ font-family:dotum; font-size:11px;color:#346ba1;padding:0 0 0 3px}
+
+.input_bbs{ font-family: dotum,Arial,'Arial Black';font-size: 12px;color: #444444;Border:1x SOLID #D7DCDF;background: #f9f9f9;height: 21px;margin: 0px;}
+.search {font-family: dotum,Arial,'Arial Black';font-size: 12px;color: #444444;Border:1 #FFFFFF;background: #ffffff;height: 15px;margin: 0px;}

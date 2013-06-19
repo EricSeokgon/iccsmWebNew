@@ -1,0 +1,134 @@
+
+.tnum1 {
+	color: #999999;
+	text-decoration: none;
+	font-family: Tahoma, Verdana;
+	font-size: 10px;
+}
+.tnum2 {
+	color: #555555;
+	text-decoration: none;
+	font-family: Tahoma, Verdana;
+	font-size: 10px;
+}
+.t_bold {
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	letter-spacing: -1px;
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+}
+.left_ts1 {
+	color: #777777;
+	text-decoration: none;
+	font-family: Tahoma, Dotum, Gulim ;
+	font-size: 12px;
+}
+a.left_ts:link {
+    font-weight: bold;
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 11px;
+	color: #555555;
+	text-decoration: none;
+}
+a.left_ts:visited {
+    font-weight: bold;
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 11px;
+	color: #555555;
+	text-decoration: none;
+}
+a.left_ts:hover {
+    font-weight: bold;
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 11px;
+	color: #999999;
+	text-decoration: underline;
+}
+a.left_ts:active {
+    font-weight: bold;
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 11px;
+	color: #555555;
+	text-decoration: none;
+}
+a.num1:link {
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 11px;
+	color: #FF3300;
+	text-decoration: none;
+}
+a.num1:visited {
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 11px;
+	color: #FF3300;
+	text-decoration: none;
+}
+a.num1:hover {
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 11px;
+	color: #FF3300;
+	text-decoration: underline;
+}
+a.num1:active {
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 11px;
+	color: #FF3300;
+	text-decoration: none;
+}
+/*
+카테고리 링크
+*/
+a.left_cate:link {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a.left_cate:visited {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a.left_cate:hover {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a.left_cate:active {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+/*
+카테고리 링크
+*/
+a.b_club:link {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a.b_club:visited {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a.b_club:hover {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #0072bc;
+	text-decoration: underline;
+}
+a.b_club:active {
+	font-family: Dotum, Gulim, Tahoma;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+

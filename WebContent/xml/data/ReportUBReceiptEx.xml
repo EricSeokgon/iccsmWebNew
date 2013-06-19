@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="632" Id="form" Left="8" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="Excel&#32;Import&#32;Sample" Top="8" Ver="1.0" Width="848" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_USEBEFORE">
+				<Contents>
+					<colinfo id="SEQ" size="5" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" type="STRING"/>
+					<colinfo id="APPLPER_NM" size="256" type="STRING"/>
+					<colinfo id="PROC_STE" size="256" type="STRING"/>
+					<colinfo id="AREA" size="256" type="STRING"/>
+					<colinfo id="INSP_FEE" size="256" type="STRING"/>
+					<colinfo id="INSP_DT" size="256" type="STRING"/>
+					<colinfo id="NAPPL_YN_S" size="256" type="STRING"/>
+					<colinfo id="DELI_DT" size="256" type="STRING"/>
+					<colinfo id="NAPPL_CAUSE" size="256" type="STRING"/>
+					<colinfo id="NAPPL_YN" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIDO">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SIGUNGU">
+				<Contents>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="16" TabOrder="1" Top="85" Width="968"></Image>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="16" TabOrder="2" Top="152" Width="817"></Image>
+		<Image Height="56" Id="Image6" ImageID="bg_default" Left="24" TabOrder="3" TabStop="FALSE" Top="96" Width="784"></Image>
+		<Edit Border="Flat" BorderColor="#9ea987" Height="20" Id="ed0" Left="112" TabOrder="4" Top="120" Width="379"></Edit>
+		<Button ButtonStyle="TRUE" Color="#133f7e" Font="굴림,9,Bold" Height="21" Id="btnExcel" ImageID="button_style1_90" Left="496" OnClick="fnExcel_Click" Style="button_style01" TabOrder="5" TabStop="FALSE" Text="파일찾기" Top="120" Width="90"></Button>
+		<FileDialog Bottom="144" Filter="Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*" Height="24" Id="FileDialog0" Left="592" Right="616" TabOrder="7" Top="120" Width="24"></FileDialog>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="16" TabOrder="6" Text="Div0" Top="24" Url="base::frmButtonBarChg.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_PT_UB_USEBEFORE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="520" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="360" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" OnHeadClick="fnGridHead_Click" Right="808" RowHeight="20" SelColor="white" ShadowColor="#999999" TabOrder="7" TabStop="true" Top="160" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="30"/>
+						<col width="60"/>
+						<col width="95"/>
+						<col width="72"/>
+						<col width="87"/>
+						<col width="82"/>
+						<col width="74"/>
+						<col width="82"/>
+						<col width="71"/>
+						<col width="126"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" rowspan="2" text="번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" rowspan="2" text="접수일자"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" rowspan="2" text="발주자"/>
+						<cell col="-1" display="text" text="시공업체">
+							<cell col="0" color="white" display="text" text="구&#32;분"/>
+							<cell col="0" display="text" row="1" text="(신규/재검)"/>
+						</cell>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="구&#32;분"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="건물규모"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" rowspan="2" text="수수료"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" rowspan="2" text="처리일자"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" text="처리결과"/>
+						<cell bkcolor="#787878" col="8" color="white" display="text" rowspan="2" text="필증교부일"/>
+						<cell bkcolor="#787878" col="9" color="white" display="text" rowspan="2" text="부적합사유"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" row="1" text="(신규/재검)"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" row="1" text="(연면적㎡)"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" row="1" text="(적·부)"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="SEQ" display="text"/>
+						<cell col="1" colid="RECV_DT" display="text"/>
+						<cell col="2" colid="APPLPER_NM" display="text"/>
+						<cell col="3" colid="PROC_STE" display="text"/>
+						<cell col="4" colid="AREA" display="number" Mask="###,###,###.##"/>
+						<cell col="5" colid="INSP_FEE" display="number" Mask="###,###,###"/>
+						<cell col="6" colid="INSP_DT" display="date"/>
+						<cell col="7" colid="NAPPL_YN_S" display="text"/>
+						<cell col="8" colid="DELI_DT" display="text"/>
+						<cell col="9" colid="NAPPL_CAUSE" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[#include "UserLib::CommonJs.js"
+
+var scROWNUM;
+var scRECV_NUM;
+var	_bDialog = false;
+//var base_code = "WRT_ID="+global.g_User_ID;
+var base_code = "WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+var i;
+//+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "사용전검사처리일괄입력";
+}
+        
+
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, false);
+		divButtonBar.btnSave.enable=true;
+		//divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		//divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnList.enable = false;
+	}
+}
+
+function fnExcel_Click(obj,nX,nY)
+{
+
+	FileDialog0.Type = "OPEN";
+	FileDialog0.Filter = "Excel(.xls)|*.xls|Excel(.xlsx)|*.xlsx|All(*.*)|*.*|";
+
+	var result = FileDialog0.Open();
+	
+	if ( result )
+	{
+		ed0.Text= FileDialog0.FilePath + '\\' + FileDialog0.FileName;
+	}
+	
+	grdlist.Redraw = false;
+	ds_PT_UB_USEBEFORE.ClearData();
+	//ext_ExcelImportByIndex(ed0.Text, 0,"ds_PT_UB_USEBEFORE",1);
+	ext_ExcelImportByIndex(ed0.Text, 0,"ds_PT_UB_USEBEFORE",1,1,0,3); 
+	grdlist.Redraw = true;
+	//var cnt  = ds_PT_UB_USEBEFORE.GetColumn(0,"SEQ");
+	var cnt = ds_PT_UB_USEBEFORE.rowcount();
+    
+for(i=0; i<cnt; i++){
+  	var num  = ds_PT_UB_USEBEFORE.GetColumn(i,"SEQ");
+    var rev = global.g_Sgg_cd+'0'+num;
+  
+  ds_PT_UB_USEBEFORE.SetColumn(i,"SIDO_CODE",global.g_Sd_cd);	
+  ds_PT_UB_USEBEFORE.SetColumn(i,"SIGUNGU_CODE",global.g_Sgg_cd);
+  ds_PT_UB_USEBEFORE.SetColumn(i,"WRT_ID",global.g_User_ID);	
+
+  //ds_PT_UB_USEBEFORE.SetColumn(i,"ROWNUM",ds_PT_UB_USEBEFORE.GetColumn(i,"SEQ"));
+  //ds_PT_UB_USEBEFORE.SetColumn(i,"PROC_STE",3);
+  
+   //ds_PT_UB_USEBEFORE.SetColumn(i,"PROC_STE",ds_PT_UB_USEBEFORE.GetColumn(i,"PROC_STE"));
+  //ds_PT_UB_USEBEFORE.SetColumn(i,"CIV_RECV_NUM",rev);
+  //ds_PT_UB_USEBEFORE.SetColumn(i,"RECV_NUM",);
+  if(ds_PT_UB_USEBEFORE.GetColumn(i,"NAPPL_YN_S") == "적합"){
+     ds_PT_UB_USEBEFORE.SetColumn(i,"NAPPL_YN","1");
+  }
+  
+  if(ds_PT_UB_USEBEFORE.GetColumn(i,"NAPPL_YN_S") == "부적합"){
+     ds_PT_UB_USEBEFORE.SetColumn(i,"NAPPL_YN","2");
+  }
+  /*if(ds_PT_UB_USEBEFORE.GetColumn(i,"PROC_STE")=='신규'){
+    ds_PT_UB_USEBEFORE.SetColumn(i,"PROC_STE",3);
+   }*/
+   
+ }
+
+}    
+
+function form_OnLoadCompleted(obj)
+{
+}
+
+function fnExcel()
+{	
+	fnGridToExcel(grdlist, "사용전검사");
+
+}
+/*
+function fnTablesBinding()
+{
+	
+    var sArgs="";
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBReceiptMgrExCUD";
+	var sInDs = "";
+	var sOutDs = "ds_PT_UB_USEBEFORE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	alert('저장되었습니다.');
+}
+*/
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+	
+	if (svcid == "SAVE")
+	{
+		//fnTablesBinding();
+	}
+}
+
+
+function fnSave()
+{
+    //fnDCheck_Click();
+     
+	var sArgs = "workMODE=ALL "+base_code+" scRECV_NUM="+scRECV_NUM;
+	var sTid = "SAVE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBReceiptMgrExCUD";
+	//var sUrl = "ICCS::ub/UbAction.do?cmd=BeforeMgrCUD";
+	//var sInDs = "ds_PT_UB_USEBEFORE=ds_PT_UB_USEBEFORE:U ds_DETAIL_1=ds_DETAIL_1:U ds_DETAIL_2=ds_DETAIL_2:U ds_DETAIL_3=ds_DETAIL_3:U dsPT_R_DEFICIT=dsPT_R_DEFICIT:U";
+	var sInDs = "ds_PT_UB_USEBEFORE=ds_PT_UB_USEBEFORE:u";
+	var sOutDs = "ds_PT_UB_USEBEFORE=output";
+	var sCallBack = "fn_CallBack";
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	alert('저장되었습니다.');
+}
+
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	//else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+
+]]></Script>
+</Window>

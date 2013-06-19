@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class2 classname="Cy_TemplateSelect" template="Select" update="NO">
+	<header><![CDATA[]]></header>
+	<dataset id="input" io="INPUT" reserved="YES"></dataset>
+	<dataset id="output" io="OUTPUT" reserved="YES">
+		<column comment="COMMENT" id="CODE" type="STRING">커맨트</column>
+	</dataset>
+	<member_var>
+		<var id="Select_Sql" reserved="YES" type="Sql"><![CDATA[]]></var>
+		<var id="CODE" reserved="NO" type="String"><![CDATA[]]></var>
+		<var id="VALUE" reserved="NO" type="String"><![CDATA[]]></var>
+	</member_var>
+	<member_func>
+		<function id="OnBegin()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+		<function id="OnFetchRow()" needs="YES" reserved="YES" state="RES_IMP_FUNC" visible="YES"></function>
+		<function id="OnFetchEnd()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+		<function id="OnExecuteQueryError()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+		<function id="OnFetchError()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+		<function id="OnNoDataFound()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+		<function id="OnEnd()" needs="NO" reserved="YES" state="RES_NOT_FUNC" visible="YES"></function>
+	</member_func>
+	<source><![CDATA[function OnFetchRow()
+{
+
+}
+
+]]></source>
+</class2>

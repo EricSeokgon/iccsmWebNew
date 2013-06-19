@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>인증서 검증하기</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H4 id=_D2HTopic_141 
+style="MARGIN-LEFT: 41.9pt; TEXT-INDENT: -41.9pt; tab-stops: 0cm 41.9pt"><SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">검증하기</SPAN></H4>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="_18.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api7.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN 
+style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN style="FONT-FAMILY: 굴림">검증</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">방법으로</SPAN> <SPAN style="FONT-FAMILY: 굴림">우선적으로는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">통합검증서버를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">확인하고</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">통합검증서버를</SPAN> <SPAN style="FONT-FAMILY: 굴림">통한</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN style="FONT-FAMILY: 굴림">확인</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">실패</SPAN> <SPAN style="FONT-FAMILY: 굴림">시</SPAN>, 
+<SPAN style="FONT-FAMILY: 굴림">자체적으로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">검증하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">방법을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">예시로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">가</SPAN>. <SPAN 
+style="FONT-FAMILY: 굴림">처리</SPAN> <SPAN style="FONT-FAMILY: 굴림">과정</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><IMG src="Images\image21_3.png"></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal><SPAN style="FONT-FAMILY: 굴림">나</SPAN>. <SPAN 
+style="FONT-FAMILY: 굴림">적용</SPAN> <SPAN style="FONT-FAMILY: 굴림">예제</SPAN></P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.cert.CertPathValidator;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.cert.X509Certificate;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.crypto.PrivateKey;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.ivs.VerifyCert;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">import 
+com.gpki.gpkiapi.storage.Disk;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">public class 
+Cert {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">/*******************************************************************************************/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 40pt"><SPAN style="FONT-SIZE: 9pt">// 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">아래</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> define</SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">은</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">적용</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">시스템에</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">맞게</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">수정해</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">주어야</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">한다</SPAN><SPAN 
+style="FONT-SIZE: 9pt">.</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String CONF_FILE_PATH&nbsp; = "./gpkiapi.conf";</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String ROOT1_FILE_PATH = 
+"C:/GPKI/Certificate/rootCert.der";</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String ROOT2_FILE_PATH </SPAN></P>
+<P class=a9 style="TEXT-INDENT: 27pt"><SPAN style="FONT-SIZE: 9pt">= "C:/Program 
+Files/NPKI/KISA/FF8A46723358E8488822AA1768DA1648098B3591_3.der";</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private static String ROOT3_FILE_PATH </SPAN></P>
+<P class=a9 style="TEXT-INDENT: 27pt"><SPAN style="FONT-SIZE: 9pt">= "C:/Program 
+Files/NPKI/KISA/BFB627D8035A76654C6101415631E58B7B3AD9CC_4.der";</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">/*******************************************************************************************/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private X509Certificate &nbsp; myCert = null;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private 
+PrivateKey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+myPriKey = null;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private X509Certificate &nbsp; cert = null;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+private int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type = 
+0;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void setMyCert(X509Certificate myCert, PrivateKey myPriKey) {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.myCert = myCert;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.myPriKey = myPriKey;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void setCert(String type, X509Certificate cert) {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if (type.matches("sign") == true)</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.type = CertPathValidator.CERT_SIGN;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+else if (type.matches("km") == true)</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.type = CertPathValidator.CERT_KM;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+else if (type.matches("ocsp") == true)</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.type = CertPathValidator.CERT_OCSP;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+else if (type.matches("tsa") == true)</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.type = CertPathValidator.CERT_TSA;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+this.cert = cert;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+void verify() {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+String errMsg = "";</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">통합검증서버를</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">이용한</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+VerifyCert verifyCert = new VerifyCert(CONF_FILE_PATH);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+verifyCert.setMyCert(myCert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+verifyCert.verify(cert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">통합검증서버로</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">성공시</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">종료</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+catch (Exception e) {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+errMsg = e.getMessage();</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+String errCode = errMsg.substring(8, 12);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">에러정보에</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">포하되어있는</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">에러코드값을</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">확인</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서가</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">폐지</SPAN><SPAN style="FONT-SIZE: 9pt">, 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">만료되었거나</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">신뢰할수</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">없으면</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">종료</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if (errCode.matches("1215") == true || &nbsp;&nbsp;&nbsp; 
+/*ERR_REVOKED_CERT*/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp; errCode.matches("1203") == true || &nbsp;&nbsp;&nbsp;&nbsp; 
+/*ERR_EXPIRED_CERT*/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 18pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp; errCode.matches("1233") == true ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+/*ERR_PATH_VALIDATION*/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp; errCode.matches("1238") == true ) </SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 200pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">{ /*ERR_PATH_VALIDATION_CERT_POLICIES*/</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+return;</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+System.out.println(errMsg);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">통합검증서버로</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">실패시</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">자체</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+try {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// OCSP</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">를</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">이용한</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+CertPathValidator certPathValiditor = new CertPathValidator(CONF_FILE_PATH);; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">행정인증체계</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">루트</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">설정</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+X509Certificate rootCert = Disk.readCert(ROOT1_FILE_PATH);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.addTrustedRootCert(rootCert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">구</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">공인인증체계</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">루트</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">설정</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+rootCert = Disk.readCert(ROOT2_FILE_PATH);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.addTrustedRootCert(rootCert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">신</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">공인인증체계</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">루트</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">설정</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+rootCert = Disk.readCert(ROOT3_FILE_PATH);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.addTrustedRootCert(rootCert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">요청자</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">설정</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.setMyCert(myCert, myPriKey);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">폐지</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">여부</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">확인</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">방법</SPAN><SPAN style="FONT-SIZE: 9pt"> 
+</SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">설정</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.setRevokationCheck(CertPathValidator.REVOKE_CHECK_ARL | 
+</SPAN></P>
+<P class=a9 style="MARGIN-LEFT: 240pt; TEXT-INDENT: 40pt"><SPAN 
+style="FONT-SIZE: 9pt">CertPathValidator.REVOKE_CHECK_OCSP);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// </SPAN><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">인증서</SPAN><SPAN 
+style="FONT-SIZE: 9pt"> </SPAN><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">검증</SPAN><SPAN 
+style="FONT-SIZE: 9pt"></SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+certPathValiditor.validate(type, cert);</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+} catch (Exception e) {</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+e.printStackTrace();</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P class=a9 style="TEXT-INDENT: 9pt"><SPAN style="FONT-SIZE: 9pt">}</SPAN></P>
+<P class=MsoBodyText style="TEXT-INDENT: 9pt"><SPAN 
+style="FONT-SIZE: 9pt; FONT-FAMILY: 굴림">&nbsp;</SPAN></P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

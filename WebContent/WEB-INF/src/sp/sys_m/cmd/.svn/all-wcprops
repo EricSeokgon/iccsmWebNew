@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd
+END
+ComCodeMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/ComCodeMgrCmd.java
+END
+SidoCodeMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SidoCodeMgrCmd.java
+END
+UserMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrCmd.java
+END
+SidoCodeCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SidoCodeCmd.java
+END
+NewBasPostStDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/NewBasPostStDCmd.java
+END
+UserMgrBasicCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrBasicCUDCmd.java
+END
+KICAIfSendCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/KICAIfSendCUDCmd.java
+END
+KICAIfRecvCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/KICAIfRecvCUDCmd.java
+END
+SysVarMgrCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SysVarMgrCUDCmd.java
+END
+SiCodeMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SiCodeMgrCmd.java
+END
+UserMgrCCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrCCmd.java
+END
+SidoCodeMgrCCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SidoCodeMgrCCmd.java
+END
+SysVarMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SysVarMgrCmd.java
+END
+MyinfoMgrCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/MyinfoMgrCmd.java
+END
+KICAIfRecvCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/KICAIfRecvCmd.java
+END
+UserMgrBasicCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrBasicCmd.java
+END
+KICAIfSendCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/KICAIfSendCmd.java
+END
+UserMgrBasicCCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrBasicCCmd.java
+END
+ComCodeMgrLCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/ComCodeMgrLCmd.java
+END
+UserMgrCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/UserMgrCUDCmd.java
+END
+ComCodeMgrCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/ComCodeMgrCUDCmd.java
+END
+SidoCodeMgrCUDCmd.java
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/WEB-INF/src/sp/sys_m/cmd/SidoCodeMgrCUDCmd.java
+END

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="beige" Height="294" Id="frmMeasure" Left="8" OnLoadCompleted="frmMeasure_onloadComplete" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="494" WorkArea="true">
+		<Image Height="294" Id="Image0" ImageID="cpv_measure" Left="-1" TabOrder="1" Top="-2" Transparent="TRUE" Width="494"></Image>
+		<Static Font="굴림,10" Height="198" Id="Static0" Left="20" TabOrder="2" Top="57" Width="68"></Static>
+		<Static Font="굴림,10" Height="198" Id="Static1" Left="91" TabOrder="3" Top="57" Width="109"></Static>
+		<Static Font="굴림,10" Height="198" Id="Static2" Left="203" TabOrder="4" Top="57" Width="271"></Static>
+	</Form>
+	<Script><![CDATA[
+function frmMeasure_onloadComplete() {
+
+	var rowcnt = dsPT_M_MASTER.rowcount;	
+	var start_row = toInteger(replace(RegRePublishMgrP.cbIndex.getSelText(),"행",""));	
+	var total_rows = start_row + rowcnt;
+	
+	var dt="", cont="", cause="";
+	var line = "";
+	var first_check = true;
+	
+	if(total_rows > 14) {	
+		alert("13행 이상의 데이터를 출력할 수 없습니다!\n\n확인 후 출력 바랍니다.");
+		close();
+	} else {
+	
+		if(first_check) {
+			for(var k=0;k<start_row-1;k++) {				
+				this.Static0.text += "\n";
+				this.Static1.text += "\n";
+				this.Static2.text += "\n";
+			}
+			first_check = false;
+		}
+		
+		for(var i=0;i<rowcnt;i++) {	
+			
+			checked = dsPT_M_MASTER.GetColumn(i, "CHECKER");
+			
+			if(checked == "1") {
+				//alert("11");
+				dt 		= dsPT_M_MASTER.GetColumn(i, "DISPO_DT");				
+				cont 	= dsPT_M_MASTER.GetColumn(i, "TMPDISPO_CONT");				
+				cause 	= dsPT_M_MASTER.GetColumn(i, "DISPO_CAUSE");				
+				var scDISPO = Length(cause);
+				if(scDISPO > 19){
+				
+				dt = mid(dt,0,4) + "/" + mid(dt,4,2) + "/" + mid(dt,6,2);
+				cause = mid(cause, 0, 19) + "\n" + mid(cause, 19, 40);
+				
+				this.Static0.text += dt + "\n\n";				
+				this.Static1.text += cont + "\n\n";
+				this.Static2.text += cause + "\n";
+				}
+				else{
+				//alert("22");
+				dt = mid(dt,0,4) + "/" + mid(dt,4,2) + "/" + mid(dt,6,2);
+				this.Static0.text += dt + "\n";				
+				this.Static1.text += cont + "\n";
+				this.Static2.text += cause + "\n";
+				}
+				"\n";
+			}
+		}
+	}
+}]]></Script>
+</Window>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="672" Id="RegRePublishMgrPMgr" Left="8" OnActivate="fnForm_Activate" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="재교부출력현황" Top="8" Ver="1.0" Width="825" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsCOMBO">
+				<Contents>
+					<colinfo id="value" size="5" summ="default" type="STRING"/>
+					<colinfo id="column" size="12" summ="default" type="STRING"/>
+					<record>
+						<column>전체</column>
+						<value>1</value>
+					</record>
+					<record>
+						<column>등록수첩</column>
+						<value>2</value>
+					</record>
+					<record>
+						<column>등록증</column>
+						<value>3</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DELIVERY_BOOK">
+				<Contents>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="DELI_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" TabOrder="3" Top="148" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" TabOrder="2" Top="80" Width="816"></Image>
+		<Image Height="66" Id="Image5" ImageID="bg_search" Left="15" TabOrder="15" Top="93" Width="784"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" TabOrder="1" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" TabOrder="4" Top="567" Width="816"></Image>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="30" TabOrder="5" Top="122" Width="11"></Image>
+		<Static Color="#666666" Height="11" Id="Static0" Left="48" TabOrder="6" Text="교부일자" Top="123" Width="52"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="102" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="7" Top="120" Width="93"></Calendar>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="366" TabOrder="8" Top="122" Width="11"></Image>
+		<Static Height="8" Id="Static2" Left="195" TabOrder="9" Text="&#32;~&#32;" Top="126" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="215" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="10" Top="120" Value="TODAY" Width="93"></Calendar>
+		<Grid BindDataset="dsPT_R_DELIVERY_BOOK" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="543" ButtonColor="user1" Color="#666666" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="367" Id="grdList" InputPanel="FALSE" Left="16" LineColor="user9" NoDataImage="form_logo" Right="800" Style="grid_title" TabOrder="11" TabStop="true" Top="176" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="129"/>
+						<col width="218"/>
+						<col width="138"/>
+						<col width="146"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="등록번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="업체명"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="교부연월일"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="비&#32;&#32;고"/>
+					</head>
+					<body>
+						<cell col="0" colid="COI_WRT_NUM" display="text"/>
+						<cell col="1" colid="NAME" display="text"/>
+						<cell col="2" colid="DELI_YMD" display="date"/>
+						<cell col="3" colid="REMARK"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="704" OnClick="fnSearchButton_Click" TabOrder="12" Text="Button0" Top="120" Width="74"></Button>
+		<Static Color="#666666" Height="11" Id="Static1" Left="384" TabOrder="13" Text="구&#32;&#32;분" Top="123" Width="40"></Static>
+		<Combo CodeColumn="value" DataColumn="column" Height="20" Id="GUBUN" INDEX="1" InnerDataset="dsCOMBO" Left="420" TabOrder="14" Text="Combo0" Top="120" Width="108"></Combo>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="16" TabOrder="16" Top="551" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="40" Id="Static3" Left="39" TabOrder="17" Text="구분&#32;항목에서&#32;공사업&#32;등록증,&#32;등록수첩을&#32;선택적으로&#32;검색할&#32;수&#32;있습니다." Top="573" Width="736"></Static>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegRePublishMgrPMgr.xml
+2. 작성일 : 20011-04-18
+3. 작성자 : 이석곤
+4. 기  능 : 등록증/등록수첩 재교부출력현황
+5. 변경이력
+  가. 20011-04-18 최초작성 (이석곤)
+
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	scDATE1.Value = AddDate(Today(), -7);
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(2) + "등록증/등록수첩 재교부출력현황";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnCancel.enable = false;
+		divButtonBar.btnExcel.enable = true;		
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " GUBUN =" + quote(this.GUBUN.Value);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishPMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_DELIVERY_BOOK=output1";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		return;		
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "등록증/등록수첩 재교부출력현황");
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnReport)
+	{
+		fnReport();
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "55" && bControl == true) fnTablesBinding();
+	else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+}
+
+
+
+]]></Script>
+</Window>

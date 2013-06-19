@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="form" Title="New&#32;Form" Width="1024" WorkArea="true">
+		<Datasets></Datasets>
+	</Form>
+	<Script><![CDATA[]]></Script>
+</Window>

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>용어 설명</title>
+<link rel="stylesheet" href="Theme/nav.css" type="text/css">
+<link rel="stylesheet" href="C1H_HTML.css" type="text/css">
+<link rel="stylesheet" href="gpkiJavaApi.css" type="text/css">
+<script type="text/javascript">
+function d2hnsresize() {}
+</script>
+<script language="JavaScript" src="DocToHelp.js">
+</script>
+</head>
+<body
+ style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+         width: 100%;"
+ onload="d2hnsresize()"
+ onmousedown="d2hpopup()"
+>
+
+<div
+ id="nsbanner"
+ style="position: relative;
+        left: 0px;
+        padding: 4px 0px 4px 0px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        display: inline; "
+>
+<div
+ id="TitleRow"
+ style="width: 100%;
+        padding: 0px 10px 0px 22px;
+        background-color: #99CCFF;
+        background-image: url();
+        background-repeat: no-repeat;
+        display: inline;"
+>
+<H2 id=_D2HTopic_119 
+style="MARGIN-LEFT: 27.7pt; TEXT-INDENT: -27.7pt; tab-stops: 0cm 27.7pt"><SPAN 
+style="FONT-FAMILY: 굴림">용어</SPAN> <SPAN style="FONT-FAMILY: 굴림">설명</SPAN></H2>
+<div id="ienav" style="display: inline">
+<p align=left>
+
+<a class=D2HContentsSelected id="D2HContents" href="gpkiJavaApi-toc.htm" target="left" 
+
+onClick="d2hswitchpane('D2HContents')">Contents</a> &nbsp;
+
+
+<a class=D2HIndexUnselected id="D2HIndex" href="gpkiJavaApi-index.htm" target="left" 
+
+onClick="d2hswitchpane('D2HIndex')">Index</a> &nbsp;
+
+
+
+<a class=D2HPreviousEnabled id="D2HPrevious" href="api2.htm">Previous</a> &nbsp;
+<a class=D2HNextEnabled id="D2HNext" href="api3.htm">Next</a>
+
+
+</p>
+</div>
+</div>
+</div>
+<div
+ id="nstext"
+ valign="bottom"
+ style="padding: 5px 10px 0px 22px;
+        background-color: #FFFFFF;
+        background-image: url(Images/mogaha_back.png);
+        background-position: center top;
+        background-repeat: repeat-y;"
+>
+
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">전자문서</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">컴퓨터</SPAN> <SPAN style="FONT-FAMILY: 굴림">등</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">정보처리능력을</SPAN> <SPAN style="FONT-FAMILY: 굴림">가진</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">장치에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">의하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">전자적인</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">형태로</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">작성</SPAN>, <SPAN style="FONT-FAMILY: 굴림">송·수신</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">또는</SPAN> <SPAN style="FONT-FAMILY: 굴림">저장된</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">문서를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">암호알고리즘</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">정보통신망에서</SPAN> <SPAN style="FONT-FAMILY: 굴림">소통되는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">중요</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자문서의</SPAN> <SPAN style="FONT-FAMILY: 굴림">비밀성</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">확보를</SPAN> <SPAN style="FONT-FAMILY: 굴림">위해</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">내용의</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">암호화</SPAN> <SPAN style="FONT-FAMILY: 굴림">및</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">복호화에</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용되는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">방법</SPAN> <SPAN style="FONT-FAMILY: 굴림">및</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">절차를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">전자서명</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">전자문서의</SPAN> <SPAN style="FONT-FAMILY: 굴림">작성기관</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">및</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">변경여부를</SPAN> <SPAN style="FONT-FAMILY: 굴림">확인할</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">수</SPAN> <SPAN style="FONT-FAMILY: 굴림">있도록</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">전자서명알고리즘을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용하여</SPAN> <SPAN style="FONT-FAMILY: 굴림">개인키로</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">생성한</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">정보로서</SPAN> <SPAN style="FONT-FAMILY: 굴림">당해</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">전자문서에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">고유한</SPAN> <SPAN style="FONT-FAMILY: 굴림">것을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">개인키</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">전자서명을</SPAN> <SPAN style="FONT-FAMILY: 굴림">생성하기</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">위하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">소유자</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">만이</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용할</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">수</SPAN> <SPAN style="FONT-FAMILY: 굴림">있는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">전자적</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">정보를</SPAN> <SPAN style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">공개키</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">개인키에</SPAN> <SPAN style="FONT-FAMILY: 굴림">의해</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">생성된</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">전자서명을</SPAN> <SPAN style="FONT-FAMILY: 굴림">검증하기</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">위하여</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">이용하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">전자적</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정보를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">공개키가</SPAN> <SPAN style="FONT-FAMILY: 굴림">기관</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">또는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">담당자가</SPAN> <SPAN style="FONT-FAMILY: 굴림">소유하는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">개인키에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">합치된다는</SPAN> <SPAN style="FONT-FAMILY: 굴림">사실</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">등에</SPAN> <SPAN style="FONT-FAMILY: 굴림">대하여</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">행정인증기관이</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">확인·증명하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">전자적</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">정보를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">통합검증서버</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">보안</SPAN> <SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">제공하는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">시스템의</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">검증</SPAN> <SPAN style="FONT-FAMILY: 굴림">서비스</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">부하를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">줄여주기</SPAN> <SPAN style="FONT-FAMILY: 굴림">위해서</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">인증서</SPAN> <SPAN style="FONT-FAMILY: 굴림">검증</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">서비스를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">제공하는</SPAN> <SPAN style="FONT-FAMILY: 굴림">시스템을</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; <SPAN style="FONT-FAMILY: 굴림">인증기관</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">사용자가</SPAN> <SPAN style="FONT-FAMILY: 굴림">제출한</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">공개키에</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">대해서</SPAN> <SPAN style="FONT-FAMILY: 굴림">개인키</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">소유여부를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">확인하고</SPAN> <SPAN style="FONT-FAMILY: 굴림">인증서를</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">발급해</SPAN> <SPAN style="FONT-FAMILY: 굴림">주는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">시스템을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&#9642; NEAT <SPAN style="FONT-FAMILY: 굴림">알고리즘</SPAN> : <SPAN 
+style="FONT-FAMILY: 굴림">행정용</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">표준보안</SPAN>API<SPAN style="FONT-FAMILY: 굴림">에서만</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">지원되는</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">알고리즘으로서</SPAN> <SPAN style="FONT-FAMILY: 굴림">행정</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">기관간</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">주고받는</SPAN> <SPAN style="FONT-FAMILY: 굴림">데이터의</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">암호화를</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">위해서</SPAN> <SPAN style="FONT-FAMILY: 굴림">사용되는</SPAN> 
+<SPAN style="FONT-FAMILY: 굴림">알고리즘을</SPAN> <SPAN 
+style="FONT-FAMILY: 굴림">말한다</SPAN>.</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<P class=MsoNormal>&nbsp;</P>
+<p>&nbsp;</p>
+<div id="popupDiv">
+</div>
+</div>
+
+</body>
+</html>

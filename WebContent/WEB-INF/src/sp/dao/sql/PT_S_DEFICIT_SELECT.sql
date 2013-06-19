@@ -1,0 +1,5 @@
+
+SELECT 
+	WRT_NUM, TMP_WRT_NUM, SEQ, DEFI_CODE, DEFI_OUT, INS_DT, UPD_DT, WRT_ID 
+FROM   PT_S_DEFICIT ;
+                   

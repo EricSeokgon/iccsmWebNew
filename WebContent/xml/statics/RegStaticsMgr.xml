@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegStaticMgr" Left="8" OnActivate="fnForm_Activate" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록&#32;누적현황" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsV_PT_R_STATICS">
+				<Contents>
+					<colinfo id="A" size="256" summ="default" type="STRING"/>
+					<colinfo id="B" size="256" summ="default" type="STRING"/>
+					<colinfo id="C" size="256" summ="default" type="STRING"/>
+					<colinfo id="D" size="256" summ="default" type="STRING"/>
+					<colinfo id="E" size="256" summ="default" type="STRING"/>
+					<colinfo id="F" size="256" summ="default" type="STRING"/>
+					<colinfo id="G" size="256" summ="default" type="STRING"/>
+					<colinfo id="H" size="256" summ="default" type="STRING"/>
+					<colinfo id="I" size="256" summ="default" type="STRING"/>
+					<colinfo id="J" size="256" summ="default" type="STRING"/>
+					<colinfo id="K" size="256" summ="default" type="STRING"/>
+					<colinfo id="L" size="256" summ="default" type="STRING"/>
+					<colinfo id="M" size="256" summ="default" type="STRING"/>
+					<colinfo id="N" size="256" summ="default" type="STRING"/>
+					<colinfo id="O" size="256" summ="default" type="STRING"/>
+					<colinfo id="P" size="256" summ="default" type="STRING"/>
+					<record>
+						<A></A>
+						<B></B>
+						<C></C>
+						<D></D>
+						<E></E>
+						<F></F>
+						<G></G>
+						<H></H>
+						<I></I>
+						<J></J>
+						<K></K>
+						<L></L>
+						<M></M>
+						<N></N>
+						<O></O>
+						<P></P>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsTMP_CODE">
+				<Contents>
+					<colinfo id="SIDO_CNT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="30" Id="Image7" ImageID="form_w_bottom" Left="16" TabOrder="6" Top="605" Width="798"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="7" Top="77" Width="816"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="1" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="2" Top="149" Width="817"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="3" Top="573" Width="816"></Image>
+		<Image Height="30" Id="Image5" ImageID="form_w_top" Left="16" TabOrder="4" Top="139" Width="798"></Image>
+		<Image Height="447" Id="Image6" ImageID="form_w_bg488" Left="16" OnClick="Image6_OnClick" TabOrder="5" Top="168" Width="798"></Image>
+		<Grid BindDataset="dsV_PT_R_STATICS" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="600" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="48" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="800" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="9" TabStop="true" Top="552" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="776">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="48"/>
+						<col width="52"/>
+					</columns>
+					<body>
+						<cell col="0" colid="A" display="text"/>
+						<cell col="1" colid="B" display="text"/>
+						<cell col="2" colid="C" display="text"/>
+						<cell col="3" colid="D" display="text"/>
+						<cell col="4" colid="E" display="text"/>
+						<cell col="5" colid="F" display="text"/>
+						<cell col="6" colid="G" display="text"/>
+						<cell col="7" colid="H" display="text"/>
+						<cell col="8" colid="I" display="text"/>
+						<cell col="9" colid="J" display="text" edit="checkbox"/>
+						<cell col="10" colid="K" display="text"/>
+						<cell col="11" colid="L" display="text"/>
+						<cell col="12" colid="M" display="text"/>
+						<cell col="13" colid="N" display="text"/>
+						<cell col="14" colid="O" display="text"/>
+						<cell col="15" colid="P" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<EXOZViewer50 Bottom="536" Height="389" Id="viewer" Left="27" Right="800" Top="147" Width="773"></EXOZViewer50>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegStaticsMgr.xml
+2. 작성일 : 2009-05-14
+3. 작성자 : Y.D. JEOUNG
+4. 기  능 : 공사업 등록 누적 현황
+5. 변경이력
+  가. 2009-05-14 최초작성 (Y.D. JEOUNG)
+*/
+
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	//scDATE1.Value = AddDate(Today(), -7);
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(2) + "공사업등록 누적현황";
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+		
+		fnTablesBinding();
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+	}
+	else
+	{
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = false;
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = true;
+	}
+	divButtonBar.btnList.enable = false;
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+	var sArgs = "bb="; //"scDATE1=" + quote(this.scDATE1.Value);
+	//sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	//sArgs += " scRC_REGIST_NUM=" + quote(this.scRC_REGIST_NUM.Text);
+	//sArgs += " scCOM_NAME=" + quote(this.scCOM_NAME.Text);
+	
+	var sTid = "STATICS";
+	var sUrl = "ICCS::statics/StaticsAction.do?cmd=RegStaticsMgr";
+	var sInDs = "";
+	var sOutDs = "dsTMP_CODE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "DELETE")
+		{
+			alert('데이터 삭제 중 오류가 발생하였습니다.');
+		}
+		return;
+	}
+	
+	if (svcid == "DELETE")
+	{
+		alert('삭제되었습니다.');
+		return;
+	}
+	
+	if (svcid == "STATICS")
+	{
+	
+		var sColVal;
+		
+		for(var kCnt =0 ; kCnt  < 2;kCnt++)
+		{  
+			var kTmp;
+			if(kCnt == 0) kTmp=1;
+			if(kCnt == 1) kTmp=0;
+			
+			for(var nLoop = 0; nLoop < dsTMP_CODE.rowcount; nLoop++)
+			{					
+				sColVal = dsTMP_CODE.GetColumn(nLoop, kTmp);
+					//ALERT(nLoop+" // "+kCnt +"///"+sColVal);
+				sColVal = fnSidoName(sColVal);
+				
+				dsV_PT_R_STATICS.SetColumn(kCnt, nLoop, sColVal);									
+			}
+			
+			dsV_PT_R_STATICS.AddRow();
+		}
+		dsV_PT_R_STATICS.DeleteRow(2);
+		frmReport_OnLoadCompleted();
+	}	
+}
+
+
+
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+var _sViewer;
+var _sReportname;
+var _sOdiNames;
+var _spCount;
+var _sParam;
+
+
+function frmReport_OnLoadCompleted(obj)
+{
+	var sParams;
+ 
+	sParams += "viewer.namespace=\AudInnerR\ozviewer\n";
+	sParams += "connection.servlet=" + global.g_ext_oz_url + "server\n";
+	sParams += "connection.reportname=/Statics/RegStatics.ozr\n";
+ 
+ 
+	sParams += "odi.odinames=Q)RegStatics\n";
+	viewer.CreateReport(sParams);
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업등록 누적현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding();
+}
+
+
+
+function fnSidoName(sColVal)
+{
+	if(sColVal=="서울특별시") sColVal = "서울";
+	if(sColVal=="부산광역시") sColVal = "부산";
+	if(sColVal=="울산광역시") sColVal = "울산";
+	if(sColVal=="대구광역시") sColVal = "대구";
+	if(sColVal=="대전광역시") sColVal = "대전";
+	if(sColVal=="인천광역시") sColVal = "인천";
+	if(sColVal=="광주광역시") sColVal = "광주";
+	if(sColVal=="경기도") sColVal = "경기";
+	if(sColVal=="강원도") sColVal = "강원";
+	if(sColVal=="충청남도") sColVal = "충남";
+	if(sColVal=="충청북도") sColVal = "충북";
+	if(sColVal=="경상남도") sColVal = "경남";
+	if(sColVal=="경상북도") sColVal = "경북";
+	if(sColVal=="전라남도") sColVal = "전남";
+	if(sColVal=="전라북도") sColVal = "전북";
+	if(sColVal=="제주도") sColVal = "제주";	
+	
+	return sColVal;
+}
+
+]]></Script>
+</Window>

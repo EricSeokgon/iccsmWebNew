@@ -1,0 +1,11 @@
+<style type="text/css">
+	p	{ margin-top: 0; margin-bottom: 0; }
+	div p	{ margin-top: 0; margin-bottom: 0; }
+	body	{ background-color: White; 
+		background-image: url();
+		background-repeat: no-repeat; }
+	a:link	{  font-family: Verdana; font-size: 9.75pt; font-style: normal; font-weight: normal; text-decoration:  none; color: Blue; }
+	a:visited	{  font-family: Verdana; font-size: 9.75pt; font-style: normal; font-weight: normal; text-decoration:  none; color: Purple; }
+	a:hover	{  font-family: Verdana; font-size: 9.75pt; font-style: normal; font-weight: normal; text-decoration:  none; color: Red; }
+	.index	{ margin-left: 20px; text-indent:-0.21in; white-space:nowrap; }
+</style>

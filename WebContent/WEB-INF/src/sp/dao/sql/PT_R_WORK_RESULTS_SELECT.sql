@@ -1,0 +1,5 @@
+
+SELECT 
+	SEQ, YEAR, WORK_ROM, WRT_ID, UPD_DT, INS_DT, TMP_WRT_NUM 
+FROM   PT_R_WORK_RESULTS ;
+                   

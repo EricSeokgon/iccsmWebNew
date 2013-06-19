@@ -1,0 +1,369 @@
+
+
+
+/*
+*  Automatic generated  source
+*  작  성  자 : 김경덕
+*
+*  테이블 명   :PT_R_ENGINEER_M_PRIZE
+*  테이블 설명 :
+*  테이블 PK   :
+*               CARE_BOOK_ISSUE_NUM
+*               SEQ
+*  테이블 컬럼 :
+*               SEQ:VARCHAR2(12):
+*               CARE_BOOK_ISSUE_NUM:VARCHAR2(20):
+*               YMD:VARCHAR2(20):
+*               ITEM:VARCHAR2(30):
+*               PAD_REST_TERM:VARCHAR2(30):
+*               BAS:VARCHAR2(30):
+*               WRT_ID:VARCHAR2(16):
+*               UPD_DT:VARCHAR2(24):
+*               WRT_DT:VARCHAR2(24):
+*               ETC1:VARCHAR2(30):
+*               ETC2:VARCHAR2(50):
+*/
+package sp.dao;
+
+import kjf.util.*;
+import kjf.ops.*;
+
+import java.io.*;
+import java.text.*;
+import java.util.*;
+import java.sql.*;
+
+
+public class PT_R_ENGINEER_M_PRIZEDAO  extends SuperToDB{
+
+  private String default_fields[]={ "SEQ" , "CARE_BOOK_ISSUE_NUM" , "YMD" , "ITEM" , "PAD_REST_TERM" , "BAS" , "WRT_ID" , "UPD_DT" , "WRT_DT" , "ETC1" , "ETC2" };	
+
+  public int insert( ValueObject  obj) throws SQLException{
+
+    if((obj instanceof PT_R_ENGINEER_M_PRIZEEntity) == false){
+        throw new  SQLException("DAO 에러(1): PT_R_ENGINEER_M_PRIZE : insert() ");
+    }
+    PT_R_ENGINEER_M_PRIZEEntity entity = (PT_R_ENGINEER_M_PRIZEEntity)obj;
+
+    Connection conn = null;
+    PreparedStatement  ps  =null;
+    int result = 0;
+
+  StringBuffer sb = new StringBuffer();
+  sb.append("insert into PT_R_ENGINEER_M_PRIZE ")
+    .append(" ( SEQ,CARE_BOOK_ISSUE_NUM,YMD,ITEM,PAD_REST_TERM,BAS,WRT_ID,UPD_DT,WRT_DT,ETC1,ETC2 ) ")
+    .append(" values ( ")
+      
+           .append(toDB(entity.getSEQ()))
+			.append(",")
+           .append(toDB(entity.getCARE_BOOK_ISSUE_NUM()))
+			.append(",")
+           .append(toDB(entity.getYMD()))
+			.append(",")
+           .append(toDB(entity.getITEM()))
+			.append(",")
+           .append(toDB(entity.getPAD_REST_TERM()))
+			.append(",")
+           .append(toDB(entity.getBAS()))
+			.append(",")
+           .append(toDB(entity.getWRT_ID()))
+			.append(",")
+           .append(toDB(entity.getUPD_DT()))
+			.append(",")
+           .append(toDB(entity.getWRT_DT()))
+			.append(",")
+           .append(toDB(entity.getETC1()))
+			.append(",")
+           .append(toDB(entity.getETC2()))
+			
+    .append(" ) ");
+
+   KJFLog.sql(sb.toString());
+
+
+   try {
+
+    conn = this.getConnection();
+    ps = conn.prepareStatement(sb.toString());
+
+    int i=1;
+	
+    result = ps.executeUpdate();
+
+   } catch (SQLException e) {
+           throw e;
+
+   } finally {
+     if(ps!=null)
+        ps.close();
+     this.release(conn);
+   }
+    return result ;
+  }
+
+  public int  update( ValueObject obj) throws SQLException{
+
+
+    if((obj instanceof PT_R_ENGINEER_M_PRIZEEntity) == false){
+        throw new  SQLException("DAO 에러(1): PT_R_ENGINEER_M_PRIZE : update() ");
+    }
+    PT_R_ENGINEER_M_PRIZEEntity entity = (PT_R_ENGINEER_M_PRIZEEntity)obj;
+
+    Connection conn = null;
+    PreparedStatement  ps  =null;
+    int result = 0;
+
+    StringBuffer sb = new StringBuffer();
+    sb.append("update PT_R_ENGINEER_M_PRIZE  set ")
+       
+        .append("YMD = ")
+        .append(toDB(entity.getYMD())).append(",")
+        .append("ITEM = ")
+        .append(toDB(entity.getITEM())).append(",")
+        .append("PAD_REST_TERM = ")
+        .append(toDB(entity.getPAD_REST_TERM())).append(",")
+        .append("BAS = ")
+        .append(toDB(entity.getBAS())).append(",")
+        .append("WRT_ID = ")
+        .append(toDB(entity.getWRT_ID())).append(",")
+        .append("UPD_DT = ")
+        .append(toDB(entity.getUPD_DT())).append(",")
+        .append("WRT_DT = ")
+        .append(toDB(entity.getWRT_DT())).append(",")
+        .append("ETC1 = ")
+        .append(toDB(entity.getETC1())).append(",")
+        .append("ETC2 = ")
+        .append(toDB(entity.getETC2()))
+        .append(" where  1=1 ");
+       
+         sb.append(" and SEQ = ").append( toDB(entity.getSEQ()));
+         
+         sb.append(" and CARE_BOOK_ISSUE_NUM = ").append( toDB(entity.getCARE_BOOK_ISSUE_NUM()));
+         
+
+   KJFLog.sql(sb.toString());
+
+   try {
+
+    conn = this.getConnection();
+    ps = conn.prepareStatement(sb.toString());
+
+	int i=1;
+	
+    result =ps.executeUpdate();
+
+   } catch (SQLException e) {
+           throw e;
+   } finally {
+     if(ps!=null)
+        ps.close();
+     this.release(conn);
+   }
+
+    return result ;
+  }
+
+  public static HashMap default_update_field= new HashMap(0);
+  static{
+     
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////
+  //지정된 필드만을 수정한다.
+  public int updateModifiedOnly(ValueObject obj, String[] fields) throws SQLException{
+
+
+
+    if((obj instanceof PT_R_ENGINEER_M_PRIZEEntity) == false){
+        throw new  SQLException("DAO 에러(1): PT_R_ENGINEER_M_PRIZE : updateModifiedOnly() ");
+    }
+    PT_R_ENGINEER_M_PRIZEEntity entity = (PT_R_ENGINEER_M_PRIZEEntity)obj;
+
+	HashMap clobs = new HashMap();
+	
+
+	Connection conn = null;
+    PreparedStatement  ps  =null;
+    int result = 0;
+
+    if(fields==null)
+	         throw new  SQLException("Field Name can not be Null");
+
+    StringBuffer setString = new StringBuffer();
+    boolean flag = false;
+    for(int i=0 ; i < fields.length ; i++){
+        if(fields[i] == null) throw new  SQLException("Field Name can not be Null");
+        if(default_update_field.containsKey(fields[i]) == false){
+           if(flag)
+               setString.append(",");
+           flag = true;
+           if(clobs.containsKey(fields[i])){
+        	   setString.append(fields[i]).append("=?") ;
+           }else{
+        	   setString.append(fields[i]).append("=").append(toDB(entity.getByName(fields[i]))) ;
+           }
+        }
+    }
+    if(flag = false)
+       throw new  SQLException("Nothing to update");
+
+    
+
+    StringBuffer sb = new StringBuffer();
+    sb.append("update PT_R_ENGINEER_M_PRIZE  set " )
+      .append( setString.toString() ).append( " where  1=1 ");
+     
+	  sb.append(" and SEQ = ").append(toDB(entity.getSEQ()));
+     
+	  sb.append(" and CARE_BOOK_ISSUE_NUM = ").append(toDB(entity.getCARE_BOOK_ISSUE_NUM()));
+     
+
+   KJFLog.sql( sb.toString());
+
+    try {
+
+    conn = this.getConnection();
+    ps = conn.prepareStatement(sb.toString());
+
+	int k=1;
+    for(int i=0 ; i < fields.length ; i++){
+       if(clobs.containsKey(fields[i])){
+    	   
+    	   ps.setString(k++,(entity.getByName(fields[i])).toString() );
+       }
+    }
+
+    result = ps.executeUpdate();
+
+   } catch (SQLException e) {
+           throw e;
+   } finally {
+     if(ps!=null)
+        ps.close();
+     this.release(conn);
+   }
+
+	return result ;
+  }
+
+
+  ///////////////////////////////////////////////////////////////////////////////////
+  //특정필드를 제외한 전체 필드를 수정한다.
+  public int updateExcludeOnly(ValueObject obj, String[] fields) throws SQLException{
+
+	fields= KJFUtil.getDifferenceOfSets(default_fields, fields);
+
+    if((obj instanceof PT_R_ENGINEER_M_PRIZEEntity) == false){
+        throw new  SQLException("DAO 에러(1): PT_R_ENGINEER_M_PRIZE : updateModifiedOnly() ");
+    }
+    PT_R_ENGINEER_M_PRIZEEntity entity = (PT_R_ENGINEER_M_PRIZEEntity)obj;
+
+	HashMap clobs = new HashMap();
+	
+
+	Connection conn = null;
+    PreparedStatement  ps  =null;
+    int result = 0;
+
+    if(fields==null)
+	         throw new  SQLException("Field Name can not be Null");
+
+    StringBuffer setString = new StringBuffer();
+    boolean flag = false;
+    for(int i=0 ; i < fields.length ; i++){
+        if(fields[i] == null) throw new  SQLException("Field Name can not be Null");
+        if(default_update_field.containsKey(fields[i]) == false){
+           if(flag)
+               setString.append(",");
+           flag = true;
+           if(clobs.containsKey(fields[i])){
+        	   setString.append(fields[i]).append("=?") ;
+           }else{
+        	   setString.append(fields[i]).append("=").append(toDB(entity.getByName(fields[i]))) ;
+           }
+        }
+    }
+    if(flag = false)
+       throw new  SQLException("Nothing to update");
+
+    
+
+    StringBuffer sb = new StringBuffer();
+    sb.append("update PT_R_ENGINEER_M_PRIZE  set " )
+      .append( setString.toString() ).append( " where  1=1 ");
+     
+	  sb.append(" and SEQ = ").append(toDB(entity.getSEQ()));
+     
+	  sb.append(" and CARE_BOOK_ISSUE_NUM = ").append(toDB(entity.getCARE_BOOK_ISSUE_NUM()));
+     
+
+   KJFLog.sql( sb.toString());
+
+    try {
+
+    conn = this.getConnection();
+    ps = conn.prepareStatement(sb.toString());
+
+	int k=1;
+    for(int i=0 ; i < fields.length ; i++){
+       if(clobs.containsKey(fields[i])){
+    	   
+    	   ps.setString(k++,(entity.getByName(fields[i])).toString() );
+       }
+    }
+
+    result = ps.executeUpdate();
+
+   } catch (SQLException e) {
+           throw e;
+   } finally {
+     if(ps!=null)
+        ps.close();
+     this.release(conn);
+   }
+
+	return result ;
+  }
+  public int delete(ValueObject obj) throws SQLException{
+
+    if((obj instanceof PT_R_ENGINEER_M_PRIZEEntity) == false){
+        throw new  SQLException("DAO 에러(1): PT_R_ENGINEER_M_PRIZE : delete() ");
+    }
+    PT_R_ENGINEER_M_PRIZEEntity entity = (PT_R_ENGINEER_M_PRIZEEntity)obj;
+
+    Connection conn = null;
+    PreparedStatement  ps  =null;
+    int result = 0;
+
+    StringBuffer sb = new StringBuffer();
+    sb.append("delete from PT_R_ENGINEER_M_PRIZE  where  1=1")
+      
+	  .append(" and SEQ = ").append(toDB(entity.getSEQ()))
+      
+	  .append(" and CARE_BOOK_ISSUE_NUM = ").append(toDB(entity.getCARE_BOOK_ISSUE_NUM()))
+       ;
+
+   KJFLog.sql(sb.toString());
+
+
+   try {
+
+    conn = this.getConnection();
+    ps = conn.prepareStatement(sb.toString());
+
+    result = ps.executeUpdate();
+
+   } catch (SQLException e) {
+           throw e;
+   } finally {
+     if(ps!=null)
+        ps.close();
+     this.release(conn);
+   }
+
+   return result;
+  }
+
+
+
+}//Class End

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="136" Id="TempletOutput" Left="8" OnLoadCompleted="fn_Loaded" PidAttrib="7" Title="Sample을&#32;사용하시겠습니까?" Top="8" Ver="1.0" Width="288" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_SAMPLENAME">
+				<Contents>
+					<colinfo id="SAMPLENAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_XML">
+				<Contents>
+					<colinfo id="XML" size="5000" summ="default" type="STRING"/>
+					<colinfo id="DSNAME" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnCancel" ImageID="button_style1_70" Left="160" OnClick="fn_Unuse" Style="button_style01" TabOrder="2" Text="취&#32;&#32;&#32;&#32;소" Top="86" Width="72"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReport" ImageID="button_style1_70" Left="56" OnClick="fn_Use" Style="button_style01" TabOrder="1" Text="적&#32;&#32;&#32;&#32;용" Top="86" Width="72"></Button>
+		<Image Height="18" Id="Image4" ImageID="arrow_small_blue2" Left="37" TabOrder="4" Top="36" Width="18"></Image>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="16" Id="Static2" Left="54" Style="list_subtitle" TabOrder="3" Text="샘&#32;플&#32;명" Top="39" Width="56"></Static>
+		<Combo DataColumn="SAMPLENAME" Height="21" Id="comList" InnerDataset="ds_PT_SAMPLENAME" Left="109" TabOrder="5" Top="34" Width="145"></Combo>
+	</Form>
+	<Script><![CDATA[function fn_CallBack(sTid, sErrCode, sErrMsg) 
+{
+	if (sErrCode < 0) 	
+	{
+		if (sTid == "SEARCH")
+		{
+			alert('데이터  조회중 오류가 발생하였습니다.');
+			return;
+		}
+    }
+	
+	if(sTid =="SEARCH")
+	{	
+		if(ds_PT_SAMPLENAME.rowcount > 0)
+			this.comList.Index = 0;
+		
+		return ;
+	}
+ 
+	if(sTid =="USE")
+	{
+		for (var nLoop = 0; nLoop < ds_PT_XML.rowcount; nLoop++)
+		{	
+			var sDsName = ds_PT_XML.GetColumn(nLoop,"DSNAME");
+			object(sDsName).LoadXML(ds_PT_XML.GetColumn(nLoop,"XML"), true, false);
+		}
+		
+		Close();
+	}
+}	
+
+function fn_Loaded(obj)
+{
+	var sArgs = "scWORK_MODE=GET_NAME scUSERID=" + User_ID + " scFORMID=" + Form_ID + " scSAMPLENAME=" + quote("");
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::st/StAction.do?cmd=StTempletLoad";
+	var sInDs = "";
+	var sOutDs = "ds_PT_SAMPLENAME=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fn_Use(obj)
+{
+	var sArgs = "scWORK_MODE=GET_XML scUSERID=" + User_ID + " scFORMID=" + Form_ID + " scSAMPLENAME=" + quote(comList.Value);
+	var sTid = "USE";
+	var sUrl = "ICCS::st/StAction.do?cmd=StTempletLoad";
+	var sInDs = "";
+	var sOutDs = "ds_PT_XML=output";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+}
+
+function fn_Unuse(obj)
+{
+	close();
+}
+]]></Script>
+</Window>

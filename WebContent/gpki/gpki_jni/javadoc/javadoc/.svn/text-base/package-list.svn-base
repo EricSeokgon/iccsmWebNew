@@ -1,0 +1,12 @@
+com.gpki
+com.gpki.gpkiapi
+com.gpki.gpkiapi.cert
+com.gpki.gpkiapi.cms
+com.gpki.gpkiapi.crypto
+com.gpki.gpkiapi.exception
+com.gpki.gpkiapi.ivs
+com.gpki.gpkiapi.ocsp
+com.gpki.gpkiapi.pkcs
+com.gpki.gpkiapi.storage
+com.gpki.gpkiapi.tsa
+com.gpki.gpkiapi.util

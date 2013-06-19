@@ -1,0 +1,5 @@
+
+SELECT 
+	OTOB_COM_CODE, OTOB_COM_TOB_CONT, WRT_ID, UPD_DT, INS_DT 
+FROM   PT_R_OTOB_COM_CODE ;
+                   

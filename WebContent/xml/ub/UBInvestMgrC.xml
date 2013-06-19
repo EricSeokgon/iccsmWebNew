@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" DisableColor="WINDOWFRAME" Height="711" Id="UBInvestMgrC" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="사용전검사&#32;관리" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_USEBEFORE">
+				<Contents>
+					<colinfo id="CIV_RECV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_REP" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_POSTNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_DETAILADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="APPLPER_TELNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_REP" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_TELNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_POSTNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="OPE_DETAILADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_POSTNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_ADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_SPOT_DETAILADDR" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLANER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="WORK_ITEM" size="256" summ="default" type="STRING"/>
+					<colinfo id="AREA" size="256" summ="default" type="STRING"/>
+					<colinfo id="NUM_FL" size="256" summ="default" type="STRING"/>
+					<colinfo id="USE" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_APPL_WORK" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_APPL_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_FEE" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPER_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSPER_POSI" size="256" summ="default" type="STRING"/>
+					<colinfo id="JUDGM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_CONFIRM_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SW_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="EW_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="INSP_WISH_YMD" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_TELNUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFI_NM" size="256" summ="default" type="STRING"/>
+					<colinfo id="USEBEFINSP_DELINUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="SUV" size="256" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="NET_RECV_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_CONFIRM_REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAPPL_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="NAPPL_CAUSE" size="256" summ="default" type="STRING"/>
+					<colinfo id="DOC_INSP_REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_CONFIRM_PER_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_ENT_CHG_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="PLAN_CONT_CHG_YN" size="256" summ="default" type="STRING"/>
+					<colinfo id="CER_DELI_YN" size="5" summ="default" type="STRING"/>
+					<colinfo id="DELI_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="256" summ="default" type="STRING"/>
+					<colinfo id="PROC_STE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WORK_ITEM_ETC" size="200" summ="default" type="STRING"/>
+					<colinfo id="ETC_INSP_BAS" size="200" summ="default" type="STRING"/>
+					<colinfo id="CODE_NAME" size="200" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_1">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_sel">
+				<Contents>
+					<colinfo id="colname" size="256" summ="default" type="STRING"/>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<record>
+						<colname>적합</colname>
+						<value>적합</value>
+					</record>
+					<record>
+						<colname>부적합</colname>
+						<value>부적합</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_combo">
+				<Contents>
+					<colinfo id="type" size="5" summ="default" type="STRING"/>
+					<colinfo id="value" size="5" summ="default" type="STRING"/>
+					<record>
+						<type>적합</type>
+						<value>적합</value>
+					</record>
+					<record>
+						<type>부적합</type>
+						<value>부적합</value>
+					</record>
+					<record>
+						<type>해당없음</type>
+						<value>해당없음</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_yn">
+				<Contents>
+					<colinfo id="colname" size="3" summ="default" type="STRING"/>
+					<colinfo id="colvalue" size="3" summ="default" type="STRING"/>
+					<record>
+						<colname>적합</colname>
+						<colvalue>1</colvalue>
+					</record>
+					<record>
+						<colname>부적합</colname>
+						<colvalue>2</colvalue>
+					</record>
+					<record>
+						<colname>취하</colname>
+						<colvalue>3</colvalue>
+					</record>
+					<record>
+						<colname>이첩</colname>
+						<colvalue>4</colvalue>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_2">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL_3">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="SRL" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME1" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME2" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_UB_MEMO">
+				<Contents>
+					<colinfo id="MEMO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MEMO_CONT" size="512" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="24" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="WRT_TIME" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_NAME" size="20" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="24" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_proc">
+				<Contents>
+					<colinfo id="value" size="256" summ="default" type="STRING"/>
+					<colinfo id="code" size="256" summ="default" type="STRING"/>
+					<record>
+						<code>1</code>
+						<value>신규등록</value>
+					</record>
+					<record>
+						<code>2</code>
+						<value>처리중</value>
+					</record>
+					<record>
+						<code>3</code>
+						<value>처리완료</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_FILE">
+				<Contents>
+					<colinfo id="CHECKER" size="4" summ="default" type="STRING"/>
+					<colinfo id="FILE_NM" size="64" summ="default" type="STRING"/>
+					<colinfo id="FILE_SIZE" size="10" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="SYS_FILE_NAME" size="22" summ="default" type="STRING"/>
+					<record>
+						<CHECKER></CHECKER>
+						<FILE_NM></FILE_NM>
+						<FILE_SIZE></FILE_SIZE>
+						<INS_DT></INS_DT>
+						<RECV_NUM></RECV_NUM>
+						<SEQ></SEQ>
+						<SYS_FILE_NAME></SYS_FILE_NAME>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDELI">
+				<Contents>
+					<colinfo id="DELI_NUM" size="20" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_S_SYSVAR_MASTER">
+				<Contents>
+					<colinfo id="SERVER_YN" size="4" summ="default" type="STRING"/>
+					<colinfo id="SERVER_ADDR" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsGroupWare">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_SMS">
+				<Contents>
+					<colinfo id="SMS" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="Dataset0"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsUploadFile">
+				<Contents>
+					<colinfo encrypt="base64" id="content" size="255" summ="default" type="BLOB"/>
+					<colinfo id="file_name" size="50" summ="default" type="STRING"/>
+					<colinfo id="path" size="50" summ="default" type="STRING"/>
+					<colinfo id="filesize" size="20" summ="default" type="DECIMAL"/>
+					<colinfo id="sys_file_name" size="22" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_COMPANY_KEY">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="50" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_CONSTRUCTION_KEY">
+				<Contents>
+					<colinfo id="RECV_NUM" size="50" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DETAIL">
+				<Contents>
+					<colinfo id="SEQ" size="256" summ="default" type="STRING"/>
+					<colinfo id="CLASS_NAME" size="256" summ="default" type="STRING"/>
+					<colinfo id="CONT" size="256" summ="default" type="STRING"/>
+					<colinfo id="ITEM_OUT" size="256" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_CONT" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PT_UB_EQUIPMENT">
+				<Contents>
+					<colinfo id="EQU_SEQ" size="2" summ="default" type="INT"/>
+					<colinfo id="RECV_NUM" size="20" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIGUNGU_CODE" size="24" summ="default" type="STRING"/>
+					<colinfo id="CIV_RECV_NUM" size="20" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_CA" size="100" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_CA" size="100" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_CA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_MA" size="100" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_MA" size="100" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_MA" size="256" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NO_SMA" size="100" summ="default" type="STRING"/>
+					<colinfo id="TYPE_PROC_NM_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="FREQUENCY_SCOPE_SMA" size="100" summ="default" type="STRING"/>
+					<colinfo id="WIRE_TYPE_SMA" size="256" summ="default" type="STRING"/>
+					<colinfo id="EQU_CMD" size="1" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_DELINUM_VIEW">
+				<Contents>
+					<colinfo id="LAST_DOC" size="256" summ="default" type="STRING"/>
+					<colinfo id="AUTO_DOC" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Usebefore">
+				<Contents>
+					<colinfo id="APPLPER_NM" size="50" type="STRING"/>
+					<colinfo id="APPLPER_REP" size="50" type="STRING"/>
+					<colinfo id="APPLPER_TELNUM" size="26" type="STRING"/>
+					<colinfo id="APPLPER_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="APPLPER_ADDR" size="60" type="STRING"/>
+					<colinfo id="APPLPER_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="OPE_NAME" size="50" type="STRING"/>
+					<colinfo id="OPE_TELNUM" size="26" type="STRING"/>
+					<colinfo id="OPE_REP" size="20" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="50" type="STRING"/>
+					<colinfo id="OPE_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="OPE_ADDR" size="60" type="STRING"/>
+					<colinfo id="OPE_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="INSP_SPOT_NM" size="200" type="STRING"/>
+					<colinfo id="INSP_SPOT_POSTNUM" size="10" type="STRING"/>
+					<colinfo id="INSP_SPOT_ADDR" size="60" type="STRING"/>
+					<colinfo id="INSP_SPOT_DETAILADDR" size="120" type="STRING"/>
+					<colinfo id="WORK_ITEM" size="200" type="STRING"/>
+					<colinfo id="AREA" size="50" type="STRING"/>
+					<colinfo id="NUM_FL" size="150" type="STRING"/>
+					<colinfo id="USE" size="100" type="STRING"/>
+					<colinfo id="PLAN_CONFIRM_PER_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="PLAN_ENT_CHG_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="PLAN_CONT_CHG_YN_CONT" size="256" type="STRING"/>
+					<colinfo id="SW_BEF_REPO_DELINUM" size="256" type="STRING"/>
+					<colinfo id="BEF_PLANER_NAME" size="256" type="STRING"/>
+					<colinfo id="PROC_OFFI" size="256" type="STRING"/>
+					<colinfo id="INSP_WISH_YMD" size="256" type="STRING"/>
+					<colinfo id="INSP_FEE" size="256" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" type="STRING"/>
+					<colinfo id="SW_DT" size="256" type="STRING"/>
+					<colinfo id="EW_DT" size="256" type="STRING"/>
+					<colinfo id="CHG_INSP" size="256" type="STRING"/>
+					<colinfo id="PROC_LIM" size="256" type="STRING"/>
+					<colinfo id="PROC_OFFI_ID" size="256" type="STRING"/>
+					<colinfo id="REMARK" size="256" type="STRING"/>
+					<colinfo id="ADMIT_DT" size="256" type="STRING"/>
+					<colinfo id="OFFI_NM" size="256" type="STRING"/>
+					<colinfo id="OFFI_TELNUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="432" Id="Image1" ImageID="form_bg" Left="8" TabOrder="3" Top="146" Width="817"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="1" Text="Div0" Top="12" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="2" Top="78" Width="816"></Image>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="3" Top="572" Width="816"></Image>
+		<Image Height="40" Id="Image6" ImageID="bg_default_top" Left="24" TabOrder="5" Top="84" Width="784"></Image>
+		<Image Height="26" Id="Image5" ImageID="tab_style_bg" Left="358" TabOrder="7" Top="160" Width="444"></Image>
+		<Image Height="40" Id="Image13" ImageID="bg_default_bottom" Left="24" TabOrder="8" Top="107" Width="784"></Image>
+		<Image Height="20" Id="Image7" ImageID="bg_default_body" Left="24" TabOrder="9" Top="107" Width="784"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="APPLPER_NM" Enable="FALSE" Height="21" Id="Edit0" Left="547" TabOrder="10" Top="97" Width="88"></Edit>
+		<Static Color="#666666" Height="18" Id="Static0" Left="507" TabOrder="11" Text="건축주" Top="100" Width="57"></Static>
+		<Image Height="11" Id="Image3" ImageID="arrow_small_blue" Left="492" TabOrder="12" Top="102" Width="11"></Image>
+		<Combo BindDataset="ds_PT_UB_USEBEFORE" CodeColumn="code" Column="PROC_STE" DataColumn="value" Height="20" Id="PROC_STE" INDEX="0" InnerDataset="ds_proc" Left="709" TabOrder="13" Top="97" Width="88"></Combo>
+		<Static Color="#666666" Height="18" Id="Static6" Left="656" TabOrder="14" Text="처리상태" Top="100" Width="49"></Static>
+		<Image Height="11" Id="Image12" ImageID="arrow_small_blue" Left="640" TabOrder="15" Top="101" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="CODE_NAME" Enable="FALSE" Height="19" Id="Edit5" Left="393" TabOrder="16" Top="120" Width="107"></Edit>
+		<Static Color="#666666" Height="18" Id="Static5" Left="324" TabOrder="17" Text="건축물용도" Top="124" Width="65"></Static>
+		<Image Height="11" Id="Image11" ImageID="arrow_small_blue" Left="306" TabOrder="18" Top="126" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="NUM_FL" Enable="FALSE" Height="19" Id="Edit4" Left="710" TabOrder="19" Top="121" Width="83"></Edit>
+		<Static Color="#666666" Height="18" Id="Static4" Left="681" TabOrder="20" Text="층수" Top="124" Width="41"></Static>
+		<Image Height="11" Id="Image10" ImageID="arrow_small_blue" Left="665" TabOrder="21" Top="126" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="AREA" Enable="FALSE" Height="19" Id="Edit3" Left="574" OnChanged="Edit3_OnChanged" TabOrder="22" Top="121" Width="75"></Edit>
+		<Static Color="#666666" Height="18" Id="Static3" Left="541" TabOrder="23" Text="면적" Top="125" Width="41"></Static>
+		<Image Height="11" Id="Image9" ImageID="arrow_small_blue" Left="523" TabOrder="24" Top="126" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="INSP_SPOT_NM" Enable="FALSE" Height="19" Id="Edit2" Left="115" TabOrder="25" Top="121" Width="171"></Edit>
+		<Static Color="#666666" Height="18" Id="Static2" Left="57" TabOrder="26" Text="현장명칭" Top="123" Width="65"></Static>
+		<Image Height="11" Id="Image8" ImageID="arrow_small_blue" Left="39" TabOrder="27" Top="124" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="OPE_NAME" Enable="FALSE" Height="22" Id="Edit1" Left="323" TabOrder="28" Top="98" Width="167"></Edit>
+		<Static Color="#666666" Height="18" Id="Static1" Left="258" TabOrder="29" Text="시공자&#32;상호" Top="100" Width="65"></Static>
+		<Image Height="11" Id="Image4" ImageID="arrow_small_blue" Left="244" TabOrder="30" Top="101" Width="11"></Image>
+		<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="CIV_RECV_NUM" Enable="FALSE" Height="20" Id="CIV_RECV_NUM" Left="115" TabOrder="31" Top="100" Width="125"></Edit>
+		<Image Height="11" Id="Image16" ImageID="arrow_small_blue" Left="39" TabOrder="32" Top="102" Width="11"></Image>
+		<Static Color="#666666" Height="18" Id="Static16" Left="57" TabOrder="33" Text="접수번호" Top="102" Width="57"></Static>
+		<Tab BKColor="white" Border="Flat" BorderColor="white" Color="#666666" DisableBKColor="#c7c7c7" Font="굴림,9,Bold" Height="475" Id="tbMain" Left="32" TabIndex="3" TabOrder="4" Top="160" Width="784">
+			<Contents>
+				<TabPage BorderColor="black" Height="445" Id="tab5" ImageID="tab_style_100" Left="2" TabOrder="8" Text="현장검사관리" Top="28" Width="780">
+					<Tab Border="Flat" BorderColor="white" Height="318" Id="Tab0" Left="3" TabIndex="2" TabOrder="7" Top="6" Width="779">
+						<Contents>
+							<TabPage BorderColor="black" Height="287" Id="tab1" ImageID="tab_style_160" Left="2" TabOrder="71" Text="1.&#32;구내통신선로설비" Top="29" Width="775">
+								<Grid AreaSelect="TRUE" AutoEnter="TRUE" BindDataset="ds_DETAIL_1" BkColor2="default" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="285" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadHeight="20" Height="285" Id="detList" InputPanel="FALSE" Left="1" LineColor="user9" OnCellClick="fnDetail_onCellClick" OnCellDBLClick="fnBasDouble_Click" Right="561" RowHeight="22" SelColor="white" ShadowColor="#999999" TabOrder="1" TabStop="true" UseAutoSizing="Row" UseDBuff="true" UseExSizing="Row" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="560">
+									<contents>
+										<format id="Default">
+											<columns>
+												<col width="125"/>
+												<col width="166"/>
+												<col width="92"/>
+												<col width="152"/>
+											</columns>
+											<head>
+												<cell bkcolor="#787878" col="0" color="white" colspan="2" display="text" wordwrap="word">
+													<cell col="0" colspan="2" display="text" text="검사항목"/>
+												</cell>
+												<cell bkcolor="#787878" col="2" color="white" display="text" text="검사결과"/>
+												<cell bkcolor="#787878" col="3" color="white" display="text" text="상세내용"/>
+											</head>
+											<body>
+												<cell align="center" bkcolor="#eaeaea" col="0" colid="CLASS_NAME1" display="text" suppress="1" SuppressAlign="Middle" Valign="Center" wordwrap="word"/>
+												<cell col="1" colid="CLASS_NAME2" combocol="CLASS_NAME" combodataset="ds_DETAIL" combodisplayrowcnt="1" combotext="CLASS_NAME" display="text"/>
+												<cell checklength="Byte" col="2" colid="ITEM_OUT" combocol="value" combodataset="ds_combo" combodisplayrowcnt="3" combotext="type" display="combo" edit="combo"/>
+												<cell col="3" colid="DETAIL_CONT" combodisplayrowcnt="1" display="text" edit="normal"/>
+											</body>
+										</format>
+									</contents>
+								</Grid>
+								<Static Height="281" Id="Static0" Left="566" TabOrder="2" Text="검사기준&#32;및&#32;근거" Top="4" Type="Groupbox" Width="209"></Static>
+								<TextArea Border="Flat" BorderColor="white" Font="굴림,9" Height="259" Id="TextArea0" Left="571" TabOrder="3" Top="20" VScroll="TRUE" Width="199"></TextArea>
+							</TabPage>
+							<TabPage BorderColor="black" Height="287" Id="tab2" ImageID="tab_style_160" Left="2" TabOrder="71" Text="2.&#32;방송공동수신&#32;설비" Top="29" Width="775">
+								<Grid AreaSelect="TRUE" AutoEnter="TRUE" BindDataset="ds_DETAIL_2" BkColor2="white" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="285" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadHeight="20" Height="285" Id="detList2" InputPanel="FALSE" Left="1" LineColor="user9" OnCellClick="fnDetail_onCellClick" OnCellDBLClick="fnBasDouble_Click" Right="561" RowHeight="22" SelColor="white" ShadowColor="#999999" TabOrder="1" TabStop="true" UseAutoSizing="Row" UseDBuff="true" UseExSizing="Row" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="560">
+									<contents>
+										<format id="Default">
+											<columns>
+												<col width="125"/>
+												<col width="166"/>
+												<col width="92"/>
+												<col width="152"/>
+											</columns>
+											<head>
+												<cell bkcolor="#787878" col="0" color="white" colspan="2" display="text" wordwrap="word">
+													<cell col="0" colspan="2" display="text" text="검사항목"/>
+												</cell>
+												<cell bkcolor="#787878" col="2" color="white" display="text" text="검사결과"/>
+												<cell bkcolor="#787878" col="3" color="white" display="text" text="상세내용"/>
+											</head>
+											<body>
+												<cell align="center" bkcolor="#eaeaea" col="0" colid="CLASS_NAME1" display="text" suppress="1" SuppressAlign="Middle" Valign="Center" wordwrap="word"/>
+												<cell col="1" colid="CLASS_NAME2" combocol="CLASS_NAME" combodataset="ds_DETAIL" combodisplayrowcnt="1" combotext="CLASS_NAME" display="text"/>
+												<cell checklength="Byte" col="2" colid="ITEM_OUT" combocol="value" combodataset="ds_combo" combodisplayrowcnt="3" combotext="type" display="combo" edit="combo"/>
+												<cell col="3" colid="DETAIL_CONT" combodisplayrowcnt="1" display="text" edit="normal"/>
+											</body>
+										</format>
+									</contents>
+								</Grid>
+								<Checkbox Font="Tahoma,9" Height="21" Id="Checkbox0" Left="3" OnClick="fn_Work_itme_etc" TabOrder="2" Text="지상파&#32;TV" Top="289" UserData="WRK002" Value="FALSE" Width="84"></Checkbox>
+								<Checkbox Font="Tahoma,9" Height="21" Id="Checkbox1" Left="84" OnClick="fn_Work_itme_etc" TabOrder="3" Text="위성방송" Top="290" UserData="WRK002" Value="FALSE" Width="76"></Checkbox>
+								<Checkbox Font="Tahoma,9" Height="21" Id="Checkbox2" Left="158" OnClick="fn_Work_itme_etc" TabOrder="4" Text="FM라디오방송" Top="290" UserData="WRK002" Value="FALSE" Width="100"></Checkbox>
+								<Checkbox Font="Tahoma,9" Height="21" Id="Checkbox3" Left="259" OnClick="fn_Work_itme_etc" TabOrder="5" Text="종합유선방송" Top="290" UserData="WRK002" Value="FALSE" Width="92"></Checkbox>
+								<Static Height="281" Id="Static0" Left="566" TabOrder="6" Text="검사기준&#32;및&#32;근거" Top="4" Type="Groupbox" Width="209"></Static>
+								<TextArea Border="Flat" BorderColor="white" Font="굴림,9" Height="259" Id="TextArea0" Left="571" TabOrder="7" Top="20" VScroll="TRUE" Width="199"></TextArea>
+							</TabPage>
+							<TabPage BorderColor="black" Height="287" Id="tab3" ImageID="tab_style_160" Left="2" TabOrder="71" Text="3.&#32;이동통신구내선로설비" Top="29" Width="775">
+								<Grid AreaSelect="TRUE" AutoEnter="TRUE" BindDataset="ds_DETAIL_3" BkColor2="white" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="285" ButtonColor="user0" CellMoving="TRUE" Color="#666666" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadHeight="20" Height="285" Id="detList3" InputPanel="FALSE" LineColor="user9" OnCellClick="fnDetail_onCellClick" OnCellDBLClick="fnBasDouble_Click" Right="560" RowHeight="22" SelColor="white" ShadowColor="#999999" TabOrder="1" TabStop="true" UseAutoSizing="Row" UseDBuff="true" UseExSizing="Row" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="560">
+									<contents>
+										<format id="Default">
+											<columns>
+												<col width="125"/>
+												<col width="166"/>
+												<col width="92"/>
+												<col width="152"/>
+											</columns>
+											<head>
+												<cell bkcolor="#787878" col="0" color="white" colspan="2" display="text" wordwrap="word">
+													<cell col="0" colspan="2" display="text" text="검사항목"/>
+												</cell>
+												<cell bkcolor="#787878" col="2" color="white" display="text" text="검사결과"/>
+												<cell bkcolor="#787878" col="3" color="white" display="text" text="상세내용"/>
+											</head>
+											<body>
+												<cell align="center" bkcolor="#eaeaea" col="0" colid="CLASS_NAME1" display="text" suppress="1" SuppressAlign="Middle" Valign="Center" wordwrap="word"/>
+												<cell col="1" colid="CLASS_NAME2" combocol="CLASS_NAME" combodataset="ds_DETAIL" combodisplayrowcnt="1" combotext="CLASS_NAME" display="text"/>
+												<cell checklength="Byte" col="2" colid="ITEM_OUT" combocol="value" combodataset="ds_combo" combodisplayrowcnt="3" combotext="type" display="combo" edit="combo"/>
+												<cell col="3" colid="DETAIL_CONT" combodisplayrowcnt="1" display="text" edit="normal"/>
+											</body>
+										</format>
+									</contents>
+								</Grid>
+								<Static Height="281" Id="Static0" Left="566" TabOrder="2" Text="검사기준&#32;및&#32;근거" Top="4" Type="Groupbox" Width="209"></Static>
+								<TextArea Border="Flat" BorderColor="white" Font="굴림,9" Height="259" Id="TextArea0" Left="571" TabOrder="3" Top="20" VScroll="TRUE" Width="199"></TextArea>
+							</TabPage>
+						</Contents>
+					</Tab>
+					<Image Font="Tahoma,9" Height="16" Id="Image3" ImageID="arrow_small_white" Left="7" TabOrder="8" Top="335" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static0" Left="24" TabOrder="9" Text="검사결과&#32;최종의견" Top="337" Width="112"></Static>
+					<Radio BindDataset="ds_PT_UB_USEBEFORE" Border="None" BorderColor="white" CodeColumn="colvalue" Column="NAPPL_YN" ColumnCount="4" DataColumn="colname" Font="Tahoma,9" Height="24" Id="NAPPL_YN" INDEX="0" InnerDataset="ds_yn" Left="137" TabOrder="1" Top="331" Width="197"></Radio>
+					<Image Font="Tahoma,9" Height="16" Id="Image0" ImageID="arrow_small_white" Left="7" TabOrder="10" Top="357" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static1" Left="25" TabOrder="11" Text="필증교부&#32;유무" Top="358" Width="112"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image1" ImageID="arrow_small_white" Left="7" TabOrder="12" Top="378" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static2" Left="27" TabOrder="13" Text="필증발급일" Top="381" Width="112"></Static>
+					<Calendar BindDataset="ds_PT_UB_USEBEFORE" Column="DELI_DT" Font="Tahoma,9" Height="21" Id="DELI_DT" Left="136" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="5" Top="377" Value="TODAY" Width="96"></Calendar>
+					<Image Font="Tahoma,9" Height="16" Id="Image2" ImageID="arrow_small_white" Left="373" TabOrder="14" Top="356" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static3" Left="393" TabOrder="15" Text="필증교부&#32;번호" Top="358" Width="112"></Static>
+					<Edit BindDataset="ds_PT_UB_USEBEFORE" Column="USEBEFINSP_DELINUM" Font="Tahoma,9" Height="23" Id="USEBEFINSP_DELINUM" Left="483" TabOrder="4" Top="357" Width="227"></Edit>
+					<Checkbox BindDataset="ds_PT_UB_USEBEFORE" Column="CER_DELI_YN" Font="Tahoma,9" Height="23" Id="CER_DELI_YN" Left="137" OnClick="fn_Deli_Click" TabOrder="3" Text="등록될필증교부" Top="354" Value="FALSE" Width="109"></Checkbox>
+					<Image Font="Tahoma,9" Height="16" Id="Image4" ImageID="arrow_small_white" Left="7" TabOrder="16" Top="407" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static4" Left="25" TabOrder="17" Text="부적합시&#32;부적합&#32;사유" Top="409" Width="128"></Static>
+					<TextArea BindDataset="ds_PT_UB_USEBEFORE" Column="NAPPL_CAUSE" Font="Tahoma,9" Height="28" Id="NAPPL_CAUSE" Left="154" TabOrder="6" Top="409" Width="343"></TextArea>
+					<Image Height="26" Id="Image5" ImageID="tab_style_bg" Left="483" TabOrder="18" Top="7" Width="356"></Image>
+					<Image Align="Left" Color="#3d5971" FillType="STRETCH" Font="돋움,9,Bold" Height="31" Id="GroupWare" ImageID="btn_account" Left="678" LeftMargin="0" OnClick="fn_GroupWare" Static="FALSE" Style="button_lift01" TabOrder="19" Top="323" Width="102"></Image>
+					<Image Font="Tahoma,9" Height="16" Id="Image6" ImageID="arrow_small_white" Left="373" TabOrder="20" Top="335" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="Static5" Left="390" TabOrder="21" Text="검사일" Top="337" Width="112"></Static>
+					<Calendar BindDataset="ds_PT_UB_USEBEFORE" Column="INSP_DT" Font="Tahoma,9" Height="21" Id="Calendar0" Left="483" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="332" Value="TODAY" Width="96"></Calendar>
+					<Static Color="#666666" Font="Tahoma,9" Height="16" Id="LAST_DOC" Left="483" TabOrder="22" Text="등록된필증번호" Top="380" Width="299"></Static>
+					<Static Color="#666666" Font="Tahoma,9" Height="19" Id="AUTO_DOC" Left="483" TabOrder="23" Text="등록될필증번호" Top="393" Width="299"></Static>
+					<Checkbox Font="Tahoma,9" Height="23" Id="Checkbox0" Left="249" OnClick="fn_Deli2_Click" TabOrder="24" Text="등록될필증교부감소" Top="354" Value="FALSE" Width="125"></Checkbox>
+				</TabPage>
+				<TabPage BorderColor="black" Height="445" Id="tab1" ImageID="tab_style_100" Left="2" TabOrder="25" Text="파일첨부관리" Top="28" Width="780">
+					<Static Height="40" Id="Static10" Left="599" ShadowColor="#cccccc" TabOrder="8" Top="316" Type="Groupbox" Width="144"></Static>
+					<Grid AreaSelect="true" AutoEnter="TRUE" BindDataset="ds_PT_UB_FILE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="300" ButtonColor="user0" CellMoving="TRUE" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="254" Id="grdList" InputPanel="FALSE" Left="15" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" Right="751" SelColor="white" ShadowColor="#999999" TabOrder="1" TabStop="true" Top="46" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="736">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="30"/>
+									<col width="387"/>
+									<col width="147"/>
+									<col width="141"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="text" text="선택"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="파일명"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="파일&#32;용량"/>
+									<cell bkcolor="#787878" col="3" color="white" display="text" text="등록일자"/>
+								</head>
+								<body>
+									<cell align="center" col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="FILE_NM" display="text"/>
+									<cell col="2" colid="FILE_SIZE" display="text"/>
+									<cell col="3" colid="INS_DT" display="text"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="398" Id="Static7" Left="6" ShadowColor="#cccccc" TabOrder="4" Text="파일첨부" Top="28" Type="Groupbox" Width="752"></Static>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnReperSave" ImageID="button_style2_100" Left="675" OnClick="fnFileSaveButton_Click" Style="button_style2_60" TabOrder="3" Text="저&#32;&#32;장" Top="328" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnFileRemove" ImageID="button_style2_100" Left="611" OnClick="fnFileDeleteButton_Click" Style="button_style01" TabOrder="4" Text="삭&#32;&#32;제" Top="328" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnFileInsert" ImageID="button_style2_120" Left="515" OnClick="fnReperDetailButton_Click" Style="button_style2_60" TabOrder="5" Text="파일찾기" Top="328" Width="66"></Button>
+					<Edit Font="굴림,9" Height="21" Id="FileTxt" Left="120" MaxLength="18" Style="style1" TabOrder="6" Top="328" Width="392"></Edit>
+					<FileDialog Bottom="427" Height="24" Id="FileDlg" Left="598" Right="622" TabOrder="7" Top="403" Width="24"></FileDialog>
+					<Static Color="#666666" Height="18" Id="Static15" Left="36" TabOrder="7" Text="파일첨부" Top="332" Width="57"></Static>
+					<Image Height="16" Id="Image15" ImageID="arrow_small_white" Left="17" TabOrder="7" Top="329" Width="16"></Image>
+					<File Bottom="427" Height="24" Id="File0" Left="630" Right="654" TabOrder="11" Top="403" Width="24"></File>
+				</TabPage>
+				<TabPage BorderColor="black" Height="445" Id="tpMemo" ImageID="tab_style_100" Left="2" TabOrder="26" Text="메모" Top="28" Width="780">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="333" Id="Static1" Left="5" ShadowColor="#cccccc" TabOrder="2" Text="메&#32;&#32;모" Top="23" Type="Groupbox" Width="764"></Static>
+					<Grid BindDataset="dsPT_UB_MEMO" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="190" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#666666" Face3dColor="#666666" HeadBorder="Flat" HeadHeight="20" Height="147" Id="grdMemo" InputPanel="FALSE" Left="22" LineColor="user9" OnHeadClick="fnGridHead_Click" Right="756" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="43" UseAutoSizing="Row" UseDBuff="true" UseExSizing="Row" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="734">
+						<contents>
+							<format id="Default">
+								<columns>
+									<col width="37"/>
+									<col width="521"/>
+									<col width="79"/>
+									<col width="80"/>
+								</columns>
+								<head>
+									<cell bkcolor="#787878" col="0" color="white" display="checkbox" edit="checkbox" text="선택"/>
+									<cell bkcolor="#787878" col="1" color="white" display="text" text="메&#32;모&#32;내&#32;용"/>
+									<cell bkcolor="#787878" col="2" color="white" display="text" text="작성자"/>
+									<cell bkcolor="#787878" col="3" color="user2" display="text" text="작성일자"/>
+								</head>
+								<body>
+									<cell col="0" colid="CHECKER" display="checkbox" edit="checkbox"/>
+									<cell col="1" colid="MEMO_CONT" display="text"/>
+									<cell col="2" colid="WRT_NAME" display="text"/>
+									<cell col="3" colid="MEMO_DT" display="date" edit="date"/>
+								</body>
+							</format>
+						</contents>
+					</Grid>
+					<Static Font="Tahoma,9" Height="15" Id="Static2" Left="42" TabOrder="5" Text="작성일자" Top="204" Width="55"></Static>
+					<Calendar BindDataset="dsPT_UB_MEMO" Column="MEMO_DT" Height="21" Id="MEMO_DT" Left="99" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="200" Value="TODAY" Width="101"></Calendar>
+					<TextArea BindDataset="dsPT_UB_MEMO" CheckLength="Byte" Column="MEMO_CONT" Height="75" Id="MEMO_CONTENT" Left="22" MaxLength="512" TabOrder="5" Top="227" Width="734"></TextArea>
+					<Image Height="16" Id="Image4" ImageID="arrow_small_white" Left="25" TabOrder="5" Top="200" Width="16"></Image>
+					<Edit BindDataset="dsPT_UB_MEMO" Column="WRT_NAME" Height="21" Id="WRT_NAME" Left="327" TabOrder="4" Top="200" Width="89"></Edit>
+					<Static Font="Tahoma,9" Height="15" Id="Static0" Left="272" TabOrder="6" Text="작&#32;성&#32;자" Top="204" Width="55"></Static>
+					<Image Height="16" Id="Image8" ImageID="arrow_small_white" Left="255" TabOrder="7" Top="200" Width="16"></Image>
+					<MaskEdit BindDataset="dsPT_UB_MEMO" Column="WRT_TIME" Height="21" Id="WRT_TIME" Left="198" Mask="##:##" MaxLength="4" TabOrder="3" Top="204" Type="STRING" Width="41"></MaskEdit>
+					<Image Height="32" Id="Image0" ImageID="button_bg" Left="423" TabOrder="8" Top="314" Width="330"></Image>
+					<Button ButtonStyle="TRUE" Color="#133f7e" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="21" Id="btnMemoInsert" ImageID="button_style2_100" Left="434" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="8" Text="입력" Top="320" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#133f7e" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="21" Id="btnMemoModify" ImageID="button_style2_100" Left="496" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="10" Text="수정" Top="320" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#133f7e" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="21" Id="btnMemoRemove" ImageID="button_style2_100" Left="682" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="16" Text="삭제" Top="320" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#133f7e" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="21" Id="btnMemoSave" ImageID="button_style2_100" Left="558" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="12" Text="저장" Top="320" Width="56"></Button>
+					<Button ButtonStyle="TRUE" Color="#133f7e" DisableColor="#c7c7c7" Font="굴림,9,Bold" Height="21" Id="btnMemoCancel" ImageID="button_style2_100" Left="620" OnClick="fnMemoButton_Click" Style="button_style01" TabOrder="14" Text="취소" Top="320" Width="56"></Button>
+					<Image Height="70" Id="Image1" ImageID="bg_tip764" Left="6" TabOrder="9" Top="372" Width="764"></Image>
+					<Image Height="11" Id="Image3" ImageID="arrow_small_blue2" Left="29" TabOrder="11" Top="400" Width="11"></Image>
+				</TabPage>
+				<TabPage BorderColor="black" Height="445" Id="tab4" ImageID="tab_style_100" Left="2" TabOrder="33" Text="기자재" Top="28" Width="780">
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="85" Id="Static10" Left="17" ShadowColor="#cccccc" TabOrder="13" Text="CATV증폭기" Top="14" Type="Groupbox" Width="756"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image2" ImageID="arrow_small_white" Left="32" TabOrder="14" Top="38" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static3" Left="52" TabOrder="15" Text="형식승인번호" Top="40" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NO_CA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NO_CA" Left="147" TabOrder="1" Top="39" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image0" ImageID="arrow_small_white" Left="312" TabOrder="16" Top="38" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static0" Left="332" TabOrder="17" Text="제조사명" Top="40" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NM_CA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NM_CA" ImeMode="none" Left="419" TabOrder="2" Top="39" Width="203"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image1" ImageID="arrow_small_white" Left="32" TabOrder="18" Top="70" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static1" Left="52" TabOrder="19" Text="주파수범위(MHz)" Top="72" Width="93"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="FREQUENCY_SCOPE_CA" Font="Tahoma,9" Height="19" Id="FREQUENCY_SCOPE_CA" Left="147" TabOrder="3" Top="71" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image3" ImageID="arrow_small_white" Left="311" TabOrder="20" Top="69" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static2" Left="331" TabOrder="21" Text="배선형태" Top="71" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="WIRE_TYPE_CA" Font="Tahoma,9" Height="19" Id="WIRE_TYPE_CA" Left="418" TabOrder="4" Top="70" Width="331"></Edit>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="85" Id="Static4" Left="18" ShadowColor="#cccccc" TabOrder="22" Text="MATV증폭기" Top="120" Type="Groupbox" Width="756"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image4" ImageID="arrow_small_white" Left="29" TabOrder="23" Top="142" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static5" Left="49" TabOrder="24" Text="형식승인번호" Top="144" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NO_MA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NO_MA" Left="144" TabOrder="5" Top="143" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image5" ImageID="arrow_small_white" Left="309" TabOrder="25" Top="142" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static6" Left="329" TabOrder="26" Text="제조사명" Top="144" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NM_MA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NM_MA" Left="416" TabOrder="6" Top="143" Width="203"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image6" ImageID="arrow_small_white" Left="29" TabOrder="27" Top="174" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static7" Left="49" TabOrder="28" Text="주파수범위(MHz)" Top="176" Width="93"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="FREQUENCY_SCOPE_MA" Font="Tahoma,9" Height="19" Id="FREQUENCY_SCOPE_MA" Left="144" TabOrder="7" Top="175" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image7" ImageID="arrow_small_white" Left="308" TabOrder="29" Top="173" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static8" Left="328" TabOrder="30" Text="배선형태" Top="175" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="WIRE_TYPE_MA" Font="Tahoma,9" Height="19" Id="WIRE_TYPE_MA" Left="414" TabOrder="8" Top="172" Width="331"></Edit>
+					<Static Color="#ff6600" Font="굴림,9,Bold" Height="85" Id="Static9" Left="18" ShadowColor="#cccccc" TabOrder="31" Text="SMATV증폭기" Top="224" Type="Groupbox" Width="756"></Static>
+					<Image Font="Tahoma,9" Height="16" Id="Image8" ImageID="arrow_small_white" Left="29" TabOrder="32" Top="246" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static11" Left="49" TabOrder="33" Text="형식승인번호" Top="248" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NO_SMA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NO_SMA" Left="144" TabOrder="9" Top="247" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image9" ImageID="arrow_small_white" Left="309" TabOrder="34" Top="246" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static12" Left="329" TabOrder="35" Text="제조사명" Top="248" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="TYPE_PROC_NM_SMA" Font="Tahoma,9" Height="19" Id="TYPE_PROC_NM_SMA" Left="416" TabOrder="10" Top="247" Width="203"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image10" ImageID="arrow_small_white" Left="29" TabOrder="36" Top="278" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static13" Left="49" TabOrder="37" Text="주파수범위(MHz)" Top="280" Width="93"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="FREQUENCY_SCOPE_SMA" Font="Tahoma,9" Height="19" Id="FREQUENCY_SCOPE_SMA" Left="144" TabOrder="11" Top="279" Width="155"></Edit>
+					<Image Font="Tahoma,9" Height="16" Id="Image11" ImageID="arrow_small_white" Left="308" TabOrder="38" Top="277" Width="16"></Image>
+					<Static Color="#666666" Font="Tahoma,9" Height="15" Id="Static14" Left="328" TabOrder="39" Text="배선형태" Top="279" Width="77"></Static>
+					<Edit BindDataset="ds_PT_UB_EQUIPMENT" Column="WIRE_TYPE_SMA" Font="Tahoma,9" Height="19" Id="WIRE_TYPE_SMA" Left="415" TabOrder="12" Top="278" Width="331"></Edit>
+					<Button Height="21" Id="btnProcCa" ImageID="button_style2_search" Left="625" OnClick="fnEditButton_Click" TabOrder="40" Text="Button0" Top="37" Width="24"></Button>
+					<Button Height="21" Id="btnProcMa" ImageID="button_style2_search" Left="621" OnClick="fnEditButton_Click" TabOrder="41" Text="Button0" Top="141" Width="24"></Button>
+					<Button Height="21" Id="btnProcSma" ImageID="button_style2_search" Left="621" OnClick="fnEditButton_Click" TabOrder="42" Text="Button0" Top="245" Width="24"></Button>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btnAmt" ImageID="button_companyView" Left="720" OnClick="fnGovConnect" Style="button_style01" TabOrder="34" Top="159" Width="70"></Button>
+		<Button ButtonStyle="TRUE" Color="#333333" Font="굴림,9,Bold" Height="21" Id="btn_const" ImageID="button_before_con" Left="582" OnClick="Button0_OnClick" Style="button_style01" TabOrder="35" Top="159" Width="70"></Button>
+		<Static Color="user0" Height="44" Id="Static7" Left="147" TabOrder="34" Top="652" Width="224"></Static>
+		<Button ButtonStyle="TRUE" Color="#0570b7" Font="굴림,8,Bold" Height="21" Id="btn_usbmgr" ImageID="button_style2_120" Left="653" OnClick="btn_usbmgr_OnClick" Style="button_style01" TabOrder="37" Text="사용자검사" Top="159" Width="66"></Button>
+	</Form>
+	<Script><![CDATA[
+/*
+1. 파일명 : UBInvestMgrC.xml
+2. 작성일 : 2009-02-06
+3. 작성자 : 이 종 영
+4. 기  능 : 사용전검사 관리 현황 등록
+5. 변경이력
+  가. 2009-02-06 최초작성 (이종영)
+  나. 2011-04-26 수정 (이석곤)
+*/
+
+#include "UserLib::CommonJs.js"
+#include "UserLib::fileupdown.js"
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sKEY1;
+var	_sKEY2;
+var _sWorkFlag;
+var f_path;
+var f_name;
+var f_sys_name;
+var f_size;
+var etc;
+var bas;
+var scGroupWare;
+var fileopen = false;
+var _pSIGUNGU_CODE;
+var base_code = " WRT_ID="+global.g_User_ID+" SIDO_CODE="+global.g_Sd_cd+" SIGUNGU_CODE="+global.g_Sgg_cd;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	global.gv_WorkFlag = _sWorkFlag;
+	
+	if(global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnInquiry();
+	}
+	else if(global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnInsert();
+	}
+	else if(global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		fnModify();
+	}
+	
+/*	
+	if(scGroupWare == "Y")
+	{
+		this.tbMain.tab5.GroupWare.Visible  = true;
+	}
+	else
+	{
+		this.tbMain.tab5.GroupWare.Visible  = false;
+	} 
+*/	
+	divButtonBar.Image1.text = space(6) + "사용전검사 관리";	
+	
+	//착공전 설계 버튼 안보이게.
+	this.btn_const.Visible = false;
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	divButtonBar.btnList.enable = false;
+	
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(false, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = true;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(3, false);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		
+		
+	}
+	else if (global.gv_WorkFlag == global.gv_INSERT)
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		
+		
+	}
+	else
+	{
+		fnAllControlState(true, this);
+		
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;	
+		divButtonBar.btnRemove.enable = false;
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, true);
+		divButtonBar.btnReport.enable = true;
+		divButtonBar.btnExcel.enable = false;
+		
+	}
+	fnTablesBinding();
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+
+}
+
+/**
+ 1. 함수명 : fnDeliNum_View
+ 2. 기  능 : 부여된 필증교부번호 
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnDeliNum_View()
+{
+		var sArgs = "";
+		sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+		sArgs += " scSIGUNGU_CODE=" + quote(global.g_Sgg_cd);
+		sArgs += " scDELI_ITEM=U";
+			
+		var sTid = "DELINUM_VIEW";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=DeliNumViewMgr";
+		var sInDs = "";
+		var sOutDs = "ds_DELINUM_VIEW=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{
+
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "save")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+		}
+		if (svcid == "MEMO_SAVE")
+		{
+			alert('메모 저장 중 오류가 발생하였습니다.');
+			fnMemoButton_Click(tbMain.tpMemo.btnMemoCancel);
+			fnInitMemoGroup("INQUIRY");
+		}
+		if (svcid == "FILE_SAVE")
+		{
+			alert('데이터 저장 중 오류가 발생하였습니다.');
+		}
+		
+		return;
+	}
+	
+	
+	if (svcid == "save")
+	{
+		alert('저장되었습니다.');
+		global.gv_WorkFlag = global.gv_INQUIRY;
+		fnInitButtonBar();
+		
+		var SERVER_YN = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_YN");
+		var SERVER_ADDR = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_ADDR");
+		
+		if(SERVER_YN == "1" && SERVER_ADDR != ""){
+		if(global.g_Sgg_cd == "gncw" || global.g_Sgg_cd == "gncwec" || global.g_Sgg_cd == "gncwhp" || global.g_Sgg_cd == "gncwhw" || global.g_Sgg_cd == "gncwjh" || global.g_Sgg_cd == "gncwss")
+		{
+		fnVisibleGW2(); //전자결재 버튼 토글
+		}else{
+		fnVisibleGW(); //전자결재 버튼 토글
+		}
+		}
+		return;
+	}
+	
+	if (svcid == "MEMO_SAVE")
+	{
+		alert('메모가 저장되었습니다.');
+		fnInitMemoGroup("INQUIRY");
+		return;
+	}
+	if (svcid == "FILE_SAVE")
+	{
+		// 저장된내용이 안나옮  2009-12-22수정 this.Reload(); //재로딩 
+		tbMain.tab1.grdList.Redraw(true);
+		alert('파일이 저장되었습니다.');
+		
+		return;	
+	}
+	if (svcid == "GET_CODE")
+	{
+		fnInitMemoGroup("INQUIRY");
+		
+		// 2009-11-11 사용전검사 접수관리에서 체크된 값만 적합처리 ->
+		var work = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row,"WORK_ITEM");
+
+		var strwork = SubStr(work,0,IndexOf(work,"/"));
+		var strlist = Split2(work+"/","/","/");
+		var strlist2 = "";
+		var strlistcnt = 0;var strlistcnt2 = 0;var strlistcnt3 = 0;
+		
+		for(i = 0; i < Length(strlist); i++){				
+			strlist2 = strlist[i].replace("[","").replace("]","");					
+			if(SubStr(strlist2,0,4) == "구내통신"){
+					strlistcnt = strlistcnt + 1;
+			} 
+			//if(SubStr(strlist2,0,4) == "텔레비전"){
+					//strlistcnt2 = strlistcnt2 + 1;
+			//} 
+			if(SubStr(strlist2,0,4) == "이동통신"){
+					strlistcnt3 = strlistcnt3 + 1;
+			} 						
+		}
+		
+		for(i=0 ; i < ds_DETAIL_1.rowcount; i++){
+			if(ds_DETAIL_1.GetColumn(i,"ITEM_OUT") == "")
+			{		
+				if(strlistcnt > 0){
+					ds_DETAIL_1.SetColumn(i,"ITEM_OUT","적합");
+				} else {
+					ds_DETAIL_1.SetColumn(i,"ITEM_OUT","해당없음");
+				}
+				
+			}			
+		}
+		
+/*		for(j=0 ; j < ds_DETAIL_2.rowcount; j++){
+			if(ds_DETAIL_2.GetColumn(j,"ITEM_OUT") == "")
+			{
+				if(strlistcnt2 > 0){
+					ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");
+				} else {
+					ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");
+				}
+			}			
+		}
+*/		
+		for(k=0 ; k < ds_DETAIL_3.rowcount; k++){
+			if(ds_DETAIL_3.GetColumn(k,"ITEM_OUT") == "")
+			{		
+				if(strlistcnt3 > 0){
+					ds_DETAIL_3.SetColumn(k,"ITEM_OUT","적합");
+				} else {
+					ds_DETAIL_3.SetColumn(k,"ITEM_OUT","해당없음");
+				}
+			}			
+		}
+		// 2009-11-11 사용전검사 접수관리에서 체크된 값만 적합처리 <-
+							
+		//유선 설비
+		var work_etc = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row,"WORK_ITEM_ETC");
+		
+		if(IndexOf(work_etc,"(") >= 0)
+		{
+			var strwork_etc = SubStr(work_etc,IndexOf(work_etc,"("),IndexOf(work_etc,")"));
+			
+			strwork_etc = strwork_etc.replace("(","").replace(")","");
+			var strlist_etc = Split2(strwork_etc+",",",",",");		
+			
+			for(i = 0; i < Length(strlist_etc); i++)
+			{
+				var strlist_etc2 = strlist_etc[i].replace("[","").replace("]","");
+				
+				if(this.tbMain.tab5.Tab0.tab2.Checkbox0.Text == strlist_etc2)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox0.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox1.Text == strlist_etc2)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox1.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox2.Text == strlist_etc2)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox2.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox3.Text == strlist_etc2)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox3.Value = 1;
+				}
+			}
+		}
+		
+		// 2009-12-18 종합유선방송전송선로설비공사 --> 방송공동수신변경 ->
+		if(SubStr(work_etc,0,4)=="방송공동"){
+			strlistcnt2 = strlistcnt2 + 1;		// 신규 or 저장된문서
+		}
+		
+		var ds_detail2_name ="";
+		
+		for(j=0 ; j < ds_DETAIL_2.rowcount; j++){
+			if(ds_DETAIL_2.GetColumn(j,"ITEM_OUT") == "")			
+			{
+				if(strlistcnt2 > 0){
+				
+					ds_detail2_name = ds_DETAIL_2.GetColumn(j,"CLASS_NAME");
+					
+					if (IndexOf(ds_detail2_name,"공통사항") > 0){	
+						if (this.tbMain.tab5.Tab0.tab2.Checkbox0.Value == "1" ||
+						   this.tbMain.tab5.Tab0.tab2.Checkbox1.Value == "1"  ||
+						   this.tbMain.tab5.Tab0.tab2.Checkbox2.Value == "1"  ||
+						   this.tbMain.tab5.Tab0.tab2.Checkbox3.Value == "1" ){
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");		
+						} else {
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");	
+						}
+					} else if (
+								(IndexOf(ds_detail2_name,"지상파TV") > 0) || 
+								(IndexOf(ds_detail2_name,"위성방송") > 0) || 
+								(IndexOf(ds_detail2_name,"FM라디오방송") > 0) 
+							) {	
+							
+						if(this.tbMain.tab5.Tab0.tab2.Checkbox0.Value == "1" ||
+						   this.tbMain.tab5.Tab0.tab2.Checkbox1.Value == "1" ||
+						   this.tbMain.tab5.Tab0.tab2.Checkbox2.Value == "1" ){						
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");	
+						} else {
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");	
+						}
+									
+					} else if (IndexOf(ds_detail2_name,"종합유선방송설비") > 0){
+						if (this.tbMain.tab5.Tab0.tab2.Checkbox3.Value == "1"){
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");
+						} else {
+							ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");
+						}
+					}					
+				} else {				
+					ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");
+				}
+			}			
+		}
+
+		//<-
+		
+		bas = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row,"ETC_INSP_BAS");
+		etc = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row,"WORK_ITEM_ETC");
+				
+		fnInitButtonBar();
+		
+		
+		var SERVER_YN = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_YN");
+		var SERVER_ADDR = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_ADDR");
+		
+		fnControlState(true, this.tbMain.tab1, "btnFileInsert,btnReperSave,btnFileRemove,grdList");
+		
+		if(SERVER_YN == "1" && SERVER_ADDR != "")
+		{
+			
+			//fnControlState(true, this.tbMain.tab1, "btnFileInsert,btnReperSave,btnFileRemove,grdList");
+			fnControlState(true, this.tbMain.tab5, "GroupWare");
+			this.tbMain.tab5.GroupWare.Visible = true;
+					
+			fnVisibleGW(); //전자결재 토글
+			
+		}else{
+		
+			//fnControlState(false, this.tbMain.tab1, "btnFileInsert,btnReperSave,btnFileRemove,grdList");
+			fnControlState(false, this.tbMain.tab5, "GroupWare");
+			this.tbMain.tab5.GroupWare.Visible = false;
+		}
+		if(global.g_Sgg_cd == "gncw" || global.g_Sgg_cd == "gncwec" || global.g_Sgg_cd == "gncwhp" || global.g_Sgg_cd == "gncwhw" || global.g_Sgg_cd == "gncwjh" || global.g_Sgg_cd == "gncwss")
+		{
+			//fnControlState(false, this.tbMain.tab1, "btnFileInsert,btnReperSave,btnFileRemove,grdList");
+			fnControlState(false, this.tbMain.tab5, "GroupWare");
+			this.tbMain.tab5.GroupWare.Visible = false;
+		}
+		
+		//착공전설계도 번호에 의해 버튼 보이고 안보이고.
+		var SW_BEF_REPO_DELINUM = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row,"SW_BEF_REPO_DELINUM");
+		if( !fnEmpty(SW_BEF_REPO_DELINUM) ){
+			this.btn_const.Visible = true;
+		}
+		this.tbMain.tab5.tabIndex = 0;
+		this.tbMain.tab5.Tab0.tabIndex = 0;
+		
+		fnDeliNum_View(); //사용전검사 필증발급 번호 VIEW
+		
+		return;
+	}
+	
+	if(svcid == "DELI_CODE"){
+		this.tbMain.tab5.USEBEFINSP_DELINUM = dsDELI.GetColumn(dsDELI.row,"DELI_NUM")+"호";
+		this.tbMain.tab5.DELI_DT = AddDate(Today(),0);
+		return;
+	}	
+	
+	if (svcid == "DELETE")
+	{
+		//this.Reload();
+		tbMain.tab1.grdList.Redraw(true);
+		alert('삭제되었습니다.');
+		return;
+	}
+	
+	if (svcid == "CONFIRM")
+	{
+		var sendSysID = dsGroupWare.GetColumn(0, "SEND_SYS_ID");
+		var sendUserID = dsGroupWare.GetColumn(0, "OFFI_ID");
+		var sendUserEmail = dsGroupWare.GetColumn(0, "E_MAIL");
+		var sendOrgName = dsGroupWare.GetColumn(0, "SIGUNGU_NM");
+		var recvSysID = dsGroupWare.GetColumn(0, "RECV_SYS_ID");
+		var recvUserID = dsGroupWare.GetColumn(0, "RECV_ID");
+		var admNum = ds_PT_UB_USEBEFORE.GetColumn(0, "RECV_NUM");
+		var scSIDO_CODE = dsGroupWare.GetColumn(0, "SIDO_CODE");
+		var scSIGUNGU_CODE = dsGroupWare.GetColumn(0, "SIGUNGU_CODE");
+		var scSERVER_ADDR = dsGroupWare.GetColumn(0, "SERVER_ADDR");
+		var scGRPWARE_MODULE_TYPE = dsGroupWare.GetColumn(0, "GROUPWARE_MODULE_TYPE");
+		var scAPPL_GUBUN = dsGroupWare.GetColumn(0, "APPL_GUBUN");
+		
+		var sArgs = "sendSysID=" + quote(sendSysID);
+			sArgs += " sendUserID=" + quote(sendUserID);
+			sArgs += " sendUserEmail=" + quote(sendUserEmail);
+			sArgs += " sendOrgName=" + quote(sendOrgName);
+			sArgs += " recvSysID=" + quote(recvSysID);
+			sArgs += " recvUserID=" + quote(recvUserID);
+			sArgs += " admNum=" + quote(admNum);
+			sArgs += " scSIDO_CODE=" + quote(scSIDO_CODE);
+			sArgs += " scSIGUNGU_CODE=" + quote(scSIGUNGU_CODE);
+			sArgs += " scServerAddr=" + quote(scSERVER_ADDR);
+			sArgs += " scGrpWareModule=" + quote(scGRPWARE_MODULE_TYPE);
+			sArgs += " scAPPL_GUBUN=" + quote(scAPPL_GUBUN);
+		
+		var sTid = "GROUP_CODE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=GroupWareMgr";
+		var sInDs = "";
+		var sOutDs = "Dataset0=output";
+		var sCallBack = "fn_CallBack";
+		
+		if (recvUserID =="" || recvUserID ="null" || recvUserID ="NULL"){
+			alert("사용자정보변경->전자결재ID를 입력해 주십시오");
+			return;
+		}
+		
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	
+	if (svcid == "GROUP_CODE")
+	{
+		alert("처리되었습니다.");
+		return;
+	}
+	
+	if (svcid == "DELINUM_VIEW"){
+		if (ds_DELINUM_VIEW.GetColumn(0, "LAST_DOC") == ""){
+			this.tbMain.tab5.LAST_DOC.Text ="등록된필증번호: 0";
+		} else{
+			this.tbMain.tab5.LAST_DOC.Text ="등록된필증번호: "+ds_DELINUM_VIEW.GetColumn(0, "LAST_DOC");
+		}
+		if (ds_DELINUM_VIEW.GetColumn(0, "AUTO_DOC") ==""){
+			this.tbMain.tab5.AUTO_DOC.Text ="등록될필증번호: 0";
+		} else{
+			this.tbMain.tab5.AUTO_DOC.Text ="등록될필증번호: "+ds_DELINUM_VIEW.GetColumn(0, "AUTO_DOC");
+		}
+	}
+	
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+	
+}
+
+function fnVisibleGW(){
+//alert("33333");
+	if (this.PROC_STE.Value == "3"){
+		this.tbMain.tab5.GroupWare.Visible  = true;
+	}  else {
+		this.tbMain.tab5.GroupWare.Visible = false;
+	}
+}
+
+function fnVisibleGW2(){
+//alert("222222");
+	if (this.PROC_STE.Value == "2"){
+		this.tbMain.tab5.GroupWare.Visible  = true;
+	}  else {
+		this.tbMain.tab5.GroupWare.Visible = false;
+	}
+}
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+	global.gv_WorkFlag = global.gv_MODIFY;
+
+	var sArgs = "scRECV_NUM="+scRECV_NUM+base_code;
+		
+	var sTid = "GET_CODE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrC";
+	var sInDs = "";
+	var sOutDs = "ds_PT_UB_USEBEFORE=output ds_DETAIL_1=output2 ds_DETAIL_2=output3 ds_DETAIL_3=output4 dsPT_UB_MEMO=output5 ds_PT_UB_FILE=output6 dsPT_S_SYSVAR_MASTER=output7 ds_COMPANY_KEY=output8  ds_CONSTRUCTION_KEY=output9  ds_PT_UB_EQUIPMENT=output10  ";
+	var sCallBack = "fn_CallBack";
+
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnRemove()
+{
+	
+	
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	ds_before.ApplyChange();
+	var nCount = fnRowRemove(ds_before);
+	
+	alert(nCount);
+	
+	if(nCount == 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+	
+	var sArgs = "";	
+	var sTid = "DELETE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+	var sInDs = "ds_PT_UB_USEBEFORE=ds_PT_UB_USEBEFORE:u";
+	var sOutDs = "ds_PT_UB_USEBEFORE=ds_PT_UB_USEBEFORE";
+	var sCallBack = "fn_CallBack";
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+	
+}
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+   http.timeout = 600;
+
+	var sArgs = "workMODE=ALL scRECV_NUM="+scRECV_NUM+" "+base_code;
+	var sTid = "save";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+	var key = ds_PT_UB_EQUIPMENT.GetColumn(0,"EQU_CMD");
+	
+	if (key == "I"){				
+		fnEquipmentCUD(); // 기자재
+	} 
+
+	var sInDs = "ds_PT_UB_USEBEFORE=ds_PT_UB_USEBEFORE:U ds_DETAIL_1=ds_DETAIL_1:U ds_DETAIL_2=ds_DETAIL_2:U ds_DETAIL_3=ds_DETAIL_3:U ds_PT_UB_EQUIPMENT=ds_PT_UB_EQUIPMENT:U";
+
+	var sOutDs = "ds_SMS=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	
+}
+
+function fnEquipmentCUD(){
+
+	var NO_CA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NO_CA");
+	var NM_CA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NM_CA");
+	var SCOPE_CA = ds_PT_UB_EQUIPMENT.GetColumn(0,"FREQUENCY_SCOPE_CA");
+	var TYPE_CA = ds_PT_UB_EQUIPMENT.GetColumn(0,"WIRE_TYPE_CA");
+	var NO_MA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NO_MA");
+	var NM_MA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NM_MA");
+	var SCOPE_MA = ds_PT_UB_EQUIPMENT.GetColumn(0,"FREQUENCY_SCOPE_MA");
+	var TYPE_MA = ds_PT_UB_EQUIPMENT.GetColumn(0,"WIRE_TYPE_MA");
+	var NO_SMA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NO_SMA");
+	var NM_SMA = ds_PT_UB_EQUIPMENT.GetColumn(0,"TYPE_PROC_NM_SMA");
+	var SCOPE_SMA = ds_PT_UB_EQUIPMENT.GetColumn(0,"FREQUENCY_SCOPE_SMA");
+	var TYPE_SMA = ds_PT_UB_EQUIPMENT.GetColumn(0,"WIRE_TYPE_SMA");
+	
+	if (NO_CA == "" &&  NM_CA == "" && SCOPE_CA == "" && TYPE_CA == "" && 
+		NO_MA == "" &&  NM_MA == "" && SCOPE_MA == "" && TYPE_MA == "" &&
+		NO_SMA == "" &&  NM_SMA == "" && SCOPE_SMA == "" && TYPE_SMA == ""){
+		ds_PT_UB_EQUIPMENT.ClearData();
+	} else {
+		//ds_PT_UB_EQUIPMENT.FireEvent = false;		
+		ds_PT_UB_EQUIPMENT.AddRow();
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "RECV_NUM", ds_PT_UB_EQUIPMENT.GetColumn(0,"RECV_NUM"));	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "SIDO_CODE", ds_PT_UB_EQUIPMENT.GetColumn(0,"SIDO_CODE"));	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "SIGUNGU_CODE", ds_PT_UB_EQUIPMENT.GetColumn(0,"SIGUNGU_CODE"));	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "CIV_RECV_NUM", ds_PT_UB_USEBEFORE.GetColumn(0,"CIV_RECV_NUM"));			
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NO_CA", NO_CA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NM_CA", NM_CA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "FREQUENCY_SCOPE_CA", SCOPE_CA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "WIRE_TYPE_CA", TYPE_CA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NO_MA", NO_MA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NM_MA", NM_MA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "FREQUENCY_SCOPE_MA", SCOPE_MA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "WIRE_TYPE_MA", TYPE_MA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NO_SMA", NO_SMA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "TYPE_PROC_NM_SMA", NM_SMA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "FREQUENCY_SCOPE_SMA", SCOPE_SMA);	
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "WIRE_TYPE_SMA", TYPE_SMA);		
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "INS_DT", ds_PT_UB_EQUIPMENT.GetColumn(0,"INS_DT"));		
+		ds_PT_UB_EQUIPMENT.SetColumn(ds_PT_UB_EQUIPMENT.row, "UPD_DT", ds_PT_UB_EQUIPMENT.GetColumn(0,"UPD_DT"));		
+		//ds_PT_UB_EQUIPMENT.FireEvent = true;	
+	}
+}
+
+
+function fnCancel()
+{
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	var sCode = "";
+	var sKEY = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row, "RECV_NUM");
+	var sNAPPL_YN = ds_PT_UB_USEBEFORE.GetColumn(ds_PT_UB_USEBEFORE.row, "NAPPL_YN");
+
+	if( sNAPPL_YN == "1" ){
+		sCode = fnCreateDialog("ub::UbMgrOkReportDlg.xml", "");
+	}else if( sNAPPL_YN == "2" ){
+		sCode = fnCreateDialog("ub::UbMgrNoReportDlg.xml", "");
+	}else{
+		alert("적합/부적합 상태코드가 없습니다.");
+		return;
+	}
+	
+	if (sCode == "RPT1")//사용전검사 필증교부 알림
+	{	
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/ConComCertiAlarm.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)ConComCertiAlarm";
+		var	spCount = " _spCount=odi.Q)ConComCertiAlarm.pcount=3";
+		var sParam = " _sParam=odi.Q)ConComCertiAlarm.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)ConComCertiAlarm.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)ConComCertiAlarm.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+/*
+	} else if (sCode == "RPT6")  //내부건의서
+	{	
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/ConComCertiAlarm.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)ConComCertiAlarm";
+		var	spCount = " _spCount=odi.Q)ConComCertiAlarm.pcount=3";
+		var sParam = " _sParam=odi.Q)ConComCertiAlarm.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)ConComCertiAlarm.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)ConComCertiAlarm.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+*/		
+	}
+	else if (sCode == "RPT2")//사용전검사 부실시공업체 알림
+	{	
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/DefConsComAlarm.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)DefConsComAlarm";
+		var	spCount = " _spCount=odi.Q)DefConsComAlarm.pcount=3";
+		var sParam = " _sParam=odi.Q)DefConsComAlarm.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)DefConsComAlarm.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)DefConsComAlarm.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	else if (sCode == "RPT3")//사용전검사 부적합에 따른 보안통보
+	{	
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/DefConsComSupAlarm.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)DefConsComSupAlarm";
+		var	spCount = " _spCount=odi.Q)DefConsComSupAlarm.pcount=3";
+		var sParam = " _sParam=odi.Q)DefConsComSupAlarm.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)DefConsComSupAlarm.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)DefConsComSupAlarm.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	else if (sCode == "RPT4")//필증 교부
+	{	
+		var sysvar_result = "";
+		
+		if(ds_SYSVAR_RESULT.GetRowCount() > 0 ){
+		 sysvar_result = ds_SYSVAR_RESULT.GetRowCount();
+		}
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/InvestR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)InvestR";
+		var	spCount = " _spCount=odi.Q)InvestR.pcount=4";
+		var sParam = " _sParam=odi.Q)InvestR.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)InvestR.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)InvestR.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		// 2009-10-07 pt_r_sysvar_master 관인 미등록된 내용이 있어도 내용은 보여 주도록 수정
+		// 이미 등록된 사용자 계정이 삭제되었을 경우 등록된 내용이 안 나타남
+			sParam += "||odi.Q)InvestR.args4=SYSVAR_CNT=" + sysvar_result;
+
+		if (sysvar_result == 0){
+			alert("해당 지자체의 관인을 등록해 주십시오");
+		}
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+		
+		fn_InvestR(sKEY,global.g_Sd_cd,global.g_Sgg_cd);
+	}
+	else if (sCode == "RPT5")//사용전검사 결과 보고서
+	{	
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/UBInvestResultNotiR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)UbInvestResultNotiR,Q)UBCertTable";
+		var	spCount = " _spCount=odi.Q)UbInvestResultNotiR.pcount=3";
+		var sParam = " _sParam=odi.Q)UBCertTable.pcount=3";
+			sParam += "||odi.Q)UbInvestResultNotiR.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)UbInvestResultNotiR.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)UbInvestResultNotiR.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+			sParam += "||odi.Q)UBCertTable.args1=RECV_NUM=" + sKEY;
+			sParam += "||odi.Q)UBCertTable.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)UBCertTable.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	else if (sCode == "RPT6")//사용전검사 내부보고서
+	{	
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/UBInvestInner.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)UbInvestInner";
+		var	spCount = " _spCount=odi.Q)UbInvestInner.pcount=3";
+		var sParam = " _sParam=odi.Q)UbInvestInner.args1=RECV_NUM=" + sKEY;			
+			sParam += "||odi.Q)UbInvestInner.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)UbInvestInner.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+	else if (sCode == "RPT7")//사용전검사 대장
+	{	
+		
+		var nCount = 0;
+		var n_key = "";
+		for (var nLoop = ds_PT_UB_USEBEFORE.rowcount - 1; nLoop >= 0; nLoop--)
+		{
+			if (ds_PT_UB_USEBEFORE.GetColumn(nLoop, "CHECKER") == "1")
+			{
+				n_key += "'"+ds_PT_UB_USEBEFORE.GetColumn(nLoop, "RECV_NUM")+"',";				
+			}
+		}		
+		
+		if(n_key == ""){
+			alert("출력하실 내용을 선택 하여 주시기 바랍니다.");
+			return;
+		}
+		
+		sKEY = SubStr(n_key,0,Length(n_key)-1);
+		
+		
+		var sViewer = "_sViewer=''";
+		var sReportname =  " _sReportname=connection.reportname=/BeforeInvest/UBInvestResultStR.ozr";
+		var sOdiNames = " _sOdiNames=odi.odinames=Q)UbInvestResultStR";
+		var	spCount = " _spCount=odi.Q)UbInvestResultStR.pcount=3";
+		var sParam = " _sParam=odi.Q)UbInvestResultStR.args1=RECV_NUM=" + sKEY;			
+			sParam += "||odi.Q)UbInvestResultStR.args2=SIDO_CODE=" + global.g_Sd_cd;
+			sParam += "||odi.Q)UbInvestResultStR.args3=SIGUNGU_CODE=" + global.g_Sgg_cd;
+		
+		var sRet = fnCreateDialog("bas::frmReport.xml", sViewer + sReportname + sOdiNames + spCount + sParam);	
+	}
+}   
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업등록접수현황");
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert)
+	{
+		fnInsert();
+	}
+	else if (obj == divButtonBar.btnModify)
+	{
+		fnModify();
+	}
+	else if (obj == divButtonBar.btnRemove)
+	{
+		fnRemove();
+	}
+	else if (obj == divButtonBar.btnSave)
+	{
+		fnSave();
+	}
+	else if (obj == divButtonBar.btnReport)
+	{
+		fnReport();
+	}
+	else if (obj == divButtonBar.btnExcel)
+	{
+		fnExcel();
+	}
+	else if (obj == divButtonBar.btnCancel)
+	{
+		fnCancel();
+	}
+	else if (obj == divButtonBar.btnList)
+	{
+		fnList();
+	}
+	else
+	{
+		alert('개발자오류');
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+//리스트 이동
+//////////////////////////////////////////////////////////////////
+function fnList(){
+	var sArgs = fnSearchInit("pSIDO_CODE,pSIGUNGU_CODE,pscOPE_NAME,pscCIV_RECV_NUM,pscRECV_ST,pscRECV_ET,pscOK,pscNO,pscSIDO_CODE,pscGUGUN_CODE,pscINSP_SPOT_NM,pscAPPLPER_NM");
+	sArgs += " pscMode=T _sKEY1="+_sKEY1+" _sKEY2="+_sKEY2;
+	
+	if( pscScreen =="UBInvestResultSt")
+		gfnCreateNewWindow("ub::UBInvestResultSt", "ub::UBInvestResultSt.xml", sArgs);
+	else
+		gfnCreateNewWindow("ub::UBInvestMgr", "ub::UBInvestMgr.xml", sArgs);
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	//else if(nChar == "55" && bControl == true) fnSave();
+	//else if(nChar == "88" && bControl == true) Close();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") 
+	{
+		var sCompnentname = GetCurrentComponent(true);
+		if(sCompnentname.GetType() == "TextArea") return;
+		GetNextComponent(true).SetFocus();
+	}
+	else if(nChar == "120") 
+	{
+		var nTabIndex = tbMain.TabIndex;
+		
+		if(nTabIndex == tbMain.TabCount - 1)
+			tbMain.TabIndex = 0;
+		else
+			tbMain.TabIndex = nTabIndex + 1;
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+    var AREA_URL = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_ADDR"); //2009-09-13
+	var sArgs = "fName="+quote(ds_PT_UB_FILE.GetColumn(ds_PT_UB_FILE.row,"FILE_NM"));
+	    sArgs += " fileSize="+ds_PT_UB_FILE.GetColumn(ds_PT_UB_FILE.row,"FILE_SIZE");
+	    sArgs += " recv_num="+scRECV_NUM;
+	    sArgs += " sido_code="+global.g_Sd_cd;
+	    sArgs += " sigungu_code="+global.g_Sgg_cd;
+	    sArgs += " sfName="+quote(ds_PT_UB_FILE.GetColumn(ds_PT_UB_FILE.row,"SYS_FILE_NAME"));
+	    sArgs += " sigungu_server="+AREA_URL;  //2009-09-13
+	    
+
+	fnCreateDialog("./Download.xml", sArgs);
+
+}
+
+
+function fnReperDetailButton_Click(obj)
+{	
+
+	fileopen = true;
+	this.tbMain.tab1.FileDlg.Open();
+	//f_path = this.tbMain.tab1.FileDlg.FilePath + "\\" + this.tbMain.tab1.FileDlg.FileName;
+	f_name = this.tbMain.tab1.FileDlg.FileName;
+	f_size = this.tbMain.tab1.File0.getLength(this.tbMain.tab1.FileDlg.FileName); 
+	this.tbMain.tab1.FileTxt = f_path;
+	fileopen = false;	
+
+	// 레코드를 추가한다.
+	if (dsUploadFile.rowcount == 0)
+		var row = dsUploadFile.AddRow();
+	
+	f_path = this.tbMain.tab1.FileDlg.FilePath;
+	//f_name = this.tbMain.tab1.FileDlg.FileName;
+	//f_size = this.tbMain.tab1.File0.getLength(this.tbMain.tab1.FileDlg.FileName); 
+	
+	this.tbMain.tab1.File0.FileName = f_path + "\\" + f_name;
+	
+	this.tbMain.tab1.File0.Open("rb"); 
+	
+	f_size = this.tbMain.tab1.File0.GetLength(); 
+	
+	var blobbuffer = this.tbMain.tab1.File0.ReadBinary();
+
+	if(blobbuffer == "NULL")	
+	{ 
+		alert("파일 생성에 실패하였습니다.");
+		return;
+	}
+	
+	this.tbMain.tab1.FileTxt = f_path + "\\" + f_name;
+	
+	this.tbMain.tab1.File0.Close();
+	
+	//2010-05-04 
+	var strArr = Split(f_name, ".");//2010-05-04 
+	var fstr = "."+strArr[strArr.length()-1];//2010-05-04 
+	f_sys_name = global.g_Sgg_cd + "_" + Timem() + fstr ; // 현재이름을 바꾼다.시군구코드+현재시분초+ 파일이름확장자 22byte  2010-05-04 
+	
+	// 읽은 파일 내용을 dataset에 저장한다.
+	dsUploadFile.SetColumn(0, "sys_file_name", f_sys_name);	//2010-05-04 
+	
+	dsUploadFile.SetColumn(0, "filesize", f_size);
+	dsUploadFile.SetColumn(0, "file_name", f_name);	
+	dsUploadFile.SetColumn(0, "path", f_path);
+	dsUploadFile.SetColumn(0, "content", blobbuffer);
+	
+//ds_PT_UB_FILE.SetColumn(ds_PT_UB_FILE.row, "FILE_NAME", f_name + "." + sExt[length(sExt) - 1]);	
+}
+
+function fnFileSaveButton_Click(obj)
+{	
+	var ret;
+	var str_param = f_name;
+	var errir;
+	
+	ds_PT_UB_FILE.AddRow();
+
+	//var dir_path = "D:\\work\\attache";
+	//var dir_path = Config.props.get("AREA_FILE_DIR")+"usebefore/"+global.g_Sd_cd+"/"+global.g_Sgg_cd+"/"+scRECV_NUM;
+	//"/data/webroot/ICCSM/usebefore/"+global.g_Sd_cd+"/"+global.g_Sgg_cd+"/"+scRECV_NUM;
+	//ret = gfn_FileWrite(this.tbMain.tab1.multipart_http0,f_path, str_param, 0, "prog_bar", "", global.g_Sd_cd,global.g_Sgg_cd,"usebefore",scRECV_NUM,dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_ADDR"));
+	//Transaction('fileup1',global.g_ext_iccs_url + 'xml/ub/UBInvestFileUpLoad.jsp' + global.g_Sd_cd + "/"+global.g_Sgg_cd+"/"+scRECV_NUM;','input=dsUploadFile','','','tr_result');
+    //차후에 테이블에서 지역 코드를 비교 하여 서버 정보를 가져 오도록 수정 
+    var AREA_URL = dsPT_S_SYSVAR_MASTER.GetColumn(0,"SERVER_ADDR"); //2009-09-13
+    
+	//trace("---> AREA_URL = " + AREA_URL);
+	//trace(ds_PT_UB_FILE.SaveXML());
+
+    //첨부 파일 저장 JSP 
+	fnFileUpLoad(AREA_URL);
+	ds_PT_UB_FILE.SetColumn(ds_PT_UB_FILE.row,"RECV_NUM",scRECV_NUM);	
+	ds_PT_UB_FILE.SetColumn(ds_PT_UB_FILE.row,"FILE_NM",f_name);	
+	//2010-05-04 
+	ds_PT_UB_FILE.SetColumn(ds_PT_UB_FILE.row,"SYS_FILE_NAME",f_sys_name);			
+	
+	ds_PT_UB_FILE.SetColumn(ds_PT_UB_FILE.row,"FILE_SIZE",f_size);
+		
+	fnFileSave();
+}
+
+function fnFileDeleteButton_Click(obj)
+{
+	if(!Confirm('선택하신 내용을 삭제하시겠습니까?')) return;
+	
+	ds_PT_UB_FILE.ApplyChange();
+	var nCount = fnGridRowRemove(ds_PT_UB_FILE);
+		
+	if(nCount == 0)
+	{
+		alert('삭제할 데이터를 선택하세요.');
+		return;
+	}
+		
+	var sArgs = "workMODE=FILE "+base_code;	
+	var sTid = "DELETE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+	var sInDs = "ds_PT_UB_FILE=ds_PT_UB_FILE:u";
+	var sOutDs =  "";//ds_PT_UB_FILE=output";
+	var sCallBack = "fn_CallBack";
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnFileUpLoad(AREA_URL)
+{
+    
+	var sArgs = "SIDO_CODE="+global.g_Sd_cd+"&SIGUNGU_CODE="+global.g_Sgg_cd+"&AREA_URL="+AREA_URL;
+	var sTid = "FILE_UPLOAD";
+	var sUrl = global.g_ext_iccs_url + "xml/ub/UBInvestFileUpLoad.jsp?"+sArgs;
+	var sInDs = "input=dsUploadFile";
+	var sOutDs = "";
+	var sCallBack = "tr_result";
+	Transaction(sTid, sUrl, sInDs, sOutDs, '', sCallBack);
+}
+
+function tr_result(serid,errid,errmsg)
+{
+	//trace("serid = "+serid+", errid="+errid+", errmsg="+errmsg);
+	if(trim(serid) == "FILE_UPLOAD")
+	{
+		//trace(http.recvhttpstr);
+		if(errid == "0")		
+		{		
+			//alert('저장되었습니다.');			
+		}
+		else
+			alert(errmsg);
+	}  //ene t_fileup
+	
+	return errid;
+}
+
+
+function fnFileSave()
+{
+	var sArgs = "workMODE=FILE scRECV_NUM="+scRECV_NUM+" "+base_code;
+	var sTid = "FILE_SAVE";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+	var sInDs = "ds_PT_UB_FILE=ds_PT_UB_FILE:u";
+	var sOutDs = ""; // 저장된내용이 안나옮  2009-12-22수정 "ds_PT_UB_FILE=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+/////////////////////////////////////////////////////////////////
+// Memo Detail Event
+//////////////////////////////////////////////////////////////////
+function fnMemoButton_Click(obj)
+{
+	var sDtWorkFlag;
+	
+	if(obj == tbMain.tpMemo.btnMemoInsert)
+	{
+		var sTime = GetDate();
+		sDtWorkFlag = global.gv_INSERT;
+		dsPT_UB_MEMO.AddRow();
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "SIDO_CODE", global.g_Sd_cd);
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "SIGUNGU_CODE", global.g_Sgg_cd);
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "RECV_NUM", scRECV_NUM);
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "SEQ", dsPT_UB_MEMO.rowcount);
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "WRT_NAME", global.g_Name);
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "WRT_TIME", Mid(sTime, 8, 2) + Mid(sTime, 10, 2));
+		dsPT_UB_MEMO.SetColumn(dsPT_UB_MEMO.row, "MEMO_DT", Today());
+
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoModify)
+	{
+		sDtWorkFlag = global.gv_MODIFY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoRemove)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		dsPT_UB_MEMO.ApplyChange();
+		var nCount = fnGridRowRemove(dsPT_UB_MEMO);
+		
+		if(nCount == 0)
+		{
+			alert('삭제할 데이터를 선택하세요.');
+			return;
+		}
+		
+		var sArgs = "workMODE=MEMO"+base_code;
+		var sTid = "MEMO_DELETE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+		var sInDs = "dsPT_UB_MEMO=dsPT_UB_MEMO:u";
+		var sOutDs = "";// 저장된내용이 안나옮  2009-12-22수정  "dsPT_UB_MEMO=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoCancel)
+	{
+		if (dsPT_UB_MEMO.GetRowType(dsPT_UB_MEMO.row) == "insert")
+			dsPT_UB_MEMO.DeleteRow(dsPT_UB_MEMO.row);
+		else
+			fnRejectChange(dsPT_UB_MEMO);
+		
+		sDtWorkFlag = global.gv_INQUIRY;
+		fnInitMemoGroup(sDtWorkFlag);
+	}
+	else if (obj == tbMain.tpMemo.btnMemoSave)
+	{
+		sDtWorkFlag = global.gv_INQUIRY;
+		
+		var sArgs = "workMODE=MEMO";	
+		var sTid = "MEMO_SAVE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=UBInvestMgrCUD";
+		var sInDs = "dsPT_UB_MEMO=dsPT_UB_MEMO:u";
+		var sOutDs = "";// 저장된내용이 안나옮  2009-12-22수정     dsPT_UB_MEMO=output";
+		var sCallBack = "fn_CallBack";
+		
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+	}
+}
+
+function fnInitMemoGroup(sDtWorkFlag)
+{
+	if(sDtWorkFlag == global.gv_INQUIRY)
+	{
+		fnControlState(false, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT,WRT_NAME,WRT_TIME");
+		fnControlState(true, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = true;
+		tbMain.tpMemo.btnMemoModify.Enable = true;
+		tbMain.tpMemo.btnMemoRemove.Enable = true;
+		tbMain.tpMemo.btnMemoSave.Enable = false;
+		tbMain.tpMemo.btnMemoCancel.Enable = false;
+	}
+	else if(sDtWorkFlag == global.gv_INSERT)
+	{
+		fnControlState(true, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT,WRT_NAME,WRT_TIME");
+		fnControlState(false, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = false;
+		tbMain.tpMemo.btnMemoModify.Enable = false;
+		tbMain.tpMemo.btnMemoRemove.Enable = false;
+		tbMain.tpMemo.btnMemoSave.Enable = true;
+		tbMain.tpMemo.btnMemoCancel.Enable = true;
+	}
+	else if(sDtWorkFlag == global.gv_MODIFY)
+	{
+		fnControlState(true, tbMain.tpMemo, "MEMO_DT,MEMO_CONTENT,WRT_NAME,WRT_TIME");
+		fnControlState(false, tbMain.tpMemo, "grdMemo");
+		
+		tbMain.tpMemo.btnMemoInsert.Enable = false;
+		tbMain.tpMemo.btnMemoModify.Enable = false;
+		tbMain.tpMemo.btnMemoRemove.Enable = false;
+		tbMain.tpMemo.btnMemoSave.Enable = true;
+		tbMain.tpMemo.btnMemoCancel.Enable = true;
+	}
+}
+
+
+function fn_Deli_Click(obj,strValue)
+{
+	if(strValue == 1)
+	{
+	  if(this.tbMain.tab5.USEBEFINSP_DELINUM == "")
+	  {
+		var sArgs = base_code+" DELI_ITEM=U";
+			// 201003 수정전.. 확인 후  필증발급일자 기준으로 할지. 시스템 일자(현재일)
+			sArgs += " DELI_DT="+substr(tbMain.tab5.DELI_DT.value,0,4)+" ";			
+		var sTid = "DELI_CODE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=DeliNumMgr";
+		var sInDs = "";
+		var sOutDs = "dsDELI=output";
+		var sCallBack = "fn_CallBack";
+
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+	  }
+	}
+}
+
+//2010-11-02 Lee Seok-Gon 필증발급번호 감소
+function fn_Deli2_Click(obj,strValue)
+{
+
+var LAST_DC = ToNumber(SubStr(ds_DELINUM_VIEW.GetColumn(0, "LAST_DOC"),10,14)); //등록된 필증번호
+var AUTO_DC = ToNumber(SubStr(ds_DELINUM_VIEW.GetColumn(0, "AUTO_DOC"),10,14)); //등록될 필증번호
+var AUTO_DC = AUTO_DC-1;
+
+	if(strValue == 1)
+	{
+	  if(  LAST_DC < AUTO_DC  )
+	  {
+		var sArgs = base_code+" DELI_ITEM=U";
+			sArgs += " DELI_DT="+substr(tbMain.tab5.DELI_DT.value,0,4)+" ";			
+		var sTid = "DELI_CODE";
+		var sUrl = "ICCS::ub/UbAction.do?cmd=DeliNumMgr2";
+		var sInDs = "";
+		var sOutDs = "dsDELI=output";
+		var sCallBack = "fn_CallBack";
+
+		Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);	
+	  }else{
+	    alert("등록된 필증 번호가 있습니다.");
+	  }
+	}
+}
+
+
+/*function fn_OnDeactivate(obj)
+{
+	if (global.gv_WorkFlag == global.gv_INSERT || global.gv_WorkFlag == global.gv_MODIFY)
+	{
+		if(!fileopen){
+			if(!Confirm('입력중인 데이터가 저장되지 않았습니다.\n\n      저장하시겠습니까?')) return;
+			http.sync = true;
+			fnSave();
+		}
+	}
+}*/
+
+
+function fn_Work_itme_etc(obj,strValue)
+{
+
+		if(etc != ""){
+			if(IndexOf(etc,"(") < 0){
+				etc = etc.replace(",","");
+				etc += "(";
+			}
+			else
+			{
+				etc += ",";
+			}
+			
+			etc = Split(etc,")");
+			etc = etc.replace("[","").replace("]","");
+			if(strValue == 1)
+			{
+				etc += obj.Text+",";
+				bas += obj.Text+",";
+				
+				if(this.tbMain.tab5.Tab0.tab2.Checkbox0.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox0.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox1.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox1.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox2.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox2.Value = 1;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox3.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox3.Value = 1;
+				}
+			}
+			else if(strValue == 0)
+			{
+				etc =  Replace(etc,obj.Text+",","");
+				bas =  Replace(bas,obj.Text+",","");
+				
+				if(this.tbMain.tab5.Tab0.tab2.Checkbox0.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox0.Value = 0;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox1.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox1.Value = 0;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox2.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox2.Value = 0;
+				}
+				else if(this.tbMain.tab5.Tab0.tab2.Checkbox3.Text == obj.Text)
+				{
+					this.tbMain.tab5.Tab0.tab2.Checkbox3.Value = 0;
+				}
+			}
+		}
+		
+		if(IndexOf(etc,")") < 0)
+		{
+			etc = etc.replace(",,",",");
+			etc = SubStr(etc,0,Length(etc)-1);
+			etc += ")";
+		}
+		
+		
+	
+	ds_PT_UB_USEBEFORE.SetColumn(ds_PT_UB_USEBEFORE.row,"ETC_INSP_BAS",SubStr(bas,0,Length(bas)-1));
+	ds_PT_UB_USEBEFORE.SetColumn(ds_PT_UB_USEBEFORE.row,"WORK_ITEM_ETC",etc.replace(",(","(").replace("(,","("));
+	
+	var strlistcnt2 = 0;
+	if (this.tbMain.tab5.Tab0.tab2.Checkbox0.Value == "0" &&
+		this.tbMain.tab5.Tab0.tab2.Checkbox1.Value == "0" &&
+		this.tbMain.tab5.Tab0.tab2.Checkbox2.Value == "0" &&
+		this.tbMain.tab5.Tab0.tab2.Checkbox3.Value == "0" ){
+			strlistcnt2 = 0;
+	} else {strlistcnt2 = 1;}
+	
+	for(j=0 ; j < ds_DETAIL_2.rowcount; j++){
+		
+		//if(ds_DETAIL_2.GetColumn(j,"ITEM_OUT") == "")			
+		//{
+			if(strlistcnt2 > 0){
+			
+				ds_detail2_name = ds_DETAIL_2.GetColumn(j,"CLASS_NAME");
+				
+				if (IndexOf(ds_detail2_name,"공통사항") > 0){	
+					if (this.tbMain.tab5.Tab0.tab2.Checkbox0.Value == "1" ||
+					   this.tbMain.tab5.Tab0.tab2.Checkbox1.Value == "1"  ||
+					   this.tbMain.tab5.Tab0.tab2.Checkbox2.Value == "1"  ||
+					   this.tbMain.tab5.Tab0.tab2.Checkbox3.Value == "1" ){
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");		
+					} else {
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");	
+					}
+				} else if (
+							(IndexOf(ds_detail2_name,"지상파TV") > 0) || 
+							(IndexOf(ds_detail2_name,"위성방송") > 0) || 
+							(IndexOf(ds_detail2_name,"FM라디오방송") > 0) 
+						) {	
+						
+					if(this.tbMain.tab5.Tab0.tab2.Checkbox0.Value == "1" ||
+					   this.tbMain.tab5.Tab0.tab2.Checkbox1.Value == "1" ||
+					   this.tbMain.tab5.Tab0.tab2.Checkbox2.Value == "1" ){						
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");	
+					} else {
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");	
+					}
+								
+				} else if (IndexOf(ds_detail2_name,"종합유선방송설비") > 0){
+					if (this.tbMain.tab5.Tab0.tab2.Checkbox3.Value == "1"){
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","적합");
+					} else {
+						ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");
+					}
+				}					
+			} else {				
+				ds_DETAIL_2.SetColumn(j,"ITEM_OUT","해당없음");
+			}
+		//}			
+	}
+	
+}
+
+//전자 결제 연결 모듈
+function fn_GroupWare(obj)
+{
+
+	if(!Confirm('전자 결제로 전송 하시겠습니까?')) return;
+	
+	var sArgs = "scOFFI_ID=" + quote(global.g_User_ID);
+	var sTid = "CONFIRM";
+	var sUrl = "ICCS::ub/UbAction.do?cmd=UBIConfirmMgr";
+	var sInDs = "";
+	var sOutDs = "dsGroupWare=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+function fnBasDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+	if(nCell == "4"){
+	var bas = "";
+	
+		if(obj.id == "detList")
+		{
+		 bas = ds_DETAIL_1.GetColumn(nRow,"BAS");
+		}
+		else if(obj.id == "detList2")
+		{
+		 bas = ds_DETAIL_2.GetColumn(nRow,"BAS");
+		}
+		else if(obj.id == "detList3")
+		{
+		 bas = ds_DETAIL_3.GetColumn(nRow,"BAS");
+		}
+		
+		var bas_text = "";
+		
+		if(IndexOf(bas,"①") > 0){
+			bas = SubStr(bas,0,IndexOf(bas,"①"))+":전기통신기본법(법률 제8974호, 2008. 3.21)"+SubStr(bas,IndexOf(bas,"①")+1,Length(bas));
+		}
+		
+		if(IndexOf(bas,"②") > 0){
+			bas = SubStr(bas,0,IndexOf(bas,"②"))+":전기통신설비의기술기준에관한규정(대통령령 제21098호, 2008.10.29)"+SubStr(bas,IndexOf(bas,"②")+1,Length(bas));
+		}
+		
+		if(IndexOf(bas,"③") > 0){
+			bas = SubStr(bas,0,IndexOf(bas,"③"))+":방송 공동수신비의 설치 기준에 관한 고시(방송통신위원회 고시 제2008-16호, 2008.5.19)"+SubStr(bas,IndexOf(bas,"③")+1,Length(bas));
+		}
+		
+		if(IndexOf(bas,"④") > 0){
+			bas = SubStr(bas,0,IndexOf(bas,"④"))+":접지설비 . 구내통신설비.선로 및 통신 공통구등에 대한 기술기준(전파연구소고시 제2008-60호, 2008.12.17)"+SubStr(bas,IndexOf(bas,"④")+1,Length(bas));
+		}
+		
+		if(IndexOf(bas,"⑤") > 0){
+			bas = SubStr(bas,0,IndexOf(bas,"⑤"))+":단말장치기술기준(전파연구소고시 제2008-59호, 2008.12.17)"+SubStr(bas,IndexOf(bas,"⑤")+1,Length(bas));
+		}
+						fnCreateDialog("BasDlg.xml", "scBas="+quote(bas.replace("o <","<").replace("o<","<")));	
+	}
+	
+}
+
+//업체조회
+function fnGovConnect(obj)
+{
+	//var _sKey1 = ds_COMPANY_KEY.GetColumn(ds_COMPANY_KEY.row,"TMP_WRT_NUM");
+	//var sArgs = "_sKey1="+_sKey1+" _popup=T";
+	//fnCreateDialog("st::RegListMgrC.xml", sArgs);
+	
+	var sKEY1 = ds_COMPANY_KEY.GetColumn(ds_COMPANY_KEY.row,"COI_WRT_NUM");
+
+	var sArgs = "_sURL="+global.g_ext_iccs_url+"reg/RegAction.do?cmd=RegMgrView";
+	//var sArgs = "_sURL=http://99.1.5.75/reg/RegAction.do?cmd=RegMgrView";
+	//var sArgs = "_sURL=http://localhost/iccsmWebNew/reg/RegAction.do?cmd=RegMgrView";
+		sArgs += "&coi_wrt_num=" + sKEY1;
+    var sReturn = fnCreateDialog("bas::frmWebRegList.xml", sArgs);
+}
+
+//착공전 설계조회
+function Button0_OnClick(obj)
+{
+	var _sKey1 = ds_CONSTRUCTION_KEY.GetColumn(ds_COMPANY_KEY.row,"RECV_NUM");
+	var sArgs =  "scRECV_NUM=" + _sKey1;
+	fnCreateDialog("ub::BeforeViewMgr.xml",sArgs);
+	//fnCreateDialog("ub::BeforeNapplViewMgr_.xml",sArgs);
+	//fnCreateDialog("ub::UsebeforeFlSchMgr.xml",sArgs);
+	//fnCreateDialog("ub::UBReceiptMgrC.xml",sArgs);
+}
+
+function fnDetail_onCellClick(obj, nRow, nCell, nX, nY) {	
+	var BAS = this.ds_DETAIL_1.GetColumn(nRow, "BAS");
+	var CONT = this.ds_DETAIL_1.GetColumn(nRow, "CONT");
+	
+	if(obj == "detList") {
+		BAS = this.ds_DETAIL_1.GetColumn(nRow, "BAS");
+		CONT = this.ds_DETAIL_1.GetColumn(nRow, "CONT");
+		
+		this.tbMain.tab5.tab0.tab1.TextArea0.Text = CONT + "\n\n\n" + BAS;	
+	} else if(obj == "detList2") {
+		BAS = this.ds_DETAIL_2.GetColumn(nRow, "BAS");
+		CONT = this.ds_DETAIL_2.GetColumn(nRow, "CONT");
+		
+		this.tbMain.tab5.tab0.tab2.TextArea0.Text = CONT + "\n\n\n" + BAS;	
+	} else if(obj == "detList3") {
+		BAS = this.ds_DETAIL_3.GetColumn(nRow, "BAS");
+		CONT = this.ds_DETAIL_3.GetColumn(nRow, "CONT");
+		
+		this.tbMain.tab5.tab0.tab3.TextArea0.Text = CONT + "\n\n\n" + BAS;	
+	}	
+}
+
+function btn_usbmgr_OnClick(obj)
+{
+	var _sKey1 = ds_CONSTRUCTION_KEY.GetColumn(ds_COMPANY_KEY.row,"RECV_NUM");
+	var sArgs =  "scRECV_NUM=" + _sKey1;
+	//fnCreateDialog("ub::BeforeViewMgr.xml",sArgs);
+	//fnCreateDialog("ub::BeforeNapplViewMgr_.xml",sArgs);
+	fnCreateDialog("ub::UsebeforeFlSchMgr.xml",sArgs);
+}
+
+function fnEditButton_Click(obj)
+{
+		if (obj == this.tbMain.tab4.btnProcCa)
+	{
+		_varArray = fnCreateDialog("ub::ProcCaMgr.xml");		
+		this.tbMain.tab4.TYPE_PROC_NO_CA.Text 	= _varArray[0]; //형식승인번호
+		this.tbMain.tab4.TYPE_PROC_NM_CA.Text 	= _varArray[1]; //제조사명
+		this.tbMain.tab4.FREQUENCY_SCOPE_CA.Text 	= _varArray[2]; //주파수범위(MHz)
+		this.tbMain.tab4.WIRE_TYPE_CA.Text = _varArray[3]; //배선형태
+		
+	}
+		if (obj == this.tbMain.tab4.btnProcMa)
+	{
+		_varArray = fnCreateDialog("ub::ProcMaMgr.xml");		
+		this.tbMain.tab4.TYPE_PROC_NO_MA.Text 	= _varArray[0]; //형식승인번호
+		this.tbMain.tab4.TYPE_PROC_NM_MA.Text 	= _varArray[1]; //제조사명
+		this.tbMain.tab4.FREQUENCY_SCOPE_MA.Text 	= _varArray[2]; //주파수범위(MHz)
+		this.tbMain.tab4.WIRE_TYPE_MA.Text = _varArray[3]; //배선형태
+		
+	}
+	
+		if (obj == this.tbMain.tab4.btnProcSma)
+	{
+		_varArray = fnCreateDialog("ub::ProcSmaMgr.xml");		
+		this.tbMain.tab4.TYPE_PROC_NO_SMA.Text 	= _varArray[0]; //형식승인번호
+		this.tbMain.tab4.TYPE_PROC_NM_SMA.Text 	= _varArray[1]; //제조사명
+		this.tbMain.tab4.FREQUENCY_SCOPE_SMA.Text 	= _varArray[2]; //주파수범위(MHz)
+		this.tbMain.tab4.WIRE_TYPE_SMA.Text = _varArray[3]; //배선형태
+		
+	}
+}
+]]></Script>
+</Window>

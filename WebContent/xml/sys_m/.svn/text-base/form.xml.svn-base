@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="768" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsExcel"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="256" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_USE_CODE" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_CAPABILITY">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="ASSE_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="ASSE_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="CONFIRM" size="1" summ="default" type="STRING"/>
+					<colinfo id="APPL_TERM_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_WORK_RESULTS">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="INT"/>
+					<colinfo id="YEAR" size="4" summ="default" type="STRING"/>
+					<colinfo id="WORK_ROM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_SUBSIDIARY">
+				<Contents>
+					<colinfo id="SEQ" size="4" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="SUB_WRT_NUM" size="50" summ="default" type="STRING"/>
+					<colinfo id="SUB_CODE" size="6" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MASTER">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="6" summ="default" type="STRING"/>
+					<colinfo id="D_PER_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" summ="default" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_MASTER">
+				<Contents>
+					<colinfo id="CARE_BOOK_ISSUE_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_GRADE" size="10" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_CLASS" size="10" summ="default" type="STRING"/>
+					<colinfo id="QUAL_ITEM" size="15" summ="default" type="STRING"/>
+					<colinfo id="NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_START_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="CARE_BOOK_VAL_END_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="EDU_COMP_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="POST_NUM" size="7" summ="default" type="STRING"/>
+					<colinfo id="ADDR" size="20" summ="default" type="STRING"/>
+					<colinfo id="DETAIL_ADDR" size="20" summ="default" type="STRING"/>
+					<colinfo id="GROUP_CODE" size="10" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="ISSUE_DT" size="8" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCORP_INFO">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsExcel2"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_ENGINEER_CHANGE">
+				<Contents>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="ENGINEER_SSN2" size="18" summ="default" type="STRING"/>
+					<colinfo id="EMPL_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="RET_YMD" size="8" summ="default" type="STRING"/>
+					<colinfo id="SEQ" size="3" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY2">
+				<Contents>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="STA_CHG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="CHG_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COMMANA_CLASS" size="3" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="18" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN1" size="18" summ="default" type="STRING"/>
+					<colinfo id="REP_SSN2" size="21" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_HAN" size="20" summ="default" type="STRING"/>
+					<colinfo id="REP_TEL_NUM" size="17" summ="default" type="STRING"/>
+					<colinfo id="ADDR_POST_NUM" size="6" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_DETAIL_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="30" summ="default" type="STRING"/>
+					<colinfo id="ADDR_FAX_NUM" size="28" summ="default" type="STRING"/>
+					<colinfo id="EMAIL_ADDR" size="50" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_AREA" size="6" summ="default" type="INT"/>
+					<colinfo id="OFFICE_USE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_BAS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="COMPANY_DIAG_ISSUE_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="DIAG_ORG_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_NM" size="20" summ="default" type="STRING"/>
+					<colinfo id="DIAG_NM_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="PAY_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="REA_CAP" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_AOM" size="15" summ="default" type="STRING"/>
+					<colinfo id="TUP_CLASS_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="C_COM_CAUSE_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="COM_COV_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="OFFICE_OWN_CLASS" size="1" summ="default" type="STRING"/>
+					<colinfo id="REP_MOBILE" size="17" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button Height="21" Id="Button0" Left="56" OnClick="Button0_OnClick" TabOrder="1" Text="TEST" Top="384" Width="104"></Button>
+		<File Bottom="65" Height="24" Id="File0" Left="135" Right="159" TabOrder="4" Top="41" Width="24"></File>
+		<Button Height="21" Id="Button1" Left="176" OnClick="Button1_OnClick" TabOrder="2" Text="Button0" Top="384" Width="104"></Button>
+		<Button Height="21" Id="Button2" Left="104" OnClick="fnCompanyMaster" TabOrder="3" Text="공사업마스터" Top="112" Width="104"></Button>
+		<Button Height="21" Id="Button3" Left="216" OnClick="fnRepChange" TabOrder="4" Text="변경신고" Top="112" Width="104"></Button>
+		<Button Height="21" Id="Button4" Left="328" OnClick="fnSubsidiary" TabOrder="5" Text="겸업정보" Top="112" Width="104"></Button>
+		<Button Height="21" Id="Button5" Left="440" OnClick="fnWorkResults" TabOrder="6" Text="공사실적" Top="112" Width="104"></Button>
+		<Button Height="21" Id="Button6" Left="552" OnClick="fnWorkCapability" TabOrder="7" Text="시공능력평가" Top="112" Width="104"></Button>
+		<Button Height="21" Id="Button7" Left="104" OnClick="fnEngineerMaster" TabOrder="8" Text="기술자마스터" Top="144" Width="104"></Button>
+		<Button Height="21" Id="Button8" Left="216" OnClick="fnptmmaster" TabOrder="9" Text="행정처분" Top="144" Width="104"></Button>
+		<Button Height="21" Id="Button9" Left="328" OnClick="fnEngineerChange" TabOrder="10" Text="기술자변경" Top="144" Width="104"></Button>
+	</Form>
+	<Script><![CDATA[
+function Button0_OnClick(obj)
+{
+	/*
+	var bRet = ext_ExcelImportByIndex("C:\\dsPT_R_ENGINEER_MASTER.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('기술자 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsPT_R_ENGINEER_MASTER.AddRow();	
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_ISSUE_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_GRADE", dsExcel.GetColumn(nLoop, 2));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_CLASS", dsExcel.GetColumn(nLoop, 4));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "QUAL_ITEM", dsExcel.GetColumn(nLoop, 6));
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "NM_KOR", dsExcel.GetColumn(nLoop, 8));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "NM_HAN", dsExcel.GetColumn(nLoop, 9));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_VAL_START_DT", dsExcel.GetColumn(nLoop, 10));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_VAL_END_DT", dsExcel.GetColumn(nLoop, 11));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "EDU_COMP_DT", dsExcel.GetColumn(nLoop, 12));
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "POST_NUM", dsExcel.GetColumn(nLoop, 13));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ADDR", dsExcel.GetColumn(nLoop, 14));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "DETAIL_ADDR", dsExcel.GetColumn(nLoop, 15));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ISSUE_DT", dsExcel.GetColumn(nLoop, 20));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_SSN1", dsExcel.GetColumn(nLoop, 25));
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_SSN2", dsExcel.GetColumn(nLoop, 26));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "WRT_ID", "admin");
+		
+	}
+	
+	fnCreateInsertQuery(dsPT_R_ENGINEER_MASTER);
+	
+	return;
+	*/
+	/*
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\PT_R_COMPANY_MASTER.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsPT_R_COMPANY_MASTER.AddRow();
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "TMP_WRT_NUM", ToInteger(nLoop) + 1);
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop,0)); //공사업등록번호
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "SIDO_CODE", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMMANA_CLASS", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "MANA_NUM", dsExcel.GetColumn(nLoop,5));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "NAME", dsExcel.GetColumn(nLoop,6));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_SSN1", dsExcel.GetColumn(nLoop,7));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_SSN2", dsExcel.GetColumn(nLoop,8));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_NM_KOR", dsExcel.GetColumn(nLoop,9));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_NM_HAN", dsExcel.GetColumn(nLoop,10));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_TEL_NUM", dsExcel.GetColumn(nLoop,11));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_POST_NUM", dsExcel.GetColumn(nLoop,12));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_ADDR", dsExcel.GetColumn(nLoop,13));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_DETAIL_ADDR", dsExcel.GetColumn(nLoop,14));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_TEL_NUM", dsExcel.GetColumn(nLoop,15));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_FAX_NUM", dsExcel.GetColumn(nLoop,16));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "EMAIL_ADDR", dsExcel.GetColumn(nLoop,17));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "OFFICE_AREA", dsExcel.GetColumn(nLoop,18));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "OFFICE_OWN_CLASS", dsExcel.GetColumn(nLoop,19));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "OFFICE_USE_CODE", dsExcel.GetColumn(nLoop,20));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "DIAG_ORG_CODE", dsExcel.GetColumn(nLoop,21));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMPANY_DIAG_BAS_DT", dsExcel.GetColumn(nLoop,23));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMPANY_DIAG_ISSUE_DT", dsExcel.GetColumn(nLoop,24));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMPANY_DIAG_CLASS_CODE", dsExcel.GetColumn(nLoop,25));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "DIAG_NM_NM", dsExcel.GetColumn(nLoop,26));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "DIAG_NM_WRT_NUM", dsExcel.GetColumn(nLoop,27));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "PAY_CAP", dsExcel.GetColumn(nLoop,28));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REA_CAP", dsExcel.GetColumn(nLoop,29));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "TUP_AOM", dsExcel.GetColumn(nLoop,30));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "TUP_CLASS_CODE", dsExcel.GetColumn(nLoop,31));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "C_COM_DT", dsExcel.GetColumn(nLoop,32));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "C_COM_CAUSE_CODE", dsExcel.GetColumn(nLoop,33));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COM_COV_DT", dsExcel.GetColumn(nLoop,34));
+	}
+	
+	alert(dsPT_R_COMPANY_MASTER.rowcount);
+	
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\COMPANY_WRT_DT.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		var sCOI_WRT_NUM = dsExcel.GetColumn(nLoop, 0);
+		var sWRT_DT = dsExcel.GetColumn(nLoop, 1);
+		
+		var nRow = dsPT_R_COMPANY_MASTER.FindRow("COI_WRT_NUM", sCOI_WRT_NUM);
+		if (nRow > 0)
+		{
+			dsPT_R_COMPANY_MASTER.SetColumn(nRow, "WRT_DT", sWRT_DT);
+		}
+	}
+	
+	fnCreateInsertQuery(dsPT_R_COMPANY_MASTER, "PT_R_COMPANY_MASTER");
+	
+	return;	
+	*/
+	
+	/*
+	fnReadXml("D:\\DB\\BASIC_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\ADDR_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\NAME_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\REP_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	
+	dsPT_R_BASIC_CHANGE_HISTORY.Sort("TMP_WRT_NUM,CHG_DT");
+	
+	//alert(dsPT_R_BASIC_CHANGE_HISTORY.rowcount);
+	
+
+	for(var nLoop = dsPT_R_BASIC_CHANGE_HISTORY.rowcount - 1; nLoop >= 0 ; nLoop--)
+	{
+		if(Length(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM")) == 0)
+			dsPT_R_BASIC_CHANGE_HISTORY.DeleteRow(nLoop);
+	}
+	
+	//alert(dsPT_R_BASIC_CHANGE_HISTORY.rowcount);
+	
+	var nSeq = 1;
+	var sNUM;
+	
+	for(var nLoop = 0; nLoop < dsPT_R_BASIC_CHANGE_HISTORY.rowcount; nLoop++)
+	{
+		if (sNUM == dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM"))
+			nSeq++;
+		else
+			nSeq = 1;
+			
+		sNUM = dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM");
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nLoop, "CHGBRE_SEQ", nSeq);
+	}
+	
+	fnCreateInsertQuery(dsPT_R_BASIC_CHANGE_HISTORY, "PT_R_BASIC_CHANGE_HISTORY");
+	return;
+	
+	for (var nLoop = 0; nLoop < 100; nLoop++)
+	{
+		trace(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM") + "=" + dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHGBRE_SEQ") + "=" + dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHG_DT"));
+	}
+	
+	return;
+
+	var nIndex = 0;
+	var nSeq = 1;
+	var sNUM;
+	for(var nLoop = 0; nLoop < dsPT_R_BASIC_CHANGE_HISTORY.rowcount; nLoop++)
+	{
+		if(Length(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM")) > 0)
+		{
+			if (sNUM == dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM"))
+				nSeq++;
+			else
+				nSeq = 1;
+				
+			sNUM = dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM");
+			dsPT_R_BASIC_CHANGE_HISTORY2.CopyRow(nIndex, "dsPT_R_BASIC_CHANGE_HISTORY", nLoop);
+			dsPT_R_BASIC_CHANGE_HISTORY2.SetColumn(nIndex, "CHGBRE_SEQ", nSeq);
+			nIndex++;
+		}
+	}
+	
+	for (var nLoop = 0; nLoop < 100; nLoop++)
+	{
+		trace(dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "TMP_WRT_NUM") + "=" + dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "CHGBRE_SEQ") + "=" + dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "CHG_DT"));
+	}
+	
+	return;
+	*/
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\COMPANY_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 1)));
+	}
+	
+	//fnCreatePT_R_WORK_RESULTS();
+	//fnCreatePT_R_SUBSIDIARY();
+	//fnCreatePT_R_WORK_CAPABILITY();
+	//fnCreateREP_CHANGE();
+	//fnCreateADDR_CHANGE();
+	//fnCreateNAME_CHANGE();
+	//fnCreatePT_M_MASTER();
+	//fnCreatePT_R_ENGINEER_CHANGE();
+	return;
+}
+
+function fnCreatePT_M_MASTER()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	nSEQ = 0;
+
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_M_MASTER.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('행정처분 엑셀파일 읽기 오류');
+		return;
+	}
+	var nRow = 0;
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_M_MASTER.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_M_MASTER.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_M_MASTER.SetColumn(nRow, "WRT_NUM", nSEQ);
+		
+		dsPT_M_MASTER.SetColumn(nRow, "D_PER_CODE", replace(dsExcel.GetColumn(nLoop,2), "'", ""));
+		dsPT_M_MASTER.SetColumn(nRow, "DISPO_CAUSE", replace(dsExcel.GetColumn(nLoop,5), "'", ""));
+		dsPT_M_MASTER.SetColumn(nRow, "DISPO_DT", replace(dsExcel.GetColumn(nLoop,1), "'", ""));
+		dsPT_M_MASTER.SetColumn(nRow, "SIDO_CODE", replace(dsExcel.GetColumn(nLoop,3), "'", ""));
+		
+		var sPerCode = trim(dsExcel.GetColumn(nLoop, 4));
+		if (IndexOf(sPerCode, "등록취소") >= 0)
+		{
+			sPerCode = "M00001";
+		}
+		else if (IndexOf(sPerCode, "업무정지") >= 0)
+		{
+			sPerCode = "M00002";
+		}
+		else if (IndexOf(sPerCode, "영업정지") >= 0)
+		{
+			sPerCode = "M00002";
+		}
+		else if (IndexOf(sPerCode, "유효기간") >= 0)
+		{
+			sPerCode = "M00001";
+		}
+		else if (IndexOf(sPerCode, "과태료") >= 0)
+		{
+			sPerCode = "M00003";
+		}
+		else if (IndexOf(sPerCode, "경고") >= 0)
+		{
+			sPerCode = "M00006";
+		}
+		else
+		{
+			sPerCode = "";
+		}
+		
+		dsPT_M_MASTER.SetColumn(nRow, "DISPO_CONT", sPerCode);
+		
+		nRow++;
+	}
+	
+	fnCreateInsertQuery(dsPT_M_MASTER, "PT_M_MASTER");
+}
+
+function fnReadXml(sFile, sDsName)
+{
+	File0.FileName = sFile;
+	File0.Open("r");
+	
+	var sXML = File0.Read();
+	object(sDsName).LoadXML(sXML, false);
+
+	File0.Close();
+}
+
+function fnCreatePT_R_ENGINEER_CHANGE(sFile)
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	dsPT_R_ENGINEER_CHANGE.DeleteAll();
+	dsExcel.DeleteAll();
+	/*
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	*/
+	var bRet = ext_ExcelImportByIndex(sFile, 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('대표자변경 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{			
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_ENGINEER_CHANGE.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "SEQ", nSEQ);
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "ENGINEER_SSN1", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "ENGINEER_SSN2", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "EMPL_YMD", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_ENGINEER_CHANGE.SetColumn(nRow, "RET_YMD", dsExcel.GetColumn(nLoop,4));
+		
+		nRow++;
+	}
+	
+	fnCreateInsertQuery(dsPT_R_ENGINEER_CHANGE, "PT_R_ENGINEER_CHANGE");
+}
+
+function fnCreateBASIC_CHANGE()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\BASIC_CHANGE.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('대표자변경 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{	
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.AddRow();
+		
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "CHG_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "BAS_STA_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "STA_CHG_CLASS_CODE", "R00002");
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "REA_CAP", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "OFFICE_AREA", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "DIAG_ORG_CODE", dsExcel.GetColumn(nLoop,4));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "DIAG_NM_NM", dsExcel.GetColumn(nLoop,5));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "TUP_AOM", dsExcel.GetColumn(nLoop,6));
+		
+		nRow++;
+	}
+	
+	var sXML = dsPT_R_BASIC_CHANGE_HISTORY.SaveXML("BASIC_CHANGE");
+	
+	File0.FileName = "D:\\DB\\LAST\\BASIC_CHANGE.xml";
+	File0.Open("w");
+	
+	File0.Write(sXML);
+	
+	File0.Close();
+}
+
+function fnCreateADDR_CHANGE()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\ADDR_CHANGE.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('대표자변경 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{	
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.AddRow();
+		
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "CHG_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "SIDO_CODE", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "STA_CHG_CLASS_CODE", "R00007");
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "ADDR_POST_NUM", dsExcel.GetColumn(nLoop, 3));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "ADDR_ADDR", dsExcel.GetColumn(nLoop,4));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "ADDR_DETAIL_ADDR", dsExcel.GetColumn(nLoop,5));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "OFFICE_AREA", dsExcel.GetColumn(nLoop,6));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "ADDR_TEL_NUM", dsExcel.GetColumn(nLoop,7));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "ADDR_FAX_NUM", dsExcel.GetColumn(nLoop, 8));
+		
+		nRow++;
+	}
+	
+	var sXML = dsPT_R_BASIC_CHANGE_HISTORY.SaveXML("ADDR_CHANGE");
+	
+	File0.FileName = "D:\\DB\\LAST\\ADDR_CHANGE.xml";
+	File0.Open("w");
+	
+	File0.Write(sXML);
+	
+	File0.Close();
+}
+
+function fnCreateNAME_CHANGE()
+{
+
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\NAME_CHANGE.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('대표자변경 엑셀파일 읽기 오류');
+		return;
+	}
+		
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{	
+		if (Length(dsExcel.GetColumn(nLoop, 0)) == 0 || Length(dsExcel.GetColumn(nLoop, 1)) == 0
+			|| Length(dsExcel.GetColumn(nLoop, 2)) == 0)
+			continue;
+			
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "CHG_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "NAME", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "STA_CHG_CLASS_CODE", "R00010");
+		
+		nRow++;
+	}
+	
+	var sXML = dsPT_R_BASIC_CHANGE_HISTORY.SaveXML("NAME_CHANGE");
+	
+	File0.FileName = "D:\\DB\\LAST\\NAME_CHANGE.xml";
+	File0.Open("w");
+	
+	File0.Write(sXML);
+	
+	File0.Close();
+}
+
+function fnCreateREP_CHANGE()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\REP_CHANGE.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('대표자변경 엑셀파일 읽기 오류');
+		return;
+	}
+
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{	
+		if (Length(dsExcel.GetColumn(nLoop, 1)) == 0)
+			continue;
+			
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "CHG_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "REP_SSN1", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "REP_SSN2", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "REP_NM_KOR", dsExcel.GetColumn(nLoop,4));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "REP_NM_HAN", dsExcel.GetColumn(nLoop,5));
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nRow, "STA_CHG_CLASS_CODE", "R00009");
+		
+		nRow++;
+	}
+	
+	var sXML = dsPT_R_BASIC_CHANGE_HISTORY.SaveXML("REP_CHANGE");
+	
+	File0.FileName = "D:\\DB\\LAST\\REP_CHANGE.xml";
+	File0.Open("w");
+	
+	File0.Write(sXML);
+	
+	File0.Close();
+}
+
+function fnCreatePT_R_SUBSIDIARY()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_SUBSIDIARY.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('겸업관리 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{		
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_SUBSIDIARY.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_SUBSIDIARY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_SUBSIDIARY.SetColumn(nRow, "SEQ", nSEQ);
+		dsPT_R_SUBSIDIARY.SetColumn(nRow, "SUB_WRT_NUM", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_SUBSIDIARY.SetColumn(nRow, "SUB_CODE", "SUBS" + trim(dsExcel.GetColumn(nLoop,1)));
+		
+		nRow++;
+	}
+	
+	fnCreateInsertQuery(dsPT_R_SUBSIDIARY, "PT_R_SUBSIDIARY");
+}
+
+function fnCreatePT_R_WORK_CAPABILITY()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_WORK_CAPABILITY.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('시공능력평가 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	var nRow = 0;
+	
+	//시공능력평가
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{	
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_WORK_CAPABILITY.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+		
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "SEQ", nSEQ); //공사업등록번호
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "COI_WRT_NUM", dsExcel.GetColumn(nLoop,0));
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "ASSE_DT", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "ASSE_AOM", dsExcel.GetColumn(nLoop,2));
+		
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "APPL_TERM_START_DT", dsExcel.GetColumn(nLoop,3));
+		dsPT_R_WORK_CAPABILITY.SetColumn(nRow, "APPL_TERM_END_DT", dsExcel.GetColumn(nLoop,4));
+		
+		nRow++;
+	}
+	
+	fnCreateInsertQuery(dsPT_R_WORK_CAPABILITY, "PT_R_WORK_CAPABILITY");
+}
+
+function fnCreatePT_R_WORK_RESULTS()
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_WORK_RESULTS.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사실적 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	nSEQ = 0;
+	var nRow = 0;
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{		
+		var nIndex = dsCORP_INFO.FindRow("COI_WRT_NUM", trim(dsExcel.GetColumn(nLoop, 0)));
+		
+		if (nIndex < 0) continue;
+		
+		dsPT_R_WORK_RESULTS.AddRow();
+		
+		if(sPreNum != trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM")))
+			nSEQ = 1;
+		else
+			nSEQ++;
+			
+		sPreNum = trim(dsCORP_INFO.GetColumn(nIndex, "TMP_WRT_NUM"));
+		
+		dsPT_R_WORK_RESULTS.SetColumn(nRow, "TMP_WRT_NUM", sPreNum);
+		dsPT_R_WORK_RESULTS.SetColumn(nRow, "SEQ", nSEQ); //공사업등록번호
+		dsPT_R_WORK_RESULTS.SetColumn(nRow, "YEAR", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_WORK_RESULTS.SetColumn(nRow, "WORK_ROM", dsExcel.GetColumn(nLoop,2));
+		
+		nRow++;
+	}
+	
+	fnCreateInsertQuery(dsPT_R_WORK_RESULTS, "PT_R_WORK_RESULTS");
+}
+
+function Button1_OnClick(obj)
+{
+	var nSEQ = 0;
+	var sPreNum;
+	
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\SIDO_CODE.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('시공능력평가 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	dsExcel.Sort("Col01");
+	
+	File0.FileName = "D:\\DB\\SIDO_CODE";
+	File0.Open("w");
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		var sSido = dsExcel.GetColumn(nLoop, 0);
+		var sSido_seq = dsExcel.GetColumn(nLoop, 3);
+		var sSigungu_seq = dsExcel.GetColumn(nLoop, 6);
+		
+		var sQuery = "UPDATE PT_SIDO_CODE SET SIDO_SEQ = '" + sSido_seq + "', ";
+			sQuery += " SIGUNGU_SEQ = '" + sSigungu_seq + "' ";
+			sQuery += " WHERE AREA_CODE = '" + sSido + "';\n";
+			sQuery += "COMMIT;\n";
+			
+		File0.Write(sQuery);
+	}
+	
+	File0.Close();
+}
+
+
+function fnCreateInsertQuery(ds, sTable)
+{
+	//for (var nLoop = 0; nLoop < dsPT_R_COMPANY_MASTER.rowcount; nLoop++)
+	var arrCol = array(ds.colcount);
+
+	File0.FileName = "D:\\DB\\LAST\\" + sTable + ".sql";
+	File0.Open("a");
+
+	for (var nLoop = 0; nLoop < ds.colcount; nLoop++)
+	{
+		arrCol[nLoop] = ds.GetColID(nLoop);
+	}
+	
+	for (var nLoop = 0; nLoop < ds.rowcount; nLoop++)
+	//for (var nLoop = 0; nLoop < 100; nLoop++)
+	{
+		var sQuery = "INSERT INTO " + sTable + "(";
+
+		for (var nCol = 0; nCol < arrCol.length; nCol++)
+		{
+			sQuery += arrCol[nCol];
+			if (nCol != arrCol.length - 1)
+				sQuery += ", ";
+		}
+		
+		sQuery += ") VALUES ( ";
+		
+		for (var nCol = 0; nCol < arrCol.length; nCol++)
+		{
+			sQuery += "'" + ds.GetColumn(nLoop, nCol) + "'";
+			if (nCol != arrCol.length - 1)
+				sQuery += ", ";
+		}
+		
+		sQuery += ");\n";
+		sQuery += "COMMIT;\n";
+		
+		File0.Write(sQuery);
+		//trace(sQuery);
+	}
+	
+	File0.Close();
+}
+
+function fnCompanyMaster(obj)
+{
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_COMPANY_MASTER.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsPT_R_COMPANY_MASTER.AddRow();
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "TMP_WRT_NUM", ToInteger(nLoop) + 1);
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop,0)); //공사업등록번호
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "SIDO_CODE", dsExcel.GetColumn(nLoop,1));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMMANA_CLASS", dsExcel.GetColumn(nLoop,2));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COM_NUM", dsExcel.GetColumn(nLoop,3));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "MANA_NUM", dsExcel.GetColumn(nLoop,4));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "NAME", dsExcel.GetColumn(nLoop,5));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_SSN1", dsExcel.GetColumn(nLoop,6));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_SSN2", dsExcel.GetColumn(nLoop,7));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_NM_KOR", dsExcel.GetColumn(nLoop,8));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REP_NM_HAN", dsExcel.GetColumn(nLoop,9));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_POST_NUM", dsExcel.GetColumn(nLoop,10));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_ADDR", dsExcel.GetColumn(nLoop,11));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_DETAIL_ADDR", dsExcel.GetColumn(nLoop,12));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_TEL_NUM", dsExcel.GetColumn(nLoop,13));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "ADDR_FAX_NUM", dsExcel.GetColumn(nLoop,14));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "EMAIL_ADDR", dsExcel.GetColumn(nLoop,15));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "OFFICE_AREA", dsExcel.GetColumn(nLoop,16));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "DIAG_ORG_CODE", dsExcel.GetColumn(nLoop,17));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "COMPANY_DIAG_BAS_DT", dsExcel.GetColumn(nLoop,18));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "DIAG_NM_NM", dsExcel.GetColumn(nLoop,19));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "PAY_CAP", dsExcel.GetColumn(nLoop,20));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "REA_CAP", dsExcel.GetColumn(nLoop,21));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "TUP_AOM", dsExcel.GetColumn(nLoop,22));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "C_COM_DT", dsExcel.GetColumn(nLoop,23));
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "C_COM_CAUSE_CODE", dsExcel.GetColumn(nLoop,24));
+		
+		dsPT_R_COMPANY_MASTER.SetColumn(nLoop, "WRT_DT", dsExcel.GetColumn(nLoop,25));
+	}
+	
+	alert(dsPT_R_COMPANY_MASTER.rowcount);
+	
+	fnCreateInsertQuery(dsPT_R_COMPANY_MASTER, "PT_R_COMPANY_MASTER");
+	
+	return;		
+}
+
+function fnRepChange(obj)
+{
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	//fnCreateBASIC_CHANGE();
+	//fnCreateREP_CHANGE();
+	//fnCreateADDR_CHANGE();
+	//fnCreateNAME_CHANGE();
+	
+	fnReadXml("D:\\DB\\LAST\\BASIC_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\LAST\\ADDR_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\LAST\\NAME_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	fnReadXml("D:\\DB\\LAST\\REP_CHANGE.xml", "dsPT_R_BASIC_CHANGE_HISTORY");
+	
+	dsPT_R_BASIC_CHANGE_HISTORY.Sort("TMP_WRT_NUM,CHG_DT");
+	
+	//alert(dsPT_R_BASIC_CHANGE_HISTORY.rowcount);
+	
+
+	for(var nLoop = dsPT_R_BASIC_CHANGE_HISTORY.rowcount - 1; nLoop >= 0 ; nLoop--)
+	{
+		if(Length(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM")) == 0)
+			dsPT_R_BASIC_CHANGE_HISTORY.DeleteRow(nLoop);
+	}
+	
+	//alert(dsPT_R_BASIC_CHANGE_HISTORY.rowcount);
+	
+	var nSeq = 1;
+	var sNUM;
+	
+	for(var nLoop = 0; nLoop < dsPT_R_BASIC_CHANGE_HISTORY.rowcount; nLoop++)
+	{
+		if (sNUM == dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM"))
+			nSeq++;
+		else
+			nSeq = 1;
+			
+		sNUM = dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM");
+		dsPT_R_BASIC_CHANGE_HISTORY.SetColumn(nLoop, "CHGBRE_SEQ", nSeq);
+	}
+	
+	fnCreateInsertQuery(dsPT_R_BASIC_CHANGE_HISTORY, "PT_R_BASIC_CHANGE_HISTORY");
+	return;
+	/*
+	for (var nLoop = 0; nLoop < 100; nLoop++)
+	{
+		//trace(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM") + "=" + dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHGBRE_SEQ") + "=" + dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "CHG_DT"));
+	}
+	
+	return;
+
+	var nIndex = 0;
+	var nSeq = 1;
+	var sNUM;
+	for(var nLoop = 0; nLoop < dsPT_R_BASIC_CHANGE_HISTORY.rowcount; nLoop++)
+	{
+		if(Length(dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM")) > 0)
+		{
+			if (sNUM == dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM"))
+				nSeq++;
+			else
+				nSeq = 1;
+			
+			sNUM = dsPT_R_BASIC_CHANGE_HISTORY.GetColumn(nLoop, "TMP_WRT_NUM");
+			dsPT_R_BASIC_CHANGE_HISTORY2.AddRow();
+			dsPT_R_BASIC_CHANGE_HISTORY2.CopyRow(nIndex, "dsPT_R_BASIC_CHANGE_HISTORY", nLoop);
+			dsPT_R_BASIC_CHANGE_HISTORY2.SetColumn(nIndex, "CHGBRE_SEQ", nSeq);
+			nIndex++;
+		}
+	}
+	
+	for (var nLoop = 0; nLoop < 100; nLoop++)
+	{
+		trace(dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "TMP_WRT_NUM") + "=" + dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "CHGBRE_SEQ") + "=" + dsPT_R_BASIC_CHANGE_HISTORY2.GetColumn(nLoop, "CHG_DT"));
+	}
+	
+	return;
+	*/
+}
+
+function fnSubsidiary(obj)
+{
+	fnCreatePT_R_SUBSIDIARY();
+}
+
+
+function fnWorkResults(obj)
+{
+	fnCreatePT_R_WORK_RESULTS();
+}
+
+
+function fnWorkCapability(obj)
+{
+	fnCreatePT_R_WORK_CAPABILITY();
+}
+
+function fnEngineerMaster(obj)
+{
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_ENGINEER_MASTER2.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('기술자 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsPT_R_ENGINEER_MASTER.AddRow();	
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_ISSUE_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_SSN1", dsExcel.GetColumn(nLoop, 1));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_SSN2", dsExcel.GetColumn(nLoop, 2));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_GRADE", dsExcel.GetColumn(nLoop, 3));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ENGINEER_CLASS", dsExcel.GetColumn(nLoop, 4));
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "QUAL_ITEM", dsExcel.GetColumn(nLoop, 5));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "NM_KOR", dsExcel.GetColumn(nLoop, 6));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "NM_HAN", dsExcel.GetColumn(nLoop, 7));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_VAL_START_DT", dsExcel.GetColumn(nLoop, 8));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "CARE_BOOK_VAL_END_DT", dsExcel.GetColumn(nLoop, 9));
+		
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "EDU_COMP_DT", dsExcel.GetColumn(nLoop, 10));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "POST_NUM", dsExcel.GetColumn(nLoop, 11));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ADDR", dsExcel.GetColumn(nLoop, 12));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "DETAIL_ADDR", dsExcel.GetColumn(nLoop, 13));
+		dsPT_R_ENGINEER_MASTER.SetColumn(nLoop, "ISSUE_DT", dsExcel.GetColumn(nLoop, 14));		
+	}
+	
+	fnCreateInsertQuery(dsPT_R_ENGINEER_MASTER, "PT_R_ENGINEER_MASTER");
+	
+	return;
+}
+
+
+function fnptmmaster(obj)
+{
+	fnCreatePT_M_MASTER();
+}
+
+
+function fnEngineerChange(obj)
+{
+	var bRet = ext_ExcelImportByIndex("D:\\DB\\LAST\\PT_R_BASE_INFO.xls", 0, "dsExcel");
+	if (bRet < 0)
+	{
+		alert('공사업 마스터 엑셀파일 읽기 오류');
+		return;
+	}
+	
+	for (var nLoop = 0; nLoop < dsExcel.rowcount; nLoop++)
+	{
+		dsCORP_INFO.AddRow();
+		dsCORP_INFO.SetColumn(nLoop, "TMP_WRT_NUM", dsExcel.GetColumn(nLoop, 0));
+		dsCORP_INFO.SetColumn(nLoop, "COI_WRT_NUM", dsExcel.GetColumn(nLoop, 1));
+	}
+	
+	fnCreatePT_R_ENGINEER_CHANGE("D:\\ENG1.xls");
+	fnCreatePT_R_ENGINEER_CHANGE("D:\\ENG2.xls");
+	fnCreatePT_R_ENGINEER_CHANGE("D:\\ENG3.xls");
+	fnCreatePT_R_ENGINEER_CHANGE("D:\\ENG4.xls");
+}
+]]></Script>
+</Window>

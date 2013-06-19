@@ -1,0 +1,202 @@
+/* CSS Document-YSM ICCS */
+BODY
+{
+	font-size: small;
+}
+*html body{
+	font-size:x-small;
+	f＼ont-size:small;
+}
+	
+BODY 
+{
+	color: #4e4e4e; font-style: normal; font-family:"돋움",dotum, sans-serif; line-height:1.25em;
+ 	margin: 0; word-spacing:-1pt; word-break:break-all; letter-spacing: -0.1em;
+ 	scrollbar-face-color: #F2F2F2;
+	scrollbar-shadow-color: #B7B7B7;
+	scrollbar-highlight-color: #F2F2F2;
+	scrollbar-3dlight-color: #F2F2F2;
+	scrollbar-darkshadow-color: #E9E9E9;
+	scrollbar-track-color: #E9E9E9;
+	scrollbar-arrow-color: #999999;
+}	
+TABLE
+{
+	font-style: normal; font-family:"돋움",dotum, sans-serif; color: #4e4e4e; font-size:1em;line-height: 1.5em;
+ 	margin: 0; word-spacing:-1pt; word-break:break-all;  border: 0px; letter-spacing: -0.1em;
+}
+
+INPUT,SELECT,TEXTAREA,TD
+{
+	font-style: normal; font-family:"돋움",dotum, sans-serif; color: #4e4e4e;
+ 	margin: 0; word-spacing:-1pt; word-break:break-all; 
+}
+img		{ border: 0px; margin: 0px;}
+FORM, P, ol, ul, li, dl, dt, dd { margin: 0px; }
+ul {list-style:none;}
+ol li {padding-left: 10px;}
+
+FIELDSET{ border:none;}
+
+TABLE CAPTION	{display:none;}
+
+/***** link  CSS  ********************************************************************/
+a,area 		{} 
+A:link 		{  color: #4e4e4e; line-height:18px; font-style: normal; text-decoration: none;}
+A:visited 	{  color: #4e4e4e; line-height:18px; font-style: normal; text-decoration: none;}
+A:active 	{  color: #4e4e4e; line-height:18px; font-style: normal; text-decoration: none;}
+A:hover 	{  color: #FF8533; line-height:18px; font-style: normal; text-decoration: underline;}
+
+/***** common ********************************************************************/
+.cursor {cursor: pointer;}
+.center {width:100%; text-align:center; padding:10px 0; }
+.caption { position:absolute; visibility:hidden; width:0; height:0; overflow:hidden; font:0; }
+.right {padding-right:10px; text-align: right;}
+
+/***** form *****/
+input {color:#727272; height:18px; background-color: #FFFFF; border:1px solid;border-color:#cccccc;}
+input.text			{ height:18px; border:1px solid #cccccc; padding:0 1 0 1;}
+input.id			{ font-size:0.7em;	width: 100%; height:16px; border:1px solid #cccccc; padding:0 1 0 1;}
+input.pw			{ font-size:0.7em;	width: 100%; height:16px; border:1px solid #cccccc; padding:0 1 0 1;}
+input.file			{ font-size: 75%;	height:18px; border:1px solid #cccccc; padding:0 1 0 1;}
+input.radio			{ font-size: 75%;	height:15px; background-color:transparent; border: 0px }
+input.checkbox		{ height:15px; border: 0px; }
+input.img			{ border:0px }
+SELECT       		{ line-height:18px; letter-spacing:-1px; color:#4e4e4e; padding:0; margin:0;}
+
+
+
+TEXTAREA
+{
+  	border:1px solid #cccccc;
+	line-height: 18px;
+	font-family: "돋움",dotum, sans-serif;
+	color: #707070;
+	padding:5 5 5 5;
+	background-color:#FFFFFF;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-shadow-color: #B7B7B7;
+	scrollbar-highlight-color: #F2F2F2;
+	scrollbar-3dlight-color: #F2F2F2;
+	scrollbar-darkshadow-color: #E9E9E9;
+	scrollbar-track-color: #E9E9E9;
+	scrollbar-arrow-color: #999999;
+	overflow: auto;
+}
+
+/***** font size *****/
+.font_9 {}
+.font_9B {font-weight: bold;}
+.font_12B {font-size:1.025em; font-weight: bold; color:#ff6600;}
+
+
+.letter0 {letter-spacing: 0em;}
+.letter1 {letter-spacing: 1px; font-size:1.1em;}
+/***** font color *****/
+.font_orange {color:#ff6600;}
+.font_orangeB {color:#ff6600; font-weight:bold;}
+.font_green  {color:#83ab00;}
+.font_greenB {color:#83ab00; font-weight:bold;}
+.font_ff9933 {color:#ff9933;}
+.font_gray77 {color:#777777;}
+
+.font_orange9  {font-size:0.825em; color:#ff9535;}
+
+/***** align *****/
+
+/***** 게시판 underline *****/
+.underline {border-style:solid; border-width:0 0 1 0; border-color:#dfdfdf;}
+.line_1ededed	{height:1px; background-color:#ededed;}
+
+/***** 게시판 font*****/
+.sfont_gray66 {font-size:0.825em; color:#666666;}
+.sfont_gray99 {font-size:0.825em; color:#999999;}
+.sfont_gray99B {font-size:0.825em; color:#999999; font-weight:bold; letter-spacing:-2;}
+
+.sfont_orange  {font-size:0.825em; color:#ff9535;}
+.sfont_orengeB {font-size:0.825em; color:#ff9535; font-weight:bold;}
+.sfont_gray66B {font-size:0.825em; color:#666;	font-weight:bold; letter-spacing:-1;}
+.sfont_gray82B {font-size:0.825em; color:#828282;	font-weight:bold; letter-spacing:-1;}
+.sfont_grayCCB,
+.sfont_grayCCB:link,
+.sfont_grayCCB:active,
+.sfont_grayCCB:visited {font-size:0.825em;	color:#ccc;		font-weight:bold; letter-spacing:-2;}
+.sfont_grayCCB:hover   {font-size:0.825em;	color:#ff9933;	font-weight:bold; letter-spacing:-2;}
+
+/*********bbs letter-spacing:5px; padding:0 5 0 5;위 왼 아래 오*********/
+.page,
+.page:link,
+.page:visited 	{ FONT-SIZE:1em; color:#666666; text-decoration:none; 	font-weight: bold; padding:0px 8px 0px 8px;}
+.page:hover 	{ FONT-SIZE:1em; color:#ff9933; text-decoration:underline;	font-weight: bold; padding:0px 8px 0px 8px;}
+
+.page_now		{ FONT-SIZE:1em; color:#999999; text-decoration:none; 	font-weight: bold; padding:0px 8px 0px 8px;}
+
+/***** 게시판 td*****/
+.td_list
+{   padding-top:4px;
+	padding-left:6px;
+	padding-bottom:3px;
+}
+.td_none
+{   height:30px;
+	padding-top:6px;
+	padding-left:6px;
+	padding-bottom:5px;
+}
+
+.view_title		{font-size:1.125em; color:#4e4e4e; font-weight:bold; height:30px; line-height:18px; text-align:center; padding:7 0 5 0;}
+.td_view_title	{background-color:#f9f9f9;}
+.td_view_detail	{padding-top:5px; padding-left:6px;padding-bottom:5px; }
+.td_detail		{padding:15 10 25 10;line-height: 20px;}
+
+/*FAQ*/
+.td_faq_a	{ line-height:16px; padding-top:10px; padding-bottom:8px; background-color: #f7f7f7;}
+#comment_write	{position:relative;	top:5px; bottom:10px;	width:640px; height:100px;	z-index:1; background-color:#ffffff; padding:8 0 8 0;}
+
+/* 640orange */
+#640orange_top	{position: relative; float: left; width: 640px;  height:15px; background:url("http://www.net.go.kr/images/common/640orange_top.gif") no-repeat left top; left:0; top:0; margin:0; padding:0; border: 0px solid green;}
+#640orange_body	{position: relative; float: left; width:640px;  background:url("http://www.net.go.kr/images/common/640orange_bg.gif") repeat-y left top; margin:0; padding:5px 20px; text-align:left; letter-spacing:-0.1em;  border: 0px solid RED; }
+#640orange_bottom	{position: relative; clear:both; width: 640px;  height:15px; left:0; bottom:0; margin:0; padding:0; background:url("http://www.net.go.kr/images/common/640orange_bottom.gif") no-repeat left bottom; border: 0px solid green;}
+
+/* 650orange 공인인증서 재등록*/
+#orange_650 { width: 650px; background: url("http://www.net.go.kr/images/common/650orange_bg.gif") top left no-repeat; margin: 0 10px 20px 10px; padding:1px 0 0 0;  border: 0px solid black;}
+#orange_650 p,#orange_650 ul {margin:0px 0 0 10px; padding: 10px 10px 0 5px;}
+#orange_650_bt{  bottom:0; left:0; width: 650px; height:11px; background:url("http://www.net.go.kr/images/common/650orange_bottom.gif") left bottom no-repeat; margin: 0; padding: 0;}
+
+/* faq tab*/
+#faq_tab {background: url(http://www.net.go.kr/images/bbs/faq_tab_bg.gif) repeat-x; width: 670px; height: 26px; padding: 0px 0 0 20px; margin-bottom: 20px;}
+#faq_tab li {display: inline; float:left; margin-right: 1px; padding: 0;  font-size: 0.825em; border: 0px solid red;}
+#faq_tab li.open {width: 144px; height: 26px; background: url(http://www.net.go.kr/images/bbs/faq_tab_open.gif) no-repeat; color: #ff6600; padding-top: 8px; text-align:center; font-weight: bold;letter-spacing: -0.2em;}
+#faq_tab li a {float:none; display:block; width: 144px; height: 26px; background: url(http://www.net.go.kr/images/bbs/faq_tab_off.gif) no-repeat; padding-top: 6px; text-align:center;}
+#faq_tab li a:hover {float:none; display:block; width: 144px; height: 26px; background: url(http://www.net.go.kr/images/bbs/faq_tab_on.gif) no-repeat; text-decoration: none; color: #4e4e4e; font-weight: bold; letter-spacing: -0.2em;}
+
+/* 통계 버튼*/
+#statistics_btn { float:left;width: 670px; margin: 0px; padding-left:0px; border: 0px solid black;}
+#statistics_btn li {display: inline; float:left; margin: 0 3px 4px 0; padding: 0;}
+#statistics_btn a {float:none; display: inline; display:block; width: 80px; height:19px; background: url(http://www.net.go.kr/04_guidance/images/sub02_05_btn_off.gif) no-repeat; padding-top: 2px; margin:0; text-align:center; }
+#statistics_btn a:hover {width: 80px; height: 19px; background: url(http://www.net.go.kr/04_guidance/images/sub02_05_btn_on.gif) no-repeat; text-decoration: none; color: #4e4e4e; font-weight: bold;}
+#statistics_btn a.open {width: 80px; height: 19px; background: url(http://www.net.go.kr/04_guidance/images/sub02_05_btn_off.gif) no-repeat; color: #ff6600; font-weight: bold;}
+
+/* 사이트맵*/
+.sitemap_all {display: inline;float: left;}
+.sitemap_bg {float: left; background: url(http://www.net.go.kr/07_service/images/sitemap_bg.gif) no-repeat; width: 160px; height: 510px; font-size: 0.825em; margin-left: 5px; margin-bottom: 20px; }
+.sitemap_bg2 {float: left; background: url(http://www.net.go.kr/07_service/images/sitemap_bg2.gif) no-repeat; width: 160px; height: 240px; font-size: 0.825em; margin-left: 5px; margin-bottom: 0px; border: 0px solid black;}
+.sitemap	{margin:5px 10px 0 15px;}
+.sitemap p, .law p {width:100%;line-height:140%; margin:0; padding:0 0 0 6px; background:url("http://www.net.go.kr/images/common/arrow_6.gif") no-repeat 0px 6px; font-weight:bold; text-indent:0em;  border-bottom:0px solid #ebebeb;}
+.sitemap p.p2 {background:url("http://www.net.go.kr/images/common/arrow_8.gif") no-repeat 0px 6px;}
+.sitemap p.p2 a:HOVER{color: #669900;}
+.sitemap ul	{padding-bottom: 2px; margin-bottom: 6px; border-bottom: 1px solid #efefef;}
+.sitemap ul li, .law ul li {background:url("http://www.net.go.kr/images/common/arrow_7.gif") no-repeat 0px 6px; padding:0 0 0 5px; margin-left: 7px;}
+
+/* 빠른법령검색*/
+#law_all {display: inline;float: left;}
+.law_bg {float: left; background: url(http://www.net.go.kr/02_guide/images/sub06_01_bg.gif) no-repeat; width: 330px; height: 250px; font-size: 0.825em; margin-right: 5px; margin-bottom: 20px; }
+.law_bg2{float: left; background: url(http://www.net.go.kr/02_guide/images/sub06_01_bg2.gif) no-repeat;width: 330px; height: 490px; font-size: 0.825em; margin-right: 5px; margin-bottom: 10px; }
+.law	{margin:10px 20px 0 18px;}
+.law ul{padding-bottom: 7px; margin-bottom: 10px; border-bottom: 1px solid #efefef;}
+
+/* 모바일 서비스 사용신청*/
+.mobile_form {padding:2px 2px; margin:10px 10px; border-bottom: 1px solid #efefef; }
+.mobile_form span	{letter-spacing: 0em;}
+.mobile_form span.name {width: 50px; display: inline;}
+.mobile_form LABEL {margin-right: 10px;}

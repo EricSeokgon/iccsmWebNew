@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO
+END
+kcdsaCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/kcdsaCert.der
+END
+rsaCert.der
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/rsaCert.der
+END
+rsaPri.key
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/rsaPri.key
+END
+backup - plainText.txt
+K 25
+svn:wc:ra_dav:version-url
+V 207
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/backup%20-%20plainText.txt
+END
+plainText.txt
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/plainText.txt
+END
+kcdsaPri.key
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/%EC%8B%9C%EB%8F%84%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%AF%BC%EC%9B%90%EC%8B%9C%EC%8A%A4%ED%85%9C/!svn/ver/70/iccsmWebNew/WebContent/gpki/gpki_jni/sample/class/Sample/CRYPTO/kcdsaPri.key
+END

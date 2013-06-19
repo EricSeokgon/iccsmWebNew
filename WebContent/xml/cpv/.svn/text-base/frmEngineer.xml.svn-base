@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="beige" Height="294" Id="frmEngineer" Left="8" OnLoadCompleted="frmEngineer_onloadComplete" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="494" WorkArea="true">
+		<Image Height="294" Id="Image0" ImageID="cpv_engineer" Left="-1" TabOrder="1" Top="-2" Transparent="TRUE" Width="494"></Image>
+		<Static Font="굴림,10" Height="186" Id="Static0" Left="20" TabOrder="2" Top="70" Width="54"></Static>
+		<Static Font="굴림,10" Height="186" Id="Static1" Left="77" TabOrder="3" Top="70" Width="90"></Static>
+		<Static Font="굴림,10" Height="186" Id="Static2" Left="176" TabOrder="4" Top="70" Width="71"></Static>
+		<Static Font="굴림,10" Height="186" Id="Static3" Left="294" TabOrder="5" Top="70" Width="58"></Static>
+		<Static Font="굴림,10" Height="185" Id="Static4" Left="249" TabOrder="6" Top="70" Width="44"></Static>
+	</Form>
+	<Script><![CDATA[
+function frmEngineer_onloadComplete() {
+
+	// 체크한 것만 출력
+	var rowcnt = 0;
+	for( var i = 0; i < dsPT_R_ENGINEER_CHANGE.rowcount; i++ ) {
+		if( dsPT_R_ENGINEER_CHANGE.GetColumn(i, "CHECKER") == "1" )
+			rowcnt++;
+	}
+	
+	//var rowcnt = dsPT_R_ENGINEER_MASTER.rowcount;	
+	var start_row = toInteger(replace(RegRePublishMgrP.cbIndex.getSelText(),"행",""));	
+	//var total_rows = (start_row + rowcnt - 1)*2;
+	var last_row = start_row + rowcnt - 1;
+	
+	var txt1="", txt2="", txt3="", txt4="", txt5="", txt6="", txt7="";
+	var line = "";
+	var first_check = true;
+	
+	if(start_row > 6) {
+		alert("7행 이상의 데이터를 출력할 수 없습니다!");
+		close();
+		return;
+	} 
+	
+	if(last_row > 6) {	
+		alert("7행 이상의 데이터를 출력할 수 없습니다!\n\n확인 후 출력 바랍니다.");
+		close();
+	} else {
+	
+		if(first_check) {
+			for(var k=0;k<start_row-1;k++) {				
+				this.Static0.text += "\n\n";
+				this.Static1.text += "\n\n";
+				this.Static2.text += "\n\n";
+				this.Static3.text += "\n\n";
+				this.Static4.text += "\n\n";
+			}
+			first_check = false;
+		}
+		
+		for(var i=0;i<dsPT_R_ENGINEER_CHANGE.rowcount;i++) {	
+			
+			checked = dsPT_R_ENGINEER_CHANGE.GetColumn(i, "CHECKER");
+			
+			if(checked == "1") {
+				
+				txt1 	= dsPT_R_ENGINEER_CHANGE.GetColumn(i, "NM_KOR");				
+				txt2 	= dsPT_R_ENGINEER_CHANGE.GetColumn(i, "TMP_FIELD");				
+				txt3 	= dsPT_R_ENGINEER_CHANGE.GetColumn(i, "CARE_BOOK_ISSUE_NUM");
+				//txt4	= dsPT_R_ENGINEER_MASTER.GetColumn(i, "CARE_BOOK_VAL_START_DT");
+				//txt5	= dsPT_R_ENGINEER_MASTER.GetColumn(i, "CARE_BOOK_VAL_END_DT");
+				txt6 	= dsPT_R_ENGINEER_CHANGE.GetColumn(i, "EMPL_YMD");
+				//txt7 	= dsPT_R_ENGINEER_MASTER.GetColumn(i, "EDU_COMP_DT"); // 교육이수 년월일
+				txt4 = "";
+				txt5 = "";
+				txt7 = "";
+				
+				txt4 = mid(txt4,2,2) + "/" + mid(txt4,4,2) + "/" + mid(txt4,6,2);
+				
+				if(txt5 != "") {
+					txt5 = mid(txt5,2,2) + "/" + mid(txt5,4,2) + "/" + mid(txt5,6,2);
+				}
+				
+				if(txt7 != "") {
+					txt7 = mid(txt7,0,4) + "/\n" + mid(txt7,4,2) + "/" + mid(txt7,6,2);
+				} else {
+					txt7 = "\n";
+				}
+								
+				this.Static0.text += txt1 + "\n\n";				
+				if(txt2 != "") {
+					this.Static1.text += "     (" + txt2 + ")\n" + txt3 + "\n";
+				} else {
+					this.Static1.text += "\n" + txt3 + "\n";
+				}
+				//this.Static2.text += txt4 + "-\n" + txt5 + "\n";
+				this.Static2.text += "\n";
+				
+				this.Static4.text += txt7 + "\n";
+				this.Static3.text += mid(txt6,2,2) + "/" + mid(txt6,4,2) + "/" + mid(txt6,6,2) + "\n\n";
+			}
+		}
+	}
+}]]></Script>
+</Window>

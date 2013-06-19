@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="711" Id="RegListOpenMgr" Left="8" OnActivate="fnForm_Activate" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="공사업등록현황" Top="8" Ver="1.0" Width="1024" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_COMPANY_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="1" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" type="STRING"/>
+					<colinfo id="MANA_NUM" size="13" type="STRING"/>
+					<colinfo id="NAME" size="50" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" type="STRING"/>
+					<colinfo id="SIDO_NM" size="256" type="STRING"/>
+					<colinfo id="ADDR_TEL_NUM" size="256" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsSIDO_CODE">
+				<Contents>
+					<colinfo id="AREA_CODE" size="4" summ="default" type="STRING"/>
+					<colinfo id="SIDO_NM" size="40" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCLOSE">
+				<Contents>
+					<colinfo id="CD" size="4" summ="default" type="STRING"/>
+					<colinfo id="NM" size="4" summ="default" type="STRING"/>
+					<record>
+						<CD></CD>
+						<NM>전체</NM>
+					</record>
+					<record>
+						<CD>C</CD>
+						<NM>폐업</NM>
+					</record>
+					<record>
+						<CD>A</CD>
+						<NM>정상</NM>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_BASIC_CHANGE_HISTORY">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="COI_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="MANA_NUM" size="13" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="50" summ="default" type="STRING"/>
+					<colinfo id="REP_NM_KOR" size="20" summ="default" type="STRING"/>
+					<colinfo id="C_COM_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="TMPC_COM_DT" size="4" summ="default" type="STRING"/>
+					<colinfo id="ADDR_ADDR" size="100" summ="default" type="STRING"/>
+					<colinfo id="RECV_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="20" summ="default" type="STRING"/>
+					<colinfo id="CHGBRE_SEQ" size="10" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="RECV_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT" size="256" summ="default" type="STRING"/>
+					<colinfo id="BAS_STA_DT2" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS01&#32;" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI01&#32;" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGB01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ01" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGB11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ11" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGB04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ04" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ06" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGB05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ05" size="256" summ="default" type="STRING"/>
+					<colinfo id="RS03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RB03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RU03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGN03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RI03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RG03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RD03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGB03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGJ03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJN03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RDJ03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCN03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJB03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RGW03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RCB03" size="256" summ="default" type="STRING"/>
+					<colinfo id="RJJ03" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Image Height="424" Id="Image1" ImageID="form_bg" Left="8" TabOrder="4" Top="149" Width="817"></Image>
+		<Image Height="72" Id="Image0" ImageID="form_top" Left="8" TabOrder="3" Top="77" Width="816"></Image>
+		<Image Height="66" Id="Image5" ImageID="bg_search" Left="24" TabOrder="4" Top="96" Width="784"></Image>
+		<Div BKColor="#c6dce1" Height="54" Id="divButtonBar" Left="8" TabOrder="2" Text="Div0" Top="18" Url="base::frmButtonBar.xml" Width="820">
+			<Contents></Contents>
+		</Div>
+		<Image Height="73" Id="Image2" ImageID="form_bottom" Left="8" TabOrder="4" Top="573" Width="816"></Image>
+		<Button Height="20" Id="Button0" ImageID="button_search" Left="720" OnClick="fnSearchButton_Click" TabOrder="4" Text="Button0" Top="120" Width="74"></Button>
+		<Grid BindDataset="dsPT_R_BASIC_CHANGE_HISTORY" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="user0" Bottom="527" ButtonColor="user0" Color="#666666" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="351" Id="grdList" InputPanel="FALSE" Left="24" LineColor="user9" NoDataImage="form_logo" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="808" RowHeight="38" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="176" UseDBuff="true" UsePopupMenu="true" UseSelColor="FALSE" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="60"/>
+						<col width="43"/>
+						<col width="40"/>
+						<col width="42"/>
+						<col width="46"/>
+						<col width="42"/>
+						<col width="44"/>
+						<col width="41"/>
+						<col width="44"/>
+						<col width="47"/>
+						<col width="37"/>
+						<col width="46"/>
+						<col width="40"/>
+						<col width="38"/>
+						<col width="46"/>
+						<col width="41"/>
+						<col width="37"/>
+						<col width="47"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="구분"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="서울"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="부산"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="울산"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="경남"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="인천"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="경기"/>
+						<cell bkcolor="#787878" col="7" color="white" display="text" text="대구"/>
+						<cell bkcolor="#787878" col="8" color="white" display="text" text="경북"/>
+						<cell bkcolor="#787878" col="9" color="white" display="text" text="광주"/>
+						<cell bkcolor="#787878" col="10" color="white" display="text" text="전남"/>
+						<cell bkcolor="#787878" col="11" color="white" display="text" text="대전"/>
+						<cell bkcolor="#787878" col="12" color="white" display="text" text="충남"/>
+						<cell bkcolor="#787878" col="13" color="white" display="text" text="전북"/>
+						<cell bkcolor="#787878" col="14" color="white" display="text" text="강원"/>
+						<cell bkcolor="#787878" col="15" color="white" display="text" text="충북"/>
+						<cell bkcolor="#787878" col="16" color="white" display="text" text="제주"/>
+						<cell bkcolor="#787878" col="17" color="white" display="text" text="합계"/>
+					</head>
+					<body>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" text="신규등록"/>
+						<cell align="center" col="1" colid="RS01" display="number" edit="normal"/>
+						<cell align="center" col="2" colid="RB01" display="number" edit="normal"/>
+						<cell align="center" col="3" colid="RU01" display="number" edit="normal"/>
+						<cell align="center" col="4" colid="RGN01" display="number" edit="normal"/>
+						<cell align="center" col="5" colid="RI01" display="number" edit="normal"/>
+						<cell align="center" col="6" colid="RG01" display="number" edit="normal"/>
+						<cell align="center" col="7" colid="RD01" display="number" edit="normal"/>
+						<cell align="center" col="8" colid="RGB01" display="number" edit="normal"/>
+						<cell align="center" col="9" colid="RGJ01" display="number" edit="normal"/>
+						<cell align="center" col="10" colid="RJN01" display="number" edit="normal"/>
+						<cell align="center" col="11" colid="RDJ01" display="number" edit="normal"/>
+						<cell align="center" col="12" colid="RCN01" display="number" edit="normal"/>
+						<cell align="center" col="13" colid="RJB01" display="number" edit="normal"/>
+						<cell align="center" col="14" colid="RGW01" display="number" edit="normal"/>
+						<cell align="center" col="15" colid="RCB01" display="number" edit="normal"/>
+						<cell align="center" col="16" colid="RJJ01" display="number" edit="normal"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS01)+toNumber(RB01)+toNumber(RU01)+toNumber(RGN01)+toNumber(RI01)+toNumber(RG01)+toNumber(RD01)+toNumber(RGB01)+toNumber(RGJ01)+toNumber(RJN01)+toNumber(RDJ01)+toNumber(RCN01)+toNumber(RJB01)+toNumber(RGW01)+toNumber(RCB01)+toNumber(RJJ01)"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="1" text="법인전환"/>
+						<cell align="center" col="1" colid="RS11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="2" colid="RB11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="3" colid="RU11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="4" colid="RGN11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="5" colid="RI11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="6" colid="RG11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="7" colid="RD11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="8" colid="RGB11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="9" colid="RGJ11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="10" colid="RJN11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="11" colid="RD11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="12" colid="RCN11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="13" colid="RJB11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="14" colid="RGW11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="15" colid="RCB11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="16" colid="RJJ11" display="number" edit="normal" row="1"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS11)+toNumber(RB11)+toNumber(RU11)+toNumber(RGN11)+toNumber(RI11)+toNumber(RG11)+toNumber(RD11)+toNumber(RGB11)+toNumber(RGJ11)+toNumber(RJN11)+toNumber(RDJ11)+toNumber(RCN11)+toNumber(RJB11)+toNumber(RGW11)+toNumber(RCB11)+toNumber(RJJ11)" row="1"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="2" text="양도양수"/>
+						<cell align="center" col="1" colid="RS04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="2" colid="RB04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="3" colid="RU04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="4" colid="RGN04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="5" colid="RI04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="6" colid="RG04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="7" colid="RD04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="8" colid="RGB04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="9" colid="RGJ04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="10" colid="RJN04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="11" colid="RDJ04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="12" colid="RCN04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="13" colid="RJB04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="14" colid="RGW04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="15" colid="RCB04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="16" colid="RJJ04" display="number" edit="normal" row="2"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS04)+toNumber(RB04)+toNumber(RU04)+toNumber(RGN04)+toNumber(RI04)+toNumber(RG04)+toNumber(RD04)+toNumber(RGB04)+toNumber(RGJ04)+toNumber(RJN04)+toNumber(RDJ04)+toNumber(RCN04)+toNumber(RJB04)+toNumber(RGW04)+toNumber(RCB04)+toNumber(RJJ04)" row="2"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="3" text="합병"/>
+						<cell align="center" col="1" colid="RS06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="2" colid="RB06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="3" colid="RU06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="4" colid="RGN06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="5" colid="RI06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="6" colid="RG06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="7" colid="RD06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="8" colid="RGB06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="9" colid="RGJ06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="10" colid="RJN06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="11" colid="RDJ06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="12" colid="RCN06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="13" colid="RJB06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="14" colid="RGW06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="15" colid="RCB06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="16" colid="RJJ06" display="number" edit="normal" row="3"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS06)+toNumber(RB06)+toNumber(RU06)+toNumber(RGN06)+toNumber(RI06)+toNumber(RG06)+toNumber(RD06)+toNumber(RGB06)+toNumber(RGJ06)+toNumber(RJN06)+toNumber(RDJ06)+toNumber(RCN06)+toNumber(RJB06)+toNumber(RGW06)+toNumber(RCB06)+toNumber(RJJ06)" row="3"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="4" text="분할"/>
+						<cell align="center" col="1" colid="RS05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="2" colid="RB05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="3" colid="RU05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="4" colid="RGN05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="5" colid="RI05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="6" colid="RG05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="7" colid="RD05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="8" colid="RGB05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="9" colid="RGJ05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="10" colid="RJN05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="11" colid="RDJ05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="12" colid="RCN05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="13" colid="RJB05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="14" colid="RGW05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="15" colid="RCB05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="16" colid="RJJ05" display="number" edit="normal" row="4"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS05)+toNumber(RB05)+toNumber(RU05)+toNumber(RGN05)+toNumber(RI05)+toNumber(RG05)+toNumber(RD05)+toNumber(RGB05)+toNumber(RGJ05)+toNumber(RJN05)+toNumber(RDJ05)+toNumber(RCN05)+toNumber(RJB05)+toNumber(RGW05)+toNumber(RCB05)+toNumber(RJJ05)" row="4"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="5" text="폐업"/>
+						<cell align="center" col="1" colid="RS03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="2" colid="RB03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="3" colid="RU03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="4" colid="RGN03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="5" colid="RI03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="6" colid="RG03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="7" colid="RD03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="8" colid="RGB03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="9" colid="RGJ03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="10" colid="RJN03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="11" colid="RDJ03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="12" colid="RCN03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="13" colid="RJB03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="14" colid="RGW03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="15" colid="RCB03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="16" colid="RJJ03" display="number" edit="normal" row="5"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS03)+toNumber(RB03)+toNumber(RU03)+toNumber(RGN03)+toNumber(RI03)+toNumber(RG03)+toNumber(RD03)+toNumber(RGB03)+toNumber(RGJ03)+toNumber(RJN03)+toNumber(RDJ03)+toNumber(RCN03)+toNumber(RJB03)+toNumber(RGW03)+toNumber(RCB03)+toNumber(RJJ03)" row="5"/>
+						<cell align="center" bkcolor="#787878" col="0" color="white" display="text" row="6" text="합계"/>
+						<cell align="center" col="1" display="number" edit="normal" expr="toNumber(RS01)+toNumber(RS11)+toNumber(RS04)+toNumber(RS06)+toNumber(RS05)+toNumber(RS03)" row="6"/>
+						<cell align="center" col="2" display="number" edit="normal" expr="toNumber(RB01)+toNumber(RB11)+toNumber(RB04)+toNumber(RB06)+toNumber(RB05)+toNumber(RB03)" row="6"/>
+						<cell align="center" col="3" display="number" edit="normal" expr="toNumber(RU01)+toNumber(RU11)+toNumber(RU04)+toNumber(RU06)+toNumber(RU05)+toNumber(RU03)" row="6"/>
+						<cell align="center" col="4" display="number" edit="normal" expr="toNumber(RGN01)+toNumber(RGN11)+toNumber(RGN04)+toNumber(RGN06)+toNumber(RGN05)+toNumber(RGN03)" row="6"/>
+						<cell align="center" col="5" display="number" edit="normal" expr="toNumber(RI01)+toNumber(RI11)+toNumber(RI04)+toNumber(RI06)+toNumber(RI05)+toNumber(RI03)" row="6"/>
+						<cell align="center" col="6" display="number" edit="normal" expr="toNumber(RG01)+toNumber(RG11)+toNumber(RG04)+toNumber(RG06)+toNumber(RG05)+toNumber(RG03)" row="6"/>
+						<cell align="center" col="7" display="number" edit="normal" expr="toNumber(RD01)+toNumber(RD11)+toNumber(RD04)+toNumber(RD06)+toNumber(RD05)+toNumber(RD03)" row="6"/>
+						<cell align="center" col="8" display="number" edit="normal" expr="toNumber(RGB01)+toNumber(RGB11)+toNumber(RGB04)+toNumber(RGB06)+toNumber(RGB05)+toNumber(RGB03)" row="6"/>
+						<cell align="center" col="9" display="number" edit="normal" expr="toNumber(RGJ01)+toNumber(RGJ11)+toNumber(RGJ04)+toNumber(RGJ06)+toNumber(RGJ05)+toNumber(RGJ03)" row="6"/>
+						<cell align="center" col="10" display="number" edit="normal" expr="toNumber(RJN01)+toNumber(RJN11)+toNumber(RJN04)+toNumber(RJN06)+toNumber(RJN05)+toNumber(RJN03)" row="6"/>
+						<cell align="center" col="11" display="number" edit="normal" expr="toNumber(RDJ01)+toNumber(RDJ11)+toNumber(RDJ04)+toNumber(RDJ06)+toNumber(RDJ05)+toNumber(RDJ03)" row="6"/>
+						<cell align="center" col="12" display="number" edit="normal" expr="toNumber(RCN01)+toNumber(RCN11)+toNumber(RCN04)+toNumber(RCN06)+toNumber(RCN05)+toNumber(RCN03)" row="6"/>
+						<cell align="center" col="13" display="number" edit="normal" expr="toNumber(RJB01)+toNumber(RJB11)+toNumber(RJB04)+toNumber(RJB06)+toNumber(RJB05)+toNumber(RJB03)" row="6"/>
+						<cell align="center" col="14" display="number" edit="normal" expr="toNumber(RGW01)+toNumber(RGW11)+toNumber(RGW04)+toNumber(RGW06)+toNumber(RGW05)+toNumber(RGW03)" row="6"/>
+						<cell align="center" col="15" display="number" edit="normal" expr="toNumber(RCB01)+toNumber(RCB11)+toNumber(RCB04)+toNumber(RCB06)+toNumber(RCB05)+toNumber(RCB03)" row="6"/>
+						<cell align="center" col="16" display="number" edit="normal" expr="toNumber(RJJ01)+toNumber(RJJ11)+toNumber(RJJ04)+toNumber(RJJ06)+toNumber(RJJ05)+toNumber(RJJ03)" row="6"/>
+						<cell align="center" col="17" display="number" edit="normal" expr="toNumber(RS01)+toNumber(RB01)+toNumber(RU01)+toNumber(RGN01)+toNumber(RI01)+toNumber(RG01)+toNumber(RD01)+toNumber(RGB01)+toNumber(RGJ01)+toNumber(RJN01)+toNumber(RDJ01)+toNumber(RCN01)+toNumber(RJB01)+toNumber(RGW01)+toNumber(RCB01)+toNumber(RJJ01)+toNumber(RS11)+toNumber(RB11)+toNumber(RU11)+toNumber(RGN11)+toNumber(RI11)+toNumber(RG11)+toNumber(RD11)+toNumber(RGB11)+toNumber(RGJ11)+toNumber(RJN11)+toNumber(RDJ11)+toNumber(RCN11)+toNumber(RJB11)+toNumber(RGW11)+toNumber(RCB11)+toNumber(RJJ11)+toNumber(RS04)+toNumber(RB04)+toNumber(RU04)+toNumber(RGN04)+toNumber(RI04)+toNumber(RG04)+toNumber(RD04)+toNumber(RGB04)+toNumber(RGJ04)+toNumber(RJN04)+toNumber(RDJ04)+toNumber(RCN04)+toNumber(RJB04)+toNumber(RGW04)+toNumber(RCB04)+toNumber(RJJ04)+toNumber(RS06)+toNumber(RB06)+toNumber(RU06)+toNumber(RGN06)+toNumber(RI06)+toNumber(RG06)+toNumber(RD06)+toNumber(RGB06)+toNumber(RGJ06)+toNumber(RJN06)+toNumber(RDJ06)+toNumber(RCN06)+toNumber(RJB06)+toNumber(RGW06)+toNumber(RCB06)+toNumber(RJJ06)+toNumber(RS05)+toNumber(RB05)+toNumber(RU05)+toNumber(RGN05)+toNumber(RI05)+toNumber(RG05)+toNumber(RD05)+toNumber(RGB05)+toNumber(RGJ05)+toNumber(RJN05)+toNumber(RDJ05)+toNumber(RCN05)+toNumber(RJB05)+toNumber(RGW05)+toNumber(RCB05)+toNumber(RJJ05)+toNumber(RS03)+toNumber(RB03)+toNumber(RU03)+toNumber(RGN03)+toNumber(RI03)+toNumber(RG03)+toNumber(RD03)+toNumber(RGB03)+toNumber(RGJ03)+toNumber(RJN03)+toNumber(RDJ03)+toNumber(RCN03)+toNumber(RJB03)+toNumber(RGW03)+toNumber(RCB03)+toNumber(RJJ03)" row="6"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="70" Id="Image6" ImageID="bg_tip" Left="24" TabOrder="5" Top="544" Width="784"></Image>
+		<Static Color="#4e4e4e" Height="40" Id="Static2" Left="55" TabOrder="7" Text="구분,&#32;등록번호,&#32;상호,&#32;대표자로&#32;검색하실&#32;수&#32;있습니다." Top="573" Width="736"></Static>
+		<Calendar Height="21" Id="scDATE1" Left="312" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="10" Top="120" Width="88"></Calendar>
+		<Static Color="#666666" Height="12" Id="Static0" Left="418" TabOrder="12" Text="~" Top="126" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="451" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="11" Top="120" Value="TODAY" Width="88"></Calendar>
+		<Static Color="#4e4e4e" Height="11" Id="Static3" Left="279" TabOrder="14" Text="기간" Top="125" Width="31"></Static>
+		<Image Height="11" Id="Image7" ImageID="arrow_small_blue" Left="257" TabOrder="13" TabStop="FALSE" Top="125" Width="11"></Image>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : RegMgr.xml
+2. 작성일 : 2009-02-25
+3. 작성자 : 김 현 기
+4. 기  능 : 공사업체 등록현황 조회
+5. 변경이력
+  가. 2009-02-25 최초작성 (김현기)
+  나. 2009-04-06 Y.D Jung
+*/
+ 
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// Form 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	//scDATE1.Value = AddDate(Today(), -7);
+	
+    scDATE2.Value = Today();
+	var fristDate = substr(today(),0,4)+"01"+"01";  
+	scDATE1.Value = fristDate; 
+	
+	global.gv_WorkFlag = global.gv_INQUIRY;
+	fnInitButtonBar();
+	divButtonBar.Image1.text = space(6) + "공사업등록업무 처리현황";
+  
+
+}
+
+function fnForm_Activate(obj)
+{
+	global.g_activeFrm = this.Id;
+}
+
+//////////////////////////////////////////////////////////////////
+// 공통기능
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInitButtonBar
+ 2. 기  능 : 화면상단 버튼상태 설정
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInitButtonBar()
+{
+	if (global.gv_WorkFlag == global.gv_INQUIRY)
+	{
+		fnAllControlState(true, this);
+	
+		divButtonBar.btnInsert.enable = false;
+		divButtonBar.btnModify.enable = false;
+		divButtonBar.btnRemove.enable = fnSetMenuRemoveButtonAuth(2, false);
+		
+		divButtonBar.btnSave.enable = fnSetMenuSaveButtonAuth(2, false);
+		divButtonBar.btnReport.enable = false;
+		divButtonBar.btnExcel.enable = true;
+		divButtonBar.btnList.enable = false;
+		divButtonBar.btnCancel.enable = false;
+	}
+}
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+
+    
+ 
+    var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::cm/CmAction.do?cmd=RegRePublishListMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_R_BASIC_CHANGE_HISTORY=output";
+	var sCallBack = "fn_CallBack";
+	 
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+ 
+}
+
+function fn_CallBack(Svcid, sErrCode, sErrMsg) 
+{	
+
+	if (sErrCode < 0) 	
+	{
+		alert(sErrCode + " : " + sErrMsg);
+		if (svcid == "SEARCH")
+		{
+			alert('데이터 조회 중 오류가 발생하였습니다.');
+		}
+
+		return;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnToolBarButton_Click
+ 2. 기  능 : 툴바버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnToolBarButton_Click(obj)
+{
+	if (obj == divButtonBar.btnInsert) fnInsert();
+	else if (obj == divButtonBar.btnModify) fnModify();
+	else if (obj == divButtonBar.btnRemove) fnRemove();
+	else if (obj == divButtonBar.btnSave) fnSave();
+	else if (obj == divButtonBar.btnReport) fnReport();
+	else if (obj == divButtonBar.btnExcel) fnExcel();
+	else if (obj == divButtonBar.btnCancel) fnCancel();
+	else alert('개발자오류');
+}
+
+//////////////////////////////////////////////////////////////////
+// 툴바 버튼 이벤트 핸들러
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnInsert
+ 2. 기  능 : 신규버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnInsert()
+{
+}
+
+/**
+ 1. 함수명 : fnModify
+ 2. 기  능 : 수정버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnModify()
+{
+}
+
+/**
+ 1. 함수명 : fnRemove
+ 2. 기  능 : 삭제버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+
+function fnRemove()
+{
+
+}
+
+
+/**
+ 1. 함수명 : fnSave
+ 2. 기  능 : 저장버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSave()
+{
+}
+
+function fnCancel()
+{
+}
+
+/**
+ 1. 함수명 : fnReport
+ 2. 기  능 : 출력버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnReport()
+{
+	
+}
+
+/**
+ 1. 함수명 : fnExcel
+ 2. 기  능 : 엑셀버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnExcel()
+{	
+	fnGridToExcel(grdList, "공사업업무등록 처리현황");
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnSearchButton_Click(obj)
+{   
+     
+	fnTablesBinding();
+}
+
+//////////////////////////////////////////////////////////////////
+// Key Down 관련 이벤트
+//////////////////////////////////////////////////////////////////
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}]]></Script>
+</Window>

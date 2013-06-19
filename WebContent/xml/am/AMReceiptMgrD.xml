@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="#c6dce1" Height="384" Id="scBookNum" Left="8" OnKeyDown="fnKey_Down" OnLoadCompleted="fnForm_Loaded" PidAttrib="7" Title="행정처분접수현황조회" Top="8" Ver="1.0" Width="640" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_M_MASTER">
+				<Contents>
+					<colinfo id="CHECKER" size="1" summ="default" type="STRING"/>
+					<colinfo id="TMP_WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_NUM" size="12" summ="default" type="STRING"/>
+					<colinfo id="WRT_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="REGR" size="16" summ="default" type="STRING"/>
+					<colinfo id="VIOL_CONT_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="VIOL_DT" size="6" summ="default" type="STRING"/>
+					<colinfo id="D_PER_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CONT" size="6" summ="default" type="STRING"/>
+					<colinfo id="DISPO_CAUSE" size="512" summ="default" type="STRING"/>
+					<colinfo id="DISPO_DT" size="8" summ="default" type="STRING"/>
+					<colinfo id="MOT_STE" size="6" summ="default" type="STRING"/>
+					<colinfo id="INS_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="UPD_DT" size="24" summ="default" type="STRING"/>
+					<colinfo id="WRT_ID" size="16" summ="default" type="STRING"/>
+					<colinfo id="NAME" size="60" summ="default" type="STRING"/>
+					<colinfo id="REMARK" size="256" summ="default" type="STRING"/>
+					<colinfo id="SIDO_CODE" size="6" summ="default" type="STRING"/>
+					<colinfo id="TMPDISPO_CONT" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPMOT_STE" size="10" summ="default" type="STRING"/>
+					<colinfo id="TMPD_PER_CODE" size="20" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDate">
+				<Contents>
+					<colinfo id="Code" size="10" summ="default" type="STRING"/>
+					<colinfo id="Value" size="10" summ="default" type="STRING"/>
+					<record>
+						<Code>WRT_DT</Code>
+						<Value>접수일자</Value>
+					</record>
+					<record>
+						<Code>DISPO_DT</Code>
+						<Value>처리일자</Value>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Calendar Height="21" Id="scDATE1" Left="111" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="3" Top="17" Width="93"></Calendar>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="8" Id="Static5" Left="206" TabOrder="1" Text="~" Top="23" Width="16"></Static>
+		<Calendar Height="21" Id="scDATE2" Left="218" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="2" Top="17" Value="TODAY" Width="93"></Calendar>
+		<Static Color="#666666" Font="굴림,9,Bold" Height="13" Id="Static0" Left="372" Style="list_subtitle" TabOrder="4" Text="상&#32;&#32;&#32;호" Top="24" Width="74"></Static>
+		<Edit Height="21" Id="scCOM_NAME" Left="420" Style="style1" TabOrder="5" Top="17" Width="104"></Edit>
+		<Button ButtonStyle="TRUE" Color="#666666" Font="돋움,9,Bold" Height="24" Id="btnSearch" ImageID="button_search" Left="555" OnClick="fnSearchButton_Click" Style="button_style01" TabOrder="6" Top="19" Width="76"></Button>
+		<Image Height="18" Id="Image4" ImageID="arrow_small_blue2" Left="13" TabOrder="7" Top="22" Width="18"></Image>
+		<Image Height="19" Id="Image1" ImageID="arrow_small_blue2" Left="356" TabOrder="8" Top="22" Width="15"></Image>
+		<Grid BindDataset="dsPT_M_MASTER" BkColor2="#f0f0f0" BkSelColor="#787878" BoldHead="true" Border="HalfFlat" BorderColor="lightslategray" Bottom="371" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" HeadBorder="Flat" HeadHeight="20" Height="319" Id="grdList" InputPanel="FALSE" Left="8" LineColor="user9" OnCellDBLClick="fnGridDouble_Click" OnHeadClick="fnGridHead_Click" Right="633" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="9" TabStop="true" Top="52" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="625">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="69"/>
+						<col width="83"/>
+						<col width="178"/>
+						<col width="113"/>
+						<col width="72"/>
+						<col width="80"/>
+						<col width="67"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="등록번호"/>
+						<cell bkcolor="#787878" col="1" color="white" display="text" text="등록일자"/>
+						<cell bkcolor="#787878" col="2" color="white" display="text" text="회&#32;&#32;사&#32;&#32;명"/>
+						<cell bkcolor="#787878" col="3" color="white" display="text" text="처분요청자"/>
+						<cell bkcolor="#787878" col="4" color="white" display="text" text="처분내용"/>
+						<cell bkcolor="#787878" col="5" color="white" display="text" text="처분일자"/>
+						<cell bkcolor="#787878" col="6" color="white" display="text" text="진행상태"/>
+					</head>
+					<body>
+						<cell col="0" colid="WRT_NUM" display="text"/>
+						<cell col="1" colid="WRT_DT" display="date"/>
+						<cell col="2" colid="NAME" display="text"/>
+						<cell col="3" colid="TMPD_PER_CODE" display="text"/>
+						<cell col="4" colid="TMPDISPO_CONT" display="text"/>
+						<cell col="5" colid="DISPO_DT" display="date"/>
+						<cell col="6" colid="TMPMOT_STE" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Combo CodeColumn="Code" DataColumn="Value" DisplayRowCnt="2" Height="21" Id="scDATE" INDEX="0" InnerDataset="dsDate" Left="35" ResetIndex="FIRST" TabOrder="10" Top="17" Width="75"></Combo>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : AmReceiptMgrD.xml
+2. 작성일 : 2009-03-17
+3. 작성자 : 김 현 기
+4. 기  능 : 행정처분 접수내역조회 다이얼로그
+5. 변경이력
+  가. 2009-03-17 최초작성 (김현기)
+*/
+
+#include "UserLib::CommonJs.js"
+
+//////////////////////////////////////////////////////////////////
+// 전역변수
+//////////////////////////////////////////////////////////////////
+var	_sWorkGroup;
+var _sOldCode;
+
+//////////////////////////////////////////////////////////////////
+// Form Load 이벤트
+//////////////////////////////////////////////////////////////////
+function fnForm_Loaded(obj)
+{
+	//검색일자를 일주일전으로 초기화
+	scDATE1.Value = AddDate(Today(), -7);
+}
+
+function fnTablesBinding()
+{
+	var sArgs = "scDATE1=" + quote(this.scDATE1.Value);
+	sArgs += " scDATE2=" + quote(this.scDATE2.Value);
+	sArgs += " scDATE=" + quote(this.scDATE.Value);
+	//sArgs += " scWRT_NUM=" + quote(this.scRC_REGIST_NUM.Text);
+	sArgs += " scCOM_NAME=" + quote(this.scCOM_NAME.Text);
+	sArgs += " scDISPO_CONT=" + quote("");
+	sArgs += " scMOT_STE=" + quote("");
+	sArgs += " scSIDO_CODE=" + quote(global.g_Sd_cd);
+	
+	var sTid = "SEARCH";
+	var sUrl = "ICCS::am/AmAction.do?cmd=AmReceiptMgr";
+	var sInDs = "";
+	var sOutDs = "dsPT_M_MASTER=output";
+	var sCallBack = "fn_CallBack";
+	
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+}
+
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+function fnSearchButton_Click(obj)
+{
+	fnTablesBinding(false);
+}
+
+//////////////////////////////////////////////////////////////////
+// Grid 관련 이벤트
+//////////////////////////////////////////////////////////////////
+/**
+ 1. 함수명 : fnGridDouble_Click
+ 2. 기  능 : Grid Cell 더블크릭 이벤트 핸들러
+ 3. Params 
+    @obj : 이벤트 오브젝트
+    @nRow : 선택된 Row Index
+    @nCell : 선택된 Cell Index
+    @nX
+    @nY
+    @nPivotIndex
+ 4. Return
+    없음
+*/
+function fnGridDouble_Click(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	if(nRow < 0) return;
+	
+	var arrReturn = Array(2);
+	arrReturn[0] = dsPT_M_MASTER.GetColumn(nRow, "WRT_NUM");
+	arrReturn[1] = dsPT_M_MASTER.GetColumn(nRow, "TMP_WRT_NUM");
+	Close(arrReturn);
+}
+
+function fnKey_Down(obj,objSenderObj,nChar,bShift,bControl,bAlt,nLLParam,nHLParam)
+{
+	if(nChar == "81" && bControl == true) fnTablesBinding();
+	else if(nChar == "49" && bControl == true) fnInsert();
+	else if(nChar == "50" && bControl == true) fnModify();
+	else if(nChar == "51" && bControl == true) fnRemove();
+	else if(nChar == "83" && bControl == true) fnSave();
+	else if(nChar == "80" && bControl == true) fnReport();
+	else if(nChar == "13") fnTablesBinding();
+}
+]]></Script>
+</Window>

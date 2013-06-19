@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form BKColor="white" Height="144" Id="PostStD" Left="8" OnActivate="fnForm_Loaded" PidAttrib="7" Title="흠결검토" Top="8" Ver="1.0" Width="328" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsPT_R_DEFICIT_CODE">
+				<Contents>
+					<colinfo id="DEFICIT_CODE" size="6" type="STRING"/>
+					<colinfo id="CONT" size="100" type="STRING"/>
+					<colinfo id="DEFICIT_GROUP" size="15" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid BindDataset="dsPT_R_DEFICIT_CODE" BkColor2="#f0f0f0" BkSelColor="#7498b7" BoldHead="true" Border="HalfFlat" BorderColor="#bbc3cc" Bottom="128" ButtonColor="user0" Color="#666666" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="#999999" Face3dColor="#999999" FixedColSizing="TRUE" HeadBorder="Flat" HeadHeight="20" Height="112" Id="grdPaper" InputPanel="FALSE" Left="16" LineColor="user9" OnHeadClick="fnLocalGridHead_Click" Right="312" SelColor="white" ShadowColor="#999999" Style="grid_title" TabOrder="1" TabStop="true" Top="16" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="296">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="292"/>
+					</columns>
+					<head>
+						<cell bkcolor="#787878" col="0" color="white" display="text" text="흠&#32;결&#32;검&#32;토&#32;내&#32;용"/>
+					</head>
+					<body>
+						<cell col="0" colid="CONT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[/*
+1. 파일명 : PaperStD.xml
+2. 작성일 : 2010-11-25
+3. 작성자 : S.K. LEE
+4. 기  능 : 흠결 조회
+5. 변경이력
+  가. 2010-11-25 최초작성 (S.K. LEE)
+*/
+
+#include "UserLib::CommonJs.js"
+var	_DEFI_GROUP;
+//////////////////////////////////////////////////////////////////
+// 검색 버튼 이벤트
+//////////////////////////////////////////////////////////////////
+
+
+/**
+ 1. 함수명 : fnSearchButton_Click
+ 2. 기  능 : 검색버튼 이벤트 핸들러
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnForm_Loaded(obj)
+{
+	fnTablesBinding();
+}                   
+
+
+
+/**
+ 1. 함수명 : fnTablesBinding
+ 2. 기  능 : 검색조건에 대한 검색
+ 3. Params 
+    없음
+ 4. Return
+    없음
+*/
+function fnTablesBinding()
+{
+
+	var sArgs = "workMODE=PaperStD _scDEFI_GROUP="+_DEFI_GROUP;
+	var sTid = "DEFI_POPUP";
+	var sUrl = "ICCS::bas/BasAction.do?cmd=PaperStD";
+	var sInDs = "";
+
+	var sOutDs  = "dsPT_R_DEFICIT_CODE=output" ;	
+	var sCallBack = "fn_CallBack";
+	
+		
+	Transaction(sTid, sUrl, sInDs, sOutDs, sArgs, sCallBack);
+
+}
+]]></Script>
+</Window>
